@@ -29,15 +29,18 @@ jobs:
             [ -z "$name" ] && continue
             echo "== $eco/$name =="
             rm -rf work && mkdir -p work/src
+            enc=$(printf '%s' "$name" | sed 's|/|%2F|g')
             case "$eco" in
-              npm)  url=$(curl -s "https://registry.npmjs.org/$name/latest" | jq -r .dist.tarball) ;;
+              npm)  url=$(curl -s "https://registry.npmjs.org/$enc/latest" | jq -r .dist.tarball) ;;
               pypi) url=$(curl -s "https://pypi.org/pypi/$name/json" | jq -r '[.urls[] | select(.packagetype=="sdist")][0].url') ;;
               *)    echo "unknown ecosystem $eco"; continue ;;
             esac
+            if [ -z "$url" ] || [ "$url" = "null" ]; then echo "  no source url — skipped"; continue; fi
             echo "  source: $url"
             curl -sL "$url" -o work/pkg.tar.gz
-            tar -xzf work/pkg.tar.gz -C work/src
-            out="results/$eco/$name"
+            tar -xzf work/pkg.tar.gz -C work/src || { echo "  extract failed — skipped"; continue; }
+            safe=$(printf '%s' "$name" | tr '/@' '__')
+            out="results/$eco/$safe"
             rm -rf "$out" && mkdir -p "$out"
             ( cd "$out" && "$BIN" scan "$GITHUB_WORKSPACE/work/src" --mode agent --bom ai_bom.json ) \
               || echo "  scan exited nonzero for $eco/$name"
