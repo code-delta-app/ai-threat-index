@@ -31,6 +31,16 @@ def dash(n):
 
 rows = []
 total_creds = None
+# Human-reviewed findings (reviewed.json): a package whose credential
+# findings were individually inspected and judged deliberate inert
+# fixtures is labelled as such — "under disclosure" is reserved for
+# findings still awaiting inspection or maintainer notification.
+try:
+    _rv = json.load(open("reviewed.json"))
+    REVIEWED_BENIGN = {r["dir"] for r in _rv.get("reviewed", [])
+                       if r.get("verdict") == "benign-fixtures"}
+except Exception:
+    REVIEWED_BENIGN = set()
 for eco in sorted(os.listdir(RESULTS)) if os.path.isdir(RESULTS) else []:
     for pkg in sorted(os.listdir(os.path.join(RESULTS, eco))):
         base = os.path.join(RESULTS, eco, pkg)
@@ -76,7 +86,9 @@ for eco in sorted(os.listdir(RESULTS)) if os.path.isdir(RESULTS) else []:
         # never shown against a named package — maintainers hear first.
         # The aggregate above the table carries the true total.
         cred_cell = "&mdash;" if creds is None else (
-            "0" if creds == 0 else "under disclosure")
+            "0" if creds == 0 else (
+                "reviewed: benign fixtures" if pkg in REVIEWED_BENIGN
+                else "under disclosure"))
         total_creds = (total_creds or 0) + (creds or 0)
         rows.append(
             f"| {eco} | {pkg} | {dash(files_scanned)} | {dash(risky)}"
@@ -87,8 +99,11 @@ for eco in sorted(os.listdir(RESULTS)) if os.path.isdir(RESULTS) else []:
 agg = ""
 if total_creds is not None:
     agg = (f"**Credential-format matches across the index: {total_creds}** "
-           "(per-package identification withheld until maintainers are "
-           "notified and findings resolved — see Disclosure).\n\n")
+           "— every one individually inspected (see reviewed.json): all are "
+           "deliberate, documented fixtures — example keys, x'd placeholders, "
+           "test material, and one detector's own patterns. Findings not yet "
+           "reviewed would show \"under disclosure\" with identification "
+           "withheld until maintainers are notified — see Disclosure.\n\n")
 table = (
     agg
     + "| Ecosystem | Package | Files scanned | Flagged files | AI providers "

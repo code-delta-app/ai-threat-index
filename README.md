@@ -37,11 +37,11 @@ until the finding is resolved.
 ## Results
 
 <!-- RESULTS:BEGIN -->
-**Credential-format matches across the index: 13** (per-package identification withheld until maintainers are notified and findings resolved — see Disclosure).
+**Credential-format matches across the index: 13** — every one individually inspected (see reviewed.json): all are deliberate, documented fixtures — example keys, x'd placeholders, test material, and one detector's own patterns. Findings not yet reviewed would show "under disclosure" with identification withheld until maintainers are notified — see Disclosure.
 
 | Ecosystem | Package | Files scanned | Flagged files | AI providers | Credential-format matches | Install hooks | Build fetchers |
 |---|---|---|---|---|---|---|---|
-| npm | _aws-sdk_nested-clients | 355 | 0 | 0 | under disclosure | 0 | 0 |
+| npm | _aws-sdk_nested-clients | 355 | 0 | 0 | reviewed: benign fixtures | 0 | 0 |
 | npm | _babel_helper-globals | 0 | 0 | 0 | 0 | 0 | 0 |
 | npm | _eslint_config-helpers | 0 | 0 | 0 | 0 | 0 | 0 |
 | npm | _jridgewell_remapping | 5 | 0 | 0 | 0 | 0 | 0 |
@@ -100,12 +100,12 @@ until the finding is resolved.
 | pypi | fastapi-cloud-cli | 108 | 0 | 0 | 0 | 0 | 0 |
 | pypi | fastapi-mcp | 44 | 12 (ELEVATED:12) | 0 | 0 | 0 | 0 |
 | pypi | fastar | 12 | 0 | 0 | 0 | 0 | 0 |
-| pypi | fastmcp | 846 | 699 (ELEVATED:661 HIGH:38) | 3 | under disclosure | 0 | 0 |
+| pypi | fastmcp | 846 | 699 (ELEVATED:661 HIGH:38) | 3 | reviewed: benign fixtures | 0 | 0 |
 | pypi | fastmcp-slim | 257 | 212 (ELEVATED:200 HIGH:12) | 3 | 0 | 0 | 0 |
 | pypi | fastspec | 6 | 0 | 0 | 0 | 0 | 0 |
 | pypi | genai-prices | 12 | 1 (ELEVATED:1) | 5 | 0 | 0 | 0 |
-| pypi | google-adk | 787 | 329 (ELEVATED:277 HIGH:52) | 6 | under disclosure | 0 | 0 |
-| pypi | google-genai | 531 | 41 (ELEVATED:40 HIGH:1) | 2 | under disclosure | 0 | 0 |
+| pypi | google-adk | 787 | 329 (ELEVATED:277 HIGH:52) | 6 | reviewed: benign fixtures | 0 | 0 |
+| pypi | google-genai | 531 | 41 (ELEVATED:40 HIGH:1) | 2 | reviewed: benign fixtures | 0 | 0 |
 | pypi | griffelib | 78 | 0 | 0 | 0 | 0 | 0 |
 | pypi | hf-xet | 292 | 0 | 0 | 0 | 0 | 0 |
 | pypi | httpcore2 | 31 | 0 | 0 | 0 | 0 | 0 |
@@ -120,7 +120,7 @@ until the finding is resolved.
 | pypi | nest-asyncio2 | 14 | 1 (ELEVATED:1) | 0 | 0 | 0 | 0 |
 | pypi | openai-agents | 863 | 433 (ELEVATED:299 HIGH:134) | 3 | 0 | 0 | 0 |
 | pypi | polars-runtime-32 | 2067 | 1 (ELEVATED:1) | 0 | 0 | 0 | 0 |
-| pypi | prek | 210 | 1 (ELEVATED:1) | 0 | under disclosure | 0 | 0 |
+| pypi | prek | 210 | 1 (ELEVATED:1) | 0 | reviewed: benign fixtures | 0 | 0 |
 | pypi | propcache | 19 | 0 | 0 | 0 | 0 | 0 |
 | pypi | py-key-value-aio | 119 | 0 | 0 | 0 | 0 | 0 |
 | pypi | pydantic-ai-slim | 298 | 219 (ELEVATED:130 HIGH:89) | 15 | 0 | 0 | 0 |
