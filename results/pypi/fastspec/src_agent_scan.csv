@@ -1,0 +1,7 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+fastspec-0.2.3/fastspec/__init__.py,Python,0,NORMAL,0,0,,,,
+fastspec-0.2.3/fastspec/oapi.py,Python,0,NORMAL,0,0,,,,
+fastspec-0.2.3/fastspec/gql.py,Python,0,NORMAL,0,0,,,,
+fastspec-0.2.3/fastspec/errors.py,Python,0,NORMAL,0,0,,,,
+fastspec-0.2.3/fastspec/spec.py,Python,0,NORMAL,0,0,,,,
+fastspec-0.2.3/fastspec/_modidx.py,Python,0,NORMAL,0,0,,,,

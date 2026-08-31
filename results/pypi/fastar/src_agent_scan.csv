@@ -1,0 +1,13 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+fastar-0.12.0/src/reader.rs,Rust,0,NORMAL,0,0,,,,
+fastar-0.12.0/src/writer.rs,Rust,0,NORMAL,0,0,,,,
+fastar-0.12.0/src/errors.rs,Rust,0,NORMAL,0,0,,,,
+fastar-0.12.0/src/lib.rs,Rust,0,NORMAL,0,0,,,,
+fastar-0.12.0/tests/conftest.py,Python,0,NORMAL,0,0,,,,
+fastar-0.12.0/tests/test_module.py,Python,0,NORMAL,0,0,,,,
+fastar-0.12.0/tests/test_archive_reader.py,Python,0,NORMAL,0,0,,,,
+fastar-0.12.0/tests/test_archive_writer.py,Python,0,NORMAL,0,0,,,,
+fastar-0.12.0/tests/benchmarks/test_unpacking_all.py,Python,0,NORMAL,0,0,,,,
+fastar-0.12.0/tests/benchmarks/test_appending_all.py,Python,0,NORMAL,0,0,,,,
+fastar-0.12.0/tests/benchmarks/test_appending_incrementally.py,Python,0,NORMAL,0,0,,,,
+fastar-0.12.0/tests/compat/test_gnu_tar.py,Python,0,NORMAL,0,0,,,,

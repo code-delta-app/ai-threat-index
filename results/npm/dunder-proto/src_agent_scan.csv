@@ -1,0 +1,8 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+package/set.d.ts,JavaScript,0,NORMAL,0,0,,,,
+package/get.js,JavaScript,0,NORMAL,0,0,,,,
+package/get.d.ts,JavaScript,0,NORMAL,0,0,,,,
+package/set.js,JavaScript,0,NORMAL,0,0,,,,
+package/test/get.js,JavaScript,0,NORMAL,0,0,,,,
+package/test/index.js,JavaScript,0,NORMAL,0,0,,,,
+package/test/set.js,JavaScript,0,NORMAL,0,0,,,,

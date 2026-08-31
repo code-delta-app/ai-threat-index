@@ -1,0 +1,788 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+google_adk-2.8.0/src/google/adk/evaluation/evaluation_generator.py,Python,100,HIGH,0,0,from google.genai,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent); dynamic_import(x1)
+google_adk-2.8.0/src/google/adk/agents/llm_agent.py,Python,100,HIGH,0,0,from google.genai; from google.adk,function_tool; LlmAgent,,"ai_sdk_import(2_sdk(s)_detected); agent_orchestration(function_tool,LlmAgent); dynamic_import(x2)"
+google_adk-2.8.0/src/google/adk/tools/skill_toolset.py,Python,100,HIGH,0,1,from google.genai,function_tool,eval/exec found (1 occurrence(s)),ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool); dynamic_execution(eval/exec_x1); prompt_injection_partial(1)
+google_adk-2.8.0/src/google/adk/cli/api_server.py,Python,100,HIGH,0,0,from google.genai,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent); dynamic_import(x1)
+google_adk-2.8.0/src/google/adk/cli/cli_deploy.py,Python,100,HIGH,0,0,from google.adk; import vertexai,,subprocess/shell execution with variables (1 occurrence(s)),ai_sdk_import(2_sdk(s)_detected); subprocess_variable_execution(x1); dynamic_import(x1)
+google_adk-2.8.0/src/google/adk/plugins/bigquery_agent_analytics_plugin.py,Python,98,HIGH,0,2,from google.genai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool); prompt_injection_partial(2)
+google_adk-2.8.0/src/google/adk/tools/discovery_engine_search_tool.py,Python,98,HIGH,0,2,from google.genai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool); prompt_injection_partial(2)
+google_adk-2.8.0/src/google/adk/telemetry/tracing.py,Python,98,HIGH,0,1,from google.genai,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent); prompt_injection_partial(1)
+google_adk-2.8.0/src/google/adk/cli/agent_test_runner.py,Python,98,HIGH,0,1,from google.adk; from google.genai,runner.run; Runner.run,,"ai_sdk_import(2_sdk(s)_detected); agent_orchestration(runner.run,Runner.run); prompt_injection_partial(1)"
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/read_config_files.py,Python,98,HIGH,0,1,from google.adk,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent); prompt_injection_partial(1)
+google_adk-2.8.0/src/google/adk/runners.py,Python,80,HIGH,0,0,from google.genai; import google.adk; from google.adk,LlmAgent,,ai_sdk_import(3_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/agents/_managed_agent.py,Python,80,HIGH,0,0,from google.genai,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/agents/remote_a2a_agent.py,Python,80,HIGH,0,0,from google.adk; from google.genai,LlmAgent,,ai_sdk_import(2_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/agents/common_configs.py,Python,80,HIGH,0,0,from google.adk,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/agents/llm_agent_config.py,Python,80,HIGH,0,0,from google.genai,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/agents/context.py,Python,80,HIGH,0,0,from google.genai,runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(runner.run)
+google_adk-2.8.0/src/google/adk/agents/llm/task/_finish_task_tool.py,Python,80,HIGH,0,0,from google.genai,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/flows/llm_flows/base_llm_flow.py,Python,80,HIGH,0,0,from google.adk; from google.genai,LlmAgent; SequentialAgent,,"ai_sdk_import(2_sdk(s)_detected); agent_orchestration(LlmAgent,SequentialAgent)"
+google_adk-2.8.0/src/google/adk/flows/llm_flows/functions.py,Python,80,HIGH,0,0,from google.adk; from google.genai,function_tool; LlmAgent,,"ai_sdk_import(2_sdk(s)_detected); agent_orchestration(function_tool,LlmAgent)"
+google_adk-2.8.0/src/google/adk/flows/llm_flows/_invocation_utils.py,Python,80,HIGH,0,0,from google.genai,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/flows/llm_flows/instructions.py,Python,80,HIGH,0,0,from google.genai,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/flows/llm_flows/request_confirmation.py,Python,80,HIGH,0,0,from google.genai,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/models/google_llm.py,Python,80,HIGH,0,0,from google.genai; from google.adk,LlmAgent,,ai_sdk_import(2_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/plugins/_reflect_retry_model_plugin.py,Python,80,HIGH,0,0,from google.genai,LlmAgent; function_tool,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent,function_tool)"
+google_adk-2.8.0/src/google/adk/plugins/global_instruction_plugin.py,Python,80,HIGH,0,0,from google.adk; from google.genai,LlmAgent,,ai_sdk_import(2_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/apps/compaction.py,Python,80,HIGH,0,0,from google.genai,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/workflow/_llm_agent_wrapper.py,Python,80,HIGH,0,0,from google.genai,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/tools/load_memory_tool.py,Python,80,HIGH,0,0,from google.genai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool)
+google_adk-2.8.0/src/google/adk/tools/crewai_tool.py,Python,80,HIGH,0,0,from google.adk,crewai,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(crewai)
+google_adk-2.8.0/src/google/adk/tools/vertex_ai_load_profiles_tool.py,Python,80,HIGH,0,0,from google.genai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool)
+google_adk-2.8.0/src/google/adk/tools/long_running_tool.py,Python,80,HIGH,0,0,from google.genai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool)
+google_adk-2.8.0/src/google/adk/tools/transfer_to_agent_tool.py,Python,80,HIGH,0,0,from google.genai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool)
+google_adk-2.8.0/src/google/adk/tools/base_tool.py,Python,80,HIGH,0,0,from google.genai,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/tools/agent_tool.py,Python,80,HIGH,0,0,from google.genai,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/tools/mcp_tool/mcp_toolset.py,Python,80,HIGH,0,0,from mcp; from MCP,LlmAgent,,ai_sdk_import(2_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/tools/mcp_tool/_agent_to_mcp.py,Python,80,HIGH,0,0,from google.genai; from mcp; import FastMCP; from MCP,LlmAgent,,ai_sdk_import(4_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/tools/bigquery/bigquery_skill.py,Python,80,HIGH,0,0,from google.adk,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/tools/environment_simulation/environment_simulation_engine.py,Python,80,HIGH,0,0,from google.adk; from google.genai,LlmAgent,,ai_sdk_import(2_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/utils/agent_info.py,Python,80,HIGH,0,0,from google.genai,LlmAgent; function_tool,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent,function_tool)"
+google_adk-2.8.0/src/google/adk/a2a/executor/a2a_agent_executor.py,Python,80,HIGH,0,0,from google.adk,AgentExecutor,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(AgentExecutor)
+google_adk-2.8.0/src/google/adk/integrations/langchain/langchain_tool.py,Python,80,HIGH,0,0,from google.genai; from langchain; from google.adk,function_tool,,ai_sdk_import(3_sdk(s)_detected); agent_orchestration(function_tool)
+google_adk-2.8.0/src/google/adk/integrations/oci/_oci_genai_llm.py,Python,80,HIGH,0,0,from google.genai; from google.adk,LlmAgent,,ai_sdk_import(2_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/integrations/crewai/crewai_tool.py,Python,80,HIGH,0,0,from google.genai; from crewai,function_tool; crewai; Crewai; CrewAI,,"ai_sdk_import(2_sdk(s)_detected); agent_orchestration(function_tool,crewai)"
+google_adk-2.8.0/src/google/adk/cli/cli.py,Python,80,HIGH,0,0,from google.genai,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/adk_agent_builder_assistant.py,Python,80,HIGH,0,0,from google.adk; from google.genai,LlmAgent; LoopAgent; ParallelAgent; SequentialAgent,,"ai_sdk_import(2_sdk(s)_detected); agent_orchestration(LlmAgent,LoopAgent)"
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/sub_agents/url_context_agent.py,Python,80,HIGH,0,0,from google.adk,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/sub_agents/google_search_agent.py,Python,80,HIGH,0,0,from google.adk,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/explore_project.py,Python,80,HIGH,0,0,from google.adk,LlmAgent,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/write_config_files.py,Python,80,HIGH,0,0,from google.adk,SequentialAgent; ParallelAgent; LoopAgent; LlmAgent,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(SequentialAgent,ParallelAgent)"
+google_adk-2.8.0/src/google/adk/labs/openai/_openai_llm.py,Python,75,HIGH,0,4,from google.genai; from openai; from OpenAI,,,ai_sdk_import(3_sdk(s)_detected); prompt_injection_vectors(4_unsanitised_inputs)
+google_adk-2.8.0/src/google/adk/models/apigee_llm.py,Python,75,HIGH,0,3,from google.adk; from google.genai; from OpenAI,,,ai_sdk_import(3_sdk(s)_detected); prompt_injection_vectors(3_unsanitised_inputs)
+google_adk-2.8.0/src/google/adk/telemetry/_stable_semconv.py,Python,75,HIGH,0,4,from google.genai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_vectors(4_unsanitised_inputs)
+google_adk-2.8.0/src/google/adk/evaluation/agent_evaluator.py,Python,60,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected); dynamic_import(x1)
+google_adk-2.8.0/src/google/adk/agents/config_agent_utils.py,Python,60,ELEVATED,0,0,,LlmAgent,,agent_orchestration(LlmAgent); dynamic_import(x3)
+google_adk-2.8.0/src/google/adk/models/__init__.py,Python,60,ELEVATED,0,0,from google.adk; import LiteLlm,,,ai_sdk_import(2_sdk(s)_detected); dynamic_import(x2)
+google_adk-2.8.0/src/google/adk/models/registry.py,Python,60,ELEVATED,0,0,import litellm; import LiteLlm,,,ai_sdk_import(2_sdk(s)_detected); dynamic_import(x2)
+google_adk-2.8.0/src/google/adk/tools/__init__.py,Python,60,ELEVATED,0,0,,function_tool,,agent_orchestration(function_tool); dynamic_import(x1)
+google_adk-2.8.0/src/google/adk/tools/bash_tool.py,Python,60,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected); dynamic_import(x1)
+google_adk-2.8.0/src/google/adk/tools/bigquery/__init__.py,Python,60,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected); dynamic_import(x1)
+google_adk-2.8.0/src/google/adk/cli/fast_api.py,Python,60,ELEVATED,0,0,from google.adk; from vertexai,,,ai_sdk_import(2_sdk(s)_detected); dynamic_import(x1)
+google_adk-2.8.0/src/google/adk/cli/service_registry.py,Python,60,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected); dynamic_import(x2)
+google_adk-2.8.0/src/google/adk/models/anthropic_llm.py,Python,58,ELEVATED,0,1,from anthropic; from google.genai; from Anthropic,,,ai_sdk_import(3_sdk(s)_detected); prompt_injection_partial(1)
+google_adk-2.8.0/src/google/adk/plugins/debug_logging_plugin.py,Python,58,ELEVATED,0,2,from google.genai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(2)
+google_adk-2.8.0/src/google/adk/code_executors/agent_engine_sandbox_code_executor.py,Python,58,ELEVATED,0,1,import vertexai; from google.genai; from vertexai,,,ai_sdk_import(3_sdk(s)_detected); prompt_injection_partial(1)
+google_adk-2.8.0/src/google/adk/tools/environment/_read_file_tool.py,Python,58,ELEVATED,0,1,from google.genai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(1)
+google_adk-2.8.0/src/google/adk/a2a/converters/request_converter.py,Python,58,ELEVATED,0,1,from google.genai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(1)
+google_adk-2.8.0/src/google/adk/integrations/firestore/firestore_memory_service.py,Python,58,ELEVATED,0,1,from google.genai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(1)
+google_adk-2.8.0/src/google/adk/cli/conformance/cli_record.py,Python,58,ELEVATED,0,2,from google.genai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(2)
+google_adk-2.8.0/src/google/adk/cli/conformance/cli_test.py,Python,58,ELEVATED,0,2,from google.genai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(2)
+google_adk-2.8.0/src/google/adk/cli/browser/main-KSQARI5D.js,JavaScript,58,ELEVATED,0,1,,LlmAgent; LoopAgent; ParallelAgent; SequentialAgent,,"agent_orchestration(LlmAgent,LoopAgent); prompt_injection_partial(1)"
+google_adk-2.8.0/src/google/adk/code_executors/unsafe_local_code_executor.py,Python,50,ELEVATED,0,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+google_adk-2.8.0/src/google/adk/code_executors/container_code_executor.py,Python,50,ELEVATED,0,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+google_adk-2.8.0/src/google/adk/integrations/daytona/_daytona_environment.py,Python,50,ELEVATED,0,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+google_adk-2.8.0/src/google/adk/evaluation/llm_as_judge.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/eval_case.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/hallucinations_v1.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/vertex_ai_eval_facade.py,Python,40,ELEVATED,0,0,from google.genai; import vertexai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/_vertex_ai_scenario_generation_facade.py,Python,40,ELEVATED,0,0,import vertexai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/eval_metrics.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/safety_evaluator.py,Python,40,ELEVATED,0,0,import vertexai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/final_response_match_v1.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/_retry_options_utils.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/local_eval_sets_manager.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/multi_turn_tool_use_quality_evaluator.py,Python,40,ELEVATED,0,0,import vertexai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/app_details.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/multi_turn_trajectory_quality_evaluator.py,Python,40,ELEVATED,0,0,import vertexai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/response_evaluator.py,Python,40,ELEVATED,0,0,import vertexai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/trajectory_evaluator.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/multi_turn_task_success_evaluator.py,Python,40,ELEVATED,0,0,import vertexai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/llm_as_judge_utils.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/simulation/__init__.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/simulation/llm_backed_user_simulator.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/simulation/_cloud_tts_llm.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/simulation/user_simulator.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/simulation/_llm_audio_user_simulator.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/simulation/per_turn_user_simulator_quality_v1.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/sessions/vertex_ai_session_service.py,Python,40,ELEVATED,0,0,from google.genai; import vertexai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/sessions/database_session_service.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/sessions/sqlite_session_service.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/sessions/base_session_service.py,Python,40,ELEVATED,0,0,,SequentialAgent,,agent_orchestration(SequentialAgent)
+google_adk-2.8.0/src/google/adk/sessions/in_memory_session_service.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/sessions/schemas/v0.py,Python,40,ELEVATED,0,0,from google.adk; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/sessions/schemas/v1.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/sessions/migration/migration_runner.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/sessions/migration/migrate_from_sqlalchemy_pickle.py,Python,40,ELEVATED,0,0,from google.adk; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/sessions/migration/migrate_from_sqlalchemy_sqlite.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/labs/openai/_openai_responses_llm.py,Python,40,ELEVATED,0,0,from google.genai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/labs/antigravity/_event_converter.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/labs/antigravity/_antigravity_agent.py,Python,40,ELEVATED,0,0,,LlmAgent,,agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/labs/antigravity/_sub_agent_tools.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/agents/__init__.py,Python,40,ELEVATED,0,0,,LlmAgent; LoopAgent; ParallelAgent; SequentialAgent,,"agent_orchestration(LlmAgent,LoopAgent)"
+google_adk-2.8.0/src/google/adk/agents/loop_agent.py,Python,40,ELEVATED,0,0,,LoopAgent; LlmAgent,,"agent_orchestration(LoopAgent,LlmAgent)"
+google_adk-2.8.0/src/google/adk/agents/mcp_instruction_provider.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/agents/langgraph_agent.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/agents/live_request_queue.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/agents/agent_config.py,Python,40,ELEVATED,0,0,,LlmAgent; LoopAgent; ParallelAgent; SequentialAgent,,"agent_orchestration(LlmAgent,LoopAgent)"
+google_adk-2.8.0/src/google/adk/agents/parallel_agent_config.py,Python,40,ELEVATED,0,0,,ParallelAgent,,agent_orchestration(ParallelAgent)
+google_adk-2.8.0/src/google/adk/agents/loop_agent_config.py,Python,40,ELEVATED,0,0,,LoopAgent,,agent_orchestration(LoopAgent)
+google_adk-2.8.0/src/google/adk/agents/run_config.py,Python,40,ELEVATED,0,0,from google.genai; from google.adk,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/agents/context_cache_config.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/agents/readonly_context.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/agents/parallel_agent.py,Python,40,ELEVATED,0,0,,ParallelAgent; LlmAgent,,"agent_orchestration(ParallelAgent,LlmAgent)"
+google_adk-2.8.0/src/google/adk/agents/sequential_agent.py,Python,40,ELEVATED,0,0,,LlmAgent; SequentialAgent,,"agent_orchestration(LlmAgent,SequentialAgent)"
+google_adk-2.8.0/src/google/adk/agents/base_agent.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/agents/invocation_context.py,Python,40,ELEVATED,0,0,from google.adk; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/agents/transcription_entry.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/agents/sequential_agent_config.py,Python,40,ELEVATED,0,0,,SequentialAgent,,agent_orchestration(SequentialAgent)
+google_adk-2.8.0/src/google/adk/agents/llm/task/_task_models.py,Python,40,ELEVATED,0,0,,LlmAgent,,agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/examples/example.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/examples/vertex_ai_example_store.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/flows/llm_flows/transcription_manager.py,Python,40,ELEVATED,0,0,from google.adk; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/flows/llm_flows/agent_transfer.py,Python,40,ELEVATED,0,0,,LlmAgent,,agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/flows/llm_flows/_code_execution.py,Python,40,ELEVATED,0,0,from google.adk; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/flows/llm_flows/_fencing.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/flows/llm_flows/audio_cache_manager.py,Python,40,ELEVATED,0,0,from google.adk; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/flows/llm_flows/auto_flow.py,Python,40,ELEVATED,0,0,,LlmAgent,,agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/flows/llm_flows/_output_schema_processor.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/flows/llm_flows/contents.py,Python,40,ELEVATED,0,0,from google.genai; import LiteLlm,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/flows/llm_flows/basic.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/flows/llm_flows/audio_transcriber.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/models/base_llm.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/models/llm_request.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/models/interactions_utils.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/models/gemini_llm_connection.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/models/llm_response.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/models/gemma_llm.py,Python,40,ELEVATED,0,0,from google.adk; from google.genai; import LiteLlm,,,ai_sdk_import(3_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/models/lite_llm.py,Python,40,ELEVATED,0,0,from google.genai; import litellm; from litellm; from LiteLLM; from DeepSeek,,,ai_sdk_import(5_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/models/gemini_context_cache_manager.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/models/base_llm_connection.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/plugins/logging_plugin.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/plugins/multimodal_tool_results_plugin.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/plugins/save_files_as_artifacts_plugin.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/plugins/plugin_manager.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/plugins/context_filter_plugin.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/plugins/base_plugin.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/dependencies/vertexai.py,Python,40,ELEVATED,0,0,import vertexai; from vertexai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/memory/vertex_ai_memory_bank_service.py,Python,40,ELEVATED,0,0,from google.genai; import vertexai; from vertexai,,,ai_sdk_import(3_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/memory/vertex_ai_rag_memory_service.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/memory/memory_entry.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/auth/exchanger/oauth2_credential_exchanger.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/auth/refresher/base_credential_refresher.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/auth/refresher/credential_refresher_registry.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/auth/refresher/oauth2_credential_refresher.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/events/event.py,Python,40,ELEVATED,0,0,from google.adk; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/events/event_actions.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/optimization/gepa_root_agent_optimizer.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/optimization/simple_prompt_optimizer.py,Python,40,ELEVATED,0,0,from google.adk; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/optimization/gepa_root_agent_prompt_optimizer.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/optimization/data_types.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/optimization/_gepa_utils.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/apps/llm_event_summarizer.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/code_executors/vertex_ai_code_executor.py,Python,40,ELEVATED,0,0,from vertexai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/code_executors/built_in_code_executor.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/code_executors/code_execution_utils.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/workflow/_function_node.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/workflow/_workflow.py,Python,40,ELEVATED,0,0,,LlmAgent,,agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/workflow/_tool_node.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/workflow/_node_runner.py,Python,40,ELEVATED,0,0,,SequentialAgent,,agent_orchestration(SequentialAgent)
+google_adk-2.8.0/src/google/adk/workflow/_node.py,Python,40,ELEVATED,0,0,,LlmAgent,,agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/workflow/utils/_rehydration_utils.py,Python,40,ELEVATED,0,0,from google.genai; from google.adk,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/workflow/utils/_workflow_hitl_utils.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/workflow/utils/_graph_validation.py,Python,40,ELEVATED,0,0,,LlmAgent,,agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/workflow/utils/_workflow_graph_utils.py,Python,40,ELEVATED,0,0,,LlmAgent,,agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/tools/api_registry.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/google_maps_grounding_tool.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/_forwarding_artifact_service.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/_gemini_schema_util.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/set_model_response_tool.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/langchain_tool.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/_function_parameter_parse_util.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/_node_tool.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/url_context_tool.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/load_artifacts_tool.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/enterprise_search_tool.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/vertex_ai_search_tool.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/_automatic_function_calling_util.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/_function_tool_declarations.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/preload_memory_tool.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/function_tool.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/google_search_agent_tool.py,Python,40,ELEVATED,0,0,,LlmAgent,,agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/tools/authenticated_function_tool.py,Python,40,ELEVATED,0,0,,function_tool,,agent_orchestration(function_tool)
+google_adk-2.8.0/src/google/adk/tools/google_search_tool.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/_request_input_tool.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/load_mcp_resource_tool.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/_remote_mcp_server.py,Python,40,ELEVATED,0,0,,LlmAgent,,agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/tools/google_tool.py,Python,40,ELEVATED,0,0,,function_tool,,agent_orchestration(function_tool)
+google_adk-2.8.0/src/google/adk/tools/agent_simulator/__init__.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/agent_simulator/tool_connection_map.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/agent_simulator/agent_simulator_engine.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/agent_simulator/agent_simulator_factory.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/agent_simulator/tool_connection_analyzer.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/agent_simulator/agent_simulator_plugin.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/agent_simulator/agent_simulator_config.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/agent_simulator/strategies/tool_spec_mock_strategy.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/agent_simulator/strategies/base.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/data_agent/data_agent_toolset.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/spanner/utils.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/spanner/admin_toolset.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/spanner/spanner_toolset.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/environment/_execute_tool.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/environment/_edit_file_tool.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/environment/_write_file_tool.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/computer_use/computer_use_toolset.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/computer_use/computer_use_tool.py,Python,40,ELEVATED,0,0,,function_tool,,agent_orchestration(function_tool)
+google_adk-2.8.0/src/google/adk/tools/apihub_tool/apihub_toolset.py,Python,40,ELEVATED,0,0,,LlmAgent,,agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/tools/apihub_tool/clients/secret_client.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/google_api_tool/google_api_tool.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/application_integration_tool/application_integration_toolset.py,Python,40,ELEVATED,0,0,,LlmAgent,,agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/tools/application_integration_tool/integration_connector_tool.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/application_integration_tool/clients/integration_client.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/retrieval/llama_index_retrieval.py,Python,40,ELEVATED,0,0,from llama_index,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/retrieval/vertex_ai_rag_retrieval.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/retrieval/files_retrieval.py,Python,40,ELEVATED,0,0,from llama_index,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/retrieval/base_retrieval_tool.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/openapi_tool/openapi_spec_parser/rest_api_tool.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/pubsub/pubsub_toolset.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/mcp_tool/mcp_tool.py,Python,40,ELEVATED,0,0,from google.genai; from mcp; from MCP,,,ai_sdk_import(3_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/mcp_tool/conversion_utils.py,Python,40,ELEVATED,0,0,from google.genai; import mcp,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/mcp_tool/session_context.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/mcp_tool/mcp_session_manager.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/bigquery/config.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/bigquery/bigquery_credentials.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/bigquery/data_insights_tool.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/bigquery/bigquery_toolset.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/bigquery/search_tool.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/bigquery/query_tool.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/bigquery/metadata_tool.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/bigquery/client.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/bigtable/bigtable_toolset.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/environment_simulation/__init__.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/environment_simulation/environment_simulation_factory.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/environment_simulation/tool_connection_analyzer.py,Python,40,ELEVATED,0,0,from google.adk; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/environment_simulation/environment_simulation_config.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/environment_simulation/environment_simulation_plugin.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/environment_simulation/strategies/tool_spec_mock_strategy.py,Python,40,ELEVATED,0,0,from google.adk; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/tools/environment_simulation/strategies/base.py,Python,40,ELEVATED,0,0,from google.adk; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/utils/cache_performance_analyzer.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/utils/_google_client_headers.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/utils/_schema_utils.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/utils/instructions_utils.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/utils/content_utils.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/utils/output_schema_utils.py,Python,40,ELEVATED,0,0,import LiteLlm,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/utils/streaming_utils.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/planners/base_planner.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/planners/built_in_planner.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/planners/plan_re_act_planner.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/a2a/experimental.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/a2a/utils/agent_card_builder.py,Python,40,ELEVATED,0,0,,LlmAgent; LoopAgent; ParallelAgent; SequentialAgent,,"agent_orchestration(LlmAgent,LoopAgent)"
+google_adk-2.8.0/src/google/adk/a2a/utils/agent_to_a2a.py,Python,40,ELEVATED,0,0,,LlmAgent,,agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/a2a/converters/event_converter.py,Python,40,ELEVATED,0,0,from google.adk; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/a2a/converters/long_running_functions.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/a2a/converters/to_adk_event.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/a2a/converters/part_converter.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/a2a/executor/a2a_agent_executor_impl.py,Python,40,ELEVATED,0,0,,AgentExecutor,,agent_orchestration(AgentExecutor)
+google_adk-2.8.0/src/google/adk/a2a/executor/executor_context.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/a2a/executor/interceptors/include_artifacts_in_a2a_event.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/a2a/agent/interceptors/new_integration_extension.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/a2a/logs/log_utils.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/integrations/vmaas/__init__.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/integrations/vmaas/sandbox_client.py,Python,40,ELEVATED,0,0,import vertexai; from vertexai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/integrations/vmaas/sandbox_computer.py,Python,40,ELEVATED,0,0,import vertexai; from google.adk,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/integrations/daytona/__init__.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/integrations/eventarc/_client.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/integrations/eventarc/_domain_specific_publish.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/integrations/e2b/__init__.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/integrations/api_registry/api_registry.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/integrations/agent_registry/agent_registry.py,Python,40,ELEVATED,0,0,from google.adk; from mcp,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/integrations/model_armor/_plugin.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/integrations/agent_identity/gcp_auth_provider.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/integrations/agent_identity/gcp_auth_provider_scheme.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/integrations/agent_identity/_iam_connector_credentials_provider.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/integrations/agent_identity/_agent_identity_credentials_provider.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/integrations/bigquery/data_insights_tool.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/integrations/bigquery/bigquery_toolset.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/integrations/slack/slack_runner.py,Python,40,ELEVATED,0,0,from google.adk; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/integrations/skill_registry/gcp_skill_registry.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/telemetry/_serialization.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/telemetry/_experimental_semconv.py,Python,40,ELEVATED,0,0,from google.adk; from google.genai; from mcp,,,ai_sdk_import(3_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/telemetry/_metrics.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/telemetry/_token_usage.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/features/_feature_registry.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/skills/__init__.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/skills/prompt.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/skills/models.py,Python,40,ELEVATED,0,0,,LlmAgent,,agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/artifacts/file_artifact_service.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/artifacts/artifact_util.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/artifacts/gcs_artifact_service.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/artifacts/in_memory_artifact_service.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/artifacts/base_artifact_service.py,Python,40,ELEVATED,0,0,from google.adk; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/cli/cli_tools_click.py,Python,40,ELEVATED,0,0,,LlmAgent,,agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/cli/cli_eval.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/cli/cli_create.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/cli/agent_graph.py,Python,40,ELEVATED,0,0,,LlmAgent; LoopAgent; ParallelAgent; SequentialAgent,,"agent_orchestration(LlmAgent,LoopAgent)"
+google_adk-2.8.0/src/google/adk/cli/trigger_routes.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/delete_files.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/write_files.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/read_files.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/cleanup_unused_files.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/query_schema.py,Python,40,ELEVATED,0,0,,function_tool,,agent_orchestration(function_tool)
+google_adk-2.8.0/src/google/adk/cli/plugins/recordings_schema.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/cli/plugins/replay_plugin.py,Python,40,ELEVATED,0,0,from google.genai; from google.adk,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/cli/plugins/recordings_plugin.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/cli/conformance/test_case.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/cli/utils/graph_serialization.py,Python,40,ELEVATED,0,0,,LlmAgent,,agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/cli/utils/state.py,Python,40,ELEVATED,0,0,,LlmAgent,,agent_orchestration(LlmAgent)
+google_adk-2.8.0/src/google/adk/cli/utils/local_storage.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/cli/utils/gcp_utils.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/cli/_telemetry/_metrics_reporter.py,Python,40,ELEVATED,0,0,from google.adk,,,ai_sdk_import(1_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/cli/_telemetry/_metrics_collector.py,Python,40,ELEVATED,0,0,from google.adk; import google.adk,,,ai_sdk_import(2_sdk(s)_detected)
+google_adk-2.8.0/src/google/adk/evaluation/custom_metric_evaluator.py,Python,20,NORMAL,0,0,,,,dynamic_import(x1)
+google_adk-2.8.0/src/google/adk/sessions/__init__.py,Python,20,NORMAL,0,0,,,,dynamic_import(x2)
+google_adk-2.8.0/src/google/adk/plugins/__init__.py,Python,20,NORMAL,0,0,,,,dynamic_import(x1)
+google_adk-2.8.0/src/google/adk/memory/__init__.py,Python,20,NORMAL,0,0,,,,dynamic_import(x1)
+google_adk-2.8.0/src/google/adk/apps/__init__.py,Python,20,NORMAL,0,0,,,,dynamic_import(x1)
+google_adk-2.8.0/src/google/adk/tools/tool_context.py,Python,20,NORMAL,0,0,,,,dynamic_import(x1)
+google_adk-2.8.0/src/google/adk/utils/_lazy.py,Python,20,NORMAL,0,0,,,,dynamic_import(x2)
+google_adk-2.8.0/src/google/adk/a2a/_compat.py,Python,20,NORMAL,0,0,,,,dynamic_import(x2)
+google_adk-2.8.0/src/google/adk/integrations/oci/__init__.py,Python,20,NORMAL,0,0,,,,dynamic_import(x1)
+google_adk-2.8.0/src/google/adk/integrations/model_armor/__init__.py,Python,20,NORMAL,0,0,,,,dynamic_import(x1)
+google_adk-2.8.0/src/google/adk/integrations/bigquery/__init__.py,Python,20,NORMAL,0,0,,,,dynamic_import(x1)
+google_adk-2.8.0/src/google/adk/artifacts/__init__.py,Python,20,NORMAL,0,0,,,,dynamic_import(x1)
+google_adk-2.8.0/src/google/adk/cli/utils/agent_loader.py,Python,20,NORMAL,0,0,,,,dynamic_import(x2)
+google_adk-2.8.0/src/google/adk/evaluation/rubric_based_final_response_quality_v1.py,Python,18,NORMAL,0,1,,,,prompt_injection_partial(1)
+google_adk-2.8.0/src/google/adk/evaluation/rubric_based_tool_use_quality_v1.py,Python,18,NORMAL,0,1,,,,prompt_injection_partial(1)
+google_adk-2.8.0/src/google/adk/evaluation/rubric_based_multi_turn_trajectory_evaluator.py,Python,18,NORMAL,0,1,,,,prompt_injection_partial(1)
+google_adk-2.8.0/src/google/adk/evaluation/final_response_match_v2.py,Python,18,NORMAL,0,1,,,,prompt_injection_partial(1)
+google_adk-2.8.0/src/google/adk/integrations/bigquery/query_tool.py,Python,18,NORMAL,0,1,,,,prompt_injection_partial(1)
+google_adk-2.8.0/src/google/adk/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/version.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/eval_result.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/request_intercepter_plugin.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/local_eval_service.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/_audio_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/rubric_based_evaluator.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/gcs_eval_set_results_manager.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/eval_sets_manager.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/_eval_set_results_manager_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/local_eval_set_results_manager.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/metric_evaluator_registry.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/eval_set_results_manager.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/evaluation_constants.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/metric_info_providers.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/eval_config.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/conversation_scenarios.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/base_eval_service.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/_path_validation.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/eval_rubrics.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/_eval_sets_manager_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/constants.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/common.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/eval_set.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/evaluator.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/in_memory_eval_sets_manager.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/gcs_eval_sets_manager.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/simulation/user_simulator_provider.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/simulation/pre_built_personas.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/simulation/static_user_simulator.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/simulation/user_simulator_personas.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/simulation/per_turn_user_simulator_quality_prompts.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/evaluation/simulation/llm_backed_user_simulator_prompts.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/sessions/state.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/sessions/_session_util.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/sessions/session.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/sessions/_restricted_pickle.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/sessions/schemas/shared.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/sessions/migration/_schema_check_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/labs/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/labs/openai/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/labs/openai/_openai_schema.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/labs/antigravity/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/labs/antigravity/_tool_result_capture.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/platform/uuid.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/platform/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/platform/_random.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/platform/thread.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/platform/time.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/agents/base_agent_config.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/agents/callback_context.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/agents/_streaming_mode.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/agents/active_streaming_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/agents/llm/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/agents/llm/task/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/examples/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/examples/base_example_provider.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/examples/example_util.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/flows/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/flows/llm_flows/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/flows/llm_flows/interactions_processor.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/flows/llm_flows/identity.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/flows/llm_flows/context_cache_processor.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/flows/llm_flows/_nl_planning.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/flows/llm_flows/compaction.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/flows/llm_flows/_content_compaction.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/flows/llm_flows/_base_llm_processor.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/flows/llm_flows/single_flow.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/environment/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/environment/_local_environment.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/environment/_base_environment.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/models/cache_metadata.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/models/_prompt_cache.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/models/_capabilities.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/plugins/auto_tracing_plugin.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/plugins/reflect_retry_tool_plugin.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/plugins/auto_tracing_helpers.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/plugins/_reflect_retry_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/dependencies/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/dependencies/rouge_scorer.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/memory/base_memory_service.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/memory/in_memory_memory_service.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/memory/_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/oauth2_discovery.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/credential_manager.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/auth_credential.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/auth_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/oauth2_credential_util.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/auth_handler.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/base_auth_provider.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/auth_provider_registry.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/_auth_headers.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/auth_preprocessor.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/auth_schemes.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/exchanger/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/exchanger/credential_exchanger_registry.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/exchanger/base_credential_exchanger.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/credential_service/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/credential_service/in_memory_credential_service.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/credential_service/base_credential_service.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/credential_service/session_state_credential_service.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/auth/refresher/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/events/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/events/request_input.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/events/_rewind_events.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/events/_branch_path.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/events/ui_widget.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/events/_node_path_builder.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/optimization/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/optimization/agent_optimizer.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/optimization/local_eval_sampler.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/optimization/sampler.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/apps/app.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/apps/_configs.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/apps/base_events_summarizer.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/code_executors/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/code_executors/base_code_executor.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/code_executors/gke_code_executor.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/code_executors/code_executor_context.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/errors/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/errors/tool_execution_error.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/errors/_stale_session_error.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/errors/not_found_error.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/errors/already_exists_error.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/errors/input_validation_error.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/errors/session_not_found_error.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/_join_node.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/_parallel_worker.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/_graph.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/_trigger.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/_dynamic_node_scheduler.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/_schedule_dynamic_node.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/_node_status.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/_node_state.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/_retry_config.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/_base_node.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/_errors.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/utils/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/utils/_replay_sequence_barrier.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/utils/_transfer_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/utils/_retry_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/utils/_replay_manager.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/utils/_graph_parser.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/workflow/utils/_replay_interceptor.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/toolbox_toolset.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/load_web_page.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/_gda_stream_util.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/tool_configs.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/tool_confirmation.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/base_authenticated_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/_google_credentials.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/base_toolset.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/example_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/get_user_choice_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/exit_loop_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/_memory_entry_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/agent_simulator/strategies/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/data_agent/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/data_agent/data_agent_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/data_agent/credentials.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/data_agent/config.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/spanner/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/spanner/spanner_credentials.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/spanner/settings.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/spanner/search_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/spanner/query_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/spanner/admin_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/spanner/metadata_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/spanner/client.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/environment/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/environment/_environment_toolset.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/environment/_tools.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/environment/_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/environment/_constants.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/computer_use/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/computer_use/base_computer.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/apihub_tool/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/apihub_tool/clients/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/apihub_tool/clients/apihub_client.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/google_api_tool/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/google_api_tool/google_api_toolsets.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/google_api_tool/google_api_toolset.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/google_api_tool/googleapi_to_openapi_converter.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/application_integration_tool/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/application_integration_tool/clients/connections_client.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/retrieval/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/openapi_tool/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/openapi_tool/openapi_spec_parser/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/openapi_tool/openapi_spec_parser/tool_auth_handler.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/openapi_tool/openapi_spec_parser/openapi_toolset.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/openapi_tool/openapi_spec_parser/openapi_spec_parser.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/openapi_tool/openapi_spec_parser/operation_parser.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/openapi_tool/auth/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/openapi_tool/auth/auth_helpers.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/openapi_tool/auth/credential_exchangers/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/openapi_tool/auth/credential_exchangers/service_account_exchanger.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/openapi_tool/auth/credential_exchangers/oauth2_exchanger.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/openapi_tool/auth/credential_exchangers/auto_auth_credential_exchanger.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/openapi_tool/auth/credential_exchangers/base_credential_exchanger.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/openapi_tool/common/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/openapi_tool/common/common.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/pubsub/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/pubsub/message_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/pubsub/config.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/pubsub/pubsub_credentials.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/pubsub/client.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/mcp_tool/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/bigtable/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/bigtable/bigtable_credentials.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/bigtable/settings.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/bigtable/query_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/bigtable/metadata_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/bigtable/client.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/environment_simulation/tool_connection_map.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/tools/environment_simulation/strategies/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/utils/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/utils/_debug_output.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/utils/variant_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/utils/feature_decorator.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/utils/_mtls_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/utils/model_name_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/utils/vertex_ai_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/utils/_json_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/utils/_serialized_base_model.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/utils/context_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/utils/_client_labels_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/utils/_telemetry_config.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/utils/yaml_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/utils/env_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/utils/_dependency.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/utils/_telemetry_context.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/planners/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/a2a/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/a2a/utils/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/a2a/converters/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/a2a/converters/utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/a2a/converters/from_adk_event.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/a2a/executor/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/a2a/executor/utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/a2a/executor/config.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/a2a/executor/task_result_aggregator.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/a2a/executor/interceptors/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/a2a/agent/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/a2a/agent/utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/a2a/agent/config.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/a2a/agent/interceptors/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/a2a/logs/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/redis/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/redis/_config.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/redis/_redis_session_service.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/firestore/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/firestore/_stop_words.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/firestore/firestore_session_service.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/langchain/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/eventarc/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/eventarc/_config.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/eventarc/_eventarc_toolset.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/eventarc/_message_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/e2b/_e2b_environment.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/parameter_manager/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/parameter_manager/parameter_client.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/api_registry/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/agent_registry/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/cloud_run/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/cloud_run/_cloud_run_sandbox_code_executor.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/model_armor/_config.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/agent_identity/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/bigquery/config.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/bigquery/bigquery_credentials.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/bigquery/search_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/bigquery/metadata_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/bigquery/client.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/slack/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/gcs/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/gcs/storage_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/gcs/admin_toolset.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/gcs/settings.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/gcs/storage_toolset.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/gcs/gcs_credentials.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/gcs/admin_tool.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/gcs/client.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/crewai/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/skill_registry/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/secret_manager/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/integrations/secret_manager/secret_client.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/telemetry/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/telemetry/setup.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/telemetry/_agent_engine.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/telemetry/google_cloud.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/telemetry/_agent_engine_metric_exporter.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/telemetry/_instrumentation.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/telemetry/_adk_attributes.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/telemetry/context.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/telemetry/node_tracing.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/telemetry/_schema_version.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/telemetry/sqlite_span_exporter.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/features/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/features/_feature_decorator.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/skills/_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/skills/skill_registry.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/__main__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/adk_web_server.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/dev_server.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/agent.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/sub_agents/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/search_adk_knowledge.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/search_adk_source.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/utils/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/utils/adk_source_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/utils/path_normalizer.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/built_in_agents/utils/resolve_root_directory.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/plugins/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/conformance/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/conformance/_replay_validators.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/conformance/_generate_markdown_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/conformance/adk_web_server_client.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/conformance/_conformance_test_google_llm.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/conformance/_generated_file_utils.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/utils/__init__.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/utils/graph_visualization.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/utils/cleanup.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/utils/service_factory.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/utils/logs.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/utils/agent_change_handler.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/utils/base_agent_loader.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/utils/dot_adk_folder.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/utils/_nested_agent_loader.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/utils/_onboarding.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/utils/shared_value.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/utils/common.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/utils/evals.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/utils/envs.py,Python,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-27SWUPRL.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-QL2SWWYM.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-F57K64GP.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-P4MFJI72.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-Y55XRFJI.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-PVEI6UQ6.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-R7A5HXMQ.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-KDOJMYWA.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-M4CFRGUH.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-AQDQIDAM.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-7BGAJP6A.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-4LH47YYI.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-OUY2PG7F.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-6CJBO2JX.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-VWUZC4UJ.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-DGO6DRJY.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-VJTRHJAQ.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-X43UMWSZ.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-4ZQ24APY.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-MP6JNF5U.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-VRRZ3RU5.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-DLZFLWPV.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-DM36II44.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-5JNRF4JL.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-URGIGLGR.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-TULSIPRQ.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-ZO3BTNJM.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-URMDZFG4.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-5YCXLBRD.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-JUE6OUNA.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-SXB5AC5V.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-3TW5HJSC.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-NOA45LO2.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-7CNYU4WA.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-VS3KHVTS.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-DZQRYCWR.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-HD4LLD2O.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-OCQO4LX3.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-JRNAXTJ7.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-GO6ZTN3G.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-LT3WOUUJ.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-RNTHHQWK.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-VZBWMYZM.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-GQUNXJBP.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-3BYZYP23.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-RMXJBC7V.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-4R6SYGKS.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-PKSFXE6N.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-YEJ3ZE5E.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-WEKWG7SS.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-2SRK2U7X.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-Y7O3NHKW.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-PDRDFWTH.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-GP6TCC26.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-GBI7W3TG.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-ET35KXUM.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-OYPVNJ6H.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-QXIJPCUK.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-6HSYUS5O.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-VYRVJDOJ.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-DS3WV6GO.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-PNXCYZAZ.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-2UTQOSKI.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-NRR3JWGL.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-R6ZR5LUR.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-3BJ4SYVH.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-4VDZU6IO.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-BPUQWVAT.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-APNCZOFE.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-47TAWZZ5.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-OGD5RHV2.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-NRMNZ7EH.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-PRKFGJVH.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/polyfills-5CFQRCPP.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-2RGIIJSP.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-FDMPUWDP.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-SRCUB3EX.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-UKZIEWH5.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-7ZGKZ6HH.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-YVVLWU7S.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-UMUHBNGZ.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-4WEIDHEA.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-B2DSW4QB.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-37QI3DOO.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-BWRTTESZ.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-ZZBNOZU2.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-3M7KSSAK.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-UFYCV57Y.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-Q6H4XMU7.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-ROA6Y7BN.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-XB6MIIOW.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-YL63DAMY.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-4V3PIBXT.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-HTWWQBR6.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-ZMOC4H7T.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-LVMBETIL.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-DMWOYWYQ.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-UIM6OFCO.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/chunk-IT263FCL.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/browser/assets/audio-processor.js,JavaScript,0,NORMAL,0,0,,,,
+google_adk-2.8.0/src/google/adk/cli/_telemetry/_constants.py,Python,0,NORMAL,0,0,,,,

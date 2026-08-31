@@ -1,0 +1,3 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+ipython_pygments_lexers-1.1.1/ipython_pygments_lexers.py,Python,0,NORMAL,0,0,,,,
+ipython_pygments_lexers-1.1.1/test_ipython_pygments_lexers.py,Python,0,NORMAL,0,0,,,,

@@ -1,0 +1,6 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+package/src/source-map-tree.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/build-source-map-tree.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/types.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/source-map.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/remapping.ts,JavaScript,0,NORMAL,0,0,,,,

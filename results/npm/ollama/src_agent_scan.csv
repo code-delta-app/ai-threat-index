@@ -1,7 +1,0 @@
-rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
-package/src/constant.ts,JavaScript,0,NORMAL,0,0,,,,
-package/src/index.ts,JavaScript,0,NORMAL,0,0,,,,
-package/src/browser.ts,JavaScript,0,NORMAL,0,0,,,,
-package/src/interfaces.ts,JavaScript,0,NORMAL,0,0,,,,
-package/src/utils.ts,JavaScript,0,NORMAL,0,0,,,,
-package/src/version.ts,JavaScript,0,NORMAL,0,0,,,,

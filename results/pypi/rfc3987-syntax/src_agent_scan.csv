@@ -1,0 +1,6 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+rfc3987_syntax-1.1.0/src/rfc3987_syntax/__init__.py,Python,0,NORMAL,0,0,,,,
+rfc3987_syntax-1.1.0/src/rfc3987_syntax/utils.py,Python,0,NORMAL,0,0,,,,
+rfc3987_syntax-1.1.0/src/rfc3987_syntax/syntax_helpers.py,Python,0,NORMAL,0,0,,,,
+rfc3987_syntax-1.1.0/tests/__init__.py,Python,0,NORMAL,0,0,,,,
+rfc3987_syntax-1.1.0/tests/test_syntax.py,Python,0,NORMAL,0,0,,,,

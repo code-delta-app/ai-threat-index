@@ -1,0 +1,5828 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.1",
+  "generated": "2026-08-31T20:14:49.645607Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 787,
+    "files_flagged": 329,
+    "critical": 0,
+    "high": 52,
+    "elevated": 277,
+    "providers": 17,
+    "foreign_egress_files": 0,
+    "non_allied_jurisdiction_files": 0,
+    "cost_risk_files": 0,
+    "agent_artifacts": 0,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 1
+  },
+  "providers": [
+    {
+      "name": "google.genai",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 182,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/a2a/converters/event_converter.py",
+        "google_adk-2.8.0/src/google/adk/a2a/converters/long_running_functions.py",
+        "google_adk-2.8.0/src/google/adk/a2a/converters/part_converter.py",
+        "google_adk-2.8.0/src/google/adk/a2a/converters/request_converter.py",
+        "google_adk-2.8.0/src/google/adk/a2a/converters/to_adk_event.py",
+        "google_adk-2.8.0/src/google/adk/agents/_managed_agent.py",
+        "google_adk-2.8.0/src/google/adk/agents/base_agent.py",
+        "google_adk-2.8.0/src/google/adk/agents/context.py",
+        "google_adk-2.8.0/src/google/adk/agents/context_cache_config.py",
+        "google_adk-2.8.0/src/google/adk/agents/invocation_context.py",
+        "google_adk-2.8.0/src/google/adk/agents/langgraph_agent.py",
+        "google_adk-2.8.0/src/google/adk/agents/live_request_queue.py",
+        "google_adk-2.8.0/src/google/adk/agents/llm/task/_finish_task_tool.py",
+        "google_adk-2.8.0/src/google/adk/agents/llm_agent.py",
+        "google_adk-2.8.0/src/google/adk/agents/llm_agent_config.py",
+        "google_adk-2.8.0/src/google/adk/agents/readonly_context.py",
+        "google_adk-2.8.0/src/google/adk/agents/remote_a2a_agent.py",
+        "google_adk-2.8.0/src/google/adk/agents/run_config.py",
+        "google_adk-2.8.0/src/google/adk/agents/transcription_entry.py",
+        "google_adk-2.8.0/src/google/adk/apps/compaction.py",
+        "google_adk-2.8.0/src/google/adk/apps/llm_event_summarizer.py",
+        "google_adk-2.8.0/src/google/adk/artifacts/artifact_util.py",
+        "google_adk-2.8.0/src/google/adk/artifacts/base_artifact_service.py",
+        "google_adk-2.8.0/src/google/adk/artifacts/file_artifact_service.py",
+        "google_adk-2.8.0/src/google/adk/artifacts/gcs_artifact_service.py",
+        "google_adk-2.8.0/src/google/adk/artifacts/in_memory_artifact_service.py",
+        "google_adk-2.8.0/src/google/adk/cli/agent_test_runner.py",
+        "google_adk-2.8.0/src/google/adk/cli/api_server.py",
+        "google_adk-2.8.0/src/google/adk/cli/built_in_agents/adk_agent_builder_assistant.py",
+        "google_adk-2.8.0/src/google/adk/cli/cli.py",
+        "google_adk-2.8.0/src/google/adk/cli/cli_eval.py",
+        "google_adk-2.8.0/src/google/adk/cli/conformance/cli_record.py",
+        "google_adk-2.8.0/src/google/adk/cli/conformance/cli_test.py",
+        "google_adk-2.8.0/src/google/adk/cli/conformance/test_case.py",
+        "google_adk-2.8.0/src/google/adk/cli/plugins/recordings_plugin.py",
+        "google_adk-2.8.0/src/google/adk/cli/plugins/recordings_schema.py",
+        "google_adk-2.8.0/src/google/adk/cli/plugins/replay_plugin.py",
+        "google_adk-2.8.0/src/google/adk/cli/trigger_routes.py",
+        "google_adk-2.8.0/src/google/adk/cli/utils/local_storage.py",
+        "google_adk-2.8.0/src/google/adk/code_executors/agent_engine_sandbox_code_executor.py",
+        "google_adk-2.8.0/src/google/adk/code_executors/built_in_code_executor.py",
+        "google_adk-2.8.0/src/google/adk/code_executors/code_execution_utils.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/_retry_options_utils.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/agent_evaluator.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/app_details.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/eval_case.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/eval_metrics.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/evaluation_generator.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/final_response_match_v1.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/hallucinations_v1.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/llm_as_judge.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/llm_as_judge_utils.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/local_eval_sets_manager.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/simulation/_cloud_tts_llm.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/simulation/_llm_audio_user_simulator.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/simulation/llm_backed_user_simulator.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/simulation/per_turn_user_simulator_quality_v1.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/simulation/user_simulator.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/trajectory_evaluator.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/vertex_ai_eval_facade.py",
+        "google_adk-2.8.0/src/google/adk/events/event.py",
+        "google_adk-2.8.0/src/google/adk/events/event_actions.py",
+        "google_adk-2.8.0/src/google/adk/examples/example.py",
+        "google_adk-2.8.0/src/google/adk/examples/vertex_ai_example_store.py",
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/_code_execution.py",
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/_fencing.py",
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/_invocation_utils.py",
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/_output_schema_processor.py",
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/audio_cache_manager.py",
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/audio_transcriber.py",
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/base_llm_flow.py",
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/basic.py",
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/contents.py",
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/functions.py",
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/instructions.py",
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/request_confirmation.py",
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/transcription_manager.py",
+        "google_adk-2.8.0/src/google/adk/integrations/crewai/crewai_tool.py",
+        "google_adk-2.8.0/src/google/adk/integrations/firestore/firestore_memory_service.py",
+        "google_adk-2.8.0/src/google/adk/integrations/langchain/langchain_tool.py",
+        "google_adk-2.8.0/src/google/adk/integrations/model_armor/_plugin.py",
+        "google_adk-2.8.0/src/google/adk/integrations/oci/_oci_genai_llm.py",
+        "google_adk-2.8.0/src/google/adk/integrations/slack/slack_runner.py",
+        "google_adk-2.8.0/src/google/adk/labs/antigravity/_event_converter.py",
+        "google_adk-2.8.0/src/google/adk/labs/antigravity/_sub_agent_tools.py",
+        "google_adk-2.8.0/src/google/adk/labs/openai/_openai_llm.py",
+        "google_adk-2.8.0/src/google/adk/labs/openai/_openai_responses_llm.py",
+        "google_adk-2.8.0/src/google/adk/memory/memory_entry.py",
+        "google_adk-2.8.0/src/google/adk/memory/vertex_ai_memory_bank_service.py",
+        "google_adk-2.8.0/src/google/adk/memory/vertex_ai_rag_memory_service.py",
+        "google_adk-2.8.0/src/google/adk/models/anthropic_llm.py",
+        "google_adk-2.8.0/src/google/adk/models/apigee_llm.py",
+        "google_adk-2.8.0/src/google/adk/models/base_llm.py",
+        "google_adk-2.8.0/src/google/adk/models/base_llm_connection.py",
+        "google_adk-2.8.0/src/google/adk/models/gemini_context_cache_manager.py",
+        "google_adk-2.8.0/src/google/adk/models/gemini_llm_connection.py",
+        "google_adk-2.8.0/src/google/adk/models/gemma_llm.py",
+        "google_adk-2.8.0/src/google/adk/models/google_llm.py",
+        "google_adk-2.8.0/src/google/adk/models/interactions_utils.py",
+        "google_adk-2.8.0/src/google/adk/models/lite_llm.py",
+        "google_adk-2.8.0/src/google/adk/models/llm_request.py",
+        "google_adk-2.8.0/src/google/adk/models/llm_response.py",
+        "google_adk-2.8.0/src/google/adk/optimization/_gepa_utils.py",
+        "google_adk-2.8.0/src/google/adk/optimization/gepa_root_agent_optimizer.py",
+        "google_adk-2.8.0/src/google/adk/optimization/gepa_root_agent_prompt_optimizer.py",
+        "google_adk-2.8.0/src/google/adk/optimization/simple_prompt_optimizer.py",
+        "google_adk-2.8.0/src/google/adk/planners/base_planner.py",
+        "google_adk-2.8.0/src/google/adk/planners/built_in_planner.py",
+        "google_adk-2.8.0/src/google/adk/planners/plan_re_act_planner.py",
+        "google_adk-2.8.0/src/google/adk/plugins/_reflect_retry_model_plugin.py",
+        "google_adk-2.8.0/src/google/adk/plugins/base_plugin.py",
+        "google_adk-2.8.0/src/google/adk/plugins/bigquery_agent_analytics_plugin.py",
+        "google_adk-2.8.0/src/google/adk/plugins/context_filter_plugin.py",
+        "google_adk-2.8.0/src/google/adk/plugins/debug_logging_plugin.py",
+        "google_adk-2.8.0/src/google/adk/plugins/global_instruction_plugin.py",
+        "google_adk-2.8.0/src/google/adk/plugins/logging_plugin.py",
+        "google_adk-2.8.0/src/google/adk/plugins/multimodal_tool_results_plugin.py",
+        "google_adk-2.8.0/src/google/adk/plugins/plugin_manager.py",
+        "google_adk-2.8.0/src/google/adk/plugins/save_files_as_artifacts_plugin.py",
+        "google_adk-2.8.0/src/google/adk/runners.py",
+        "google_adk-2.8.0/src/google/adk/sessions/migration/migrate_from_sqlalchemy_pickle.py",
+        "google_adk-2.8.0/src/google/adk/sessions/schemas/v0.py",
+        "google_adk-2.8.0/src/google/adk/sessions/vertex_ai_session_service.py",
+        "google_adk-2.8.0/src/google/adk/telemetry/_experimental_semconv.py",
+        "google_adk-2.8.0/src/google/adk/telemetry/_serialization.py",
+        "google_adk-2.8.0/src/google/adk/telemetry/_stable_semconv.py",
+        "google_adk-2.8.0/src/google/adk/telemetry/_token_usage.py",
+        "google_adk-2.8.0/src/google/adk/telemetry/tracing.py",
+        "google_adk-2.8.0/src/google/adk/tools/_automatic_function_calling_util.py",
+        "google_adk-2.8.0/src/google/adk/tools/_forwarding_artifact_service.py",
+        "google_adk-2.8.0/src/google/adk/tools/_function_parameter_parse_util.py",
+        "google_adk-2.8.0/src/google/adk/tools/_function_tool_declarations.py",
+        "google_adk-2.8.0/src/google/adk/tools/_gemini_schema_util.py",
+        "google_adk-2.8.0/src/google/adk/tools/_node_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/agent_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/application_integration_tool/integration_connector_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/base_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/bash_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/computer_use/computer_use_toolset.py",
+        "google_adk-2.8.0/src/google/adk/tools/discovery_engine_search_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/enterprise_search_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/environment/_edit_file_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/environment/_execute_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/environment/_read_file_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/environment/_write_file_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/environment_simulation/environment_simulation_config.py",
+        "google_adk-2.8.0/src/google/adk/tools/environment_simulation/environment_simulation_engine.py",
+        "google_adk-2.8.0/src/google/adk/tools/environment_simulation/strategies/base.py",
+        "google_adk-2.8.0/src/google/adk/tools/environment_simulation/strategies/tool_spec_mock_strategy.py",
+        "google_adk-2.8.0/src/google/adk/tools/environment_simulation/tool_connection_analyzer.py",
+        "google_adk-2.8.0/src/google/adk/tools/function_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/google_api_tool/google_api_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/google_maps_grounding_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/google_search_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/load_artifacts_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/load_mcp_resource_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/load_memory_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/long_running_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/mcp_tool/_agent_to_mcp.py",
+        "google_adk-2.8.0/src/google/adk/tools/mcp_tool/conversion_utils.py",
+        "google_adk-2.8.0/src/google/adk/tools/mcp_tool/mcp_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/openapi_tool/openapi_spec_parser/rest_api_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/preload_memory_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/retrieval/base_retrieval_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/retrieval/vertex_ai_rag_retrieval.py",
+        "google_adk-2.8.0/src/google/adk/tools/set_model_response_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/skill_toolset.py",
+        "google_adk-2.8.0/src/google/adk/tools/spanner/utils.py",
+        "google_adk-2.8.0/src/google/adk/tools/transfer_to_agent_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/url_context_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/vertex_ai_load_profiles_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/vertex_ai_search_tool.py",
+        "google_adk-2.8.0/src/google/adk/utils/_google_client_headers.py",
+        "google_adk-2.8.0/src/google/adk/utils/_schema_utils.py",
+        "google_adk-2.8.0/src/google/adk/utils/agent_info.py",
+        "google_adk-2.8.0/src/google/adk/utils/content_utils.py",
+        "google_adk-2.8.0/src/google/adk/utils/streaming_utils.py",
+        "google_adk-2.8.0/src/google/adk/workflow/_function_node.py",
+        "google_adk-2.8.0/src/google/adk/workflow/_llm_agent_wrapper.py",
+        "google_adk-2.8.0/src/google/adk/workflow/_tool_node.py",
+        "google_adk-2.8.0/src/google/adk/workflow/utils/_rehydration_utils.py",
+        "google_adk-2.8.0/src/google/adk/workflow/utils/_workflow_hitl_utils.py"
+      ]
+    },
+    {
+      "name": "google.adk",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 122,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/a2a/agent/interceptors/new_integration_extension.py",
+        "google_adk-2.8.0/src/google/adk/a2a/converters/event_converter.py",
+        "google_adk-2.8.0/src/google/adk/a2a/executor/a2a_agent_executor.py",
+        "google_adk-2.8.0/src/google/adk/a2a/executor/executor_context.py",
+        "google_adk-2.8.0/src/google/adk/a2a/executor/interceptors/include_artifacts_in_a2a_event.py",
+        "google_adk-2.8.0/src/google/adk/a2a/experimental.py",
+        "google_adk-2.8.0/src/google/adk/a2a/logs/log_utils.py",
+        "google_adk-2.8.0/src/google/adk/agents/common_configs.py",
+        "google_adk-2.8.0/src/google/adk/agents/invocation_context.py",
+        "google_adk-2.8.0/src/google/adk/agents/llm_agent.py",
+        "google_adk-2.8.0/src/google/adk/agents/remote_a2a_agent.py",
+        "google_adk-2.8.0/src/google/adk/agents/run_config.py",
+        "google_adk-2.8.0/src/google/adk/artifacts/base_artifact_service.py",
+        "google_adk-2.8.0/src/google/adk/auth/exchanger/oauth2_credential_exchanger.py",
+        "google_adk-2.8.0/src/google/adk/auth/refresher/base_credential_refresher.py",
+        "google_adk-2.8.0/src/google/adk/auth/refresher/credential_refresher_registry.py",
+        "google_adk-2.8.0/src/google/adk/auth/refresher/oauth2_credential_refresher.py",
+        "google_adk-2.8.0/src/google/adk/cli/_telemetry/_metrics_collector.py",
+        "google_adk-2.8.0/src/google/adk/cli/_telemetry/_metrics_reporter.py",
+        "google_adk-2.8.0/src/google/adk/cli/agent_test_runner.py",
+        "google_adk-2.8.0/src/google/adk/cli/built_in_agents/adk_agent_builder_assistant.py",
+        "google_adk-2.8.0/src/google/adk/cli/built_in_agents/sub_agents/google_search_agent.py",
+        "google_adk-2.8.0/src/google/adk/cli/built_in_agents/sub_agents/url_context_agent.py",
+        "google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/cleanup_unused_files.py",
+        "google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/delete_files.py",
+        "google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/explore_project.py",
+        "google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/read_config_files.py",
+        "google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/read_files.py",
+        "google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/write_config_files.py",
+        "google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/write_files.py",
+        "google_adk-2.8.0/src/google/adk/cli/cli_create.py",
+        "google_adk-2.8.0/src/google/adk/cli/cli_deploy.py",
+        "google_adk-2.8.0/src/google/adk/cli/fast_api.py",
+        "google_adk-2.8.0/src/google/adk/cli/plugins/replay_plugin.py",
+        "google_adk-2.8.0/src/google/adk/cli/service_registry.py",
+        "google_adk-2.8.0/src/google/adk/cli/utils/gcp_utils.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/simulation/__init__.py",
+        "google_adk-2.8.0/src/google/adk/events/event.py",
+        "google_adk-2.8.0/src/google/adk/features/_feature_registry.py",
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/_code_execution.py",
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/audio_cache_manager.py",
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/base_llm_flow.py",
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/functions.py",
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/transcription_manager.py",
+        "google_adk-2.8.0/src/google/adk/integrations/agent_identity/_agent_identity_credentials_provider.py",
+        "google_adk-2.8.0/src/google/adk/integrations/agent_identity/_iam_connector_credentials_provider.py",
+        "google_adk-2.8.0/src/google/adk/integrations/agent_identity/gcp_auth_provider.py",
+        "google_adk-2.8.0/src/google/adk/integrations/agent_identity/gcp_auth_provider_scheme.py",
+        "google_adk-2.8.0/src/google/adk/integrations/agent_registry/agent_registry.py",
+        "google_adk-2.8.0/src/google/adk/integrations/api_registry/api_registry.py",
+        "google_adk-2.8.0/src/google/adk/integrations/bigquery/bigquery_toolset.py",
+        "google_adk-2.8.0/src/google/adk/integrations/bigquery/data_insights_tool.py",
+        "google_adk-2.8.0/src/google/adk/integrations/daytona/__init__.py",
+        "google_adk-2.8.0/src/google/adk/integrations/e2b/__init__.py",
+        "google_adk-2.8.0/src/google/adk/integrations/eventarc/_client.py",
+        "google_adk-2.8.0/src/google/adk/integrations/eventarc/_domain_specific_publish.py",
+        "google_adk-2.8.0/src/google/adk/integrations/langchain/langchain_tool.py",
+        "google_adk-2.8.0/src/google/adk/integrations/oci/_oci_genai_llm.py",
+        "google_adk-2.8.0/src/google/adk/integrations/skill_registry/gcp_skill_registry.py",
+        "google_adk-2.8.0/src/google/adk/integrations/slack/slack_runner.py",
+        "google_adk-2.8.0/src/google/adk/integrations/vmaas/__init__.py",
+        "google_adk-2.8.0/src/google/adk/integrations/vmaas/sandbox_computer.py",
+        "google_adk-2.8.0/src/google/adk/models/__init__.py",
+        "google_adk-2.8.0/src/google/adk/models/apigee_llm.py",
+        "google_adk-2.8.0/src/google/adk/models/gemma_llm.py",
+        "google_adk-2.8.0/src/google/adk/models/google_llm.py",
+        "google_adk-2.8.0/src/google/adk/optimization/data_types.py",
+        "google_adk-2.8.0/src/google/adk/optimization/simple_prompt_optimizer.py",
+        "google_adk-2.8.0/src/google/adk/plugins/global_instruction_plugin.py",
+        "google_adk-2.8.0/src/google/adk/runners.py",
+        "google_adk-2.8.0/src/google/adk/sessions/database_session_service.py",
+        "google_adk-2.8.0/src/google/adk/sessions/in_memory_session_service.py",
+        "google_adk-2.8.0/src/google/adk/sessions/migration/migrate_from_sqlalchemy_pickle.py",
+        "google_adk-2.8.0/src/google/adk/sessions/migration/migrate_from_sqlalchemy_sqlite.py",
+        "google_adk-2.8.0/src/google/adk/sessions/migration/migration_runner.py",
+        "google_adk-2.8.0/src/google/adk/sessions/schemas/v0.py",
+        "google_adk-2.8.0/src/google/adk/sessions/schemas/v1.py",
+        "google_adk-2.8.0/src/google/adk/sessions/sqlite_session_service.py",
+        "google_adk-2.8.0/src/google/adk/skills/__init__.py",
+        "google_adk-2.8.0/src/google/adk/skills/prompt.py",
+        "google_adk-2.8.0/src/google/adk/telemetry/_experimental_semconv.py",
+        "google_adk-2.8.0/src/google/adk/telemetry/_metrics.py",
+        "google_adk-2.8.0/src/google/adk/tools/_request_input_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/agent_simulator/__init__.py",
+        "google_adk-2.8.0/src/google/adk/tools/agent_simulator/agent_simulator_config.py",
+        "google_adk-2.8.0/src/google/adk/tools/agent_simulator/agent_simulator_engine.py",
+        "google_adk-2.8.0/src/google/adk/tools/agent_simulator/agent_simulator_factory.py",
+        "google_adk-2.8.0/src/google/adk/tools/agent_simulator/agent_simulator_plugin.py",
+        "google_adk-2.8.0/src/google/adk/tools/agent_simulator/strategies/base.py",
+        "google_adk-2.8.0/src/google/adk/tools/agent_simulator/strategies/tool_spec_mock_strategy.py",
+        "google_adk-2.8.0/src/google/adk/tools/agent_simulator/tool_connection_analyzer.py",
+        "google_adk-2.8.0/src/google/adk/tools/agent_simulator/tool_connection_map.py",
+        "google_adk-2.8.0/src/google/adk/tools/api_registry.py",
+        "google_adk-2.8.0/src/google/adk/tools/apihub_tool/clients/secret_client.py",
+        "google_adk-2.8.0/src/google/adk/tools/application_integration_tool/clients/integration_client.py",
+        "google_adk-2.8.0/src/google/adk/tools/bigquery/__init__.py",
+        "google_adk-2.8.0/src/google/adk/tools/bigquery/bigquery_credentials.py",
+        "google_adk-2.8.0/src/google/adk/tools/bigquery/bigquery_skill.py",
+        "google_adk-2.8.0/src/google/adk/tools/bigquery/bigquery_toolset.py",
+        "google_adk-2.8.0/src/google/adk/tools/bigquery/client.py",
+        "google_adk-2.8.0/src/google/adk/tools/bigquery/config.py",
+        "google_adk-2.8.0/src/google/adk/tools/bigquery/data_insights_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/bigquery/metadata_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/bigquery/query_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/bigquery/search_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/bigtable/bigtable_toolset.py",
+        "google_adk-2.8.0/src/google/adk/tools/crewai_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/data_agent/data_agent_toolset.py",
+        "google_adk-2.8.0/src/google/adk/tools/environment_simulation/__init__.py",
+        "google_adk-2.8.0/src/google/adk/tools/environment_simulation/environment_simulation_engine.py",
+        "google_adk-2.8.0/src/google/adk/tools/environment_simulation/environment_simulation_factory.py",
+        "google_adk-2.8.0/src/google/adk/tools/environment_simulation/environment_simulation_plugin.py",
+        "google_adk-2.8.0/src/google/adk/tools/environment_simulation/strategies/base.py",
+        "google_adk-2.8.0/src/google/adk/tools/environment_simulation/strategies/tool_spec_mock_strategy.py",
+        "google_adk-2.8.0/src/google/adk/tools/environment_simulation/tool_connection_analyzer.py",
+        "google_adk-2.8.0/src/google/adk/tools/langchain_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/pubsub/pubsub_toolset.py",
+        "google_adk-2.8.0/src/google/adk/tools/spanner/admin_toolset.py",
+        "google_adk-2.8.0/src/google/adk/tools/spanner/spanner_toolset.py",
+        "google_adk-2.8.0/src/google/adk/utils/cache_performance_analyzer.py",
+        "google_adk-2.8.0/src/google/adk/utils/instructions_utils.py",
+        "google_adk-2.8.0/src/google/adk/workflow/utils/_rehydration_utils.py"
+      ]
+    },
+    {
+      "name": "vertexai",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 16,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/cli/cli_deploy.py",
+        "google_adk-2.8.0/src/google/adk/cli/fast_api.py",
+        "google_adk-2.8.0/src/google/adk/code_executors/agent_engine_sandbox_code_executor.py",
+        "google_adk-2.8.0/src/google/adk/code_executors/vertex_ai_code_executor.py",
+        "google_adk-2.8.0/src/google/adk/dependencies/vertexai.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/_vertex_ai_scenario_generation_facade.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/multi_turn_task_success_evaluator.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/multi_turn_tool_use_quality_evaluator.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/multi_turn_trajectory_quality_evaluator.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/response_evaluator.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/safety_evaluator.py",
+        "google_adk-2.8.0/src/google/adk/evaluation/vertex_ai_eval_facade.py",
+        "google_adk-2.8.0/src/google/adk/integrations/vmaas/sandbox_client.py",
+        "google_adk-2.8.0/src/google/adk/integrations/vmaas/sandbox_computer.py",
+        "google_adk-2.8.0/src/google/adk/memory/vertex_ai_memory_bank_service.py",
+        "google_adk-2.8.0/src/google/adk/sessions/vertex_ai_session_service.py"
+      ]
+    },
+    {
+      "name": "mcp",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 9,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/agents/mcp_instruction_provider.py",
+        "google_adk-2.8.0/src/google/adk/integrations/agent_registry/agent_registry.py",
+        "google_adk-2.8.0/src/google/adk/telemetry/_experimental_semconv.py",
+        "google_adk-2.8.0/src/google/adk/tools/mcp_tool/_agent_to_mcp.py",
+        "google_adk-2.8.0/src/google/adk/tools/mcp_tool/conversion_utils.py",
+        "google_adk-2.8.0/src/google/adk/tools/mcp_tool/mcp_session_manager.py",
+        "google_adk-2.8.0/src/google/adk/tools/mcp_tool/mcp_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/mcp_tool/mcp_toolset.py",
+        "google_adk-2.8.0/src/google/adk/tools/mcp_tool/session_context.py"
+      ]
+    },
+    {
+      "name": "LiteLlm",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 5,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/flows/llm_flows/contents.py",
+        "google_adk-2.8.0/src/google/adk/models/__init__.py",
+        "google_adk-2.8.0/src/google/adk/models/gemma_llm.py",
+        "google_adk-2.8.0/src/google/adk/models/registry.py",
+        "google_adk-2.8.0/src/google/adk/utils/output_schema_utils.py"
+      ]
+    },
+    {
+      "name": "MCP",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/tools/mcp_tool/_agent_to_mcp.py",
+        "google_adk-2.8.0/src/google/adk/tools/mcp_tool/mcp_tool.py",
+        "google_adk-2.8.0/src/google/adk/tools/mcp_tool/mcp_toolset.py"
+      ]
+    },
+    {
+      "name": "OpenAI",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/labs/openai/_openai_llm.py",
+        "google_adk-2.8.0/src/google/adk/models/apigee_llm.py"
+      ]
+    },
+    {
+      "name": "litellm",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/models/lite_llm.py",
+        "google_adk-2.8.0/src/google/adk/models/registry.py"
+      ]
+    },
+    {
+      "name": "llama_index",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/tools/retrieval/files_retrieval.py",
+        "google_adk-2.8.0/src/google/adk/tools/retrieval/llama_index_retrieval.py"
+      ]
+    },
+    {
+      "name": "openai",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/labs/openai/_openai_llm.py",
+        "google_adk-2.8.0/src/google/adk/labs/openai/_openai_responses_llm.py"
+      ]
+    },
+    {
+      "name": "Anthropic",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/models/anthropic_llm.py"
+      ]
+    },
+    {
+      "name": "DeepSeek",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/models/lite_llm.py"
+      ]
+    },
+    {
+      "name": "FastMCP",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/tools/mcp_tool/_agent_to_mcp.py"
+      ]
+    },
+    {
+      "name": "LiteLLM",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/models/lite_llm.py"
+      ]
+    },
+    {
+      "name": "anthropic",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/models/anthropic_llm.py"
+      ]
+    },
+    {
+      "name": "crewai",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/integrations/crewai/crewai_tool.py"
+      ]
+    },
+    {
+      "name": "langchain",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/integrations/langchain/langchain_tool.py"
+      ]
+    }
+  ],
+  "agent_artifacts": [],
+  "committed_credentials": [
+    {
+      "kind": "Private key (PEM)",
+      "file": "google_adk-2.8.0/src/google/adk/auth/auth_credential.py",
+      "line": 161,
+      "sample": "-----BEG\u2026 (27 chars)"
+    }
+  ],
+  "findings": [
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/evaluation_generator.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 100,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)",
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/llm_agent.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 100,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(function_tool,LlmAgent)",
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/skill_toolset.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 100,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(function_tool)",
+        "dynamic_execution(eval/exec_x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/api_server.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 100,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)",
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/cli_deploy.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 100,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "subprocess_variable_execution(x1)",
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/plugins/bigquery_agent_analytics_plugin.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 98,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(function_tool)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/discovery_engine_search_tool.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 98,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(function_tool)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/telemetry/tracing.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 98,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/agent_test_runner.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 98,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(runner.run,Runner.run)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/read_config_files.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 98,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/runners.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/_managed_agent.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/remote_a2a_agent.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/common_configs.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/llm_agent_config.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/context.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(runner.run)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/llm/task/_finish_task_tool.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/flows/llm_flows/base_llm_flow.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent,SequentialAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/flows/llm_flows/functions.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(function_tool,LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/flows/llm_flows/_invocation_utils.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/flows/llm_flows/instructions.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/flows/llm_flows/request_confirmation.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/models/google_llm.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/plugins/_reflect_retry_model_plugin.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent,function_tool)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/plugins/global_instruction_plugin.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/apps/compaction.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/workflow/_llm_agent_wrapper.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/load_memory_tool.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(function_tool)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/crewai_tool.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(crewai)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/vertex_ai_load_profiles_tool.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(function_tool)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/long_running_tool.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(function_tool)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/transfer_to_agent_tool.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(function_tool)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/base_tool.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/agent_tool.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/mcp_tool/mcp_toolset.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/mcp_tool/_agent_to_mcp.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(4_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/bigquery/bigquery_skill.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/environment_simulation/environment_simulation_engine.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/utils/agent_info.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent,function_tool)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/a2a/executor/a2a_agent_executor.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(AgentExecutor)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/langchain/langchain_tool.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "agent_orchestration(function_tool)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/oci/_oci_genai_llm.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/crewai/crewai_tool.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(function_tool,crewai)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/cli.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/built_in_agents/adk_agent_builder_assistant.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent,LoopAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/built_in_agents/sub_agents/url_context_agent.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/built_in_agents/sub_agents/google_search_agent.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/explore_project.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/write_config_files.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(SequentialAgent,ParallelAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/labs/openai/_openai_llm.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/models/apigee_llm.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/telemetry/_stable_semconv.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/agent_evaluator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/config_agent_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "agent_orchestration(LlmAgent)",
+        "dynamic_import(x3)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/models/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/models/registry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "agent_orchestration(function_tool)",
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/bash_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/bigquery/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/fast_api.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/service_registry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/models/anthropic_llm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/plugins/debug_logging_plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/code_executors/agent_engine_sandbox_code_executor.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/environment/_read_file_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/a2a/converters/request_converter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/firestore/firestore_memory_service.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/conformance/cli_record.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/conformance/cli_test.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/browser/main-KSQARI5D.js",
+      "language": "JavaScript",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "agent_orchestration(LlmAgent,LoopAgent)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/code_executors/unsafe_local_code_executor.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/code_executors/container_code_executor.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/daytona/_daytona_environment.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/llm_as_judge.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/eval_case.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/hallucinations_v1.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/vertex_ai_eval_facade.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/_vertex_ai_scenario_generation_facade.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/eval_metrics.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/safety_evaluator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/final_response_match_v1.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/_retry_options_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/local_eval_sets_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/multi_turn_tool_use_quality_evaluator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/app_details.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/multi_turn_trajectory_quality_evaluator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/response_evaluator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/trajectory_evaluator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/multi_turn_task_success_evaluator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/llm_as_judge_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/simulation/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/simulation/llm_backed_user_simulator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/simulation/_cloud_tts_llm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/simulation/user_simulator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/simulation/_llm_audio_user_simulator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/simulation/per_turn_user_simulator_quality_v1.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/sessions/vertex_ai_session_service.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/sessions/database_session_service.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/sessions/sqlite_session_service.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/sessions/base_session_service.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(SequentialAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/sessions/in_memory_session_service.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/sessions/schemas/v0.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/sessions/schemas/v1.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/sessions/migration/migration_runner.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/sessions/migration/migrate_from_sqlalchemy_pickle.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/sessions/migration/migrate_from_sqlalchemy_sqlite.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/labs/openai/_openai_responses_llm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/labs/antigravity/_event_converter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/labs/antigravity/_antigravity_agent.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/labs/antigravity/_sub_agent_tools.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent,LoopAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/loop_agent.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LoopAgent,LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/mcp_instruction_provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/langgraph_agent.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/live_request_queue.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/agent_config.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent,LoopAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/parallel_agent_config.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(ParallelAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/loop_agent_config.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LoopAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/run_config.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/context_cache_config.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/readonly_context.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/parallel_agent.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(ParallelAgent,LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/sequential_agent.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent,SequentialAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/base_agent.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/invocation_context.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/transcription_entry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/sequential_agent_config.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(SequentialAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/agents/llm/task/_task_models.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/examples/example.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/examples/vertex_ai_example_store.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/flows/llm_flows/transcription_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/flows/llm_flows/agent_transfer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/flows/llm_flows/_code_execution.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/flows/llm_flows/_fencing.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/flows/llm_flows/audio_cache_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/flows/llm_flows/auto_flow.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/flows/llm_flows/_output_schema_processor.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/flows/llm_flows/contents.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/flows/llm_flows/basic.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/flows/llm_flows/audio_transcriber.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/models/base_llm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/models/llm_request.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/models/interactions_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/models/gemini_llm_connection.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/models/llm_response.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/models/gemma_llm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/models/lite_llm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(5_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/models/gemini_context_cache_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/models/base_llm_connection.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/plugins/logging_plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/plugins/multimodal_tool_results_plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/plugins/save_files_as_artifacts_plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/plugins/plugin_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/plugins/context_filter_plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/plugins/base_plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/dependencies/vertexai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/memory/vertex_ai_memory_bank_service.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/memory/vertex_ai_rag_memory_service.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/memory/memory_entry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/auth/exchanger/oauth2_credential_exchanger.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/auth/refresher/base_credential_refresher.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/auth/refresher/credential_refresher_registry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/auth/refresher/oauth2_credential_refresher.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/events/event.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/events/event_actions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/optimization/gepa_root_agent_optimizer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/optimization/simple_prompt_optimizer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/optimization/gepa_root_agent_prompt_optimizer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/optimization/data_types.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/optimization/_gepa_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/apps/llm_event_summarizer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/code_executors/vertex_ai_code_executor.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/code_executors/built_in_code_executor.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/code_executors/code_execution_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/workflow/_function_node.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/workflow/_workflow.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/workflow/_tool_node.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/workflow/_node_runner.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(SequentialAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/workflow/_node.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/workflow/utils/_rehydration_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/workflow/utils/_workflow_hitl_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/workflow/utils/_graph_validation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/workflow/utils/_workflow_graph_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/api_registry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/google_maps_grounding_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/_forwarding_artifact_service.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/_gemini_schema_util.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/set_model_response_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/langchain_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/_function_parameter_parse_util.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/_node_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/url_context_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/load_artifacts_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/enterprise_search_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/vertex_ai_search_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/_automatic_function_calling_util.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/_function_tool_declarations.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/preload_memory_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/function_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/google_search_agent_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/authenticated_function_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(function_tool)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/google_search_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/_request_input_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/load_mcp_resource_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/_remote_mcp_server.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/google_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(function_tool)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/agent_simulator/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/agent_simulator/tool_connection_map.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/agent_simulator/agent_simulator_engine.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/agent_simulator/agent_simulator_factory.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/agent_simulator/tool_connection_analyzer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/agent_simulator/agent_simulator_plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/agent_simulator/agent_simulator_config.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/agent_simulator/strategies/tool_spec_mock_strategy.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/agent_simulator/strategies/base.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/data_agent/data_agent_toolset.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/spanner/utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/spanner/admin_toolset.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/spanner/spanner_toolset.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/environment/_execute_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/environment/_edit_file_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/environment/_write_file_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/computer_use/computer_use_toolset.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/computer_use/computer_use_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(function_tool)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/apihub_tool/apihub_toolset.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/apihub_tool/clients/secret_client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/google_api_tool/google_api_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/application_integration_tool/application_integration_toolset.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/application_integration_tool/integration_connector_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/application_integration_tool/clients/integration_client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/retrieval/llama_index_retrieval.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/retrieval/vertex_ai_rag_retrieval.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/retrieval/files_retrieval.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/retrieval/base_retrieval_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/openapi_tool/openapi_spec_parser/rest_api_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/pubsub/pubsub_toolset.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/mcp_tool/mcp_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/mcp_tool/conversion_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/mcp_tool/session_context.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/mcp_tool/mcp_session_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/bigquery/config.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/bigquery/bigquery_credentials.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/bigquery/data_insights_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/bigquery/bigquery_toolset.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/bigquery/search_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/bigquery/query_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/bigquery/metadata_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/bigquery/client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/bigtable/bigtable_toolset.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/environment_simulation/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/environment_simulation/environment_simulation_factory.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/environment_simulation/tool_connection_analyzer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/environment_simulation/environment_simulation_config.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/environment_simulation/environment_simulation_plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/environment_simulation/strategies/tool_spec_mock_strategy.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/environment_simulation/strategies/base.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/utils/cache_performance_analyzer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/utils/_google_client_headers.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/utils/_schema_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/utils/instructions_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/utils/content_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/utils/output_schema_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/utils/streaming_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/planners/base_planner.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/planners/built_in_planner.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/planners/plan_re_act_planner.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/a2a/experimental.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/a2a/utils/agent_card_builder.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent,LoopAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/a2a/utils/agent_to_a2a.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/a2a/converters/event_converter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/a2a/converters/long_running_functions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/a2a/converters/to_adk_event.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/a2a/converters/part_converter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/a2a/executor/a2a_agent_executor_impl.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(AgentExecutor)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/a2a/executor/executor_context.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/a2a/executor/interceptors/include_artifacts_in_a2a_event.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/a2a/agent/interceptors/new_integration_extension.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/a2a/logs/log_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/vmaas/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/vmaas/sandbox_client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/vmaas/sandbox_computer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/daytona/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/eventarc/_client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/eventarc/_domain_specific_publish.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/e2b/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/api_registry/api_registry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/agent_registry/agent_registry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/model_armor/_plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/agent_identity/gcp_auth_provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/agent_identity/gcp_auth_provider_scheme.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/agent_identity/_iam_connector_credentials_provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/agent_identity/_agent_identity_credentials_provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/bigquery/data_insights_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/bigquery/bigquery_toolset.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/slack/slack_runner.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/skill_registry/gcp_skill_registry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/telemetry/_serialization.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/telemetry/_experimental_semconv.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/telemetry/_metrics.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/telemetry/_token_usage.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/features/_feature_registry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/skills/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/skills/prompt.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/skills/models.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/artifacts/file_artifact_service.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/artifacts/artifact_util.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/artifacts/gcs_artifact_service.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/artifacts/in_memory_artifact_service.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/artifacts/base_artifact_service.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/cli_tools_click.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/cli_eval.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/cli_create.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/agent_graph.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent,LoopAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/trigger_routes.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/delete_files.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/write_files.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/read_files.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/cleanup_unused_files.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/built_in_agents/tools/query_schema.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(function_tool)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/plugins/recordings_schema.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/plugins/replay_plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/plugins/recordings_plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/conformance/test_case.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/utils/graph_serialization.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/utils/state.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(LlmAgent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/utils/local_storage.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/utils/gcp_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/_telemetry/_metrics_reporter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/_telemetry/_metrics_collector.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/custom_metric_evaluator.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/sessions/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/plugins/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/memory/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/apps/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/tools/tool_context.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/utils/_lazy.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/a2a/_compat.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/oci/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/model_armor/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/bigquery/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/artifacts/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/cli/utils/agent_loader.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/rubric_based_final_response_quality_v1.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/rubric_based_tool_use_quality_v1.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/rubric_based_multi_turn_trajectory_evaluator.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/evaluation/final_response_match_v2.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_adk-2.8.0/src/google/adk/integrations/bigquery/query_tool.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}

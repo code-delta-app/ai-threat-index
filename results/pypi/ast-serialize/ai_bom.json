@@ -1,0 +1,51 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.1",
+  "generated": "2026-08-31T20:13:23.262194Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 660,
+    "files_flagged": 1,
+    "critical": 0,
+    "high": 0,
+    "elevated": 1,
+    "providers": 0,
+    "foreign_egress_files": 0,
+    "non_allied_jurisdiction_files": 0,
+    "cost_risk_files": 0,
+    "agent_artifacts": 1,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 0
+  },
+  "providers": [],
+  "agent_artifacts": [
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "ast_serialize-0.8.0/AGENTS.md"
+    }
+  ],
+  "committed_credentials": [],
+  "findings": [
+    {
+      "file": "ast_serialize-0.8.0/crates/ruff_python_parser/resources/inline/ok/decorator_expression_eval_hack_py38.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}

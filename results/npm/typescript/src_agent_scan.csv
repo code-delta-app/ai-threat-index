@@ -1,4 +1,0 @@
-rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
-package/lib/getExePath.d.ts,JavaScript,0,NORMAL,0,0,,,,
-package/lib/tsc.js,JavaScript,0,NORMAL,0,0,,,,
-package/lib/getExePath.js,JavaScript,0,NORMAL,0,0,,,,

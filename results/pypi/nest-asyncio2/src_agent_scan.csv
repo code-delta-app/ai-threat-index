@@ -1,0 +1,15 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+nest_asyncio2-1.7.2/tests/312_pyvista.py,Python,50,ELEVATED,0,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+nest_asyncio2-1.7.2/setup.py,Python,0,NORMAL,0,0,,,,
+nest_asyncio2-1.7.2/nest_asyncio2.py,Python,0,NORMAL,0,0,,,,
+nest_asyncio2-1.7.2/tests/__init__.py,Python,0,NORMAL,0,0,,,,
+nest_asyncio2-1.7.2/tests/nest_test.py,Python,0,NORMAL,0,0,,,,
+nest_asyncio2-1.7.2/tests/312_aiohttp_server.py,Python,0,NORMAL,0,0,,,,
+nest_asyncio2-1.7.2/tests/call_soon_anyio.py,Python,0,NORMAL,0,0,,,,
+nest_asyncio2-1.7.2/tests/312_aiohttp_server_m.py,Python,0,NORMAL,0,0,,,,
+nest_asyncio2-1.7.2/tests/312_aiohttp.py,Python,0,NORMAL,0,0,,,,
+nest_asyncio2-1.7.2/tests/314_task_mix.py,Python,0,NORMAL,0,0,,,,
+nest_asyncio2-1.7.2/tests/mispatched.py,Python,0,NORMAL,0,0,,,,
+nest_asyncio2-1.7.2/tests/314_task.py,Python,0,NORMAL,0,0,,,,
+nest_asyncio2-1.7.2/tests/312_loop_factory.py,Python,0,NORMAL,0,0,,,,
+nest_asyncio2-1.7.2/tests/scheduler.py,Python,0,NORMAL,0,0,,,,

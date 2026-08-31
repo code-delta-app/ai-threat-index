@@ -1,0 +1,13 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+genai_prices-0.1.5/genai_prices/data.py,Python,40,ELEVATED,0,0,from Cohere; from Deepseek; from OpenAI; http:open.bigmodel.cn; http:openrouter.ai,,,ai_sdk_import(3_sdk(s)_detected); ai_http_endpoint(open.bigmodel.cn); data_egress(model_hosted_in_CN:open.bigmodel.cn); data_sovereignty_risk(non-allied_jurisdiction)
+genai_prices-0.1.5/genai_prices/__init__.py,Python,0,NORMAL,0,0,,,,
+genai_prices-0.1.5/genai_prices/data_units.py,Python,0,NORMAL,0,0,,,,
+genai_prices-0.1.5/genai_prices/units.py,Python,0,NORMAL,0,0,,,,
+genai_prices-0.1.5/genai_prices/__main__.py,Python,0,NORMAL,0,0,,,,
+genai_prices-0.1.5/genai_prices/data_snapshot.py,Python,0,NORMAL,0,0,,,,
+genai_prices-0.1.5/genai_prices/update_prices.py,Python,0,NORMAL,0,0,,,,
+genai_prices-0.1.5/genai_prices/types.py,Python,0,NORMAL,0,0,,,,
+genai_prices-0.1.5/genai_prices/validation.py,Python,0,NORMAL,0,0,,,,
+genai_prices-0.1.5/genai_prices/decompose.py,Python,0,NORMAL,0,0,,,,
+genai_prices-0.1.5/genai_prices/_usage.py,Python,0,NORMAL,0,0,,,,
+genai_prices-0.1.5/genai_prices/_cli.py,Python,0,NORMAL,0,0,,,,

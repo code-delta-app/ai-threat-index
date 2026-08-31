@@ -1,9 +1,0 @@
-rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
-package/index.js,JavaScript,0,NORMAL,0,0,,,,
-package/typings/index.d.ts,JavaScript,0,NORMAL,0,0,,,,
-package/lib/suggestSimilar.js,JavaScript,0,NORMAL,0,0,,,,
-package/lib/command.js,JavaScript,0,NORMAL,0,0,,,,
-package/lib/help.js,JavaScript,0,NORMAL,0,0,,,,
-package/lib/argument.js,JavaScript,0,NORMAL,0,0,,,,
-package/lib/option.js,JavaScript,0,NORMAL,0,0,,,,
-package/lib/error.js,JavaScript,0,NORMAL,0,0,,,,

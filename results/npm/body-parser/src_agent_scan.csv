@@ -1,8 +1,0 @@
-rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
-package/index.js,JavaScript,0,NORMAL,0,0,,,,
-package/lib/read.js,JavaScript,0,NORMAL,0,0,,,,
-package/lib/utils.js,JavaScript,0,NORMAL,0,0,,,,
-package/lib/types/text.js,JavaScript,0,NORMAL,0,0,,,,
-package/lib/types/json.js,JavaScript,0,NORMAL,0,0,,,,
-package/lib/types/raw.js,JavaScript,0,NORMAL,0,0,,,,
-package/lib/types/urlencoded.js,JavaScript,0,NORMAL,0,0,,,,

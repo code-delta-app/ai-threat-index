@@ -1,7 +1,0 @@
-rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
-package/config.d.ts,JavaScript,0,NORMAL,0,0,,,,
-package/config.js,JavaScript,0,NORMAL,0,0,,,,
-package/lib/cli-options.js,JavaScript,0,NORMAL,0,0,,,,
-package/lib/env-options.js,JavaScript,0,NORMAL,0,0,,,,
-package/lib/main.js,JavaScript,0,NORMAL,0,0,,,,
-package/lib/main.d.ts,JavaScript,0,NORMAL,0,0,,,,

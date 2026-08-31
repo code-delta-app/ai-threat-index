@@ -1,0 +1,89 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+claude_agent_sdk-0.2.149/tests/test_close_cancellation.py,Python,100,HIGH,0,0,from claude_agent_sdk,ClaudeSDKClient; claude_agent_sdk,subprocess/shell execution with variables (2 occurrence(s)),"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(ClaudeSDKClient,claude_agent_sdk); subprocess_variable_execution(x2)"
+claude_agent_sdk-0.2.149/tests/test_sessions.py,Python,100,HIGH,0,3,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk); prompt_injection_vectors(3_unsanitised_inputs)
+claude_agent_sdk-0.2.149/tests/test_update_cli_version.py,Python,100,HIGH,0,0,,claude_agent_sdk,subprocess/shell execution with variables (1 occurrence(s)),agent_orchestration(claude_agent_sdk); subprocess_variable_execution(x1); dynamic_import(x1)
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/__init__.py,Python,98,HIGH,0,1,from mcp,ClaudeSDKClient; create_sdk_mcp_server,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(ClaudeSDKClient,create_sdk_mcp_server); prompt_injection_partial(1)"
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/query.py,Python,98,HIGH,0,1,from mcp,ClaudeSDKClient,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(ClaudeSDKClient); prompt_injection_partial(1)
+claude_agent_sdk-0.2.149/tests/test_subprocess_buffering.py,Python,98,HIGH,0,1,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk); prompt_injection_partial(1)
+claude_agent_sdk-0.2.149/tests/test_example_s3_session_store_live.py,Python,98,HIGH,0,1,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk); prompt_injection_partial(1)
+claude_agent_sdk-0.2.149/tests/test_session_mutations.py,Python,98,HIGH,0,2,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk); prompt_injection_partial(2)
+claude_agent_sdk-0.2.149/tests/test_session_helpers_store.py,Python,98,HIGH,0,1,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk); prompt_injection_partial(1)
+claude_agent_sdk-0.2.149/tests/test_example_s3_session_store.py,Python,98,HIGH,0,1,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk); prompt_injection_partial(1)
+claude_agent_sdk-0.2.149/tests/test_session_summary.py,Python,98,HIGH,0,1,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk); prompt_injection_partial(1)
+claude_agent_sdk-0.2.149/tests/test_message_parser.py,Python,98,HIGH,0,1,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk); prompt_injection_partial(1)
+claude_agent_sdk-0.2.149/tests/test_session_resume.py,Python,98,HIGH,0,1,from claude_agent_sdk,claude_agent_sdk; ClaudeSDKClient,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk,ClaudeSDKClient); prompt_injection_partial(1)"
+claude_agent_sdk-0.2.149/tests/test_mcp_large_output.py,Python,98,HIGH,0,1,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk); prompt_injection_partial(1)
+claude_agent_sdk-0.2.149/tests/test_session_store_anyio.py,Python,98,HIGH,0,1,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk); prompt_injection_partial(1)
+claude_agent_sdk-0.2.149/examples/tools_option.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/examples/max_budget_usd.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/examples/setting_sources.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk; ClaudeSDKClient,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
+claude_agent_sdk-0.2.149/examples/mcp_calculator.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk; create_sdk_mcp_server; ClaudeSDKClient,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk,create_sdk_mcp_server)"
+claude_agent_sdk-0.2.149/examples/include_partial_messages.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk; ClaudeSDKClient,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
+claude_agent_sdk-0.2.149/examples/quick_start.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/examples/stderr_callback_example.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/examples/hooks.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk; ClaudeSDKClient,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
+claude_agent_sdk-0.2.149/examples/streaming_mode_trio.py,Python,80,HIGH,0,0,from claude_agent_sdk,ClaudeSDKClient; claude_agent_sdk,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
+claude_agent_sdk-0.2.149/examples/agents.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/examples/filesystem_agents.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk; ClaudeSDKClient,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
+claude_agent_sdk-0.2.149/examples/system_prompt.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/examples/streaming_mode_ipython.py,Python,80,HIGH,0,0,from claude_agent_sdk,ClaudeSDKClient; claude_agent_sdk,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
+claude_agent_sdk-0.2.149/examples/streaming_mode.py,Python,80,HIGH,0,0,from claude_agent_sdk,ClaudeSDKClient; claude_agent_sdk,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
+claude_agent_sdk-0.2.149/examples/plugin_example.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/examples/tool_permission_callback.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk; ClaudeSDKClient,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
+claude_agent_sdk-0.2.149/examples/session_stores/redis_session_store.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/examples/session_stores/postgres_session_store.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/examples/session_stores/s3_session_store.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/query.py,Python,80,HIGH,0,0,from claude_agent_sdk,ClaudeSDKClient; claude_agent_sdk,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/types.py,Python,80,HIGH,0,0,from mcp; from MCP,create_sdk_mcp_server; ClaudeSDKClient,,"ai_sdk_import(2_sdk(s)_detected); agent_orchestration(create_sdk_mcp_server,ClaudeSDKClient)"
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/testing/session_store_conformance.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/tests/test_tool_callbacks.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/tests/test_example_postgres_session_store.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/tests/test_transport.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/tests/test_transcript_mirror.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/tests/test_streaming_client.py,Python,80,HIGH,0,0,from claude_agent_sdk,ClaudeSDKClient; claude_agent_sdk,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
+claude_agent_sdk-0.2.149/tests/test_types.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/tests/test_sdk_mcp_integration.py,Python,80,HIGH,0,0,import mcp; from mcp; from claude_agent_sdk,claude_agent_sdk; create_sdk_mcp_server,,"ai_sdk_import(3_sdk(s)_detected); agent_orchestration(claude_agent_sdk,create_sdk_mcp_server)"
+claude_agent_sdk-0.2.149/tests/test_session_import.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/tests/test_integration.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/tests/test_rate_limit_event_repro.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/tests/test_task_compat.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/tests/test_client.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk; ClaudeSDKClient,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
+claude_agent_sdk-0.2.149/tests/test_session_store_conformance.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/tests/test_errors.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/tests/test_query.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk; create_sdk_mcp_server,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk,create_sdk_mcp_server)"
+claude_agent_sdk-0.2.149/tests/test_option_warnings.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk; ClaudeSDKClient,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
+claude_agent_sdk-0.2.149/tests/test_example_redis_session_store_live.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/tests/test_example_redis_session_store.py,Python,80,HIGH,0,0,from claude_agent_sdk,claude_agent_sdk,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/client.py,Python,58,ELEVATED,0,2,,ClaudeSDKClient,,agent_orchestration(ClaudeSDKClient); prompt_injection_partial(2)
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/client.py,Python,58,ELEVATED,0,1,,ClaudeSDKClient,,agent_orchestration(ClaudeSDKClient); prompt_injection_partial(1)
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/_mcp_compat.py,Python,40,ELEVATED,0,0,import mcp; from mcp,,,ai_sdk_import(2_sdk(s)_detected)
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/_task_compat.py,Python,40,ELEVATED,0,0,,claude_agent_sdk,,agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/sdk_mcp_bridge.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/transport/subprocess_cli.py,Python,40,ELEVATED,0,0,,ClaudeSDKClient,,agent_orchestration(ClaudeSDKClient)
+claude_agent_sdk-0.2.149/tests/test_download_cli.py,Python,40,ELEVATED,0,0,,,subprocess/shell execution with variables (1 occurrence(s)),subprocess_variable_execution(x1)
+claude_agent_sdk-0.2.149/scripts/download_cli.py,Python,40,ELEVATED,0,0,,claude_agent_sdk,,agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/scripts/_cli_version_validation.py,Python,40,ELEVATED,0,0,,claude_agent_sdk,,agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/scripts/update_cli_version.py,Python,40,ELEVATED,0,0,,claude_agent_sdk,,agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/scripts/build_wheel.py,Python,40,ELEVATED,0,0,,claude_agent_sdk,,agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/scripts/update_version.py,Python,40,ELEVATED,0,0,,claude_agent_sdk,,agent_orchestration(claude_agent_sdk)
+claude_agent_sdk-0.2.149/examples/session_stores/__init__.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_cli_version.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_version.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_errors.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/testing/__init__.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/session_resume.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/__init__.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/session_mutations.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/session_summary.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/message_parser.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/transcript_mirror_batcher.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/sessions.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/session_import.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/session_store_validation.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/session_store.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/transport/__init__.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/tests/conftest.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/tests/test_build_wheel.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/tests/test_changelog.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/scripts/trust_workspace.py,Python,0,NORMAL,0,0,,,,
+claude_agent_sdk-0.2.149/scripts/check_pypi_quota.py,Python,0,NORMAL,0,0,,,,

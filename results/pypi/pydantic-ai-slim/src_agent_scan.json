@@ -1,0 +1,4932 @@
+{
+  "summary": {
+    "total_files": 298,
+    "flagged_files": 219,
+    "critical_files": 0,
+    "high_files": 89,
+    "elevated_files": 130,
+    "normal_files": 79,
+    "mode": "snapshot",
+    "summary_text": "Scanned 298 file(s). 89 HIGH, 130 ELEVATED. AI SDKs detected: pydantic_ai, mcp, MCP, fastmcp. "
+  },
+  "sdk_inventory": {
+    "pydantic_ai": 169,
+    "mcp": 3,
+    "MCP": 4,
+    "fastmcp": 1,
+    "FastMCP": 1,
+    "openai": 36,
+    "google.genai": 6,
+    "http:api.together.xyz": 1,
+    "http:api.x.ai": 1,
+    "http:api.fireworks.ai": 1,
+    "http:bedrock-runtime": 2,
+    "mistralai": 2,
+    "http:openrouter.ai": 1,
+    "anthropic": 4,
+    "groq": 3,
+    "http:api.groq.com": 1,
+    "voyageai": 2,
+    "cohere": 3,
+    "DeepSeek": 1,
+    "http:api.deepseek.com": 1,
+    "huggingface_hub": 2,
+    "http:generativelanguage.googleapis.com": 1,
+    "OpenAI": 1
+  },
+  "agent_artifacts": {
+    "table_version": 1,
+    "tier3_count": 0,
+    "items": [
+      {
+        "name": "Agent instructions file",
+        "tier": 1,
+        "path": "pydantic_ai_slim-2.36.0/pydantic_ai/AGENTS.md"
+      },
+      {
+        "name": "Agent instructions file",
+        "tier": 1,
+        "path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/AGENTS.md"
+      },
+      {
+        "name": "Agent instructions file",
+        "tier": 1,
+        "path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/AGENTS.md"
+      },
+      {
+        "name": "Agent instructions file",
+        "tier": 1,
+        "path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/AGENTS.md"
+      },
+      {
+        "name": "Agent instructions file",
+        "tier": 1,
+        "path": "pydantic_ai_slim-2.36.0/pydantic_ai/native_tools/AGENTS.md"
+      },
+      {
+        "name": "Agent instructions file",
+        "tier": 1,
+        "path": "pydantic_ai_slim-2.36.0/pydantic_ai/profiles/AGENTS.md"
+      },
+      {
+        "name": "Agent instructions file",
+        "tier": 1,
+        "path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/AGENTS.md"
+      },
+      {
+        "name": "Agent instructions file",
+        "tier": 1,
+        "path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/AGENTS.md"
+      },
+      {
+        "name": "Agent instructions file",
+        "tier": 1,
+        "path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/AGENTS.md"
+      },
+      {
+        "name": "Agent instructions file",
+        "tier": 1,
+        "path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/AGENTS.md"
+      },
+      {
+        "name": "Claude Code instructions",
+        "tier": 1,
+        "path": "pydantic_ai_slim-2.36.0/pydantic_ai/CLAUDE.md"
+      },
+      {
+        "name": "Claude Code instructions",
+        "tier": 1,
+        "path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/CLAUDE.md"
+      },
+      {
+        "name": "Claude Code instructions",
+        "tier": 1,
+        "path": "pydantic_ai_slim-2.36.0/pydantic_ai/native_tools/CLAUDE.md"
+      },
+      {
+        "name": "Claude Code instructions",
+        "tier": 1,
+        "path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/CLAUDE.md"
+      },
+      {
+        "name": "Claude Code instructions",
+        "tier": 1,
+        "path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/CLAUDE.md"
+      }
+    ]
+  },
+  "files": [
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/messages.py",
+      "language": "Python",
+      "ais": 100,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 6,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)",
+        "prompt_injection_vectors(6_unsanitised_inputs)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/bedrock.py",
+      "language": "Python",
+      "ais": 100,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 4,
+      "sdk_found": [
+        "from pydantic_ai",
+        "http:bedrock-runtime"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(bedrock-runtime)",
+        "agent_orchestration(RunContext)",
+        "cost_risk(ai_calls_inside_loop)",
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/huggingface.py",
+      "language": "Python",
+      "ais": 100,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 4,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)",
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/openai.py",
+      "language": "Python",
+      "ais": 98,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from openai",
+        "from OpenAI",
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "agent_orchestration(RunContext)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_adapter.py",
+      "language": "Python",
+      "ais": 98,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_agent_graph.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext",
+        "runner.run"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,runner.run)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_output.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_run_context.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/mcp.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from fastmcp",
+        "from mcp",
+        "import FastMCP",
+        "from MCP"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(5_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/run.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/output.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_utils.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_instructions.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/template.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/tools.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/result.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_history_processor.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/capability.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/reinject_system_prompt.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/__init__.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "import MCP"
+      ],
+      "agent_patterns": [
+        "agent.run("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(agent.run()"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_dynamic.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext",
+        "agent.run("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,agent.run()"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_tool_search.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/process_event_stream.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/image_generation.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/web_search.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/mcp.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/process_history.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/instrumentation.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/hooks.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/include_return_schemas.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/thread_executor.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/combined.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/native_or_local.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_deferred_capability_loader.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/x_search.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/wrapper.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/deferred_tool_handler.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_pending_messages.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/web_fetch.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/prepare_tools.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/set_tool_metadata.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/abstract.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/content_filter.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/google.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from google.genai",
+        "http:generativelanguage.googleapis.com"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(generativelanguage.googleapis.com)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/instrumented.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/mcp_sampling.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from MCP"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/mistral.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mistralai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "data_egress(model_hosted_in_FR:mistralai)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/fallback.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/anthropic.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from anthropic",
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/concurrency.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/groq.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from groq"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/_tool_choice.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_instruction_collection.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_deferred_capability_loader.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/function.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/approval_required.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_event_stream.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/image_generation.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext",
+        "agent.run("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,agent.run()"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/x_search.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext",
+        "agent.run("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,agent.run()"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_toolset.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_utils.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_base.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext",
+        "agent.run("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,agent.run()"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_operation.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_capability_operation.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext",
+        "result_type="
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,result_type=)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_agent.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_run_context.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_toolset.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_dynamic_toolset.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_mcp_toolset.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_function_toolset.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_model.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_durability.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext",
+        "agent.run(",
+        "result_type="
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,agent.run()"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_agent.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_toolset.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_dynamic_toolset.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_mcp_toolset.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_function_toolset.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_cache_policies.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_model.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_durability.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "agent.run("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(agent.run()"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_agent.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_utils.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_mcp_toolset.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_operation_backend.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_model.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_durability.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext",
+        "agent.run("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,agent.run()"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/agent/__init__.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext",
+        "agent.run("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,agent.run()"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/agent/wrapper.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/agent/abstract.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_instrumentation.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/_openai_protocol.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_enqueue.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_deferred.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_function_schema.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_parts_manager.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/format_prompt.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/exceptions.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_mcp.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from MCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_deferred_capabilities.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/retries.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_template.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/tool_manager.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_thinking_part.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/concurrency.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/direct.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_spec.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_cancel.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_system_prompt.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext",
+        "runner.run"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext,runner.run)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_tool_execution.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_cli/web.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/alibaba.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/google.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from google.genai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/heroku.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/_openai_compatible.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai",
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openai.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/nebius.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/google_cloud.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from google.genai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/together.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai",
+        "http:api.together.xyz"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "ai_http_endpoint(api.together.xyz)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/xai.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "http:api.x.ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(api.x.ai)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/sentence_transformers.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/cerebras.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/fireworks.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai",
+        "http:api.fireworks.ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "ai_http_endpoint(api.fireworks.ai)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "http:bedrock-runtime"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(bedrock-runtime)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock_mantle.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/mistral.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from mistralai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "data_egress(model_hosted_in_FR:mistralai)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/crusoe.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/moonshotai.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openrouter.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai",
+        "http:openrouter.ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "ai_http_endpoint(openrouter.ai)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/anthropic.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from anthropic"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/zai.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/ollama.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from google.genai",
+        "from groq",
+        "from openai",
+        "from anthropic"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(5_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/ovhcloud.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/groq.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from groq",
+        "http:api.groq.com"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "ai_http_endpoint(api.groq.com)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/litellm.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/voyageai.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from voyageai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/cohere.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from cohere"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/deepseek.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai",
+        "from DeepSeek",
+        "http:api.deepseek.com"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "ai_http_endpoint(api.deepseek.com)",
+        "data_egress(model_hosted_in_CN:api.deepseek.com)",
+        "data_sovereignty_risk(non-allied_jurisdiction)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/huggingface.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/github.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/azure.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/snowflake.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/vercel.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/sambanova.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/native_tool.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/durable_operation.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/prefix_tools.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/resolve_model_id.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_deferred_capabilities.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/select_model.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/toolset.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/thinking.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_ordering.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ext/langchain.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/_continuation.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/xai.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/cerebras.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/bedrock_mantle.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/crusoe.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/openrouter.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/zai.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/ollama.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/test.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/wrapper.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/function.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/cohere.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from cohere"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/_anthropic_bedrock_count_tokens.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from anthropic"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/snowflake.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_dynamic.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_tool_search.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/set_metadata.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/prepared.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/prefixed.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/deferred_loading.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/include_return_schemas.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/combined.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/wrapper.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/external.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_capability_owned.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/filtered.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/renamed.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/abstract.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_messages_builder.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/app.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/_hosts.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/api.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/_utils.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/_adapter.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/google.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from google.genai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/_session.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext",
+        "Agent.run("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext,Agent.run()"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/openai.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/xai.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/azure.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/duckduckgo.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/tavily.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/exa.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/web_fetch.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/google.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from google.genai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/openai.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/sentence_transformers.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import pydantic_ai",
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/instrumented.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/bedrock.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/test.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/voyageai.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from voyageai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/cohere.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai",
+        "from cohere"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/result.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_spec.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_logfire.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_workflow.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_operation_backend.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_transports.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_operation_backend.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_types.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/native_tools/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/native_tools/_tool_search.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "RunContext"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/agent/spec.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from pydantic_ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_tool_search.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_json_schema.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_mcp_compat.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/__main__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_ssrf.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_cost.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_griffe.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/settings.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_sync_stream.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_otel_messages.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/function_signature.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_http.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/usage.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_uuid.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_warnings.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/_cli/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/_bedrock_model_names.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ext/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/_known_model_names.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/_abstract.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/_reasoning_details.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/ag_ui/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/ag_ui/_interrupt.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/ag_ui/_multimodal.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/ag_ui/_thinking_0_13.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/ag_ui/_utils.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/ag_ui/_forward_compat.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/ag_ui/_thinking_0_10.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/ag_ui/_event_stream.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/ag_ui/_adapter.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/request_types.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/_models.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/response_types.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/_event_stream.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/_openai_webrtc.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/model.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/_utils.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/_instrumentation.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/codec.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/settings.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/profiles.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/settings.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/wrapper.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/base.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_operation_names.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_codec.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_operation_backend.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_runtime_toolsets.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_operation_names.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_activity_execution.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_payload_converter.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_operation_names.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_operation_names.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/profiles/amazon.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/profiles/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/profiles/google.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/profiles/openai.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/profiles/harmony.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/profiles/mistral.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/profiles/moonshotai.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/profiles/meta.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/profiles/grok.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/profiles/anthropic.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/profiles/zai.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/profiles/groq.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/profiles/qwen.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/profiles/cohere.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_ai_slim-2.36.0/pydantic_ai/profiles/deepseek.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    }
+  ]
+}

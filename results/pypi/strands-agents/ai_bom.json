@@ -1,0 +1,6179 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.1",
+  "generated": "2026-08-31T20:14:10.901738Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 628,
+    "files_flagged": 354,
+    "critical": 0,
+    "high": 29,
+    "elevated": 325,
+    "providers": 19,
+    "foreign_egress_files": 3,
+    "non_allied_jurisdiction_files": 0,
+    "cost_risk_files": 0,
+    "agent_artifacts": 2,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 0
+  },
+  "providers": [
+    {
+      "name": "strands",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 331,
+      "files": [
+        "strands_agents-1.54.0/src/strands/agent/_agent_as_tool.py",
+        "strands_agents-1.54.0/src/strands/agent/_agent_delegation.py",
+        "strands_agents-1.54.0/src/strands/experimental/bidi/io/audio.py",
+        "strands_agents-1.54.0/src/strands/experimental/bidi/types/events.py",
+        "strands_agents-1.54.0/src/strands/experimental/hooks/events.py",
+        "strands_agents-1.54.0/src/strands/experimental/steering/__init__.py",
+        "strands_agents-1.54.0/src/strands/experimental/steering/context_providers/__init__.py",
+        "strands_agents-1.54.0/src/strands/experimental/steering/context_providers/ledger_provider.py",
+        "strands_agents-1.54.0/src/strands/experimental/steering/core/__init__.py",
+        "strands_agents-1.54.0/src/strands/experimental/steering/core/action.py",
+        "strands_agents-1.54.0/src/strands/experimental/steering/core/context.py",
+        "strands_agents-1.54.0/src/strands/experimental/steering/core/handler.py",
+        "strands_agents-1.54.0/src/strands/experimental/steering/handlers/__init__.py",
+        "strands_agents-1.54.0/src/strands/experimental/steering/handlers/llm/__init__.py",
+        "strands_agents-1.54.0/src/strands/experimental/steering/handlers/llm/llm_handler.py",
+        "strands_agents-1.54.0/src/strands/experimental/steering/handlers/llm/mappers.py",
+        "strands_agents-1.54.0/src/strands/experimental/tools/__init__.py",
+        "strands_agents-1.54.0/src/strands/experimental/tools/stop/__init__.py",
+        "strands_agents-1.54.0/src/strands/hooks/__init__.py",
+        "strands_agents-1.54.0/src/strands/interventions/__init__.py",
+        "strands_agents-1.54.0/src/strands/memory/memory_manager.py",
+        "strands_agents-1.54.0/src/strands/models/bedrock.py",
+        "strands_agents-1.54.0/src/strands/plugins/multiagent_plugin.py",
+        "strands_agents-1.54.0/src/strands/plugins/plugin.py",
+        "strands_agents-1.54.0/src/strands/sandbox/__init__.py",
+        "strands_agents-1.54.0/src/strands/session/snapshot_session_manager.py",
+        "strands_agents-1.54.0/src/strands/storage/__init__.py",
+        "strands_agents-1.54.0/src/strands/storage/in_memory_storage.py",
+        "strands_agents-1.54.0/src/strands/storage/local_file_storage.py",
+        "strands_agents-1.54.0/src/strands/storage/s3_storage.py",
+        "strands_agents-1.54.0/src/strands/storage/search/keyword.py",
+        "strands_agents-1.54.0/src/strands/tools/decorator.py",
+        "strands_agents-1.54.0/src/strands/tools/loader.py",
+        "strands_agents-1.54.0/src/strands/types/interrupt.py",
+        "strands_agents-1.54.0/src/strands/vended_interventions/cedar/__init__.py",
+        "strands_agents-1.54.0/src/strands/vended_interventions/hitl/__init__.py",
+        "strands_agents-1.54.0/src/strands/vended_interventions/hitl/hitl.py",
+        "strands_agents-1.54.0/src/strands/vended_memory_stores/__init__.py",
+        "strands_agents-1.54.0/src/strands/vended_memory_stores/bedrock_knowledge_base/__init__.py",
+        "strands_agents-1.54.0/src/strands/vended_memory_stores/bedrock_knowledge_base/store.py",
+        "strands_agents-1.54.0/src/strands/vended_memory_stores/file_memory_store/__init__.py",
+        "strands_agents-1.54.0/src/strands/vended_memory_stores/file_memory_store/store.py",
+        "strands_agents-1.54.0/src/strands/vended_memory_stores/test_memory_store/__init__.py",
+        "strands_agents-1.54.0/src/strands/vended_memory_stores/test_memory_store/store.py",
+        "strands_agents-1.54.0/src/strands/vended_plugins/context_injector/__init__.py",
+        "strands_agents-1.54.0/src/strands/vended_plugins/context_injector/plugin.py",
+        "strands_agents-1.54.0/src/strands/vended_plugins/context_offloader/__init__.py",
+        "strands_agents-1.54.0/src/strands/vended_plugins/context_offloader/plugin.py",
+        "strands_agents-1.54.0/src/strands/vended_plugins/context_offloader/storage.py",
+        "strands_agents-1.54.0/src/strands/vended_plugins/goal/__init__.py",
+        "strands_agents-1.54.0/src/strands/vended_plugins/goal/plugin.py",
+        "strands_agents-1.54.0/src/strands/vended_plugins/skills/__init__.py",
+        "strands_agents-1.54.0/src/strands/vended_plugins/skills/agent_skills.py",
+        "strands_agents-1.54.0/src/strands/vended_tools/__init__.py",
+        "strands_agents-1.54.0/src/strands/vended_tools/file_editor/__init__.py",
+        "strands_agents-1.54.0/src/strands/vended_tools/http_request/__init__.py",
+        "strands_agents-1.54.0/src/strands/vended_tools/shell/__init__.py",
+        "strands_agents-1.54.0/src/strands/vended_tools/sleep/__init__.py",
+        "strands_agents-1.54.0/tests/fixtures/mock_agent_tool.py",
+        "strands_agents-1.54.0/tests/fixtures/mock_hook_provider.py",
+        "strands_agents-1.54.0/tests/fixtures/mock_multiagent_hook_provider.py",
+        "strands_agents-1.54.0/tests/fixtures/mock_session_repository.py",
+        "strands_agents-1.54.0/tests/fixtures/mocked_model_provider.py",
+        "strands_agents-1.54.0/tests/fixtures/sandbox.py",
+        "strands_agents-1.54.0/tests/fixtures/say_tool.py",
+        "strands_agents-1.54.0/tests/strands/agent/conversation_manager/test_agentic_context.py",
+        "strands_agents-1.54.0/tests/strands/agent/conversation_manager/test_context_compression.py",
+        "strands_agents-1.54.0/tests/strands/agent/conversation_manager/test_token_usage_middleware.py",
+        "strands_agents-1.54.0/tests/strands/agent/hooks/test_agent_events.py",
+        "strands_agents-1.54.0/tests/strands/agent/hooks/test_events.py",
+        "strands_agents-1.54.0/tests/strands/agent/hooks/test_hook_registry.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_a2a_agent.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_agent.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_agent_as_tool.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_agent_cancellation.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_agent_context_manager.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_agent_delegation.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_agent_hooks.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_agent_limits.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_agent_model_state.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_agent_result.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_agent_retry.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_agent_sandbox.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_agent_state.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_agent_storage.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_agent_structured_output.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_concurrency.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_conversation_manager.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_pin_message.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_retry.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_snapshot.py",
+        "strands_agents-1.54.0/tests/strands/agent/test_summarizing_conversation_manager.py",
+        "strands_agents-1.54.0/tests/strands/event_loop/test_event_loop.py",
+        "strands_agents-1.54.0/tests/strands/event_loop/test_event_loop_metadata.py",
+        "strands_agents-1.54.0/tests/strands/event_loop/test_event_loop_structured_output.py",
+        "strands_agents-1.54.0/tests/strands/event_loop/test_recover_message_on_max_tokens_reached.py",
+        "strands_agents-1.54.0/tests/strands/event_loop/test_streaming.py",
+        "strands_agents-1.54.0/tests/strands/event_loop/test_streaming_structured_output.py",
+        "strands_agents-1.54.0/tests/strands/experimental/bidi/_async/test__init__.py",
+        "strands_agents-1.54.0/tests/strands/experimental/bidi/_async/test_task_group.py",
+        "strands_agents-1.54.0/tests/strands/experimental/bidi/_async/test_task_pool.py",
+        "strands_agents-1.54.0/tests/strands/experimental/bidi/agent/test_agent.py",
+        "strands_agents-1.54.0/tests/strands/experimental/bidi/agent/test_loop.py",
+        "strands_agents-1.54.0/tests/strands/experimental/bidi/agent/test_loop_telemetry.py",
+        "strands_agents-1.54.0/tests/strands/experimental/bidi/io/test_audio.py",
+        "strands_agents-1.54.0/tests/strands/experimental/bidi/io/test_text.py",
+        "strands_agents-1.54.0/tests/strands/experimental/bidi/models/test_gemini_live.py",
+        "strands_agents-1.54.0/tests/strands/experimental/bidi/models/test_nova_sonic.py",
+        "strands_agents-1.54.0/tests/strands/experimental/bidi/models/test_openai_realtime.py",
+        "strands_agents-1.54.0/tests/strands/experimental/bidi/types/test_events.py",
+        "strands_agents-1.54.0/tests/strands/experimental/checkpoint/test_checkpoint.py",
+        "strands_agents-1.54.0/tests/strands/experimental/hooks/test_bidi_hook_events.py",
+        "strands_agents-1.54.0/tests/strands/experimental/hooks/test_hook_aliases.py",
+        "strands_agents-1.54.0/tests/strands/experimental/steering/test_steering_aliases.py",
+        "strands_agents-1.54.0/tests/strands/experimental/test_agent_config.py",
+        "strands_agents-1.54.0/tests/strands/experimental/tools/test_stop.py",
+        "strands_agents-1.54.0/tests/strands/experimental/tools/test_tool_provider_alias.py",
+        "strands_agents-1.54.0/tests/strands/handlers/test_callback_handler.py",
+        "strands_agents-1.54.0/tests/strands/hooks/test_events.py",
+        "strands_agents-1.54.0/tests/strands/hooks/test_multi_agent_hooks.py",
+        "strands_agents-1.54.0/tests/strands/hooks/test_registry.py",
+        "strands_agents-1.54.0/tests/strands/injection/test_message_injection.py",
+        "strands_agents-1.54.0/tests/strands/interventions/test_actions.py",
+        "strands_agents-1.54.0/tests/strands/interventions/test_cancel_paths.py",
+        "strands_agents-1.54.0/tests/strands/interventions/test_handler.py",
+        "strands_agents-1.54.0/tests/strands/interventions/test_registry.py",
+        "strands_agents-1.54.0/tests/strands/memory/test_extraction.py",
+        "strands_agents-1.54.0/tests/strands/memory/test_injection_integration.py",
+        "strands_agents-1.54.0/tests/strands/memory/test_memory_manager.py",
+        "strands_agents-1.54.0/tests/strands/memory/test_model_extractor.py",
+        "strands_agents-1.54.0/tests/strands/memory/test_resolve_extraction_config.py",
+        "strands_agents-1.54.0/tests/strands/memory/test_telemetry.py",
+        "strands_agents-1.54.0/tests/strands/middleware/test_agent_middleware.py",
+        "strands_agents-1.54.0/tests/strands/middleware/test_agent_stream_middleware.py",
+        "strands_agents-1.54.0/tests/strands/middleware/test_execute_tool_middleware.py",
+        "strands_agents-1.54.0/tests/strands/middleware/test_middleware_interrupts.py",
+        "strands_agents-1.54.0/tests/strands/middleware/test_registry.py",
+        "strands_agents-1.54.0/tests/strands/models/routing/test_classifier_strategy.py",
+        "strands_agents-1.54.0/tests/strands/models/routing/test_fallback_strategy.py",
+        "strands_agents-1.54.0/tests/strands/models/routing/test_router.py",
+        "strands_agents-1.54.0/tests/strands/models/test__validation.py",
+        "strands_agents-1.54.0/tests/strands/models/test_anthropic.py",
+        "strands_agents-1.54.0/tests/strands/models/test_bedrock.py",
+        "strands_agents-1.54.0/tests/strands/models/test_bedrock_thinking.py",
+        "strands_agents-1.54.0/tests/strands/models/test_defaults.py",
+        "strands_agents-1.54.0/tests/strands/models/test_gemini.py",
+        "strands_agents-1.54.0/tests/strands/models/test_litellm.py",
+        "strands_agents-1.54.0/tests/strands/models/test_llamaapi.py",
+        "strands_agents-1.54.0/tests/strands/models/test_llamacpp.py",
+        "strands_agents-1.54.0/tests/strands/models/test_mistral.py",
+        "strands_agents-1.54.0/tests/strands/models/test_model.py",
+        "strands_agents-1.54.0/tests/strands/models/test_ollama.py",
+        "strands_agents-1.54.0/tests/strands/models/test_openai.py",
+        "strands_agents-1.54.0/tests/strands/models/test_openai_errors.py",
+        "strands_agents-1.54.0/tests/strands/models/test_openai_responses.py",
+        "strands_agents-1.54.0/tests/strands/models/test_sagemaker.py",
+        "strands_agents-1.54.0/tests/strands/models/test_strict_schema.py",
+        "strands_agents-1.54.0/tests/strands/models/test_writer.py",
+        "strands_agents-1.54.0/tests/strands/multiagent/a2a/conftest.py",
+        "strands_agents-1.54.0/tests/strands/multiagent/a2a/test_converters.py",
+        "strands_agents-1.54.0/tests/strands/multiagent/a2a/test_executor.py",
+        "strands_agents-1.54.0/tests/strands/multiagent/a2a/test_server.py",
+        "strands_agents-1.54.0/tests/strands/multiagent/conftest.py",
+        "strands_agents-1.54.0/tests/strands/multiagent/test_base.py",
+        "strands_agents-1.54.0/tests/strands/multiagent/test_graph.py",
+        "strands_agents-1.54.0/tests/strands/multiagent/test_multiagent_plugins.py",
+        "strands_agents-1.54.0/tests/strands/multiagent/test_swarm.py",
+        "strands_agents-1.54.0/tests/strands/plugins/test_hook_decorator.py",
+        "strands_agents-1.54.0/tests/strands/plugins/test_multiagent_plugin.py",
+        "strands_agents-1.54.0/tests/strands/plugins/test_plugin_base_class.py",
+        "strands_agents-1.54.0/tests/strands/plugins/test_plugins.py",
+        "strands_agents-1.54.0/tests/strands/sandbox/test_docker.py",
+        "strands_agents-1.54.0/tests/strands/sandbox/test_not_a_sandbox_local_environment.py",
+        "strands_agents-1.54.0/tests/strands/sandbox/test_posix_shell.py",
+        "strands_agents-1.54.0/tests/strands/sandbox/test_ssh.py",
+        "strands_agents-1.54.0/tests/strands/sandbox/test_stream_process.py",
+        "strands_agents-1.54.0/tests/strands/session/test_file_session_manager.py",
+        "strands_agents-1.54.0/tests/strands/session/test_file_session_manager_symlink_protection.py",
+        "strands_agents-1.54.0/tests/strands/session/test_repository_session_manager.py",
+        "strands_agents-1.54.0/tests/strands/session/test_s3_session_manager.py",
+        "strands_agents-1.54.0/tests/strands/session/test_snapshot_session_manager.py",
+        "strands_agents-1.54.0/tests/strands/storage/search/test_keyword.py",
+        "strands_agents-1.54.0/tests/strands/storage/test_in_memory_storage.py",
+        "strands_agents-1.54.0/tests/strands/storage/test_local_file_storage.py",
+        "strands_agents-1.54.0/tests/strands/storage/test_s3_storage.py",
+        "strands_agents-1.54.0/tests/strands/storage/test_storage.py",
+        "strands_agents-1.54.0/tests/strands/telemetry/test_config.py",
+        "strands_agents-1.54.0/tests/strands/telemetry/test_metrics.py",
+        "strands_agents-1.54.0/tests/strands/telemetry/test_tracer.py",
+        "strands_agents-1.54.0/tests/strands/test_async.py",
+        "strands_agents-1.54.0/tests/strands/test_exception_notes.py",
+        "strands_agents-1.54.0/tests/strands/test_identifier.py",
+        "strands_agents-1.54.0/tests/strands/test_interrupt.py",
+        "strands_agents-1.54.0/tests/strands/test_tracking_id_history_invariant.py",
+        "strands_agents-1.54.0/tests/strands/tools/executors/conftest.py",
+        "strands_agents-1.54.0/tests/strands/tools/executors/test_concurrent.py",
+        "strands_agents-1.54.0/tests/strands/tools/executors/test_executor.py",
+        "strands_agents-1.54.0/tests/strands/tools/executors/test_sequential.py",
+        "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_agent_tool.py",
+        "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_client.py",
+        "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_client_auth.py",
+        "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_client_contextvar.py",
+        "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_client_load_servers.py",
+        "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_client_tasks.py",
+        "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_client_tool_provider.py",
+        "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_instrumentation.py",
+        "strands_agents-1.54.0/tests/strands/tools/structured_output/test_structured_output_context.py",
+        "strands_agents-1.54.0/tests/strands/tools/structured_output/test_structured_output_tool.py",
+        "strands_agents-1.54.0/tests/strands/tools/test_caller.py",
+        "strands_agents-1.54.0/tests/strands/tools/test_decorator.py",
+        "strands_agents-1.54.0/tests/strands/tools/test_decorator_pep563.py",
+        "strands_agents-1.54.0/tests/strands/tools/test_loader.py",
+        "strands_agents-1.54.0/tests/strands/tools/test_registry.py",
+        "strands_agents-1.54.0/tests/strands/tools/test_registry_tool_provider.py",
+        "strands_agents-1.54.0/tests/strands/tools/test_structured_output.py",
+        "strands_agents-1.54.0/tests/strands/tools/test_tool_helpers.py",
+        "strands_agents-1.54.0/tests/strands/tools/test_tool_spec_setter.py",
+        "strands_agents-1.54.0/tests/strands/tools/test_tools.py",
+        "strands_agents-1.54.0/tests/strands/tools/test_validator.py",
+        "strands_agents-1.54.0/tests/strands/tools/test_watcher.py",
+        "strands_agents-1.54.0/tests/strands/types/test__events.py",
+        "strands_agents-1.54.0/tests/strands/types/test_exceptions.py",
+        "strands_agents-1.54.0/tests/strands/types/test_interrupt.py",
+        "strands_agents-1.54.0/tests/strands/types/test_json_dict.py",
+        "strands_agents-1.54.0/tests/strands/types/test_media.py",
+        "strands_agents-1.54.0/tests/strands/types/test_message_metadata.py",
+        "strands_agents-1.54.0/tests/strands/types/test_session.py",
+        "strands_agents-1.54.0/tests/strands/types/test_tracking_id.py",
+        "strands_agents-1.54.0/tests/strands/vended_interventions/cedar/test_cedar_authorization.py",
+        "strands_agents-1.54.0/tests/strands/vended_interventions/cedar/test_cedar_integration.py",
+        "strands_agents-1.54.0/tests/strands/vended_interventions/cedar/test_schema_generator.py",
+        "strands_agents-1.54.0/tests/strands/vended_interventions/test_hitl.py",
+        "strands_agents-1.54.0/tests/strands/vended_memory_stores/bedrock_knowledge_base/test_store.py",
+        "strands_agents-1.54.0/tests/strands/vended_memory_stores/file_memory_store/test_store.py",
+        "strands_agents-1.54.0/tests/strands/vended_memory_stores/test_memory_store/test_store.py",
+        "strands_agents-1.54.0/tests/strands/vended_plugins/context_injector/test_integration.py",
+        "strands_agents-1.54.0/tests/strands/vended_plugins/context_injector/test_plugin.py",
+        "strands_agents-1.54.0/tests/strands/vended_plugins/context_offloader/test_plugin.py",
+        "strands_agents-1.54.0/tests/strands/vended_plugins/context_offloader/test_search.py",
+        "strands_agents-1.54.0/tests/strands/vended_plugins/context_offloader/test_storage.py",
+        "strands_agents-1.54.0/tests/strands/vended_plugins/goal/test_plugin.py",
+        "strands_agents-1.54.0/tests/strands/vended_plugins/skills/test_agent_skills.py",
+        "strands_agents-1.54.0/tests/strands/vended_plugins/skills/test_skill.py",
+        "strands_agents-1.54.0/tests/strands/vended_plugins/steering/context_providers/test_ledger_provider.py",
+        "strands_agents-1.54.0/tests/strands/vended_plugins/steering/core/test_handler.py",
+        "strands_agents-1.54.0/tests/strands/vended_plugins/steering/handlers/llm/test_llm_handler.py",
+        "strands_agents-1.54.0/tests/strands/vended_plugins/steering/handlers/llm/test_mappers.py",
+        "strands_agents-1.54.0/tests/strands/vended_tools/test_file_editor.py",
+        "strands_agents-1.54.0/tests/strands/vended_tools/test_http_request.py",
+        "strands_agents-1.54.0/tests/strands/vended_tools/test_shell.py",
+        "strands_agents-1.54.0/tests/strands/vended_tools/test_sleep.py",
+        "strands_agents-1.54.0/tests_integ/a2a/a2a_server.py",
+        "strands_agents-1.54.0/tests_integ/a2a/test_multiagent_a2a.py",
+        "strands_agents-1.54.0/tests_integ/bidi/context.py",
+        "strands_agents-1.54.0/tests_integ/bidi/hook_utils.py",
+        "strands_agents-1.54.0/tests_integ/bidi/test_bidi_hooks.py",
+        "strands_agents-1.54.0/tests_integ/bidi/test_bidirectional_agent.py",
+        "strands_agents-1.54.0/tests_integ/bidi/tools/test_direct.py",
+        "strands_agents-1.54.0/tests_integ/fixtures/say_tool.py",
+        "strands_agents-1.54.0/tests_integ/hooks/multiagent/test_cancel.py",
+        "strands_agents-1.54.0/tests_integ/hooks/multiagent/test_events.py",
+        "strands_agents-1.54.0/tests_integ/hooks/test_events.py",
+        "strands_agents-1.54.0/tests_integ/interrupts/multiagent/test_hook.py",
+        "strands_agents-1.54.0/tests_integ/interrupts/multiagent/test_node.py",
+        "strands_agents-1.54.0/tests_integ/interrupts/multiagent/test_session.py",
+        "strands_agents-1.54.0/tests_integ/interrupts/test_hook.py",
+        "strands_agents-1.54.0/tests_integ/interrupts/test_session.py",
+        "strands_agents-1.54.0/tests_integ/interrupts/test_tool.py",
+        "strands_agents-1.54.0/tests_integ/mcp/test_mcp_client.py",
+        "strands_agents-1.54.0/tests_integ/mcp/test_mcp_client_structured_content_and_metadata.py",
+        "strands_agents-1.54.0/tests_integ/mcp/test_mcp_client_tasks.py",
+        "strands_agents-1.54.0/tests_integ/mcp/test_mcp_elicitation.py",
+        "strands_agents-1.54.0/tests_integ/mcp/test_mcp_output_schema.py",
+        "strands_agents-1.54.0/tests_integ/mcp/test_mcp_resources.py",
+        "strands_agents-1.54.0/tests_integ/mcp/test_mcp_tool_provider.py",
+        "strands_agents-1.54.0/tests_integ/memory/_bedrock_kb_test_helpers.py",
+        "strands_agents-1.54.0/tests_integ/memory/test_bedrock_knowledge_base_memory_manager.py",
+        "strands_agents-1.54.0/tests_integ/memory/test_bedrock_knowledge_base_store.py",
+        "strands_agents-1.54.0/tests_integ/models/providers.py",
+        "strands_agents-1.54.0/tests_integ/models/test_classifier_strategy.py",
+        "strands_agents-1.54.0/tests_integ/models/test_conformance.py",
+        "strands_agents-1.54.0/tests_integ/models/test_mantle_routing.py",
+        "strands_agents-1.54.0/tests_integ/models/test_model_anthropic.py",
+        "strands_agents-1.54.0/tests_integ/models/test_model_bedrock.py",
+        "strands_agents-1.54.0/tests_integ/models/test_model_cohere.py",
+        "strands_agents-1.54.0/tests_integ/models/test_model_gemini.py",
+        "strands_agents-1.54.0/tests_integ/models/test_model_litellm.py",
+        "strands_agents-1.54.0/tests_integ/models/test_model_llamaapi.py",
+        "strands_agents-1.54.0/tests_integ/models/test_model_llamacpp.py",
+        "strands_agents-1.54.0/tests_integ/models/test_model_mantle.py",
+        "strands_agents-1.54.0/tests_integ/models/test_model_mistral.py",
+        "strands_agents-1.54.0/tests_integ/models/test_model_ollama.py",
+        "strands_agents-1.54.0/tests_integ/models/test_model_openai.py",
+        "strands_agents-1.54.0/tests_integ/models/test_model_sagemaker.py",
+        "strands_agents-1.54.0/tests_integ/models/test_model_writer.py",
+        "strands_agents-1.54.0/tests_integ/sandbox/conftest.py",
+        "strands_agents-1.54.0/tests_integ/sandbox/test_docker.py",
+        "strands_agents-1.54.0/tests_integ/sandbox/test_ssh.py",
+        "strands_agents-1.54.0/tests_integ/steering/test_model_steering.py",
+        "strands_agents-1.54.0/tests_integ/steering/test_tool_steering.py",
+        "strands_agents-1.54.0/tests_integ/test_a2a_executor.py",
+        "strands_agents-1.54.0/tests_integ/test_agent_as_tool.py",
+        "strands_agents-1.54.0/tests_integ/test_agent_async.py",
+        "strands_agents-1.54.0/tests_integ/test_agent_checkpoint.py",
+        "strands_agents-1.54.0/tests_integ/test_agent_json.py",
+        "strands_agents-1.54.0/tests_integ/test_agentic_context_integration.py",
+        "strands_agents-1.54.0/tests_integ/test_bedrock_guardrails.py",
+        "strands_agents-1.54.0/tests_integ/test_bedrock_s3_location.py",
+        "strands_agents-1.54.0/tests_integ/test_cancellation.py",
+        "strands_agents-1.54.0/tests_integ/test_cedar_authorization.py",
+        "strands_agents-1.54.0/tests_integ/test_context_overflow.py",
+        "strands_agents-1.54.0/tests_integ/test_function_tools.py",
+        "strands_agents-1.54.0/tests_integ/test_goal_loop.py",
+        "strands_agents-1.54.0/tests_integ/test_hot_tool_reload_decorator.py",
+        "strands_agents-1.54.0/tests_integ/test_invalid_tool_names.py",
+        "strands_agents-1.54.0/tests_integ/test_max_tokens_reached.py",
+        "strands_agents-1.54.0/tests_integ/test_multiagent_graph.py",
+        "strands_agents-1.54.0/tests_integ/test_multiagent_swarm.py",
+        "strands_agents-1.54.0/tests_integ/test_prompt_cache_per_call_content.py",
+        "strands_agents-1.54.0/tests_integ/test_session.py",
+        "strands_agents-1.54.0/tests_integ/test_skills_plugin.py",
+        "strands_agents-1.54.0/tests_integ/test_snapshot_session.py",
+        "strands_agents-1.54.0/tests_integ/test_stream_agent.py",
+        "strands_agents-1.54.0/tests_integ/test_structured_output_agent_loop.py",
+        "strands_agents-1.54.0/tests_integ/test_summarizing_conversation_manager_integration.py",
+        "strands_agents-1.54.0/tests_integ/test_tool_context_injection.py",
+        "strands_agents-1.54.0/tests_integ/test_tool_retry_hook.py",
+        "strands_agents-1.54.0/tests_integ/tools/executors/conftest.py",
+        "strands_agents-1.54.0/tests_integ/tools/executors/test_concurrent.py",
+        "strands_agents-1.54.0/tests_integ/tools/executors/test_sequential.py",
+        "strands_agents-1.54.0/tests_integ/tools/test_thread_context.py"
+      ]
+    },
+    {
+      "name": "mcp",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 20,
+      "files": [
+        "strands_agents-1.54.0/src/strands/tools/mcp/mcp_agent_tool.py",
+        "strands_agents-1.54.0/src/strands/tools/mcp/mcp_client.py",
+        "strands_agents-1.54.0/src/strands/tools/mcp/mcp_instrumentation.py",
+        "strands_agents-1.54.0/src/strands/tools/mcp/mcp_types.py",
+        "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_agent_tool.py",
+        "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_client.py",
+        "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_client_auth.py",
+        "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_client_tasks.py",
+        "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_client_tool_provider.py",
+        "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_instrumentation.py",
+        "strands_agents-1.54.0/tests_integ/mcp/echo_server.py",
+        "strands_agents-1.54.0/tests_integ/mcp/elicitation_server.py",
+        "strands_agents-1.54.0/tests_integ/mcp/task_echo_server.py",
+        "strands_agents-1.54.0/tests_integ/mcp/test_mcp_client.py",
+        "strands_agents-1.54.0/tests_integ/mcp/test_mcp_client_structured_content_and_metadata.py",
+        "strands_agents-1.54.0/tests_integ/mcp/test_mcp_client_tasks.py",
+        "strands_agents-1.54.0/tests_integ/mcp/test_mcp_elicitation.py",
+        "strands_agents-1.54.0/tests_integ/mcp/test_mcp_output_schema.py",
+        "strands_agents-1.54.0/tests_integ/mcp/test_mcp_resources.py",
+        "strands_agents-1.54.0/tests_integ/mcp/test_mcp_tool_provider.py"
+      ]
+    },
+    {
+      "name": "openai",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 7,
+      "files": [
+        "strands_agents-1.54.0/src/strands/models/openai.py",
+        "strands_agents-1.54.0/src/strands/models/openai_responses.py",
+        "strands_agents-1.54.0/tests/strands/models/test_openai.py",
+        "strands_agents-1.54.0/tests/strands/models/test_openai_responses.py",
+        "strands_agents-1.54.0/tests_integ/models/test_model_openai.py",
+        "strands_agents-1.54.0/tests_integ/test_session.py",
+        "strands_agents-1.54.0/tests_integ/test_snapshot_session.py"
+      ]
+    },
+    {
+      "name": "FastMCP",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "strands_agents-1.54.0/tests_integ/mcp/echo_server.py",
+        "strands_agents-1.54.0/tests_integ/mcp/elicitation_server.py",
+        "strands_agents-1.54.0/tests_integ/mcp/test_mcp_client.py"
+      ]
+    },
+    {
+      "name": "OpenAI",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "strands_agents-1.54.0/src/strands/experimental/bidi/models/openai_realtime.py",
+        "strands_agents-1.54.0/src/strands/models/openai_responses.py",
+        "strands_agents-1.54.0/tests/strands/experimental/bidi/models/test_openai_realtime.py"
+      ]
+    },
+    {
+      "name": "Swarm",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "strands_agents-1.54.0/src/strands/multiagent/__init__.py",
+        "strands_agents-1.54.0/tests/strands/hooks/test_multi_agent_hooks.py",
+        "strands_agents-1.54.0/tests_integ/test_multiagent_swarm.py"
+      ]
+    },
+    {
+      "name": "api.openai.com",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "strands_agents-1.54.0/src/strands/experimental/bidi/models/openai_realtime.py",
+        "strands_agents-1.54.0/tests/strands/models/test_openai.py",
+        "strands_agents-1.54.0/tests/strands/models/test_openai_responses.py"
+      ],
+      "endpoint": "api.openai.com"
+    },
+    {
+      "name": "bedrock-runtime",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "strands_agents-1.54.0/src/strands/experimental/bidi/models/nova_sonic.py",
+        "strands_agents-1.54.0/src/strands/models/bedrock.py",
+        "strands_agents-1.54.0/tests/strands/models/test_bedrock.py"
+      ],
+      "endpoint": "bedrock-runtime"
+    },
+    {
+      "name": "LiteLLM",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "strands_agents-1.54.0/src/strands/models/litellm.py",
+        "strands_agents-1.54.0/tests/strands/models/test_litellm.py"
+      ]
+    },
+    {
+      "name": "MCP",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "strands_agents-1.54.0/src/strands/tools/mcp/mcp_client.py",
+        "strands_agents-1.54.0/src/strands/tools/mcp/mcp_instrumentation.py"
+      ]
+    },
+    {
+      "name": "anthropic",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "strands_agents-1.54.0/src/strands/models/anthropic.py",
+        "strands_agents-1.54.0/tests/strands/models/test_anthropic.py"
+      ]
+    },
+    {
+      "name": "api.cohere.com",
+      "type": "endpoint",
+      "jurisdiction": "CA",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "strands_agents-1.54.0/tests_integ/models/providers.py",
+        "strands_agents-1.54.0/tests_integ/models/test_model_cohere.py"
+      ],
+      "endpoint": "api.cohere.com"
+    },
+    {
+      "name": "google.genai",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "strands_agents-1.54.0/src/strands/experimental/bidi/models/gemini_live.py",
+        "strands_agents-1.54.0/tests/strands/experimental/bidi/models/test_gemini_live.py"
+      ]
+    },
+    {
+      "name": "litellm",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "strands_agents-1.54.0/src/strands/models/litellm.py",
+        "strands_agents-1.54.0/tests/strands/models/test_litellm.py"
+      ]
+    },
+    {
+      "name": "ollama",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "strands_agents-1.54.0/src/strands/models/ollama.py",
+        "strands_agents-1.54.0/tests/strands/models/test_ollama.py"
+      ]
+    },
+    {
+      "name": "writerai",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "strands_agents-1.54.0/src/strands/models/writer.py",
+        "strands_agents-1.54.0/tests/strands/models/test_writer.py"
+      ]
+    },
+    {
+      "name": "Strands",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "strands_agents-1.54.0/src/strands/multiagent/a2a/server.py"
+      ]
+    },
+    {
+      "name": "mistralai",
+      "type": "sdk",
+      "jurisdiction": "FR",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "strands_agents-1.54.0/src/strands/models/mistral.py"
+      ]
+    },
+    {
+      "name": "swarm",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "strands_agents-1.54.0/src/strands/multiagent/swarm.py"
+      ]
+    }
+  ],
+  "agent_artifacts": [
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "strands_agents-1.54.0/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Claude Code instructions",
+      "tier": 1,
+      "path": "strands_agents-1.54.0/CLAUDE.md"
+    }
+  ],
+  "committed_credentials": [],
+  "findings": [
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_multiagent_swarm.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 100,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(swarm()",
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/mcp/test_mcp_client.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 98,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "subprocess_variable_execution(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_agent.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 95,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "dynamic_import(x1)",
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/middleware/test_middleware_interrupts.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 90,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/middleware/test_execute_tool_middleware.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 90,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/models/test_model_bedrock.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 90,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "dynamic_execution(eval/exec_x3)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/bidi/test_bidi_hooks.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 90,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/bidi/io/audio.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(agent.run()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/multiagent/swarm.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(Swarm(,swarm ()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/routing/test_router.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(add_node()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/multiagent/test_multiagent_plugins.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(Swarm(,add_node()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/multiagent/test_graph.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(add_node(,add_edge()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/multiagent/test_swarm.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(Swarm(,swarm()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/session/test_snapshot_session_manager.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(add_node()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/hooks/test_multi_agent_hooks.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(swarm(,Swarm()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_multiagent_graph.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(add_node()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/interrupts/multiagent/test_node.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(swarm(,add_node()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/interrupts/multiagent/test_session.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(swarm(,add_node()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/interrupts/multiagent/test_hook.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(swarm(,add_node()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/hooks/multiagent/test_events.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(add_node(,swarm()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/hooks/multiagent/test_cancel.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(swarm(,add_node()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/a2a/test_multiagent_a2a.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(add_node()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/bidi/models/nova_sonic.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_http_endpoint(bedrock-runtime)",
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/models/openai.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_vectors(5_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/models/writer.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/bidi/models/test_nova_sonic.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/test_sagemaker.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/test_openai.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "ai_http_endpoint(api.openai.com)",
+        "prompt_injection_vectors(5_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/telemetry/test_tracer.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_vectors(18_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/tools/loader.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/steering/test_steering_aliases.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/hooks/test_hook_aliases.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_tools/test_sleep.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/bidi/models/openai_realtime.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(api.openai.com)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/models/bedrock.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(bedrock-runtime)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/models/mistral.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "data_egress(model_hosted_in_FR:mistralai)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/models/anthropic.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/models/openai_responses.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/models/ollama.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/models/litellm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/memory/memory_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_memory_stores/file_memory_store/store.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_memory_stores/test_memory_store/store.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/agent/_agent_as_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/test_llamaapi.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/test_mistral.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/test_ollama.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/test_bedrock.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "ai_http_endpoint(bedrock-runtime)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/event_loop/test_recover_message_on_max_tokens_reached.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/test_loader.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_plugins/context_offloader/test_plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_agent_delegation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/steering/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/steering/context_providers/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/steering/context_providers/ledger_provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/steering/handlers/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/steering/handlers/llm/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/steering/handlers/llm/llm_handler.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/steering/handlers/llm/mappers.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/steering/core/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/steering/core/action.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/steering/core/context.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/steering/core/handler.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/hooks/events.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/tools/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/tools/stop/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/bidi/models/gemini_live.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/experimental/bidi/types/events.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/plugins/multiagent_plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/plugins/plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/interventions/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/multiagent/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/multiagent/graph.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(add_node()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/multiagent/a2a/executor.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(AgentExecutor)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/multiagent/a2a/server.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/session/snapshot_session_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_memory_stores/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_memory_stores/file_memory_store/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_memory_stores/bedrock_knowledge_base/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_memory_stores/bedrock_knowledge_base/store.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_memory_stores/test_memory_store/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/hooks/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/tools/decorator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/tools/registry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(function_tool)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/tools/mcp/mcp_instrumentation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/tools/mcp/mcp_client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/tools/mcp/mcp_types.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/tools/mcp/mcp_agent_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/sandbox/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_plugins/context_offloader/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_plugins/context_offloader/storage.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_plugins/context_offloader/plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_plugins/context_injector/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_plugins/context_injector/plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_plugins/skills/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_plugins/skills/agent_skills.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_plugins/goal/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_plugins/goal/plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_interventions/hitl/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_interventions/hitl/hitl.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_interventions/cedar/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_tools/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_tools/shell/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_tools/sleep/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_tools/file_editor/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/vended_tools/http_request/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/types/interrupt.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/agent/_agent_delegation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/storage/s3_storage.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/storage/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/storage/in_memory_storage.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/storage/local_file_storage.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/storage/search/keyword.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/test_tracking_id_history_invariant.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/test_interrupt.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/test_async.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/test_exception_notes.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/test_identifier.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/test_agent_config.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/hooks/test_bidi_hook_events.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/tools/test_tool_provider_alias.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/tools/test_stop.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/checkpoint/test_checkpoint.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/bidi/models/test_openai_realtime.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/bidi/models/test_gemini_live.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/bidi/_async/test_task_pool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/bidi/_async/test__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/bidi/_async/test_task_group.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/bidi/types/test_events.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/bidi/agent/test_agent.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/bidi/agent/test_loop_telemetry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/bidi/agent/test_loop.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/bidi/io/test_audio.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/experimental/bidi/io/test_text.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/middleware/test_registry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/middleware/test_agent_middleware.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/middleware/test_agent_stream_middleware.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/test_openai_responses.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(4_sdk(s)_detected)",
+        "ai_http_endpoint(api.openai.com)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/test_anthropic.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/test__validation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/test_gemini.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/test_llamacpp.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/test_model.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/test_openai_errors.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/test_writer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/test_bedrock_thinking.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/test_defaults.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/test_strict_schema.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/test_litellm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(4_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/routing/test_classifier_strategy.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/models/routing/test_fallback_strategy.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/plugins/test_multiagent_plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/plugins/test_plugins.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/plugins/test_hook_decorator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/plugins/test_plugin_base_class.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/memory/test_memory_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/memory/test_telemetry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/memory/test_injection_integration.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/memory/test_extraction.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/memory/test_model_extractor.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/memory/test_resolve_extraction_config.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/interventions/test_registry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/interventions/test_handler.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/interventions/test_cancel_paths.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/interventions/test_actions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/multiagent/conftest.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/multiagent/test_base.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/multiagent/a2a/test_executor.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/multiagent/a2a/conftest.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/multiagent/a2a/test_converters.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/multiagent/a2a/test_server.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/event_loop/test_streaming.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/event_loop/test_streaming_structured_output.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/event_loop/test_event_loop_structured_output.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/event_loop/test_event_loop_metadata.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/event_loop/test_event_loop.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/session/test_file_session_manager_symlink_protection.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/session/test_file_session_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/session/test_repository_session_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/session/test_s3_session_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_memory_stores/file_memory_store/test_store.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_memory_stores/bedrock_knowledge_base/test_store.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_memory_stores/test_memory_store/test_store.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/handlers/test_callback_handler.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/hooks/test_registry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/hooks/test_events.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/test_registry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/test_caller.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/test_decorator_pep563.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/test_tools.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/test_structured_output.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/test_tool_helpers.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/test_registry_tool_provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/test_decorator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/test_watcher.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/test_validator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/test_tool_spec_setter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/structured_output/test_structured_output_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/structured_output/test_structured_output_context.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/executors/test_sequential.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/executors/test_executor.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/executors/conftest.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/executors/test_concurrent.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_client_load_servers.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_client_tool_provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_client_auth.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_instrumentation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_agent_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_client_tasks.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/tools/mcp/test_mcp_client_contextvar.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/sandbox/test_stream_process.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/sandbox/test_not_a_sandbox_local_environment.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/sandbox/test_posix_shell.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/sandbox/test_ssh.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/sandbox/test_docker.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_plugins/steering/context_providers/test_ledger_provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_plugins/steering/handlers/llm/test_mappers.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_plugins/steering/handlers/llm/test_llm_handler.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_plugins/steering/core/test_handler.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_plugins/context_offloader/test_storage.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_plugins/context_offloader/test_search.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_plugins/context_injector/test_plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_plugins/context_injector/test_integration.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_plugins/skills/test_skill.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_plugins/skills/test_agent_skills.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_plugins/goal/test_plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_interventions/test_hitl.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_interventions/cedar/test_cedar_integration.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_interventions/cedar/test_cedar_authorization.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_interventions/cedar/test_schema_generator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_tools/test_shell.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_tools/test_http_request.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/vended_tools/test_file_editor.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/types/test_media.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/types/test_interrupt.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/types/test_message_metadata.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/types/test_json_dict.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/types/test_exceptions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/types/test_session.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/types/test_tracking_id.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/types/test__events.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/telemetry/test_metrics.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/telemetry/test_config.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_agent_limits.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_agent_result.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_agent_cancellation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_conversation_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_agent_state.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_agent_sandbox.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_agent_structured_output.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_concurrency.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_agent_as_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_agent_storage.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_retry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_a2a_agent.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_agent_context_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_agent_retry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_pin_message.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_snapshot.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_agent_hooks.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_agent_model_state.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/test_summarizing_conversation_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/conversation_manager/test_context_compression.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/conversation_manager/test_token_usage_middleware.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/conversation_manager/test_agentic_context.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/hooks/test_events.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/hooks/test_agent_events.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/agent/hooks/test_hook_registry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/storage/test_storage.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/storage/test_s3_storage.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/storage/test_local_file_storage.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/storage/test_in_memory_storage.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/storage/search/test_keyword.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/strands/injection/test_message_injection.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/fixtures/sandbox.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/fixtures/mock_agent_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/fixtures/say_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/fixtures/mock_multiagent_hook_provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/fixtures/mock_hook_provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/fixtures/mock_session_repository.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests/fixtures/mocked_model_provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_prompt_cache_per_call_content.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_snapshot_session.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_skills_plugin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_bedrock_s3_location.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_hot_tool_reload_decorator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_goal_loop.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_max_tokens_reached.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_structured_output_agent_loop.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_function_tools.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_tool_retry_hook.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_cancellation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_cedar_authorization.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_invalid_tool_names.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_agent_checkpoint.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_tool_context_injection.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_summarizing_conversation_manager_integration.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_context_overflow.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_session.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_agent_as_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_a2a_executor.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_stream_agent.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_bedrock_guardrails.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_agent_json.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_agent_async.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/test_agentic_context_integration.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/steering/test_model_steering.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/steering/test_tool_steering.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/models/test_model_anthropic.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/models/test_model_litellm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/models/test_conformance.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/models/test_model_gemini.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/models/test_model_mantle.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/models/test_classifier_strategy.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/models/test_model_llamacpp.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/models/test_model_writer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/models/providers.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(api.cohere.com)",
+        "data_egress(model_hosted_in_CA:api.cohere.com)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/models/test_mantle_routing.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/models/test_model_openai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/models/test_model_ollama.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/models/test_model_llamaapi.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/models/test_model_mistral.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/models/test_model_cohere.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "ai_http_endpoint(api.cohere.com)",
+        "data_egress(model_hosted_in_CA:api.cohere.com)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/models/test_model_sagemaker.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/interrupts/test_session.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/interrupts/test_hook.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/interrupts/test_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/memory/test_bedrock_knowledge_base_memory_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/memory/test_bedrock_knowledge_base_store.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/memory/_bedrock_kb_test_helpers.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/hooks/test_events.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/tools/test_thread_context.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/tools/executors/test_sequential.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/tools/executors/conftest.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/tools/executors/test_concurrent.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/sandbox/conftest.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/sandbox/test_ssh.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/sandbox/test_docker.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/a2a/a2a_server.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/fixtures/say_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/mcp/test_mcp_elicitation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/mcp/elicitation_server.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/mcp/test_mcp_tool_provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/mcp/test_mcp_resources.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/mcp/echo_server.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/mcp/test_mcp_output_schema.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/mcp/test_mcp_client_tasks.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/mcp/task_echo_server.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/mcp/test_mcp_client_structured_content_and_metadata.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/bidi/test_bidirectional_agent.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/bidi/context.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/bidi/hook_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/tests_integ/bidi/tools/test_direct.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/models/llamacpp.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/telemetry/tracer.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(13_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/agent/agent.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/models/sagemaker.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/models/llamaapi.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/memory/extraction/model_extractor.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/memory/extraction/coordinator.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/multiagent/a2a/_converters.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/event_loop/event_loop.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/event_loop/_recover_message_on_max_tokens_reached.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/tools/_caller.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/agent/conversation_manager/sliding_window_conversation_manager.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "strands_agents-1.54.0/src/strands/injection/_message_injection.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}

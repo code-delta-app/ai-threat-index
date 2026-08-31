@@ -1,0 +1,8 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+package/index.d.ts,JavaScript,0,NORMAL,0,0,,,,
+package/Object.setPrototypeOf.js,JavaScript,0,NORMAL,0,0,,,,
+package/Object.setPrototypeOf.d.ts,JavaScript,0,NORMAL,0,0,,,,
+package/Reflect.setPrototypeOf.d.ts,JavaScript,0,NORMAL,0,0,,,,
+package/index.js,JavaScript,0,NORMAL,0,0,,,,
+package/Reflect.setPrototypeOf.js,JavaScript,0,NORMAL,0,0,,,,
+package/test/index.js,JavaScript,0,NORMAL,0,0,,,,

@@ -1,5 +1,0 @@
-rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
-package/src/common.js,JavaScript,0,NORMAL,0,0,,,,
-package/src/browser.js,JavaScript,0,NORMAL,0,0,,,,
-package/src/index.js,JavaScript,0,NORMAL,0,0,,,,
-package/src/node.js,JavaScript,0,NORMAL,0,0,,,,

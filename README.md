@@ -41,105 +41,97 @@ until the finding is resolved.
 
 | Ecosystem | Package | Files scanned | Flagged files | AI providers | Credential-format matches | Install hooks | Build fetchers |
 |---|---|---|---|---|---|---|---|
-| npm | _anthropic-ai_sdk | 565 | 14 (ELEVATED:14) | 3 | &mdash; | &mdash; | &mdash; |
-| npm | _google_generative-ai | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | _langchain_core | 142 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | _mistralai_mistralai | 3873 | 45 (ELEVATED:45) | 3 | &mdash; | &mdash; | &mdash; |
-| npm | ai | 345 | 229 (ELEVATED:229) | 2 | &mdash; | &mdash; | &mdash; |
-| npm | axios | 71 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | body-parser | 7 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | chalk | 3 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | cohere-ai | 1665 | 3 (ELEVATED:3) | 1 | &mdash; | &mdash; | &mdash; |
-| npm | commander | 8 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | cors | 1 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | dayjs | 445 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | debug | 4 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | dotenv | 6 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | eslint | 414 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | express | 7 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | glob | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | groq-sdk | 160 | 2 (ELEVATED:2) | 1 | &mdash; | &mdash; | &mdash; |
-| npm | inquirer | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | jest | 1 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | langchain | 16 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | lodash | 1048 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | mocha | 47 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | moment | 394 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | ollama | 6 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | openai | 966 | 11 (ELEVATED:11) | 2 | &mdash; | &mdash; | &mdash; |
-| npm | prettier | 31 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | react | 24 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | react-dom | 40 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | rxjs | 252 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | semver | 49 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | tslib | 5 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | typescript | 3 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | uuid | 22 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | vite | 17 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | vue | 10 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | webpack | 813 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | ws | 15 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | yargs | 1 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| npm | zod | 570 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | aider-chat | 161 | 23 (ELEVATED:23) | 4 | &mdash; | &mdash; | &mdash; |
-| pypi | aiohttp | 169 | 2 (ELEVATED:2) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | anthropic | 1547 | 165 (ELEVATED:158 HIGH:7) | 5 | &mdash; | &mdash; | &mdash; |
-| pypi | anthropic-bedrock | 31 | 2 (ELEVATED:2) | 1 | &mdash; | &mdash; | &mdash; |
-| pypi | attrs | 54 | 1 (HIGH:1) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | boto3 | 40 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _aws-sdk_nested-clients | 355 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _babel_helper-globals | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _eslint_config-helpers | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _jridgewell_remapping | 5 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _oxc-project_types | 1 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_number | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_primitive | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-arrow | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-collection | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-compose-refs | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-context | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-dialog | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-direction | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-dismissable-layer | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-focus-guards | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-focus-scope | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-id | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-popper | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-portal | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-presence | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-primitive | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-roving-focus | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-slot | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-use-callback-ref | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-use-controllable-state | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-use-effect-event | 2 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-use-layout-effect | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-use-previous | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-use-rect | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-use-size | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_react-visually-hidden | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _radix-ui_rect | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _rolldown_pluginutils | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _standard-schema_spec | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _tailwindcss_node | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _typescript-eslint_project-service | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | _typescript-eslint_tsconfig-utils | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | baseline-browser-mapping | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | call-bind-apply-helpers | 13 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | dunder-proto | 7 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | get-proto | 7 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | google-logging-utils | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | math-intrinsics | 31 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | own-keys | 3 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | safe-push-apply | 3 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | set-proto | 7 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | side-channel-list | 4 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | side-channel-map | 3 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | side-channel-weakmap | 3 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | use-sync-external-store | 15 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | agent-client-protocol | 82 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | ast-serialize | 660 | 1 (ELEVATED:1) | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | backports.zstd | 107 | 4 (ELEVATED:4) | 0 | &mdash; | &mdash; | &mdash; |
 | pypi | browser-use | 160 | 38 (ELEVATED:35 HIGH:3) | 15 | &mdash; | &mdash; | &mdash; |
-| pypi | certifi | 6 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | charset-normalizer | 31 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | click | 65 | 1 (ELEVATED:1) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | cohere | 358 | 16 (ELEVATED:16) | 3 | &mdash; | &mdash; | &mdash; |
-| pypi | crewai | 788 | 634 (ELEVATED:52 HIGH:582) | 21 | &mdash; | &mdash; | &mdash; |
-| pypi | cryptography | 351 | 3 (ELEVATED:2 HIGH:1) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | django | 2950 | 25 (ELEVATED:23 HIGH:2) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | dspy | 157 | 134 (ELEVATED:128 HIGH:6) | 8 | &mdash; | &mdash; | &mdash; |
-| pypi | fastapi | 1137 | 6 (ELEVATED:6) | 1 | &mdash; | &mdash; | &mdash; |
-| pypi | flask | 83 | 2 (ELEVATED:1 HIGH:1) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | gradio | 1173 | 31 (ELEVATED:26 HIGH:5) | 8 | &mdash; | &mdash; | &mdash; |
-| pypi | grpcio | 4329 | 5 (ELEVATED:5) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | guardrails-ai | 179 | 6 (ELEVATED:5 HIGH:1) | 4 | &mdash; | &mdash; | &mdash; |
-| pypi | httpx | 60 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | huggingface-hub | 264 | 176 (ELEVATED:168 HIGH:8) | 12 | &mdash; | &mdash; | &mdash; |
-| pypi | idna | 23 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | instructor | 549 | 443 (ELEVATED:420 HIGH:23) | 26 | &mdash; | &mdash; | &mdash; |
-| pypi | jinja2 | 52 | 3 (ELEVATED:3) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | langchain | 132 | 87 (ELEVATED:74 HIGH:13) | 4 | &mdash; | &mdash; | &mdash; |
-| pypi | langchain-community | 2035 | 156 (ELEVATED:137 HIGH:19) | 41 | &mdash; | &mdash; | &mdash; |
-| pypi | langchain-core | 355 | 23 (ELEVATED:21 HIGH:2) | 6 | &mdash; | &mdash; | &mdash; |
-| pypi | langgraph | 149 | 63 (ELEVATED:59 HIGH:4) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | litellm | 2559 | 1734 (ELEVATED:1681 HIGH:53) | 45 | &mdash; | &mdash; | &mdash; |
-| pypi | llama-index | 0 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | mcp | 835 | 624 (ELEVATED:619 HIGH:5) | 5 | &mdash; | &mdash; | &mdash; |
-| pypi | mistralai | 1194 | 1044 (ELEVATED:1041 HIGH:3) | 3 | &mdash; | &mdash; | &mdash; |
-| pypi | numpy | 2434 | 66 (ELEVATED:62 HIGH:4) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | ollama | 41 | 40 (ELEVATED:35 HIGH:5) | 3 | &mdash; | &mdash; | &mdash; |
-| pypi | openai | 1801 | 225 (ELEVATED:219 HIGH:6) | 5 | &mdash; | &mdash; | &mdash; |
+| pypi | claude-agent-sdk | 88 | 67 (ELEVATED:12 HIGH:55) | 3 | &mdash; | &mdash; | &mdash; |
+| pypi | dbt-protos | 82 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | fastapi-cloud-cli | 108 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | fastapi-mcp | 44 | 12 (ELEVATED:12) | 2 | &mdash; | &mdash; | &mdash; |
+| pypi | fastar | 12 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | fastmcp | 846 | 699 (ELEVATED:661 HIGH:38) | 9 | &mdash; | &mdash; | &mdash; |
+| pypi | fastmcp-slim | 257 | 212 (ELEVATED:200 HIGH:12) | 8 | &mdash; | &mdash; | &mdash; |
+| pypi | fastspec | 6 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | genai-prices | 12 | 1 (ELEVATED:1) | 5 | &mdash; | &mdash; | &mdash; |
+| pypi | google-adk | 787 | 329 (ELEVATED:277 HIGH:52) | 17 | &mdash; | &mdash; | &mdash; |
+| pypi | google-genai | 527 | 40 (ELEVATED:39 HIGH:1) | 3 | &mdash; | &mdash; | &mdash; |
+| pypi | griffelib | 78 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | hf-xet | 292 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | httpcore2 | 31 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | httpx2 | 30 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | ipython-pygments-lexers | 2 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | langchain-classic | 1582 | 79 (ELEVATED:73 HIGH:6) | 17 | &mdash; | &mdash; | &mdash; |
+| pypi | langchain-protocol | 2 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | langgraph-prebuilt | 25 | 12 (ELEVATED:10 HIGH:2) | 1 | &mdash; | &mdash; | &mdash; |
+| pypi | librt | 37 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | llama-cloud-services | 28 | 8 (ELEVATED:7 HIGH:1) | 1 | &mdash; | &mdash; | &mdash; |
+| pypi | mlflow-tracing | 601 | 61 (ELEVATED:47 HIGH:14) | 29 | &mdash; | &mdash; | &mdash; |
+| pypi | nest-asyncio2 | 14 | 1 (ELEVATED:1) | 0 | &mdash; | &mdash; | &mdash; |
 | pypi | openai-agents | 863 | 433 (ELEVATED:299 HIGH:134) | 12 | &mdash; | &mdash; | &mdash; |
-| pypi | packaging | 58 | 2 (ELEVATED:2) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | pillow | 323 | 9 (ELEVATED:8 HIGH:1) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | protobuf | 203 | 1 (ELEVATED:1) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | pyautogen | 1 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | pydantic | 272 | 8 (ELEVATED:8) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | pytest | 271 | 24 (ELEVATED:23 HIGH:1) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | python-dateutil | 39 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | pyyaml | 47 | 5 (ELEVATED:5) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | requests | 35 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | rich | 100 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | semantic-kernel | 555 | 453 (ELEVATED:414 HIGH:39) | 18 | &mdash; | &mdash; | &mdash; |
-| pypi | sentence-transformers | 211 | 11 (ELEVATED:10 HIGH:1) | 1 | &mdash; | &mdash; | &mdash; |
-| pypi | setuptools | 333 | 13 (ELEVATED:10 HIGH:3) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | six | 4 | 1 (HIGH:1) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | smolagents | 44 | 36 (ELEVATED:21 HIGH:15) | 10 | &mdash; | &mdash; | &mdash; |
-| pypi | sqlalchemy | 720 | 22 (ELEVATED:21 HIGH:1) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | tiktoken | 20 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | tqdm | 65 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | transformers | 2657 | 749 (ELEVATED:742 HIGH:7) | 4 | &mdash; | &mdash; | &mdash; |
-| pypi | typing-extensions | 3 | 2 (ELEVATED:1 HIGH:1) | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | urllib3 | 82 | 0 | 0 | &mdash; | &mdash; | &mdash; |
-| pypi | wheel | 26 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | polars-runtime-32 | 2067 | 1 (ELEVATED:1) | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | prek | 210 | 1 (ELEVATED:1) | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | propcache | 19 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | py-key-value-aio | 119 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | pydantic-ai-slim | 298 | 219 (ELEVATED:130 HIGH:89) | 23 | &mdash; | &mdash; | &mdash; |
+| pypi | pydantic-graph | 14 | 2 (ELEVATED:2) | 1 | &mdash; | &mdash; | &mdash; |
+| pypi | python-discovery | 32 | 3 (ELEVATED:2 HIGH:1) | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | pytokens | 7 | 1 (ELEVATED:1) | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | rfc3987-syntax | 5 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | strands-agents | 628 | 354 (ELEVATED:325 HIGH:29) | 19 | &mdash; | &mdash; | &mdash; |
+| pypi | typing-inspection | 10 | 1 (ELEVATED:1) | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | uncalled-for | 21 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | uv-build | 108 | 2 (ELEVATED:2) | 0 | &mdash; | &mdash; | &mdash; |
 <!-- RESULTS:END -->
 
 ---

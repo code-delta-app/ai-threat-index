@@ -1,0 +1,11 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+typing_inspection-0.4.4/src/typing_inspection/typing_objects.py,Python,50,ELEVATED,0,0,,,eval/exec found (2 occurrence(s)),dynamic_execution(eval/exec_x2)
+typing_inspection-0.4.4/src/typing_inspection/__init__.py,Python,0,NORMAL,0,0,,,,
+typing_inspection-0.4.4/src/typing_inspection/introspection.py,Python,0,NORMAL,0,0,,,,
+typing_inspection-0.4.4/tests/conftest.py,Python,0,NORMAL,0,0,,,,
+typing_inspection-0.4.4/tests/introspection/__init__.py,Python,0,NORMAL,0,0,,,,
+typing_inspection-0.4.4/tests/introspection/test_inspect_annotation.py,Python,0,NORMAL,0,0,,,,
+typing_inspection-0.4.4/tests/introspection/test_is_union_origin.py,Python,0,NORMAL,0,0,,,,
+typing_inspection-0.4.4/tests/introspection/test_literal_values.py,Python,0,NORMAL,0,0,,,,
+typing_inspection-0.4.4/tests/typing_objects/__init__.py,Python,0,NORMAL,0,0,,,,
+typing_inspection-0.4.4/tests/typing_objects/test_member_checks.py,Python,0,NORMAL,0,0,,,,

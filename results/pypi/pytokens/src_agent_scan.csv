@@ -1,0 +1,8 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+pytokens-0.4.1/scripts/primer.py,Python,40,ELEVATED,0,0,,,subprocess/shell execution with variables (1 occurrence(s)),subprocess_variable_execution(x1)
+pytokens-0.4.1/setup.py,Python,0,NORMAL,0,0,,,,
+pytokens-0.4.1/src/pytokens/__init__.py,Python,0,NORMAL,0,0,,,,
+pytokens-0.4.1/src/pytokens/__main__.py,Python,0,NORMAL,0,0,,,,
+pytokens-0.4.1/src/pytokens/_mypyc_dummy.py,Python,0,NORMAL,0,0,,,,
+pytokens-0.4.1/src/pytokens/cli.py,Python,0,NORMAL,0,0,,,,
+pytokens-0.4.1/tests/pytokens_test.py,Python,0,NORMAL,0,0,,,,

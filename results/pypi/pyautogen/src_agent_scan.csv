@@ -1,2 +1,0 @@
-rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
-pyautogen-0.10.0/src/pyautogen/__init__.py,Python,0,NORMAL,0,0,,,,

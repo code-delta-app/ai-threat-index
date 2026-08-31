@@ -1,0 +1,3977 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.1",
+  "generated": "2026-08-31T20:13:07.811582Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 298,
+    "files_flagged": 219,
+    "critical": 0,
+    "high": 89,
+    "elevated": 130,
+    "providers": 23,
+    "foreign_egress_files": 3,
+    "non_allied_jurisdiction_files": 1,
+    "cost_risk_files": 1,
+    "agent_artifacts": 15,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 0
+  },
+  "providers": [
+    {
+      "name": "pydantic_ai",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 168,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/_agent_graph.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/_cli/web.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/_history_processor.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/_instructions.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/_instrumentation.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/_output.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/_parts_manager.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/_run_context.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/_spec.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/_template.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/_thinking_part.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/_tool_execution.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/_utils.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/agent/__init__.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/agent/abstract.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/agent/spec.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/agent/wrapper.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/__init__.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_deferred_capability_loader.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_dynamic.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_ordering.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_pending_messages.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_tool_search.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/abstract.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/capability.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/combined.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/content_filter.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/deferred_tool_handler.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/durable_operation.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/hooks.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/image_generation.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/include_return_schemas.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/instrumentation.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/mcp.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/native_or_local.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/native_tool.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/prefix_tools.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/prepare_tools.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/process_event_stream.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/process_history.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/reinject_system_prompt.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/resolve_model_id.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/select_model.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/set_tool_metadata.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/thinking.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/thread_executor.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/toolset.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/web_fetch.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/web_search.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/wrapper.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/x_search.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/duckduckgo.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/exa.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/image_generation.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/tavily.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/web_fetch.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/x_search.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/concurrency.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/direct.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_base.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_capability_operation.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_operation.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_spec.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_toolset.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_utils.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_agent.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_durability.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_mcp_toolset.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_model.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_operation_backend.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_utils.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_agent.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_cache_policies.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_durability.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_dynamic_toolset.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_function_toolset.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_mcp_toolset.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_model.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_operation_backend.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_toolset.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_types.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_agent.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_durability.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_dynamic_toolset.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_function_toolset.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_logfire.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_mcp_toolset.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_model.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_operation_backend.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_run_context.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_toolset.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_transports.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_workflow.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/__init__.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/bedrock.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/cohere.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/google.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/instrumented.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/openai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/result.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/sentence_transformers.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/test.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/voyageai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/ext/langchain.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/format_prompt.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/mcp.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/messages.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/_tool_choice.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/anthropic.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/bedrock.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/cohere.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/concurrency.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/fallback.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/instrumented.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/openai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/native_tools/__init__.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/output.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/_openai_compatible.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/alibaba.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/anthropic.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/azure.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock_mantle.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/cerebras.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/cohere.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/crusoe.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/deepseek.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/fireworks.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/github.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/google.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/google_cloud.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/groq.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/heroku.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/huggingface.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/litellm.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/mistral.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/moonshotai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/nebius.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/ollama.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openrouter.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/ovhcloud.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/sambanova.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/sentence_transformers.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/snowflake.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/together.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/vercel.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/voyageai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/xai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/zai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/result.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/retries.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/run.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/template.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/tools.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_deferred_capability_loader.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_instruction_collection.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/approval_required.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/function.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_adapter.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_event_stream.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_messages_builder.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/_hosts.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/api.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/app.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/_adapter.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/_utils.py"
+      ]
+    },
+    {
+      "name": "openai",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 36,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/openai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/bedrock_mantle.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/cerebras.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/crusoe.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/ollama.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/openai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/openrouter.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/snowflake.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/zai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/_openai_compatible.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/alibaba.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/azure.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock_mantle.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/cerebras.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/crusoe.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/deepseek.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/fireworks.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/github.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/heroku.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/litellm.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/moonshotai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/nebius.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/ollama.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openrouter.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/ovhcloud.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/sambanova.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/snowflake.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/together.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/vercel.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/zai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/_openai_protocol.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/azure.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/openai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/xai.py"
+      ]
+    },
+    {
+      "name": "google.genai",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 6,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/google.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/google.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/google.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/google_cloud.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/google.py"
+      ]
+    },
+    {
+      "name": "MCP",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 4,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/_mcp.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/__init__.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/mcp.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/mcp_sampling.py"
+      ]
+    },
+    {
+      "name": "anthropic",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 4,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/_anthropic_bedrock_count_tokens.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/anthropic.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/anthropic.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py"
+      ]
+    },
+    {
+      "name": "cohere",
+      "type": "sdk",
+      "jurisdiction": "CA",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/cohere.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/cohere.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/cohere.py"
+      ]
+    },
+    {
+      "name": "groq",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/groq.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/groq.py"
+      ]
+    },
+    {
+      "name": "mcp",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/_mcp.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/mcp.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/mcp_sampling.py"
+      ]
+    },
+    {
+      "name": "bedrock-runtime",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/bedrock.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock.py"
+      ],
+      "endpoint": "bedrock-runtime"
+    },
+    {
+      "name": "huggingface_hub",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/huggingface.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/huggingface.py"
+      ]
+    },
+    {
+      "name": "mistralai",
+      "type": "sdk",
+      "jurisdiction": "FR",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/mistral.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/mistral.py"
+      ]
+    },
+    {
+      "name": "voyageai",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/voyageai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/voyageai.py"
+      ]
+    },
+    {
+      "name": "DeepSeek",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/deepseek.py"
+      ]
+    },
+    {
+      "name": "FastMCP",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/mcp.py"
+      ]
+    },
+    {
+      "name": "OpenAI",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/openai.py"
+      ]
+    },
+    {
+      "name": "api.deepseek.com",
+      "type": "endpoint",
+      "jurisdiction": "CN",
+      "sovereignty_risk": true,
+      "file_count": 1,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/deepseek.py"
+      ],
+      "endpoint": "api.deepseek.com"
+    },
+    {
+      "name": "api.fireworks.ai",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/fireworks.py"
+      ],
+      "endpoint": "api.fireworks.ai"
+    },
+    {
+      "name": "api.groq.com",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/groq.py"
+      ],
+      "endpoint": "api.groq.com"
+    },
+    {
+      "name": "api.together.xyz",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/together.py"
+      ],
+      "endpoint": "api.together.xyz"
+    },
+    {
+      "name": "api.x.ai",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/xai.py"
+      ],
+      "endpoint": "api.x.ai"
+    },
+    {
+      "name": "fastmcp",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/mcp.py"
+      ]
+    },
+    {
+      "name": "generativelanguage.googleapis.com",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/google.py"
+      ],
+      "endpoint": "generativelanguage.googleapis.com"
+    },
+    {
+      "name": "openrouter.ai",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openrouter.py"
+      ],
+      "endpoint": "openrouter.ai"
+    }
+  ],
+  "agent_artifacts": [
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/native_tools/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/profiles/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Claude Code instructions",
+      "tier": 1,
+      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/CLAUDE.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Claude Code instructions",
+      "tier": 1,
+      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/CLAUDE.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Claude Code instructions",
+      "tier": 1,
+      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/native_tools/CLAUDE.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Claude Code instructions",
+      "tier": 1,
+      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/CLAUDE.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Claude Code instructions",
+      "tier": 1,
+      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/CLAUDE.md"
+    }
+  ],
+  "committed_credentials": [],
+  "findings": [
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/messages.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 100,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)",
+        "prompt_injection_vectors(6_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/bedrock.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 100,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(bedrock-runtime)",
+        "agent_orchestration(RunContext)",
+        "cost_risk(ai_calls_inside_loop)",
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/huggingface.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 100,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)",
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/openai.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 98,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "agent_orchestration(RunContext)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_adapter.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 98,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_agent_graph.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,runner.run)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_output.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_run_context.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/mcp.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(5_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/run.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/output.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_utils.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_instructions.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/template.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/tools.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/result.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_history_processor.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/capability.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/reinject_system_prompt.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/__init__.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(agent.run()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_dynamic.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,agent.run()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_tool_search.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/process_event_stream.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/image_generation.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/web_search.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/mcp.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/process_history.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/instrumentation.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/hooks.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/include_return_schemas.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/thread_executor.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/combined.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/native_or_local.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_deferred_capability_loader.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/x_search.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/wrapper.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/deferred_tool_handler.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_pending_messages.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/web_fetch.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/prepare_tools.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/set_tool_metadata.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/abstract.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/content_filter.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/google.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(generativelanguage.googleapis.com)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/instrumented.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/mcp_sampling.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/mistral.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "data_egress(model_hosted_in_FR:mistralai)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/fallback.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/anthropic.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/concurrency.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/groq.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/_tool_choice.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_instruction_collection.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_deferred_capability_loader.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/function.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/approval_required.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_event_stream.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/image_generation.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,agent.run()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/x_search.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,agent.run()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_toolset.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_utils.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_base.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,agent.run()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_operation.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_capability_operation.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,result_type=)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_agent.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_run_context.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_toolset.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_dynamic_toolset.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_mcp_toolset.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_function_toolset.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_model.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_durability.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,agent.run()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_agent.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_toolset.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_dynamic_toolset.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_mcp_toolset.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_function_toolset.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_cache_policies.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_model.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_durability.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(agent.run()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_agent.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_utils.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_mcp_toolset.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_operation_backend.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_model.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_durability.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,agent.run()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/agent/__init__.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,agent.run()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/agent/wrapper.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/agent/abstract.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_instrumentation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/_openai_protocol.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_enqueue.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_deferred.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_function_schema.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_parts_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/format_prompt.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/exceptions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_mcp.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_deferred_capabilities.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/retries.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_template.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/tool_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_thinking_part.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/concurrency.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/direct.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_spec.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_cancel.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_system_prompt.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext,runner.run)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_tool_execution.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_cli/web.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/alibaba.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/google.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/heroku.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/_openai_compatible.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/nebius.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/google_cloud.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/together.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "ai_http_endpoint(api.together.xyz)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/xai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(api.x.ai)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/sentence_transformers.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/cerebras.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/fireworks.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "ai_http_endpoint(api.fireworks.ai)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(bedrock-runtime)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock_mantle.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/mistral.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "data_egress(model_hosted_in_FR:mistralai)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/crusoe.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/moonshotai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openrouter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "ai_http_endpoint(openrouter.ai)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/anthropic.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/zai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/ollama.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(5_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/ovhcloud.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/groq.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "ai_http_endpoint(api.groq.com)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/litellm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/voyageai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/cohere.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/deepseek.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "ai_http_endpoint(api.deepseek.com)",
+        "data_egress(model_hosted_in_CN:api.deepseek.com)",
+        "data_sovereignty_risk(non-allied_jurisdiction)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": true,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/huggingface.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/github.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/azure.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/snowflake.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/vercel.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/sambanova.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/native_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/durable_operation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/prefix_tools.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/resolve_model_id.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_deferred_capabilities.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/select_model.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/toolset.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/thinking.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_ordering.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/ext/langchain.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/_continuation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/xai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/cerebras.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/bedrock_mantle.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/crusoe.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/openrouter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/zai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/ollama.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/test.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/wrapper.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/function.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/cohere.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/_anthropic_bedrock_count_tokens.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/snowflake.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_dynamic.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_tool_search.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/set_metadata.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/prepared.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/prefixed.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/deferred_loading.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/include_return_schemas.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/combined.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/wrapper.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/external.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_capability_owned.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/filtered.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/renamed.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/abstract.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_messages_builder.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/app.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/_hosts.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/api.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/_adapter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/google.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/_session.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext,Agent.run()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/openai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/xai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/azure.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/duckduckgo.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/tavily.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/exa.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/web_fetch.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/google.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/openai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/sentence_transformers.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/instrumented.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/bedrock.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/test.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/voyageai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/cohere.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/result.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_spec.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_logfire.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_workflow.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_operation_backend.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_transports.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_operation_backend.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_types.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/native_tools/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/native_tools/_tool_search.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(RunContext)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/agent/spec.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}

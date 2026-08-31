@@ -1,0 +1,3668 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.1",
+  "generated": "2026-08-31T20:13:26.801141Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 257,
+    "files_flagged": 212,
+    "critical": 0,
+    "high": 12,
+    "elevated": 200,
+    "providers": 8,
+    "foreign_egress_files": 0,
+    "non_allied_jurisdiction_files": 0,
+    "cost_risk_files": 0,
+    "agent_artifacts": 0,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 0
+  },
+  "providers": [
+    {
+      "name": "fastmcp",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 208,
+      "files": [
+        "fastmcp_slim-4.0.0/fastmcp/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/_compat.py",
+        "fastmcp_slim-4.0.0/fastmcp/apps/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/apps/app.py",
+        "fastmcp_slim-4.0.0/fastmcp/apps/approval.py",
+        "fastmcp_slim-4.0.0/fastmcp/apps/choice.py",
+        "fastmcp_slim-4.0.0/fastmcp/apps/config.py",
+        "fastmcp_slim-4.0.0/fastmcp/apps/file_upload.py",
+        "fastmcp_slim-4.0.0/fastmcp/apps/form.py",
+        "fastmcp_slim-4.0.0/fastmcp/apps/generative.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/apps_dev.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/auth.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/cimd.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/cli.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/client.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/deploy/authentication.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/deploy/command.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/deploy/configuration.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/deploy/credentials.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/deploy/output.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/discovery.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/generate.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/install/claude_code.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/install/claude_desktop.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/install/cursor.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/install/gemini_cli.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/install/goose.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/install/mcp_json.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/install/shared.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/install/stdio.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/run.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/auth/bearer.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/auth/client_credentials.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/auth/oauth.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/caching.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/client.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/dependencies.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/elicitation.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/extension_hooks.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/group.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/logging.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/mixins/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/mixins/prompts.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/mixins/resources.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/mixins/tools.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/oauth_callback.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/progress.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/roots.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/sampling/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/anthropic.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/google_genai.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/openai.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/telemetry.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/config.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/http.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/inference.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/memory.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/sse.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/stdio.py",
+        "fastmcp_slim-4.0.0/fastmcp/contrib/bulk_tool_caller/bulk_tool_caller.py",
+        "fastmcp_slim-4.0.0/fastmcp/contrib/bulk_tool_caller/example.py",
+        "fastmcp_slim-4.0.0/fastmcp/contrib/component_manager/component_manager.py",
+        "fastmcp_slim-4.0.0/fastmcp/contrib/component_manager/example.py",
+        "fastmcp_slim-4.0.0/fastmcp/contrib/mcp_mixin/example.py",
+        "fastmcp_slim-4.0.0/fastmcp/contrib/mcp_mixin/mcp_mixin.py",
+        "fastmcp_slim-4.0.0/fastmcp/decorators.py",
+        "fastmcp_slim-4.0.0/fastmcp/dependencies.py",
+        "fastmcp_slim-4.0.0/fastmcp/exceptions.py",
+        "fastmcp_slim-4.0.0/fastmcp/experimental/transforms/code_mode.py",
+        "fastmcp_slim-4.0.0/fastmcp/mcp_config.py",
+        "fastmcp_slim-4.0.0/fastmcp/prompts/base.py",
+        "fastmcp_slim-4.0.0/fastmcp/prompts/function_prompt.py",
+        "fastmcp_slim-4.0.0/fastmcp/resources/base.py",
+        "fastmcp_slim-4.0.0/fastmcp/resources/function_resource.py",
+        "fastmcp_slim-4.0.0/fastmcp/resources/security.py",
+        "fastmcp_slim-4.0.0/fastmcp/resources/template.py",
+        "fastmcp_slim-4.0.0/fastmcp/resources/types.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/auth.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/cimd.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/handlers/authorize.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/identity_assertion.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/jwt_issuer.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/middleware.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/oauth_proxy/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/oauth_proxy/consent.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/oauth_proxy/models.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/oauth_proxy/proxy.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/oauth_proxy/ui.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/oidc_proxy.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/auth0.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/aws.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/azure.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/clerk.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/debug.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/descope.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/discord.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/github.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/google.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/huggingface.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/in_memory.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/introspection.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/jwt.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/keycloak.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/oci.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/propelauth.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/scalekit.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/supabase.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/workos.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/ssrf.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/context.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/dependencies.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/elicitation.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/event_store.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/extensions.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/http.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/lifespan.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/low_level.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/middleware/authorization.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/middleware/caching.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/middleware/dereference.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/middleware/error_handling.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/middleware/logging.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/middleware/middleware.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/middleware/ping.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/middleware/rate_limiting.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/middleware/response_limiting.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/middleware/timing.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/middleware/tool_injection.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/mixins/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/mixins/lifespan.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/mixins/mcp_operations.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/mixins/transport.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/aggregate.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/base.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/fastmcp_provider.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/filesystem.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/filesystem_discovery.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/local_provider/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/local_provider/decorators/prompts.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/local_provider/decorators/resources.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/local_provider/decorators/tools.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/local_provider/local_provider.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/openapi/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/openapi/components.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/openapi/provider.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/openapi/routing.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/prefab_payload.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/prefab_synthesis.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/proxy.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/claude_provider.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/directory_provider.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/skill_provider.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/vendor_providers.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/wrapped_provider.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/server.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/session_scoped_event_store.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/sessions.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/telemetry.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/transforms/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/transforms/catalog.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/transforms/namespace.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/transforms/prompts_as_tools.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/transforms/resources_as_tools.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/transforms/search/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/transforms/search/base.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/transforms/search/bm25.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/transforms/search/regex.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/transforms/tool_transform.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/transforms/version_filter.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/transforms/visibility.py",
+        "fastmcp_slim-4.0.0/fastmcp/settings.py",
+        "fastmcp_slim-4.0.0/fastmcp/telemetry.py",
+        "fastmcp_slim-4.0.0/fastmcp/tools/base.py",
+        "fastmcp_slim-4.0.0/fastmcp/tools/function_parsing.py",
+        "fastmcp_slim-4.0.0/fastmcp/tools/function_tool.py",
+        "fastmcp_slim-4.0.0/fastmcp/tools/tool_transform.py",
+        "fastmcp_slim-4.0.0/fastmcp/types.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/asgi_transport.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/authorization.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/cli.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/components.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/exceptions.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/inspect.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/lifespan.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/logging.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/mcp_server_config/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/mcp_server_config/v1/environments/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/mcp_server_config/v1/environments/uv.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/mcp_server_config/v1/mcp_server_config.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/mcp_server_config/v1/sources/filesystem.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/openapi/director.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/openapi/json_schema_converter.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/openapi/models.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/openapi/parser.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/openapi/schemas.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/skills.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/tasks.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/tests.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/token_cache.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/version_check.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/versions.py"
+      ]
+    },
+    {
+      "name": "FastMCP",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 83,
+      "files": [
+        "fastmcp_slim-4.0.0/fastmcp/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/apps/app.py",
+        "fastmcp_slim-4.0.0/fastmcp/apps/approval.py",
+        "fastmcp_slim-4.0.0/fastmcp/apps/choice.py",
+        "fastmcp_slim-4.0.0/fastmcp/apps/file_upload.py",
+        "fastmcp_slim-4.0.0/fastmcp/apps/form.py",
+        "fastmcp_slim-4.0.0/fastmcp/apps/generative.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/run.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/client.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/config.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/inference.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/memory.py",
+        "fastmcp_slim-4.0.0/fastmcp/contrib/bulk_tool_caller/bulk_tool_caller.py",
+        "fastmcp_slim-4.0.0/fastmcp/contrib/bulk_tool_caller/example.py",
+        "fastmcp_slim-4.0.0/fastmcp/contrib/component_manager/component_manager.py",
+        "fastmcp_slim-4.0.0/fastmcp/contrib/component_manager/example.py",
+        "fastmcp_slim-4.0.0/fastmcp/contrib/mcp_mixin/example.py",
+        "fastmcp_slim-4.0.0/fastmcp/contrib/mcp_mixin/mcp_mixin.py",
+        "fastmcp_slim-4.0.0/fastmcp/exceptions.py",
+        "fastmcp_slim-4.0.0/fastmcp/prompts/base.py",
+        "fastmcp_slim-4.0.0/fastmcp/resources/base.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/auth.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/handlers/authorize.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/oauth_proxy/consent.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/oauth_proxy/models.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/oidc_proxy.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/auth0.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/aws.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/azure.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/clerk.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/debug.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/descope.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/discord.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/github.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/google.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/introspection.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/keycloak.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/oci.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/propelauth.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/workos.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/context.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/dependencies.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/event_store.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/extensions.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/http.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/lifespan.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/low_level.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/middleware/authorization.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/middleware/ping.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/middleware/response_limiting.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/mixins/lifespan.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/mixins/mcp_operations.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/mixins/transport.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/aggregate.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/base.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/fastmcp_provider.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/filesystem.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/local_provider/decorators/tools.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/local_provider/local_provider.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/openapi/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/openapi/provider.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/prefab_synthesis.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/proxy.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/claude_provider.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/directory_provider.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/skill_provider.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/server.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/transforms/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/transforms/prompts_as_tools.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/transforms/resources_as_tools.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/transforms/search/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/transforms/search/base.py",
+        "fastmcp_slim-4.0.0/fastmcp/telemetry.py",
+        "fastmcp_slim-4.0.0/fastmcp/types.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/asgi_transport.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/cli.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/inspect.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/lifespan.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/mcp_server_config/v1/sources/filesystem.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/tests.py"
+      ]
+    },
+    {
+      "name": "mcp",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 63,
+      "files": [
+        "fastmcp_slim-4.0.0/fastmcp/cli/apps_dev.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/generate.py",
+        "fastmcp_slim-4.0.0/fastmcp/cli/run.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/auth/client_credentials.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/auth/oauth.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/caching.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/client.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/elicitation.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/extension_hooks.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/group.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/logging.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/messages.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/mixins/prompts.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/mixins/resources.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/mixins/tools.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/progress.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/roots.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/sampling/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/google_genai.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/openai.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/base.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/config.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/http.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/inference.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/memory.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/sse.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/stdio.py",
+        "fastmcp_slim-4.0.0/fastmcp/contrib/component_manager/component_manager.py",
+        "fastmcp_slim-4.0.0/fastmcp/exceptions.py",
+        "fastmcp_slim-4.0.0/fastmcp/prompts/base.py",
+        "fastmcp_slim-4.0.0/fastmcp/resources/security.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/auth.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/handlers/authorize.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/middleware.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/oauth_proxy/models.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/oauth_proxy/proxy.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/azure.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/descope.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/in_memory.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/caching.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/context.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/dependencies.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/elicitation.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/event_store.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/extensions.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/http.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/low_level.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/middleware/error_handling.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/middleware/rate_limiting.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/mixins/mcp_operations.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/mixins/transport.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/proxy.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/skill_provider.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/server.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/session_scoped_event_store.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/sessions.py",
+        "fastmcp_slim-4.0.0/fastmcp/tools/base.py",
+        "fastmcp_slim-4.0.0/fastmcp/tools/function_tool.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/exceptions.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/inspect.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/mcp_server_config/v1/sources/filesystem.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/tests.py"
+      ]
+    },
+    {
+      "name": "MCP",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 4,
+      "files": [
+        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/google_genai.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/server.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/inspect.py",
+        "fastmcp_slim-4.0.0/fastmcp/utilities/skills.py"
+      ]
+    },
+    {
+      "name": "Anthropic",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/anthropic.py"
+      ]
+    },
+    {
+      "name": "anthropic",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/anthropic.py"
+      ]
+    },
+    {
+      "name": "google.genai",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/google_genai.py"
+      ]
+    },
+    {
+      "name": "openai",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/openai.py"
+      ]
+    }
+  ],
+  "agent_artifacts": [],
+  "committed_credentials": [],
+  "findings": [
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/experimental/transforms/code_mode.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 100,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "dynamic_execution(eval/exec_x1)",
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/server.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 100,
+      "signals": [
+        "ai_sdk_import(5_sdk(s)_detected)",
+        "agent_orchestration(function_tool)",
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/filesystem_discovery.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 100,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(function_tool)",
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/local_provider/decorators/tools.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 98,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(function_tool)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/decorators.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(function_tool)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/tools/base.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(function_tool)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/prompts/function_prompt.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(function_tool)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/run.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(4_sdk(s)_detected)",
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/cli.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "subprocess_variable_execution(x3)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/install/claude_code.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "subprocess_variable_execution(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/install/gemini_cli.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "subprocess_variable_execution(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/local_provider/decorators/prompts.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/transports/memory.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/mcp_server_config/v1/sources/filesystem.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/local_provider/local_provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/local_provider/decorators/resources.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/transforms/prompts_as_tools.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/mcp_config.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/exceptions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/dependencies.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/types.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/settings.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/telemetry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/_compat.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/logging.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/group.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/elicitation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/dependencies.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/progress.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/oauth_callback.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/caching.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/extension_hooks.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/roots.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/messages.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/telemetry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(4_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/transports/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/transports/http.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/transports/config.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/transports/stdio.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/transports/inference.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/transports/sse.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/transports/base.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/auth/client_credentials.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/auth/bearer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/auth/oauth.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/mixins/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/mixins/resources.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/mixins/tools.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/mixins/prompts.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/sampling/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/openai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/anthropic.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/google_genai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(4_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/apps/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/apps/app.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/apps/config.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/apps/approval.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/apps/generative.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/apps/choice.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/apps/file_upload.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/apps/form.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/contrib/bulk_tool_caller/example.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/contrib/bulk_tool_caller/bulk_tool_caller.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/contrib/mcp_mixin/mcp_mixin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/contrib/mcp_mixin/example.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/contrib/component_manager/example.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/contrib/component_manager/component_manager.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/resources/function_resource.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/resources/template.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/resources/types.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/resources/security.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/resources/base.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/inspect.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(5_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/token_cache.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/exceptions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/asgi_transport.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/logging.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/components.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/tests.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(4_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/skills.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/lifespan.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/versions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/authorization.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/cli.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/tasks.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/version_check.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/openapi/schemas.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/openapi/json_schema_converter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/openapi/parser.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/openapi/models.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/openapi/director.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/mcp_server_config/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/mcp_server_config/v1/mcp_server_config.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/mcp_server_config/v1/environments/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/utilities/mcp_server_config/v1/environments/uv.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/tools/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(function_tool)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/tools/tool_transform.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/tools/function_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/tools/function_parsing.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/prompts/base.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/apps_dev.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/cimd.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/generate.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/auth.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/discovery.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/deploy/credentials.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/deploy/command.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/deploy/output.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/deploy/configuration.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/deploy/authentication.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/install/cursor.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/install/stdio.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/install/claude_desktop.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/install/mcp_json.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/install/shared.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/cli/install/goose.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/low_level.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/event_store.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/http.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/sessions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/extensions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/elicitation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/lifespan.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/dependencies.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/session_scoped_event_store.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/caching.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/telemetry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/context.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/prefab_payload.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/proxy.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/wrapped_provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/fastmcp_provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/aggregate.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/prefab_synthesis.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/filesystem.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/base.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/local_provider/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/openapi/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/openapi/components.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/openapi/provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/openapi/routing.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/directory_provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/skill_provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/vendor_providers.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/claude_provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/transforms/visibility.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/transforms/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/transforms/tool_transform.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/transforms/namespace.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/transforms/version_filter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/transforms/resources_as_tools.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/transforms/catalog.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/transforms/search/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/transforms/search/bm25.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/transforms/search/regex.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/transforms/search/base.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/middleware/logging.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/middleware/dereference.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/middleware/rate_limiting.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/middleware/timing.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/middleware/response_limiting.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/middleware/error_handling.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/middleware/caching.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/middleware/ping.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/middleware/authorization.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/middleware/middleware.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/middleware/tool_injection.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/jwt_issuer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/cimd.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/oidc_proxy.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/ssrf.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/auth.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/identity_assertion.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/middleware.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/supabase.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/oci.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/scalekit.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/google.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/clerk.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/propelauth.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/debug.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/introspection.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/descope.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/aws.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/discord.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/auth0.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/huggingface.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/github.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/azure.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/jwt.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/in_memory.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/workos.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/keycloak.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/oauth_proxy/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/oauth_proxy/ui.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/oauth_proxy/models.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/oauth_proxy/consent.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/oauth_proxy/proxy.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/auth/handlers/authorize.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/mixins/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/mixins/mcp_operations.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/mixins/lifespan.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastmcp_slim-4.0.0/fastmcp/server/mixins/transport.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(4_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}

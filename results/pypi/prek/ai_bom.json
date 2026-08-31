@@ -1,0 +1,87 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.1",
+  "generated": "2026-08-31T20:14:28.090306Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 210,
+    "files_flagged": 1,
+    "critical": 0,
+    "high": 0,
+    "elevated": 1,
+    "providers": 0,
+    "foreign_egress_files": 0,
+    "non_allied_jurisdiction_files": 0,
+    "cost_risk_files": 0,
+    "agent_artifacts": 0,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 7
+  },
+  "providers": [],
+  "agent_artifacts": [],
+  "committed_credentials": [
+    {
+      "kind": "Private key (PEM)",
+      "file": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/detect_private_key.rs",
+      "line": 133,
+      "sample": "-----BEG\u2026 (31 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/detect_private_key.rs",
+      "line": 147,
+      "sample": "-----BEG\u2026 (31 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "prek-0.5.0/crates/prek/tests/builtin_hooks.rs",
+      "line": 2127,
+      "sample": "-----BEG\u2026 (31 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "prek-0.5.0/crates/prek/tests/builtin_hooks.rs",
+      "line": 2129,
+      "sample": "-----BEG\u2026 (31 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "prek-0.5.0/crates/prek/tests/builtin_hooks.rs",
+      "line": 2131,
+      "sample": "-----BEG\u2026 (30 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "prek-0.5.0/crates/prek/tests/builtin_hooks.rs",
+      "line": 2133,
+      "sample": "-----BEG\u2026 (35 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "prek-0.5.0/crates/prek/tests/builtin_hooks.rs",
+      "line": 2143,
+      "sample": "-----BEG\u2026 (31 chars)"
+    }
+  ],
+  "findings": [
+    {
+      "file": "prek-0.5.0/python/prek/__main__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}
