@@ -1,0 +1,807 @@
+{
+  "generated_utc": "2026-08-31T20:07:55.309196+00:00",
+  "rule": "first release on/after 2024-09-10 (24 months); top 50 per registry by lifetime downloads",
+  "source": "https://packages.ecosyste.ms",
+  "packages": [
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-slot",
+      "downloads": 736591459,
+      "first_release": "2025-01-16T17:55:57.292Z",
+      "latest_release": "2026-07-24T23:51:36.867Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "get-proto",
+      "downloads": 670841251,
+      "first_release": "2025-01-02T06:35:32.977Z",
+      "latest_release": "2025-01-02T20:08:02.949Z",
+      "repository_url": "https://github.com/ljharb/get-proto"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "call-bind-apply-helpers",
+      "downloads": 666352622,
+      "first_release": "2024-12-06T00:34:12.669Z",
+      "latest_release": "2025-02-12T19:24:56.950Z",
+      "repository_url": "https://github.com/ljharb/call-bind-apply-helpers"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-primitive",
+      "downloads": 662385656,
+      "first_release": "2025-01-16T17:55:54.975Z",
+      "latest_release": "2026-07-24T23:51:27.938Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "baseline-browser-mapping",
+      "downloads": 647428137,
+      "first_release": "2024-11-29T10:34:28.707Z",
+      "latest_release": "2026-08-27T23:41:49.280Z",
+      "repository_url": "https://github.com/web-platform-dx/baseline-browser-mapping"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "math-intrinsics",
+      "downloads": 634166503,
+      "first_release": "2024-12-11T21:17:21.566Z",
+      "latest_release": "2024-12-19T05:58:09.877Z",
+      "repository_url": "https://github.com/es-shims/math-intrinsics"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@babel/helper-globals",
+      "downloads": 609637308,
+      "first_release": "2025-07-02T08:38:14.923Z",
+      "latest_release": "2026-06-16T13:32:03.390Z",
+      "repository_url": "https://github.com/babel/babel"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "dunder-proto",
+      "downloads": 605915786,
+      "first_release": "2024-12-06T16:23:40.899Z",
+      "latest_release": "2024-12-17T02:12:47.047Z",
+      "repository_url": "https://github.com/es-shims/dunder-proto"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "side-channel-list",
+      "downloads": 587623206,
+      "first_release": "2024-12-10T20:20:25.133Z",
+      "latest_release": "2026-04-08T16:55:13.603Z",
+      "repository_url": "https://github.com/ljharb/side-channel-list"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@rolldown/pluginutils",
+      "downloads": 583971001,
+      "first_release": "2025-05-12T00:19:07.636Z",
+      "latest_release": "2026-05-13T03:52:29.927Z",
+      "repository_url": "https://github.com/rolldown/plugins"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "side-channel-weakmap",
+      "downloads": 561162509,
+      "first_release": "2024-12-10T22:15:40.021Z",
+      "latest_release": "2024-12-11T05:39:11.495Z",
+      "repository_url": "https://github.com/ljharb/side-channel-weakmap"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@oxc-project/types",
+      "downloads": 540772865,
+      "first_release": "2024-10-25T02:54:47.456Z",
+      "latest_release": "2026-08-24T11:28:49.935Z",
+      "repository_url": "https://github.com/oxc-project/oxc"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@jridgewell/remapping",
+      "downloads": 527526299,
+      "first_release": "2025-06-29T21:44:02.513Z",
+      "latest_release": "2025-08-12T06:43:35.321Z",
+      "repository_url": "https://github.com/jridgewell/sourcemaps"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "side-channel-map",
+      "downloads": 523869687,
+      "first_release": "2024-12-10T19:14:55.436Z",
+      "latest_release": "2024-12-11T04:53:18.943Z",
+      "repository_url": "https://github.com/ljharb/side-channel-map"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript-eslint/tsconfig-utils",
+      "downloads": 507050973,
+      "first_release": "2025-05-27T13:55:28.167Z",
+      "latest_release": "2026-08-24T17:27:41.308Z",
+      "repository_url": "https://github.com/typescript-eslint/typescript-eslint"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@typescript-eslint/project-service",
+      "downloads": 481810317,
+      "first_release": "2025-05-27T13:55:32.590Z",
+      "latest_release": "2026-08-31T17:07:39.658Z",
+      "repository_url": "https://github.com/typescript-eslint/typescript-eslint"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-context",
+      "downloads": 478600769,
+      "first_release": "2025-01-16T17:55:49.625Z",
+      "latest_release": "2026-07-24T23:51:13.934Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@eslint/config-helpers",
+      "downloads": 449333258,
+      "first_release": "2025-03-06T21:53:34.024Z",
+      "latest_release": "2026-07-21T08:10:35.250Z",
+      "repository_url": "https://github.com/eslint/rewrite"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "use-sync-external-store",
+      "downloads": 425060866,
+      "first_release": "2026-01-26T19:36:53.672Z",
+      "latest_release": "2025-10-01T21:39:12.499Z",
+      "repository_url": "https://github.com/react/react"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-compose-refs",
+      "downloads": 405481919,
+      "first_release": "2025-01-16T17:55:49.510Z",
+      "latest_release": "2026-07-24T23:51:13.955Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@standard-schema/spec",
+      "downloads": 402181242,
+      "first_release": "2024-09-27T03:07:56.009Z",
+      "latest_release": "2025-12-15T20:49:46.431Z",
+      "repository_url": "https://github.com/standard-schema/standard-schema"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/primitive",
+      "downloads": 395979507,
+      "first_release": "2025-01-16T17:55:46.017Z",
+      "latest_release": "2026-07-22T21:55:00.797Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-use-layout-effect",
+      "downloads": 381959523,
+      "first_release": "2025-01-16T17:55:59.596Z",
+      "latest_release": "2026-07-24T23:51:43.984Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-use-controllable-state",
+      "downloads": 381805586,
+      "first_release": "2025-01-16T17:55:59.446Z",
+      "latest_release": "2026-07-24T23:51:39.999Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-presence",
+      "downloads": 361236370,
+      "first_release": "2025-01-16T17:55:54.828Z",
+      "latest_release": "2026-07-24T23:51:29.511Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-use-callback-ref",
+      "downloads": 355186918,
+      "first_release": "2025-01-16T17:55:58.617Z",
+      "latest_release": "2026-07-24T23:51:44.001Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-id",
+      "downloads": 346216559,
+      "first_release": "2025-01-16T17:55:52.480Z",
+      "latest_release": "2026-07-24T23:51:23.364Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-portal",
+      "downloads": 338177225,
+      "first_release": "2025-01-16T17:55:54.188Z",
+      "latest_release": "2026-07-24T23:51:28.033Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-dismissable-layer",
+      "downloads": 334128822,
+      "first_release": "2025-01-16T17:55:50.056Z",
+      "latest_release": "2026-07-24T23:51:15.669Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-use-effect-event",
+      "downloads": 331326344,
+      "first_release": "2025-04-13T04:40:44.567Z",
+      "latest_release": "2026-07-24T23:51:45.575Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-focus-guards",
+      "downloads": 325127685,
+      "first_release": "2025-01-16T17:55:52.085Z",
+      "latest_release": "2026-07-24T23:51:14.078Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-focus-scope",
+      "downloads": 321948433,
+      "first_release": "2025-01-16T17:55:51.634Z",
+      "latest_release": "2026-07-24T23:51:20.985Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@tailwindcss/node",
+      "downloads": 312452594,
+      "first_release": "2025-01-29T19:23:37.433Z",
+      "latest_release": "2026-07-16T12:03:45.588Z",
+      "repository_url": "https://github.com/tailwindlabs/tailwindcss"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-direction",
+      "downloads": 300126242,
+      "first_release": "2025-01-16T17:55:49.676Z",
+      "latest_release": "2026-07-24T23:51:15.678Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@aws-sdk/nested-clients",
+      "downloads": 299376246,
+      "first_release": "2025-01-16T20:05:38.780Z",
+      "latest_release": "2026-08-21T19:08:01.680Z",
+      "repository_url": "https://github.com/aws/aws-sdk-js-v3"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-collection",
+      "downloads": 298633627,
+      "first_release": "2025-01-16T17:55:49.257Z",
+      "latest_release": "2026-07-24T23:51:07.535Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-dialog",
+      "downloads": 296254491,
+      "first_release": "2025-01-16T17:55:49.790Z",
+      "latest_release": "2026-07-24T23:51:17.929Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-use-size",
+      "downloads": 294852771,
+      "first_release": "2025-01-16T17:56:01.049Z",
+      "latest_release": "2026-07-24T23:51:45.457Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-arrow",
+      "downloads": 290718985,
+      "first_release": "2025-01-16T17:55:46.097Z",
+      "latest_release": "2026-07-24T23:51:09.900Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "own-keys",
+      "downloads": 289087740,
+      "first_release": "2024-12-29T06:19:48.478Z",
+      "latest_release": "2026-07-21T15:38:04.405Z",
+      "repository_url": "https://github.com/ljharb/own-keys"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-roving-focus",
+      "downloads": 287541979,
+      "first_release": "2025-01-16T17:55:55.706Z",
+      "latest_release": "2026-07-24T23:51:36.895Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/rect",
+      "downloads": 283691799,
+      "first_release": "2025-01-16T17:55:46.296Z",
+      "latest_release": "2026-07-22T21:55:00.465Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "google-logging-utils",
+      "downloads": 282447265,
+      "first_release": "2024-11-20T20:50:49.426Z",
+      "latest_release": "2026-08-11T00:12:48.222Z",
+      "repository_url": "https://github.com/googleapis/google-cloud-node"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-use-rect",
+      "downloads": 279341804,
+      "first_release": "2025-01-16T17:56:00.710Z",
+      "latest_release": "2026-07-24T23:51:46.695Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-popper",
+      "downloads": 278617121,
+      "first_release": "2025-01-16T17:55:53.808Z",
+      "latest_release": "2026-07-24T23:51:29.506Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "set-proto",
+      "downloads": 274623929,
+      "first_release": "2024-12-30T23:30:07.537Z",
+      "latest_release": "2024-12-30T23:30:07.537Z",
+      "repository_url": "https://github.com/ljharb/set-proto"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-visually-hidden",
+      "downloads": 268823858,
+      "first_release": "2025-01-16T17:56:00.966Z",
+      "latest_release": "2026-07-24T23:51:46.146Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-use-previous",
+      "downloads": 249642139,
+      "first_release": "2025-01-16T17:56:00.411Z",
+      "latest_release": "2026-07-24T23:51:46.095Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/number",
+      "downloads": 247919868,
+      "first_release": "2025-01-16T17:55:46.038Z",
+      "latest_release": "2026-07-22T21:55:01.313Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "safe-push-apply",
+      "downloads": 246006491,
+      "first_release": "2024-12-29T03:51:58.209Z",
+      "latest_release": "2024-12-29T03:51:58.209Z",
+      "repository_url": "https://github.com/ljharb/safe-push-apply"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "typing-inspection",
+      "downloads": 878986587,
+      "first_release": "2025-02-13T10:25:04.000Z",
+      "latest_release": "2026-08-12T12:37:24.000Z",
+      "repository_url": "https://github.com/pydantic/typing-inspection"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "propcache",
+      "downloads": 569402308,
+      "first_release": "2024-10-02T14:22:36.000Z",
+      "latest_release": "2026-05-08T20:59:15.000Z",
+      "repository_url": "https://github.com/aio-libs/propcache"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "python-discovery",
+      "downloads": 306206693,
+      "first_release": "2026-02-25T17:10:47.000Z",
+      "latest_release": "2026-08-24T14:48:45.000Z",
+      "repository_url": "https://github.com/tox-dev/python-discovery"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "hf-xet",
+      "downloads": 292915494,
+      "first_release": "2025-01-10T23:31:41.000Z",
+      "latest_release": "2026-08-03T22:32:47.000Z",
+      "repository_url": "https://github.com/huggingface/xet-core"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "google-genai",
+      "downloads": 271250921,
+      "first_release": "2024-12-10T19:42:33.000Z",
+      "latest_release": "2026-08-25T21:28:25.000Z",
+      "repository_url": "https://github.com/googleapis/python-genai"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "librt",
+      "downloads": 156624556,
+      "first_release": "2025-09-14T16:57:01.000Z",
+      "latest_release": "2026-08-07T10:46:22.000Z",
+      "repository_url": "https://github.com/mypyc/librt"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "httpcore2",
+      "downloads": 130534225,
+      "first_release": "2026-05-11T09:18:47.000Z",
+      "latest_release": "2026-08-18T13:22:05.000Z",
+      "repository_url": "https://github.com/pydantic/httpx2"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "pydantic-ai-slim",
+      "downloads": 123438097,
+      "first_release": "2024-11-25T18:09:39.000Z",
+      "latest_release": "2026-08-29T01:39:28.000Z",
+      "repository_url": "https://github.com/pydantic/pydantic-ai"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "pytokens",
+      "downloads": 103199511,
+      "first_release": "2024-12-13T22:46:38.000Z",
+      "latest_release": "2026-01-30T01:02:50.000Z",
+      "repository_url": "https://github.com/tusharsadhwani/pytokens"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "pydantic-graph",
+      "downloads": 97454375,
+      "first_release": "2025-01-10T11:12:45.000Z",
+      "latest_release": "2026-08-29T01:39:32.000Z",
+      "repository_url": "https://github.com/pydantic/pydantic-ai"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "fastmcp",
+      "downloads": 96549618,
+      "first_release": "2024-11-30T02:11:15.000Z",
+      "latest_release": "2026-08-31T18:20:31.000Z",
+      "repository_url": "https://github.com/PrefectHQ/fastmcp"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "httpx2",
+      "downloads": 89450409,
+      "first_release": "2026-05-11T06:12:35.000Z",
+      "latest_release": "2026-08-18T13:22:06.000Z",
+      "repository_url": "https://github.com/pydantic/httpx2"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "ast-serialize",
+      "downloads": 84733404,
+      "first_release": "2026-01-28T18:19:37.000Z",
+      "latest_release": "2026-08-07T11:27:34.000Z",
+      "repository_url": "https://github.com/mypyc/ast_serialize"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "fastmcp-slim",
+      "downloads": 80609178,
+      "first_release": "2026-05-11T21:22:18.000Z",
+      "latest_release": "2026-08-10T21:17:27.000Z",
+      "repository_url": "https://github.com/PrefectHQ/fastmcp"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "backports.zstd",
+      "downloads": 80282983,
+      "first_release": "2025-05-08T11:55:45.000Z",
+      "latest_release": "2026-08-15T17:24:55.000Z",
+      "repository_url": "https://github.com/rogdham/backports.zstd"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "uncalled-for",
+      "downloads": 78693292,
+      "first_release": "2026-02-25T17:52:44.000Z",
+      "latest_release": "2026-08-10T14:51:45.000Z",
+      "repository_url": "https://github.com/chrisguidry/uncalled-for"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "ipython-pygments-lexers",
+      "downloads": 74308233,
+      "first_release": "2025-01-15T15:02:13.000Z",
+      "latest_release": "2025-01-17T11:24:33.000Z",
+      "repository_url": "https://github.com/ipython/ipython-pygments-lexers"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "py-key-value-aio",
+      "downloads": 64235573,
+      "first_release": "2025-09-29T02:00:32.000Z",
+      "latest_release": "2026-05-27T16:37:06.000Z",
+      "repository_url": null
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "griffelib",
+      "downloads": 63759896,
+      "first_release": "2026-02-09T19:09:40.000Z",
+      "latest_release": "2026-06-19T12:05:38.000Z",
+      "repository_url": null
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "fastapi-cloud-cli",
+      "downloads": 62405621,
+      "first_release": "2024-12-10T16:45:07.000Z",
+      "latest_release": "2026-07-28T14:03:34.000Z",
+      "repository_url": "https://github.com/fastapilabs/fastapi-cloud-cli"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "polars-runtime-32",
+      "downloads": 61680540,
+      "first_release": "2025-09-26T14:17:28.000Z",
+      "latest_release": "2026-08-26T07:07:47.000Z",
+      "repository_url": "https://github.com/pola-rs/polars"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "langgraph-prebuilt",
+      "downloads": 59699091,
+      "first_release": "2025-02-27T00:03:13.000Z",
+      "latest_release": "2026-05-12T03:37:48.000Z",
+      "repository_url": "https://github.com/langchain-ai/langgraph"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "llama-cloud-services",
+      "downloads": 57108978,
+      "first_release": "2025-02-06T23:50:30.000Z",
+      "latest_release": "2026-02-13T23:29:38.000Z",
+      "repository_url": null
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "langchain-protocol",
+      "downloads": 54872991,
+      "first_release": "2026-04-16T20:01:37.000Z",
+      "latest_release": "2026-06-18T17:08:25.000Z",
+      "repository_url": "https://github.com/langchain-ai/agent-protocol"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "browser-use",
+      "downloads": 53872882,
+      "first_release": "2024-11-06T18:00:56.000Z",
+      "latest_release": "2026-08-16T18:50:43.000Z",
+      "repository_url": "https://github.com/browser-use/browser-use"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "cuda-bindings",
+      "downloads": 50443729,
+      "first_release": "2025-01-25T04:12:59.000Z",
+      "latest_release": "2026-05-29T23:11:36.000Z",
+      "repository_url": "https://github.com/NVIDIA/cuda-python"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "cuda-pathfinder",
+      "downloads": 50401197,
+      "first_release": "2025-07-16T23:18:01.000Z",
+      "latest_release": "2026-08-27T21:33:03.000Z",
+      "repository_url": "https://github.com/NVIDIA/cuda-python"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "fastar",
+      "downloads": 43193709,
+      "first_release": "2025-10-19T21:08:50.000Z",
+      "latest_release": "2026-04-13T17:09:53.000Z",
+      "repository_url": "https://github.com/DoctorJohn/fastar"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "nvidia-cudnn-cu13",
+      "downloads": 41372720,
+      "first_release": "2025-04-09T19:29:52.000Z",
+      "latest_release": "2026-07-30T06:25:59.000Z",
+      "repository_url": null
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "cuda-toolkit",
+      "downloads": 40972587,
+      "first_release": "2025-06-29T17:20:42.000Z",
+      "latest_release": "2026-06-29T17:23:23.000Z",
+      "repository_url": null
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "nvidia-nvshmem-cu13",
+      "downloads": 38806102,
+      "first_release": "2025-04-09T21:57:37.000Z",
+      "latest_release": "2026-07-17T19:24:15.000Z",
+      "repository_url": null
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "openai-agents",
+      "downloads": 38760914,
+      "first_release": "2025-03-04T18:16:20.000Z",
+      "latest_release": "2026-08-19T13:45:19.000Z",
+      "repository_url": "https://github.com/openai/openai-agents-python"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "strands-agents",
+      "downloads": 36231623,
+      "first_release": "2025-05-14T21:13:27.000Z",
+      "latest_release": "2026-08-27T20:47:14.000Z",
+      "repository_url": "https://github.com/strands-agents/harness-sdk"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "nvidia-nccl-cu13",
+      "downloads": 35683082,
+      "first_release": "2025-04-09T20:43:44.000Z",
+      "latest_release": "2026-06-09T03:23:15.000Z",
+      "repository_url": null
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "nvidia-cusparselt-cu13",
+      "downloads": 34930130,
+      "first_release": "2025-04-09T20:30:18.000Z",
+      "latest_release": "2026-04-29T18:36:59.000Z",
+      "repository_url": null
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "rfc3987-syntax",
+      "downloads": 34277934,
+      "first_release": "2025-05-18T20:23:49.000Z",
+      "latest_release": "2025-07-18T01:05:03.000Z",
+      "repository_url": "https://github.com/willynilly/rfc3987-syntax"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "nvidia-cufile",
+      "downloads": 33769622,
+      "first_release": "2025-04-04T15:45:30.000Z",
+      "latest_release": "2026-06-29T16:57:50.000Z",
+      "repository_url": null
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "nvidia-nvjitlink",
+      "downloads": 32702815,
+      "first_release": "2025-04-04T15:45:35.000Z",
+      "latest_release": "2026-05-26T16:54:51.000Z",
+      "repository_url": null
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "fastspec",
+      "downloads": 31562535,
+      "first_release": "2026-05-06T13:58:33.000Z",
+      "latest_release": "2026-08-20T09:31:13.000Z",
+      "repository_url": "https://github.com/AnswerDotAI/fastspec"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "agent-client-protocol",
+      "downloads": 31441768,
+      "first_release": "2025-09-06T10:26:55.000Z",
+      "latest_release": "2026-08-01T15:58:21.000Z",
+      "repository_url": "https://github.com/agentclientprotocol/python-sdk"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "claude-agent-sdk",
+      "downloads": 31427042,
+      "first_release": "2025-09-28T21:54:48.000Z",
+      "latest_release": "2026-08-28T18:33:56.000Z",
+      "repository_url": "https://github.com/anthropics/claude-agent-sdk-python"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "dbt-protos",
+      "downloads": 30796012,
+      "first_release": "2025-05-12T16:50:53.000Z",
+      "latest_release": "2026-08-14T12:37:14.000Z",
+      "repository_url": "https://github.com/dbt-labs/proto-python-public"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "nest-asyncio2",
+      "downloads": 25568799,
+      "first_release": "2025-11-18T15:56:42.000Z",
+      "latest_release": "2026-02-13T00:34:02.000Z",
+      "repository_url": "https://github.com/Chaoses-Ib/nest-asyncio2"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "mlflow-tracing",
+      "downloads": 24417567,
+      "first_release": "2025-04-30T22:10:56.000Z",
+      "latest_release": "2026-08-26T06:06:26.000Z",
+      "repository_url": "https://github.com/mlflow/mlflow"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "uv-build",
+      "downloads": 23647356,
+      "first_release": "2025-02-12T09:36:49.000Z",
+      "latest_release": "2026-08-27T22:12:27.000Z",
+      "repository_url": "https://github.com/astral-sh/uv"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "genai-prices",
+      "downloads": 23438719,
+      "first_release": "2025-07-11T17:41:26.000Z",
+      "latest_release": "2026-08-19T23:53:24.000Z",
+      "repository_url": "https://github.com/pydantic/genai-prices"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "fastapi-mcp",
+      "downloads": 22916392,
+      "first_release": "2025-03-08T13:04:09.000Z",
+      "latest_release": "2025-07-28T12:11:04.000Z",
+      "repository_url": "https://github.com/tadata-org/fastapi_mcp"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "prek",
+      "downloads": 21340819,
+      "first_release": "2025-08-08T14:54:47.000Z",
+      "latest_release": "2026-08-27T03:50:00.000Z",
+      "repository_url": "https://github.com/j178/prek"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "google-adk",
+      "downloads": 20519027,
+      "first_release": "2025-03-17T17:49:28.000Z",
+      "latest_release": "2026-08-26T23:26:17.000Z",
+      "repository_url": "https://github.com/google/adk-python"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "langchain-classic",
+      "downloads": 20305581,
+      "first_release": "2025-10-07T16:54:54.000Z",
+      "latest_release": "2026-06-10T21:27:52.000Z",
+      "repository_url": "https://github.com/langchain-ai/langchain"
+    }
+  ]
+}

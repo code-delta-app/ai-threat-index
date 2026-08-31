@@ -2,6 +2,13 @@ name: scan
 
 on:
   workflow_dispatch:
+    inputs:
+      refresh_cohort:
+        description: "Recompute the young cohort before scanning"
+        type: boolean
+        default: true
+  schedule:
+    - cron: "0 3 1 * *"      # monthly — the index's value is the DIFF
 
 permissions:
   contents: write
@@ -11,6 +18,10 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+
+      - name: Recompute the cohort (mechanical selection, no editorial list)
+        if: github.event_name == 'schedule' || inputs.refresh_cohort
+        run: python3 tools/cohort.py 24 50
 
       - name: Fetch the public CodeDelta engine
         run: |
@@ -57,6 +68,6 @@ jobs:
         run: |
           git config user.name "Code-delta-support"
           git config user.email "298758756+Code-delta-support@users.noreply.github.com"
-          git add -A results README.md
+          git add -A results README.md packages.csv cohort.json
           git commit -m "scan run $(date -u +%Y-%m-%d)" || echo "nothing new"
           git push
