@@ -37,7 +37,18 @@ until the finding is resolved.
 ## Results
 
 <!-- RESULTS:BEGIN -->
-_No results yet — run the scan workflow._
+| Ecosystem | Package | Files scanned | Flagged files | AI providers | Credential-format matches | Install hooks | Build fetchers |
+|---|---|---|---|---|---|---|---|
+| npm | axios | 71 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | chalk | 3 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | commander | 8 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | express | 7 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| npm | lodash | 1048 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | boto3 | 40 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | flask | 83 | 2 (ELEVATED:1 HIGH:1) | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | requests | 35 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | rich | 100 | 0 | 0 | &mdash; | &mdash; | &mdash; |
+| pypi | urllib3 | 82 | 0 | 0 | &mdash; | &mdash; | &mdash; |
 <!-- RESULTS:END -->
 
 ---
