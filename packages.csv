@@ -1,0 +1,10 @@
+npm,lodash
+npm,express
+npm,axios
+npm,chalk
+npm,commander
+pypi,requests
+pypi,flask
+pypi,urllib3
+pypi,rich
+pypi,boto3

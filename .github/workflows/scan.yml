@@ -1,0 +1,59 @@
+name: scan
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch the public CodeDelta engine
+        run: |
+          curl -sL -o bundle.tar.gz https://github.com/code-delta-app/releases/releases/latest/download/codedelta-linux-full.tar.gz
+          mkdir engine && tar -xzf bundle.tar.gz -C engine
+          BIN=$(find engine -type f -name codedelta-gui | head -1)
+          test -n "$BIN"
+          chmod +x "$BIN"
+          curl -sL -o "$(dirname "$BIN")/codedelta.lic" https://codedelta.app/downloads/codedelta.lic
+          echo "BIN=$GITHUB_WORKSPACE/$BIN" >> "$GITHUB_ENV"
+
+      - name: Scan the packages
+        run: |
+          mkdir -p results work
+          while IFS=, read -r eco name; do
+            [ -z "$name" ] && continue
+            echo "== $eco/$name =="
+            rm -rf work && mkdir -p work/src
+            case "$eco" in
+              npm)  url=$(curl -s "https://registry.npmjs.org/$name/latest" | jq -r .dist.tarball) ;;
+              pypi) url=$(curl -s "https://pypi.org/pypi/$name/json" | jq -r '[.urls[] | select(.packagetype=="sdist")][0].url') ;;
+              *)    echo "unknown ecosystem $eco"; continue ;;
+            esac
+            echo "  source: $url"
+            curl -sL "$url" -o work/pkg.tar.gz
+            tar -xzf work/pkg.tar.gz -C work/src
+            out="results/$eco/$name"
+            rm -rf "$out" && mkdir -p "$out"
+            ( cd "$out" && "$BIN" scan "$GITHUB_WORKSPACE/work/src" --mode agent --bom ai_bom.json ) \
+              || echo "  scan exited nonzero for $eco/$name"
+            rm -rf work
+          done < packages.csv
+          # keep the data, not the big HTML renderings
+          find results -name '*.html' -delete
+          ls -laR results | head -60
+
+      - name: Summarize into README
+        run: python3 tools/summarize.py
+
+      - name: Commit results
+        run: |
+          git config user.name "Code-delta-support"
+          git config user.email "298758756+Code-delta-support@users.noreply.github.com"
+          git add -A results README.md
+          git commit -m "scan run $(date -u +%Y-%m-%d)" || echo "nothing new"
+          git push
