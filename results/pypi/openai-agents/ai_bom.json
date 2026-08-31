@@ -1,7 +1,7 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
-  "spec_version": "1.1",
-  "generated": "2026-08-31T20:14:03.167223Z",
+  "spec_version": "1.2",
+  "generated": "2026-08-31T22:52:51.747416Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
@@ -13,7 +13,8 @@
     "critical": 0,
     "high": 134,
     "elevated": 299,
-    "providers": 12,
+    "providers": 3,
+    "frameworks": 2,
     "foreign_egress_files": 0,
     "non_allied_jurisdiction_files": 0,
     "cost_risk_files": 0,
@@ -23,11 +24,17 @@
   },
   "providers": [
     {
-      "name": "openai",
+      "name": "OpenAI",
+      "canonical": "openai",
       "type": "sdk",
       "jurisdiction": "US",
       "sovereignty_risk": false,
-      "file_count": 207,
+      "seen_as": [
+        "OpenAI",
+        "http:api.openai.com",
+        "openai"
+      ],
+      "file_count": 212,
       "files": [
         "openai_agents-0.22.0/docs/scripts/translate_docs.py",
         "openai_agents-0.22.0/examples/agent_patterns/routing.py",
@@ -122,6 +129,7 @@
         "openai_agents-0.22.0/src/agents/tool.py",
         "openai_agents-0.22.0/src/agents/tool_context.py",
         "openai_agents-0.22.0/src/agents/tracing/create.py",
+        "openai_agents-0.22.0/src/agents/tracing/processors.py",
         "openai_agents-0.22.0/src/agents/tracing/span_data.py",
         "openai_agents-0.22.0/src/agents/usage.py",
         "openai_agents-0.22.0/src/agents/voice/models/openai_model_provider.py",
@@ -132,6 +140,7 @@
         "openai_agents-0.22.0/tests/extensions/experimental/hosted_multi_agent/test_model.py",
         "openai_agents-0.22.0/tests/extensions/memory/test_advanced_sqlite_session.py",
         "openai_agents-0.22.0/tests/extensions/memory/test_sqlalchemy_session.py",
+        "openai_agents-0.22.0/tests/extensions/sandbox/test_vercel.py",
         "openai_agents-0.22.0/tests/extensions/test_tool_output_trimmer.py",
         "openai_agents-0.22.0/tests/fixtures/run_state/generate_corpus.py",
         "openai_agents-0.22.0/tests/memory/test_openai_conversations_session.py",
@@ -154,6 +163,7 @@
         "openai_agents-0.22.0/tests/models/test_openai_chatcompletions.py",
         "openai_agents-0.22.0/tests/models/test_openai_chatcompletions_converter.py",
         "openai_agents-0.22.0/tests/models/test_openai_chatcompletions_stream.py",
+        "openai_agents-0.22.0/tests/models/test_openai_client_utils.py",
         "openai_agents-0.22.0/tests/models/test_openai_responses.py",
         "openai_agents-0.22.0/tests/models/test_openai_responses_converter.py",
         "openai_agents-0.22.0/tests/models/test_reasoning_content.py",
@@ -163,6 +173,7 @@
         "openai_agents-0.22.0/tests/realtime/test_item_parsing.py",
         "openai_agents-0.22.0/tests/realtime/test_openai_realtime.py",
         "openai_agents-0.22.0/tests/realtime/test_openai_realtime_conversions.py",
+        "openai_agents-0.22.0/tests/realtime/test_openai_realtime_sip_model.py",
         "openai_agents-0.22.0/tests/realtime/test_playback_tracker.py",
         "openai_agents-0.22.0/tests/realtime/test_realtime_model_settings.py",
         "openai_agents-0.22.0/tests/realtime/test_session_payload_and_formats.py",
@@ -235,23 +246,76 @@
         "openai_agents-0.22.0/tests/utils/test_json.py",
         "openai_agents-0.22.0/tests/utils/test_pretty_print_and_items.py",
         "openai_agents-0.22.0/tests/voice/test_openai_model_provider.py",
+        "openai_agents-0.22.0/tests/voice/test_openai_stt.py",
         "openai_agents-0.22.0/tests/voice/test_openai_tts.py"
+      ],
+      "endpoint": "api.openai.com",
+      "endpoints": [
+        "api.openai.com"
       ]
     },
     {
-      "name": "mcp",
+      "name": "Anthropic",
+      "canonical": "anthropic",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "Anthropic",
+        "http:api.anthropic.com"
+      ],
+      "file_count": 2,
+      "files": [
+        "openai_agents-0.22.0/src/agents/models/chatcmpl_stream_handler.py",
+        "openai_agents-0.22.0/tests/models/test_anthropic_thinking_blocks.py"
+      ],
+      "endpoint": "api.anthropic.com",
+      "endpoints": [
+        "api.anthropic.com"
+      ]
+    },
+    {
+      "name": "openrouter.ai",
+      "canonical": "openrouter.ai",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "http:openrouter.ai"
+      ],
+      "file_count": 1,
+      "files": [
+        "openai_agents-0.22.0/examples/reasoning_content/gpt_oss_stream.py"
+      ],
+      "endpoint": "openrouter.ai",
+      "endpoints": [
+        "openrouter.ai"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "MCP",
+      "canonical": "mcp",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
-      "file_count": 23,
+      "seen_as": [
+        "MCP",
+        "Mcp",
+        "mcp"
+      ],
+      "file_count": 28,
       "files": [
         "openai_agents-0.22.0/examples/mcp/manager_example/mcp_server.py",
+        "openai_agents-0.22.0/examples/mcp/prompt_server/main.py",
         "openai_agents-0.22.0/examples/mcp/prompt_server/server.py",
         "openai_agents-0.22.0/examples/mcp/sse_example/server.py",
         "openai_agents-0.22.0/examples/mcp/streamablehttp_custom_client_example/server.py",
         "openai_agents-0.22.0/examples/mcp/streamablehttp_example/server.py",
         "openai_agents-0.22.0/examples/sandbox/misc/reference_policy_mcp_server.py",
         "openai_agents-0.22.0/src/agents/extensions/experimental/codex/items.py",
+        "openai_agents-0.22.0/src/agents/mcp/_logging.py",
         "openai_agents-0.22.0/src/agents/mcp/server.py",
         "openai_agents-0.22.0/src/agents/mcp/util.py",
         "openai_agents-0.22.0/tests/mcp/helpers.py",
@@ -267,44 +331,27 @@
         "openai_agents-0.22.0/tests/mcp/test_message_handler.py",
         "openai_agents-0.22.0/tests/mcp/test_prompt_server.py",
         "openai_agents-0.22.0/tests/mcp/test_streamable_http_client_factory.py",
-        "openai_agents-0.22.0/tests/mcp/test_tool_filtering.py"
+        "openai_agents-0.22.0/tests/mcp/test_tool_filtering.py",
+        "openai_agents-0.22.0/tests/test_agent_runner.py",
+        "openai_agents-0.22.0/tests/test_exception_exports.py",
+        "openai_agents-0.22.0/tests/test_run_state.py"
       ]
     },
     {
-      "name": "api.openai.com",
-      "type": "endpoint",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 17,
-      "files": [
-        "openai_agents-0.22.0/src/agents/models/openai_client_utils.py",
-        "openai_agents-0.22.0/src/agents/realtime/openai_realtime.py",
-        "openai_agents-0.22.0/src/agents/tracing/processors.py",
-        "openai_agents-0.22.0/src/agents/voice/models/openai_stt.py",
-        "openai_agents-0.22.0/tests/extensions/sandbox/test_vercel.py",
-        "openai_agents-0.22.0/tests/models/test_kwargs_functionality.py",
-        "openai_agents-0.22.0/tests/models/test_openai_chatcompletions.py",
-        "openai_agents-0.22.0/tests/models/test_openai_chatcompletions_stream.py",
-        "openai_agents-0.22.0/tests/models/test_openai_client_utils.py",
-        "openai_agents-0.22.0/tests/models/test_openai_responses.py",
-        "openai_agents-0.22.0/tests/realtime/test_openai_realtime.py",
-        "openai_agents-0.22.0/tests/realtime/test_openai_realtime_sip_model.py",
-        "openai_agents-0.22.0/tests/test_agent_runner.py",
-        "openai_agents-0.22.0/tests/test_agent_runner_streamed.py",
-        "openai_agents-0.22.0/tests/test_extra_headers.py",
-        "openai_agents-0.22.0/tests/test_logprobs.py",
-        "openai_agents-0.22.0/tests/voice/test_openai_stt.py"
-      ],
-      "endpoint": "api.openai.com"
-    },
-    {
-      "name": "litellm",
+      "name": "LiteLLM",
+      "canonical": "litellm",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
-      "file_count": 10,
+      "seen_as": [
+        "LiteLLM",
+        "Litellm",
+        "litellm"
+      ],
+      "file_count": 11,
       "files": [
         "openai_agents-0.22.0/src/agents/extensions/models/litellm_model.py",
+        "openai_agents-0.22.0/src/agents/models/chatcmpl_stream_handler.py",
         "openai_agents-0.22.0/tests/models/test_anthropic_thinking_blocks.py",
         "openai_agents-0.22.0/tests/models/test_deepseek_reasoning_content.py",
         "openai_agents-0.22.0/tests/models/test_gemini_thought_signatures_stream.py",
@@ -315,93 +362,6 @@
         "openai_agents-0.22.0/tests/models/test_litellm_usage_requests.py",
         "openai_agents-0.22.0/tests/models/test_reasoning_content_replay_hook.py"
       ]
-    },
-    {
-      "name": "MCP",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 4,
-      "files": [
-        "openai_agents-0.22.0/examples/mcp/prompt_server/main.py",
-        "openai_agents-0.22.0/src/agents/mcp/_logging.py",
-        "openai_agents-0.22.0/src/agents/mcp/server.py",
-        "openai_agents-0.22.0/tests/test_exception_exports.py"
-      ]
-    },
-    {
-      "name": "Anthropic",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "openai_agents-0.22.0/src/agents/models/chatcmpl_stream_handler.py",
-        "openai_agents-0.22.0/tests/models/test_anthropic_thinking_blocks.py"
-      ]
-    },
-    {
-      "name": "Mcp",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "openai_agents-0.22.0/tests/test_agent_runner.py",
-        "openai_agents-0.22.0/tests/test_run_state.py"
-      ]
-    },
-    {
-      "name": "LiteLLM",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "openai_agents-0.22.0/src/agents/models/chatcmpl_stream_handler.py"
-      ]
-    },
-    {
-      "name": "Litellm",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "openai_agents-0.22.0/src/agents/extensions/models/litellm_model.py"
-      ]
-    },
-    {
-      "name": "OpenAI",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "openai_agents-0.22.0/docs/scripts/translate_docs.py"
-      ]
-    },
-    {
-      "name": "api.anthropic.com",
-      "type": "endpoint",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "openai_agents-0.22.0/tests/models/test_anthropic_thinking_blocks.py"
-      ],
-      "endpoint": "api.anthropic.com"
-    },
-    {
-      "name": "openrouter.ai",
-      "type": "endpoint",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "openai_agents-0.22.0/examples/reasoning_content/gpt_oss_stream.py"
-      ],
-      "endpoint": "openrouter.ai"
     }
   ],
   "agent_artifacts": [

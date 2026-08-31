@@ -6,6 +6,8 @@
     "high_files": 0,
     "elevated_files": 1,
     "normal_files": 209,
+    "flagged_ai_files": 1,
+    "flagged_exec_only_files": 0,
     "mode": "snapshot",
     "summary_text": "Scanned 210 file(s). 0 HIGH, 1 ELEVATED. "
   },
@@ -14,6 +16,53 @@
     "table_version": 1,
     "tier3_count": 0,
     "items": []
+  },
+  "committed_credentials": {
+    "count": 7,
+    "items": [
+      {
+        "kind": "Private key (PEM)",
+        "file": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/detect_private_key.rs",
+        "line": 133,
+        "sample": "-----BEG\u2026 (31 chars)"
+      },
+      {
+        "kind": "Private key (PEM)",
+        "file": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/detect_private_key.rs",
+        "line": 147,
+        "sample": "-----BEG\u2026 (31 chars)"
+      },
+      {
+        "kind": "Private key (PEM)",
+        "file": "prek-0.5.0/crates/prek/tests/builtin_hooks.rs",
+        "line": 2127,
+        "sample": "-----BEG\u2026 (31 chars)"
+      },
+      {
+        "kind": "Private key (PEM)",
+        "file": "prek-0.5.0/crates/prek/tests/builtin_hooks.rs",
+        "line": 2129,
+        "sample": "-----BEG\u2026 (31 chars)"
+      },
+      {
+        "kind": "Private key (PEM)",
+        "file": "prek-0.5.0/crates/prek/tests/builtin_hooks.rs",
+        "line": 2131,
+        "sample": "-----BEG\u2026 (30 chars)"
+      },
+      {
+        "kind": "Private key (PEM)",
+        "file": "prek-0.5.0/crates/prek/tests/builtin_hooks.rs",
+        "line": 2133,
+        "sample": "-----BEG\u2026 (35 chars)"
+      },
+      {
+        "kind": "Private key (PEM)",
+        "file": "prek-0.5.0/crates/prek/tests/builtin_hooks.rs",
+        "line": 2143,
+        "sample": "-----BEG\u2026 (31 chars)"
+      }
+    ]
   },
   "files": [
     {
@@ -2540,5 +2589,18 @@
       "dangerous_exec": [],
       "signals": []
     }
-  ]
+  ],
+  "build_surface": {
+    "total": 8,
+    "counts": {
+      "build": 7,
+      "ci": 0,
+      "packaging": 0,
+      "dependency": 1,
+      "hook": 0,
+      "fetch": 0
+    },
+    "hooks": [],
+    "fetchers": []
+  }
 }

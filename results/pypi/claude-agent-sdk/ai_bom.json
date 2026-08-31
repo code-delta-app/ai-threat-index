@@ -1,7 +1,7 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
-  "spec_version": "1.1",
-  "generated": "2026-08-31T20:14:14.904981Z",
+  "spec_version": "1.2",
+  "generated": "2026-08-31T22:53:08.803970Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
@@ -13,7 +13,8 @@
     "critical": 0,
     "high": 55,
     "elevated": 12,
-    "providers": 3,
+    "providers": 1,
+    "frameworks": 1,
     "foreign_egress_files": 0,
     "non_allied_jurisdiction_files": 0,
     "cost_risk_files": 0,
@@ -23,10 +24,14 @@
   },
   "providers": [
     {
-      "name": "claude_agent_sdk",
+      "name": "Anthropic",
+      "canonical": "anthropic",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "claude_agent_sdk"
+      ],
       "file_count": 51,
       "files": [
         "claude_agent_sdk-0.2.149/examples/agents.py",
@@ -81,12 +86,19 @@
         "claude_agent_sdk-0.2.149/tests/test_transport.py",
         "claude_agent_sdk-0.2.149/tests/test_types.py"
       ]
-    },
+    }
+  ],
+  "frameworks": [
     {
-      "name": "mcp",
+      "name": "MCP",
+      "canonical": "mcp",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "MCP",
+        "mcp"
+      ],
       "file_count": 6,
       "files": [
         "claude_agent_sdk-0.2.149/src/claude_agent_sdk/__init__.py",
@@ -95,16 +107,6 @@
         "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/sdk_mcp_bridge.py",
         "claude_agent_sdk-0.2.149/src/claude_agent_sdk/types.py",
         "claude_agent_sdk-0.2.149/tests/test_sdk_mcp_integration.py"
-      ]
-    },
-    {
-      "name": "MCP",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "claude_agent_sdk-0.2.149/src/claude_agent_sdk/types.py"
       ]
     }
   ],

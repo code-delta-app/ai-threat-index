@@ -6,6 +6,8 @@
     "high_files": 2,
     "elevated_files": 10,
     "normal_files": 13,
+    "flagged_ai_files": 12,
+    "flagged_exec_only_files": 0,
     "mode": "snapshot",
     "summary_text": "Scanned 25 file(s). 2 HIGH, 10 ELEVATED. AI SDKs detected: langchain. "
   },
@@ -22,6 +24,10 @@
         "path": "langgraph_prebuilt-1.1.0/.claude"
       }
     ]
+  },
+  "committed_credentials": {
+    "count": 0,
+    "items": []
   },
   "files": [
     {
@@ -389,5 +395,18 @@
       "dangerous_exec": [],
       "signals": []
     }
-  ]
+  ],
+  "build_surface": {
+    "total": 2,
+    "counts": {
+      "build": 2,
+      "ci": 0,
+      "packaging": 0,
+      "dependency": 0,
+      "hook": 0,
+      "fetch": 0
+    },
+    "hooks": [],
+    "fetchers": []
+  }
 }

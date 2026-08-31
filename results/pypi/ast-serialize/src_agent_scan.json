@@ -6,6 +6,8 @@
     "high_files": 0,
     "elevated_files": 1,
     "normal_files": 659,
+    "flagged_ai_files": 0,
+    "flagged_exec_only_files": 1,
     "mode": "snapshot",
     "summary_text": "Scanned 660 file(s). 0 HIGH, 1 ELEVATED. "
   },
@@ -20,6 +22,10 @@
         "path": "ast_serialize-0.8.0/AGENTS.md"
       }
     ]
+  },
+  "committed_credentials": {
+    "count": 0,
+    "items": []
   },
   "files": [
     {
@@ -7946,5 +7952,18 @@
       "dangerous_exec": [],
       "signals": []
     }
-  ]
+  ],
+  "build_surface": {
+    "total": 13,
+    "counts": {
+      "build": 10,
+      "ci": 2,
+      "packaging": 0,
+      "dependency": 1,
+      "hook": 0,
+      "fetch": 0
+    },
+    "hooks": [],
+    "fetchers": []
+  }
 }

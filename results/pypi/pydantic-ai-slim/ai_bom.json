@@ -1,7 +1,7 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
-  "spec_version": "1.1",
-  "generated": "2026-08-31T20:13:07.811582Z",
+  "spec_version": "1.2",
+  "generated": "2026-08-31T22:51:31.374203Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
@@ -13,7 +13,8 @@
     "critical": 0,
     "high": 89,
     "elevated": 130,
-    "providers": 23,
+    "providers": 15,
+    "frameworks": 2,
     "foreign_egress_files": 3,
     "non_allied_jurisdiction_files": 1,
     "cost_risk_files": 1,
@@ -23,10 +24,312 @@
   },
   "providers": [
     {
-      "name": "pydantic_ai",
+      "name": "OpenAI",
+      "canonical": "openai",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "OpenAI",
+        "openai"
+      ],
+      "file_count": 36,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/openai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/bedrock_mantle.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/cerebras.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/crusoe.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/ollama.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/openai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/openrouter.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/snowflake.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/zai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/_openai_compatible.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/alibaba.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/azure.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock_mantle.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/cerebras.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/crusoe.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/deepseek.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/fireworks.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/github.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/heroku.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/litellm.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/moonshotai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/nebius.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/ollama.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openrouter.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/ovhcloud.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/sambanova.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/snowflake.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/together.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/vercel.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/zai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/_openai_protocol.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/azure.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/openai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/xai.py"
+      ]
+    },
+    {
+      "name": "google.genai",
+      "canonical": "google.genai",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "google.genai"
+      ],
+      "file_count": 6,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/google.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/google.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/google.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/google_cloud.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/google.py"
+      ]
+    },
+    {
+      "name": "Anthropic",
+      "canonical": "anthropic",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "anthropic"
+      ],
+      "file_count": 4,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/_anthropic_bedrock_count_tokens.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/anthropic.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/anthropic.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py"
+      ]
+    },
+    {
+      "name": "Cohere",
+      "canonical": "cohere",
+      "type": "sdk",
+      "jurisdiction": "CA",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "cohere"
+      ],
+      "file_count": 3,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/cohere.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/cohere.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/cohere.py"
+      ]
+    },
+    {
+      "name": "Groq",
+      "canonical": "groq",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "groq",
+        "http:api.groq.com"
+      ],
+      "file_count": 3,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/groq.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/groq.py"
+      ],
+      "endpoint": "api.groq.com",
+      "endpoints": [
+        "api.groq.com"
+      ]
+    },
+    {
+      "name": "AWS Bedrock",
+      "canonical": "bedrock",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "http:bedrock-runtime"
+      ],
+      "file_count": 2,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/bedrock.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock.py"
+      ],
+      "endpoint": "bedrock-runtime",
+      "endpoints": [
+        "bedrock-runtime"
+      ]
+    },
+    {
+      "name": "Hugging Face",
+      "canonical": "huggingface_hub",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "huggingface_hub"
+      ],
+      "file_count": 2,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/huggingface.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/huggingface.py"
+      ]
+    },
+    {
+      "name": "Mistral AI",
+      "canonical": "mistralai",
+      "type": "sdk",
+      "jurisdiction": "FR",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "mistralai"
+      ],
+      "file_count": 2,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/mistral.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/mistral.py"
+      ]
+    },
+    {
+      "name": "voyageai",
+      "canonical": "voyageai",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "voyageai"
+      ],
+      "file_count": 2,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/voyageai.py",
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/voyageai.py"
+      ]
+    },
+    {
+      "name": "DeepSeek",
+      "canonical": "deepseek",
+      "type": "sdk",
+      "jurisdiction": "CN",
+      "sovereignty_risk": true,
+      "seen_as": [
+        "DeepSeek",
+        "http:api.deepseek.com"
+      ],
+      "file_count": 1,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/deepseek.py"
+      ],
+      "endpoint": "api.deepseek.com",
+      "endpoints": [
+        "api.deepseek.com"
+      ]
+    },
+    {
+      "name": "Fireworks AI",
+      "canonical": "fireworks",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "http:api.fireworks.ai"
+      ],
+      "file_count": 1,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/fireworks.py"
+      ],
+      "endpoint": "api.fireworks.ai",
+      "endpoints": [
+        "api.fireworks.ai"
+      ]
+    },
+    {
+      "name": "Google",
+      "canonical": "google",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "http:generativelanguage.googleapis.com"
+      ],
+      "file_count": 1,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/models/google.py"
+      ],
+      "endpoint": "generativelanguage.googleapis.com",
+      "endpoints": [
+        "generativelanguage.googleapis.com"
+      ]
+    },
+    {
+      "name": "Together AI",
+      "canonical": "together",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "http:api.together.xyz"
+      ],
+      "file_count": 1,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/together.py"
+      ],
+      "endpoint": "api.together.xyz",
+      "endpoints": [
+        "api.together.xyz"
+      ]
+    },
+    {
+      "name": "openrouter.ai",
+      "canonical": "openrouter.ai",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "http:openrouter.ai"
+      ],
+      "file_count": 1,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openrouter.py"
+      ],
+      "endpoint": "openrouter.ai",
+      "endpoints": [
+        "openrouter.ai"
+      ]
+    },
+    {
+      "name": "xAI",
+      "canonical": "xai",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "http:api.x.ai"
+      ],
+      "file_count": 1,
+      "files": [
+        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/xai.py"
+      ],
+      "endpoint": "api.x.ai",
+      "endpoints": [
+        "api.x.ai"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "Pydantic AI",
+      "canonical": "pydantic_ai",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "pydantic_ai"
+      ],
       "file_count": 168,
       "files": [
         "pydantic_ai_slim-2.36.0/pydantic_ai/_agent_graph.py",
@@ -200,70 +503,17 @@
       ]
     },
     {
-      "name": "openai",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 36,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/openai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/bedrock_mantle.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/cerebras.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/crusoe.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/ollama.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/openai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/openrouter.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/snowflake.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/zai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/_openai_compatible.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/alibaba.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/azure.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock_mantle.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/cerebras.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/crusoe.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/deepseek.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/fireworks.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/github.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/heroku.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/litellm.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/moonshotai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/nebius.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/ollama.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openrouter.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/ovhcloud.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/sambanova.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/snowflake.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/together.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/vercel.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/zai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/_openai_protocol.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/azure.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/openai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/xai.py"
-      ]
-    },
-    {
-      "name": "google.genai",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 6,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/google.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/google.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/google.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/google_cloud.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/google.py"
-      ]
-    },
-    {
       "name": "MCP",
+      "canonical": "mcp",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "FastMCP",
+        "MCP",
+        "fastmcp",
+        "mcp"
+      ],
       "file_count": 4,
       "files": [
         "pydantic_ai_slim-2.36.0/pydantic_ai/_mcp.py",
@@ -271,217 +521,6 @@
         "pydantic_ai_slim-2.36.0/pydantic_ai/mcp.py",
         "pydantic_ai_slim-2.36.0/pydantic_ai/models/mcp_sampling.py"
       ]
-    },
-    {
-      "name": "anthropic",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 4,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/_anthropic_bedrock_count_tokens.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/anthropic.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/anthropic.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py"
-      ]
-    },
-    {
-      "name": "cohere",
-      "type": "sdk",
-      "jurisdiction": "CA",
-      "sovereignty_risk": false,
-      "file_count": 3,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/cohere.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/cohere.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/cohere.py"
-      ]
-    },
-    {
-      "name": "groq",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 3,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/groq.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/groq.py"
-      ]
-    },
-    {
-      "name": "mcp",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 3,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/_mcp.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/mcp.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/mcp_sampling.py"
-      ]
-    },
-    {
-      "name": "bedrock-runtime",
-      "type": "endpoint",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/bedrock.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock.py"
-      ],
-      "endpoint": "bedrock-runtime"
-    },
-    {
-      "name": "huggingface_hub",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/huggingface.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/huggingface.py"
-      ]
-    },
-    {
-      "name": "mistralai",
-      "type": "sdk",
-      "jurisdiction": "FR",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/mistral.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/mistral.py"
-      ]
-    },
-    {
-      "name": "voyageai",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/voyageai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/voyageai.py"
-      ]
-    },
-    {
-      "name": "DeepSeek",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/deepseek.py"
-      ]
-    },
-    {
-      "name": "FastMCP",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/mcp.py"
-      ]
-    },
-    {
-      "name": "OpenAI",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/openai.py"
-      ]
-    },
-    {
-      "name": "api.deepseek.com",
-      "type": "endpoint",
-      "jurisdiction": "CN",
-      "sovereignty_risk": true,
-      "file_count": 1,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/deepseek.py"
-      ],
-      "endpoint": "api.deepseek.com"
-    },
-    {
-      "name": "api.fireworks.ai",
-      "type": "endpoint",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/fireworks.py"
-      ],
-      "endpoint": "api.fireworks.ai"
-    },
-    {
-      "name": "api.groq.com",
-      "type": "endpoint",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/groq.py"
-      ],
-      "endpoint": "api.groq.com"
-    },
-    {
-      "name": "api.together.xyz",
-      "type": "endpoint",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/together.py"
-      ],
-      "endpoint": "api.together.xyz"
-    },
-    {
-      "name": "api.x.ai",
-      "type": "endpoint",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/xai.py"
-      ],
-      "endpoint": "api.x.ai"
-    },
-    {
-      "name": "fastmcp",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/mcp.py"
-      ]
-    },
-    {
-      "name": "generativelanguage.googleapis.com",
-      "type": "endpoint",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/google.py"
-      ],
-      "endpoint": "generativelanguage.googleapis.com"
-    },
-    {
-      "name": "openrouter.ai",
-      "type": "endpoint",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openrouter.py"
-      ],
-      "endpoint": "openrouter.ai"
     }
   ],
   "agent_artifacts": [

@@ -1,7 +1,7 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
-  "spec_version": "1.1",
-  "generated": "2026-08-31T20:13:26.801141Z",
+  "spec_version": "1.2",
+  "generated": "2026-08-31T22:51:59.342888Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
@@ -13,7 +13,8 @@
     "critical": 0,
     "high": 12,
     "elevated": 200,
-    "providers": 8,
+    "providers": 3,
+    "frameworks": 1,
     "foreign_egress_files": 0,
     "non_allied_jurisdiction_files": 0,
     "cost_risk_files": 0,
@@ -23,11 +24,63 @@
   },
   "providers": [
     {
-      "name": "fastmcp",
+      "name": "Anthropic",
+      "canonical": "anthropic",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "Anthropic",
+        "anthropic"
+      ],
+      "file_count": 1,
+      "files": [
+        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/anthropic.py"
+      ]
+    },
+    {
+      "name": "OpenAI",
+      "canonical": "openai",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "openai"
+      ],
+      "file_count": 1,
+      "files": [
+        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/openai.py"
+      ]
+    },
+    {
+      "name": "google.genai",
+      "canonical": "google.genai",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
-      "file_count": 208,
+      "seen_as": [
+        "google.genai"
+      ],
+      "file_count": 1,
+      "files": [
+        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/google_genai.py"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "MCP",
+      "canonical": "mcp",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "FastMCP",
+        "MCP",
+        "fastmcp",
+        "mcp"
+      ],
+      "file_count": 211,
       "files": [
         "fastmcp_slim-4.0.0/fastmcp/__init__.py",
         "fastmcp_slim-4.0.0/fastmcp/_compat.py",
@@ -72,6 +125,7 @@
         "fastmcp_slim-4.0.0/fastmcp/client/extension_hooks.py",
         "fastmcp_slim-4.0.0/fastmcp/client/group.py",
         "fastmcp_slim-4.0.0/fastmcp/client/logging.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/messages.py",
         "fastmcp_slim-4.0.0/fastmcp/client/mixins/__init__.py",
         "fastmcp_slim-4.0.0/fastmcp/client/mixins/prompts.py",
         "fastmcp_slim-4.0.0/fastmcp/client/mixins/resources.py",
@@ -85,6 +139,7 @@
         "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/openai.py",
         "fastmcp_slim-4.0.0/fastmcp/client/telemetry.py",
         "fastmcp_slim-4.0.0/fastmcp/client/transports/__init__.py",
+        "fastmcp_slim-4.0.0/fastmcp/client/transports/base.py",
         "fastmcp_slim-4.0.0/fastmcp/client/transports/config.py",
         "fastmcp_slim-4.0.0/fastmcp/client/transports/http.py",
         "fastmcp_slim-4.0.0/fastmcp/client/transports/inference.py",
@@ -143,6 +198,7 @@
         "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/supabase.py",
         "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/workos.py",
         "fastmcp_slim-4.0.0/fastmcp/server/auth/ssrf.py",
+        "fastmcp_slim-4.0.0/fastmcp/server/caching.py",
         "fastmcp_slim-4.0.0/fastmcp/server/context.py",
         "fastmcp_slim-4.0.0/fastmcp/server/dependencies.py",
         "fastmcp_slim-4.0.0/fastmcp/server/elicitation.py",
@@ -237,223 +293,6 @@
         "fastmcp_slim-4.0.0/fastmcp/utilities/token_cache.py",
         "fastmcp_slim-4.0.0/fastmcp/utilities/version_check.py",
         "fastmcp_slim-4.0.0/fastmcp/utilities/versions.py"
-      ]
-    },
-    {
-      "name": "FastMCP",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 83,
-      "files": [
-        "fastmcp_slim-4.0.0/fastmcp/__init__.py",
-        "fastmcp_slim-4.0.0/fastmcp/apps/app.py",
-        "fastmcp_slim-4.0.0/fastmcp/apps/approval.py",
-        "fastmcp_slim-4.0.0/fastmcp/apps/choice.py",
-        "fastmcp_slim-4.0.0/fastmcp/apps/file_upload.py",
-        "fastmcp_slim-4.0.0/fastmcp/apps/form.py",
-        "fastmcp_slim-4.0.0/fastmcp/apps/generative.py",
-        "fastmcp_slim-4.0.0/fastmcp/cli/run.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/client.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/transports/config.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/transports/inference.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/transports/memory.py",
-        "fastmcp_slim-4.0.0/fastmcp/contrib/bulk_tool_caller/bulk_tool_caller.py",
-        "fastmcp_slim-4.0.0/fastmcp/contrib/bulk_tool_caller/example.py",
-        "fastmcp_slim-4.0.0/fastmcp/contrib/component_manager/component_manager.py",
-        "fastmcp_slim-4.0.0/fastmcp/contrib/component_manager/example.py",
-        "fastmcp_slim-4.0.0/fastmcp/contrib/mcp_mixin/example.py",
-        "fastmcp_slim-4.0.0/fastmcp/contrib/mcp_mixin/mcp_mixin.py",
-        "fastmcp_slim-4.0.0/fastmcp/exceptions.py",
-        "fastmcp_slim-4.0.0/fastmcp/prompts/base.py",
-        "fastmcp_slim-4.0.0/fastmcp/resources/base.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/__init__.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/auth.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/handlers/authorize.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/oauth_proxy/consent.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/oauth_proxy/models.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/oidc_proxy.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/auth0.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/aws.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/azure.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/clerk.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/debug.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/descope.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/discord.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/github.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/google.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/introspection.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/keycloak.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/oci.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/propelauth.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/workos.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/context.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/dependencies.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/event_store.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/extensions.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/http.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/lifespan.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/low_level.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/middleware/authorization.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/middleware/ping.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/middleware/response_limiting.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/mixins/lifespan.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/mixins/mcp_operations.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/mixins/transport.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/providers/__init__.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/providers/aggregate.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/providers/base.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/providers/fastmcp_provider.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/providers/filesystem.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/providers/local_provider/decorators/tools.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/providers/local_provider/local_provider.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/providers/openapi/__init__.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/providers/openapi/provider.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/providers/prefab_synthesis.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/providers/proxy.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/__init__.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/claude_provider.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/directory_provider.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/skill_provider.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/server.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/transforms/__init__.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/transforms/prompts_as_tools.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/transforms/resources_as_tools.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/transforms/search/__init__.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/transforms/search/base.py",
-        "fastmcp_slim-4.0.0/fastmcp/telemetry.py",
-        "fastmcp_slim-4.0.0/fastmcp/types.py",
-        "fastmcp_slim-4.0.0/fastmcp/utilities/asgi_transport.py",
-        "fastmcp_slim-4.0.0/fastmcp/utilities/cli.py",
-        "fastmcp_slim-4.0.0/fastmcp/utilities/inspect.py",
-        "fastmcp_slim-4.0.0/fastmcp/utilities/lifespan.py",
-        "fastmcp_slim-4.0.0/fastmcp/utilities/mcp_server_config/v1/sources/filesystem.py",
-        "fastmcp_slim-4.0.0/fastmcp/utilities/tests.py"
-      ]
-    },
-    {
-      "name": "mcp",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 63,
-      "files": [
-        "fastmcp_slim-4.0.0/fastmcp/cli/apps_dev.py",
-        "fastmcp_slim-4.0.0/fastmcp/cli/generate.py",
-        "fastmcp_slim-4.0.0/fastmcp/cli/run.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/auth/client_credentials.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/auth/oauth.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/caching.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/client.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/elicitation.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/extension_hooks.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/group.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/logging.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/messages.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/mixins/prompts.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/mixins/resources.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/mixins/tools.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/progress.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/roots.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/sampling/__init__.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/google_genai.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/openai.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/transports/__init__.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/transports/base.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/transports/config.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/transports/http.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/transports/inference.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/transports/memory.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/transports/sse.py",
-        "fastmcp_slim-4.0.0/fastmcp/client/transports/stdio.py",
-        "fastmcp_slim-4.0.0/fastmcp/contrib/component_manager/component_manager.py",
-        "fastmcp_slim-4.0.0/fastmcp/exceptions.py",
-        "fastmcp_slim-4.0.0/fastmcp/prompts/base.py",
-        "fastmcp_slim-4.0.0/fastmcp/resources/security.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/auth.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/handlers/authorize.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/middleware.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/oauth_proxy/models.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/oauth_proxy/proxy.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/azure.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/descope.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/auth/providers/in_memory.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/caching.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/context.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/dependencies.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/elicitation.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/event_store.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/extensions.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/http.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/low_level.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/middleware/error_handling.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/middleware/rate_limiting.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/mixins/mcp_operations.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/mixins/transport.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/providers/proxy.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/providers/skills/skill_provider.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/server.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/session_scoped_event_store.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/sessions.py",
-        "fastmcp_slim-4.0.0/fastmcp/tools/base.py",
-        "fastmcp_slim-4.0.0/fastmcp/tools/function_tool.py",
-        "fastmcp_slim-4.0.0/fastmcp/utilities/exceptions.py",
-        "fastmcp_slim-4.0.0/fastmcp/utilities/inspect.py",
-        "fastmcp_slim-4.0.0/fastmcp/utilities/mcp_server_config/v1/sources/filesystem.py",
-        "fastmcp_slim-4.0.0/fastmcp/utilities/tests.py"
-      ]
-    },
-    {
-      "name": "MCP",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 4,
-      "files": [
-        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/google_genai.py",
-        "fastmcp_slim-4.0.0/fastmcp/server/server.py",
-        "fastmcp_slim-4.0.0/fastmcp/utilities/inspect.py",
-        "fastmcp_slim-4.0.0/fastmcp/utilities/skills.py"
-      ]
-    },
-    {
-      "name": "Anthropic",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/anthropic.py"
-      ]
-    },
-    {
-      "name": "anthropic",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/anthropic.py"
-      ]
-    },
-    {
-      "name": "google.genai",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/google_genai.py"
-      ]
-    },
-    {
-      "name": "openai",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "fastmcp_slim-4.0.0/fastmcp/client/sampling/handlers/openai.py"
       ]
     }
   ],

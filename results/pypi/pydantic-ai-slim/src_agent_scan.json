@@ -6,6 +6,8 @@
     "high_files": 89,
     "elevated_files": 130,
     "normal_files": 79,
+    "flagged_ai_files": 219,
+    "flagged_exec_only_files": 0,
     "mode": "snapshot",
     "summary_text": "Scanned 298 file(s). 89 HIGH, 130 ELEVATED. AI SDKs detected: pydantic_ai, mcp, MCP, fastmcp. "
   },
@@ -114,6 +116,10 @@
         "path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/CLAUDE.md"
       }
     ]
+  },
+  "committed_credentials": {
+    "count": 0,
+    "items": []
   },
   "files": [
     {
@@ -4928,5 +4934,18 @@
       "dangerous_exec": [],
       "signals": []
     }
-  ]
+  ],
+  "build_surface": {
+    "total": 1,
+    "counts": {
+      "build": 1,
+      "ci": 0,
+      "packaging": 0,
+      "dependency": 0,
+      "hook": 0,
+      "fetch": 0
+    },
+    "hooks": [],
+    "fetchers": []
+  }
 }

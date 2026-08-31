@@ -6,6 +6,8 @@
     "high_files": 38,
     "elevated_files": 661,
     "normal_files": 147,
+    "flagged_ai_files": 699,
+    "flagged_exec_only_files": 0,
     "mode": "snapshot",
     "summary_text": "Scanned 846 file(s). 38 HIGH, 661 ELEVATED. AI SDKs detected: fastmcp, FastMCP, openai, pydantic_ai. "
   },
@@ -53,6 +55,17 @@
         "name": "Cursor rules",
         "tier": 1,
         "path": "fastmcp-4.0.0/docs/.cursor"
+      }
+    ]
+  },
+  "committed_credentials": {
+    "count": 1,
+    "items": [
+      {
+        "kind": "Private key (PEM)",
+        "file": "fastmcp-4.0.0/tests/server/auth/test_jwt_provider.py",
+        "line": 208,
+        "sample": "-----BEG\u2026 (27 chars)"
       }
     ]
   },
@@ -13685,5 +13698,18 @@
       "dangerous_exec": [],
       "signals": []
     }
-  ]
+  ],
+  "build_surface": {
+    "total": 33,
+    "counts": {
+      "build": 8,
+      "ci": 23,
+      "packaging": 1,
+      "dependency": 1,
+      "hook": 0,
+      "fetch": 0
+    },
+    "hooks": [],
+    "fetchers": []
+  }
 }

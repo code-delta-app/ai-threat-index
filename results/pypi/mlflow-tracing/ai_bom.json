@@ -1,7 +1,7 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
-  "spec_version": "1.1",
-  "generated": "2026-08-31T20:14:22.733347Z",
+  "spec_version": "1.2",
+  "generated": "2026-08-31T22:53:20.215054Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
@@ -13,7 +13,8 @@
     "critical": 0,
     "high": 14,
     "elevated": 47,
-    "providers": 29,
+    "providers": 6,
+    "frameworks": 10,
     "foreign_egress_files": 1,
     "non_allied_jurisdiction_files": 0,
     "cost_risk_files": 0,
@@ -23,11 +24,17 @@
   },
   "providers": [
     {
-      "name": "openai",
+      "name": "OpenAI",
+      "canonical": "openai",
       "type": "sdk",
       "jurisdiction": "US",
       "sovereignty_risk": false,
-      "file_count": 7,
+      "seen_as": [
+        "OpenAI",
+        "http:api.openai.com",
+        "openai"
+      ],
+      "file_count": 8,
       "files": [
         "mlflow_tracing-3.15.2/mlflow/openai/api_request_parallel_processor.py",
         "mlflow_tracing-3.15.2/mlflow/openai/autolog.py",
@@ -35,14 +42,128 @@
         "mlflow_tracing-3.15.2/mlflow/openai/utils/chat_schema.py",
         "mlflow_tracing-3.15.2/mlflow/tracing/fluent.py",
         "mlflow_tracing-3.15.2/mlflow/tracking/_model_registry/fluent.py",
-        "mlflow_tracing-3.15.2/mlflow/tracking/client.py"
+        "mlflow_tracing-3.15.2/mlflow/tracking/client.py",
+        "mlflow_tracing-3.15.2/mlflow/utils/openai_utils.py"
+      ],
+      "endpoint": "api.openai.com",
+      "endpoints": [
+        "api.openai.com"
       ]
     },
     {
-      "name": "dspy",
+      "name": "Anthropic",
+      "canonical": "anthropic",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "Anthropic",
+        "anthropic",
+        "claude_agent_sdk"
+      ],
+      "file_count": 2,
+      "files": [
+        "mlflow_tracing-3.15.2/mlflow/anthropic/__init__.py",
+        "mlflow_tracing-3.15.2/mlflow/anthropic/autolog.py"
+      ]
+    },
+    {
+      "name": "Groq",
+      "canonical": "groq",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "Groq",
+        "groq"
+      ],
+      "file_count": 2,
+      "files": [
+        "mlflow_tracing-3.15.2/mlflow/groq/__init__.py",
+        "mlflow_tracing-3.15.2/mlflow/groq/_groq_autolog.py"
+      ]
+    },
+    {
+      "name": "AWS Bedrock",
+      "canonical": "bedrock",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "http:bedrock-runtime"
+      ],
+      "file_count": 1,
+      "files": [
+        "mlflow_tracing-3.15.2/mlflow/bedrock/_autolog.py"
+      ],
+      "endpoint": "bedrock-runtime",
+      "endpoints": [
+        "bedrock-runtime"
+      ]
+    },
+    {
+      "name": "Hugging Face",
+      "canonical": "huggingface_hub",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "huggingface_hub"
+      ],
+      "file_count": 1,
+      "files": [
+        "mlflow_tracing-3.15.2/mlflow/utils/huggingface_utils.py"
+      ]
+    },
+    {
+      "name": "Mistral AI",
+      "canonical": "mistralai",
+      "type": "sdk",
+      "jurisdiction": "FR",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "mistralai"
+      ],
+      "file_count": 1,
+      "files": [
+        "mlflow_tracing-3.15.2/mlflow/mistral/__init__.py"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "LangChain",
+      "canonical": "langchain",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "LangChain",
+        "Langchain",
+        "langchain"
+      ],
+      "file_count": 8,
+      "files": [
+        "mlflow_tracing-3.15.2/mlflow/langchain/_compat.py",
+        "mlflow_tracing-3.15.2/mlflow/langchain/autolog.py",
+        "mlflow_tracing-3.15.2/mlflow/langchain/chat_agent_langgraph.py",
+        "mlflow_tracing-3.15.2/mlflow/langchain/databricks_dependencies.py",
+        "mlflow_tracing-3.15.2/mlflow/langchain/model.py",
+        "mlflow_tracing-3.15.2/mlflow/langchain/runnables.py",
+        "mlflow_tracing-3.15.2/mlflow/langchain/utils/chat.py",
+        "mlflow_tracing-3.15.2/mlflow/langchain/utils/logging.py"
+      ]
+    },
+    {
+      "name": "DSPy",
+      "canonical": "dspy",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "DSPy",
+        "dspy"
+      ],
       "file_count": 6,
       "files": [
         "mlflow_tracing-3.15.2/mlflow/dspy/autolog.py",
@@ -54,10 +175,33 @@
       ]
     },
     {
-      "name": "llama_index",
+      "name": "LiteLLM",
+      "canonical": "litellm",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "LiteLLM",
+        "litellm"
+      ],
+      "file_count": 5,
+      "files": [
+        "mlflow_tracing-3.15.2/mlflow/crewai/autolog.py",
+        "mlflow_tracing-3.15.2/mlflow/entities/trace_info.py",
+        "mlflow_tracing-3.15.2/mlflow/litellm/__init__.py",
+        "mlflow_tracing-3.15.2/mlflow/tracing/utils/__init__.py",
+        "mlflow_tracing-3.15.2/mlflow/utils/providers.py"
+      ]
+    },
+    {
+      "name": "LlamaIndex",
+      "canonical": "llama_index",
       "type": "sdk",
       "jurisdiction": "US",
       "sovereignty_risk": false,
+      "seen_as": [
+        "llama_index"
+      ],
       "file_count": 5,
       "files": [
         "mlflow_tracing-3.15.2/mlflow/llama_index/model.py",
@@ -68,71 +212,32 @@
       ]
     },
     {
-      "name": "langchain",
+      "name": "Agno",
+      "canonical": "agno",
       "type": "sdk",
-      "jurisdiction": "US",
+      "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "Agno",
+        "agno"
+      ],
       "file_count": 4,
       "files": [
-        "mlflow_tracing-3.15.2/mlflow/langchain/_compat.py",
-        "mlflow_tracing-3.15.2/mlflow/langchain/model.py",
-        "mlflow_tracing-3.15.2/mlflow/langchain/runnables.py",
-        "mlflow_tracing-3.15.2/mlflow/langchain/utils/logging.py"
-      ]
-    },
-    {
-      "name": "LiteLLM",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 3,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/entities/trace_info.py",
-        "mlflow_tracing-3.15.2/mlflow/litellm/__init__.py",
-        "mlflow_tracing-3.15.2/mlflow/utils/providers.py"
-      ]
-    },
-    {
-      "name": "OpenAI",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 3,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/openai/autolog.py",
-        "mlflow_tracing-3.15.2/mlflow/openai/model.py",
-        "mlflow_tracing-3.15.2/mlflow/openai/utils/chat_schema.py"
-      ]
-    },
-    {
-      "name": "agno",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 3,
-      "files": [
+        "mlflow_tracing-3.15.2/mlflow/agno/__init__.py",
         "mlflow_tracing-3.15.2/mlflow/agno/autolog_v1.py",
         "mlflow_tracing-3.15.2/mlflow/agno/autolog_v2.py",
         "mlflow_tracing-3.15.2/mlflow/agno/utils.py"
       ]
     },
     {
-      "name": "litellm",
+      "name": "Pydantic AI",
+      "canonical": "pydantic_ai",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
-      "file_count": 3,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/crewai/autolog.py",
-        "mlflow_tracing-3.15.2/mlflow/litellm/__init__.py",
-        "mlflow_tracing-3.15.2/mlflow/tracing/utils/__init__.py"
-      ]
-    },
-    {
-      "name": "pydantic_ai",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
+      "seen_as": [
+        "pydantic_ai"
+      ],
       "file_count": 3,
       "files": [
         "mlflow_tracing-3.15.2/mlflow/pydantic_ai/__init__.py",
@@ -141,43 +246,15 @@
       ]
     },
     {
-      "name": "LangChain",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/langchain/chat_agent_langgraph.py",
-        "mlflow_tracing-3.15.2/mlflow/langchain/utils/chat.py"
-      ]
-    },
-    {
-      "name": "Langchain",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/langchain/autolog.py",
-        "mlflow_tracing-3.15.2/mlflow/langchain/databricks_dependencies.py"
-      ]
-    },
-    {
-      "name": "claude_agent_sdk",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/anthropic/__init__.py",
-        "mlflow_tracing-3.15.2/mlflow/anthropic/autolog.py"
-      ]
-    },
-    {
-      "name": "crewai",
+      "name": "CrewAI",
+      "canonical": "crewai",
       "type": "sdk",
       "jurisdiction": "US",
       "sovereignty_risk": false,
+      "seen_as": [
+        "CrewAI",
+        "crewai"
+      ],
       "file_count": 2,
       "files": [
         "mlflow_tracing-3.15.2/mlflow/crewai/__init__.py",
@@ -185,21 +262,31 @@
       ]
     },
     {
-      "name": "groq",
+      "name": "Haystack",
+      "canonical": "haystack",
       "type": "sdk",
-      "jurisdiction": "US",
+      "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "Haystack",
+        "haystack"
+      ],
       "file_count": 2,
       "files": [
-        "mlflow_tracing-3.15.2/mlflow/groq/__init__.py",
-        "mlflow_tracing-3.15.2/mlflow/groq/_groq_autolog.py"
+        "mlflow_tracing-3.15.2/mlflow/haystack/__init__.py",
+        "mlflow_tracing-3.15.2/mlflow/haystack/autolog.py"
       ]
     },
     {
       "name": "smolagents",
+      "canonical": "smolagents",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "Smolagents",
+        "smolagents"
+      ],
       "file_count": 2,
       "files": [
         "mlflow_tracing-3.15.2/mlflow/smolagents/__init__.py",
@@ -207,145 +294,17 @@
       ]
     },
     {
-      "name": "Agno",
+      "name": "Strands Agents",
+      "canonical": "strands",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/agno/__init__.py"
-      ]
-    },
-    {
-      "name": "Anthropic",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/anthropic/__init__.py"
-      ]
-    },
-    {
-      "name": "CrewAI",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/crewai/__init__.py"
-      ]
-    },
-    {
-      "name": "DSPy",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/dspy/autolog.py"
-      ]
-    },
-    {
-      "name": "Groq",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/groq/__init__.py"
-      ]
-    },
-    {
-      "name": "Haystack",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/haystack/__init__.py"
-      ]
-    },
-    {
-      "name": "Smolagents",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/smolagents/__init__.py"
-      ]
-    },
-    {
-      "name": "Strands",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
+      "seen_as": [
+        "Strands"
+      ],
       "file_count": 1,
       "files": [
         "mlflow_tracing-3.15.2/mlflow/strands/__init__.py"
-      ]
-    },
-    {
-      "name": "anthropic",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/anthropic/__init__.py"
-      ]
-    },
-    {
-      "name": "api.openai.com",
-      "type": "endpoint",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/utils/openai_utils.py"
-      ],
-      "endpoint": "api.openai.com"
-    },
-    {
-      "name": "bedrock-runtime",
-      "type": "endpoint",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/bedrock/_autolog.py"
-      ],
-      "endpoint": "bedrock-runtime"
-    },
-    {
-      "name": "haystack",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/haystack/autolog.py"
-      ]
-    },
-    {
-      "name": "huggingface_hub",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/utils/huggingface_utils.py"
-      ]
-    },
-    {
-      "name": "mistralai",
-      "type": "sdk",
-      "jurisdiction": "FR",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "mlflow_tracing-3.15.2/mlflow/mistral/__init__.py"
       ]
     }
   ],

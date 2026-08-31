@@ -1,7 +1,7 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
-  "spec_version": "1.1",
-  "generated": "2026-08-31T20:14:53.078023Z",
+  "spec_version": "1.2",
+  "generated": "2026-08-31T22:54:05.531793Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
@@ -13,7 +13,8 @@
     "critical": 0,
     "high": 6,
     "elevated": 73,
-    "providers": 17,
+    "providers": 10,
+    "frameworks": 2,
     "foreign_egress_files": 0,
     "non_allied_jurisdiction_files": 0,
     "cost_risk_files": 7,
@@ -24,12 +25,18 @@
   "providers": [
     {
       "name": "OpenAI",
+      "canonical": "openai",
       "type": "sdk",
       "jurisdiction": "US",
       "sovereignty_risk": false,
-      "file_count": 24,
+      "seen_as": [
+        "OpenAI",
+        "openai"
+      ],
+      "file_count": 26,
       "files": [
         "langchain_classic-1.0.8/langchain_classic/__init__.py",
+        "langchain_classic-1.0.8/langchain_classic/agents/openai_assistant/base.py",
         "langchain_classic-1.0.8/langchain_classic/agents/output_parsers/openai_functions.py",
         "langchain_classic-1.0.8/langchain_classic/agents/output_parsers/openai_tools.py",
         "langchain_classic-1.0.8/langchain_classic/agents/react/agent.py",
@@ -46,6 +53,7 @@
         "langchain_classic-1.0.8/langchain_classic/chains/llm_checker/base.py",
         "langchain_classic-1.0.8/langchain_classic/chains/llm_math/base.py",
         "langchain_classic-1.0.8/langchain_classic/chains/llm_summarization_checker/base.py",
+        "langchain_classic-1.0.8/langchain_classic/chains/moderation.py",
         "langchain_classic-1.0.8/langchain_classic/chains/retrieval_qa/base.py",
         "langchain_classic-1.0.8/langchain_classic/evaluation/criteria/__init__.py",
         "langchain_classic-1.0.8/langchain_classic/evaluation/criteria/eval_chain.py",
@@ -56,50 +64,54 @@
       ]
     },
     {
-      "name": "langchain",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 7,
-      "files": [
-        "langchain_classic-1.0.8/langchain_classic/__init__.py",
-        "langchain_classic-1.0.8/langchain_classic/agents/xml/base.py",
-        "langchain_classic-1.0.8/langchain_classic/chat_models/__init__.py",
-        "langchain_classic-1.0.8/langchain_classic/chat_models/base.py",
-        "langchain_classic-1.0.8/langchain_classic/evaluation/embedding_distance/base.py",
-        "langchain_classic-1.0.8/langchain_classic/tools/__init__.py",
-        "langchain_classic-1.0.8/tests/unit_tests/test_imports.py"
-      ]
-    },
-    {
       "name": "Anthropic",
+      "canonical": "anthropic",
       "type": "sdk",
       "jurisdiction": "US",
       "sovereignty_risk": false,
-      "file_count": 3,
+      "seen_as": [
+        "Anthropic",
+        "http:api.anthropic.com"
+      ],
+      "file_count": 4,
       "files": [
         "langchain_classic-1.0.8/langchain_classic/__init__.py",
         "langchain_classic-1.0.8/langchain_classic/llms/__init__.py",
-        "langchain_classic-1.0.8/langchain_classic/llms/anthropic.py"
+        "langchain_classic-1.0.8/langchain_classic/llms/anthropic.py",
+        "langchain_classic-1.0.8/tests/unit_tests/chat_models/test_base.py"
+      ],
+      "endpoint": "api.anthropic.com",
+      "endpoints": [
+        "api.anthropic.com"
       ]
     },
     {
       "name": "Cohere",
+      "canonical": "cohere",
       "type": "sdk",
-      "jurisdiction": "unspecified",
+      "jurisdiction": "CA",
       "sovereignty_risk": false,
-      "file_count": 3,
+      "seen_as": [
+        "Cohere",
+        "cohere"
+      ],
+      "file_count": 4,
       "files": [
         "langchain_classic-1.0.8/langchain_classic/__init__.py",
         "langchain_classic-1.0.8/langchain_classic/llms/__init__.py",
-        "langchain_classic-1.0.8/langchain_classic/llms/cohere.py"
+        "langchain_classic-1.0.8/langchain_classic/llms/cohere.py",
+        "langchain_classic-1.0.8/langchain_classic/retrievers/document_compressors/cohere_rerank.py"
       ]
     },
     {
-      "name": "GigaChat",
+      "name": "Sber GigaChat",
+      "canonical": "gigachat",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "GigaChat"
+      ],
       "file_count": 3,
       "files": [
         "langchain_classic-1.0.8/langchain_classic/chat_models/gigachat.py",
@@ -108,22 +120,14 @@
       ]
     },
     {
-      "name": "openai",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 3,
-      "files": [
-        "langchain_classic-1.0.8/langchain_classic/agents/openai_assistant/base.py",
-        "langchain_classic-1.0.8/langchain_classic/chains/moderation.py",
-        "langchain_classic-1.0.8/tests/unit_tests/load/test_load.py"
-      ]
-    },
-    {
       "name": "AI21",
+      "canonical": "ai21",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "AI21"
+      ],
       "file_count": 2,
       "files": [
         "langchain_classic-1.0.8/langchain_classic/llms/__init__.py",
@@ -132,9 +136,13 @@
     },
     {
       "name": "Anyscale",
+      "canonical": "anyscale",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "Anyscale"
+      ],
       "file_count": 2,
       "files": [
         "langchain_classic-1.0.8/langchain_classic/llms/__init__.py",
@@ -142,10 +150,14 @@
       ]
     },
     {
-      "name": "Fireworks",
+      "name": "Fireworks AI",
+      "canonical": "fireworks",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "Fireworks"
+      ],
       "file_count": 2,
       "files": [
         "langchain_classic-1.0.8/langchain_classic/llms/__init__.py",
@@ -153,87 +165,87 @@
       ]
     },
     {
-      "name": "LangChain",
+      "name": "Google",
+      "canonical": "google",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "langchain_classic-1.0.8/langchain_classic/base_memory.py",
-        "langchain_classic-1.0.8/langchain_classic/indexes/__init__.py"
-      ]
-    },
-    {
-      "name": "Ollama",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "langchain_classic-1.0.8/langchain_classic/llms/__init__.py",
-        "langchain_classic-1.0.8/langchain_classic/llms/ollama.py"
-      ]
-    },
-    {
-      "name": "langchain_aws",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "langchain_classic-1.0.8/langchain_classic/chat_models/base.py",
-        "langchain_classic-1.0.8/langchain_classic/embeddings/base.py"
-      ]
-    },
-    {
-      "name": "Replicate",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "langchain_classic-1.0.8/langchain_classic/llms/replicate.py"
-      ]
-    },
-    {
-      "name": "Together",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "langchain_classic-1.0.8/langchain_classic/llms/together.py"
-      ]
-    },
-    {
-      "name": "VertexAI",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
+      "seen_as": [
+        "VertexAI"
+      ],
       "file_count": 1,
       "files": [
         "langchain_classic-1.0.8/langchain_classic/llms/vertexai.py"
       ]
     },
     {
-      "name": "api.anthropic.com",
-      "type": "endpoint",
-      "jurisdiction": "US",
+      "name": "Replicate",
+      "canonical": "replicate",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "Replicate"
+      ],
       "file_count": 1,
       "files": [
-        "langchain_classic-1.0.8/tests/unit_tests/chat_models/test_base.py"
-      ],
-      "endpoint": "api.anthropic.com"
+        "langchain_classic-1.0.8/langchain_classic/llms/replicate.py"
+      ]
     },
     {
-      "name": "cohere",
+      "name": "Together AI",
+      "canonical": "together",
       "type": "sdk",
-      "jurisdiction": "CA",
+      "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "Together"
+      ],
       "file_count": 1,
       "files": [
-        "langchain_classic-1.0.8/langchain_classic/retrievers/document_compressors/cohere_rerank.py"
+        "langchain_classic-1.0.8/langchain_classic/llms/together.py"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "LangChain",
+      "canonical": "langchain",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "LangChain",
+        "langchain",
+        "langchain_aws"
+      ],
+      "file_count": 10,
+      "files": [
+        "langchain_classic-1.0.8/langchain_classic/__init__.py",
+        "langchain_classic-1.0.8/langchain_classic/agents/xml/base.py",
+        "langchain_classic-1.0.8/langchain_classic/base_memory.py",
+        "langchain_classic-1.0.8/langchain_classic/chat_models/__init__.py",
+        "langchain_classic-1.0.8/langchain_classic/chat_models/base.py",
+        "langchain_classic-1.0.8/langchain_classic/embeddings/base.py",
+        "langchain_classic-1.0.8/langchain_classic/evaluation/embedding_distance/base.py",
+        "langchain_classic-1.0.8/langchain_classic/indexes/__init__.py",
+        "langchain_classic-1.0.8/langchain_classic/tools/__init__.py",
+        "langchain_classic-1.0.8/tests/unit_tests/test_imports.py"
+      ]
+    },
+    {
+      "name": "Ollama (local runtime)",
+      "canonical": "ollama",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "Ollama"
+      ],
+      "file_count": 2,
+      "files": [
+        "langchain_classic-1.0.8/langchain_classic/llms/__init__.py",
+        "langchain_classic-1.0.8/langchain_classic/llms/ollama.py"
       ]
     }
   ],

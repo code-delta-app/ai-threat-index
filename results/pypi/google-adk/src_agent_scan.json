@@ -6,6 +6,8 @@
     "high_files": 52,
     "elevated_files": 277,
     "normal_files": 458,
+    "flagged_ai_files": 326,
+    "flagged_exec_only_files": 3,
     "mode": "snapshot",
     "summary_text": "Scanned 787 file(s). 52 HIGH, 277 ELEVATED. AI SDKs detected: google.genai, google.adk, vertexai, openai. "
   },
@@ -32,6 +34,17 @@
     "table_version": 1,
     "tier3_count": 0,
     "items": []
+  },
+  "committed_credentials": {
+    "count": 1,
+    "items": [
+      {
+        "kind": "Private key (PEM)",
+        "file": "google_adk-2.8.0/src/google/adk/auth/auth_credential.py",
+        "line": 161,
+        "sample": "-----BEG\u2026 (27 chars)"
+      }
+    ]
   },
   "files": [
     {
@@ -11114,5 +11127,18 @@
       "dangerous_exec": [],
       "signals": []
     }
-  ]
+  ],
+  "build_surface": {
+    "total": 2,
+    "counts": {
+      "build": 2,
+      "ci": 0,
+      "packaging": 0,
+      "dependency": 0,
+      "hook": 0,
+      "fetch": 0
+    },
+    "hooks": [],
+    "fetchers": []
+  }
 }

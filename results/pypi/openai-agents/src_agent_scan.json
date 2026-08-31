@@ -6,6 +6,8 @@
     "high_files": 134,
     "elevated_files": 299,
     "normal_files": 430,
+    "flagged_ai_files": 399,
+    "flagged_exec_only_files": 34,
     "mode": "snapshot",
     "summary_text": "Scanned 863 file(s). 134 HIGH, 299 ELEVATED. AI SDKs detected: openai, http:openrouter.ai, mcp, MCP. "
   },
@@ -58,6 +60,10 @@
         "path": "openai_agents-0.22.0/CLAUDE.md"
       }
     ]
+  },
+  "committed_credentials": {
+    "count": 0,
+    "items": []
   },
   "files": [
     {
@@ -12734,5 +12740,18 @@
       "dangerous_exec": [],
       "signals": []
     }
-  ]
+  ],
+  "build_surface": {
+    "total": 7,
+    "counts": {
+      "build": 4,
+      "ci": 0,
+      "packaging": 1,
+      "dependency": 2,
+      "hook": 0,
+      "fetch": 0
+    },
+    "hooks": [],
+    "fetchers": []
+  }
 }

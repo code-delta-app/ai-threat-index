@@ -6,6 +6,8 @@
     "high_files": 1,
     "elevated_files": 7,
     "normal_files": 20,
+    "flagged_ai_files": 8,
+    "flagged_exec_only_files": 0,
     "mode": "snapshot",
     "summary_text": "Scanned 28 file(s). 1 HIGH, 7 ELEVATED. AI SDKs detected: llama_index. "
   },
@@ -15,6 +17,10 @@
   "agent_artifacts": {
     "table_version": 1,
     "tier3_count": 0,
+    "items": []
+  },
+  "committed_credentials": {
+    "count": 0,
     "items": []
   },
   "files": [
@@ -389,5 +395,18 @@
       "dangerous_exec": [],
       "signals": []
     }
-  ]
+  ],
+  "build_surface": {
+    "total": 1,
+    "counts": {
+      "build": 1,
+      "ci": 0,
+      "packaging": 0,
+      "dependency": 0,
+      "hook": 0,
+      "fetch": 0
+    },
+    "hooks": [],
+    "fetchers": []
+  }
 }

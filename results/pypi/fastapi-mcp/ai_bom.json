@@ -1,7 +1,7 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
-  "spec_version": "1.1",
-  "generated": "2026-08-31T20:14:26.118784Z",
+  "spec_version": "1.2",
+  "generated": "2026-08-31T22:53:24.918006Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
@@ -13,7 +13,8 @@
     "critical": 0,
     "high": 0,
     "elevated": 12,
-    "providers": 2,
+    "providers": 0,
+    "frameworks": 1,
     "foreign_egress_files": 0,
     "non_allied_jurisdiction_files": 0,
     "cost_risk_files": 0,
@@ -21,12 +22,18 @@
     "agent_artifacts_tier3": 0,
     "committed_credentials": 0
   },
-  "providers": [
+  "providers": [],
+  "frameworks": [
     {
-      "name": "mcp",
+      "name": "MCP",
+      "canonical": "mcp",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "MCP",
+        "mcp"
+      ],
       "file_count": 12,
       "files": [
         "fastapi_mcp-0.4.0/fastapi_mcp/openapi/convert.py",
@@ -41,17 +48,6 @@
         "fastapi_mcp-0.4.0/tests/test_openapi_conversion.py",
         "fastapi_mcp-0.4.0/tests/test_sse_mock_transport.py",
         "fastapi_mcp-0.4.0/tests/test_sse_real_transport.py"
-      ]
-    },
-    {
-      "name": "MCP",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "fastapi_mcp-0.4.0/fastapi_mcp/server.py",
-        "fastapi_mcp-0.4.0/tests/test_mcp_simple_app.py"
       ]
     }
   ],

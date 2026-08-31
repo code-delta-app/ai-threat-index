@@ -1,7 +1,7 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
-  "spec_version": "1.1",
-  "generated": "2026-08-31T20:13:08.716621Z",
+  "spec_version": "1.2",
+  "generated": "2026-08-31T22:51:32.664004Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
@@ -13,7 +13,8 @@
     "critical": 0,
     "high": 0,
     "elevated": 2,
-    "providers": 1,
+    "providers": 0,
+    "frameworks": 1,
     "foreign_egress_files": 0,
     "non_allied_jurisdiction_files": 0,
     "cost_risk_files": 0,
@@ -21,12 +22,17 @@
     "agent_artifacts_tier3": 0,
     "committed_credentials": 0
   },
-  "providers": [
+  "providers": [],
+  "frameworks": [
     {
-      "name": "pydantic_ai",
+      "name": "Pydantic AI",
+      "canonical": "pydantic_ai",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "pydantic_ai"
+      ],
       "file_count": 1,
       "files": [
         "pydantic_graph-2.36.0/pydantic_graph/_utils.py"

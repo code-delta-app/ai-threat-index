@@ -6,6 +6,8 @@
     "high_files": 0,
     "elevated_files": 0,
     "normal_files": 12,
+    "flagged_ai_files": 0,
+    "flagged_exec_only_files": 0,
     "mode": "snapshot",
     "summary_text": "Scanned 12 file(s). No AI agent initiation signatures detected."
   },
@@ -13,6 +15,10 @@
   "agent_artifacts": {
     "table_version": 1,
     "tier3_count": 0,
+    "items": []
+  },
+  "committed_credentials": {
+    "count": 0,
     "items": []
   },
   "files": [
@@ -160,5 +166,18 @@
       "dangerous_exec": [],
       "signals": []
     }
-  ]
+  ],
+  "build_surface": {
+    "total": 7,
+    "counts": {
+      "build": 2,
+      "ci": 4,
+      "packaging": 0,
+      "dependency": 1,
+      "hook": 0,
+      "fetch": 0
+    },
+    "hooks": [],
+    "fetchers": []
+  }
 }

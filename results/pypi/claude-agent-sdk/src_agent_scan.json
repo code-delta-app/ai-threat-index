@@ -6,6 +6,8 @@
     "high_files": 55,
     "elevated_files": 12,
     "normal_files": 21,
+    "flagged_ai_files": 67,
+    "flagged_exec_only_files": 0,
     "mode": "snapshot",
     "summary_text": "Scanned 88 file(s). 55 HIGH, 12 ELEVATED. AI SDKs detected: claude_agent_sdk, mcp, MCP. "
   },
@@ -17,6 +19,10 @@
   "agent_artifacts": {
     "table_version": 1,
     "tier3_count": 0,
+    "items": []
+  },
+  "committed_credentials": {
+    "count": 0,
     "items": []
   },
   "files": [
@@ -1552,5 +1558,18 @@
       "dangerous_exec": [],
       "signals": []
     }
-  ]
+  ],
+  "build_surface": {
+    "total": 1,
+    "counts": {
+      "build": 1,
+      "ci": 0,
+      "packaging": 0,
+      "dependency": 0,
+      "hook": 0,
+      "fetch": 0
+    },
+    "hooks": [],
+    "fetchers": []
+  }
 }

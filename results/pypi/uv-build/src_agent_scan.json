@@ -1,13 +1,15 @@
 {
   "summary": {
-    "total_files": 108,
+    "total_files": 109,
     "flagged_files": 2,
     "critical_files": 0,
     "high_files": 0,
     "elevated_files": 2,
-    "normal_files": 106,
+    "normal_files": 107,
+    "flagged_ai_files": 2,
+    "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 108 file(s). 0 HIGH, 2 ELEVATED. "
+    "summary_text": "Scanned 109 file(s). 0 HIGH, 2 ELEVATED. "
   },
   "sdk_inventory": {},
   "agent_artifacts": {
@@ -15,9 +17,13 @@
     "tier3_count": 0,
     "items": []
   },
+  "committed_credentials": {
+    "count": 0,
+    "items": []
+  },
   "files": [
     {
-      "rel_path": "uv_build-0.12.7/python/uv_build/__init__.py",
+      "rel_path": "uv_build-0.12.8/python/uv_build/__init__.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -33,7 +39,7 @@
       ]
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/conflicts.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/conflicts.rs",
       "language": "Rust",
       "ais": 40,
       "risk": "ELEVATED",
@@ -49,7 +55,7 @@
       ]
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-fs/src/path.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-fs/src/path.rs",
       "language": "Rust",
       "ais": 20,
       "risk": "NORMAL",
@@ -63,7 +69,7 @@
       ]
     },
     {
-      "rel_path": "uv_build-0.12.7/python/uv_build/__main__.py",
+      "rel_path": "uv_build-0.12.8/python/uv_build/__main__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -75,7 +81,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-redacted/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-redacted/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -87,7 +93,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-toml/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-toml/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -99,7 +105,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-warnings/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-warnings/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -111,7 +117,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-errors/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-errors/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -123,7 +129,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-errors/src/line_wrap.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-errors/src/line_wrap.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -135,7 +141,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-logging/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-logging/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -147,7 +153,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-cache-key/src/canonical_url.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-cache-key/src/canonical_url.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -159,7 +165,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-cache-key/src/cache_key.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-cache-key/src/cache_key.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -171,7 +177,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-cache-key/src/digest.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-cache-key/src/digest.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -183,7 +189,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-cache-key/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-cache-key/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -195,7 +201,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-fs/src/locked_file.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-fs/src/locked_file.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -207,7 +213,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-fs/src/cachedir.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-fs/src/cachedir.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -219,7 +225,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-fs/src/space.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-fs/src/hardlink_macos.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -231,7 +237,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-fs/src/which.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-fs/src/space.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -243,7 +249,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-fs/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-fs/src/which.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -255,7 +261,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-fs/src/read.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-fs/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -267,7 +273,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-fs/src/link.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-fs/src/read.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -279,7 +285,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-windows/src/wine.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-fs/src/link.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -291,7 +297,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-windows/src/exception.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-windows/src/wine.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -303,7 +309,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-windows/src/spawn.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-windows/src/exception.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -315,7 +321,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-windows/src/job.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-windows/src/spawn.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -327,7 +333,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-windows/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-windows/src/job.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -339,7 +345,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-windows/src/ctrl_handler.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-windows/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -351,7 +357,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pep440/src/version_ranges.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-windows/src/ctrl_handler.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -363,7 +369,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pep440/src/version.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pep440/src/version_ranges.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -375,7 +381,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pep440/src/version_specifier.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pep440/src/version.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -387,7 +393,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pep440/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pep440/src/version_specifier.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -399,7 +405,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-preview/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pep440/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -411,7 +417,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-git-types/src/reference.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-preview/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -423,7 +429,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-git-types/src/github.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-git-types/src/reference.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -435,7 +441,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-git-types/src/oid.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-git-types/src/github.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -447,7 +453,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-git-types/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-git-types/src/oid.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -459,7 +465,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/dependency_groups.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-git-types/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -471,7 +477,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/build.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/dependency_groups.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -483,7 +489,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/supported_environments.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/build.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -495,7 +501,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/marker_environment.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/supported_environments.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -507,7 +513,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/identifier.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/marker_environment.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -519,7 +525,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/base_url.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/identifier.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -531,7 +537,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/parsed_url.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/base_url.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -543,7 +549,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/direct_url.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/parsed_url.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -555,7 +561,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/project_status.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/direct_url.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -567,7 +573,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/project_status.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -579,7 +585,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/scheme.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -591,7 +597,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/module_name.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/scheme.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -603,7 +609,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/lenient_requirement.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/module_name.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -615,7 +621,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/simple_json.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/lenient_requirement.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -627,7 +633,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/metadata/requires_dist.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/simple_json.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -639,7 +645,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/metadata/pyproject_toml.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/metadata/requires_dist.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -651,7 +657,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/metadata/mod.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/metadata/pyproject_toml.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -663,7 +669,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/metadata/metadata10.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/metadata/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -675,7 +681,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/metadata/build_requires.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/metadata/metadata10.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -687,7 +693,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/metadata/metadata23.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/metadata/build_requires.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -699,7 +705,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pypi-types/src/metadata/metadata_resolver.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/metadata/metadata23.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -711,7 +717,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-small-str/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pypi-types/src/metadata/metadata_resolver.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -723,7 +729,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-macros/src/options_metadata.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-small-str/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -735,7 +741,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-macros/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-macros/src/options_metadata.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -747,7 +753,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-platform-tags/src/platform.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-macros/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -759,7 +765,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-platform-tags/src/abi_tag.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-platform-tags/src/platform.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -771,7 +777,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-platform-tags/src/platform_tag.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-platform-tags/src/abi_tag.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -783,7 +789,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-platform-tags/src/language_tag.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-platform-tags/src/platform_tag.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -795,7 +801,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-platform-tags/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-platform-tags/src/language_tag.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -807,7 +813,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-platform-tags/src/tags.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-platform-tags/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -819,7 +825,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-normalize/src/extra_name.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-platform-tags/src/tags.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -831,7 +837,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-normalize/src/package_name.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-normalize/src/extra_name.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -843,7 +849,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-normalize/src/group_name.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-normalize/src/package_name.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -855,7 +861,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-normalize/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-normalize/src/group_name.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -867,7 +873,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-normalize/src/dist_info_name.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-normalize/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -879,7 +885,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-distribution-filename/src/build_tag.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-normalize/src/dist_info_name.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -891,7 +897,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-distribution-filename/src/extension.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-distribution-filename/src/build_tag.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -903,7 +909,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-distribution-filename/src/source_dist.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-distribution-filename/src/extension.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -915,7 +921,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-distribution-filename/src/egg.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-distribution-filename/src/source_dist.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -927,7 +933,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-distribution-filename/src/wheel_tag.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-distribution-filename/src/egg.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -939,7 +945,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-distribution-filename/src/expanded_tags.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-distribution-filename/src/wheel_tag.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -951,7 +957,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-distribution-filename/src/splitter.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-distribution-filename/src/expanded_tags.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -963,7 +969,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-distribution-filename/src/wheel.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-distribution-filename/src/splitter.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -975,7 +981,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-distribution-filename/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-distribution-filename/src/wheel.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -987,7 +993,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-static/src/known_stdlib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-distribution-filename/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -999,7 +1005,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-static/src/env_vars.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-static/src/known_stdlib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1011,7 +1017,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-static/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-static/src/env_vars.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1023,7 +1029,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-globfilter/src/glob_dir_filter.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-static/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1035,7 +1041,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-globfilter/src/portable_glob.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-globfilter/src/glob_dir_filter.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1047,7 +1053,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-globfilter/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-globfilter/src/portable_glob.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1059,7 +1065,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-globfilter/src/main.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-globfilter/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1071,7 +1077,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-version/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-globfilter/src/main.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1083,7 +1089,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pep508/src/verbatim_url.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-version/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1095,7 +1101,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pep508/src/cursor.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pep508/src/verbatim_url.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1107,7 +1113,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pep508/src/origin.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pep508/src/cursor.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1119,7 +1125,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pep508/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pep508/src/origin.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1131,7 +1137,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pep508/src/unnamed.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pep508/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1143,7 +1149,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pep508/src/marker/environment.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pep508/src/unnamed.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1155,7 +1161,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pep508/src/marker/lowering.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pep508/src/marker/environment.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1167,7 +1173,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pep508/src/marker/tree.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pep508/src/marker/lowering.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1179,7 +1185,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pep508/src/marker/mod.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pep508/src/marker/tree.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1191,7 +1197,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pep508/src/marker/algebra.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pep508/src/marker/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1203,7 +1209,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pep508/src/marker/parse.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pep508/src/marker/algebra.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1215,7 +1221,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-pep508/src/marker/simplify.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pep508/src/marker/parse.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1227,7 +1233,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-options-metadata/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-pep508/src/marker/simplify.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1239,7 +1245,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-build-backend/src/serde_verbatim.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-options-metadata/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1251,7 +1257,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-build-backend/src/source_dist.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-build-backend/src/serde_verbatim.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1263,7 +1269,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-build-backend/src/settings.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-build-backend/src/source_dist.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1275,7 +1281,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-build-backend/src/wheel.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-build-backend/src/settings.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1287,7 +1293,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-build-backend/src/lib.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-build-backend/src/wheel.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1299,7 +1305,7 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-build-backend/src/metadata.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-build-backend/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1311,7 +1317,19 @@
       "signals": []
     },
     {
-      "rel_path": "uv_build-0.12.7/crates/uv-build/src/main.rs",
+      "rel_path": "uv_build-0.12.8/crates/uv-build-backend/src/metadata.rs",
+      "language": "Rust",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "uv_build-0.12.8/crates/uv-build/src/main.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1322,5 +1340,18 @@
       "dangerous_exec": [],
       "signals": []
     }
-  ]
+  ],
+  "build_surface": {
+    "total": 28,
+    "counts": {
+      "build": 27,
+      "ci": 0,
+      "packaging": 0,
+      "dependency": 1,
+      "hook": 0,
+      "fetch": 0
+    },
+    "hooks": [],
+    "fetchers": []
+  }
 }

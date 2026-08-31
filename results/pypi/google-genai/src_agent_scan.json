@@ -1,27 +1,46 @@
 {
   "summary": {
-    "total_files": 527,
-    "flagged_files": 40,
+    "total_files": 531,
+    "flagged_files": 41,
     "critical_files": 0,
     "high_files": 1,
-    "elevated_files": 39,
-    "normal_files": 487,
+    "elevated_files": 40,
+    "normal_files": 490,
+    "flagged_ai_files": 41,
+    "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 527 file(s). 1 HIGH, 39 ELEVATED. AI SDKs detected: mcp, google.genai, http:generativelanguage.googleapis.com. "
+    "summary_text": "Scanned 531 file(s). 1 HIGH, 40 ELEVATED. AI SDKs detected: mcp, google.genai, http:generativelanguage.googleapis.com. "
   },
   "sdk_inventory": {
     "mcp": 21,
     "google.genai": 7,
-    "http:generativelanguage.googleapis.com": 16
+    "http:generativelanguage.googleapis.com": 17
   },
   "agent_artifacts": {
     "table_version": 1,
     "tier3_count": 0,
     "items": []
   },
+  "committed_credentials": {
+    "count": 2,
+    "items": [
+      {
+        "kind": "GitHub token",
+        "file": "google_genai-2.21.0/google/genai/tests/gaos/test_triggers_lifecycle.py",
+        "line": 42,
+        "sample": "ghp_xxxx\u2026 (40 chars)"
+      },
+      {
+        "kind": "GitHub token",
+        "file": "google_genai-2.21.0/google/genai/tests/gaos/test_triggers_lifecycle.py",
+        "line": 156,
+        "sample": "ghp_xxxx\u2026 (40 chars)"
+      }
+    ]
+  },
   "files": [
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_transformers.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_transformers.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
@@ -40,7 +59,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_api_client.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_api_client.py",
       "language": "Python",
       "ais": 60,
       "risk": "ELEVATED",
@@ -57,7 +76,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/live.py",
+      "rel_path": "google_genai-2.21.0/google/genai/live.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -75,7 +94,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/models.py",
+      "rel_path": "google_genai-2.21.0/google/genai/models.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -91,7 +110,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_mcp_utils.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_mcp_utils.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -107,7 +126,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/local_tokenizer.py",
+      "rel_path": "google_genai-2.21.0/google/genai/local_tokenizer.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -123,7 +142,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/types.py",
+      "rel_path": "google_genai-2.21.0/google/genai/types.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -139,7 +158,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_extra_utils.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_extra_utils.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -155,7 +174,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_adapters.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_adapters.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -171,7 +190,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/client.py",
+      "rel_path": "google_genai-2.21.0/google/genai/client.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -187,7 +206,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/agents.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/agents.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -203,7 +222,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/interactions.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/interactions.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -219,7 +238,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/sdkconfiguration.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/sdkconfiguration.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -235,7 +254,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_generate_content_tools.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_generate_content_tools.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -251,7 +270,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_generate_content_mcp.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_generate_content_mcp.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -267,7 +286,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_generate_content_media_resolution.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_generate_content_media_resolution.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -283,7 +302,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_generate_content_part.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_generate_content_part.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -299,7 +318,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/constants.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/constants.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -315,7 +334,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/imports/test_no_optional_imports.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/imports/test_no_optional_imports.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -331,7 +350,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/caches/test_create_custom_url.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/caches/test_create_custom_url.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -347,7 +366,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/caches/constants.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/caches/constants.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -363,7 +382,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/caches/test_create.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/caches/test_create.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -379,7 +398,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/transformers/test_t_tools.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/transformers/test_t_tools.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -395,7 +414,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/transformers/test_t_tool.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/transformers/test_t_tool.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -411,7 +430,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/client/test_client_initialization.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/client/test_client_initialization.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -427,7 +446,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/client/test_upload_errors.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/client/test_upload_errors.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -443,7 +462,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/interactions/test_paths.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/interactions/test_paths.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -459,7 +478,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/live/test_live_music.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/live/test_live_music.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -475,7 +494,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/live/test_live.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/live/test_live.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -491,7 +510,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/types/test_types.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/types/test_types.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -509,7 +528,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/batches/test_create_with_inlined_requests.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/files/test_download.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -525,7 +544,23 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/afc/test_get_function_response_parts.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/batches/test_create_with_inlined_requests.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "http:generativelanguage.googleapis.com"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_http_endpoint(generativelanguage.googleapis.com)"
+      ]
+    },
+    {
+      "rel_path": "google_genai-2.21.0/google/genai/tests/afc/test_get_function_response_parts.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -541,7 +576,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/afc/test_get_function_map.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/afc/test_get_function_map.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -557,7 +592,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/afc/test_find_afc_incompatible_tool_indexes.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/afc/test_find_afc_incompatible_tool_indexes.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -573,7 +608,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/mcp/test_parse_config_for_mcp_usage.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/mcp/test_parse_config_for_mcp_usage.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -589,7 +624,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/mcp/test_mcp_to_gemini_tools.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/mcp/test_mcp_to_gemini_tools.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -605,7 +640,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/mcp/test_set_mcp_usage_header.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/mcp/test_set_mcp_usage_header.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -621,7 +656,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/mcp/test_parse_config_for_mcp_sessions.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/mcp/test_parse_config_for_mcp_sessions.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -637,7 +672,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/mcp/test_has_mcp_tool_usage.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/mcp/test_has_mcp_tool_usage.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -653,7 +688,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/chats/test_send_message.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/chats/test_send_message.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -671,7 +706,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_common.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_common.py",
       "language": "Python",
       "ais": 35,
       "risk": "NORMAL",
@@ -685,7 +720,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/__init__.py",
       "language": "Python",
       "ais": 20,
       "risk": "NORMAL",
@@ -699,7 +734,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/sdk.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/sdk.py",
       "language": "Python",
       "ais": 20,
       "risk": "NORMAL",
@@ -713,7 +748,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/google_genai.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/google_genai.py",
       "language": "Python",
       "ais": 18,
       "risk": "NORMAL",
@@ -727,7 +762,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/interaction.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/interaction.py",
       "language": "Python",
       "ais": 18,
       "risk": "NORMAL",
@@ -741,7 +776,7 @@
       ]
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tunings.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tunings.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -753,7 +788,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/version.py",
+      "rel_path": "google_genai-2.21.0/google/genai/version.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -765,7 +800,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_test_api_client.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_test_api_client.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -777,7 +812,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/errors.py",
+      "rel_path": "google_genai-2.21.0/google/genai/errors.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -789,7 +824,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_base_url.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_base_url.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -801,7 +836,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_local_tokenizer_loader.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_local_tokenizer_loader.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -813,7 +848,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/operations.py",
+      "rel_path": "google_genai-2.21.0/google/genai/operations.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -825,7 +860,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_base_transformers.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_base_transformers.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -837,7 +872,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tokens.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tokens.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -849,7 +884,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/file_search_stores.py",
+      "rel_path": "google_genai-2.21.0/google/genai/file_search_stores.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -861,7 +896,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/chats.py",
+      "rel_path": "google_genai-2.21.0/google/genai/chats.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -873,7 +908,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/caches.py",
+      "rel_path": "google_genai-2.21.0/google/genai/caches.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -885,7 +920,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_api_module.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_api_module.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -897,7 +932,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_tokens_converters.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_tokens_converters.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -909,7 +944,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/documents.py",
+      "rel_path": "google_genai-2.21.0/google/genai/documents.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -921,7 +956,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_replay_api_client.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_replay_api_client.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -933,7 +968,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_automatic_function_calling_util.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_automatic_function_calling_util.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -945,7 +980,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/live_music.py",
+      "rel_path": "google_genai-2.21.0/google/genai/live_music.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -957,7 +992,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/interactions.py",
+      "rel_path": "google_genai-2.21.0/google/genai/interactions.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -969,7 +1004,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_live_converters.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_live_converters.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -981,7 +1016,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_operations_converters.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_operations_converters.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -993,7 +1028,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/files.py",
+      "rel_path": "google_genai-2.21.0/google/genai/files.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1005,7 +1040,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/pagers.py",
+      "rel_path": "google_genai-2.21.0/google/genai/pagers.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1017,7 +1052,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/batches.py",
+      "rel_path": "google_genai-2.21.0/google/genai/batches.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1029,7 +1064,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1041,7 +1076,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/webhooks.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/webhooks.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1053,7 +1088,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/environments.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/environments.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1065,7 +1100,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/httpclient.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/httpclient.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1077,7 +1112,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/_version.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/_version.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1089,7 +1124,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/triggers.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/triggers.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1101,7 +1136,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/files.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/files.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1113,7 +1148,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/basesdk.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/basesdk.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1125,7 +1160,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1137,7 +1172,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/getagent.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/getagent.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1149,7 +1184,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/createenvironment.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/createenvironment.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1161,7 +1196,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/rotatesigningsecret.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/rotatesigningsecret.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1173,7 +1208,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/listwebhooks.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/listwebhooks.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1185,7 +1220,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/deleteinteraction.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/deleteinteraction.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1197,7 +1232,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/createinteraction.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/createinteraction.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1209,7 +1244,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/gettrigger.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/gettrigger.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1221,7 +1256,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/listagents.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/listagents.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1233,7 +1268,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/deleteagent.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/deleteagent.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1245,7 +1280,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/cancelinteractionbyid.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/cancelinteractionbyid.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1257,7 +1292,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/createagent.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/createagent.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1269,7 +1304,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/deletewebhook.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/deletewebhook.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1281,7 +1316,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/runtrigger.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/runtrigger.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1293,7 +1328,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/createtrigger.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/createtrigger.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1305,7 +1340,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/deletetrigger.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/deletetrigger.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1317,7 +1352,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/listtriggers.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/listtriggers.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1329,7 +1364,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/updatetrigger.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/updatetrigger.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1341,7 +1376,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/updatewebhook.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/updatewebhook.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1353,7 +1388,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/createwebhook.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/createwebhook.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1365,7 +1400,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/pingwebhook.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/pingwebhook.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1377,7 +1412,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/listtriggerexecutions.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/listtriggerexecutions.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1389,7 +1424,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/getenvironment.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/getenvironment.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1401,7 +1436,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/listenvironments.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/listenvironments.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1413,7 +1448,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/getinteractionbyid.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/getinteractionbyid.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1425,7 +1460,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/deleteenvironment.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/deleteenvironment.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1437,7 +1472,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/getwebhook.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/getwebhook.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1449,7 +1484,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/getenvironmentfiles.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/getenvironmentfiles.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1461,7 +1496,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/internal/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/internal/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1473,7 +1508,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/models/internal/globals.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/models/internal/globals.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1485,7 +1520,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/errors/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/errors/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1497,7 +1532,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/errors/responsevalidationerror.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/errors/responsevalidationerror.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1509,7 +1544,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/errors/deleteinteraction.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/errors/deleteinteraction.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1521,7 +1556,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/errors/genaidefaulterror.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/errors/genaidefaulterror.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1533,7 +1568,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/errors/createinteraction.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/errors/createinteraction.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1545,7 +1580,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/errors/genaierror.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/errors/genaierror.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1557,7 +1592,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/errors/cancelinteractionbyid.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/errors/cancelinteractionbyid.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1569,7 +1604,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/errors/getinteractionbyid.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/errors/getinteractionbyid.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1581,7 +1616,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/errors/no_response_error.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/errors/no_response_error.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1593,7 +1628,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1605,7 +1640,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/agents/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/agents/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1617,7 +1652,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/environments/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/environments/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1629,7 +1664,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/environments/environment/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/environments/environment/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1641,7 +1676,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/environments/createenvironmentrequest/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/environments/createenvironmentrequest/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1653,7 +1688,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/webhooks/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/webhooks/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1665,7 +1700,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1677,7 +1712,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/placecitation/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/placecitation/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1689,7 +1724,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/usage/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/usage/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1701,7 +1736,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/videocontent/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/videocontent/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1713,7 +1748,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/environment/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/environment/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1725,7 +1760,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/retrievalcalldelta/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/retrievalcalldelta/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1737,7 +1772,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/urlcontextresultstep/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/urlcontextresultstep/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1749,7 +1784,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/stepdelta/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/stepdelta/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1761,7 +1796,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/googlemapscallstep/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/googlemapscallstep/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1773,7 +1808,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/codemenderagentconfig/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/codemenderagentconfig/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1785,7 +1820,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/codemenderagentconfig/findrequest/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/codemenderagentconfig/findrequest/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1797,7 +1832,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/codemenderagentconfig/fixrequest/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/codemenderagentconfig/fixrequest/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1809,7 +1844,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/googlesearchresultstep/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/googlesearchresultstep/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1821,7 +1856,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/googlemapsresult/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/googlemapsresult/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1833,7 +1868,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/googlemapsresult/place/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/googlemapsresult/place/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1845,7 +1880,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/googlemapsresultstep/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/googlemapsresultstep/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1857,7 +1892,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/googlemapsresultstep/result/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/googlemapsresultstep/result/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1869,7 +1904,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/googlemapsresultstep/result/place/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/googlemapsresultstep/result/place/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1881,7 +1916,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/transcriptionmode/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/transcriptionmode/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1893,7 +1928,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/googlesearchcallstep/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/googlesearchcallstep/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1905,7 +1940,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/urlcontextcallstep/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/urlcontextcallstep/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1917,7 +1952,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/errorevent/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/errorevent/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1929,7 +1964,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/tool/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/tool/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1941,7 +1976,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/tool/retrieval/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/tool/retrieval/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1953,7 +1988,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/interactions/codeexecutioncallstep/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/interactions/codeexecutioncallstep/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1965,7 +2000,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/resources/triggers/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/resources/triggers/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1977,7 +2012,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/_hooks/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/_hooks/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1989,7 +2024,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/_hooks/sdkhooks.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/_hooks/sdkhooks.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2001,7 +2036,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/_hooks/google_genai_auth.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/_hooks/google_genai_auth.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2013,7 +2048,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/_hooks/types.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/_hooks/types.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2025,7 +2060,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/_hooks/asyncregistration.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/_hooks/asyncregistration.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2037,7 +2072,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/_hooks/asyncsdkhooks.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/_hooks/asyncsdkhooks.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2049,7 +2084,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/_hooks/registration.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/_hooks/registration.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2061,7 +2096,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/_hooks/asynctypes.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/_hooks/asynctypes.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2073,7 +2108,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/_hooks/adapters.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/_hooks/adapters.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2085,7 +2120,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2097,7 +2132,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/eventstreaming.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/eventstreaming.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2109,7 +2144,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/annotations.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/annotations.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2121,7 +2156,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/unions.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/unions.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2133,7 +2168,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/forms.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/forms.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2145,7 +2180,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/url.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/url.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2157,7 +2192,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/queryparams.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/queryparams.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2169,7 +2204,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/retries.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/retries.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2181,7 +2216,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/requestbodies.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/requestbodies.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2193,7 +2228,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/unmarshal_json_response.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/unmarshal_json_response.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2205,7 +2240,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/security.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/security.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2217,7 +2252,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/serializers.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/serializers.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2229,7 +2264,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/headers.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/headers.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2241,7 +2276,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/dynamic_imports.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/dynamic_imports.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2253,7 +2288,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/response_helpers.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/response_helpers.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2265,7 +2300,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/values.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/values.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2277,7 +2312,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/datetimes.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/datetimes.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2289,7 +2324,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/metadata.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/metadata.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2301,7 +2336,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/enums.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/enums.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2313,7 +2348,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/utils/logger.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/utils/logger.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2325,7 +2360,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2337,7 +2372,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/security.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/security.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2349,7 +2384,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/base64fileinput.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/base64fileinput.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2361,7 +2396,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/basemodel.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/basemodel.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2373,7 +2408,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/agents/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/agents/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2385,7 +2420,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/agents/agentlistresponse.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/agents/agentlistresponse.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2397,7 +2432,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/agents/agent.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/agents/agent.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2409,7 +2444,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/agents/agenttool.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/agents/agenttool.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2421,7 +2456,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/environments/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/environments/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2433,7 +2468,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/environments/environmentfile.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/environments/environmentfile.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2445,7 +2480,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/environments/environment.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/environments/environment.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2457,7 +2492,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/environments/getenvironmentfilesresponse.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/environments/getenvironmentfilesresponse.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2469,7 +2504,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/environments/createenvironmentrequest.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/environments/createenvironmentrequest.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2481,7 +2516,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/environments/listenvironmentsresponse.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/environments/listenvironmentsresponse.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2493,7 +2528,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/webhooks/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/webhooks/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2505,7 +2540,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/webhooks/rotatesigningsecretrequest.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/webhooks/rotatesigningsecretrequest.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2517,7 +2552,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/webhooks/webhook.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/webhooks/webhook.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2529,7 +2564,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/webhooks/webhooklistresponse.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/webhooks/webhooklistresponse.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2541,7 +2576,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/webhooks/webhookupdate.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/webhooks/webhookupdate.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2553,7 +2588,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/webhooks/pingwebhookrequest.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/webhooks/pingwebhookrequest.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2565,7 +2600,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/webhooks/signingsecret.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/webhooks/signingsecret.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2577,7 +2612,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/webhooks/webhookrotatesigningsecretresponse.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/webhooks/webhookrotatesigningsecretresponse.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2589,7 +2624,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/webhooks/webhookpingresponse.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/webhooks/webhookpingresponse.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2601,7 +2636,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2613,7 +2648,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/retrieval.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/processingcalldelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2625,7 +2660,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/filesearchresult.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/retrieval.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2637,7 +2672,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/googlemaps.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/filesearchresult.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2649,7 +2684,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/urlcontextcallarguments.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/googlemaps.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2661,7 +2696,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/computeruse.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/urlcontextcallarguments.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2673,7 +2708,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/speechconfig.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/computeruse.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2685,7 +2720,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/imagecontent.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/speechconfig.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2697,7 +2732,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/codeexecutioncallarguments.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/processingresultdelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2709,7 +2744,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/stepstart.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/imagecontent.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2721,7 +2756,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/audioresponseformat.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/codeexecutioncallarguments.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2733,7 +2768,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/filesearchcallstep.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/stepstart.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2745,7 +2780,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/safetysetting.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/audioresponseformat.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2757,7 +2792,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/filecontent.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/filesearchcallstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2769,7 +2804,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/createagentinteraction.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/safetysetting.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2781,7 +2816,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/thinkingsummaries.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/filecontent.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2793,7 +2828,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/sessionconfig.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/createagentinteraction.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2805,7 +2840,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/retrievalresultdelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/thinkingsummaries.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2817,7 +2852,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/googlesearchcallarguments.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/sessionconfig.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2829,7 +2864,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/verbatimtranscriptionmode.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/retrievalresultdelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2841,7 +2876,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/videoresponseformat.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/googlesearchcallarguments.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2853,7 +2888,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/imagedelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/verbatimtranscriptionmode.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2865,7 +2900,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/annotation.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/videoresponseformat.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2877,7 +2912,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/googlemapsresultplaces.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/imagedelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2889,7 +2924,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/userinputstep.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/annotation.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2901,7 +2936,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/functionresultdelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/googlemapsresultplaces.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2913,7 +2948,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/videodelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/userinputstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2925,7 +2960,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/mediaresolution.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/functionresultdelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2937,7 +2972,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/urlcontextresultstep.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/videodelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2949,7 +2984,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/retrievalcalldelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/mediaresolution.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2961,7 +2996,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/textcontent.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/urlcontextresultstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2973,7 +3008,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/audiodelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/retrievalcalldelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2985,7 +3020,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/hybridsearch.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/textcontent.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2997,7 +3032,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/mediaprocessing.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/audiodelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3009,7 +3044,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/wordinfo.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/hybridsearch.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3021,7 +3056,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/codeexecutioncallstep.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/mediaprocessing.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3033,7 +3068,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/thoughtsummarydelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/wordinfo.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3045,7 +3080,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/thoughtsignaturedelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/codeexecutioncallstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3057,7 +3092,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/harmcategory.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/thoughtsummarydelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3069,7 +3104,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/exaaisearchconfig.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/thoughtsignaturedelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3081,7 +3116,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/documentdelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/harmcategory.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3093,7 +3128,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/stepstop.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/exaaisearchconfig.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3105,7 +3140,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/filter_.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/documentdelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3117,7 +3152,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/videoconfig.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/stepstop.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3129,7 +3164,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/mcpserver.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/filter_.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3141,7 +3176,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/textannotationdelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/videoconfig.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3153,7 +3188,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/googlemapsresultstep.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/mcpserver.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3165,7 +3200,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/transcriptionconfig.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/textannotationdelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3177,7 +3212,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/webhookconfig.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/googlemapsresultstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3189,7 +3224,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/googlemapscalldelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/transcriptionconfig.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3201,7 +3236,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/allowlistentry.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/webhookconfig.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3213,7 +3248,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/content.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/googlemapscalldelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3225,7 +3260,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/transcriptionmode.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/allowlistentry.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3237,7 +3272,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/codeexecutionresultstep.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/content.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3249,7 +3284,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/modalitytokens.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/transcriptionmode.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3261,7 +3296,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/source.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/codeexecutionresultstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3273,7 +3308,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/codeexecutioncalldelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/modalitytokens.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3285,7 +3320,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/urlcontext.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/source.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3297,7 +3332,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/urlcitation.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/codeexecutioncalldelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3309,7 +3344,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/filesearchresultdelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/urlcontext.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3321,7 +3356,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/createmodelinteraction.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/urlcitation.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3333,7 +3368,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/googlemapsresultdelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/filesearchresultdelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3345,7 +3380,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/model.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/createmodelinteraction.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3357,7 +3392,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/responsemodality.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/googlemapsresultdelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3369,7 +3404,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/googlemapscallarguments.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/model.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3381,7 +3416,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/thinkinglevel.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/responsemodality.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3393,7 +3428,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/googlesearchresultstep.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/googlemapscallarguments.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3405,7 +3440,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/filecitation.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/thinkinglevel.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3417,7 +3452,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/tool.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/googlesearchresultstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3429,7 +3464,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/googlemapsresult.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/filecitation.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3441,7 +3476,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/fixrequest.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/tool.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3453,7 +3488,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/environment.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/googlemapsresult.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3465,7 +3500,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/servicetier.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/fixrequest.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3477,7 +3512,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/googlemapscallstep.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/environment.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3489,7 +3524,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/dynamicagentconfig.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/servicetier.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3501,7 +3536,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/codeexecutionresultdelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/googlemapscallstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3513,7 +3548,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/speakerconfig.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/dynamicagentconfig.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3525,7 +3560,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/urlcontextcalldelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/codeexecutionresultdelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3537,7 +3572,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/step.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/speakerconfig.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3549,7 +3584,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/functionresultstep.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/urlcontextcalldelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3561,7 +3596,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/toolchoicetype.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/step.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3573,7 +3608,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/imageconfig.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/functionresultstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3585,7 +3620,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/findrequest.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/toolchoicetype.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3597,7 +3632,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/interactionsinput.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/imageconfig.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3609,7 +3644,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/interactioncreatedevent.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/findrequest.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3621,7 +3656,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/argumentsdelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/interactionsinput.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3633,7 +3668,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/textresponseformat.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/interactioncreatedevent.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3645,7 +3680,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/mcpservertoolresultstep.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/argumentsdelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3657,7 +3692,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/googlesearchresultdelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/textresponseformat.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3669,7 +3704,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/vertexaisearchconfig.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/mcpservertoolresultstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3681,7 +3716,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/functionresultsubcontent.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/googlesearchresultdelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3693,7 +3728,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/thoughtsummarycontent.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/vertexaisearchconfig.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3705,7 +3740,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/mcpservertoolresultdelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/functionresultsubcontent.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3717,7 +3752,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/allowedtools.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/thoughtsummarycontent.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3729,7 +3764,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/ragstoreconfig.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/mcpservertoolresultdelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3741,7 +3776,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/interactionssestreamevent.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/allowedtools.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3753,7 +3788,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/googlesearchresult.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/ragstoreconfig.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3765,7 +3800,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/codemenderagentconfig.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/interactionssestreamevent.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3777,7 +3812,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/mcpservertoolcallstep.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/googlesearchresult.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3789,7 +3824,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/urlcontextresultdelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/codemenderagentconfig.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3801,7 +3836,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/agentoption.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/mcpservertoolcallstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3813,7 +3848,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/filesearchcalldelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/urlcontextresultdelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3825,7 +3860,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/interactioncompletedevent.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/agentoption.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3837,7 +3872,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/antigravityagentconfig.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/filesearchcalldelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3849,7 +3884,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/deepresearchagentconfig.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/interactioncompletedevent.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3861,7 +3896,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/error.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/antigravityagentconfig.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3873,7 +3908,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/function.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/deepresearchagentconfig.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3885,7 +3920,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/thoughtstep.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/error.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3897,7 +3932,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/toolchoiceconfig.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/function.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3909,7 +3944,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/filesearch.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/thoughtstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3921,7 +3956,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/ragretrievalconfig.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/toolchoiceconfig.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3933,7 +3968,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/interactionsseevent.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/filesearch.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3945,7 +3980,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/environmentnetworkegressallowlist.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/ragretrievalconfig.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3957,7 +3992,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/googlesearch.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/processingresultstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3969,7 +4004,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/stepdeltadata.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/interactionsseevent.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3981,7 +4016,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/responseformat.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/environmentnetworkegressallowlist.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3993,7 +4028,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/audiocontent.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/googlesearch.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4005,7 +4040,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/modeloutputstep.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/stepdeltadata.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4017,7 +4052,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/ranking.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/responseformat.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4029,7 +4064,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/reviewsnippet.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/audiocontent.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4041,7 +4076,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/interactionsseeventinteraction.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/modeloutputstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4053,7 +4088,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/codeexecution.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/ranking.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4065,7 +4100,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/interactionstatusupdate.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/reviewsnippet.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4077,7 +4112,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/status.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/interactionsseeventinteraction.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4089,7 +4124,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/placecitation.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/codeexecution.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4101,7 +4136,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/usage.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/interactionstatusupdate.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4113,7 +4148,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/staticmediaprocessing.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/status.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4125,7 +4160,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/ragresource.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/placecitation.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4137,7 +4172,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/googlesearchcallstep.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/processingcallstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4149,7 +4184,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/mcpservertoolcalldelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/usage.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4161,7 +4196,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/filesearchresultstep.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/staticmediaprocessing.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4173,7 +4208,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/documentcontent.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/ragresource.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4185,7 +4220,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/textdelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/googlesearchcallstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4197,7 +4232,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/functioncallstep.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/mcpservertoolcalldelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4209,7 +4244,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/smarttranscriptionmode.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/filesearchresultstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4221,7 +4256,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/stepdeltametadata.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/documentcontent.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4233,7 +4268,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/imageresponseformat.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/textdelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4245,7 +4280,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/urlcontextresult.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/functioncallstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4257,7 +4292,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/urlcontextcallstep.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/smarttranscriptionmode.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4269,7 +4304,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/googlesearchcalldelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/stepdeltametadata.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4281,7 +4316,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/retrievalcallarguments.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/imageresponseformat.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4293,7 +4328,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/stepdelta.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/urlcontextresult.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4305,7 +4340,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/generationconfig.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/urlcontextcallstep.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4317,7 +4352,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/errorevent.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/googlesearchcalldelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4329,7 +4364,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/videocontent.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/retrievalcallarguments.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4341,7 +4376,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/groundingtoolcount.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/stepdelta.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4353,7 +4388,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/parallelaisearchconfig.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/generationconfig.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4365,7 +4400,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/interactions/empty.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/errorevent.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4377,7 +4412,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/triggers/triggerupdate.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/videocontent.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4389,7 +4424,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/triggers/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/groundingtoolcount.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4401,7 +4436,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/triggers/listtriggersresponse.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/parallelaisearchconfig.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4413,7 +4448,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/triggers/trigger.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/interactions/empty.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4425,7 +4460,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/triggers/triggercreateparams.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/triggers/triggerupdate.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4437,7 +4472,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/triggers/triggerexecution.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/triggers/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4449,7 +4484,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/types/triggers/listtriggerexecutionsresponse.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/triggers/listtriggersresponse.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4461,7 +4496,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/_gaos/lib/compat_errors.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/triggers/trigger.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4473,7 +4508,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/triggers/triggercreateparams.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4485,7 +4520,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/conftest.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/triggers/triggerexecution.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4497,7 +4532,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/pytest_helper.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/types/triggers/listtriggerexecutionsresponse.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4509,7 +4544,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_count_tokens.py",
+      "rel_path": "google_genai-2.21.0/google/genai/_gaos/lib/compat_errors.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4521,7 +4556,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4533,7 +4568,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_generate_content_cached_content.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/conftest.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4545,7 +4580,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_generate_content_thought.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/pytest_helper.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4557,7 +4592,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_delete.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_count_tokens.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4569,7 +4604,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_generate_content_http_options.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4581,7 +4616,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_get.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_generate_content_cached_content.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4593,7 +4628,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_generate_content_from_apikey.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_generate_content_thought.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4605,7 +4640,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_generate_images.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_delete.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4617,7 +4652,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_generate_content_model.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_generate_content_http_options.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4629,7 +4664,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_compute_tokens.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_get.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4641,7 +4676,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_generate_content_config_zero_value.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_generate_content_from_apikey.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4653,7 +4688,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_recontext_image.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_generate_images.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4665,7 +4700,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_list.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_generate_content_model.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4677,7 +4712,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_generate_content_multi_regional.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_compute_tokens.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4689,7 +4724,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_generate_videos.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_generate_content_config_zero_value.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4701,7 +4736,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_function_call_streaming.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_recontext_image.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4713,7 +4748,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_edit_image.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4725,7 +4760,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_generate_content.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_generate_content_multi_regional.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4737,7 +4772,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_generate_content_image_generation.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_generate_videos.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4749,7 +4784,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_update.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_function_call_streaming.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4761,7 +4796,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_embed_content.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_edit_image.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4773,7 +4808,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/models/test_segment_image.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_generate_content.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4785,7 +4820,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/caches/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_generate_content_image_generation.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4797,7 +4832,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/caches/test_delete.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_update.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4809,7 +4844,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/caches/test_get.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_embed_content.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4821,7 +4856,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/caches/test_get_custom_url.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/models/test_segment_image.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4833,7 +4868,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/caches/test_delete_custom_url.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/caches/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4845,7 +4880,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/caches/test_update_custom_url.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/caches/test_delete.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4857,7 +4892,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/caches/test_list.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/caches/test_get.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4869,7 +4904,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/caches/test_update.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/caches/test_get_custom_url.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4881,7 +4916,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/transformers/test_t_batch.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/caches/test_delete_custom_url.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4893,7 +4928,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/transformers/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/caches/test_update_custom_url.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4905,7 +4940,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/transformers/test_t_content.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/caches/test_list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4917,7 +4952,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/transformers/test_t_parts.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/caches/test_update.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4929,7 +4964,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/transformers/test_blobs.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/transformers/test_t_batch.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4941,7 +4976,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/transformers/test_function_responses.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/transformers/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4953,7 +4988,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/transformers/test_schema.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/transformers/test_t_content.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4965,7 +5000,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/transformers/test_bytes.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/transformers/test_t_parts.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4977,7 +5012,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/transformers/test_t_contents.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/transformers/test_blobs.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4989,7 +5024,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/transformers/test_t_part.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/transformers/test_function_responses.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5001,7 +5036,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/gaos/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/transformers/test_schema.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5013,7 +5048,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/gaos/test_triggers_lifecycle.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/transformers/test_bytes.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5025,7 +5060,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/gaos/test_environments_lifecycle.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/transformers/test_t_contents.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5037,7 +5072,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/client/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/transformers/test_t_part.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5049,7 +5084,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/client/test_http_options.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/gaos/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5061,7 +5096,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/client/test_retries.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/gaos/test_triggers_lifecycle.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5073,7 +5108,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/client/test_async_stream.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/gaos/test_environments_lifecycle.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5085,7 +5120,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/client/test_client_close.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/client/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5097,7 +5132,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/client/test_custom_client.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/client/test_http_options.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5109,7 +5144,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/client/test_client_requests.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/client/test_retries.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5121,7 +5156,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/client/test_replay_client_equality.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/client/test_async_stream.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5133,7 +5168,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/client/test_httpx2_client.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/client/test_client_close.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5145,7 +5180,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/common/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/client/test_custom_client.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5157,7 +5192,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/common/test_duck_type.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/client/test_client_requests.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5169,7 +5204,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/common/test_common.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/client/test_replay_client_equality.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5181,7 +5216,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/tunings/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/client/test_httpx2_client.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5193,7 +5228,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/tunings/test_tune.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/common/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5205,7 +5240,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/tunings/test_validate_reward.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/common/test_duck_type.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5217,7 +5252,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/tunings/test_get.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/common/test_common.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5229,7 +5264,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/tunings/test_end_to_end.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/tunings/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5241,7 +5276,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/tunings/test_list.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/tunings/test_tune.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5253,7 +5288,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/tunings/test_cancel.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/tunings/test_validate_reward.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5265,7 +5300,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/file_search_stores/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/tunings/test_get.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5277,7 +5312,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/file_search_stores/test_delete.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/tunings/test_end_to_end.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5289,7 +5324,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/file_search_stores/test_get.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/tunings/test_list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5301,7 +5336,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/file_search_stores/test_upload_to_file_search_store.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/tunings/test_cancel.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5313,7 +5348,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/file_search_stores/test_import_file.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/file_search_stores/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5325,7 +5360,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/file_search_stores/test_list.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/file_search_stores/test_delete.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5337,7 +5372,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/file_search_stores/test_multimodal_flow.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/file_search_stores/test_get.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5349,7 +5384,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/file_search_stores/test_create.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/file_search_stores/test_upload_to_file_search_store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5361,7 +5396,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/interactions/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/file_search_stores/test_import_file.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5373,7 +5408,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/interactions/test_httpx_compat.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/file_search_stores/test_list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5385,7 +5420,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/interactions/test_auth.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/file_search_stores/test_multimodal_flow.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5397,7 +5432,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/interactions/test_integration.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/file_search_stores/test_create.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5409,7 +5444,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/errors/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/interactions/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5421,7 +5456,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/errors/test_api_error.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/interactions/test_httpx_compat.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5433,7 +5468,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/interactions/test_auth.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5445,7 +5480,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/models/test_count_tokens.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/interactions/test_integration.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5457,7 +5492,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/models/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/errors/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5469,7 +5504,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/models/test_generate_images.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/errors/test_api_error.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5481,7 +5516,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/models/test_compute_tokens.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5493,7 +5528,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/models/test_recontext_image.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/models/test_count_tokens.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5505,7 +5540,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/models/test_list.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/models/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5517,7 +5552,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/models/test_generate_videos.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/models/test_generate_images.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5529,7 +5564,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/models/test_embed.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/models/test_compute_tokens.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5541,7 +5576,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/models/test_edit_image.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/models/test_recontext_image.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5553,7 +5588,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/models/test_generate_content.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/models/test_list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5565,7 +5600,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/models/test_generate_content_stream.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/models/test_generate_videos.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5577,7 +5612,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/models/test_segment_image.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/models/test_embed.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5589,7 +5624,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/caches/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/models/test_edit_image.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5601,7 +5636,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/caches/test_create_update_get.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/models/test_generate_content.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5613,7 +5648,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/caches/test_list.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/models/test_generate_content_stream.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5625,7 +5660,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/caches/test_create_get_delete.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/models/test_segment_image.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5637,7 +5672,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/tunings/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/caches/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5649,7 +5684,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/tunings/test_list.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/caches/test_create_update_get.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5661,7 +5696,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/tunings/test_create.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/caches/test_list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5673,7 +5708,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/tunings/test_create_get_cancel.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/caches/test_create_get_delete.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5685,7 +5720,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/files/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/tunings/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5697,7 +5732,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/files/test_list.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/tunings/test_list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5709,7 +5744,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/files/test_upload_get_delete.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/tunings/test_create.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5721,7 +5756,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/batches/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/tunings/test_create_get_cancel.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5733,7 +5768,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/batches/test_create_delete.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/files/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5745,7 +5780,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/batches/test_list.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/files/test_list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5757,7 +5792,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/batches/test_create_get_cancel.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/files/test_upload_get_delete.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5769,7 +5804,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/chats/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/batches/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5781,7 +5816,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/chats/test_send_message_stream.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/batches/test_create_delete.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5793,7 +5828,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/shared/chats/test_send_message.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/batches/test_list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5805,7 +5840,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/operations/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/batches/test_create_get_cancel.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5817,7 +5852,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/operations/test_get.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/chats/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5829,7 +5864,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/live/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/chats/test_send_message_stream.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5841,7 +5876,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/live/test_send_realtime_input.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/shared/chats/test_send_message.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5853,7 +5888,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/live/test_send_client_content.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/operations/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5865,7 +5900,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/live/test_live_response.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/operations/test_get.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5877,7 +5912,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/live/test_send_tool_response.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/live/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5889,7 +5924,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/types/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/live/test_send_realtime_input.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5901,7 +5936,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/types/test_future.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/live/test_send_client_content.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5913,7 +5948,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/types/test_part_type.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/live/test_live_response.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5925,7 +5960,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/types/test_schema_from_json_schema.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/live/test_send_tool_response.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5937,7 +5972,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/types/test_bytes_type.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/types/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5949,7 +5984,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/types/test_optional_types.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/types/test_future.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5961,7 +5996,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/types/test_schema_json_schema.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/types/test_part_type.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5973,7 +6008,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/types/test_bytes_internal.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/types/test_schema_from_json_schema.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5985,7 +6020,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/local_tokenizer/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/types/test_bytes_type.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -5997,7 +6032,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/local_tokenizer/test_local_tokenizer.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/types/test_optional_types.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6009,7 +6044,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/local_tokenizer/test_local_tokenizer_loader.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/types/test_schema_json_schema.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6021,7 +6056,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/documents/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/types/test_bytes_internal.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6033,7 +6068,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/documents/test_delete.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/local_tokenizer/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6045,7 +6080,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/documents/test_get.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/local_tokenizer/test_local_tokenizer.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6057,7 +6092,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/documents/test_list.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/local_tokenizer/test_local_tokenizer_loader.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6069,7 +6104,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/files/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/documents/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6081,7 +6116,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/files/test_register.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/documents/test_delete.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6093,7 +6128,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/files/test_delete.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/documents/test_get.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6105,7 +6140,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/files/test_get.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/documents/test_list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6117,7 +6152,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/files/test_list.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/files/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6129,7 +6164,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/files/test_download.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/files/test_register.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6141,7 +6176,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/files/test_register_table.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/files/test_delete.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6153,7 +6188,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/files/test_upload.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/files/test_get.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6165,7 +6200,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/batches/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/files/test_list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6177,7 +6212,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/batches/test_create_with_bigquery.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/files/test_register_table.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6189,7 +6224,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/batches/test_delete.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/files/test_upload.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6201,7 +6236,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/batches/test_get.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/batches/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6213,7 +6248,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/batches/test_create_with_vertex_dataset.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/batches/test_create_with_bigquery.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6225,7 +6260,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/batches/test_create_with_file.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/batches/test_delete.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6237,7 +6272,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/batches/test_list.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/batches/test_get.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6249,7 +6284,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/batches/test_embedding.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/batches/test_create_with_vertex_dataset.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6261,7 +6296,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/batches/test_cancel.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/batches/test_create_with_file.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6273,7 +6308,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/batches/test_create.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/batches/test_list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6285,7 +6320,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/batches/test_create_with_gcs.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/batches/test_embedding.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6297,7 +6332,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/afc/test_get_max_remote_calls_for_afc.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/batches/test_cancel.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6309,7 +6344,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/afc/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/batches/test_create.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6321,7 +6356,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/afc/test_convert_if_exist_pydantic_model.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/batches/test_create_with_gcs.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6333,7 +6368,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/afc/test_generate_content_stream_afc_thoughts.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/afc/test_get_max_remote_calls_for_afc.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6345,7 +6380,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/afc/test_should_append_afc_history.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/afc/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6357,7 +6392,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/afc/test_convert_number_values_for_function_call_args.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/afc/test_convert_if_exist_pydantic_model.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6369,7 +6404,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/afc/test_generate_content_stream_afc.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/afc/test_generate_content_stream_afc_thoughts.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6381,7 +6416,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/afc/test_should_disable_afc.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/afc/test_should_append_afc_history.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6393,7 +6428,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/afc/test_invoke_function_from_dict_args.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/afc/test_convert_number_values_for_function_call_args.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6405,7 +6440,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/afc/test_raise_error_for_afc_incompatible_config.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/afc/test_generate_content_stream_afc.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6417,7 +6452,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/afc/test_get_usage_header.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/afc/test_should_disable_afc.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6429,7 +6464,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/tokens/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/afc/test_invoke_function_from_dict_args.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6441,7 +6476,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/tokens/test_create.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/afc/test_raise_error_for_afc_incompatible_config.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6453,7 +6488,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/mcp/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/afc/test_get_usage_header.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6465,7 +6500,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/chats/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/tokens/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6477,7 +6512,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/chats/test_get_history.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/tokens/test_create.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6489,7 +6524,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/chats/test_validate_response.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/mcp/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6501,7 +6536,7 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/public_samples/__init__.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/chats/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6513,7 +6548,43 @@
       "signals": []
     },
     {
-      "rel_path": "google_genai-2.20.0/google/genai/tests/public_samples/test_gemini_text_only.py",
+      "rel_path": "google_genai-2.21.0/google/genai/tests/chats/test_get_history.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "google_genai-2.21.0/google/genai/tests/chats/test_validate_response.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "google_genai-2.21.0/google/genai/tests/public_samples/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "google_genai-2.21.0/google/genai/tests/public_samples/test_gemini_text_only.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -6524,5 +6595,18 @@
       "dangerous_exec": [],
       "signals": []
     }
-  ]
+  ],
+  "build_surface": {
+    "total": 3,
+    "counts": {
+      "build": 2,
+      "ci": 0,
+      "packaging": 1,
+      "dependency": 0,
+      "hook": 0,
+      "fetch": 0
+    },
+    "hooks": [],
+    "fetchers": []
+  }
 }

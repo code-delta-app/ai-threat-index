@@ -6,6 +6,8 @@
     "high_files": 0,
     "elevated_files": 4,
     "normal_files": 103,
+    "flagged_ai_files": 2,
+    "flagged_exec_only_files": 2,
     "mode": "snapshot",
     "summary_text": "Scanned 107 file(s). 0 HIGH, 4 ELEVATED. "
   },
@@ -13,6 +15,10 @@
   "agent_artifacts": {
     "table_version": 1,
     "tier3_count": 0,
+    "items": []
+  },
+  "committed_credentials": {
+    "count": 0,
     "items": []
   },
   "files": [
@@ -1322,5 +1328,18 @@
       "dangerous_exec": [],
       "signals": []
     }
-  ]
+  ],
+  "build_surface": {
+    "total": 6,
+    "counts": {
+      "build": 5,
+      "ci": 0,
+      "packaging": 1,
+      "dependency": 0,
+      "hook": 0,
+      "fetch": 0
+    },
+    "hooks": [],
+    "fetchers": []
+  }
 }

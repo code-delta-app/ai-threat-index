@@ -6,6 +6,8 @@
     "high_files": 29,
     "elevated_files": 325,
     "normal_files": 274,
+    "flagged_ai_files": 354,
+    "flagged_exec_only_files": 0,
     "mode": "snapshot",
     "summary_text": "Scanned 628 file(s). 29 HIGH, 325 ELEVATED. AI SDKs detected: strands, google.genai, http:bedrock-runtime, OpenAI. "
   },
@@ -45,6 +47,10 @@
         "path": "strands_agents-1.54.0/CLAUDE.md"
       }
     ]
+  },
+  "committed_credentials": {
+    "count": 0,
+    "items": []
   },
   "files": [
     {
@@ -9247,5 +9253,18 @@
       "dangerous_exec": [],
       "signals": []
     }
-  ]
+  ],
+  "build_surface": {
+    "total": 1,
+    "counts": {
+      "build": 1,
+      "ci": 0,
+      "packaging": 0,
+      "dependency": 0,
+      "hook": 0,
+      "fetch": 0
+    },
+    "hooks": [],
+    "fetchers": []
+  }
 }

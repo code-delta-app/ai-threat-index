@@ -6,6 +6,8 @@
     "high_files": 14,
     "elevated_files": 47,
     "normal_files": 540,
+    "flagged_ai_files": 61,
+    "flagged_exec_only_files": 0,
     "mode": "snapshot",
     "summary_text": "Scanned 601 file(s). 14 HIGH, 47 ELEVATED. AI SDKs detected: Groq, groq, openai, mistralai. "
   },
@@ -43,6 +45,10 @@
   "agent_artifacts": {
     "table_version": 1,
     "tier3_count": 0,
+    "items": []
+  },
+  "committed_credentials": {
+    "count": 0,
     "items": []
   },
   "files": [
@@ -7645,5 +7651,18 @@
       "dangerous_exec": [],
       "signals": []
     }
-  ]
+  ],
+  "build_surface": {
+    "total": 3,
+    "counts": {
+      "build": 2,
+      "ci": 0,
+      "packaging": 1,
+      "dependency": 0,
+      "hook": 0,
+      "fetch": 0
+    },
+    "hooks": [],
+    "fetchers": []
+  }
 }

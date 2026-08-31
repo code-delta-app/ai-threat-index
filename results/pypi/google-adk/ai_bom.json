@@ -1,7 +1,7 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
-  "spec_version": "1.1",
-  "generated": "2026-08-31T20:14:49.645607Z",
+  "spec_version": "1.2",
+  "generated": "2026-08-31T22:53:59.491074Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
@@ -13,7 +13,8 @@
     "critical": 0,
     "high": 52,
     "elevated": 277,
-    "providers": 17,
+    "providers": 6,
+    "frameworks": 5,
     "foreign_egress_files": 0,
     "non_allied_jurisdiction_files": 0,
     "cost_risk_files": 0,
@@ -24,9 +25,13 @@
   "providers": [
     {
       "name": "google.genai",
+      "canonical": "google.genai",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "google.genai"
+      ],
       "file_count": 182,
       "files": [
         "google_adk-2.8.0/src/google/adk/a2a/converters/event_converter.py",
@@ -215,9 +220,13 @@
     },
     {
       "name": "google.adk",
+      "canonical": "google.adk",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "google.adk"
+      ],
       "file_count": 122,
       "files": [
         "google_adk-2.8.0/src/google/adk/a2a/agent/interceptors/new_integration_extension.py",
@@ -345,10 +354,14 @@
       ]
     },
     {
-      "name": "vertexai",
+      "name": "Google",
+      "canonical": "google",
       "type": "sdk",
       "jurisdiction": "US",
       "sovereignty_risk": false,
+      "seen_as": [
+        "vertexai"
+      ],
       "file_count": 16,
       "files": [
         "google_adk-2.8.0/src/google/adk/cli/cli_deploy.py",
@@ -370,10 +383,64 @@
       ]
     },
     {
-      "name": "mcp",
+      "name": "OpenAI",
+      "canonical": "openai",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "OpenAI",
+        "openai"
+      ],
+      "file_count": 3,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/labs/openai/_openai_llm.py",
+        "google_adk-2.8.0/src/google/adk/labs/openai/_openai_responses_llm.py",
+        "google_adk-2.8.0/src/google/adk/models/apigee_llm.py"
+      ]
+    },
+    {
+      "name": "Anthropic",
+      "canonical": "anthropic",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "Anthropic",
+        "anthropic"
+      ],
+      "file_count": 1,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/models/anthropic_llm.py"
+      ]
+    },
+    {
+      "name": "DeepSeek",
+      "canonical": "deepseek",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "DeepSeek"
+      ],
+      "file_count": 1,
+      "files": [
+        "google_adk-2.8.0/src/google/adk/models/lite_llm.py"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "MCP",
+      "canonical": "mcp",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "FastMCP",
+        "MCP",
+        "mcp"
+      ],
       "file_count": 9,
       "files": [
         "google_adk-2.8.0/src/google/adk/agents/mcp_instruction_provider.py",
@@ -388,58 +455,35 @@
       ]
     },
     {
-      "name": "LiteLlm",
+      "name": "LiteLLM",
+      "canonical": "litellm",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
-      "file_count": 5,
+      "seen_as": [
+        "LiteLLM",
+        "LiteLlm",
+        "litellm"
+      ],
+      "file_count": 6,
       "files": [
         "google_adk-2.8.0/src/google/adk/flows/llm_flows/contents.py",
         "google_adk-2.8.0/src/google/adk/models/__init__.py",
         "google_adk-2.8.0/src/google/adk/models/gemma_llm.py",
+        "google_adk-2.8.0/src/google/adk/models/lite_llm.py",
         "google_adk-2.8.0/src/google/adk/models/registry.py",
         "google_adk-2.8.0/src/google/adk/utils/output_schema_utils.py"
       ]
     },
     {
-      "name": "MCP",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 3,
-      "files": [
-        "google_adk-2.8.0/src/google/adk/tools/mcp_tool/_agent_to_mcp.py",
-        "google_adk-2.8.0/src/google/adk/tools/mcp_tool/mcp_tool.py",
-        "google_adk-2.8.0/src/google/adk/tools/mcp_tool/mcp_toolset.py"
-      ]
-    },
-    {
-      "name": "OpenAI",
+      "name": "LlamaIndex",
+      "canonical": "llama_index",
       "type": "sdk",
       "jurisdiction": "US",
       "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "google_adk-2.8.0/src/google/adk/labs/openai/_openai_llm.py",
-        "google_adk-2.8.0/src/google/adk/models/apigee_llm.py"
-      ]
-    },
-    {
-      "name": "litellm",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "google_adk-2.8.0/src/google/adk/models/lite_llm.py",
-        "google_adk-2.8.0/src/google/adk/models/registry.py"
-      ]
-    },
-    {
-      "name": "llama_index",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
+      "seen_as": [
+        "llama_index"
+      ],
       "file_count": 2,
       "files": [
         "google_adk-2.8.0/src/google/adk/tools/retrieval/files_retrieval.py",
@@ -447,81 +491,28 @@
       ]
     },
     {
-      "name": "openai",
+      "name": "CrewAI",
+      "canonical": "crewai",
       "type": "sdk",
       "jurisdiction": "US",
       "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "google_adk-2.8.0/src/google/adk/labs/openai/_openai_llm.py",
-        "google_adk-2.8.0/src/google/adk/labs/openai/_openai_responses_llm.py"
-      ]
-    },
-    {
-      "name": "Anthropic",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "google_adk-2.8.0/src/google/adk/models/anthropic_llm.py"
-      ]
-    },
-    {
-      "name": "DeepSeek",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "google_adk-2.8.0/src/google/adk/models/lite_llm.py"
-      ]
-    },
-    {
-      "name": "FastMCP",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "google_adk-2.8.0/src/google/adk/tools/mcp_tool/_agent_to_mcp.py"
-      ]
-    },
-    {
-      "name": "LiteLLM",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "google_adk-2.8.0/src/google/adk/models/lite_llm.py"
-      ]
-    },
-    {
-      "name": "anthropic",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "google_adk-2.8.0/src/google/adk/models/anthropic_llm.py"
-      ]
-    },
-    {
-      "name": "crewai",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
+      "seen_as": [
+        "crewai"
+      ],
       "file_count": 1,
       "files": [
         "google_adk-2.8.0/src/google/adk/integrations/crewai/crewai_tool.py"
       ]
     },
     {
-      "name": "langchain",
+      "name": "LangChain",
+      "canonical": "langchain",
       "type": "sdk",
       "jurisdiction": "US",
       "sovereignty_risk": false,
+      "seen_as": [
+        "langchain"
+      ],
       "file_count": 1,
       "files": [
         "google_adk-2.8.0/src/google/adk/integrations/langchain/langchain_tool.py"

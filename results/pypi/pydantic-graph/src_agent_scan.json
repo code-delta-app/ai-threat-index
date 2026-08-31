@@ -6,6 +6,8 @@
     "high_files": 0,
     "elevated_files": 2,
     "normal_files": 12,
+    "flagged_ai_files": 2,
+    "flagged_exec_only_files": 0,
     "mode": "snapshot",
     "summary_text": "Scanned 14 file(s). 0 HIGH, 2 ELEVATED. AI SDKs detected: pydantic_ai. "
   },
@@ -15,6 +17,10 @@
   "agent_artifacts": {
     "table_version": 1,
     "tier3_count": 0,
+    "items": []
+  },
+  "committed_credentials": {
+    "count": 0,
     "items": []
   },
   "files": [
@@ -194,5 +200,18 @@
       "dangerous_exec": [],
       "signals": []
     }
-  ]
+  ],
+  "build_surface": {
+    "total": 1,
+    "counts": {
+      "build": 1,
+      "ci": 0,
+      "packaging": 0,
+      "dependency": 0,
+      "hook": 0,
+      "fetch": 0
+    },
+    "hooks": [],
+    "fetchers": []
+  }
 }

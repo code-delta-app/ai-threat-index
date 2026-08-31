@@ -1,7 +1,7 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
-  "spec_version": "1.1",
-  "generated": "2026-08-31T20:13:46.520000Z",
+  "spec_version": "1.2",
+  "generated": "2026-08-31T22:52:27.189006Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
@@ -13,7 +13,8 @@
     "critical": 0,
     "high": 3,
     "elevated": 35,
-    "providers": 15,
+    "providers": 8,
+    "frameworks": 4,
     "foreign_egress_files": 3,
     "non_allied_jurisdiction_files": 1,
     "cost_risk_files": 0,
@@ -23,10 +24,14 @@
   },
   "providers": [
     {
-      "name": "openai",
+      "name": "OpenAI",
+      "canonical": "openai",
       "type": "sdk",
       "jurisdiction": "US",
       "sovereignty_risk": false,
+      "seen_as": [
+        "openai"
+      ],
       "file_count": 12,
       "files": [
         "browser_use-0.13.8/browser_use/agent/views.py",
@@ -44,10 +49,14 @@
       ]
     },
     {
-      "name": "groq",
+      "name": "Groq",
+      "canonical": "groq",
       "type": "sdk",
       "jurisdiction": "US",
       "sovereignty_risk": false,
+      "seen_as": [
+        "groq"
+      ],
       "file_count": 4,
       "files": [
         "browser_use-0.13.8/browser_use/llm/groq/chat.py",
@@ -57,23 +66,15 @@
       ]
     },
     {
-      "name": "mcp",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 4,
-      "files": [
-        "browser_use-0.13.8/browser_use/mcp/cli_mcp.py",
-        "browser_use-0.13.8/browser_use/mcp/client.py",
-        "browser_use-0.13.8/browser_use/mcp/controller.py",
-        "browser_use-0.13.8/browser_use/mcp/server.py"
-      ]
-    },
-    {
-      "name": "anthropic",
+      "name": "Anthropic",
+      "canonical": "anthropic",
       "type": "sdk",
       "jurisdiction": "US",
       "sovereignty_risk": false,
+      "seen_as": [
+        "Anthropic",
+        "anthropic"
+      ],
       "file_count": 3,
       "files": [
         "browser_use-0.13.8/browser_use/llm/anthropic/chat.py",
@@ -83,45 +84,52 @@
     },
     {
       "name": "openrouter.ai",
+      "canonical": "openrouter.ai",
       "type": "endpoint",
       "jurisdiction": "US",
       "sovereignty_risk": false,
+      "seen_as": [
+        "http:openrouter.ai"
+      ],
       "file_count": 3,
       "files": [
         "browser_use-0.13.8/browser_use/llm/openrouter/chat.py",
         "browser_use-0.13.8/browser_use/tokens/openrouter_pricing.py",
         "browser_use-0.13.8/browser_use/tokens/service.py"
       ],
-      "endpoint": "openrouter.ai"
-    },
-    {
-      "name": "MCP",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "browser_use-0.13.8/browser_use/mcp/client.py",
-        "browser_use-0.13.8/browser_use/mcp/server.py"
+      "endpoint": "openrouter.ai",
+      "endpoints": [
+        "openrouter.ai"
       ]
     },
     {
-      "name": "api.mistral.ai",
+      "name": "Mistral AI",
+      "canonical": "mistralai",
       "type": "endpoint",
       "jurisdiction": "FR",
       "sovereignty_risk": false,
+      "seen_as": [
+        "http:api.mistral.ai"
+      ],
       "file_count": 2,
       "files": [
         "browser_use-0.13.8/browser_use/llm/mistral/chat.py",
         "browser_use-0.13.8/browser_use/llm/models.py"
       ],
-      "endpoint": "api.mistral.ai"
+      "endpoint": "api.mistral.ai",
+      "endpoints": [
+        "api.mistral.ai"
+      ]
     },
     {
       "name": "google.genai",
+      "canonical": "google.genai",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "google.genai"
+      ],
       "file_count": 2,
       "files": [
         "browser_use-0.13.8/browser_use/llm/google/chat.py",
@@ -129,10 +137,70 @@
       ]
     },
     {
-      "name": "langchain",
+      "name": "AWS Bedrock",
+      "canonical": "bedrock",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "http:bedrock-runtime"
+      ],
+      "file_count": 1,
+      "files": [
+        "browser_use-0.13.8/browser_use/llm/aws/chat_bedrock.py"
+      ],
+      "endpoint": "bedrock-runtime",
+      "endpoints": [
+        "bedrock-runtime"
+      ]
+    },
+    {
+      "name": "DeepSeek",
+      "canonical": "deepseek",
+      "type": "endpoint",
+      "jurisdiction": "CN",
+      "sovereignty_risk": true,
+      "seen_as": [
+        "http:api.deepseek.com"
+      ],
+      "file_count": 1,
+      "files": [
+        "browser_use-0.13.8/browser_use/llm/deepseek/chat.py"
+      ],
+      "endpoint": "api.deepseek.com",
+      "endpoints": [
+        "api.deepseek.com"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "MCP",
+      "canonical": "mcp",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "MCP",
+        "mcp"
+      ],
+      "file_count": 4,
+      "files": [
+        "browser_use-0.13.8/browser_use/mcp/cli_mcp.py",
+        "browser_use-0.13.8/browser_use/mcp/client.py",
+        "browser_use-0.13.8/browser_use/mcp/controller.py",
+        "browser_use-0.13.8/browser_use/mcp/server.py"
+      ]
+    },
+    {
+      "name": "LangChain",
+      "canonical": "langchain",
       "type": "sdk",
       "jurisdiction": "US",
       "sovereignty_risk": false,
+      "seen_as": [
+        "langchain"
+      ],
       "file_count": 2,
       "files": [
         "browser_use-0.13.8/browser_use/llm/__init__.py",
@@ -140,66 +208,34 @@
       ]
     },
     {
-      "name": "ollama",
+      "name": "LiteLLM",
+      "canonical": "litellm",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "LiteLLM",
+        "litellm"
+      ],
       "file_count": 2,
       "files": [
-        "browser_use-0.13.8/browser_use/llm/ollama/chat.py",
-        "browser_use-0.13.8/browser_use/llm/ollama/serializer.py"
-      ]
-    },
-    {
-      "name": "Anthropic",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "browser_use-0.13.8/browser_use/llm/anthropic/chat.py"
-      ]
-    },
-    {
-      "name": "LiteLLM",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
+        "browser_use-0.13.8/browser_use/llm/litellm/chat.py",
         "browser_use-0.13.8/browser_use/tokens/service.py"
       ]
     },
     {
-      "name": "api.deepseek.com",
-      "type": "endpoint",
-      "jurisdiction": "CN",
-      "sovereignty_risk": true,
-      "file_count": 1,
-      "files": [
-        "browser_use-0.13.8/browser_use/llm/deepseek/chat.py"
-      ],
-      "endpoint": "api.deepseek.com"
-    },
-    {
-      "name": "bedrock-runtime",
-      "type": "endpoint",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "browser_use-0.13.8/browser_use/llm/aws/chat_bedrock.py"
-      ],
-      "endpoint": "bedrock-runtime"
-    },
-    {
-      "name": "litellm",
+      "name": "Ollama (local runtime)",
+      "canonical": "ollama",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
-      "file_count": 1,
+      "seen_as": [
+        "ollama"
+      ],
+      "file_count": 2,
       "files": [
-        "browser_use-0.13.8/browser_use/llm/litellm/chat.py"
+        "browser_use-0.13.8/browser_use/llm/ollama/chat.py",
+        "browser_use-0.13.8/browser_use/llm/ollama/serializer.py"
       ]
     }
   ],

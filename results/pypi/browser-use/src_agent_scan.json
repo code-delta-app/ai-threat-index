@@ -6,6 +6,8 @@
     "high_files": 3,
     "elevated_files": 35,
     "normal_files": 122,
+    "flagged_ai_files": 38,
+    "flagged_exec_only_files": 0,
     "mode": "snapshot",
     "summary_text": "Scanned 160 file(s). 3 HIGH, 35 ELEVATED. AI SDKs detected: openai, groq, langchain, http:api.mistral.ai. "
   },
@@ -29,6 +31,10 @@
   "agent_artifacts": {
     "table_version": 1,
     "tier3_count": 0,
+    "items": []
+  },
+  "committed_credentials": {
+    "count": 0,
     "items": []
   },
   "files": [
@@ -2147,5 +2153,18 @@
       "dangerous_exec": [],
       "signals": []
     }
-  ]
+  ],
+  "build_surface": {
+    "total": 1,
+    "counts": {
+      "build": 1,
+      "ci": 0,
+      "packaging": 0,
+      "dependency": 0,
+      "hook": 0,
+      "fetch": 0
+    },
+    "hooks": [],
+    "fetchers": []
+  }
 }

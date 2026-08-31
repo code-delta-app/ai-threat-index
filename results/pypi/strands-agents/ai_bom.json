@@ -1,7 +1,7 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
-  "spec_version": "1.1",
-  "generated": "2026-08-31T20:14:10.901738Z",
+  "spec_version": "1.2",
+  "generated": "2026-08-31T22:53:03.503670Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
@@ -13,7 +13,8 @@
     "critical": 0,
     "high": 29,
     "elevated": 325,
-    "providers": 19,
+    "providers": 8,
+    "frameworks": 4,
     "foreign_egress_files": 3,
     "non_allied_jurisdiction_files": 0,
     "cost_risk_files": 0,
@@ -23,11 +24,162 @@
   },
   "providers": [
     {
-      "name": "strands",
+      "name": "OpenAI",
+      "canonical": "openai",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "OpenAI",
+        "http:api.openai.com",
+        "openai"
+      ],
+      "file_count": 9,
+      "files": [
+        "strands_agents-1.54.0/src/strands/experimental/bidi/models/openai_realtime.py",
+        "strands_agents-1.54.0/src/strands/models/openai.py",
+        "strands_agents-1.54.0/src/strands/models/openai_responses.py",
+        "strands_agents-1.54.0/tests/strands/experimental/bidi/models/test_openai_realtime.py",
+        "strands_agents-1.54.0/tests/strands/models/test_openai.py",
+        "strands_agents-1.54.0/tests/strands/models/test_openai_responses.py",
+        "strands_agents-1.54.0/tests_integ/models/test_model_openai.py",
+        "strands_agents-1.54.0/tests_integ/test_session.py",
+        "strands_agents-1.54.0/tests_integ/test_snapshot_session.py"
+      ],
+      "endpoint": "api.openai.com",
+      "endpoints": [
+        "api.openai.com"
+      ]
+    },
+    {
+      "name": "Swarm",
+      "canonical": "swarm",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
-      "file_count": 331,
+      "seen_as": [
+        "Swarm",
+        "swarm"
+      ],
+      "file_count": 4,
+      "files": [
+        "strands_agents-1.54.0/src/strands/multiagent/__init__.py",
+        "strands_agents-1.54.0/src/strands/multiagent/swarm.py",
+        "strands_agents-1.54.0/tests/strands/hooks/test_multi_agent_hooks.py",
+        "strands_agents-1.54.0/tests_integ/test_multiagent_swarm.py"
+      ]
+    },
+    {
+      "name": "AWS Bedrock",
+      "canonical": "bedrock",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "http:bedrock-runtime"
+      ],
+      "file_count": 3,
+      "files": [
+        "strands_agents-1.54.0/src/strands/experimental/bidi/models/nova_sonic.py",
+        "strands_agents-1.54.0/src/strands/models/bedrock.py",
+        "strands_agents-1.54.0/tests/strands/models/test_bedrock.py"
+      ],
+      "endpoint": "bedrock-runtime",
+      "endpoints": [
+        "bedrock-runtime"
+      ]
+    },
+    {
+      "name": "Anthropic",
+      "canonical": "anthropic",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "anthropic"
+      ],
+      "file_count": 2,
+      "files": [
+        "strands_agents-1.54.0/src/strands/models/anthropic.py",
+        "strands_agents-1.54.0/tests/strands/models/test_anthropic.py"
+      ]
+    },
+    {
+      "name": "Cohere",
+      "canonical": "cohere",
+      "type": "endpoint",
+      "jurisdiction": "CA",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "http:api.cohere.com"
+      ],
+      "file_count": 2,
+      "files": [
+        "strands_agents-1.54.0/tests_integ/models/providers.py",
+        "strands_agents-1.54.0/tests_integ/models/test_model_cohere.py"
+      ],
+      "endpoint": "api.cohere.com",
+      "endpoints": [
+        "api.cohere.com"
+      ]
+    },
+    {
+      "name": "google.genai",
+      "canonical": "google.genai",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "google.genai"
+      ],
+      "file_count": 2,
+      "files": [
+        "strands_agents-1.54.0/src/strands/experimental/bidi/models/gemini_live.py",
+        "strands_agents-1.54.0/tests/strands/experimental/bidi/models/test_gemini_live.py"
+      ]
+    },
+    {
+      "name": "writerai",
+      "canonical": "writerai",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "writerai"
+      ],
+      "file_count": 2,
+      "files": [
+        "strands_agents-1.54.0/src/strands/models/writer.py",
+        "strands_agents-1.54.0/tests/strands/models/test_writer.py"
+      ]
+    },
+    {
+      "name": "Mistral AI",
+      "canonical": "mistralai",
+      "type": "sdk",
+      "jurisdiction": "FR",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "mistralai"
+      ],
+      "file_count": 1,
+      "files": [
+        "strands_agents-1.54.0/src/strands/models/mistral.py"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "Strands Agents",
+      "canonical": "strands",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "Strands",
+        "strands"
+      ],
+      "file_count": 332,
       "files": [
         "strands_agents-1.54.0/src/strands/agent/_agent_as_tool.py",
         "strands_agents-1.54.0/src/strands/agent/_agent_delegation.py",
@@ -51,6 +203,7 @@
         "strands_agents-1.54.0/src/strands/interventions/__init__.py",
         "strands_agents-1.54.0/src/strands/memory/memory_manager.py",
         "strands_agents-1.54.0/src/strands/models/bedrock.py",
+        "strands_agents-1.54.0/src/strands/multiagent/a2a/server.py",
         "strands_agents-1.54.0/src/strands/plugins/multiagent_plugin.py",
         "strands_agents-1.54.0/src/strands/plugins/plugin.py",
         "strands_agents-1.54.0/src/strands/sandbox/__init__.py",
@@ -363,10 +516,16 @@
       ]
     },
     {
-      "name": "mcp",
+      "name": "MCP",
+      "canonical": "mcp",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "FastMCP",
+        "MCP",
+        "mcp"
+      ],
       "file_count": 20,
       "files": [
         "strands_agents-1.54.0/src/strands/tools/mcp/mcp_agent_tool.py",
@@ -392,144 +551,15 @@
       ]
     },
     {
-      "name": "openai",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 7,
-      "files": [
-        "strands_agents-1.54.0/src/strands/models/openai.py",
-        "strands_agents-1.54.0/src/strands/models/openai_responses.py",
-        "strands_agents-1.54.0/tests/strands/models/test_openai.py",
-        "strands_agents-1.54.0/tests/strands/models/test_openai_responses.py",
-        "strands_agents-1.54.0/tests_integ/models/test_model_openai.py",
-        "strands_agents-1.54.0/tests_integ/test_session.py",
-        "strands_agents-1.54.0/tests_integ/test_snapshot_session.py"
-      ]
-    },
-    {
-      "name": "FastMCP",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 3,
-      "files": [
-        "strands_agents-1.54.0/tests_integ/mcp/echo_server.py",
-        "strands_agents-1.54.0/tests_integ/mcp/elicitation_server.py",
-        "strands_agents-1.54.0/tests_integ/mcp/test_mcp_client.py"
-      ]
-    },
-    {
-      "name": "OpenAI",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 3,
-      "files": [
-        "strands_agents-1.54.0/src/strands/experimental/bidi/models/openai_realtime.py",
-        "strands_agents-1.54.0/src/strands/models/openai_responses.py",
-        "strands_agents-1.54.0/tests/strands/experimental/bidi/models/test_openai_realtime.py"
-      ]
-    },
-    {
-      "name": "Swarm",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 3,
-      "files": [
-        "strands_agents-1.54.0/src/strands/multiagent/__init__.py",
-        "strands_agents-1.54.0/tests/strands/hooks/test_multi_agent_hooks.py",
-        "strands_agents-1.54.0/tests_integ/test_multiagent_swarm.py"
-      ]
-    },
-    {
-      "name": "api.openai.com",
-      "type": "endpoint",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 3,
-      "files": [
-        "strands_agents-1.54.0/src/strands/experimental/bidi/models/openai_realtime.py",
-        "strands_agents-1.54.0/tests/strands/models/test_openai.py",
-        "strands_agents-1.54.0/tests/strands/models/test_openai_responses.py"
-      ],
-      "endpoint": "api.openai.com"
-    },
-    {
-      "name": "bedrock-runtime",
-      "type": "endpoint",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 3,
-      "files": [
-        "strands_agents-1.54.0/src/strands/experimental/bidi/models/nova_sonic.py",
-        "strands_agents-1.54.0/src/strands/models/bedrock.py",
-        "strands_agents-1.54.0/tests/strands/models/test_bedrock.py"
-      ],
-      "endpoint": "bedrock-runtime"
-    },
-    {
       "name": "LiteLLM",
+      "canonical": "litellm",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "strands_agents-1.54.0/src/strands/models/litellm.py",
-        "strands_agents-1.54.0/tests/strands/models/test_litellm.py"
-      ]
-    },
-    {
-      "name": "MCP",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "strands_agents-1.54.0/src/strands/tools/mcp/mcp_client.py",
-        "strands_agents-1.54.0/src/strands/tools/mcp/mcp_instrumentation.py"
-      ]
-    },
-    {
-      "name": "anthropic",
-      "type": "sdk",
-      "jurisdiction": "US",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "strands_agents-1.54.0/src/strands/models/anthropic.py",
-        "strands_agents-1.54.0/tests/strands/models/test_anthropic.py"
-      ]
-    },
-    {
-      "name": "api.cohere.com",
-      "type": "endpoint",
-      "jurisdiction": "CA",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "strands_agents-1.54.0/tests_integ/models/providers.py",
-        "strands_agents-1.54.0/tests_integ/models/test_model_cohere.py"
+      "seen_as": [
+        "LiteLLM",
+        "litellm"
       ],
-      "endpoint": "api.cohere.com"
-    },
-    {
-      "name": "google.genai",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "strands_agents-1.54.0/src/strands/experimental/bidi/models/gemini_live.py",
-        "strands_agents-1.54.0/tests/strands/experimental/bidi/models/test_gemini_live.py"
-      ]
-    },
-    {
-      "name": "litellm",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
       "file_count": 2,
       "files": [
         "strands_agents-1.54.0/src/strands/models/litellm.py",
@@ -537,55 +567,18 @@
       ]
     },
     {
-      "name": "ollama",
+      "name": "Ollama (local runtime)",
+      "canonical": "ollama",
       "type": "sdk",
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
+      "seen_as": [
+        "ollama"
+      ],
       "file_count": 2,
       "files": [
         "strands_agents-1.54.0/src/strands/models/ollama.py",
         "strands_agents-1.54.0/tests/strands/models/test_ollama.py"
-      ]
-    },
-    {
-      "name": "writerai",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 2,
-      "files": [
-        "strands_agents-1.54.0/src/strands/models/writer.py",
-        "strands_agents-1.54.0/tests/strands/models/test_writer.py"
-      ]
-    },
-    {
-      "name": "Strands",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "strands_agents-1.54.0/src/strands/multiagent/a2a/server.py"
-      ]
-    },
-    {
-      "name": "mistralai",
-      "type": "sdk",
-      "jurisdiction": "FR",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "strands_agents-1.54.0/src/strands/models/mistral.py"
-      ]
-    },
-    {
-      "name": "swarm",
-      "type": "sdk",
-      "jurisdiction": "unspecified",
-      "sovereignty_risk": false,
-      "file_count": 1,
-      "files": [
-        "strands_agents-1.54.0/src/strands/multiagent/swarm.py"
       ]
     }
   ],
