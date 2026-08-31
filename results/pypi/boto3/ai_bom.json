@@ -1,7 +1,7 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.1",
-  "generated": "2026-08-31T19:03:07.963625Z",
+  "generated": "2026-08-31T19:31:21.113226Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
@@ -26,7 +26,7 @@
   "committed_credentials": [
     {
       "kind": "AWS access key ID",
-      "file": "boto3-1.43.83/boto3/examples/cloudfront.rst",
+      "file": "boto3-1.43.84/boto3/examples/cloudfront.rst",
       "line": 25,
       "sample": "AKIAIOSF\u2026 (20 chars)"
     }

@@ -1,0 +1,133 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+langchain-1.3.18/langchain/agents/factory.py,Python,100,HIGH,0,0,from langchain,StateGraph; add_edge(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(StateGraph,add_edge(); dynamic_import(x1)"
+langchain-1.3.18/langchain/agents/middleware/tool_selection.py,Python,98,HIGH,0,2,from langchain,hand_rolled_loop,,ai_sdk_import(1_sdk(s)_detected); agent_loop(ai_call_inside_loop); cost_risk(ai_calls_inside_loop); prompt_injection_partial(2)
+langchain-1.3.18/tests/unit_tests/agents/test_react_agent.py,Python,98,HIGH,0,1,from langchain,StateGraph; agent.invoke(; add_node(; add_edge(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(StateGraph,agent.invoke(); prompt_injection_partial(1)"
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_tool_retry.py,Python,98,HIGH,0,2,from langchain,agent.invoke(,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(agent.invoke(); prompt_injection_partial(2)
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_tool_emulator.py,Python,90,HIGH,0,0,from langchain,,eval/exec found (1 occurrence(s)),ai_sdk_import(1_sdk(s)_detected); dynamic_execution(eval/exec_x1)
+langchain-1.3.18/tests/unit_tests/agents/test_create_agent_tool_validation.py,Python,80,HIGH,0,0,from langchain,agent.invoke(,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(agent.invoke()
+langchain-1.3.18/tests/unit_tests/agents/test_subagent_transformer.py,Python,80,HIGH,0,0,from langchain,StateGraph,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(StateGraph)
+langchain-1.3.18/tests/unit_tests/agents/test_state_schema.py,Python,80,HIGH,0,0,from langchain,agent.invoke(,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(agent.invoke()
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_summarization.py,Python,80,HIGH,0,0,from langchain,hand_rolled_loop,,ai_sdk_import(1_sdk(s)_detected); agent_loop(ai_call_inside_loop); cost_risk(ai_calls_inside_loop)
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_model_call_limit.py,Python,80,HIGH,0,0,from langchain,agent.invoke(,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(agent.invoke()
+langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_tools.py,Python,80,HIGH,0,0,from langchain,agent.invoke(,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(agent.invoke()
+langchain-1.3.18/tests/integration_tests/agents/middleware/test_human_in_the_loop_integration.py,Python,80,HIGH,0,0,from langchain,agent.invoke(,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(agent.invoke()
+langchain-1.3.18/langchain/agents/middleware/pii.py,Python,75,HIGH,0,3,from langchain,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_vectors(3_unsanitised_inputs)
+langchain-1.3.18/langchain/chat_models/base.py,Python,60,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected); dynamic_import(x1)
+langchain-1.3.18/tests/integration_tests/embeddings/test_base.py,Python,60,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected); dynamic_import(x1)
+langchain-1.3.18/langchain/agents/middleware/context_editing.py,Python,58,ELEVATED,0,1,from langchain,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(1)
+langchain-1.3.18/langchain/agents/middleware/provider_tool_search.py,Python,58,ELEVATED,0,1,from langchain,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(1)
+langchain-1.3.18/langchain/agents/middleware/tool_error.py,Python,58,ELEVATED,0,1,from langchain,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(1)
+langchain-1.3.18/langchain/agents/middleware/model_fallback.py,Python,58,ELEVATED,0,2,from langchain,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(2)
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_tool_error.py,Python,58,ELEVATED,0,2,from langchain,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(2)
+langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_wrap_tool_call.py,Python,58,ELEVATED,0,2,from langchain,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(2)
+langchain-1.3.18/langchain/agents/__init__.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/langchain/agents/middleware/__init__.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/langchain/agents/middleware/tool_retry.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/langchain/agents/middleware/tool_call_limit.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/langchain/agents/middleware/shell_tool.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/langchain/agents/middleware/todo.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/langchain/agents/middleware/model_call_limit.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/langchain/agents/middleware/file_search.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/langchain/agents/middleware/types.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/langchain/agents/middleware/human_in_the_loop.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/langchain/agents/middleware/_execution.py,Python,40,ELEVATED,0,0,,,subprocess/shell execution with variables (1 occurrence(s)),subprocess_variable_execution(x1)
+langchain-1.3.18/langchain/agents/middleware/summarization.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/langchain/agents/middleware/model_retry.py,Python,40,ELEVATED,0,0,from langchain; from anthropic; from openai,,,ai_sdk_import(3_sdk(s)_detected)
+langchain-1.3.18/langchain/agents/middleware/tool_emulator.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/langchain/chat_models/__init__.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/langchain/tools/__init__.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/langchain/embeddings/__init__.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/test_version.py,Python,40,ELEVATED,0,0,import langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/test_return_direct_spec.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/test_injected_runtime_create_agent.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/test_agent_streaming.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/test_subagent_streaming.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/test_responses.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/test_fetch_last_ai_and_tool_messages.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/test_response_format_integration.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/test_response_format.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/test_agent_name.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/test_system_message.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/test_kwargs_tool_runtime_injection.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/test_return_direct_graph.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/test_responses_spec.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_model_fallback.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_tool_call_limit.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_structured_output_retry.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_context_editing.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_tool_selection.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_provider_tool_search.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_human_in_the_loop.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_file_search.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_todo.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_model_retry.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_shell_tool.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_shell_execution_policies.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_pii.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_sync_async_wrappers.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_dynamic_tools.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_tracing.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_framework.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_transformers.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_decorators.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_wrap_model_call.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_internal_call_transformer.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_composition.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_overrides.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_diagram.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_wrap_model_call_state_update.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware_typing/test_middleware_type_errors.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware_typing/test_middleware_typing.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/agents/middleware_typing/test_middleware_backwards_compat.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/chat_models/test_chat_models.py,Python,40,ELEVATED,0,0,from langchain; http:api.anthropic.com,,,ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(api.anthropic.com)
+langchain-1.3.18/tests/unit_tests/tools/test_imports.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/embeddings/test_base.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/unit_tests/embeddings/test_imports.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/benchmarks/test_create_agent.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/integration_tests/agents/middleware/test_shell_tool_integration.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/tests/integration_tests/chat_models/test_base.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+langchain-1.3.18/langchain/embeddings/base.py,Python,20,NORMAL,0,0,,,,dynamic_import(x1)
+langchain-1.3.18/tests/unit_tests/test_imports.py,Python,20,NORMAL,0,0,,,,dynamic_import(x2)
+langchain-1.3.18/langchain/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/langchain/agents/_subagent_transformer.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/langchain/agents/structured_output.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/langchain/agents/middleware/_redaction.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/langchain/agents/middleware/_retry.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/langchain/agents/middleware/_trace_policy.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/langchain/agents/middleware/internal_call_transformer.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/langchain/messages/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/langchain/rate_limiters/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/langchain/tools/tool_node.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/conftest.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/test_dependencies.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/test_pytest_config.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/agents/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/agents/conftest.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/agents/conftest_store.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/agents/utils.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/agents/conftest_checkpointer.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/agents/memory_assert.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/agents/any_str.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/agents/model.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/agents/messages.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/agents/middleware/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/agents/middleware/core/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/agents/middleware_typing/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/chat_models/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/tools/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/unit_tests/embeddings/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/benchmarks/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/integration_tests/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/integration_tests/conftest.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/integration_tests/test_compile.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/integration_tests/agents/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/integration_tests/agents/middleware/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/integration_tests/cache/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/integration_tests/cache/fake_embeddings.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/integration_tests/chat_models/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/tests/integration_tests/embeddings/__init__.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/scripts/check_version.py,Python,0,NORMAL,0,0,,,,
+langchain-1.3.18/scripts/check_imports.py,Python,0,NORMAL,0,0,,,,

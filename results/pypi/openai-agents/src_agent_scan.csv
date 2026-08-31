@@ -1,0 +1,870 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+openai_agents-0.22.0/examples/sandbox/unix_local_runner.py,Python,100,HIGH,0,0,from openai,Runner.run,eval/exec found (1 occurrence(s)),ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run); dynamic_execution(eval/exec_x1)
+openai_agents-0.22.0/examples/sandbox/extensions/vercel_runner.py,Python,100,HIGH,0,0,from openai,Runner.run,eval/exec found (1 occurrence(s)),ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run); dynamic_execution(eval/exec_x1)
+openai_agents-0.22.0/examples/sandbox/extensions/daytona/usaspending_text2sql/agent.py,Python,100,HIGH,0,1,from openai,,eval/exec found (3 occurrence(s)),ai_sdk_import(1_sdk(s)_detected); dynamic_execution(eval/exec_x3); prompt_injection_partial(1)
+openai_agents-0.22.0/examples/sandbox/extensions/runloop/capabilities.py,Python,100,HIGH,0,0,from openai,Runner.run,eval/exec found (1 occurrence(s)),ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run); dynamic_execution(eval/exec_x1)
+openai_agents-0.22.0/examples/mcp/prompt_server/main.py,Python,100,HIGH,0,1,from MCP,Runner.run,subprocess/shell execution with variables (1 occurrence(s)),ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run); subprocess_variable_execution(x1); prompt_injection_partial(1)
+openai_agents-0.22.0/tests/test_run_state.py,Python,100,HIGH,0,0,from openai; import Mcp,function_tool; Runner.run; handoff(; RunContext,,"ai_sdk_import(2_sdk(s)_detected); agent_orchestration(function_tool,Runner.run); dynamic_import(x1)"
+openai_agents-0.22.0/tests/test_programmatic_tool_calling.py,Python,100,HIGH,0,0,from openai,function_tool; Runner.run,eval/exec found (1 occurrence(s)),"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,Runner.run); dynamic_execution(eval/exec_x1)"
+openai_agents-0.22.0/tests/models/test_any_llm_model.py,Python,100,HIGH,0,0,from openai,function_tool; handoff(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,handoff(); dynamic_import(x2)"
+openai_agents-0.22.0/tests/memory/test_openai_responses_compaction_session.py,Python,100,HIGH,0,5,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run); prompt_injection_vectors(5_unsanitised_inputs)
+openai_agents-0.22.0/tests/sandbox/test_runtime.py,Python,100,HIGH,0,2,from openai,function_tool; Runner.run,eval/exec found (8 occurrence(s)),"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,Runner.run); dynamic_execution(eval/exec_x8); prompt_injection_partial(2)"
+openai_agents-0.22.0/tests/extensions/memory/test_sqlalchemy_session.py,Python,100,HIGH,0,8,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run); prompt_injection_vectors(8_unsanitised_inputs)
+openai_agents-0.22.0/tests/extensions/memory/test_advanced_sqlite_session.py,Python,100,HIGH,0,8,from openai,function_tool; Runner.run,subprocess/shell execution with variables (3 occurrence(s)),"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,Runner.run); subprocess_variable_execution(x3); prompt_injection_vectors(8_unsanitised_inputs)"
+openai_agents-0.22.0/tests/extensions/experiemental/codex/test_codex_tool.py,Python,100,HIGH,0,0,from openai,function_tool; RunContext,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,RunContext); dynamic_import(x1)"
+openai_agents-0.22.0/tests/extensions/sandbox/test_vercel.py,Python,100,HIGH,0,3,http:api.openai.com,,eval/exec found (17 occurrence(s)),ai_http_endpoint(api.openai.com); dynamic_execution(eval/exec_x17); dynamic_import(x64); prompt_injection_vectors(3_unsanitised_inputs)
+openai_agents-0.22.0/tests/mcp/test_prompt_server.py,Python,100,HIGH,0,0,from mcp,"Agent(name=""prompt_agent"", instructions=; Runner.run",subprocess/shell execution with variables (1 occurrence(s)),"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Agent(name=""prompt_agent"", instructions=,Runner.run); subprocess_variable_execution(x1)"
+openai_agents-0.22.0/src/agents/items.py,Python,98,HIGH,0,1,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run); prompt_injection_partial(1)
+openai_agents-0.22.0/src/agents/repl.py,Python,98,HIGH,0,1,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run); prompt_injection_partial(1)
+openai_agents-0.22.0/tests/test_error_logging_redaction.py,Python,98,HIGH,0,2,from openai,function_tool; handoff(; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,handoff(); prompt_injection_partial(2)"
+openai_agents-0.22.0/tests/test_responses.py,Python,98,HIGH,0,1,from openai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool); prompt_injection_partial(1)
+openai_agents-0.22.0/tests/test_agent_runner.py,Python,98,HIGH,0,1,from openai; import Mcp; http:api.openai.com,function_tool; Runner.run; handoff(,,"ai_sdk_import(2_sdk(s)_detected); ai_http_endpoint(api.openai.com); agent_orchestration(function_tool,Runner.run); prompt_injection_partial(1)"
+openai_agents-0.22.0/tests/test_handoff_history_duplication.py,Python,98,HIGH,0,1,from openai,function_tool; Runner.run; handoff(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,Runner.run); prompt_injection_partial(1)"
+openai_agents-0.22.0/tests/test_example_workflows.py,Python,98,HIGH,0,2,from openai,function_tool; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,Runner.run); prompt_injection_partial(2)"
+openai_agents-0.22.0/tests/sandbox/test_memory.py,Python,98,HIGH,0,2,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run); prompt_injection_partial(2)
+openai_agents-0.22.0/examples/sandbox/memory_s3.py,Python,90,HIGH,0,0,,Runner.run,eval/exec found (2 occurrence(s)),agent_orchestration(Runner.run); dynamic_execution(eval/exec_x2)
+openai_agents-0.22.0/examples/sandbox/docs/coding_task.py,Python,90,HIGH,0,0,,Runner.run,eval/exec found (1 occurrence(s)),agent_orchestration(Runner.run); dynamic_execution(eval/exec_x1)
+openai_agents-0.22.0/tests/test_function_tool_decorator.py,Python,90,HIGH,0,0,,function_tool,eval/exec found (4 occurrence(s)),agent_orchestration(function_tool); dynamic_execution(eval/exec_x4)
+openai_agents-0.22.0/tests/test_scripted_sandbox.py,Python,90,HIGH,0,0,,Runner.run,eval/exec found (12 occurrence(s)),agent_orchestration(Runner.run); dynamic_execution(eval/exec_x12)
+openai_agents-0.22.0/examples/memory/hitl_session_scenario.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/reasoning_content/runner_example.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/realtime/twilio_sip/server.py,Python,80,HIGH,0,0,from openai,runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(runner.run)
+openai_agents-0.22.0/examples/model_providers/custom_example_global.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/model_providers/custom_example_provider.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/model_providers/custom_example_agent.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/basic/hello_world_gpt_5.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/basic/hello_world_gpt_oss.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/tools/programmatic_tool_calling.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/tools/container_shell_inline_skill.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/tools/file_search.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/tools/container_shell_skill_reference.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/tools/web_search_filters.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/sandbox/sandbox_agents_as_tools.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/sandbox/extensions/cloudflare_runner.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/sandbox/extensions/modal_runner.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/sandbox/extensions/blaxel_runner.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/sandbox/extensions/e2b_runner.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/sandbox/extensions/daytona/daytona_runner.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/sandbox/extensions/runloop/runner.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/agent_patterns/streaming_guardrails.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/src/agents/__init__.py,Python,80,HIGH,0,0,from openai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool)
+openai_agents-0.22.0/src/agents/agent.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/src/agents/run_state.py,Python,80,HIGH,0,0,from openai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool)
+openai_agents-0.22.0/src/agents/tool.py,Python,80,HIGH,0,0,from openai,function_tool; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/src/agents/run_internal/agent_runner_helpers.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/src/agents/run_internal/tool_planning.py,Python,80,HIGH,0,0,from openai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool)
+openai_agents-0.22.0/src/agents/run_internal/tool_execution.py,Python,80,HIGH,0,0,from openai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool)
+openai_agents-0.22.0/src/agents/run_internal/run_steps.py,Python,80,HIGH,0,0,from openai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool)
+openai_agents-0.22.0/src/agents/run_internal/turn_resolution.py,Python,80,HIGH,0,0,from openai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool)
+openai_agents-0.22.0/src/agents/extensions/experimental/codex/codex_tool.py,Python,80,HIGH,0,0,from openai,function_tool; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/src/agents/mcp/util.py,Python,80,HIGH,0,0,from mcp,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool)
+openai_agents-0.22.0/tests/test_tool_use_behavior.py,Python,80,HIGH,0,0,from openai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool)
+openai_agents-0.22.0/tests/test_streamed_terminal_output_backfill.py,Python,80,HIGH,0,0,from openai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool)
+openai_agents-0.22.0/tests/test_prompt_cache_key.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_run_state_pending_input.py,Python,80,HIGH,0,0,from openai,function_tool; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/test_tool_approval_call_id_reuse.py,Python,80,HIGH,0,0,from openai,function_tool; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/test_agent_tracing.py,Python,80,HIGH,0,0,from openai,function_tool; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/test_tool_custom_data.py,Python,80,HIGH,0,0,from openai,function_tool; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/test_streaming_tool_call_arguments.py,Python,80,HIGH,0,0,from openai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool)
+openai_agents-0.22.0/tests/test_process_model_response.py,Python,80,HIGH,0,0,from openai,function_tool; handoff(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,handoff()"
+openai_agents-0.22.0/tests/test_stream_events.py,Python,80,HIGH,0,0,from openai,function_tool; handoff(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,handoff()"
+openai_agents-0.22.0/tests/test_tool_context.py,Python,80,HIGH,0,0,from openai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool)
+openai_agents-0.22.0/tests/test_agent_config.py,Python,80,HIGH,0,0,from openai,handoff(,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(handoff()
+openai_agents-0.22.0/tests/test_agent_memory_leak.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_computer_action.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_run_impl_resume_paths.py,Python,80,HIGH,0,0,from openai,function_tool; runner.run; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,runner.run)"
+openai_agents-0.22.0/tests/test_computer_tool_lifecycle.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_handoff_tool.py,Python,80,HIGH,0,0,from openai,handoff(; handoff (,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(handoff(,handoff ()"
+openai_agents-0.22.0/tests/test_run_step_processing.py,Python,80,HIGH,0,0,from openai,handoff(,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(handoff()
+openai_agents-0.22.0/tests/test_invalid_final_output_handler.py,Python,80,HIGH,0,0,from openai,function_tool; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/test_call_model_input_filter_unit.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_agent_runner_streamed.py,Python,80,HIGH,0,0,from openai; http:api.openai.com,function_tool; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(api.openai.com); agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/test_usage.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_agent_as_tool.py,Python,80,HIGH,0,0,from openai,function_tool; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/test_tool_origin.py,Python,80,HIGH,0,0,from openai,function_tool; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/test_tool_name_collision_policy.py,Python,80,HIGH,0,0,from openai,function_tool; Runner.run; handoff(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/test_run_step_execution.py,Python,80,HIGH,0,0,from openai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool)
+openai_agents-0.22.0/tests/test_runtime_symmetry_contract.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_local_shell_tool.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_tool_use_tracker.py,Python,80,HIGH,0,0,from openai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool)
+openai_agents-0.22.0/tests/test_agent_prompt.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_hitl_error_scenarios.py,Python,80,HIGH,0,0,from openai,function_tool; Runner.run; handoff(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/test_scripted_model.py,Python,80,HIGH,0,0,from openai,Runner.run; handoff(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run,handoff()"
+openai_agents-0.22.0/tests/test_runner_guardrail_resume.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/models/test_openai_responses.py,Python,80,HIGH,0,0,from openai; http:api.openai.com,function_tool; Runner.run; handoff(,,"ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(api.openai.com); agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/models/test_openai_chatcompletions_stream.py,Python,80,HIGH,0,0,from openai; http:api.openai.com,function_tool; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(api.openai.com); agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/models/test_kwargs_functionality.py,Python,80,HIGH,0,0,import litellm; from litellm; from openai; http:api.openai.com,function_tool; handoff(,,"ai_sdk_import(3_sdk(s)_detected); ai_http_endpoint(api.openai.com); agent_orchestration(function_tool,handoff()"
+openai_agents-0.22.0/tests/models/test_openai_responses_converter.py,Python,80,HIGH,0,0,from openai,function_tool; handoff(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,handoff()"
+openai_agents-0.22.0/tests/models/test_openai_chatcompletions.py,Python,80,HIGH,0,0,from openai; http:api.openai.com,function_tool; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(api.openai.com); agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/models/test_litellm_extra_body.py,Python,80,HIGH,0,0,import litellm; from litellm; from openai,function_tool,,ai_sdk_import(3_sdk(s)_detected); agent_orchestration(function_tool)
+openai_agents-0.22.0/tests/memory/test_openai_conversations_session.py,Python,80,HIGH,0,0,from openai,function_tool; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/realtime/test_openai_realtime_conversions.py,Python,80,HIGH,0,0,from openai,function_tool; handoff(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,handoff()"
+openai_agents-0.22.0/tests/realtime/test_realtime_model_settings.py,Python,80,HIGH,0,0,from openai,function_tool,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool)
+openai_agents-0.22.0/tests/realtime/test_openai_realtime.py,Python,80,HIGH,0,0,from openai; http:api.openai.com,function_tool; handoff(,,"ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(api.openai.com); agent_orchestration(function_tool,handoff()"
+openai_agents-0.22.0/tests/utils/hitl.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/sandbox/test_run_cwd.py,Python,80,HIGH,0,0,from openai,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/extensions/experimental/hosted_multi_agent/test_model.py,Python,80,HIGH,0,0,from openai,function_tool; handoff(; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,handoff()"
+openai_agents-0.22.0/tests/extensions/experimental/hosted_multi_agent/test_live.py,Python,80,HIGH,0,0,from openai,function_tool; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/fixtures/run_state/generate_corpus.py,Python,80,HIGH,0,0,from openai,handoff(; function_tool; Runner.run,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(handoff(,function_tool)"
+openai_agents-0.22.0/tests/mcp/test_mcp_approval.py,Python,80,HIGH,0,0,from mcp,Runner.run,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/mcp/test_mcp_util.py,Python,80,HIGH,0,0,from mcp,function_tool; handoff(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(function_tool,handoff()"
+openai_agents-0.22.0/src/agents/extensions/models/any_llm_model.py,Python,78,HIGH,0,1,from openai,,,ai_sdk_import(1_sdk(s)_detected); dynamic_import(x2); prompt_injection_partial(1)
+openai_agents-0.22.0/examples/sandbox/extensions/temporal/temporal_sandbox_agent.py,Python,75,HIGH,0,3,,AgentWorkflow; Runner.run,,"agent_orchestration(AgentWorkflow,Runner.run); prompt_injection_vectors(3_unsanitised_inputs)"
+openai_agents-0.22.0/examples/agent_patterns/input_guardrails.py,Python,75,HIGH,0,3,,Runner.run,,agent_orchestration(Runner.run); prompt_injection_vectors(3_unsanitised_inputs)
+openai_agents-0.22.0/src/agents/models/chatcmpl_converter.py,Python,75,HIGH,0,8,from openai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_vectors(8_unsanitised_inputs)
+openai_agents-0.22.0/src/agents/realtime/session.py,Python,75,HIGH,0,5,,function_tool; runner.run,,"agent_orchestration(function_tool,runner.run); prompt_injection_vectors(5_unsanitised_inputs)"
+openai_agents-0.22.0/src/agents/extensions/memory/advanced_sqlite_session.py,Python,75,HIGH,0,3,,Runner.run,,agent_orchestration(Runner.run); prompt_injection_vectors(3_unsanitised_inputs)
+openai_agents-0.22.0/tests/test_hitl_session_scenario.py,Python,75,HIGH,0,4,,function_tool; Runner.run,,"agent_orchestration(function_tool,Runner.run); prompt_injection_vectors(4_unsanitised_inputs)"
+openai_agents-0.22.0/tests/test_extension_filters.py,Python,75,HIGH,0,9,from openai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_vectors(9_unsanitised_inputs)
+openai_agents-0.22.0/tests/models/test_openai_chatcompletions_converter.py,Python,75,HIGH,0,3,from openai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_vectors(3_unsanitised_inputs)
+openai_agents-0.22.0/tests/models/test_deepseek_reasoning_content.py,Python,75,HIGH,0,3,import litellm; from litellm,,,ai_sdk_import(2_sdk(s)_detected); prompt_injection_vectors(3_unsanitised_inputs)
+openai_agents-0.22.0/tests/models/test_reasoning_content_replay_hook.py,Python,75,HIGH,0,4,import litellm; from litellm; from openai,,,ai_sdk_import(3_sdk(s)_detected); prompt_injection_vectors(4_unsanitised_inputs)
+openai_agents-0.22.0/tests/models/test_reasoning_content.py,Python,75,HIGH,0,5,from openai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_vectors(5_unsanitised_inputs)
+openai_agents-0.22.0/tests/memory/test_session.py,Python,75,HIGH,0,7,,Runner.run,,agent_orchestration(Runner.run); prompt_injection_vectors(7_unsanitised_inputs)
+openai_agents-0.22.0/tests/extensions/test_tool_output_trimmer.py,Python,75,HIGH,0,3,from openai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_vectors(3_unsanitised_inputs)
+openai_agents-0.22.0/tests/extensions/memory/test_encrypt_session.py,Python,75,HIGH,0,4,,Runner.run,,agent_orchestration(Runner.run); prompt_injection_vectors(4_unsanitised_inputs)
+openai_agents-0.22.0/tests/extensions/memory/test_mongodb_session.py,Python,75,HIGH,0,4,,Runner.run,,agent_orchestration(Runner.run); prompt_injection_vectors(4_unsanitised_inputs)
+openai_agents-0.22.0/tests/extensions/memory/test_async_sqlite_session.py,Python,75,HIGH,0,5,,Runner.run,,agent_orchestration(Runner.run); prompt_injection_vectors(5_unsanitised_inputs)
+openai_agents-0.22.0/tests/extensions/memory/test_redis_session.py,Python,75,HIGH,0,4,,Runner.run,,agent_orchestration(Runner.run); prompt_injection_vectors(4_unsanitised_inputs)
+openai_agents-0.22.0/tests/extensions/memory/test_dapr_session.py,Python,75,HIGH,0,4,,Runner.run,,agent_orchestration(Runner.run); prompt_injection_vectors(4_unsanitised_inputs)
+openai_agents-0.22.0/src/agents/extensions/sandbox/daytona/sandbox.py,Python,70,HIGH,0,0,,,eval/exec found (5 occurrence(s)),dynamic_execution(eval/exec_x5); dynamic_import(x1)
+openai_agents-0.22.0/src/agents/extensions/sandbox/e2b/sandbox.py,Python,70,HIGH,0,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1); dynamic_import(x2)
+openai_agents-0.22.0/tests/extensions/sandbox/test_modal.py,Python,70,HIGH,0,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1); dynamic_import(x3)
+openai_agents-0.22.0/tests/extensions/sandbox/test_daytona.py,Python,70,HIGH,0,0,,,eval/exec found (6 occurrence(s)),dynamic_execution(eval/exec_x6); dynamic_import(x3)
+openai_agents-0.22.0/tests/extensions/sandbox/test_runloop.py,Python,70,HIGH,0,0,,,eval/exec found (9 occurrence(s)),dynamic_execution(eval/exec_x9); dynamic_import(x2)
+openai_agents-0.22.0/tests/extensions/sandbox/test_blaxel.py,Python,70,HIGH,0,0,,,eval/exec found (2 occurrence(s)),dynamic_execution(eval/exec_x2); dynamic_import(x1)
+openai_agents-0.22.0/src/agents/extensions/sandbox/vercel/sandbox.py,Python,68,ELEVATED,0,2,,,eval/exec found (2 occurrence(s)),dynamic_execution(eval/exec_x2); prompt_injection_partial(2)
+openai_agents-0.22.0/src/agents/mcp/server.py,Python,60,ELEVATED,0,0,from mcp; from MCP,,,ai_sdk_import(2_sdk(s)_detected); dynamic_import(x1)
+openai_agents-0.22.0/examples/hosted_mcp/on_approval.py,Python,58,ELEVATED,0,1,,Runner.run,,agent_orchestration(Runner.run); prompt_injection_partial(1)
+openai_agents-0.22.0/examples/basic/usage_tracking.py,Python,58,ELEVATED,0,1,,Runner.run,,agent_orchestration(Runner.run); prompt_injection_partial(1)
+openai_agents-0.22.0/examples/basic/dynamic_system_prompt.py,Python,58,ELEVATED,0,1,,Runner.run,,agent_orchestration(Runner.run); prompt_injection_partial(1)
+openai_agents-0.22.0/examples/sandbox/tax_prep.py,Python,58,ELEVATED,0,2,from openai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(2)
+openai_agents-0.22.0/examples/sandbox/healthcare_support/workflow.py,Python,58,ELEVATED,0,1,,Runner.run,,agent_orchestration(Runner.run); prompt_injection_partial(1)
+openai_agents-0.22.0/examples/sandbox/extensions/temporal/temporal_session_manager.py,Python,58,ELEVATED,0,2,,AgentWorkflow,,agent_orchestration(AgentWorkflow); prompt_injection_partial(2)
+openai_agents-0.22.0/examples/sandbox/tutorials/misc.py,Python,58,ELEVATED,0,1,from openai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(1)
+openai_agents-0.22.0/examples/sandbox/tutorials/dataroom_metric_extract/main.py,Python,58,ELEVATED,0,1,from openai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(1)
+openai_agents-0.22.0/examples/customer_service/main.py,Python,58,ELEVATED,0,1,,handoff(; Runner.run,,"agent_orchestration(handoff(,Runner.run); prompt_injection_partial(1)"
+openai_agents-0.22.0/examples/agent_patterns/llm_as_a_judge.py,Python,58,ELEVATED,0,2,,Runner.run,,agent_orchestration(Runner.run); prompt_injection_partial(2)
+openai_agents-0.22.0/examples/agent_patterns/routing.py,Python,58,ELEVATED,0,2,from openai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(2)
+openai_agents-0.22.0/src/agents/models/openai_chatcompletions.py,Python,58,ELEVATED,0,1,from openai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(1)
+openai_agents-0.22.0/src/agents/realtime/openai_realtime.py,Python,58,ELEVATED,0,2,from openai; http:api.openai.com,,,ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(api.openai.com); prompt_injection_partial(2)
+openai_agents-0.22.0/src/agents/extensions/models/litellm_model.py,Python,58,ELEVATED,0,1,from openai; import litellm; from litellm; from Litellm,,,ai_sdk_import(4_sdk(s)_detected); prompt_injection_partial(1)
+openai_agents-0.22.0/tests/models/test_model_payload_iterators.py,Python,58,ELEVATED,0,2,from openai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(2)
+openai_agents-0.22.0/tests/extensions/memory/test_dapr_redis_integration.py,Python,58,ELEVATED,0,2,,Runner.run,,agent_orchestration(Runner.run); prompt_injection_partial(2)
+openai_agents-0.22.0/examples/sandbox/misc/workspace_shell.py,Python,50,ELEVATED,0,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+openai_agents-0.22.0/examples/sandbox/extensions/daytona/usaspending_text2sql/sql_capability.py,Python,50,ELEVATED,0,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+openai_agents-0.22.0/src/agents/testing/sandbox.py,Python,50,ELEVATED,0,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+openai_agents-0.22.0/src/agents/sandbox/errors.py,Python,50,ELEVATED,0,0,,,eval/exec found (4 occurrence(s)),dynamic_execution(eval/exec_x4)
+openai_agents-0.22.0/src/agents/sandbox/runtime.py,Python,50,ELEVATED,0,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+openai_agents-0.22.0/src/agents/sandbox/capabilities/tools/shell_tool.py,Python,50,ELEVATED,0,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+openai_agents-0.22.0/src/agents/sandbox/entries/artifacts.py,Python,50,ELEVATED,0,0,,,eval/exec found (10 occurrence(s)),dynamic_execution(eval/exec_x10)
+openai_agents-0.22.0/src/agents/sandbox/entries/mounts/patterns.py,Python,50,ELEVATED,0,0,,,eval/exec found (19 occurrence(s)),dynamic_execution(eval/exec_x19)
+openai_agents-0.22.0/src/agents/sandbox/memory/storage.py,Python,50,ELEVATED,0,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+openai_agents-0.22.0/src/agents/sandbox/session/base_sandbox_session.py,Python,50,ELEVATED,0,0,,,eval/exec found (15 occurrence(s)),dynamic_execution(eval/exec_x15)
+openai_agents-0.22.0/src/agents/sandbox/session/snapshot_lifecycle.py,Python,50,ELEVATED,0,0,,,eval/exec found (3 occurrence(s)),dynamic_execution(eval/exec_x3)
+openai_agents-0.22.0/src/agents/sandbox/session/sandbox_session.py,Python,50,ELEVATED,0,0,,,eval/exec found (2 occurrence(s)),dynamic_execution(eval/exec_x2)
+openai_agents-0.22.0/src/agents/sandbox/sandboxes/docker.py,Python,50,ELEVATED,0,0,,,eval/exec found (6 occurrence(s)),dynamic_execution(eval/exec_x6)
+openai_agents-0.22.0/src/agents/extensions/sandbox/_rclone.py,Python,50,ELEVATED,0,0,,,eval/exec found (7 occurrence(s)),dynamic_execution(eval/exec_x7)
+openai_agents-0.22.0/src/agents/extensions/sandbox/modal/sandbox.py,Python,50,ELEVATED,0,0,,,eval/exec found (8 occurrence(s)),dynamic_execution(eval/exec_x8)
+openai_agents-0.22.0/src/agents/extensions/sandbox/daytona/mounts.py,Python,50,ELEVATED,0,0,,,eval/exec found (4 occurrence(s)),dynamic_execution(eval/exec_x4)
+openai_agents-0.22.0/src/agents/extensions/sandbox/runloop/sandbox.py,Python,50,ELEVATED,0,0,,,eval/exec found (8 occurrence(s)),dynamic_execution(eval/exec_x8)
+openai_agents-0.22.0/src/agents/extensions/sandbox/runloop/mounts.py,Python,50,ELEVATED,0,0,,,eval/exec found (7 occurrence(s)),dynamic_execution(eval/exec_x7)
+openai_agents-0.22.0/src/agents/extensions/sandbox/e2b/mounts.py,Python,50,ELEVATED,0,0,,,eval/exec found (2 occurrence(s)),dynamic_execution(eval/exec_x2)
+openai_agents-0.22.0/src/agents/extensions/sandbox/blaxel/sandbox.py,Python,50,ELEVATED,0,0,,,eval/exec found (2 occurrence(s)),dynamic_execution(eval/exec_x2)
+openai_agents-0.22.0/src/agents/extensions/sandbox/blaxel/mounts.py,Python,50,ELEVATED,0,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+openai_agents-0.22.0/tests/test_run_state_compatibility_corpus.py,Python,50,ELEVATED,0,0,,,eval/exec found (4 occurrence(s)),dynamic_execution(eval/exec_x4)
+openai_agents-0.22.0/tests/sandbox/test_extract.py,Python,50,ELEVATED,0,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+openai_agents-0.22.0/tests/sandbox/test_mounts.py,Python,50,ELEVATED,0,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+openai_agents-0.22.0/tests/sandbox/test_session_sinks.py,Python,50,ELEVATED,0,0,,,eval/exec found (11 occurrence(s)),dynamic_execution(eval/exec_x11)
+openai_agents-0.22.0/tests/sandbox/test_session_utils.py,Python,50,ELEVATED,0,0,,,eval/exec found (2 occurrence(s)),dynamic_execution(eval/exec_x2)
+openai_agents-0.22.0/tests/sandbox/test_docker.py,Python,50,ELEVATED,0,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+openai_agents-0.22.0/tests/mcp/test_mcp_imports.py,Python,50,ELEVATED,0,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+openai_agents-0.22.0/examples/hosted_mcp/connectors.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/hosted_mcp/simple.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/hosted_mcp/human_in_the_loop.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/handoffs/message_filter_streaming.py,Python,40,ELEVATED,0,0,,handoff(; Runner.run,,"agent_orchestration(handoff(,Runner.run)"
+openai_agents-0.22.0/examples/handoffs/message_filter.py,Python,40,ELEVATED,0,0,,handoff(; Runner.run,,"agent_orchestration(handoff(,Runner.run)"
+openai_agents-0.22.0/examples/research_bot/manager.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/research_bot/agents/writer_agent.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/examples/research_bot/agents/planner_agent.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/examples/memory/file_hitl_example.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/memory/encrypted_session_example.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/memory/openai_session_example.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/memory/compaction_session_example.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/memory/compaction_session_stateless_example.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/memory/sqlalchemy_session_example.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/memory/openai_session_hitl_example.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/memory/sqlite_session_example.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/memory/memory_session_hitl_example.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/memory/mongodb_session_example.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/memory/advanced_sqlite_session_example.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/memory/redis_session_example.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/memory/dapr_session_example.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/reasoning_content/gpt_oss_stream.py,Python,40,ELEVATED,0,0,from openai; http:openrouter.ai,,,ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(openrouter.ai)
+openai_agents-0.22.0/examples/reasoning_content/main.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/examples/financial_research_agent/manager.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/realtime/app/server.py,Python,40,ELEVATED,0,0,,runner.run,,agent_orchestration(runner.run)
+openai_agents-0.22.0/examples/realtime/twilio/twilio_handler.py,Python,40,ELEVATED,0,0,,runner.run,,agent_orchestration(runner.run)
+openai_agents-0.22.0/examples/realtime/cli/demo.py,Python,40,ELEVATED,0,0,,runner.run,,agent_orchestration(runner.run)
+openai_agents-0.22.0/examples/model_providers/litellm_auto.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/model_providers/any_llm_auto.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/model_providers/any_llm_provider.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/model_providers/litellm_provider.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/basic/hello_world.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/basic/stream_ws.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/examples/basic/remote_pdf.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/basic/local_image.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/basic/non_strict_output_type.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/basic/remote_image.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/basic/image_tool_output.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/basic/agent_lifecycle_example.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/basic/tool_guardrails.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/basic/retry.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/basic/tools.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/basic/retry_litellm.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/basic/stream_function_call_args.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/examples/basic/previous_response_id.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/basic/stream_text.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/examples/basic/local_file.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/basic/lifecycle_example.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/basic/prompt_template.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/tools/computer_use.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/tools/codex.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/tools/web_search.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/tools/shell.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/tools/local_shell_skill.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/tools/codex_same_thread.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/tools/apply_patch.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/tools/tool_search.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/tools/shell_human_in_the_loop.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/tools/image_generator.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/sandbox/sandbox_agent_capabilities.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/examples/sandbox/memory.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/sandbox/handoffs.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/sandbox/sandbox_agent_with_tools.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/sandbox/shared_session_workdirs.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/sandbox/unix_local_pty.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/examples/sandbox/memory_multi_agent_multiturn.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/sandbox/basic.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/examples/sandbox/sandbox_agent_with_remote_snapshot.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/sandbox/docker/docker_runner.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/examples/sandbox/docker/mounts/mount_smoke.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/sandbox/healthcare_support/support_agents.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/examples/sandbox/misc/reference_policy_mcp_server.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/examples/sandbox/extensions/temporal/local_hello_workflow.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/mcp/streamable_http_remote_example/main.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/mcp/tool_filter_example/main.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/mcp/prompt_server/server.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/examples/mcp/get_all_mcp_tools_example/main.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/mcp/sse_example/main.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/mcp/sse_example/server.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/examples/mcp/manager_example/app.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/mcp/manager_example/mcp_server.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/examples/mcp/streamablehttp_example/main.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/mcp/streamablehttp_example/server.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/examples/mcp/streamablehttp_custom_client_example/main.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/mcp/streamablehttp_custom_client_example/server.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/examples/mcp/sse_remote_example/main.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/mcp/git_example/main.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/mcp/filesystem_example/main.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/agent_patterns/human_in_the_loop_custom_rejection.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/agent_patterns/deterministic.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/agent_patterns/agents_as_tools_structured.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/agent_patterns/hosted_multi_agent_beta.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/agent_patterns/parallelization.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/agent_patterns/agents_as_tools.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/agent_patterns/agents_as_tools_streaming.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/agent_patterns/output_guardrails.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/agent_patterns/human_in_the_loop.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/agent_patterns/forcing_tool_use.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/examples/agent_patterns/agents_as_tools_conditional.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/src/agents/strict_schema.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/responses_websocket_session.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/src/agents/decorators.py,Python,40,ELEVATED,0,0,,function_tool,,agent_orchestration(function_tool)
+openai_agents-0.22.0/src/agents/agent_tool_state.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/_config.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/_tool_identity.py,Python,40,ELEVATED,0,0,,function_tool,,agent_orchestration(function_tool)
+openai_agents-0.22.0/src/agents/model_settings.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/run.py,Python,40,ELEVATED,0,0,,runner.run,,agent_orchestration(runner.run)
+openai_agents-0.22.0/src/agents/run_context.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/src/agents/tool_context.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/prompts.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/result.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/src/agents/usage.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/handoffs/__init__.py,Python,40,ELEVATED,0,0,,Runner.run; Handoff(,,"agent_orchestration(Runner.run,Handoff()"
+openai_agents-0.22.0/src/agents/run_internal/blocked_output.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/run_internal/run_loop.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/run_internal/prompt_cache_key.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/src/agents/run_internal/items.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/run_internal/error_handlers.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/run_internal/turn_preparation.py,Python,40,ELEVATED,0,0,,handoff(,,agent_orchestration(handoff()
+openai_agents-0.22.0/src/agents/run_internal/tool_use_tracker.py,Python,40,ELEVATED,0,0,,function_tool,,agent_orchestration(function_tool)
+openai_agents-0.22.0/src/agents/run_internal/tool_actions.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/run_internal/approvals.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/run_internal/model_retry.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/testing/model.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/models/chatcmpl_stream_handler.py,Python,40,ELEVATED,0,0,from openai; from Anthropic; from LiteLLM,,,ai_sdk_import(3_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/models/default_models.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/models/_openai_retry.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/models/openai_responses.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/models/openai_client_utils.py,Python,40,ELEVATED,0,0,from openai; http:api.openai.com,,,ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(api.openai.com)
+openai_agents-0.22.0/src/agents/models/openai_provider.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/models/_retry_runtime.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/models/interface.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/models/_response_terminal.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/models/multi_provider.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/models/chatcmpl_helpers.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/models/_openai_shared.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/memory/openai_responses_compaction_session.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/memory/openai_conversations_session.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/realtime/runner.py,Python,40,ELEVATED,0,0,,runner.run,,agent_orchestration(runner.run)
+openai_agents-0.22.0/src/agents/realtime/config.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/realtime/audio_formats.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/realtime/_util.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/tracing/create.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/tracing/traces.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/src/agents/tracing/span_data.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/tracing/processors.py,Python,40,ELEVATED,0,0,http:api.openai.com,,,ai_http_endpoint(api.openai.com)
+openai_agents-0.22.0/src/agents/sandbox/config.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/sandbox/memory/phase_two.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/src/agents/sandbox/memory/phase_one.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/src/agents/voice/models/openai_model_provider.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/voice/models/openai_tts.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/voice/models/openai_stt.py,Python,40,ELEVATED,0,0,from openai; http:api.openai.com,,,ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(api.openai.com)
+openai_agents-0.22.0/src/agents/extensions/experimental/codex/items.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/extensions/experimental/hosted_multi_agent/model.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/src/agents/extensions/models/litellm_provider.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/src/agents/extensions/memory/mongodb_session.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/src/agents/extensions/memory/redis_session.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/src/agents/extensions/memory/dapr_session.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/src/agents/extensions/memory/encrypt_session.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/src/agents/extensions/memory/sqlalchemy_session.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/src/agents/mcp/_logging.py,Python,40,ELEVATED,0,0,from MCP,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/test_repl.py,Python,40,ELEVATED,0,0,,handoff (,,agent_orchestration(handoff ()
+openai_agents-0.22.0/tests/test_run_error_details.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_tool_choice_reset.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_run_context_approvals.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/test_run_config.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_tool_output_conversion.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/test_run_internal_items.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/test_visualization.py,Python,40,ELEVATED,0,0,,handoff(,,agent_orchestration(handoff()
+openai_agents-0.22.0/tests/test_extra_headers.py,Python,40,ELEVATED,0,0,from openai; http:api.openai.com,,,ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(api.openai.com)
+openai_agents-0.22.0/tests/test_global_hooks.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_run_hooks.py,Python,40,ELEVATED,0,0,,function_tool; Runner.run,,"agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/test_agent_tool_state.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/test_agent_instructions_signature.py,Python,40,ELEVATED,0,0,,"Agent(name=""test_agent"", instructions=",,"agent_orchestration(Agent(name=""test_agent"", instructions=)"
+openai_agents-0.22.0/tests/test_run.py,Python,40,ELEVATED,0,0,,Runner.run; runner.run,,"agent_orchestration(Runner.run,runner.run)"
+openai_agents-0.22.0/tests/test_tool_converter.py,Python,40,ELEVATED,0,0,,function_tool; handoff(,,"agent_orchestration(function_tool,handoff()"
+openai_agents-0.22.0/tests/test_guardrails.py,Python,40,ELEVATED,0,0,,function_tool; Runner.run,,"agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/test_agent_llm_hooks.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_provider_span_errors.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/test_config.py,Python,40,ELEVATED,0,0,import openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/test_items_helpers.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/test_decorators.py,Python,40,ELEVATED,0,0,,function_tool,,agent_orchestration(function_tool)
+openai_agents-0.22.0/tests/test_tracing_errors.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_server_conversation_tracker.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/test_openai_provider_client_options.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/test_agent_clone_shallow_copy.py,Python,40,ELEVATED,0,0,,function_tool; handoff(,,"agent_orchestration(function_tool,handoff()"
+openai_agents-0.22.0/tests/test_soft_cancel.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_cancel_streaming.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/test_function_schema.py,Python,40,ELEVATED,0,0,,function_tool,,agent_orchestration(function_tool)
+openai_agents-0.22.0/tests/test_responses_tracing.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/test_pretty_print.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_max_turns.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_run_internal_approvals.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/test_stream_input_guardrail_timing.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/test_result_cast.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/test_tool_guardrails.py,Python,40,ELEVATED,0,0,,function_tool; Runner.run,,"agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/test_custom_tool.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/test_exception_exports.py,Python,40,ELEVATED,0,0,from MCP,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/test_tool_metadata.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/test_agent_hooks.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_call_model_input_filter.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/test_function_tool.py,Python,40,ELEVATED,0,0,,function_tool,,agent_orchestration(function_tool)
+openai_agents-0.22.0/tests/test_logprobs.py,Python,40,ELEVATED,0,0,from openai; http:api.openai.com,,,ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(api.openai.com)
+openai_agents-0.22.0/tests/model_test_helpers.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/models/test_gemini_thought_signatures_stream.py,Python,40,ELEVATED,0,0,from openai; from litellm,,,ai_sdk_import(2_sdk(s)_detected)
+openai_agents-0.22.0/tests/models/test_litellm_chatcompletions_stream.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/models/test_litellm_content_filter.py,Python,40,ELEVATED,0,0,import litellm; from litellm; from openai,,,ai_sdk_import(3_sdk(s)_detected)
+openai_agents-0.22.0/tests/models/test_litellm_logprobs.py,Python,40,ELEVATED,0,0,import litellm; from litellm; from openai,,,ai_sdk_import(3_sdk(s)_detected)
+openai_agents-0.22.0/tests/models/test_anthropic_thinking_blocks.py,Python,40,ELEVATED,0,0,from Anthropic; from litellm; from openai; http:api.anthropic.com,,,ai_sdk_import(3_sdk(s)_detected); ai_http_endpoint(api.anthropic.com)
+openai_agents-0.22.0/tests/models/test_default_models.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/models/test_extended_thinking_message_order.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/models/test_openai_client_utils.py,Python,40,ELEVATED,0,0,http:api.openai.com,,,ai_http_endpoint(api.openai.com)
+openai_agents-0.22.0/tests/models/test_gemini_thought_signatures.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/models/test_litellm_usage_requests.py,Python,40,ELEVATED,0,0,import litellm; from litellm,,,ai_sdk_import(2_sdk(s)_detected)
+openai_agents-0.22.0/tests/models/test_model_retry.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/memory/test_session_context_wrapper.py,Python,40,ELEVATED,0,0,,function_tool; Runner.run,,"agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/realtime/test_testing.py,Python,40,ELEVATED,0,0,,handoff(,,agent_orchestration(handoff()
+openai_agents-0.22.0/tests/realtime/test_tracing.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/realtime/test_playback_tracker.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/realtime/test_conversion_helpers.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/realtime/test_session.py,Python,40,ELEVATED,0,0,,function_tool,,agent_orchestration(function_tool)
+openai_agents-0.22.0/tests/realtime/test_realtime_handoffs.py,Python,40,ELEVATED,0,0,,handoff(,,agent_orchestration(handoff()
+openai_agents-0.22.0/tests/realtime/test_runner.py,Python,40,ELEVATED,0,0,,function_tool; runner.run,,"agent_orchestration(function_tool,runner.run)"
+openai_agents-0.22.0/tests/realtime/test_session_payload_and_formats.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/realtime/test_audio_formats_unit.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/realtime/test_item_parsing.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/realtime/test_openai_realtime_sip_model.py,Python,40,ELEVATED,0,0,http:api.openai.com,,,ai_http_endpoint(api.openai.com)
+openai_agents-0.22.0/tests/tracing/test_trace_context.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/model_settings/test_serialization.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/utils/factories.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/utils/test_json.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/utils/test_pretty_print_and_items.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/sandbox/test_runtime_helpers.py,Python,40,ELEVATED,0,0,,,subprocess/shell execution with variables (6 occurrence(s)),subprocess_variable_execution(x6)
+openai_agents-0.22.0/tests/sandbox/integration_tests/test_runner_pause_resume.py,Python,40,ELEVATED,0,0,,function_tool; Runner.run,,"agent_orchestration(function_tool,Runner.run)"
+openai_agents-0.22.0/tests/sandbox/integration_tests/_helpers.py,Python,40,ELEVATED,0,0,,function_tool,,agent_orchestration(function_tool)
+openai_agents-0.22.0/tests/voice/test_openai_model_provider.py,Python,40,ELEVATED,0,0,import openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/voice/test_openai_tts.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/voice/test_openai_stt.py,Python,40,ELEVATED,0,0,http:api.openai.com,,,ai_http_endpoint(api.openai.com)
+openai_agents-0.22.0/tests/mcp/test_mcp_server_manager.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/mcp/model_compat.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/mcp/test_mcp_v2_http.py,Python,40,ELEVATED,0,0,import mcp; from mcp,,,ai_sdk_import(2_sdk(s)_detected)
+openai_agents-0.22.0/tests/mcp/test_caching.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/mcp/test_message_handler.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/mcp/test_mcp_pagination_integration.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/mcp/test_client_session_retries.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/mcp/test_tool_filtering.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/mcp/test_mcp_resources.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/mcp/test_streamable_http_client_factory.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/mcp/test_mcp_tracing.py,Python,40,ELEVATED,0,0,,Runner.run,,agent_orchestration(Runner.run)
+openai_agents-0.22.0/tests/mcp/helpers.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/tests/mcp/test_runner_calls_mcp.py,Python,40,ELEVATED,0,0,,Runner.run; handoff(,,"agent_orchestration(Runner.run,handoff()"
+openai_agents-0.22.0/tests/mcp/servers/paginated.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+openai_agents-0.22.0/docs/scripts/translate_docs.py,Python,40,ELEVATED,0,0,from openai; import OpenAI,,,ai_sdk_import(2_sdk(s)_detected)
+openai_agents-0.22.0/tests/models/test_litellm_user_agent.py,Python,38,NORMAL,0,1,,,,dynamic_import(x1); prompt_injection_partial(1)
+openai_agents-0.22.0/examples/mcp/manager_example/smoke_test.py,Python,20,NORMAL,0,0,,,,dynamic_import(x1)
+openai_agents-0.22.0/src/agents/sandbox/_mount_security.py,Python,20,NORMAL,0,0,,,,dynamic_import(x2)
+openai_agents-0.22.0/tests/test_daytona_usaspending_example.py,Python,20,NORMAL,0,0,,,,dynamic_import(x1)
+openai_agents-0.22.0/tests/test_released_api_contract.py,Python,20,NORMAL,0,0,,,,dynamic_import(x6)
+openai_agents-0.22.0/tests/models/test_litellm_logging_patch.py,Python,20,NORMAL,0,0,,,,dynamic_import(x2)
+openai_agents-0.22.0/tests/models/test_responses_websocket_session.py,Python,20,NORMAL,0,0,,,,dynamic_import(x2)
+openai_agents-0.22.0/tests/realtime/test_app_server_debug.py,Python,20,NORMAL,0,0,,,,dynamic_import(x1)
+openai_agents-0.22.0/tests/realtime/test_twilio_sip_server.py,Python,20,NORMAL,0,0,,,,dynamic_import(x1)
+openai_agents-0.22.0/tests/sandbox/test_sandboxes_import.py,Python,20,NORMAL,0,0,,,,dynamic_import(x5)
+openai_agents-0.22.0/tests/sandbox/test_mount_security.py,Python,20,NORMAL,0,0,,,,dynamic_import(x2)
+openai_agents-0.22.0/tests/sandbox/test_client_options.py,Python,20,NORMAL,0,0,,,,dynamic_import(x1)
+openai_agents-0.22.0/tests/extensions/memory/test_memory_imports.py,Python,20,NORMAL,0,0,,,,dynamic_import(x1)
+openai_agents-0.22.0/tests/extensions/experiemental/codex/test_codex_exec_thread.py,Python,20,NORMAL,0,0,,,,dynamic_import(x3)
+openai_agents-0.22.0/tests/extensions/sandbox/test_runloop_mounts.py,Python,20,NORMAL,0,0,,,,dynamic_import(x2)
+openai_agents-0.22.0/tests/extensions/sandbox/test_e2b.py,Python,20,NORMAL,0,0,,,,dynamic_import(x2)
+openai_agents-0.22.0/examples/sandbox/healthcare_support/main.py,Python,18,NORMAL,0,2,,,,prompt_injection_partial(2)
+openai_agents-0.22.0/examples/sandbox/tutorials/sandbox_resume/main.py,Python,18,NORMAL,0,2,,,,prompt_injection_partial(2)
+openai_agents-0.22.0/examples/sandbox/tutorials/dataroom_qa/main.py,Python,18,NORMAL,0,1,,,,prompt_injection_partial(1)
+openai_agents-0.22.0/examples/sandbox/tutorials/repo_code_review/main.py,Python,18,NORMAL,0,1,,,,prompt_injection_partial(1)
+openai_agents-0.22.0/examples/sandbox/tutorials/vision_website_clone/main.py,Python,18,NORMAL,0,1,,,,prompt_injection_partial(1)
+openai_agents-0.22.0/examples/voice/streamed/my_workflow.py,Python,18,NORMAL,0,1,,,,prompt_injection_partial(1)
+openai_agents-0.22.0/src/agents/handoffs/history.py,Python,18,NORMAL,0,1,,,,prompt_injection_partial(1)
+openai_agents-0.22.0/src/agents/voice/workflow.py,Python,18,NORMAL,0,1,,,,prompt_injection_partial(1)
+openai_agents-0.22.0/tests/test_trace_processor.py,Python,18,NORMAL,0,1,,,,prompt_injection_partial(1)
+openai_agents-0.22.0/examples/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/run_examples.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/web_search_utils.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/auto_mode.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/hosted_mcp/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/research_bot/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/research_bot/main.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/research_bot/printer.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/research_bot/agents/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/research_bot/agents/search_agent.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/memory/file_session.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/reasoning_content/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/financial_research_agent/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/financial_research_agent/main.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/financial_research_agent/printer.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/financial_research_agent/agents/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/financial_research_agent/agents/writer_agent.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/financial_research_agent/agents/financials_agent.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/financial_research_agent/agents/verifier_agent.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/financial_research_agent/agents/risk_agent.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/financial_research_agent/agents/planner_agent.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/financial_research_agent/agents/search_agent.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/realtime/app/agent.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/realtime/app/static/app.js,JavaScript,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/realtime/app/static/audio-playback.worklet.js,JavaScript,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/realtime/app/static/audio-recorder.worklet.js,JavaScript,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/realtime/twilio/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/realtime/twilio/server.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/realtime/twilio_sip/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/realtime/twilio_sip/agents.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/basic/stream_items.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/tools/code_interpreter.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/docker/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/docker/mounts/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/docker/mounts/s3_mount_read_write.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/docker/mounts/gcs_mount_read_write.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/docker/mounts/azure_mount_read_write.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/docs/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/healthcare_support/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/healthcare_support/models.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/healthcare_support/data.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/healthcare_support/tools.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/misc/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/misc/example_support.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/misc/workspace_apply_patch.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/extensions/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/extensions/temporal/_worker_setup.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/extensions/temporal/temporal_sandbox_tui.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/extensions/daytona/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/extensions/daytona/usaspending_text2sql/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/extensions/daytona/usaspending_text2sql/setup_db.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/extensions/runloop/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/tutorials/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/tutorials/sandbox_resume/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/tutorials/dataroom_qa/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/tutorials/data/dataroom/setup.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/tutorials/dataroom_metric_extract/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/tutorials/dataroom_metric_extract/schemas.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/tutorials/dataroom_metric_extract/evals.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/tutorials/repo_code_review/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/tutorials/repo_code_review/evals.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/sandbox/tutorials/vision_website_clone/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/voice/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/voice/streamed/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/voice/streamed/main.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/voice/static/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/voice/static/main.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/voice/static/util.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/examples/agent_patterns/human_in_the_loop_stream.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/function_schema.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/stream_events.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/editor.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/version.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/agent_output.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/_tool_invocation.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/lifecycle.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/exceptions.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/computer.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/apply_diff.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/_debug.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/run_config.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/tool_guardrails.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/retry.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/_httpx_compat.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/agent_tool_input.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/guardrail.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/_config_coercion.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/_public_agent.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/run_error_handlers.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/logger.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/_mcp_tool_metadata.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/run_internal/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/run_internal/streaming.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/run_internal/_asyncio_progress.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/run_internal/guardrails.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/run_internal/run_grouping.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/run_internal/oai_conversation.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/run_internal/tool_caller.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/run_internal/agent_bindings.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/run_internal/session_persistence.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/testing/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/models/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/models/fake_id.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/models/_run_context.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/models/openai_agent_registration.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/models/_trace.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/models/reasoning_content_replay.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/memory/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/memory/util.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/memory/session.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/memory/sqlite_session.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/memory/session_settings.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/realtime/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/realtime/handoffs.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/realtime/agent.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/realtime/items.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/realtime/_tool_validation.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/realtime/model.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/realtime/events.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/realtime/_default_tracker.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/realtime/model_inputs.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/realtime/_tool_filtering.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/realtime/testing.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/realtime/model_events.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/tracing/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/tracing/setup.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/tracing/util.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/tracing/config.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/tracing/processor_interface.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/tracing/model_tracing.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/tracing/provider.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/tracing/context.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/tracing/scope.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/tracing/spans.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/tracing/logger.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/workspace_paths.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/materialization.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/manifest.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/manifest_render.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/runtime_session_manager.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/remote_mount_policy.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/types.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/apply_patch.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/snapshot.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/sandbox_agent.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/runtime_agent_preparation.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/files.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/snapshot_defaults.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/capabilities/capability.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/capabilities/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/capabilities/memory.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/capabilities/shell.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/capabilities/skills.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/capabilities/capabilities.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/capabilities/compaction.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/capabilities/filesystem.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/capabilities/tools/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/capabilities/tools/view_image.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/capabilities/tools/apply_patch_tool.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/entries/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/entries/base.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/entries/mounts/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/entries/mounts/_redaction.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/entries/mounts/base.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/entries/mounts/providers/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/entries/mounts/providers/box.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/entries/mounts/providers/r2.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/entries/mounts/providers/s3_files.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/entries/mounts/providers/gcs.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/entries/mounts/providers/s3.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/entries/mounts/providers/azure_blob.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/entries/mounts/providers/base.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/memory/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/memory/manager.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/memory/prompts.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/memory/interface.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/memory/rollouts.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/session/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/session/sandbox_session_state.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/session/utils.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/session/sinks.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/session/manifest_application.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/session/runtime_helpers.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/session/archive_extraction.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/session/mount_lifecycle.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/session/manager.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/session/sandbox_client.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/session/dependencies.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/session/events.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/session/pty_types.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/session/tar_workspace.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/session/workspace_payloads.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/session/pty_output.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/session/manifest_ops.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/session/archive_ops.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/sandboxes/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/sandboxes/unix_local.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/util/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/util/iterator_io.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/util/deep_merge.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/util/tar_utils.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/util/retry.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/util/github.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/util/parse_utils.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/util/token_truncation.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/sandbox/util/checksums.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/voice/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/voice/utils.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/voice/pipeline.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/voice/exceptions.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/voice/input.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/voice/model.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/voice/events.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/voice/imports.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/voice/pipeline_config.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/voice/result.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/voice/testing.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/voice/models/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/tool_output_trimmer.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/handoff_filters.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/visualization.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/handoff_prompt.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/experimental/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/experimental/codex/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/experimental/codex/exec.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/experimental/codex/output_schema_file.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/experimental/codex/turn_options.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/experimental/codex/codex.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/experimental/codex/codex_options.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/experimental/codex/events.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/experimental/codex/thread_options.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/experimental/codex/thread.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/experimental/codex/payloads.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/experimental/hosted_multi_agent/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/models/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/models/any_llm_provider.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/memory/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/memory/async_sqlite_session.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/memory/_optional_imports.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/sandbox/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/sandbox/vercel/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/sandbox/vercel/mounts.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/sandbox/cloudflare/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/sandbox/cloudflare/sandbox.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/sandbox/cloudflare/mounts.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/sandbox/modal/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/sandbox/modal/mounts.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/sandbox/daytona/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/sandbox/runloop/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/sandbox/e2b/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/extensions/sandbox/blaxel/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/util/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/util/_custom_data.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/util/_asyncio_tasks.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/util/_error_tracing.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/util/_pretty_print.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/util/_tool_errors.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/util/_transforms.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/util/_json.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/util/_coro.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/util/_types.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/util/_approvals.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/mcp/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/mcp/manager.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/src/agents/mcp/_compat.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/testing_processor.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_output_guardrail_cancellation.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_run_examples_script.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_transforms.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/conftest.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_update_rclone_pin.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_debug.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_asyncio_progress.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_run_internal_error_handlers.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_apply_diff.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_tool_identity.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_apply_diff_helpers.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_agent_tool_input.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_run_context_wrapper.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_tracing_errors_streamed.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_tracing.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_function_schema_logger_restore.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_mcp_tool_metadata.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_agent_runner_sync.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_asyncio_tasks.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_model_error_logging_redaction.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_output_tool.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_shell_call_serialization.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_apply_patch_tool.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_repository_workflow_interfaces.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_doc_parsing.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_source_compat_constructors.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_disabled_trace_provider_shutdown.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_streaming_logging.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_check_optional_truthiness.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/_fake_workspace_paths.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_strict_schema_oneof.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_shell_tool.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_integration_runner.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_usaspending_setup_db.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_code_change_verification_policy.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_tracing_provider_safe_debug.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_oaiconv_resume_response_id.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_test_environment.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_run_serial_tests.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_agents_logging.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_handoff_prompt.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_strict_schema.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/test_hitl_utils.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/models/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/models/test_agent_registration.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/models/test_trace_config.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/models/test_map.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/models/test_remove_openai_responses_api_incompatible_fields.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/models/test_openai_retry_helpers.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/memory/test_session_persistence_sanitize.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/memory/test_session_limit.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/realtime/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/realtime/test_ga_session_update_normalization.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/realtime/test_model_events.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/realtime/test_agent.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/realtime/test_playback_tracker_manual_unit.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/realtime/test_session_exceptions.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/tracing/test_span_ordering.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/tracing/test_set_api_key_fix.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/tracing/test_traces_impl.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/tracing/test_tracing_env_disable.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/tracing/test_import_side_effects.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/tracing/test_setup.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/tracing/test_spans_impl.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/tracing/test_processor_api_key.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/tracing/test_logger.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/utils/simple_session.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/utils/test_simple_session.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/fastapi/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/fastapi/test_streaming_context.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/fastapi/streaming_app.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_remote_mount_policy.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_compatibility_guards.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_exposed_ports.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_dependencies.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_workspace_payloads.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_manifest_application.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_workspace_paths.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_view_image_content_validation.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/_filesystem_test_session.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_entries.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_session_state_roundtrip.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_tar_workspace.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_compaction.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_pty_types.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_runtime_agent_preparation.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_snapshot_defaults.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_types.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_pty_output.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_manifest.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_docker_network_mode.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_session_manager.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_unix_local.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_token_truncation.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_retry.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_apply_patch.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_materialization.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_snapshot.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_tar_utils.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_mount_lifecycle.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_errors.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_posix_tool_paths.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/_apply_patch_test_session.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/test_parse_utils.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/capabilities/test_compaction_capability.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/capabilities/test_skills_capability.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/capabilities/test_filesystem_capability.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/capabilities/test_apply_patch_preflight.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/capabilities/test_view_image_tool.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/capabilities/test_apply_patch_tool.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/capabilities/test_shell_capability.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/integration_tests/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/sandbox/integration_tests/test_model.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/voice/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/voice/test_input.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/voice/test_testing.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/voice/pipeline_test_models.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/voice/test_workflow.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/voice/test_pipeline.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/voice/test_utils.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/voice/helpers.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/extensions/experiemental/codex/test_payloads.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/extensions/sandbox/test_cloudflare.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/extensions/sandbox/test_blaxel_mounts.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/extensions/sandbox/test_rclone.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/extensions/sandbox/test_runloop_capabilities_example.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/mcp/__init__.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/mcp/test_server_errors.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/mcp/test_mcp_version_compat.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/mcp/test_connect_disconnect.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/mcp/test_mcp_auth_params.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/mcp/test_streamable_http_session_id.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/tests/mcp/servers/legacy.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/docs/scripts/generate_ref_files.py,Python,0,NORMAL,0,0,,,,
+openai_agents-0.22.0/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
+openai_agents-0.22.0/docs/agents.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
+openai_agents-0.22.0/docs/ja/agents.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
+openai_agents-0.22.0/docs/ko/agents.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
+openai_agents-0.22.0/docs/zh/agents.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
+openai_agents-0.22.0/CLAUDE.md,ARTIFACT,,TIER-1,,,,,,Claude Code instructions

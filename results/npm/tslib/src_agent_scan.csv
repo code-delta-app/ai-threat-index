@@ -1,0 +1,6 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+package/tslib.d.ts,JavaScript,0,NORMAL,0,0,,,,
+package/tslib.es6.js,JavaScript,0,NORMAL,0,0,,,,
+package/tslib.js,JavaScript,0,NORMAL,0,0,,,,
+package/modules/index.d.ts,JavaScript,0,NORMAL,0,0,,,,
+package/modules/index.js,JavaScript,0,NORMAL,0,0,,,,

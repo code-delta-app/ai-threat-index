@@ -1,0 +1,2309 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.1",
+  "generated": "2026-08-31T19:37:46.137760Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 157,
+    "files_flagged": 134,
+    "critical": 0,
+    "high": 6,
+    "elevated": 128,
+    "providers": 8,
+    "foreign_egress_files": 0,
+    "non_allied_jurisdiction_files": 0,
+    "cost_risk_files": 1,
+    "agent_artifacts": 0,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 0
+  },
+  "providers": [
+    {
+      "name": "dspy",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 134,
+      "files": [
+        "dspy-3.3.1/dspy/__init__.py",
+        "dspy-3.3.1/dspy/adapters/__init__.py",
+        "dspy-3.3.1/dspy/adapters/_legacy_type_markers.py",
+        "dspy-3.3.1/dspy/adapters/baml_adapter.py",
+        "dspy-3.3.1/dspy/adapters/base.py",
+        "dspy-3.3.1/dspy/adapters/chat_adapter.py",
+        "dspy-3.3.1/dspy/adapters/json_adapter.py",
+        "dspy-3.3.1/dspy/adapters/two_step_adapter.py",
+        "dspy-3.3.1/dspy/adapters/types/__init__.py",
+        "dspy-3.3.1/dspy/adapters/types/audio.py",
+        "dspy-3.3.1/dspy/adapters/types/base_type.py",
+        "dspy-3.3.1/dspy/adapters/types/citation.py",
+        "dspy-3.3.1/dspy/adapters/types/code.py",
+        "dspy-3.3.1/dspy/adapters/types/document.py",
+        "dspy-3.3.1/dspy/adapters/types/file.py",
+        "dspy-3.3.1/dspy/adapters/types/history.py",
+        "dspy-3.3.1/dspy/adapters/types/image.py",
+        "dspy-3.3.1/dspy/adapters/types/reasoning.py",
+        "dspy-3.3.1/dspy/adapters/types/tool.py",
+        "dspy-3.3.1/dspy/adapters/utils.py",
+        "dspy-3.3.1/dspy/adapters/xml_adapter.py",
+        "dspy-3.3.1/dspy/clients/__init__.py",
+        "dspy-3.3.1/dspy/clients/_litellm.py",
+        "dspy-3.3.1/dspy/clients/base_lm.py",
+        "dspy-3.3.1/dspy/clients/cache.py",
+        "dspy-3.3.1/dspy/clients/databricks.py",
+        "dspy-3.3.1/dspy/clients/embedding.py",
+        "dspy-3.3.1/dspy/clients/lm.py",
+        "dspy-3.3.1/dspy/clients/lm_local.py",
+        "dspy-3.3.1/dspy/clients/openai.py",
+        "dspy-3.3.1/dspy/clients/openai_format.py",
+        "dspy-3.3.1/dspy/clients/provider.py",
+        "dspy-3.3.1/dspy/clients/utils_finetune.py",
+        "dspy-3.3.1/dspy/core/__init__.py",
+        "dspy-3.3.1/dspy/core/types.py",
+        "dspy-3.3.1/dspy/datasets/__init__.py",
+        "dspy-3.3.1/dspy/datasets/alfworld/__init__.py",
+        "dspy-3.3.1/dspy/datasets/alfworld/alfworld.py",
+        "dspy-3.3.1/dspy/datasets/colors.py",
+        "dspy-3.3.1/dspy/datasets/dataloader.py",
+        "dspy-3.3.1/dspy/datasets/dataset.py",
+        "dspy-3.3.1/dspy/datasets/gsm8k.py",
+        "dspy-3.3.1/dspy/datasets/hotpotqa.py",
+        "dspy-3.3.1/dspy/datasets/math.py",
+        "dspy-3.3.1/dspy/dsp/colbertv2.py",
+        "dspy-3.3.1/dspy/dsp/utils/__init__.py",
+        "dspy-3.3.1/dspy/dsp/utils/settings.py",
+        "dspy-3.3.1/dspy/evaluate/__init__.py",
+        "dspy-3.3.1/dspy/evaluate/auto_evaluation.py",
+        "dspy-3.3.1/dspy/evaluate/evaluate.py",
+        "dspy-3.3.1/dspy/evaluate/metrics.py",
+        "dspy-3.3.1/dspy/experimental/__init__.py",
+        "dspy-3.3.1/dspy/predict/__init__.py",
+        "dspy-3.3.1/dspy/predict/aggregation.py",
+        "dspy-3.3.1/dspy/predict/avatar/__init__.py",
+        "dspy-3.3.1/dspy/predict/avatar/avatar.py",
+        "dspy-3.3.1/dspy/predict/avatar/signatures.py",
+        "dspy-3.3.1/dspy/predict/best_of_n.py",
+        "dspy-3.3.1/dspy/predict/chain_of_thought.py",
+        "dspy-3.3.1/dspy/predict/code_act.py",
+        "dspy-3.3.1/dspy/predict/flex/__init__.py",
+        "dspy-3.3.1/dspy/predict/flex/bridge.py",
+        "dspy-3.3.1/dspy/predict/flex/flex.py",
+        "dspy-3.3.1/dspy/predict/knn.py",
+        "dspy-3.3.1/dspy/predict/multi_chain_comparison.py",
+        "dspy-3.3.1/dspy/predict/parallel.py",
+        "dspy-3.3.1/dspy/predict/predict.py",
+        "dspy-3.3.1/dspy/predict/program_of_thought.py",
+        "dspy-3.3.1/dspy/predict/react.py",
+        "dspy-3.3.1/dspy/predict/react_v2.py",
+        "dspy-3.3.1/dspy/predict/refine.py",
+        "dspy-3.3.1/dspy/predict/retry.py",
+        "dspy-3.3.1/dspy/predict/rlm.py",
+        "dspy-3.3.1/dspy/primitives/__init__.py",
+        "dspy-3.3.1/dspy/primitives/base_module.py",
+        "dspy-3.3.1/dspy/primitives/code_interpreter.py",
+        "dspy-3.3.1/dspy/primitives/example.py",
+        "dspy-3.3.1/dspy/primitives/module.py",
+        "dspy-3.3.1/dspy/primitives/prediction.py",
+        "dspy-3.3.1/dspy/primitives/python_interpreter.py",
+        "dspy-3.3.1/dspy/primitives/repl_types.py",
+        "dspy-3.3.1/dspy/primitives/sandbox_serializable.py",
+        "dspy-3.3.1/dspy/propose/__init__.py",
+        "dspy-3.3.1/dspy/propose/dataset_summary_generator.py",
+        "dspy-3.3.1/dspy/propose/grounded_proposer.py",
+        "dspy-3.3.1/dspy/propose/utils.py",
+        "dspy-3.3.1/dspy/retrievers/__init__.py",
+        "dspy-3.3.1/dspy/retrievers/databricks_rm.py",
+        "dspy-3.3.1/dspy/retrievers/embeddings.py",
+        "dspy-3.3.1/dspy/retrievers/retrieve.py",
+        "dspy-3.3.1/dspy/retrievers/weaviate_rm.py",
+        "dspy-3.3.1/dspy/signatures/__init__.py",
+        "dspy-3.3.1/dspy/signatures/field.py",
+        "dspy-3.3.1/dspy/signatures/signature.py",
+        "dspy-3.3.1/dspy/streaming/__init__.py",
+        "dspy-3.3.1/dspy/streaming/messages.py",
+        "dspy-3.3.1/dspy/streaming/streamify.py",
+        "dspy-3.3.1/dspy/streaming/streaming_listener.py",
+        "dspy-3.3.1/dspy/teleprompt/__init__.py",
+        "dspy-3.3.1/dspy/teleprompt/avatar_optimizer.py",
+        "dspy-3.3.1/dspy/teleprompt/bettertogether.py",
+        "dspy-3.3.1/dspy/teleprompt/bootstrap.py",
+        "dspy-3.3.1/dspy/teleprompt/bootstrap_finetune.py",
+        "dspy-3.3.1/dspy/teleprompt/bootstrap_trace.py",
+        "dspy-3.3.1/dspy/teleprompt/copro_optimizer.py",
+        "dspy-3.3.1/dspy/teleprompt/ensemble.py",
+        "dspy-3.3.1/dspy/teleprompt/gepa/__init__.py",
+        "dspy-3.3.1/dspy/teleprompt/gepa/gepa.py",
+        "dspy-3.3.1/dspy/teleprompt/gepa/gepa_flex_utils.py",
+        "dspy-3.3.1/dspy/teleprompt/gepa/gepa_utils.py",
+        "dspy-3.3.1/dspy/teleprompt/gepa/instruction_proposal.py",
+        "dspy-3.3.1/dspy/teleprompt/grpo.py",
+        "dspy-3.3.1/dspy/teleprompt/infer_rules.py",
+        "dspy-3.3.1/dspy/teleprompt/knn_fewshot.py",
+        "dspy-3.3.1/dspy/teleprompt/mipro_optimizer_v2.py",
+        "dspy-3.3.1/dspy/teleprompt/random_search.py",
+        "dspy-3.3.1/dspy/teleprompt/simba.py",
+        "dspy-3.3.1/dspy/teleprompt/simba_utils.py",
+        "dspy-3.3.1/dspy/teleprompt/teleprompt.py",
+        "dspy-3.3.1/dspy/teleprompt/teleprompt_optuna.py",
+        "dspy-3.3.1/dspy/teleprompt/utils.py",
+        "dspy-3.3.1/dspy/teleprompt/vanilla.py",
+        "dspy-3.3.1/dspy/utils/__init__.py",
+        "dspy-3.3.1/dspy/utils/asyncify.py",
+        "dspy-3.3.1/dspy/utils/callback.py",
+        "dspy-3.3.1/dspy/utils/dummies.py",
+        "dspy-3.3.1/dspy/utils/exceptions.py",
+        "dspy-3.3.1/dspy/utils/langchain_tool.py",
+        "dspy-3.3.1/dspy/utils/lazy_import.py",
+        "dspy-3.3.1/dspy/utils/mcp.py",
+        "dspy-3.3.1/dspy/utils/parallelizer.py",
+        "dspy-3.3.1/dspy/utils/saving.py",
+        "dspy-3.3.1/dspy/utils/syncify.py",
+        "dspy-3.3.1/dspy/utils/usage_tracker.py"
+      ]
+    },
+    {
+      "name": "litellm",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "dspy-3.3.1/dspy/adapters/types/base_type.py",
+        "dspy-3.3.1/dspy/streaming/streaming_listener.py",
+        "dspy-3.3.1/dspy/utils/usage_tracker.py"
+      ]
+    },
+    {
+      "name": "openai",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "dspy-3.3.1/dspy/clients/base_lm.py",
+        "dspy-3.3.1/dspy/clients/databricks.py",
+        "dspy-3.3.1/dspy/clients/openai.py"
+      ]
+    },
+    {
+      "name": "DSPy",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "dspy-3.3.1/dspy/adapters/base.py",
+        "dspy-3.3.1/dspy/adapters/types/reasoning.py"
+      ]
+    },
+    {
+      "name": "LiteLLM",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "dspy-3.3.1/dspy/clients/_litellm.py",
+        "dspy-3.3.1/dspy/clients/base_lm.py"
+      ]
+    },
+    {
+      "name": "OpenAI",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "dspy-3.3.1/dspy/clients/base_lm.py",
+        "dspy-3.3.1/dspy/clients/databricks.py"
+      ]
+    },
+    {
+      "name": "langchain",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "dspy-3.3.1/dspy/adapters/types/tool.py",
+        "dspy-3.3.1/dspy/utils/langchain_tool.py"
+      ]
+    },
+    {
+      "name": "mcp",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "dspy-3.3.1/dspy/adapters/types/tool.py",
+        "dspy-3.3.1/dspy/utils/mcp.py"
+      ]
+    }
+  ],
+  "agent_artifacts": [],
+  "committed_credentials": [],
+  "findings": [
+    {
+      "file": "dspy-3.3.1/dspy/clients/databricks.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 98,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/clients/base_lm.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 78,
+      "signals": [
+        "ai_sdk_import(5_sdk(s)_detected)",
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/core/types.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/grpo.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/two_step_adapter.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/base.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_vectors(24_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/signatures/signature.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/rlm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/utils/dummies.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/chat_adapter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/_legacy_type_markers.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/types/reasoning.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/clients/lm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/clients/openai_format.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/experimental/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/evaluate/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/evaluate/auto_evaluation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/evaluate/metrics.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/evaluate/evaluate.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/retrievers/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/retrievers/retrieve.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/retrievers/weaviate_rm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/retrievers/embeddings.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/retrievers/databricks_rm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/signatures/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/signatures/field.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/knn.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/predict.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/best_of_n.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/refine.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/chain_of_thought.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/aggregation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/retry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/multi_chain_comparison.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/parallel.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/code_act.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/react.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/program_of_thought.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/react_v2.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/flex/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/flex/flex.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/flex/bridge.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/avatar/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/avatar/avatar.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/predict/avatar/signatures.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/datasets/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/datasets/dataset.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/datasets/gsm8k.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/datasets/math.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/datasets/hotpotqa.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/datasets/dataloader.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/datasets/colors.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/datasets/alfworld/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/datasets/alfworld/alfworld.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/utils/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/utils/syncify.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/utils/usage_tracker.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/utils/parallelizer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/utils/exceptions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/utils/langchain_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/utils/mcp.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/utils/lazy_import.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/utils/asyncify.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/utils/callback.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/utils/saving.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/primitives/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/primitives/prediction.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/primitives/python_interpreter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/primitives/example.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/primitives/repl_types.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/primitives/code_interpreter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/primitives/base_module.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/primitives/module.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/primitives/sandbox_serializable.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/core/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/propose/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/propose/utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/propose/dataset_summary_generator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/propose/grounded_proposer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/copro_optimizer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/teleprompt_optuna.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/mipro_optimizer_v2.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/avatar_optimizer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/random_search.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/teleprompt.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/infer_rules.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/simba_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/ensemble.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/knn_fewshot.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/bootstrap.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/vanilla.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/simba.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/bettertogether.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/bootstrap_finetune.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/bootstrap_trace.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/gepa/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/gepa/instruction_proposal.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/gepa/gepa_flex_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/gepa/gepa.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/teleprompt/gepa/gepa_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/streaming/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/streaming/messages.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/streaming/streamify.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/streaming/streaming_listener.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/json_adapter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/xml_adapter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/baml_adapter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/types/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/types/history.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/types/citation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/types/audio.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/types/tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(4_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/types/file.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/types/document.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/types/code.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/types/image.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/adapters/types/base_type.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/dsp/colbertv2.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/dsp/utils/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/dsp/utils/settings.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/clients/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/clients/openai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/clients/lm_local.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/clients/embedding.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/clients/_litellm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/clients/provider.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/clients/utils_finetune.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/clients/cache.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/primitives/runner.js",
+      "language": "JavaScript",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "dspy-3.3.1/dspy/utils/inspect_history.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+browser_use-0.13.8/browser_use/mcp/cli_mcp.py,Python,90,HIGH,0,0,import mcp; from mcp,,eval/exec found (2 occurrence(s)),ai_sdk_import(2_sdk(s)_detected); dynamic_execution(eval/exec_x2)
+browser_use-0.13.8/browser_use/mcp/server.py,Python,80,HIGH,0,0,import MCP; import mcp; from mcp,agent.run(,,ai_sdk_import(3_sdk(s)_detected); agent_orchestration(agent.run()
+browser_use-0.13.8/browser_use/beta/service.py,Python,75,HIGH,0,6,,,subprocess/shell execution with variables (1 occurrence(s)),subprocess_variable_execution(x1); prompt_injection_vectors(6_unsanitised_inputs)
+browser_use-0.13.8/browser_use/tools/service.py,Python,68,ELEVATED,0,2,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1); prompt_injection_partial(2)
+browser_use-0.13.8/browser_use/cli.py,Python,60,ELEVATED,0,0,,,subprocess/shell execution with variables (1 occurrence(s)),subprocess_variable_execution(x1); dynamic_import(x1)
+browser_use-0.13.8/browser_use/llm/groq/serializer.py,Python,58,ELEVATED,0,2,from groq,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(2)
+browser_use-0.13.8/browser_use/llm/cerebras/chat.py,Python,58,ELEVATED,0,1,from openai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(1)
+browser_use-0.13.8/browser_use/llm/openai/serializer.py,Python,58,ELEVATED,0,2,from openai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(2)
+browser_use-0.13.8/browser_use/utils.py,Python,40,ELEVATED,0,0,from openai; from groq,,,ai_sdk_import(2_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/__init__.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/models.py,Python,40,ELEVATED,0,0,http:api.mistral.ai,,,ai_http_endpoint(api.mistral.ai); data_egress(model_hosted_in_FR:api.mistral.ai)
+browser_use-0.13.8/browser_use/llm/base.py,Python,40,ELEVATED,0,0,from langchain,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/groq/chat.py,Python,40,ELEVATED,0,0,from groq,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/groq/parser.py,Python,40,ELEVATED,0,0,from groq,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/vercel/chat.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/vercel/serializer.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/mistral/chat.py,Python,40,ELEVATED,0,0,http:api.mistral.ai,,,ai_http_endpoint(api.mistral.ai); data_egress(model_hosted_in_FR:api.mistral.ai)
+browser_use-0.13.8/browser_use/llm/azure/chat.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/ollama/chat.py,Python,40,ELEVATED,0,0,from ollama,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/ollama/serializer.py,Python,40,ELEVATED,0,0,from ollama,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/litellm/chat.py,Python,40,ELEVATED,0,0,from litellm,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/openai/chat.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/openai/responses_serializer.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/anthropic/chat.py,Python,40,ELEVATED,0,0,from anthropic; from Anthropic,,,ai_sdk_import(2_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/anthropic/serializer.py,Python,40,ELEVATED,0,0,from anthropic,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/openrouter/chat.py,Python,40,ELEVATED,0,0,from openai; http:openrouter.ai,,,ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(openrouter.ai)
+browser_use-0.13.8/browser_use/llm/openrouter/serializer.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/google/chat.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/google/serializer.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/deepseek/chat.py,Python,40,ELEVATED,0,0,from openai; http:api.deepseek.com,,,ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(api.deepseek.com); data_egress(model_hosted_in_CN:api.deepseek.com); data_sovereignty_risk(non-allied_jurisdiction)
+browser_use-0.13.8/browser_use/llm/aws/chat_bedrock.py,Python,40,ELEVATED,0,0,http:bedrock-runtime,,,ai_http_endpoint(bedrock-runtime)
+browser_use-0.13.8/browser_use/llm/aws/chat_anthropic.py,Python,40,ELEVATED,0,0,from anthropic,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/sandbox/sandbox.py,Python,40,ELEVATED,0,0,,agent.run(,,agent_orchestration(agent.run()
+browser_use-0.13.8/browser_use/tokens/service.py,Python,40,ELEVATED,0,0,from LiteLLM; http:openrouter.ai,,,ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(openrouter.ai)
+browser_use-0.13.8/browser_use/tokens/openrouter_pricing.py,Python,40,ELEVATED,0,0,http:openrouter.ai,,,ai_http_endpoint(openrouter.ai)
+browser_use-0.13.8/browser_use/mcp/controller.py,Python,40,ELEVATED,0,0,from mcp,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/mcp/client.py,Python,40,ELEVATED,0,0,Import MCP; from mcp; from MCP,,,ai_sdk_import(3_sdk(s)_detected)
+browser_use-0.13.8/browser_use/agent/views.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+browser_use-0.13.8/browser_use/llm/cerebras/serializer.py,Python,35,NORMAL,0,3,,,,prompt_injection_vectors(3_unsanitised_inputs)
+browser_use-0.13.8/browser_use/llm/deepseek/serializer.py,Python,35,NORMAL,0,3,,,,prompt_injection_vectors(3_unsanitised_inputs)
+browser_use-0.13.8/browser_use/llm/browser_use/chat.py,Python,18,NORMAL,0,1,,,,prompt_injection_partial(1)
+browser_use-0.13.8/browser_use/llm/aws/serializer.py,Python,18,NORMAL,0,2,,,,prompt_injection_partial(2)
+browser_use-0.13.8/browser_use/browser/watchdogs/har_recording_watchdog.py,Python,18,NORMAL,0,1,,,,prompt_injection_partial(1)
+browser_use-0.13.8/browser_use/browser/watchdogs/crash_watchdog.py,Python,18,NORMAL,0,1,,,,prompt_injection_partial(1)
+browser_use-0.13.8/browser_use/agent/service.py,Python,18,NORMAL,0,1,,,,prompt_injection_partial(1)
+browser_use-0.13.8/browser_use/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/exceptions.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/config.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/observability.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/logging_config.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/init_cmd.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/llm/schema.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/llm/exceptions.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/llm/views.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/llm/messages.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/llm/oci_raw/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/llm/oci_raw/chat.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/llm/oci_raw/serializer.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/llm/vercel/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/llm/browser_use/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/llm/mistral/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/llm/mistral/schema.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/llm/litellm/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/llm/litellm/serializer.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/llm/openai/like.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/llm/google/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/llm/aws/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/actor/page.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/actor/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/actor/utils.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/actor/element.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/actor/mouse.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/actor/playground/mixed_automation.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/actor/playground/flights.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/actor/playground/playground.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/filesystem/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/filesystem/file_system.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/dom/utils.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/dom/enhanced_snapshot.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/dom/service.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/dom/views.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/dom/markdown_extractor.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/dom/serializer/clickable_elements.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/dom/serializer/html_serializer.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/dom/serializer/eval_serializer.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/dom/serializer/serializer.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/dom/serializer/paint_order.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/dom/playground/extraction.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/dom/playground/multi_act.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/tools/utils.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/tools/views.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/tools/registry/service.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/tools/registry/views.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/tools/extraction/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/tools/extraction/views.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/tools/extraction/schema_utils.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/watchdog_base.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/chrome.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/python_highlights.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/events.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/_cdp_timeout.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/session.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/session_manager.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/profile.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/video_recorder.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/views.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/demo_mode.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/watchdogs/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/watchdogs/dom_watchdog.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/watchdogs/permissions_watchdog.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/watchdogs/captcha_watchdog.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/watchdogs/recording_watchdog.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/watchdogs/downloads_watchdog.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/watchdogs/security_watchdog.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/watchdogs/screenshot_watchdog.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/watchdogs/popups_watchdog.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/watchdogs/local_browser_watchdog.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/watchdogs/storage_state_watchdog.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/watchdogs/default_action_watchdog.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/watchdogs/aboutblank_watchdog.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/cloud/cloud.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/browser/cloud/views.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/beta/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/sandbox/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/sandbox/views.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/sync/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/sync/service.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/sync/auth.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/integrations/gmail/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/integrations/gmail/service.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/integrations/gmail/actions.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/screenshots/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/screenshots/service.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/telemetry/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/telemetry/service.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/telemetry/views.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/skills/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/skills/install.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/skills/utils.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/skills/service.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/skills/browser_use.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/skills/views.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/tokens/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/tokens/mappings.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/tokens/custom_pricing.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/tokens/views.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/mcp/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/mcp/__main__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/agent/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/agent/variable_detector.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/agent/gif.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/agent/judge.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/agent/prompts.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/agent/cloud_events.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/agent/system_prompts/__init__.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/agent/message_manager/utils.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/agent/message_manager/service.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/agent/message_manager/views.py,Python,0,NORMAL,0,0,,,,
+browser_use-0.13.8/browser_use/controller/__init__.py,Python,0,NORMAL,0,0,,,,

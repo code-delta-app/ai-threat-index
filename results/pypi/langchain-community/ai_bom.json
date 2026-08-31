@@ -1,0 +1,4280 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.1",
+  "generated": "2026-08-31T19:34:49.193410Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 2035,
+    "files_flagged": 156,
+    "critical": 0,
+    "high": 19,
+    "elevated": 137,
+    "providers": 41,
+    "foreign_egress_files": 17,
+    "non_allied_jurisdiction_files": 17,
+    "cost_risk_files": 14,
+    "agent_artifacts": 0,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 0
+  },
+  "providers": [
+    {
+      "name": "OpenAI",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 28,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/agent_toolkits/openapi/planner.py",
+        "langchain_community-0.4.2/langchain_community/cache.py",
+        "langchain_community-0.4.2/langchain_community/callbacks/argilla_callback.py",
+        "langchain_community-0.4.2/langchain_community/callbacks/confident_callback.py",
+        "langchain_community-0.4.2/langchain_community/callbacks/labelstudio_callback.py",
+        "langchain_community-0.4.2/langchain_community/callbacks/llmonitor_callback.py",
+        "langchain_community-0.4.2/langchain_community/llms/__init__.py",
+        "langchain_community-0.4.2/langchain_community/llms/openai.py",
+        "langchain_community-0.4.2/langchain_community/llms/promptlayer_openai.py",
+        "langchain_community-0.4.2/langchain_community/tools/vectorstore/tool.py",
+        "langchain_community-0.4.2/tests/integration_tests/callbacks/test_langchain_tracer.py",
+        "langchain_community-0.4.2/tests/integration_tests/callbacks/test_openai_callback.py",
+        "langchain_community-0.4.2/tests/integration_tests/callbacks/test_streamlit_callback.py",
+        "langchain_community-0.4.2/tests/integration_tests/callbacks/test_wandb_tracer.py",
+        "langchain_community-0.4.2/tests/integration_tests/chains/test_dalle_agent.py",
+        "langchain_community-0.4.2/tests/integration_tests/chains/test_graph_database.py",
+        "langchain_community-0.4.2/tests/integration_tests/chains/test_graph_database_arangodb.py",
+        "langchain_community-0.4.2/tests/integration_tests/chains/test_react.py",
+        "langchain_community-0.4.2/tests/integration_tests/chains/test_retrieval_qa.py",
+        "langchain_community-0.4.2/tests/integration_tests/chains/test_retrieval_qa_with_sources.py",
+        "langchain_community-0.4.2/tests/integration_tests/chains/test_self_ask_with_search.py",
+        "langchain_community-0.4.2/tests/integration_tests/llms/test_confident.py",
+        "langchain_community-0.4.2/tests/integration_tests/llms/test_opaqueprompts.py",
+        "langchain_community-0.4.2/tests/integration_tests/llms/test_openai.py",
+        "langchain_community-0.4.2/tests/integration_tests/smith/evaluation/test_runner_utils.py",
+        "langchain_community-0.4.2/tests/unit_tests/llms/test_openai.py",
+        "langchain_community-0.4.2/tests/unit_tests/load/test_dump.py",
+        "langchain_community-0.4.2/tests/unit_tests/test_dependencies.py"
+      ]
+    },
+    {
+      "name": "openai",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 24,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/agents/openai_assistant/base.py",
+        "langchain_community-0.4.2/langchain_community/chat_loaders/langsmith.py",
+        "langchain_community-0.4.2/langchain_community/chat_models/anyscale.py",
+        "langchain_community-0.4.2/langchain_community/chat_models/azureml_endpoint.py",
+        "langchain_community-0.4.2/langchain_community/chat_models/everlyai.py",
+        "langchain_community-0.4.2/langchain_community/chat_models/jinachat.py",
+        "langchain_community-0.4.2/langchain_community/chat_models/moonshot.py",
+        "langchain_community-0.4.2/langchain_community/chat_models/octoai.py",
+        "langchain_community-0.4.2/langchain_community/chat_models/openai.py",
+        "langchain_community-0.4.2/langchain_community/chat_models/yuan2.py",
+        "langchain_community-0.4.2/langchain_community/document_loaders/parsers/audio.py",
+        "langchain_community-0.4.2/langchain_community/embeddings/anyscale.py",
+        "langchain_community-0.4.2/langchain_community/embeddings/azure_openai.py",
+        "langchain_community-0.4.2/langchain_community/embeddings/localai.py",
+        "langchain_community-0.4.2/langchain_community/embeddings/octoai_embeddings.py",
+        "langchain_community-0.4.2/langchain_community/embeddings/openai.py",
+        "langchain_community-0.4.2/langchain_community/llms/anyscale.py",
+        "langchain_community-0.4.2/langchain_community/llms/gooseai.py",
+        "langchain_community-0.4.2/langchain_community/llms/octoai_endpoint.py",
+        "langchain_community-0.4.2/langchain_community/llms/openai.py",
+        "langchain_community-0.4.2/langchain_community/utilities/dalle_image_generator.py",
+        "langchain_community-0.4.2/tests/integration_tests/adapters/test_openai.py",
+        "langchain_community-0.4.2/tests/integration_tests/embeddings/test_azure_openai.py",
+        "langchain_community-0.4.2/tests/integration_tests/embeddings/test_openai.py"
+      ]
+    },
+    {
+      "name": "huggingface_hub",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 7,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/chat_models/outlines.py",
+        "langchain_community-0.4.2/langchain_community/document_compressors/openvino_rerank.py",
+        "langchain_community-0.4.2/langchain_community/embeddings/huggingface_hub.py",
+        "langchain_community-0.4.2/langchain_community/embeddings/itrex.py",
+        "langchain_community-0.4.2/langchain_community/embeddings/openvino.py",
+        "langchain_community-0.4.2/langchain_community/llms/huggingface_endpoint.py",
+        "langchain_community-0.4.2/langchain_community/llms/huggingface_hub.py"
+      ]
+    },
+    {
+      "name": "Anyscale",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 5,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/chat_models/anyscale.py",
+        "langchain_community-0.4.2/langchain_community/llms/__init__.py",
+        "langchain_community-0.4.2/langchain_community/llms/anyscale.py",
+        "langchain_community-0.4.2/tests/integration_tests/llms/test_anyscale.py",
+        "langchain_community-0.4.2/tests/unit_tests/llms/test_anyscale.py"
+      ]
+    },
+    {
+      "name": "dashscope",
+      "type": "sdk",
+      "jurisdiction": "CN",
+      "sovereignty_risk": true,
+      "file_count": 5,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/chat_models/tongyi.py",
+        "langchain_community-0.4.2/langchain_community/document_compressors/dashscope_rerank.py",
+        "langchain_community-0.4.2/langchain_community/embeddings/dashscope.py",
+        "langchain_community-0.4.2/langchain_community/llms/tongyi.py",
+        "langchain_community-0.4.2/tests/integration_tests/embeddings/test_dashscope.py"
+      ]
+    },
+    {
+      "name": "langchain",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 5,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/agent_toolkits/sql/toolkit.py",
+        "langchain_community-0.4.2/langchain_community/cache.py",
+        "langchain_community-0.4.2/langchain_community/embeddings/nemo.py",
+        "langchain_community-0.4.2/langchain_community/vectorstores/vlite.py",
+        "langchain_community-0.4.2/tests/unit_tests/imports/test_langchain_proxy_imports.py"
+      ]
+    },
+    {
+      "name": "AI21",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 4,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/llms/__init__.py",
+        "langchain_community-0.4.2/langchain_community/llms/ai21.py",
+        "langchain_community-0.4.2/tests/integration_tests/llms/test_ai21.py",
+        "langchain_community-0.4.2/tests/unit_tests/llms/test_ai21.py"
+      ]
+    },
+    {
+      "name": "bedrock-runtime",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 4,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/embeddings/bedrock.py",
+        "langchain_community-0.4.2/langchain_community/llms/bedrock.py",
+        "langchain_community-0.4.2/langchain_community/retrievers/bedrock.py",
+        "langchain_community-0.4.2/tests/integration_tests/llms/test_bedrock.py"
+      ],
+      "endpoint": "bedrock-runtime"
+    },
+    {
+      "name": "Anthropic",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/llms/__init__.py",
+        "langchain_community-0.4.2/langchain_community/llms/anthropic.py",
+        "langchain_community-0.4.2/tests/integration_tests/llms/test_anthropic.py"
+      ]
+    },
+    {
+      "name": "Cohere",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/llms/__init__.py",
+        "langchain_community-0.4.2/langchain_community/llms/cohere.py",
+        "langchain_community-0.4.2/tests/integration_tests/llms/test_cohere.py"
+      ]
+    },
+    {
+      "name": "Fireworks",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/llms/__init__.py",
+        "langchain_community-0.4.2/tests/integration_tests/llms/test_fireworks.py",
+        "langchain_community-0.4.2/tests/unit_tests/llms/test_fireworks.py"
+      ]
+    },
+    {
+      "name": "Ollama",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/llms/__init__.py",
+        "langchain_community-0.4.2/langchain_community/llms/ollama.py",
+        "langchain_community-0.4.2/tests/unit_tests/llms/test_ollama.py"
+      ]
+    },
+    {
+      "name": "anthropic",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/llms/anthropic.py",
+        "langchain_community-0.4.2/langchain_community/utilities/anthropic.py",
+        "langchain_community-0.4.2/tests/integration_tests/llms/test_anthropic.py"
+      ]
+    },
+    {
+      "name": "google.generativeai",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/chat_models/google_palm.py",
+        "langchain_community-0.4.2/langchain_community/embeddings/google_palm.py",
+        "langchain_community-0.4.2/langchain_community/llms/google_palm.py"
+      ]
+    },
+    {
+      "name": "llama_cpp",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/chat_models/llamacpp.py",
+        "langchain_community-0.4.2/langchain_community/embeddings/llamacpp.py",
+        "langchain_community-0.4.2/langchain_community/llms/llamacpp.py"
+      ]
+    },
+    {
+      "name": "qianfan",
+      "type": "sdk",
+      "jurisdiction": "CN",
+      "sovereignty_risk": true,
+      "file_count": 3,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/chat_models/baidu_qianfan_endpoint.py",
+        "langchain_community-0.4.2/langchain_community/embeddings/baidu_qianfan_endpoint.py",
+        "langchain_community-0.4.2/langchain_community/llms/baidu_qianfan_endpoint.py"
+      ]
+    },
+    {
+      "name": "vertexai",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/embeddings/vertexai.py",
+        "langchain_community-0.4.2/langchain_community/llms/vertexai.py",
+        "langchain_community-0.4.2/langchain_community/utilities/vertexai.py"
+      ]
+    },
+    {
+      "name": "GigaChat",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/llms/__init__.py",
+        "langchain_community-0.4.2/langchain_community/llms/gigachat.py"
+      ]
+    },
+    {
+      "name": "INSTRUCTOR",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/embeddings/huggingface.py",
+        "langchain_community-0.4.2/langchain_community/embeddings/self_hosted_hugging_face.py"
+      ]
+    },
+    {
+      "name": "LangChain",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/chat_models/maritalk.py",
+        "langchain_community-0.4.2/langchain_community/indexes/__init__.py"
+      ]
+    },
+    {
+      "name": "Langchain",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/llms/amazon_api_gateway.py",
+        "langchain_community-0.4.2/langchain_community/llms/bedrock.py"
+      ]
+    },
+    {
+      "name": "Moonshot",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/llms/moonshot.py",
+        "langchain_community-0.4.2/tests/unit_tests/llms/test_moonshot.py"
+      ]
+    },
+    {
+      "name": "Replicate",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/llms/replicate.py",
+        "langchain_community-0.4.2/tests/integration_tests/llms/test_replicate.py"
+      ]
+    },
+    {
+      "name": "Together",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "langchain_community-0.4.2/tests/integration_tests/llms/test_together.py",
+        "langchain_community-0.4.2/tests/unit_tests/llms/test_together.py"
+      ]
+    },
+    {
+      "name": "aip.baidubce.com",
+      "type": "endpoint",
+      "jurisdiction": "CN",
+      "sovereignty_risk": true,
+      "file_count": 2,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/chat_models/ernie.py",
+        "langchain_community-0.4.2/langchain_community/embeddings/ernie.py"
+      ],
+      "endpoint": "aip.baidubce.com"
+    },
+    {
+      "name": "api-inference.huggingface.co",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/embeddings/huggingface.py",
+        "langchain_community-0.4.2/langchain_community/tools/audio/huggingface_text_to_speech_inference.py"
+      ],
+      "endpoint": "api-inference.huggingface.co"
+    },
+    {
+      "name": "cohere",
+      "type": "sdk",
+      "jurisdiction": "CA",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/embeddings/cohere.py",
+        "langchain_community-0.4.2/langchain_community/llms/cohere.py"
+      ]
+    },
+    {
+      "name": "gigachat",
+      "type": "sdk",
+      "jurisdiction": "RU",
+      "sovereignty_risk": true,
+      "file_count": 2,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/embeddings/gigachat.py",
+        "langchain_community-0.4.2/langchain_community/llms/gigachat.py"
+      ]
+    },
+    {
+      "name": "llm.api.cloud.yandex.net",
+      "type": "endpoint",
+      "jurisdiction": "RU",
+      "sovereignty_risk": true,
+      "file_count": 2,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/embeddings/yandex.py",
+        "langchain_community-0.4.2/langchain_community/llms/yandex.py"
+      ],
+      "endpoint": "llm.api.cloud.yandex.net"
+    },
+    {
+      "name": "writerai",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 2,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/chat_models/writer.py",
+        "langchain_community-0.4.2/langchain_community/llms/writer.py"
+      ]
+    },
+    {
+      "name": "VertexAI",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "langchain_community-0.4.2/tests/integration_tests/llms/test_vertexai.py"
+      ]
+    },
+    {
+      "name": "ZhipuAI",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/embeddings/zhipuai.py"
+      ]
+    },
+    {
+      "name": "api.anthropic.com",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/llms/anthropic.py"
+      ],
+      "endpoint": "api.anthropic.com"
+    },
+    {
+      "name": "api.moonshot.cn",
+      "type": "endpoint",
+      "jurisdiction": "CN",
+      "sovereignty_risk": true,
+      "file_count": 1,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/llms/moonshot.py"
+      ],
+      "endpoint": "api.moonshot.cn"
+    },
+    {
+      "name": "api.together.xyz",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/llms/together.py"
+      ],
+      "endpoint": "api.together.xyz"
+    },
+    {
+      "name": "fireworks",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/llms/fireworks.py"
+      ]
+    },
+    {
+      "name": "langchain_aws",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/retrievers/bedrock.py"
+      ]
+    },
+    {
+      "name": "llama_index",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/retrievers/llama_index.py"
+      ]
+    },
+    {
+      "name": "open.bigmodel.cn",
+      "type": "endpoint",
+      "jurisdiction": "CN",
+      "sovereignty_risk": true,
+      "file_count": 1,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/chat_models/zhipuai.py"
+      ],
+      "endpoint": "open.bigmodel.cn"
+    },
+    {
+      "name": "replicate",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/llms/replicate.py"
+      ]
+    },
+    {
+      "name": "zhipuai",
+      "type": "sdk",
+      "jurisdiction": "CN",
+      "sovereignty_risk": true,
+      "file_count": 1,
+      "files": [
+        "langchain_community-0.4.2/langchain_community/embeddings/zhipuai.py"
+      ]
+    }
+  ],
+  "agent_artifacts": [],
+  "committed_credentials": [],
+  "findings": [
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/azureml_endpoint.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 100,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)",
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/agents/openai_assistant/base.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 98,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_orchestration(AgentExecutor,agent.invoke()",
+        "cost_risk(ai_calls_inside_loop)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/anthropic.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "ai_http_endpoint(api.anthropic.com)",
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/agent_toolkits/sql/toolkit.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(create_react_agent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/agent_toolkits/openapi/planner.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(AgentExecutor,agent.run()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/callbacks/llmonitor_callback.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(AgentExecutor)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/callbacks/test_streamlit_callback.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(initialize_agent,AgentType.)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/callbacks/test_langchain_tracer.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(initialize_agent,AgentType.)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/callbacks/test_openai_callback.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(initialize_agent,AgentType.)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/callbacks/test_wandb_tracer.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(initialize_agent,AgentType.)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/chains/test_dalle_agent.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(initialize_agent,AgentType.)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/baidu_qianfan_endpoint.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "data_egress(model_hosted_in_CN:qianfan)",
+        "data_sovereignty_risk(non-allied_jurisdiction)",
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": true,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/zhipuai.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_http_endpoint(open.bigmodel.cn)",
+        "data_egress(model_hosted_in_CN:open.bigmodel.cn)",
+        "data_sovereignty_risk(non-allied_jurisdiction)",
+        "prompt_injection_vectors(5_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": true,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/jinachat.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_vectors(5_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/writer.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/ernie.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_http_endpoint(aip.baidubce.com)",
+        "data_egress(model_hosted_in_CN:aip.baidubce.com)",
+        "data_sovereignty_risk(non-allied_jurisdiction)",
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": true,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/tongyi.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "data_egress(model_hosted_in_CN:dashscope)",
+        "data_sovereignty_risk(non-allied_jurisdiction)",
+        "prompt_injection_vectors(6_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": true,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/yuan2.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_vectors(5_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/chat_models/test_mlflow.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "agent_orchestration(AgentExecutor,create_tool_calling_agent)",
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/openai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/gigachat.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "data_egress(model_hosted_in_RU:gigachat)",
+        "data_sovereignty_risk(non-allied_jurisdiction)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": true,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/moonshot.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(api.moonshot.cn)",
+        "data_egress(model_hosted_in_CN:api.moonshot.cn)",
+        "data_sovereignty_risk(non-allied_jurisdiction)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": true,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/callbacks/labelstudio_callback.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/llamacpp.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/maritalk.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/smith/evaluation/test_runner_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/adapters/openai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 55,
+      "signals": [
+        "dynamic_import(x4)",
+        "prompt_injection_vectors(6_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/graphs/hugegraph.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/tools/riza/command.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/optimum_intel.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/ascend.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/cache.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/document_loaders/parsers/audio.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/baidu_qianfan_endpoint.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "data_egress(model_hosted_in_CN:qianfan)",
+        "data_sovereignty_risk(non-allied_jurisdiction)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": true,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(8_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/vertexai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/together.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(api.together.xyz)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/huggingface_hub.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/fireworks.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/replicate.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/bedrock.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(bedrock-runtime)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/writer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/amazon_api_gateway.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/huggingface_endpoint.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/google_palm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/promptlayer_openai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/ollama.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/ai21.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/llamacpp.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/gooseai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/tongyi.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "data_egress(model_hosted_in_CN:dashscope)",
+        "data_sovereignty_risk(non-allied_jurisdiction)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": true,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/cohere.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/yandex.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(llm.api.cloud.yandex.net)",
+        "data_egress(model_hosted_in_RU:llm.api.cloud.yandex.net)",
+        "data_sovereignty_risk(non-allied_jurisdiction)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": true,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/anyscale.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/octoai_endpoint.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/retrievers/bedrock.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(bedrock-runtime)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/retrievers/llama_index.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/indexes/__init__.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_loaders/langsmith.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/graph_vectorstores/networkx.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(add_node(,add_edge()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/agent_toolkits/gmail/toolkit.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(create_react_agent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/agent_toolkits/sql/base.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(AgentExecutor,create_openai_tools_agent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/agent_toolkits/openapi/toolkit.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(create_react_agent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/agent_toolkits/openapi/base.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(AgentExecutor)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/agent_toolkits/github/toolkit.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(create_react_agent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/agent_toolkits/json/base.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(AgentExecutor)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/agent_toolkits/spark_sql/base.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(AgentExecutor)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/agent_toolkits/slack/toolkit.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(create_react_agent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/agent_toolkits/powerbi/chat_base.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(AgentExecutor)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/agent_toolkits/powerbi/base.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(AgentExecutor)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/callbacks/confident_callback.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/callbacks/argilla_callback.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chains/graph_qa/ontotext_graphdb.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chains/graph_qa/gremlin.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/utilities/vertexai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/utilities/anthropic.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/utilities/dalle_image_generator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/graphs/networkx_graph.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(add_node()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/graphs/gremlin_graph.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(add_node(,add_edge()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/openai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/outlines.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/google_palm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/everlyai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/anyscale.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/octoai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/moonshot.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/tools/audio/huggingface_text_to_speech_inference.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(api-inference.huggingface.co)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/tools/e2b_data_analysis/tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/tools/vectorstore/tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/document_compressors/openvino_rerank.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/document_compressors/dashscope_rerank.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "data_egress(model_hosted_in_CN:dashscope)",
+        "data_sovereignty_risk(non-allied_jurisdiction)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": true,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/baidu_qianfan_endpoint.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "data_egress(model_hosted_in_CN:qianfan)",
+        "data_sovereignty_risk(non-allied_jurisdiction)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": true,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/zhipuai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "data_egress(model_hosted_in_CN:zhipuai)",
+        "data_sovereignty_risk(non-allied_jurisdiction)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": true,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/vertexai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/openai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/localai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/itrex.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/dashscope.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "data_egress(model_hosted_in_CN:dashscope)",
+        "data_sovereignty_risk(non-allied_jurisdiction)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": true,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/huggingface_hub.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/self_hosted_hugging_face.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/bedrock.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(bedrock-runtime)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/ernie.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(aip.baidubce.com)",
+        "data_egress(model_hosted_in_CN:aip.baidubce.com)",
+        "data_sovereignty_risk(non-allied_jurisdiction)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": true,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/google_palm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/clarifai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/azure_openai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/llamacpp.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/nemo.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/cohere.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/octoai_embeddings.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/yandex.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(llm.api.cloud.yandex.net)",
+        "data_egress(model_hosted_in_RU:llm.api.cloud.yandex.net)",
+        "data_sovereignty_risk(non-allied_jurisdiction)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": true,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/huggingface.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(api-inference.huggingface.co)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/anyscale.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/openvino.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/gigachat.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "data_egress(model_hosted_in_RU:gigachat)",
+        "data_sovereignty_risk(non-allied_jurisdiction)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": true,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/document_transformers/openai_functions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/vectorstores/vlite.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/test_cache.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/test_dependencies.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/llms/test_fireworks.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/llms/test_anyscale.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/llms/test_friendli.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/llms/test_openai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/llms/test_ai21.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/llms/test_ollama.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/llms/test_together.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/llms/test_moonshot.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/imports/test_langchain_proxy_imports.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/load/test_dump.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/chat_models/test_friendli.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/llms/test_anthropic.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/llms/test_fireworks.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/llms/test_anyscale.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/llms/test_friendli.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/llms/test_vertexai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/llms/test_openai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/llms/test_ai21.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/llms/test_opaqueprompts.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/llms/test_confident.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/llms/test_together.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/llms/test_cohere.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/llms/test_bedrock.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(bedrock-runtime)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/llms/test_replicate.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/llms/test_mosaicml.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/cache/test_redis_cache.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/cache/test_momento_cache.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/chains/test_self_ask_with_search.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/chains/test_graph_database.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/chains/test_retrieval_qa.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/chains/test_graph_database_arangodb.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/chains/test_retrieval_qa_with_sources.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/chains/test_react.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/embeddings/test_openai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/embeddings/test_dashscope.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "data_egress(model_hosted_in_CN:dashscope)",
+        "data_sovereignty_risk(non-allied_jurisdiction)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": true,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/embeddings/test_azure_openai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/adapters/test_openai.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/agent/test_ainetwork_agent.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(initialize_agent,AgentType.)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/chatglm3.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/bittensor.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/sambanova.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/sparkllm.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/callbacks/promptlayer_callback.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/callbacks/trubrics_callback.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(5_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/utilities/alpha_vantage.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(7_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/utilities/clickup.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/graphs/age_graph.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/baichuan.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(5_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/javelin_ai_gateway.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/deepinfra.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(6_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/premai.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(5_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/volcengine_maas.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/minimax.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/yi.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/llama_edge.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/mlflow_ai_gateway.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/hunyuan.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/friendli.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/sparkllm.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(5_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/vectorstores/yellowbrick.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/document_loaders/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/document_loaders/blob_loaders/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/document_loaders/parsers/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/retrievers/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_loaders/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/agent_toolkits/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/callbacks/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chains/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/utilities/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/graphs/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/docstore/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/tools/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/document_compressors/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/fastembed.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_message_histories/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/cross_encoders/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/document_transformers/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/vectorstores/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/storage/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/test_imports.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/document_loaders/parsers/test_pdf_parsers.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/document_loaders/oracleai.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/document_loaders/evernote.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/document_loaders/chm.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/document_loaders/parsers/vsdx.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/baichuan.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/volcengine_maas.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/yi.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/layerup_security.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/llms/solar.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/retrievers/elastic_search_bm25.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/memory/motorhead_memory.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/callbacks/aim_callback.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/utilities/tavily_search.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/utilities/google_lens.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/utilities/gitlab.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/utilities/jina_search.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/gpt_router.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/mlx.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/reka.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/dappier.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/mlflow.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/snowflake.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_models/coze.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/tools/few_shot/tool.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/tools/powerbi/prompt.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/tools/powerbi/tool.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/document_compressors/volcengine_rerank.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/llamafile.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/embeddings/sparkllm.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/chat_message_histories/xata.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/vectorstores/supabase.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/vectorstores/astradb.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/langchain_community/vectorstores/xata.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/document_loaders/test_psychic.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/document_loaders/test_github.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/document_loaders/test_confluence.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/llms/test_databricks.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/utilities/test_nvidia_riva_tts.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/chat_models/test_premai.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/chat_models/test_oci_data_science.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/unit_tests/chat_models/test_writer.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langchain_community-0.4.2/tests/integration_tests/vectorstores/test_redis.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}

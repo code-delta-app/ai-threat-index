@@ -1,0 +1,320 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.1",
+  "generated": "2026-08-31T19:37:06.723725Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 358,
+    "files_flagged": 16,
+    "critical": 0,
+    "high": 0,
+    "elevated": 16,
+    "providers": 3,
+    "foreign_egress_files": 3,
+    "non_allied_jurisdiction_files": 0,
+    "cost_risk_files": 0,
+    "agent_artifacts": 0,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 0
+  },
+  "providers": [
+    {
+      "name": "cohere",
+      "type": "sdk",
+      "jurisdiction": "CA",
+      "sovereignty_risk": false,
+      "file_count": 12,
+      "files": [
+        "cohere-7.1.0/src/cohere/audio/transcriptions/client.py",
+        "cohere-7.1.0/src/cohere/base_client.py",
+        "cohere-7.1.0/src/cohere/batches/client.py",
+        "cohere-7.1.0/src/cohere/client.py",
+        "cohere-7.1.0/src/cohere/connectors/client.py",
+        "cohere-7.1.0/src/cohere/datasets/client.py",
+        "cohere-7.1.0/src/cohere/embed_jobs/client.py",
+        "cohere-7.1.0/src/cohere/finetuning/client.py",
+        "cohere-7.1.0/src/cohere/manually_maintained/tokenizers.py",
+        "cohere-7.1.0/src/cohere/models/client.py",
+        "cohere-7.1.0/src/cohere/oci_client.py",
+        "cohere-7.1.0/src/cohere/v2/client.py"
+      ]
+    },
+    {
+      "name": "api.cohere.com",
+      "type": "endpoint",
+      "jurisdiction": "CA",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "cohere-7.1.0/src/cohere/aws_client.py",
+        "cohere-7.1.0/src/cohere/environment.py",
+        "cohere-7.1.0/src/cohere/oci_client.py"
+      ],
+      "endpoint": "api.cohere.com"
+    },
+    {
+      "name": "bedrock-runtime",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "cohere-7.1.0/src/cohere/manually_maintained/cohere_aws/client.py"
+      ],
+      "endpoint": "bedrock-runtime"
+    }
+  ],
+  "agent_artifacts": [],
+  "committed_credentials": [],
+  "findings": [
+    {
+      "file": "cohere-7.1.0/src/cohere/oci_client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(api.cohere.com)",
+        "data_egress(model_hosted_in_CA:api.cohere.com)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "cohere-7.1.0/src/cohere/core/unchecked_base_model.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "cohere-7.1.0/src/cohere/aws_client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(api.cohere.com)",
+        "data_egress(model_hosted_in_CA:api.cohere.com)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "cohere-7.1.0/src/cohere/environment.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(api.cohere.com)",
+        "data_egress(model_hosted_in_CA:api.cohere.com)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "cohere-7.1.0/src/cohere/base_client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "cohere-7.1.0/src/cohere/client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "cohere-7.1.0/src/cohere/connectors/client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "cohere-7.1.0/src/cohere/embed_jobs/client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "cohere-7.1.0/src/cohere/manually_maintained/tokenizers.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "cohere-7.1.0/src/cohere/manually_maintained/cohere_aws/client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(bedrock-runtime)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "cohere-7.1.0/src/cohere/models/client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "cohere-7.1.0/src/cohere/audio/transcriptions/client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "cohere-7.1.0/src/cohere/datasets/client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "cohere-7.1.0/src/cohere/v2/client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "cohere-7.1.0/src/cohere/finetuning/client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "cohere-7.1.0/src/cohere/batches/client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}
