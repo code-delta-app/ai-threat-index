@@ -1,0 +1,272 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.1",
+  "generated": "2026-08-31T19:37:10.003153Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 211,
+    "files_flagged": 11,
+    "critical": 0,
+    "high": 1,
+    "elevated": 10,
+    "providers": 1,
+    "foreign_egress_files": 0,
+    "non_allied_jurisdiction_files": 0,
+    "cost_risk_files": 2,
+    "agent_artifacts": 0,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 0
+  },
+  "providers": [
+    {
+      "name": "huggingface_hub",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 4,
+      "files": [
+        "sentence_transformers-6.0.1/sentence_transformers/backend/utils.py",
+        "sentence_transformers-6.0.1/sentence_transformers/base/model.py",
+        "sentence_transformers-6.0.1/sentence_transformers/base/model_card.py",
+        "sentence_transformers-6.0.1/sentence_transformers/util/file_io.py"
+      ]
+    }
+  ],
+  "agent_artifacts": [],
+  "committed_credentials": [],
+  "findings": [
+    {
+      "file": "sentence_transformers-6.0.1/sentence_transformers/cross_encoder/model.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 90,
+      "signals": [
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)",
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sentence_transformers-6.0.1/sentence_transformers/sparse_encoder/model.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sentence_transformers-6.0.1/sentence_transformers/sentence_transformer/model.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sentence_transformers-6.0.1/sentence_transformers/sentence_transformer/evaluation/label_accuracy.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sentence_transformers-6.0.1/sentence_transformers/sentence_transformer/evaluation/mse_from_dataframe.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sentence_transformers-6.0.1/sentence_transformers/multi_vector_encoder/model.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sentence_transformers-6.0.1/sentence_transformers/backend/utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sentence_transformers-6.0.1/sentence_transformers/cross_encoder/model_card.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sentence_transformers-6.0.1/sentence_transformers/base/model.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sentence_transformers-6.0.1/sentence_transformers/base/model_card.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sentence_transformers-6.0.1/sentence_transformers/util/file_io.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sentence_transformers-6.0.1/sentence_transformers/base/modules/transformer.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sentence_transformers-6.0.1/sentence_transformers/base/modality.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(7_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sentence_transformers-6.0.1/sentence_transformers/util/deprecated_import.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sentence_transformers-6.0.1/sentence_transformers/util/misc.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}

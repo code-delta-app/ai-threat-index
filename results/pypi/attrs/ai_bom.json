@@ -1,0 +1,45 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.1",
+  "generated": "2026-08-31T19:33:00.109179Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 54,
+    "files_flagged": 1,
+    "critical": 0,
+    "high": 1,
+    "elevated": 0,
+    "providers": 0,
+    "foreign_egress_files": 0,
+    "non_allied_jurisdiction_files": 0,
+    "cost_risk_files": 0,
+    "agent_artifacts": 0,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 0
+  },
+  "providers": [],
+  "agent_artifacts": [],
+  "committed_credentials": [],
+  "findings": [
+    {
+      "file": "attrs-26.1.0/src/attr/_make.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 70,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)",
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}

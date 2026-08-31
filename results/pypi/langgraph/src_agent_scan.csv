@@ -1,0 +1,150 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+langgraph-1.2.11/tests/test_large_cases_async.py,Python,75,HIGH,0,3,,create_react_agent; StateGraph; add_edge(; add_node(,,"agent_orchestration(create_react_agent,StateGraph); prompt_injection_vectors(3_unsanitised_inputs)"
+langgraph-1.2.11/tests/test_large_cases.py,Python,75,HIGH,0,3,,create_react_agent; StateGraph; add_edge(; add_node(,,"agent_orchestration(create_react_agent,StateGraph); prompt_injection_vectors(3_unsanitised_inputs)"
+langgraph-1.2.11/tests/test_pregel_async.py,Python,75,HIGH,0,12,,StateGraph; add_edge(; add_node(,,"agent_orchestration(StateGraph,add_edge(); prompt_injection_vectors(12_unsanitised_inputs)"
+langgraph-1.2.11/tests/test_pregel.py,Python,75,HIGH,0,16,,StateGraph; add_edge(; add_node(,,"agent_orchestration(StateGraph,add_edge(); prompt_injection_vectors(16_unsanitised_inputs)"
+langgraph-1.2.11/tests/test_checkpoint_migration.py,Python,58,ELEVATED,0,2,,StateGraph,,agent_orchestration(StateGraph); prompt_injection_partial(2)
+langgraph-1.2.11/tests/test_remote_graph.py,Python,58,ELEVATED,0,2,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge(); prompt_injection_partial(2)"
+langgraph-1.2.11/tests/test_managed_values.py,Python,40,ELEVATED,0,0,,StateGraph,,agent_orchestration(StateGraph)
+langgraph-1.2.11/tests/test_deprecation.py,Python,40,ELEVATED,0,0,,StateGraph; add_node(,,"agent_orchestration(StateGraph,add_node()"
+langgraph-1.2.11/tests/test_pregel_debug.py,Python,40,ELEVATED,0,0,,StateGraph,,agent_orchestration(StateGraph)
+langgraph-1.2.11/tests/test_type_checking.py,Python,40,ELEVATED,0,0,,StateGraph,,agent_orchestration(StateGraph)
+langgraph-1.2.11/tests/test_stream_messages_transformer.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_tracing_interops.py,Python,40,ELEVATED,0,0,,StateGraph; add_node(,,"agent_orchestration(StateGraph,add_node()"
+langgraph-1.2.11/tests/test_stream_subgraph_transformer.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_parent_command.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_trace_policy.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_channels.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_messages_state.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(; add_node(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_stream_data_transformers.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_delta_channel_exit_mode.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_state.py,Python,40,ELEVATED,0,0,,StateGraph; add_node(; add_edge(,,"agent_orchestration(StateGraph,add_node()"
+langgraph-1.2.11/tests/test_parent_command_async.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_delta_channel_supersteps_bound.py,Python,40,ELEVATED,0,0,,StateGraph; add_node(; add_edge(,,"agent_orchestration(StateGraph,add_node()"
+langgraph-1.2.11/tests/test_tool_stream_handler.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_time_travel_async.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_time_travel.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_delta_channel_id_stability.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_stream_events_v3_e2e.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_retry.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_graph_callbacks.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_subgraph_persistence_async.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_pydantic.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_interleave_arrival_order.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_utils.py,Python,40,ELEVATED,0,0,,StateGraph; add_node(,,"agent_orchestration(StateGraph,add_node()"
+langgraph-1.2.11/tests/test_delta_channel_update_state.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_stream_events_v3.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_delta_channel_migration.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_stream_lifecycle_transformer.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_runtime.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(; add_node(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_stream_events_v3_kwarg_forwarding.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_delta_channel_benchmark.py,Python,40,ELEVATED,0,0,,StateGraph,,agent_orchestration(StateGraph)
+langgraph-1.2.11/tests/test_pregel_stream_events_v3.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_interruption.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_subgraph_persistence.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/tests/test_config_async.py,Python,40,ELEVATED,0,0,,StateGraph,,agent_orchestration(StateGraph)
+langgraph-1.2.11/bench/__main__.py,Python,40,ELEVATED,0,0,,StateGraph,,agent_orchestration(StateGraph)
+langgraph-1.2.11/bench/react_agent.py,Python,40,ELEVATED,0,0,,create_react_agent,,agent_orchestration(create_react_agent)
+langgraph-1.2.11/bench/pydantic_state.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/bench/wide_dict.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/bench/wide_state.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/bench/fanout_to_subgraph.py,Python,40,ELEVATED,0,0,,StateGraph,,agent_orchestration(StateGraph)
+langgraph-1.2.11/bench/sequential.py,Python,40,ELEVATED,0,0,,StateGraph; add_node(; add_edge(,,"agent_orchestration(StateGraph,add_node()"
+langgraph-1.2.11/langgraph/typing.py,Python,40,ELEVATED,0,0,,StateGraph,,agent_orchestration(StateGraph)
+langgraph-1.2.11/langgraph/errors.py,Python,40,ELEVATED,0,0,,StateGraph,,agent_orchestration(StateGraph)
+langgraph-1.2.11/langgraph/config.py,Python,40,ELEVATED,0,0,,StateGraph; add_node(; add_edge(,,"agent_orchestration(StateGraph,add_node()"
+langgraph-1.2.11/langgraph/types.py,Python,40,ELEVATED,0,0,,StateGraph; add_edge(,,"agent_orchestration(StateGraph,add_edge()"
+langgraph-1.2.11/langgraph/runtime.py,Python,40,ELEVATED,0,0,,StateGraph,,agent_orchestration(StateGraph)
+langgraph-1.2.11/langgraph/pregel/main.py,Python,40,ELEVATED,0,0,,StateGraph,,agent_orchestration(StateGraph)
+langgraph-1.2.11/langgraph/pregel/_draw.py,Python,40,ELEVATED,0,0,,add_node(; add_edge(,,"agent_orchestration(add_node(,add_edge()"
+langgraph-1.2.11/langgraph/pregel/remote.py,Python,40,ELEVATED,0,0,,add_node(,,agent_orchestration(add_node()
+langgraph-1.2.11/langgraph/graph/__init__.py,Python,40,ELEVATED,0,0,,StateGraph,,agent_orchestration(StateGraph)
+langgraph-1.2.11/langgraph/graph/state.py,Python,40,ELEVATED,0,0,,StateGraph; stategraph; add_edge(; add_node(,,"agent_orchestration(StateGraph,stategraph)"
+langgraph-1.2.11/langgraph/graph/message.py,Python,40,ELEVATED,0,0,,StateGraph,,agent_orchestration(StateGraph)
+langgraph-1.2.11/langgraph/func/__init__.py,Python,40,ELEVATED,0,0,,StateGraph,,agent_orchestration(StateGraph)
+langgraph-1.2.11/tests/conftest.py,Python,18,NORMAL,0,1,,,,prompt_injection_partial(1)
+langgraph-1.2.11/tests/__init__.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/tests/any_int.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/tests/conftest_store.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/tests/test_stream_before_builtins.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/tests/fake_tracer.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/tests/conftest_checkpointer.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/tests/memory_assert.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/tests/test_runnable.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/tests/any_str.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/tests/agents.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/tests/fake_chat.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/tests/test_interrupt_migration.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/tests/messages.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/tests/test_algo.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/tests/test_remote_graph_v3.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/tests/test_serde_allowlist.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/tests/example_app/example_graph.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/bench/__init__.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/bench/serde_allowlist.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/callbacks.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/version.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/constants.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/warnings.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/managed/__init__.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/managed/is_last_step.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/managed/base.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/_loop.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/__init__.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/_log.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/_checkpoint.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/_runner.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/_config.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/debug.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/_executor.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/_write.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/_tools.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/_utils.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/_retry.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/_io.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/_call.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/types.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/protocol.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/_algo.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/_messages.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/_read.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/_remote_run_stream.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/pregel/_validate.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/stream/__init__.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/stream/_mux.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/stream/transformers.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/stream/stream_channel.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/stream/_convert.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/stream/run_stream.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/stream/_types.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/graph/_branch.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/graph/ui.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/graph/_node.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/_internal/__init__.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/_internal/_pydantic.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/_internal/_timeout.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/_internal/_runnable.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/_internal/_config.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/_internal/_cache.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/_internal/_retry.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/_internal/_constants.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/_internal/_replay.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/_internal/_scratchpad.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/_internal/_serde.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/_internal/_typing.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/_internal/_future.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/_internal/_fields.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/_internal/_queue.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/utils/__init__.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/utils/runnable.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/utils/config.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/channels/__init__.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/channels/binop.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/channels/topic.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/channels/any_value.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/channels/delta.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/channels/named_barrier_value.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/channels/untracked_value.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/channels/ephemeral_value.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/channels/last_value.py,Python,0,NORMAL,0,0,,,,
+langgraph-1.2.11/langgraph/channels/base.py,Python,0,NORMAL,0,0,,,,

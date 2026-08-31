@@ -1,0 +1,736 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.1",
+  "generated": "2026-08-31T19:34:06.865071Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 4329,
+    "files_flagged": 5,
+    "critical": 0,
+    "high": 0,
+    "elevated": 5,
+    "providers": 0,
+    "foreign_egress_files": 0,
+    "non_allied_jurisdiction_files": 0,
+    "cost_risk_files": 0,
+    "agent_artifacts": 62,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 43
+  },
+  "providers": [],
+  "agent_artifacts": [
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/call/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/channelz/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/client_channel/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/config/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/credentials/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/credentials/call/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/credentials/transport/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/ext/filters/backend_metrics/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/ext/filters/census/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/ext/filters/channel_idle/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/ext/filters/fault_injection/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/ext/filters/gcp_authentication/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/ext/filters/http/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/ext/filters/http/client/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/ext/filters/http/message_compress/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/ext/filters/http/server/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/ext/filters/load_reporting/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/ext/filters/logging/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/ext/filters/message_size/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/ext/filters/rbac/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/ext/filters/stateful_session/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/ext/transport/chaotic_good/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/ext/transport/chaotic_good_legacy/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/ext/transport/chttp2/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/ext/transport/inproc/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/filter/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/handshaker/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/handshaker/endpoint_info/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/handshaker/http_connect/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/handshaker/security/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/handshaker/tcp_connect/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/lib/address_utils/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/lib/channel/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/lib/compression/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/lib/debug/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/lib/event_engine/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/lib/experiments/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/lib/iomgr/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/lib/promise/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/lib/resource_quota/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/lib/security/authorization/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/lib/slice/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/lib/transport/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/load_balancing/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/plugin_registry/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/resolver/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/resolver/dns/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/resolver/fake/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/resolver/google_c2p/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/resolver/sockaddr/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/resolver/xds/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/server/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/service_config/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/telemetry/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/transport/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/tsi/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/tsi/alts/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/tsi/ssl/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/util/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/util/json/AGENTS.md"
+    },
+    {
+      "type": "agent-artifact",
+      "name": "Agent instructions file",
+      "tier": 1,
+      "path": "grpcio-1.83.1/src/core/xds/AGENTS.md"
+    }
+  ],
+  "committed_credentials": [
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/src/core/tsi/test_creds/badclient.key",
+      "line": 1,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/src/core/tsi/test_creds/badserver.key",
+      "line": 1,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/src/core/tsi/test_creds/ca.key",
+      "line": 1,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/src/core/tsi/test_creds/client-with-spiffe.key",
+      "line": 1,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/src/core/tsi/test_creds/client.key",
+      "line": 1,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/src/core/tsi/test_creds/client1.key",
+      "line": 1,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/src/core/tsi/test_creds/client2.key",
+      "line": 1,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/src/core/tsi/test_creds/intermediate_ca.key",
+      "line": 1,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/src/core/tsi/test_creds/leaf_signed_by_intermediate.key",
+      "line": 1,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/src/core/tsi/test_creds/malformed-key.pem",
+      "line": 1,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/src/core/tsi/test_creds/multi-domain.key",
+      "line": 1,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/src/core/tsi/test_creds/server0.key",
+      "line": 1,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/src/core/tsi/test_creds/server1.key",
+      "line": 1,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/src/core/tsi/test_creds/sni1.key",
+      "line": 1,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/src/core/tsi/test_creds/sni2.key",
+      "line": 1,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/src/core/tsi/test_creds/sni3.key",
+      "line": 1,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/dsa/dsa_test.cc",
+      "line": 306,
+      "sample": "-----BEG\u2026 (31 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/dsa/dsa_test.cc",
+      "line": 327,
+      "sample": "-----BEG\u2026 (31 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/pem/pem_test.cc",
+      "line": 71,
+      "sample": "-----BEG\u2026 (37 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/pem/pem_test.cc",
+      "line": 81,
+      "sample": "-----BEG\u2026 (30 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/pem/pem_test.cc",
+      "line": 180,
+      "sample": "-----BEG\u2026 (37 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/pem/pem_test.cc",
+      "line": 191,
+      "sample": "-----BEG\u2026 (30 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/pem/pem_test.cc",
+      "line": 229,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/pem/pem_test.cc",
+      "line": 327,
+      "sample": "-----BEG\u2026 (30 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/pem/pem_test.cc",
+      "line": 340,
+      "sample": "-----BEG\u2026 (30 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/pem/pem_test.cc",
+      "line": 353,
+      "sample": "-----BEG\u2026 (30 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/pem/pem_test.cc",
+      "line": 366,
+      "sample": "-----BEG\u2026 (30 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/pem/pem_test.cc",
+      "line": 379,
+      "sample": "-----BEG\u2026 (30 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/pem/pem_test.cc",
+      "line": 391,
+      "sample": "-----BEG\u2026 (30 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/pem/pem_test.cc",
+      "line": 404,
+      "sample": "-----BEG\u2026 (30 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/pem/pem_test.cc",
+      "line": 417,
+      "sample": "-----BEG\u2026 (30 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/x509/x509_test.cc",
+      "line": 220,
+      "sample": "-----BEG\u2026 (31 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/x509/x509_test.cc",
+      "line": 238,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/x509/x509_test.cc",
+      "line": 247,
+      "sample": "-----BEG\u2026 (31 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/x509/x509_test.cc",
+      "line": 537,
+      "sample": "-----BEG\u2026 (31 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/x509/x509_test.cc",
+      "line": 571,
+      "sample": "-----BEG\u2026 (31 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/x509/x509_test.cc",
+      "line": 835,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/crypto/x509/x509_test.cc",
+      "line": 3005,
+      "sample": "-----BEG\u2026 (30 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/ssl/ssl_test.cc",
+      "line": 1357,
+      "sample": "-----BEG\u2026 (31 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/ssl/ssl_test.cc",
+      "line": 1412,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/ssl/ssl_test.cc",
+      "line": 1500,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/ssl/ssl_test.cc",
+      "line": 2370,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/ssl/ssl_test.cc",
+      "line": 9286,
+      "sample": "-----BEG\u2026 (27 chars)"
+    }
+  ],
+  "findings": [
+    {
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/third_party/googletest/googletest/test/googletest-filter-unittest.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/third_party/googletest/googletest/test/gtest_test_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x3)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/third_party/googletest/googlemock/test/gmock_test_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x3)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/ssl/ssl_lib.cc",
+      "language": "C++",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(handoff()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "grpcio-1.83.1/third_party/boringssl-with-bazel/util/bot/vs_env.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}

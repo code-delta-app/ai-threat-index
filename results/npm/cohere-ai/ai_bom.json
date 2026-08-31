@@ -1,0 +1,136 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.1",
+  "generated": "2026-08-31T19:31:17.073622Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 1665,
+    "files_flagged": 3,
+    "critical": 0,
+    "high": 0,
+    "elevated": 3,
+    "providers": 1,
+    "foreign_egress_files": 3,
+    "non_allied_jurisdiction_files": 0,
+    "cost_risk_files": 0,
+    "agent_artifacts": 0,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 0
+  },
+  "providers": [
+    {
+      "name": "api.cohere.com",
+      "type": "endpoint",
+      "jurisdiction": "CA",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "package/environments.d.ts",
+        "package/environments.js",
+        "package/test/client.test.js"
+      ],
+      "endpoint": "api.cohere.com"
+    }
+  ],
+  "agent_artifacts": [],
+  "committed_credentials": [],
+  "findings": [
+    {
+      "file": "package/environments.js",
+      "language": "JavaScript",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(api.cohere.com)",
+        "data_egress(model_hosted_in_CA:api.cohere.com)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "package/environments.d.ts",
+      "language": "JavaScript",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(api.cohere.com)",
+        "data_egress(model_hosted_in_CA:api.cohere.com)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "package/test/client.test.js",
+      "language": "JavaScript",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(api.cohere.com)",
+        "data_egress(model_hosted_in_CA:api.cohere.com)"
+      ],
+      "flags": {
+        "foreign_egress": true,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "package/tests/mock-server/MockServerPool.ts",
+      "language": "JavaScript",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "package/core/auth/BasicAuth.js",
+      "language": "JavaScript",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "package/core/fetcher/createRequestUrl.js",
+      "language": "JavaScript",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}

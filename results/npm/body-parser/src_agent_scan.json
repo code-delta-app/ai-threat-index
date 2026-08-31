@@ -1,0 +1,104 @@
+{
+  "summary": {
+    "total_files": 7,
+    "flagged_files": 0,
+    "critical_files": 0,
+    "high_files": 0,
+    "elevated_files": 0,
+    "normal_files": 7,
+    "mode": "snapshot",
+    "summary_text": "Scanned 7 file(s). No AI agent initiation signatures detected."
+  },
+  "sdk_inventory": {},
+  "agent_artifacts": {
+    "table_version": 1,
+    "tier3_count": 0,
+    "items": []
+  },
+  "files": [
+    {
+      "rel_path": "package/index.js",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/lib/read.js",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/lib/utils.js",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/lib/types/text.js",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/lib/types/json.js",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/lib/types/raw.js",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/lib/types/urlencoded.js",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    }
+  ]
+}

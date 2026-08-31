@@ -1,0 +1,2939 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.1",
+  "generated": "2026-08-31T19:34:29.331013Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 1547,
+    "files_flagged": 165,
+    "critical": 0,
+    "high": 7,
+    "elevated": 158,
+    "providers": 5,
+    "foreign_egress_files": 0,
+    "non_allied_jurisdiction_files": 0,
+    "cost_risk_files": 2,
+    "agent_artifacts": 0,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 10
+  },
+  "providers": [
+    {
+      "name": "anthropic",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 151,
+      "files": [
+        "anthropic-1.2.0/examples/agents.py",
+        "anthropic-1.2.0/examples/agents_comprehensive.py",
+        "anthropic-1.2.0/examples/agents_with_files.py",
+        "anthropic-1.2.0/examples/azure.py",
+        "anthropic-1.2.0/examples/batch_results.py",
+        "anthropic-1.2.0/examples/bedrock.py",
+        "anthropic-1.2.0/examples/fallbacks.py",
+        "anthropic-1.2.0/examples/google_cloud.py",
+        "anthropic-1.2.0/examples/images.py",
+        "anthropic-1.2.0/examples/managed-agents-observe-tool-calls.py",
+        "anthropic-1.2.0/examples/managed-agents-self-hosted-sandbox-worker.py",
+        "anthropic-1.2.0/examples/managed-agents-streaming-deltas-manual.py",
+        "anthropic-1.2.0/examples/managed-agents-worker-dispatch.py",
+        "anthropic-1.2.0/examples/mcp_tool_runner.py",
+        "anthropic-1.2.0/examples/memory/basic.py",
+        "anthropic-1.2.0/examples/messages.py",
+        "anthropic-1.2.0/examples/messages_stream.py",
+        "anthropic-1.2.0/examples/structured_outputs.py",
+        "anthropic-1.2.0/examples/structured_outputs_streaming.py",
+        "anthropic-1.2.0/examples/thinking.py",
+        "anthropic-1.2.0/examples/thinking_stream.py",
+        "anthropic-1.2.0/examples/tools.py",
+        "anthropic-1.2.0/examples/tools_runner.py",
+        "anthropic-1.2.0/examples/tools_runner_search_tool.py",
+        "anthropic-1.2.0/examples/tools_stream.py",
+        "anthropic-1.2.0/examples/vertex.py",
+        "anthropic-1.2.0/examples/web_search.py",
+        "anthropic-1.2.0/examples/web_search_stream.py",
+        "anthropic-1.2.0/examples/workload_identity.py",
+        "anthropic-1.2.0/src/anthropic/_response.py",
+        "anthropic-1.2.0/src/anthropic/_types.py",
+        "anthropic-1.2.0/src/anthropic/lib/environments/_worker.py",
+        "anthropic-1.2.0/src/anthropic/lib/streaming/_beta_messages.py",
+        "anthropic-1.2.0/src/anthropic/lib/streaming/_messages.py",
+        "anthropic-1.2.0/src/anthropic/lib/tools/_beta_builtin_memory_tool.py",
+        "anthropic-1.2.0/src/anthropic/lib/tools/_beta_session_runner.py",
+        "anthropic-1.2.0/src/anthropic/lib/tools/agent_toolset.py",
+        "anthropic-1.2.0/src/anthropic/lib/tools/mcp.py",
+        "anthropic-1.2.0/src/anthropic/resources/beta/environments/work.py",
+        "anthropic-1.2.0/src/anthropic/resources/beta/sessions/events.py",
+        "anthropic-1.2.0/tests/api_resources/beta/agents/test_versions.py",
+        "anthropic-1.2.0/tests/api_resources/beta/environments/test_work.py",
+        "anthropic-1.2.0/tests/api_resources/beta/memory_stores/test_memories.py",
+        "anthropic-1.2.0/tests/api_resources/beta/memory_stores/test_memory_versions.py",
+        "anthropic-1.2.0/tests/api_resources/beta/messages/test_batches.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/federation/rules/test_workspaces.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/federation/test_issuers.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/federation/test_rules.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/service_accounts/test_workspaces.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/test_api_keys.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/test_external_keys.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/test_invites.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/test_rate_limits.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/test_service_accounts.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/test_users.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/test_workspaces.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/workspaces/test_members.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/workspaces/test_rate_limits.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/workspaces/test_service_accounts.py",
+        "anthropic-1.2.0/tests/api_resources/beta/sessions/test_events.py",
+        "anthropic-1.2.0/tests/api_resources/beta/sessions/test_resources.py",
+        "anthropic-1.2.0/tests/api_resources/beta/sessions/test_threads.py",
+        "anthropic-1.2.0/tests/api_resources/beta/sessions/threads/test_events.py",
+        "anthropic-1.2.0/tests/api_resources/beta/skills/test_versions.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_agents.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_deployment_runs.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_deployments.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_dreams.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_environments.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_files.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_memory_stores.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_messages.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_models.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_organization.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_output_format_conversion.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_sessions.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_skills.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_tunnels.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_user_profiles.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_vaults.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_webhooks.py",
+        "anthropic-1.2.0/tests/api_resources/beta/tunnels/test_certificates.py",
+        "anthropic-1.2.0/tests/api_resources/beta/vaults/test_credentials.py",
+        "anthropic-1.2.0/tests/api_resources/messages/test_batches.py",
+        "anthropic-1.2.0/tests/api_resources/skills/test_versions.py",
+        "anthropic-1.2.0/tests/api_resources/test_files.py",
+        "anthropic-1.2.0/tests/api_resources/test_messages.py",
+        "anthropic-1.2.0/tests/api_resources/test_models.py",
+        "anthropic-1.2.0/tests/api_resources/test_skills.py",
+        "anthropic-1.2.0/tests/conftest.py",
+        "anthropic-1.2.0/tests/decoders/test_jsonl.py",
+        "anthropic-1.2.0/tests/lib/_parse/test_beta_messages.py",
+        "anthropic-1.2.0/tests/lib/_parse/test_messages.py",
+        "anthropic-1.2.0/tests/lib/_parse/test_transform.py",
+        "anthropic-1.2.0/tests/lib/environments/test_poller.py",
+        "anthropic-1.2.0/tests/lib/environments/test_poller_method.py",
+        "anthropic-1.2.0/tests/lib/environments/test_worker.py",
+        "anthropic-1.2.0/tests/lib/sessions/test_accumulate.py",
+        "anthropic-1.2.0/tests/lib/streaming/test_beta_messages.py",
+        "anthropic-1.2.0/tests/lib/streaming/test_messages.py",
+        "anthropic-1.2.0/tests/lib/streaming/test_parsed_content_blocks.py",
+        "anthropic-1.2.0/tests/lib/streaming/test_partial_json.py",
+        "anthropic-1.2.0/tests/lib/test_aws.py",
+        "anthropic-1.2.0/tests/lib/test_aws_auth.py",
+        "anthropic-1.2.0/tests/lib/test_azure.py",
+        "anthropic-1.2.0/tests/lib/test_bedrock.py",
+        "anthropic-1.2.0/tests/lib/test_bedrock_mantle.py",
+        "anthropic-1.2.0/tests/lib/test_credentials.py",
+        "anthropic-1.2.0/tests/lib/test_google_cloud.py",
+        "anthropic-1.2.0/tests/lib/test_google_cloud_live.py",
+        "anthropic-1.2.0/tests/lib/test_output_format_helpers.py",
+        "anthropic-1.2.0/tests/lib/test_refusal_fallback.py",
+        "anthropic-1.2.0/tests/lib/test_refusal_fallback_streaming.py",
+        "anthropic-1.2.0/tests/lib/test_scoped_client.py",
+        "anthropic-1.2.0/tests/lib/test_stainless_helpers.py",
+        "anthropic-1.2.0/tests/lib/test_vertex.py",
+        "anthropic-1.2.0/tests/lib/tools/memory_sync/_fake_anthropic.py",
+        "anthropic-1.2.0/tests/lib/tools/memory_sync/conftest.py",
+        "anthropic-1.2.0/tests/lib/tools/memory_sync/test_delete_discipline.py",
+        "anthropic-1.2.0/tests/lib/tools/memory_sync/test_e2e_memory.py",
+        "anthropic-1.2.0/tests/lib/tools/memory_sync/test_final_flush.py",
+        "anthropic-1.2.0/tests/lib/tools/memory_sync/test_folder_trust.py",
+        "anthropic-1.2.0/tests/lib/tools/memory_sync/test_keep_only_copy.py",
+        "anthropic-1.2.0/tests/lib/tools/memory_sync/test_memory_sync.py",
+        "anthropic-1.2.0/tests/lib/tools/memory_sync/test_two_pass.py",
+        "anthropic-1.2.0/tests/lib/tools/memory_tools/test_filesystem.py",
+        "anthropic-1.2.0/tests/lib/tools/test_agent_toolset.py",
+        "anthropic-1.2.0/tests/lib/tools/test_file_store.py",
+        "anthropic-1.2.0/tests/lib/tools/test_files.py",
+        "anthropic-1.2.0/tests/lib/tools/test_functions.py",
+        "anthropic-1.2.0/tests/lib/tools/test_mcp_tool.py",
+        "anthropic-1.2.0/tests/lib/tools/test_runners.py",
+        "anthropic-1.2.0/tests/lib/tools/test_session_runner.py",
+        "anthropic-1.2.0/tests/lib/tools/test_skills.py",
+        "anthropic-1.2.0/tests/test_client.py",
+        "anthropic-1.2.0/tests/test_extract_files.py",
+        "anthropic-1.2.0/tests/test_files.py",
+        "anthropic-1.2.0/tests/test_header_case_sensitivity.py",
+        "anthropic-1.2.0/tests/test_middleware.py",
+        "anthropic-1.2.0/tests/test_models.py",
+        "anthropic-1.2.0/tests/test_qs.py",
+        "anthropic-1.2.0/tests/test_required_args.py",
+        "anthropic-1.2.0/tests/test_response.py",
+        "anthropic-1.2.0/tests/test_streaming.py",
+        "anthropic-1.2.0/tests/test_transform.py",
+        "anthropic-1.2.0/tests/test_utils/test_datetime_parse.py",
+        "anthropic-1.2.0/tests/test_utils/test_json.py",
+        "anthropic-1.2.0/tests/test_utils/test_path.py",
+        "anthropic-1.2.0/tests/test_utils/test_proxy.py",
+        "anthropic-1.2.0/tests/test_utils/test_typing.py",
+        "anthropic-1.2.0/tests/utils.py"
+      ]
+    },
+    {
+      "name": "Anthropic",
+      "type": "sdk",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 82,
+      "files": [
+        "anthropic-1.2.0/examples/agents.py",
+        "anthropic-1.2.0/examples/agents_comprehensive.py",
+        "anthropic-1.2.0/examples/agents_with_files.py",
+        "anthropic-1.2.0/examples/batch_results.py",
+        "anthropic-1.2.0/examples/fallbacks.py",
+        "anthropic-1.2.0/examples/images.py",
+        "anthropic-1.2.0/examples/managed-agents-streaming-deltas-manual.py",
+        "anthropic-1.2.0/examples/memory/basic.py",
+        "anthropic-1.2.0/examples/messages.py",
+        "anthropic-1.2.0/examples/tools.py",
+        "anthropic-1.2.0/examples/tools_runner.py",
+        "anthropic-1.2.0/examples/tools_runner_search_tool.py",
+        "anthropic-1.2.0/examples/web_search.py",
+        "anthropic-1.2.0/src/anthropic/_streaming.py",
+        "anthropic-1.2.0/src/anthropic/lib/_scoped_client.py",
+        "anthropic-1.2.0/src/anthropic/lib/aws/_client.py",
+        "anthropic-1.2.0/src/anthropic/lib/bedrock/_stream.py",
+        "anthropic-1.2.0/src/anthropic/lib/foundry.py",
+        "anthropic-1.2.0/src/anthropic/lib/google_cloud/_client.py",
+        "anthropic-1.2.0/src/anthropic/lib/tools/_beta_runner.py",
+        "anthropic-1.2.0/src/anthropic/resources/beta/messages/messages.py",
+        "anthropic-1.2.0/tests/api_resources/beta/agents/test_versions.py",
+        "anthropic-1.2.0/tests/api_resources/beta/environments/test_work.py",
+        "anthropic-1.2.0/tests/api_resources/beta/memory_stores/test_memories.py",
+        "anthropic-1.2.0/tests/api_resources/beta/memory_stores/test_memory_versions.py",
+        "anthropic-1.2.0/tests/api_resources/beta/messages/test_batches.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/federation/rules/test_workspaces.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/federation/test_issuers.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/federation/test_rules.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/service_accounts/test_workspaces.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/test_api_keys.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/test_external_keys.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/test_invites.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/test_rate_limits.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/test_service_accounts.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/test_users.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/test_workspaces.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/workspaces/test_members.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/workspaces/test_rate_limits.py",
+        "anthropic-1.2.0/tests/api_resources/beta/organization/workspaces/test_service_accounts.py",
+        "anthropic-1.2.0/tests/api_resources/beta/sessions/test_events.py",
+        "anthropic-1.2.0/tests/api_resources/beta/sessions/test_resources.py",
+        "anthropic-1.2.0/tests/api_resources/beta/sessions/test_threads.py",
+        "anthropic-1.2.0/tests/api_resources/beta/sessions/threads/test_events.py",
+        "anthropic-1.2.0/tests/api_resources/beta/skills/test_versions.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_agents.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_deployment_runs.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_deployments.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_dreams.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_environments.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_files.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_memory_stores.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_messages.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_models.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_organization.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_output_format_conversion.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_sessions.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_skills.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_tunnels.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_user_profiles.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_vaults.py",
+        "anthropic-1.2.0/tests/api_resources/beta/test_webhooks.py",
+        "anthropic-1.2.0/tests/api_resources/beta/tunnels/test_certificates.py",
+        "anthropic-1.2.0/tests/api_resources/beta/vaults/test_credentials.py",
+        "anthropic-1.2.0/tests/api_resources/messages/test_batches.py",
+        "anthropic-1.2.0/tests/api_resources/skills/test_versions.py",
+        "anthropic-1.2.0/tests/api_resources/test_files.py",
+        "anthropic-1.2.0/tests/api_resources/test_messages.py",
+        "anthropic-1.2.0/tests/api_resources/test_models.py",
+        "anthropic-1.2.0/tests/api_resources/test_skills.py",
+        "anthropic-1.2.0/tests/conftest.py",
+        "anthropic-1.2.0/tests/lib/_parse/test_messages.py",
+        "anthropic-1.2.0/tests/lib/environments/test_worker.py",
+        "anthropic-1.2.0/tests/lib/streaming/test_beta_messages.py",
+        "anthropic-1.2.0/tests/lib/test_output_format_helpers.py",
+        "anthropic-1.2.0/tests/lib/test_scoped_client.py",
+        "anthropic-1.2.0/tests/lib/test_stainless_helpers.py",
+        "anthropic-1.2.0/tests/lib/tools/test_runners.py",
+        "anthropic-1.2.0/tests/test_client.py",
+        "anthropic-1.2.0/tests/test_header_case_sensitivity.py",
+        "anthropic-1.2.0/tests/test_response.py",
+        "anthropic-1.2.0/tests/test_streaming.py"
+      ]
+    },
+    {
+      "name": "api.anthropic.com",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 4,
+      "files": [
+        "anthropic-1.2.0/src/anthropic/_client.py",
+        "anthropic-1.2.0/src/anthropic/lib/credentials/_chain.py",
+        "anthropic-1.2.0/src/anthropic/lib/credentials/_constants.py",
+        "anthropic-1.2.0/tests/lib/test_credentials.py"
+      ],
+      "endpoint": "api.anthropic.com"
+    },
+    {
+      "name": "bedrock-runtime",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "file_count": 4,
+      "files": [
+        "anthropic-1.2.0/src/anthropic/lib/bedrock/_client.py",
+        "anthropic-1.2.0/src/anthropic/lib/bedrock/_stream_decoder.py",
+        "anthropic-1.2.0/tests/lib/test_bedrock.py",
+        "anthropic-1.2.0/tests/test_middleware.py"
+      ],
+      "endpoint": "bedrock-runtime"
+    },
+    {
+      "name": "mcp",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 3,
+      "files": [
+        "anthropic-1.2.0/examples/mcp_tool_runner.py",
+        "anthropic-1.2.0/src/anthropic/lib/tools/mcp.py",
+        "anthropic-1.2.0/tests/lib/tools/test_mcp_tool.py"
+      ]
+    }
+  ],
+  "agent_artifacts": [],
+  "committed_credentials": [
+    {
+      "kind": "AWS access key ID",
+      "file": "anthropic-1.2.0/tests/lib/test_aws_auth.py",
+      "line": 444,
+      "sample": "AKIAIOSF\u2026 (20 chars)"
+    },
+    {
+      "kind": "AWS access key ID",
+      "file": "anthropic-1.2.0/tests/lib/test_aws_auth.py",
+      "line": 461,
+      "sample": "AKIAIOSF\u2026 (20 chars)"
+    },
+    {
+      "kind": "AWS access key ID",
+      "file": "anthropic-1.2.0/tests/lib/test_aws_auth.py",
+      "line": 478,
+      "sample": "AKIAIOSF\u2026 (20 chars)"
+    },
+    {
+      "kind": "AWS access key ID",
+      "file": "anthropic-1.2.0/tests/lib/test_aws_auth.py",
+      "line": 495,
+      "sample": "AKIAIOSF\u2026 (20 chars)"
+    },
+    {
+      "kind": "AWS access key ID",
+      "file": "anthropic-1.2.0/tests/lib/test_aws_auth.py",
+      "line": 511,
+      "sample": "AKIAIOSF\u2026 (20 chars)"
+    },
+    {
+      "kind": "AWS access key ID",
+      "file": "anthropic-1.2.0/tests/lib/test_aws_auth.py",
+      "line": 531,
+      "sample": "AKIAIOSF\u2026 (20 chars)"
+    },
+    {
+      "kind": "AWS access key ID",
+      "file": "anthropic-1.2.0/tests/lib/test_aws_auth.py",
+      "line": 547,
+      "sample": "AKIAIOSF\u2026 (20 chars)"
+    },
+    {
+      "kind": "AWS access key ID",
+      "file": "anthropic-1.2.0/tests/lib/test_aws_auth.py",
+      "line": 559,
+      "sample": "AKIAIOSF\u2026 (20 chars)"
+    },
+    {
+      "kind": "AWS access key ID",
+      "file": "anthropic-1.2.0/tests/lib/test_aws_auth.py",
+      "line": 576,
+      "sample": "AKIAIOSF\u2026 (20 chars)"
+    },
+    {
+      "kind": "Anthropic API key",
+      "file": "anthropic-1.2.0/tests/lib/test_credentials.py",
+      "line": 3470,
+      "sample": "sk-ant-o\u2026 (27 chars)"
+    }
+  ],
+  "findings": [
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/tools/agent_toolset.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 90,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "dynamic_execution(eval/exec_x3)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/tools/test_agent_toolset.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 90,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "dynamic_execution(eval/exec_x8)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/test_middleware.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(bedrock-runtime)",
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/test_messages.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": true,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/tools/test_functions.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(function_tool)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/memory/basic.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/tools/_beta_runner.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 75,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_vectors(11_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/fallbacks.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/tools.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/messages.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/structured_outputs.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/structured_outputs_streaming.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/tools/_beta_session_runner.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/test_vertex.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/test_bedrock.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(bedrock-runtime)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/test_refusal_fallback_streaming.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/tools/test_runners.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 58,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/google_cloud.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/mcp_tool_runner.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/web_search.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/managed-agents-observe-tool-calls.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/images.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/managed-agents-streaming-deltas-manual.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/bedrock.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/managed-agents-worker-dispatch.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/agents_comprehensive.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/thinking_stream.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/tools_stream.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/agents_with_files.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/batch_results.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/tools_runner.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/agents.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/thinking.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/vertex.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/tools_runner_search_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/web_search_stream.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/workload_identity.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/messages_stream.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/azure.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/examples/managed-agents-self-hosted-sandbox-worker.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/_client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(api.anthropic.com)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/_streaming.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/_response.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/_types.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/resources/beta/sessions/events.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/resources/beta/environments/work.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/resources/beta/messages/messages.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/_scoped_client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/foundry.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/environments/_worker.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/google_cloud/_client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/tools/mcp.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/tools/_beta_functions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(function_tool)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/tools/_beta_builtin_memory_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/credentials/_constants.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(api.anthropic.com)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/credentials/_chain.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(api.anthropic.com)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/streaming/_beta_messages.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/streaming/_messages.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/bedrock/_client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(bedrock-runtime)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/bedrock/_stream_decoder.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(bedrock-runtime)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/bedrock/_stream.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/aws/_client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/conftest.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/test_extract_files.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/test_models.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/test_files.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/test_transform.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/test_streaming.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/test_qs.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/test_response.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/test_client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/test_header_case_sensitivity.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/test_required_args.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/test_models.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/test_files.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/test_skills.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/messages/test_batches.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/test_user_profiles.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/test_output_format_conversion.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/test_vaults.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/test_tunnels.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/test_agents.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/test_dreams.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/test_models.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/test_deployments.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/test_environments.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/test_files.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/test_organization.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/test_memory_stores.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/test_messages.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/test_webhooks.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/test_skills.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/test_sessions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/test_deployment_runs.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/sessions/test_events.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/sessions/test_resources.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/sessions/test_threads.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/sessions/threads/test_events.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/agents/test_versions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/environments/test_work.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/tunnels/test_certificates.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/messages/test_batches.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/memory_stores/test_memories.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/memory_stores/test_memory_versions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/organization/test_service_accounts.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/organization/test_api_keys.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/organization/test_external_keys.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/organization/test_rate_limits.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/organization/test_invites.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/organization/test_workspaces.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/organization/test_users.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/organization/workspaces/test_service_accounts.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/organization/workspaces/test_members.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/organization/workspaces/test_rate_limits.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/organization/service_accounts/test_workspaces.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/organization/federation/test_rules.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/organization/federation/test_issuers.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/organization/federation/rules/test_workspaces.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/vaults/test_credentials.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/beta/skills/test_versions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/api_resources/skills/test_versions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/decoders/test_jsonl.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/test_utils/test_proxy.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/test_utils/test_path.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/test_utils/test_datetime_parse.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/test_utils/test_typing.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/test_utils/test_json.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/test_bedrock_mantle.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/test_aws_auth.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/test_stainless_helpers.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/test_refusal_fallback.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/test_output_format_helpers.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/test_google_cloud.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/test_google_cloud_live.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/test_azure.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/test_aws.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/test_credentials.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "ai_http_endpoint(api.anthropic.com)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/test_scoped_client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/_parse/test_transform.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/_parse/test_beta_messages.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/_parse/test_messages.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/sessions/test_accumulate.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/environments/test_poller_method.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/environments/test_poller.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/environments/test_worker.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/tools/test_mcp_tool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/tools/test_session_runner.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/tools/test_files.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/tools/test_file_store.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/tools/test_skills.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/tools/memory_tools/test_filesystem.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/tools/memory_sync/conftest.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/tools/memory_sync/test_two_pass.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/tools/memory_sync/test_delete_discipline.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/tools/memory_sync/test_e2e_memory.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/tools/memory_sync/_fake_anthropic.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/tools/memory_sync/test_memory_sync.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/tools/memory_sync/test_keep_only_copy.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/tools/memory_sync/test_folder_trust.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/tools/memory_sync/test_final_flush.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/streaming/test_partial_json.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/streaming/test_parsed_content_blocks.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/streaming/test_beta_messages.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/tests/lib/streaming/test_messages.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/resources/beta/memory_stores/memories.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/_utils/_resources_proxy.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/_parse/_response.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "anthropic-1.2.0/src/anthropic/lib/middleware/_fallbacks.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}

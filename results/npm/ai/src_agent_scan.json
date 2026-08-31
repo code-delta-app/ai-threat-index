@@ -1,0 +1,5138 @@
+{
+  "summary": {
+    "total_files": 345,
+    "flagged_files": 229,
+    "critical_files": 0,
+    "high_files": 0,
+    "elevated_files": 229,
+    "normal_files": 116,
+    "mode": "snapshot",
+    "summary_text": "Scanned 345 file(s). 0 HIGH, 229 ELEVATED. AI SDKs detected: type, {. "
+  },
+  "sdk_inventory": {
+    "type": 171,
+    "{": 115
+  },
+  "agent_artifacts": {
+    "table_version": 1,
+    "tier3_count": 0,
+    "items": []
+  },
+  "files": [
+    {
+      "rel_path": "package/src/batch/batch.ts",
+      "language": "JavaScript",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [
+        "import {\n  UnsupportedFunctionalityError,\n  type Experimental_BatchLanguageModelV4 as BatchLanguageModelV4,\n  type Experimental_BatchV4ItemResult as BatchV4ItemResult,\n  type LanguageModelV4,\n  type LanguageModelV4GenerateResult,\n  type LanguageModelV4ToolCall,\n} from '@ai-sdk/",
+        "import { type ToolSet, withUserAgentSuffix } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/tool-approval-signature.ts",
+      "language": "JavaScript",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [
+        "import { convertBase64ToUint8Array } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "package/src/global.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ProviderV2, ProviderV3, ProviderV4 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/transcribe/stream-transcribe-result.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONObject, SharedV4ProviderMetadata } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/transcribe/transcribe.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONObject } from '@ai-sdk/",
+        "import {\n  detectMediaType,\n  withUserAgentSuffix,\n  type ProviderOptions,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/transcribe/transcribe-result.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONObject } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/transcribe/stream-transcribe.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  UnsupportedFunctionalityError,\n  type Experimental_TranscriptionModelV4StreamPart,\n  type JSONObject,\n  type SharedV4AudioFormat,\n} from '@ai-sdk/",
+        "import {\n  DelayedPromise,\n  withUserAgentSuffix,\n  type ProviderOptions,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/create-ui-message-stream.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  generateId as generateIdFunc,\n  type IdGenerator,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/get-response-ui-message-id.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { IdGenerator } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/to-ui-message-chunk.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/to-ui-message-stream.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/ui-message-chunks.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONObject } from '@ai-sdk/",
+        "import { lazySchema, zodSchema } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/middleware/wrap-provider.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ProviderV2, ProviderV3, ProviderV4 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/middleware/add-tool-input-examples-middleware.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONObject, LanguageModelV4FunctionTool } from '@ai-sdk/",
+        "import { wrapLanguageModel, addToolInputExamplesMiddleware } from 'ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/middleware/simulate-streaming-middleware.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { LanguageModelV4StreamPart } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/middleware/extract-json-middleware.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  LanguageModelV4Content,\n  LanguageModelV4StreamPart,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/middleware/default-embedding-settings-middleware.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { EmbeddingModelV4CallOptions } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/middleware/wrap-image-model.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  ImageModelV2,\n  ImageModelV3,\n  ImageModelV4,\n  ImageModelV4CallOptions,\n  ImageModelV4Result,\n} from '@ai-sdk/",
+        "import { asArray } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/middleware/wrap-embedding-model.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  EmbeddingModelV3,\n  EmbeddingModelV4,\n  EmbeddingModelV4CallOptions,\n  EmbeddingModelV4Result,\n} from '@ai-sdk/",
+        "import {\n  asArray,\n  EXPERIMENTAL_EMBEDDING_MODEL_MAX_INPUT_BYTES_PER_CALL,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/middleware/default-instructions-middleware.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { LanguageModelV4Prompt } from '@ai-sdk/",
+        "import { asArray } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/middleware/wrap-language-model.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  LanguageModelV2,\n  LanguageModelV3,\n  LanguageModelV4,\n  LanguageModelV4CallOptions,\n  LanguageModelV4GenerateResult,\n  LanguageModelV4StreamResult,\n} from '@ai-sdk/",
+        "import { asArray } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/middleware/extract-reasoning-middleware.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  LanguageModelV4Content,\n  LanguageModelV4StreamPart,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/middleware/default-settings-middleware.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { LanguageModelV4CallOptions } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/no-translation-generated-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/invalid-stream-part-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/tool-call-not-found-for-approval-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/ui-message-stream-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/unsupported-model-version-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/no-image-generated-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/no-speech-generated-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/stream-provider-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/no-object-generated-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/invalid-tool-approval-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/no-output-generated-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/no-such-tool-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/invalid-tool-input-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError, getErrorMessage } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/no-video-generated-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/invalid-argument-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/tool-call-repair-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError, getErrorMessage } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/invalid-tool-approval-signature-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/no-transcript-generated-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/error/missing-tool-result-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/upload-skill/upload-skill-result.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { SkillsV4UploadSkillResult } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/upload-skill/upload-skill.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  ProviderV4,\n  SkillsV4,\n  SkillsV4File,\n  SkillsV4UploadSkillCallOptions,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-object/validate-object-generation-input.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { FlexibleSchema } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-object/generate-object.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONValue } from '@ai-sdk/",
+        "import {\n  createIdGenerator,\n  withUserAgentSuffix,\n  type FlexibleSchema,\n  type InferSchema,\n  type ProviderOptions,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-object/inject-json-instruction.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONSchema7 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-object/structured-output-events.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { LanguageModelV4Prompt } from '@ai-sdk/",
+        "import type { ModelMessage, ProviderOptions } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-object/stream-object.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  JSONValue,\n  LanguageModelV4FinishReason,\n  LanguageModelV4StreamPart,\n  LanguageModelV4Usage,\n  SharedV4ProviderMetadata,\n  SharedV4Warning,\n} from '@ai-sdk/",
+        "import {\n  createIdGenerator,\n  DelayedPromise,\n  type InferSchema,\n  type FlexibleSchema,\n  type ProviderOptions,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-object/output-strategy.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  isJSONArray,\n  isJSONObject,\n  TypeValidationError,\n  UnsupportedFunctionalityError,\n  type JSONObject,\n  type JSONSchema7,\n  type JSONValue,\n} from '@ai-sdk/",
+        "import {\n  asSchema,\n  safeValidateTypes,\n  type FlexibleSchema,\n  type Schema,\n  type ValidationResult,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-object/repair-text.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONParseError, TypeValidationError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-object/parse-and-validate-object-result.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { JSONParseError, TypeValidationError } from '@ai-sdk/",
+        "import { safeParseJSON } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/registry/provider-registry.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  type EmbeddingModelV4,\n  type Experimental_VideoModelV3,\n  type Experimental_VideoModelV4,\n  type FilesV4,\n  type ImageModelV4,\n  type LanguageModelV4,\n  NoSuchModelError,\n  type ProviderV3,\n  type ProviderV4,\n  type RerankingModelV4,\n  type SkillsV4,\n  type SpeechModelV4,\n  type TranscriptionModelV4,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/registry/custom-provider.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  type EmbeddingModelV4,\n  type Experimental_VideoModelV4,\n  type FilesV4,\n  type ImageModelV4,\n  type LanguageModelV4,\n  NoSuchModelError,\n  type ProviderV2,\n  type ProviderV3,\n  type ProviderV4,\n  type RerankingModelV4,\n  type SkillsV4,\n  type SpeechModelV4,\n  type TranscriptionModelV4,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/registry/no-such-provider-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError, NoSuchModelError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/text-stream/to-text-stream.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/ui/direct-chat-transport.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { Context, Tool, ToolSet } from '@ai-sdk/",
+        "import { useChat } from '@ai-sdk/",
+        "import { DirectChatTransport } from 'ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/ui/call-completion-api.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  parseJsonEventStream,\n  withUserAgentSuffix,\n  getRuntimeEnvironmentUserAgent,\n  type ParseResult,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/ui/chat.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  generateId as generateIdFunc,\n  type FlexibleSchema,\n  type IdGenerator,\n  type InferSchema,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/ui/use-completion.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { FetchFunction } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/ui/process-ui-message-stream.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONObject } from '@ai-sdk/",
+        "import { validateTypes, type FlexibleSchema } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/ui/validate-ui-messages.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { TypeValidationError, type JSONObject } from '@ai-sdk/",
+        "import {\n  lazySchema,\n  safeValidateTypes,\n  validateTypes,\n  zodSchema,\n  type FlexibleSchema,\n  type Tool,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/ui/http-chat-transport.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  normalizeHeaders,\n  resolve,\n  type FetchFunction,\n  type Resolvable,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/ui/default-chat-transport.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { parseJsonEventStream, type ParseResult } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/ui/ui-messages.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONObject } from '@ai-sdk/",
+        "import type {\n  InferToolInput,\n  InferToolOutput,\n  Tool,\n  ToolCall,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/ui/convert-to-model-messages.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  isNonNullable,\n  type ToolSet,\n  type AssistantContent,\n  type CustomPart,\n  type FilePart,\n  type ModelMessage,\n  type TextPart,\n  type ToolApprovalResponse,\n  type ToolResultPart,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-video/generate-video.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Experimental_VideoModelV4,\n  Experimental_VideoModelV4CallOptions,\n  Experimental_VideoModelV4File,\n  Experimental_VideoModelV4Result,\n  Experimental_VideoModelV4OperationWebhook,\n  Experimental_VideoModelV4FrameImage,\n  Experimental_VideoModelV4FrameType,\n  SharedV4ProviderMetadata,\n} from '@ai-sdk/",
+        "import {\n  convertBase64ToUint8Array,\n  delay as defaultDelay,\n  generateId,\n  withUserAgentSuffix,\n  type DataContent,\n  detectMediaType,\n  type ProviderOptions,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-video/get-video-status.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Experimental_VideoModelV4OperationStatusResult,\n  JSONValue,\n} from '@ai-sdk/",
+        "import { withUserAgentSuffix } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-video/start-video.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Experimental_VideoModelV4CallOptions,\n  Experimental_VideoModelV4FrameType,\n  JSONValue,\n} from '@ai-sdk/",
+        "import {\n  generateId,\n  withUserAgentSuffix,\n  type DataContent,\n  type ProviderOptions,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/realtime/browser-realtime-transport.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { safeParseJSON } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/realtime/realtime-event-reducer.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { safeParseJSON } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/realtime/get-realtime-tool-definitions.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  asSchema,\n  type InferToolSetContext,\n  type Tool,\n  type ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/prompt/clone-model-message.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ModelMessage } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/prompt/normalize-stream-provider-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/",
+        "import { isProviderStreamError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/prompt/message-conversion-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/prompt/language-model-call-options.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { LanguageModelV4CallOptions } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/prompt/create-tool-model-output.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { getErrorMessage, type JSONValue } from '@ai-sdk/",
+        "import type { Tool, ToolResultOutput } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/prompt/prepare-tools.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  LanguageModelV4FunctionTool,\n  LanguageModelV4ProviderTool,\n} from '@ai-sdk/",
+        "import {\n  asSchema,\n  type Experimental_SandboxSession as SandboxSession,\n  type InferToolSetContext,\n  type Tool,\n  type ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/prompt/prepare-tool-choice.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { LanguageModelV4ToolChoice } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/prompt/message.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  AssistantModelMessage,\n  ModelMessage,\n  SystemModelMessage,\n  ToolModelMessage,\n  UserModelMessage,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/prompt/content-part.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  isBuffer,\n  type CustomPart,\n  type DataContent,\n  type FilePart,\n  type ImagePart,\n  type ProviderOptions,\n  type ReasoningFilePart,\n  type ReasoningPart,\n  type TextPart,\n  type ToolApprovalRequest,\n  type ToolApprovalResponse,\n  type ToolResultOutput,\n  type ToolResultPart,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/prompt/data-content.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  convertBase64ToUint8Array,\n  convertUint8ArrayToBase64,\n  type DataContent,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/prompt/file-part-data.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { LanguageModelV4FilePart } from '@ai-sdk/",
+        "import {\n  isBuffer,\n  isProviderReference,\n  type DataContent,\n  type FilePart,\n  type ProviderReference,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/prompt/invalid-message-role-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/prompt/standardize-prompt.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { InvalidPromptError } from '@ai-sdk/",
+        "import {\n  asArray,\n  safeValidateTypes,\n  type ModelMessage,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/prompt/wrap-gateway-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { GatewayAuthenticationError } from '@ai-sdk/",
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/prompt/invalid-data-content-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/prompt/prompt.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ModelMessage, SystemModelMessage } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/prompt/request-options.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/prompt/convert-to-language-model-prompt.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  LanguageModelV4FilePart,\n  LanguageModelV4Message,\n  LanguageModelV4Prompt,\n  LanguageModelV4TextPart,\n  LanguageModelV4ToolResultOutput,\n} from '@ai-sdk/",
+        "import {\n  asArray,\n  detectMediaType,\n  isFullMediaType,\n  isUrlSupported,\n  type CustomPart,\n  type FilePart,\n  type ImagePart,\n  type ModelMessage,\n  type ReasoningFilePart,\n  type ReasoningPart,\n  type TextPart,\n  type ToolCallPart,\n  type ToolResultOutput,\n  type ToolResultPart,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/translate/stream-translate.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Experimental_SpeechTranslationModelV4StreamPart,\n  Experimental_SpeechTranslationModelV4Usage,\n  JSONObject,\n  SharedV4AudioFormat,\n} from '@ai-sdk/",
+        "import {\n  DelayedPromise,\n  withUserAgentSuffix,\n  type ProviderOptions,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/translate/stream-translate-result.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Experimental_SpeechTranslationModelV4Usage,\n  JSONObject,\n  SharedV4ProviderMetadata,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/model/as-image-model-v4.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  ImageModelV2,\n  ImageModelV3,\n  ImageModelV4,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/model/get-embedding-model-max-input-bytes-per-call.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { EmbeddingModelV4 } from '@ai-sdk/",
+        "import { EXPERIMENTAL_EMBEDDING_MODEL_MAX_INPUT_BYTES_PER_CALL } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/model/as-speech-model-v4.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  SpeechModelV2,\n  SpeechModelV3,\n  SpeechModelV4,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/model/as-transcription-model-v4.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  TranscriptionModelV2,\n  TranscriptionModelV3,\n  TranscriptionModelV4,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/model/as-embedding-model-v4.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  EmbeddingModelV2,\n  EmbeddingModelV3,\n  EmbeddingModelV4,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/model/as-video-model-v4.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Experimental_VideoModelV3,\n  Experimental_VideoModelV4,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/model/as-reranking-model-v4.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { RerankingModelV3, RerankingModelV4 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/model/as-transcription-model-v3.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  TranscriptionModelV2,\n  TranscriptionModelV3,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/model/resolve-model.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { gateway } from '@ai-sdk/",
+        "import type {\n  EmbeddingModelV4,\n  Experimental_SpeechTranslationModelV4,\n  Experimental_VideoModelV4,\n  ImageModelV4,\n  LanguageModelV4,\n  ProviderV4,\n  RerankingModelV4,\n  SpeechModelV4,\n  TranscriptionModelV4,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/model/as-speech-model-v3.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { SpeechModelV2, SpeechModelV3 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/model/as-embedding-model-v3.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { EmbeddingModelV2, EmbeddingModelV3 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/model/as-image-model-v3.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ImageModelV2, ImageModelV3 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/model/as-provider-v3.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ProviderV2, ProviderV3 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/model/as-provider-v4.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ProviderV2, ProviderV3, ProviderV4 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/model/as-language-model-v4.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  LanguageModelV2,\n  LanguageModelV3,\n  LanguageModelV4,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/model/as-language-model-v3.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  LanguageModelV2,\n  LanguageModelV2FinishReason,\n  LanguageModelV2StreamPart,\n  LanguageModelV2Usage,\n  LanguageModelV3,\n  LanguageModelV3FinishReason,\n  LanguageModelV3StreamPart,\n  LanguageModelV3Usage,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-provider-v2.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  NoSuchModelError,\n  type EmbeddingModelV2,\n  type ImageModelV2,\n  type LanguageModelV2,\n  type ProviderV2,\n  type SpeechModelV2,\n  type TranscriptionModelV2,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-image-model-v3.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ImageModelV3 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-sandbox.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Experimental_SandboxSession,\n  Experimental_SandboxProcess,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-speech-model-v4.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { SpeechModelV4 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-language-model-v3.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  LanguageModelV3,\n  LanguageModelV3CallOptions,\n  LanguageModelV3GenerateResult,\n  LanguageModelV3StreamResult,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-language-model-v4.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  LanguageModelV4,\n  LanguageModelV4CallOptions,\n  LanguageModelV4GenerateResult,\n  LanguageModelV4StreamResult,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-transcription-model-v2.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { TranscriptionModelV2 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-transcription-model-v4.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { TranscriptionModelV4 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-provider-v4.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  NoSuchModelError,\n  type EmbeddingModelV4,\n  type ImageModelV4,\n  type LanguageModelV4,\n  type ProviderV4,\n  type SpeechModelV4,\n  type TranscriptionModelV4,\n  type RerankingModelV4,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-video-model-v3.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { Experimental_VideoModelV3 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-embedding-model-v2.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { EmbeddingModelV2 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-reranking-model-v3.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { RerankingModelV3 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-speech-model-v2.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { SpeechModelV2 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-provider-v3.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  NoSuchModelError,\n  type EmbeddingModelV3,\n  type ImageModelV3,\n  type LanguageModelV3,\n  type ProviderV3,\n  type SpeechModelV3,\n  type TranscriptionModelV3,\n  type RerankingModelV3,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-embedding-model-v3.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { EmbeddingModelV3 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-video-model-v4.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { Experimental_VideoModelV4 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-transcription-model-v3.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { TranscriptionModelV3 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-reranking-model-v4.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { RerankingModelV4 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-language-model-v2.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { LanguageModelV2 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-speech-model-v3.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { SpeechModelV3 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-speech-translation-model-v4.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { Experimental_SpeechTranslationModelV4 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-image-model-v4.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ImageModelV4 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-image-model-v2.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ImageModelV2 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/test/mock-embedding-model-v4.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { EmbeddingModelV4 } from '@ai-sdk/",
+        "import { EXPERIMENTAL_EMBEDDING_MODEL_MAX_INPUT_BYTES_PER_CALL } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-speech/generate-speech.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONObject } from '@ai-sdk/",
+        "import {\n  detectMediaType,\n  withUserAgentSuffix,\n  type ProviderOptions,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-speech/generate-speech-result.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONObject } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/speech-translation-model.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { Experimental_SpeechTranslationModelV4 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/language-model-request-metadata.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ModelMessage } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/video-model.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Experimental_VideoModelV3,\n  Experimental_VideoModelV4,\n  SharedV4ProviderMetadata,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/transcription-model.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  TranscriptionModelV2,\n  TranscriptionModelV3,\n  TranscriptionModelV4,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/language-model-middleware.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { LanguageModelV4Middleware } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/image-model-middleware.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ImageModelV4Middleware } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/provider-metadata.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { SharedV4ProviderMetadata } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/realtime-model.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Experimental_RealtimeFactoryV4 as RealtimeFactoryV4,\n  Experimental_RealtimeFactoryV4GetTokenOptions as RealtimeFactoryV4GetTokenOptions,\n  Experimental_RealtimeFactoryV4GetTokenResult as RealtimeFactoryV4GetTokenResult,\n  Experimental_RealtimeModelV4 as RealtimeModelV4,\n  Experimental_RealtimeModelV4ClientEvent as RealtimeModelV4ClientEvent,\n  Experimental_RealtimeModelV4ServerEvent as RealtimeModelV4ServerEvent,\n  Experimental_RealtimeModelV4SessionConfig as RealtimeModelV4SessionConfig,\n  Experimental_RealtimeModelV4ToolDefinition as RealtimeModelV4ToolDefinition,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/usage.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  ImageModelV4Usage,\n  JSONObject,\n  LanguageModelV4Usage,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/language-model.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { GatewayModelId } from '@ai-sdk/",
+        "import type {\n  LanguageModelV2,\n  LanguageModelV3,\n  LanguageModelV4,\n  SharedV4Warning,\n  LanguageModelV4Source,\n} from '@ai-sdk/",
+        "import { openai } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/reranking-model.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { RerankingModelV3, RerankingModelV4 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/embedding-model.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  EmbeddingModelV2,\n  EmbeddingModelV3,\n  EmbeddingModelV4,\n  EmbeddingModelV4Embedding,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/provider-reference.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { SharedV4ProviderReference } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/json-value.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONValue as OriginalJSONValue } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/speech-model.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  SpeechModelV2,\n  SpeechModelV3,\n  SpeechModelV4,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/embedding-model-middleware.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { EmbeddingModelV4Middleware } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/warning.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { SharedV4Warning } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/video-model-response-metadata.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { SharedV4ProviderMetadata } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/types/image-model.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  ImageModelV2,\n  ImageModelV3,\n  ImageModelV4,\n  ImageModelV4ProviderMetadata,\n  ImageModelV2ProviderMetadata,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/upload-file/upload-file.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  FilesV4,\n  FilesV4UploadFileCallOptions,\n  ProviderV4,\n} from '@ai-sdk/",
+        "import {\n  convertBase64ToUint8Array,\n  detectMediaType,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-image/generate-image-result.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ImageModelV4ProviderMetadata } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-image/generate-image.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  isJSONObject,\n  type ImageModelV4,\n  type ImageModelV4CallOptions,\n  type ImageModelV4File,\n  type ImageModelV4ProviderMetadata,\n  type JSONObject,\n} from '@ai-sdk/",
+        "import {\n  convertBase64ToUint8Array,\n  detectMediaType,\n  withUserAgentSuffix,\n  type DataContent,\n  type ProviderOptions,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/rerank/rerank.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONObject, RerankingModelV4CallOptions } from '@ai-sdk/",
+        "import {\n  createIdGenerator,\n  type ProviderOptions,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/rerank/rerank-events.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONObject } from '@ai-sdk/",
+        "import type { ProviderOptions } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/telemetry/telemetry.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/telemetry/telemetry-options.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Arrayable,\n  Context,\n  InferToolSetContext,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/telemetry/create-telemetry-dispatcher.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { asArray } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/util/merge-abort-signals.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { filterNullable } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/util/simulate-readable-stream.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { delay as delayFunction } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/util/deep-partial.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { FlexibleSchema, InferSchema } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/util/retry-with-exponential-backoff.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { APICallError } from '@ai-sdk/",
+        "import { GatewayError } from '@ai-sdk/",
+        "import {\n  retryWithExponentialBackoff,\n  type RetryFunction,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/util/notify.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { asArray, type Arrayable } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/util/retry-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { AISDKError } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/util/parse-partial-json.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONValue } from '@ai-sdk/",
+        "import { safeParseJSON } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/util/canonical-hash.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { convertUint8ArrayToBase64 } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/util/prepare-retries.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { RetryFunction } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/util/download/download.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  cancelResponseBody,\n  DownloadError,\n  readResponseWithSizeLimit,\n  DEFAULT_MAX_DOWNLOAD_SIZE,\n  fetchWithValidatedRedirects,\n  withUserAgentSuffix,\n  getRuntimeEnvironmentUserAgent,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/batch/batch-types.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Experimental_BatchV4Error as BatchV4Error,\n  Experimental_BatchV4StartResult as BatchV4StartResult,\n  Experimental_BatchV4Status as BatchV4Status,\n  Experimental_BatchLanguageModelV4 as BatchLanguageModelV4,\n} from '@ai-sdk/",
+        "import type { ProviderOptions, ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/agent/pipe-agent-ui-stream-to-response.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Arrayable,\n  Context,\n  Experimental_SandboxSession as SandboxSession,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/agent/create-agent-ui-stream.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Arrayable,\n  Context,\n  Experimental_SandboxSession as SandboxSession,\n  Tool,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/agent/tool-loop-agent-settings.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Arrayable,\n  Context,\n  FlexibleSchema,\n  IdGenerator,\n  InferToolSetContext,\n  MaybePromiseLike,\n  ProviderOptions,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/agent/create-agent-ui-stream-response.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Arrayable,\n  Context,\n  Experimental_SandboxSession as SandboxSession,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/agent/tool-loop-agent.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  validateTypes,\n  withUserAgentSuffix,\n  type Context,\n  type Experimental_SandboxSession as SandboxSession,\n  type ModelMessage,\n  type ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/agent/agent.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Arrayable,\n  Context,\n  Experimental_SandboxSession as SandboxSession,\n  ModelMessage,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/resolve-tool-approval.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Context,\n  InferToolInput,\n  InferToolSetContext,\n  ModelMessage,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/invoke-tool-callbacks-from-stream.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { Context, ModelMessage, ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/tool-execution-events.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  InferToolContext,\n  ModelMessage,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/validate-tool-context.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { validateTypes, type FlexibleSchema } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/reasoning-output.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  DataContent,\n  ReasoningFilePart,\n  ReasoningPart,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/extract-reasoning-content.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  LanguageModelV4Content,\n  LanguageModelV4Reasoning,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/tool-approval-response-output.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/tools-context-parameter.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  HasRequiredKey,\n  InferToolSetContext,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/tool-call-repair-function.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONSchema7, LanguageModelV4ToolCall } from '@ai-sdk/",
+        "import type { ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/reasoning.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ReasoningPart, ReasoningFilePart } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/tool-input-refinement.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  InferToolInput,\n  MaybePromiseLike,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/validate-tool-approvals.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  asSchema,\n  isExecutableTool,\n  safeValidateTypes,\n  type Context,\n  type InferToolSetContext,\n  type ModelMessage,\n  type ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/tool-approval-request-output.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/generate-text-events.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Context,\n  InferToolSetContext,\n  ProviderOptions,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/active-tools.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/stop-condition.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { Context, ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/tool-output-denied.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/language-model-events.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/smooth-stream.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { delay as originalDelay, type ToolSet } from '@ai-sdk/",
+        "import {\n  InvalidArgumentError,\n  type SharedV4ProviderMetadata,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/execute-tools-from-stream.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Arrayable,\n  Context,\n  IdGenerator,\n  InferToolSetContext,\n  ModelMessage,\n  Experimental_SandboxSession as SandboxSession,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/content-part.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/tool-result.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONObject } from '@ai-sdk/",
+        "import type {\n  InferToolInput,\n  InferToolOutput,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/generated-file.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  convertBase64ToUint8Array,\n  convertUint8ArrayToBase64,\n} from '@ai-sdk/",
+        "import type { JSONObject } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/prepare-step.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Context,\n  Experimental_SandboxSession as SandboxSession,\n  InferToolSetContext,\n  ModelMessage,\n  ProviderOptions,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/tool-output.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/execute-tool-call.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  executeTool,\n  isExecutableTool,\n  type Arrayable,\n  type Experimental_SandboxSession as SandboxSession,\n  type InferToolInput,\n  type InferToolSetContext,\n  type ModelMessage,\n  type ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/step-result.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Context,\n  InferToolSetContext,\n  ReasoningFilePart,\n  ReasoningPart,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/generate-text.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  LanguageModelV4GenerateResult,\n  LanguageModelV4ToolCall,\n} from '@ai-sdk/",
+        "import {\n  asArray,\n  createIdGenerator,\n  getErrorMessage,\n  withUserAgentSuffix,\n  type Arrayable,\n  type Context,\n  type Experimental_SandboxSession as SandboxSession,\n  type IdGenerator,\n  type InferToolSetContext,\n  type ProviderOptions,\n  type ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/to-response-messages.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/tool-caller-configuration.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  experimental_getToolCaller,\n  type Experimental_ToolCallerTool,\n  type Tool,\n  type ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/tool-order.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/tool-approval-configuration.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Context,\n  InferToolContext,\n  InferToolInput,\n  InferToolSetContext,\n  MaybePromiseLike,\n  ModelMessage,\n  ToolExecutionOptions,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/filter-active-tools.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/parse-tool-call.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { LanguageModelV4ToolCall } from '@ai-sdk/",
+        "import {\n  asSchema,\n  safeParseJSON,\n  safeValidateTypes,\n  type InferToolInput,\n  type ModelMessage,\n  type ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/generate-text-result.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { Context, ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/tool-error.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONObject } from '@ai-sdk/",
+        "import type { InferToolInput, ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/extract-text-content.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  LanguageModelV4Content,\n  LanguageModelV4Text,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/response-message.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  AssistantModelMessage,\n  ToolModelMessage,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/tool-call.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONObject } from '@ai-sdk/",
+        "import type { InferToolInput, ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/tool-fingerprint.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import { asSchema, type ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/stream-text-result.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { JSONObject } from '@ai-sdk/",
+        "import type { Context, IdGenerator, ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/restricted-telemetry-dispatcher.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  Context,\n  InferToolContext,\n  InferToolSetContext,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/prune-messages.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  AssistantModelMessage,\n  ModelMessage,\n  ToolModelMessage,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/collect-tool-approvals.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type {\n  ModelMessage,\n  ToolApprovalRequest,\n  ToolApprovalResponse,\n  ToolResultPart,\n  ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/stream-text.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  getErrorMessage,\n  UnsupportedFunctionalityError,\n  type LanguageModelV4,\n  type SharedV4Warning,\n} from '@ai-sdk/",
+        "import {\n  asArray,\n  createIdGenerator,\n  DelayedPromise,\n  filterNullable,\n  isAbortError,\n  type Arrayable,\n  type Context,\n  type Experimental_SandboxSession as SandboxSession,\n  type IdGenerator,\n  type InferToolSetContext,\n  type ModelMessage,\n  type ProviderOptions,\n  type ToolApprovalResponse,\n  type ToolContent,\n  type ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/stream-language-model-call.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  getErrorMessage,\n  type LanguageModelV4Prompt,\n  type LanguageModelV4StreamPart,\n  type SharedV4Headers,\n} from '@ai-sdk/",
+        "import {\n  createIdGenerator,\n  type Arrayable,\n  type Experimental_SandboxSession as SandboxSession,\n  type IdGenerator,\n  type InferToolSetContext,\n  type ModelMessage,\n  type ProviderOptions,\n  type ToolSet,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/convert-language-model-content.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { LanguageModelV4Content } from '@ai-sdk/",
+        "import type { ToolSet } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/generate-text/output.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  TypeValidationError,\n  type JSONSchema7,\n  type JSONValue,\n  type LanguageModelV4CallOptions,\n} from '@ai-sdk/",
+        "import {\n  asSchema,\n  resolve,\n  safeParseJSON,\n  safeValidateTypes,\n  type FlexibleSchema,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/embed/embed-events.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import type { ProviderOptions } from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/embed/embed-many.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  createIdGenerator,\n  withUserAgentSuffix,\n  type ProviderOptions,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/src/embed/embed.ts",
+      "language": "JavaScript",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import {\n  createIdGenerator,\n  withUserAgentSuffix,\n  type ProviderOptions,\n} from '@ai-sdk/"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "package/internal.d.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/test.d.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/version.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/transcribe/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/pipe-ui-message-stream-to-response.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/ui-message-stream-response-init.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/ui-message-stream-on-step-end-callback.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/create-ui-message-stream-response.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/handle-ui-message-stream-finish.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/ui-message-stream-outcome.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/ui-message-stream-headers.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/ui-message-stream-writer.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/ui-message-stream-on-finish-callback.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/json-to-sse-transform-stream.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/ui-message-stream-on-end-callback.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/ui-message-stream-on-step-finish-callback.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui-message-stream/read-ui-message-stream.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/middleware/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/error/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/error/verify-no-object-generated-error.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/upload-skill/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/generate-object/generate-object-result.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/generate-object/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/generate-object/stream-object-result.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/registry/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/text-stream/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/text-stream/create-text-stream-response.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/text-stream/pipe-text-stream-to-response.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui/last-assistant-message-is-complete-with-tool-calls.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui/last-assistant-message-is-complete-with-approval-responses.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui/process-text-stream.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui/text-stream-chat-transport.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui/convert-file-list-to-file-ui-parts.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui/transform-text-to-ui-message-stream.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/ui/chat-transport.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/generate-video/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/generate-video/generate-video-result.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/realtime/realtime-session.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/realtime/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/realtime/browser-realtime-audio.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/realtime/audio-utils.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/realtime/realtime-types.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/prompt/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/prompt/split-data-url.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/prompt/prepare-language-model-call-options.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/translate/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/test/mock-server-response.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/test/mock-values.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/test/not-implemented.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/generate-speech/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/generate-speech/generated-audio-file.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/types/provider.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/types/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/types/speech-model-response-metadata.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/types/image-model-response-metadata.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/types/transcription-model-response-metadata.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/types/speech-translation-model-response-metadata.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/types/language-model-response-metadata.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/upload-file/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/upload-file/upload-file-result.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/generate-image/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/rerank/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/rerank/rerank-result.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/telemetry/tracing-channel.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/telemetry/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/telemetry/tracing-channel-publisher.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/telemetry/telemetry-registry.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/merge-objects.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/error-handler.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/extract-literal-union.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/is-deep-equal-data.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/serial-job-executor.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/create-resolvable-promise.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/create-stitchable-stream.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/fix-json.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/get-own.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/prepare-headers.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/consume-stream.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/async-iterable-stream.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/job.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/cosine-similarity.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/create-id-map.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/zod.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/is-non-empty-object.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/log-v2-compatibility-warning.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/write-to-server-response.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/split-array.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/callback.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/merge-callbacks.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/value-of.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/now.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/data-url.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/set-abort-timeout.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/get-potential-start-index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/is-node-runtime.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/download/download-function.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/util/download/create-download.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/batch/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/agent/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/agent/infer-agent-ui-message.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/agent/infer-agent-tools.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/generate-text/output-utils.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/generate-text/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/generate-text/sum-token-counts.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/generate-text/is-tool-execution-allowed-finish-reason.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/generate-text/prepare-step-call-settings.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/generate-text/calculate-tokens-per-second.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/embed/embed-result.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/embed/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/embed/embed-many-result.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/logger/index.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/src/logger/log-warnings.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    }
+  ]
+}

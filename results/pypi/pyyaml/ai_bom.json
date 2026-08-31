@@ -1,0 +1,119 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.1",
+  "generated": "2026-08-31T19:31:52.910863Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 47,
+    "files_flagged": 5,
+    "critical": 0,
+    "high": 0,
+    "elevated": 5,
+    "providers": 0,
+    "foreign_egress_files": 0,
+    "non_allied_jurisdiction_files": 0,
+    "cost_risk_files": 0,
+    "agent_artifacts": 0,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 0
+  },
+  "providers": [],
+  "agent_artifacts": [],
+  "committed_credentials": [],
+  "findings": [
+    {
+      "file": "pyyaml-6.0.3/tests/legacy_tests/test_multi_constructor.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pyyaml-6.0.3/tests/legacy_tests/test_recursive.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pyyaml-6.0.3/tests/legacy_tests/test_structure.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pyyaml-6.0.3/tests/legacy_tests/test_constructor.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pyyaml-6.0.3/tests/legacy_tests/test_errors.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pyyaml-6.0.3/lib/yaml/constructor.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+certifi-2026.7.22/setup.py,Python,0,NORMAL,0,0,,,,
+certifi-2026.7.22/certifi/__init__.py,Python,0,NORMAL,0,0,,,,
+certifi-2026.7.22/certifi/__main__.py,Python,0,NORMAL,0,0,,,,
+certifi-2026.7.22/certifi/core.py,Python,0,NORMAL,0,0,,,,
+certifi-2026.7.22/certifi/tests/__init__.py,Python,0,NORMAL,0,0,,,,
+certifi-2026.7.22/certifi/tests/test_certify.py,Python,0,NORMAL,0,0,,,,

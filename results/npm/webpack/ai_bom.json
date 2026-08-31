@@ -1,0 +1,149 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.1",
+  "generated": "2026-08-31T19:30:40.516651Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 813,
+    "files_flagged": 0,
+    "critical": 0,
+    "high": 0,
+    "elevated": 0,
+    "providers": 0,
+    "foreign_egress_files": 0,
+    "non_allied_jurisdiction_files": 0,
+    "cost_risk_files": 0,
+    "agent_artifacts": 0,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 0
+  },
+  "providers": [],
+  "agent_artifacts": [],
+  "committed_credentials": [],
+  "findings": [
+    {
+      "file": "package/lib/css/CssParser.js",
+      "language": "JavaScript",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(5_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "package/lib/TemplatedPathPlugin.js",
+      "language": "JavaScript",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "package/lib/ExternalModule.js",
+      "language": "JavaScript",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "package/lib/dependencies/ImportMetaGlobHelpers.js",
+      "language": "JavaScript",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "package/lib/schemes/HttpUriPlugin.js",
+      "language": "JavaScript",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "package/lib/html/syntax.js",
+      "language": "JavaScript",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "package/lib/dll/DelegatedModuleFactoryPlugin.js",
+      "language": "JavaScript",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "package/lib/config/browserslistTargetHandler.js",
+      "language": "JavaScript",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}

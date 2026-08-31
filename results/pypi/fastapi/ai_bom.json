@@ -1,0 +1,2696 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.1",
+  "generated": "2026-08-31T19:32:21.586544Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 1137,
+    "files_flagged": 6,
+    "critical": 0,
+    "high": 0,
+    "elevated": 6,
+    "providers": 1,
+    "foreign_egress_files": 0,
+    "non_allied_jurisdiction_files": 0,
+    "cost_risk_files": 0,
+    "agent_artifacts": 0,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 0
+  },
+  "providers": [
+    {
+      "name": "pydantic_ai",
+      "type": "sdk",
+      "jurisdiction": "unspecified",
+      "sovereignty_risk": false,
+      "file_count": 1,
+      "files": [
+        "fastapi-0.141.1/scripts/translate.py"
+      ]
+    }
+  ],
+  "agent_artifacts": [],
+  "committed_credentials": [],
+  "findings": [
+    {
+      "file": "fastapi-0.141.1/docs_src/sql_databases/tutorial002_py310.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/docs_src/sql_databases/tutorial001_py310.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/docs_src/sql_databases/tutorial002_an_py310.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/docs_src/sql_databases/tutorial001_an_py310.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/scripts/translate.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/scripts/docs.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_dataclasses/test_tutorial003.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_dataclasses/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_dataclasses/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_separate_openapi_schemas/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_separate_openapi_schemas/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_python_types/test_tutorial009_tutorial009b.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_python_types/test_tutorial008b.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body_nested_models/test_tutorial004.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body_nested_models/test_tutorial008.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body_nested_models/test_tutorial007.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body_nested_models/test_tutorial006.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body_nested_models/test_tutorial009.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body_nested_models/test_tutorial005.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_cookie_params/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_bigger_applications/test_main.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_testing/test_main_b.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_request_form_models/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_request_form_models/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_schema_extra_example/test_tutorial004.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_schema_extra_example/test_tutorial003.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_schema_extra_example/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_schema_extra_example/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_schema_extra_example/test_tutorial005.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_cookie_param_models/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_cookie_param_models/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_stream_json_lines/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body_multiple_params/test_tutorial004.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body_multiple_params/test_tutorial003.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body_multiple_params/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body_multiple_params/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body_multiple_params/test_tutorial005.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_custom_response/test_tutorial002_tutorial003_tutorial004.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_custom_response/test_tutorial010.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_custom_response/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_authentication_error_status_code/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_header_param_models/test_tutorial003.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_header_param_models/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_header_param_models/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_testing_dependencies/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_dependencies/test_tutorial008c.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_dependencies/test_tutorial008d.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_dependencies/test_tutorial008e.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_dependencies/test_tutorial012.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_dependencies/test_tutorial008.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_dependencies/test_tutorial008b.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_dependencies/test_tutorial006.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_dependencies/test_tutorial002_tutorial003_tutorial004.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_dependencies/test_tutorial001_tutorial001_02.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_dependencies/test_tutorial011.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_dependencies/test_tutorial005.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body_updates/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body_updates/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_json_base64_bytes/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_strict_content_type/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params/test_tutorial004.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params/test_tutorial003.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params/test_tutorial006.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_response_model/test_tutorial004.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_response_model/test_tutorial001_tutorial001_01.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_response_model/test_tutorial003_01.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_response_model/test_tutorial003.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_response_model/test_tutorial006.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_response_model/test_tutorial003_05.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_response_model/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_response_model/test_tutorial005.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_encoder/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_path_operation_advanced_configurations/test_tutorial004.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_path_operation_advanced_configurations/test_tutorial007.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_openapi_callbacks/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body_fields/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params_str_validations/test_tutorial013.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params_str_validations/test_tutorial004.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params_str_validations/test_tutorial014.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params_str_validations/test_tutorial003.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params_str_validations/test_tutorial015.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params_str_validations/test_tutorial012.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params_str_validations/test_tutorial008.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params_str_validations/test_tutorial007.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params_str_validations/test_tutorial006.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params_str_validations/test_tutorial010.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params_str_validations/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params_str_validations/test_tutorial006c.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params_str_validations/test_tutorial009.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params_str_validations/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params_str_validations/test_tutorial011.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_params_str_validations/test_tutorial005.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_sql_databases/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_sql_databases/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_param_models/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_query_param_models/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_server_sent_events/test_tutorial004.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_server_sent_events/test_tutorial003.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_server_sent_events/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_server_sent_events/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_server_sent_events/test_tutorial005.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_additional_responses/test_tutorial004.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_additional_responses/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_request_forms_and_files/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_request_forms/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_stream_data/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_stream_data/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_websockets/test_tutorial003.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_websockets/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_response_status_code/test_tutorial001_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_security/test_tutorial004.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_security/test_tutorial003.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_security/test_tutorial007.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_security/test_tutorial006.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_security/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_security/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_security/test_tutorial005.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_extra_models/test_tutorial004.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_extra_models/test_tutorial001_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_extra_models/test_tutorial003.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_extra_models/test_tutorial005.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_additional_status_codes/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_header_params/test_tutorial003.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_header_params/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_header_params/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_extra_data_types/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_first_steps/test_tutorial001_tutorial002_tutorial003.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body/test_tutorial004.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body/test_tutorial003.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_path_operation_configurations/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_path_operation_configurations/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_path_operation_configurations/test_tutorial005.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_path_params_numeric_validations/test_tutorial004.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_path_params_numeric_validations/test_tutorial002_tutorial003.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_path_params_numeric_validations/test_tutorial006.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_path_params_numeric_validations/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_path_params_numeric_validations/test_tutorial005.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_custom_request_and_route/test_tutorial003.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_custom_request_and_route/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_custom_request_and_route/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_response_directly/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_response_directly/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_settings/test_app01.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x2)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_settings/test_app03.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_settings/test_app02.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x2)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_settings/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_request_files/test_tutorial001_02.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_request_files/test_tutorial003.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_request_files/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_request_files/test_tutorial001_03.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_request_files/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_generate_clients/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_background_tasks/test_tutorial002.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 38,
+      "signals": [
+        "dynamic_import(x1)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_jsonable_encoder.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_dump_json_fast_path.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_body_nested_models/test_tutorial001_tutorial002_tutorial003.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_debugging/test_tutorial001.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_response_model/test_tutorial003_04.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_path_operation_configurations/test_tutorial003_tutorial004.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/tests/test_tutorial/test_generate_clients/test_tutorial004.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/fastapi/responses.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/docs_src/json_base64_bytes/tutorial001_py310.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastapi-0.141.1/fastapi/routing.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,406 @@
+{
+  "summary": {
+    "total_files": 31,
+    "flagged_files": 2,
+    "critical_files": 0,
+    "high_files": 0,
+    "elevated_files": 2,
+    "normal_files": 29,
+    "mode": "snapshot",
+    "summary_text": "Scanned 31 file(s). 0 HIGH, 2 ELEVATED. AI SDKs detected: http:bedrock-runtime. "
+  },
+  "sdk_inventory": {
+    "http:bedrock-runtime": 2
+  },
+  "agent_artifacts": {
+    "table_version": 1,
+    "tier3_count": 0,
+    "items": []
+  },
+  "files": [
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_client.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "http:bedrock-runtime"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_http_endpoint(bedrock-runtime)"
+      ]
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_stream_decoder.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "http:bedrock-runtime"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_http_endpoint(bedrock-runtime)"
+      ]
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/resources/completions.py",
+      "language": "Python",
+      "ais": 35,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 6,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "prompt_injection_vectors(6_unsanitised_inputs)"
+      ]
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/types/completion_create_params.py",
+      "language": "Python",
+      "ais": 18,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_qs.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_base_client.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_tokenizers.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_resource.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_streaming.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_files.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_response.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_constants.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_models.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_exceptions.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_version.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_auth.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_legacy_response.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_types.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_compat.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/resources/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_utils/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_utils/_streams.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_utils/_transform.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_utils/_sync.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_utils/_utils.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_utils/_typing.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_utils/_logs.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/_utils/_proxy.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/types/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "anthropic_bedrock-0.8.0/src/anthropic_bedrock/types/completion.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    }
+  ]
+}

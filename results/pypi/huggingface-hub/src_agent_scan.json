@@ -1,0 +1,3970 @@
+{
+  "summary": {
+    "total_files": 264,
+    "flagged_files": 176,
+    "critical_files": 0,
+    "high_files": 8,
+    "elevated_files": 168,
+    "normal_files": 88,
+    "mode": "snapshot",
+    "summary_text": "Scanned 264 file(s). 8 HIGH, 168 ELEVATED. AI SDKs detected: huggingface_hub, http:api-inference.huggingface.co, openai, OpenAI. "
+  },
+  "sdk_inventory": {
+    "huggingface_hub": 179,
+    "http:api-inference.huggingface.co": 3,
+    "openai": 2,
+    "OpenAI": 2,
+    "http:api.openai.com": 2,
+    "http:api.fireworks.ai": 1,
+    "http:api.together.xyz": 1,
+    "Replicate": 1,
+    "http:api.replicate.com": 1,
+    "http:api.groq.com": 1,
+    "http:api.cohere.com": 2,
+    "mcp": 2
+  },
+  "agent_artifacts": {
+    "table_version": 1,
+    "tier3_count": 0,
+    "items": []
+  },
+  "files": [
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/hub_mixin.py",
+      "language": "Python",
+      "ais": 90,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [
+        "eval/exec found (3 occurrence(s))"
+      ],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "dynamic_execution(eval/exec_x3)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_typing.py",
+      "language": "Python",
+      "ais": 90,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [
+        "eval/exec found (2 occurrence(s))"
+      ],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "dynamic_execution(eval/exec_x2)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/_cli_utils.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [
+        "subprocess/shell execution with variables (2 occurrence(s))"
+      ],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "subprocess_variable_execution(x2)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/extensions.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [
+        "subprocess/shell execution with variables (2 occurrence(s))"
+      ],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "subprocess_variable_execution(x2)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/system.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [
+        "subprocess/shell execution with variables (1 occurrence(s))"
+      ],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "subprocess_variable_execution(x1)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/spaces.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [
+        "subprocess/shell execution with variables (1 occurrence(s))"
+      ],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "subprocess_variable_execution(x1)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_inference_client.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub",
+        "http:api-inference.huggingface.co"
+      ],
+      "agent_patterns": [
+        "hand_rolled_loop"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(api-inference.huggingface.co)",
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_mcp/mcp_client.py",
+      "language": "Python",
+      "ais": 75,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 4,
+      "sdk_found": [
+        "from mcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_vectors(4_unsanitised_inputs)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/__init__.py",
+      "language": "Python",
+      "ais": 60,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "dynamic_import(x2)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/repocard.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/hf_api.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 2,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_mcp/agent.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 2,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_http.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_inference_providers.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 2,
+      "sdk_found": [
+        "from huggingface_hub",
+        "http:api.openai.com",
+        "http:api.cohere.com"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(api.openai.com)",
+        "data_egress(model_hosted_in_CA:api.cohere.com)",
+        "prompt_injection_partial(2)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_file_download.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_commit_scheduler.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/dataclasses.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_tensorboard_logger.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_upload_large_folder.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_revision.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/errors.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_eval_results.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_oauth.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/lfs.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_jobs_api.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/repocard_data.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/fastai_utils.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/constants.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub",
+        "http:api-inference.huggingface.co"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(api-inference.huggingface.co)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_webhooks_server.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_sandbox.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_space_api.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/file_download.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_inference_endpoints.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/hf_file_system.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_snapshot_download.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_buckets.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_client.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub",
+        "from openai",
+        "import OpenAI"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_common.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/fal_ai.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/openai.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub",
+        "http:api.openai.com"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(api.openai.com)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/fireworks_ai.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub",
+        "http:api.fireworks.ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(api.fireworks.ai)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/zai_org.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/together.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub",
+        "http:api.together.xyz"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(api.together.xyz)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/novita.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/deepinfra.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/replicate.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub",
+        "from Replicate",
+        "http:api.replicate.com"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "ai_http_endpoint(api.replicate.com)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/_common.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/wavespeed.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/nscale.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/hf_inference.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/ovhcloud.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/groq.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "http:api.groq.com"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_http_endpoint(api.groq.com)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/scaleway.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/featherless_ai.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/cohere.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub",
+        "http:api.cohere.com"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(api.cohere.com)",
+        "data_egress(model_hosted_in_CA:api.cohere.com)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/_async_client.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub",
+        "from openai",
+        "import OpenAI"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_mcp/utils.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub",
+        "from mcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_mcp/constants.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_mcp/cli.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "agent.run("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(agent.run()"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_cache_manager.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_runtime.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_hf_uris.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_headers.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/logging.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_chunk_utils.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_experimental.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_telemetry.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/sha.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/insecure_hashlib.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_validators.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_cache_assets.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/tqdm.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/serialization/_dduf.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/serialization/_torch.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/sandbox.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/_help_formatter.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/upload.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/_output.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/_file_listing.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/papers.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/inference_endpoints.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/repos.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/models.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/_cp.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/skills.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/hf.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/upload_large_folder.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/buckets.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/collections.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/jobs.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/webhooks.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/lfs.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/datasets.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/_skills.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/auth.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/deprecated_cli.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/cache.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/download.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/_city_game.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/discussions.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/_errors.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_hf_uris.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_inference_types.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import huggingface_hub",
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_serialization.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_hf_api.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_sandbox.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import huggingface_hub",
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_offline_utils.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_buckets_hf_file_system.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_inference_text_generation.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_cli.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_http.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_deprecation.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_cache_layout.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_tqdm.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_upload_pipeline.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import huggingface_hub",
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_hf_file_system.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_validators.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_pagination.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_experimental.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_inference_endpoints.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_kernels.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_testing_configuration.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_errors.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_assets.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_dduf.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_runtime.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_hub_mixin_pytorch.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_cli_framework.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_windows.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_copy_files.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_auth.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_detect_agent.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_xet_utils.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_paths.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_strict_dataclass.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_inference_async_client.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import huggingface_hub",
+        "from huggingface_hub",
+        "http:api-inference.huggingface.co"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "ai_http_endpoint(api-inference.huggingface.co)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_sha.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_dotenv.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_fixes.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_commit_api.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_headers.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_jobs_api.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_init_lazy_loading.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_login_utils.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_tree_cache.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_cli_errors.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_lfs.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_chunks.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_cli_discussions.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_eval_results.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_git_credentials.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_terminal.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_verification.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import huggingface_hub",
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_local_folder.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_telemetry.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_cli_output.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_xet_upload.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_webhooks_server.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub",
+        "import huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_buckets_cli.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_xet_progress_reporting.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_buckets.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_snapshot_download.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_commit_scheduler.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_cache_no_symlinks.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_oauth.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_repocard_data.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_parsing.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_repocard.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_upload_large_folder.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_cache.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_utils_datetime.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_hub_mixin.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_xet_download.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from huggingface_hub"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_commit_api.py",
+      "language": "Python",
+      "ais": 18,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 2,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "prompt_injection_partial(2)"
+      ]
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/setup.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_oidc.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_sandbox_cache.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_login.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_upload_pipeline.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_webhooks_payload.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_local_folder.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_tree_cache.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_dataset_viewer.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/community.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_hot_reload/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_hot_reload/types.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_hot_reload/sse_client.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/_hot_reload/client.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/cerebras.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/publicai.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_providers/baseten.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/image_to_video.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/text2text_generation.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/zero_shot_image_classification.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/text_generation.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/text_to_image.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/image_to_image.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/image_text_to_video.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/zero_shot_classification.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/image_segmentation.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/zero_shot_object_detection.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/image_to_text.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/text_to_video.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/table_question_answering.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/audio_to_audio.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/text_to_speech.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/question_answering.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/object_detection.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/sentence_similarity.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/feature_extraction.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/image_classification.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/document_question_answering.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/text_classification.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/image_text_to_image.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/token_classification.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/audio_classification.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/video_classification.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/text_to_audio.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/chat_completion.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/summarization.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/translation.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/visual_question_answering.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/depth_estimation.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/automatic_speech_recognition.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/base.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_generated/types/fill_mask.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_mcp/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_mcp/_cli_hacks.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/inference/_mcp/types.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_dotenv.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_subprocess.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_xet.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_fixes.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_deprecation.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_parsing.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_xet_progress_reporting.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/endpoint_helpers.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_datetime.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_oauth_device.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_lfs.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_verification.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_pagination.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_git_credential.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_typing.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_safetensors.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_auth.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_terminal.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_detect_agent.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/utils/_paths.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/serialization/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/serialization/_base.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/_completion.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/_framework.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/src/huggingface_hub/cli/repo_files.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/testing_utils.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_generate_cli_reference.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/test_endpoint_helpers.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "huggingface_hub-1.29.0/tests/testing_constants.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    }
+  ]
+}

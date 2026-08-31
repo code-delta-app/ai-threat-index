@@ -1,0 +1,1263 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.1",
+  "generated": "2026-08-31T19:31:50.322032Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 2434,
+    "files_flagged": 66,
+    "critical": 0,
+    "high": 4,
+    "elevated": 62,
+    "providers": 0,
+    "foreign_egress_files": 0,
+    "non_allied_jurisdiction_files": 0,
+    "cost_risk_files": 0,
+    "agent_artifacts": 0,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 0
+  },
+  "providers": [],
+  "agent_artifacts": [],
+  "committed_credentials": [],
+  "findings": [
+    {
+      "file": "numpy-2.5.2/numpy/testing/_private/utils.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 90,
+      "signals": [
+        "agent_orchestration(runner.run)",
+        "dynamic_execution(eval/exec_x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/mesonmain.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 70,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)",
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/tests/test_public_api.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 70,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)",
+        "dynamic_import(x3)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/_core/tests/test_multiarray.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 70,
+      "signals": [
+        "dynamic_execution(eval/exec_x2)",
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/benchmarks/benchmarks/bench_ma.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x3)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/benchmarks/benchmarks/bench_indexing.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/f2py/auxfuncs.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x3)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/f2py/capi_maps.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x3)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/f2py/crackfortran.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x9)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/_build_utils/tempita/_tempita.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x3)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/_core/arrayprint.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/_core/tests/test_scalarmath.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/_core/tests/test_arrayprint.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/_core/tests/test_umath_accuracy.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/_core/tests/test_records.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x3)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/_core/tests/test_simd.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x11)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/_core/tests/test_dtype.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/_core/tests/test_umath.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/run_cross_test.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/run_tests.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/mdevenv.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/rewriter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(add_edge()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/msubprojects.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(runner.run)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/minit.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/mdist.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/ast/interpreter.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(add_edge()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/modules/hotdoc.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/interpreter/interpreterobjects.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/backend/ninjabackend.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/utils/vsenv.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/wrap/wrap.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/scripts/scanbuild.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/scripts/vcstagger.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/scripts/hotdochelper.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/scripts/yasm.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/scripts/itstool.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/scripts/env2mfile.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/scripts/dirchanger.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/scripts/cmake_run_ctgt.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/scripts/rc.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/compilers/mixins/elbrus.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/test cases/unit/70 cross test passed/script.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/test cases/unit/106 underspecified mtest/runner.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/test cases/unit/5 compiler detection/compiler wrapper.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/test cases/rust/16 internal c dependencies/test.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/test cases/d/3 shared library/lld-test.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/test cases/common/52 object generator/obj_generator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/test cases/common/41 test args/wrap.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/test cases/common/41 test args/pathtester.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/test cases/common/135 custom target object output/obj_generator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/test cases/common/121 object only target/obj_generator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/test cases/native/5 install script/wrap.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/test cases/windows/13 test argument extra paths/test/test_run_exe.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/tools/regenerate_docs.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/unittests/allplatformstests.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/unittests/linuxliketests.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/unittests/machinefiletests.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/unittests/windowstests.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/unittests/platformagnostictests.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/ci/ciimage/build.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x7)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/benchmarks/asv_pip_nopep517.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/f2py/tests/util.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/f2py/_backends/_meson.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/_pyinstaller/tests/test_pyinstaller.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/_core/src/common/pythoncapi-compat/tests/utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x4)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/_core/tests/test_cpu_features.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/run_unittests.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/dependencies/detect.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/interpreter/interpreter.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/cargo/toml.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/test cases/cython/2 generated sources/test.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/_core/function_base.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/_core/code_generators/verify_c_api_version.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/_core/src/common/pythoncapi-compat/tests/test_pythoncapi_compat.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/_core/tests/test_limited_api.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/core/__init__.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/numpy/lib/_utils_impl.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/doc/source/conf.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/tools/functions_missing_types.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/tools/refguide_check.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/cmake/toolchain.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "numpy-2.5.2/vendored-meson/meson/mesonbuild/interpreterbase/helpers.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,2151 @@
+{
+  "summary": {
+    "total_files": 160,
+    "flagged_files": 38,
+    "critical_files": 0,
+    "high_files": 3,
+    "elevated_files": 35,
+    "normal_files": 122,
+    "mode": "snapshot",
+    "summary_text": "Scanned 160 file(s). 3 HIGH, 35 ELEVATED. AI SDKs detected: openai, groq, langchain, http:api.mistral.ai. "
+  },
+  "sdk_inventory": {
+    "openai": 12,
+    "groq": 4,
+    "langchain": 2,
+    "http:api.mistral.ai": 2,
+    "ollama": 2,
+    "litellm": 1,
+    "anthropic": 3,
+    "Anthropic": 1,
+    "http:openrouter.ai": 3,
+    "google.genai": 2,
+    "http:api.deepseek.com": 1,
+    "http:bedrock-runtime": 1,
+    "LiteLLM": 1,
+    "mcp": 6,
+    "MCP": 3
+  },
+  "agent_artifacts": {
+    "table_version": 1,
+    "tier3_count": 0,
+    "items": []
+  },
+  "files": [
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/mcp/cli_mcp.py",
+      "language": "Python",
+      "ais": 90,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import mcp",
+        "from mcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [
+        "eval/exec found (2 occurrence(s))"
+      ],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "dynamic_execution(eval/exec_x2)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/mcp/server.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import MCP",
+        "import mcp",
+        "from mcp"
+      ],
+      "agent_patterns": [
+        "agent.run("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "agent_orchestration(agent.run()"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/beta/service.py",
+      "language": "Python",
+      "ais": 75,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 6,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [
+        "subprocess/shell execution with variables (1 occurrence(s))"
+      ],
+      "signals": [
+        "subprocess_variable_execution(x1)",
+        "prompt_injection_vectors(6_unsanitised_inputs)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/tools/service.py",
+      "language": "Python",
+      "ais": 68,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 2,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [
+        "eval/exec found (1 occurrence(s))"
+      ],
+      "signals": [
+        "dynamic_execution(eval/exec_x1)",
+        "prompt_injection_partial(2)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/cli.py",
+      "language": "Python",
+      "ais": 60,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [
+        "subprocess/shell execution with variables (1 occurrence(s))"
+      ],
+      "signals": [
+        "subprocess_variable_execution(x1)",
+        "dynamic_import(x1)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/groq/serializer.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 2,
+      "sdk_found": [
+        "from groq"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/cerebras/chat.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/openai/serializer.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 2,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/utils.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai",
+        "from groq"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/models.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "http:api.mistral.ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_http_endpoint(api.mistral.ai)",
+        "data_egress(model_hosted_in_FR:api.mistral.ai)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/base.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/groq/chat.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from groq"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/groq/parser.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from groq"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/vercel/chat.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/vercel/serializer.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/mistral/chat.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "http:api.mistral.ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_http_endpoint(api.mistral.ai)",
+        "data_egress(model_hosted_in_FR:api.mistral.ai)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/azure/chat.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/ollama/chat.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from ollama"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/ollama/serializer.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from ollama"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/litellm/chat.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from litellm"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/openai/chat.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/openai/responses_serializer.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/anthropic/chat.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from anthropic",
+        "from Anthropic"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/anthropic/serializer.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from anthropic"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/openrouter/chat.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai",
+        "http:openrouter.ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(openrouter.ai)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/openrouter/serializer.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/google/chat.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from google.genai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/google/serializer.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from google.genai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/deepseek/chat.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai",
+        "http:api.deepseek.com"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(api.deepseek.com)",
+        "data_egress(model_hosted_in_CN:api.deepseek.com)",
+        "data_sovereignty_risk(non-allied_jurisdiction)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/aws/chat_bedrock.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "http:bedrock-runtime"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_http_endpoint(bedrock-runtime)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/aws/chat_anthropic.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from anthropic"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/sandbox/sandbox.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "agent.run("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(agent.run()"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/tokens/service.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from LiteLLM",
+        "http:openrouter.ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(openrouter.ai)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/tokens/openrouter_pricing.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "http:openrouter.ai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_http_endpoint(openrouter.ai)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/mcp/controller.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/mcp/client.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "Import MCP",
+        "from mcp",
+        "from MCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/agent/views.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/cerebras/serializer.py",
+      "language": "Python",
+      "ais": 35,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 3,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/deepseek/serializer.py",
+      "language": "Python",
+      "ais": 35,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 3,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/browser_use/chat.py",
+      "language": "Python",
+      "ais": 18,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/aws/serializer.py",
+      "language": "Python",
+      "ais": 18,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 2,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "prompt_injection_partial(2)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/watchdogs/har_recording_watchdog.py",
+      "language": "Python",
+      "ais": 18,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/watchdogs/crash_watchdog.py",
+      "language": "Python",
+      "ais": 18,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/agent/service.py",
+      "language": "Python",
+      "ais": 18,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/exceptions.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/config.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/observability.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/logging_config.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/init_cmd.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/schema.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/exceptions.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/views.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/messages.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/oci_raw/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/oci_raw/chat.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/oci_raw/serializer.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/vercel/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/browser_use/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/mistral/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/mistral/schema.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/litellm/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/litellm/serializer.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/openai/like.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/google/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/llm/aws/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/actor/page.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/actor/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/actor/utils.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/actor/element.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/actor/mouse.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/actor/playground/mixed_automation.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/actor/playground/flights.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/actor/playground/playground.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/filesystem/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/filesystem/file_system.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/dom/utils.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/dom/enhanced_snapshot.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/dom/service.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/dom/views.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/dom/markdown_extractor.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/dom/serializer/clickable_elements.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/dom/serializer/html_serializer.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/dom/serializer/eval_serializer.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/dom/serializer/serializer.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/dom/serializer/paint_order.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/dom/playground/extraction.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/dom/playground/multi_act.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/tools/utils.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/tools/views.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/tools/registry/service.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/tools/registry/views.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/tools/extraction/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/tools/extraction/views.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/tools/extraction/schema_utils.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/watchdog_base.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/chrome.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/python_highlights.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/events.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/_cdp_timeout.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/session.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/session_manager.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/profile.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/video_recorder.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/views.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/demo_mode.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/watchdogs/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/watchdogs/dom_watchdog.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/watchdogs/permissions_watchdog.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/watchdogs/captcha_watchdog.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/watchdogs/recording_watchdog.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/watchdogs/downloads_watchdog.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/watchdogs/security_watchdog.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/watchdogs/screenshot_watchdog.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/watchdogs/popups_watchdog.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/watchdogs/local_browser_watchdog.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/watchdogs/storage_state_watchdog.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/watchdogs/default_action_watchdog.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/watchdogs/aboutblank_watchdog.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/cloud/cloud.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/browser/cloud/views.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/beta/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/sandbox/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/sandbox/views.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/sync/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/sync/service.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/sync/auth.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/integrations/gmail/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/integrations/gmail/service.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/integrations/gmail/actions.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/screenshots/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/screenshots/service.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/telemetry/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/telemetry/service.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/telemetry/views.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/skills/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/skills/install.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/skills/utils.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/skills/service.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/skills/browser_use.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/skills/views.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/tokens/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/tokens/mappings.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/tokens/custom_pricing.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/tokens/views.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/mcp/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/mcp/__main__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/agent/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/agent/variable_detector.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/agent/gif.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/agent/judge.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/agent/prompts.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/agent/cloud_events.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/agent/system_prompts/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/agent/message_manager/utils.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/agent/message_manager/service.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/agent/message_manager/views.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "browser_use-0.13.8/browser_use/controller/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    }
+  ]
+}

@@ -1,0 +1,1012 @@
+rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+package/src/batch/batch.ts,JavaScript,58,ELEVATED,0,1,"import {
+  UnsupportedFunctionalityError,
+  type Experimental_BatchLanguageModelV4 as BatchLanguageModelV4,
+  type Experimental_BatchV4ItemResult as BatchV4ItemResult,
+  type LanguageModelV4,
+  type LanguageModelV4GenerateResult,
+  type LanguageModelV4ToolCall,
+} from '@ai-sdk/; import { type ToolSet, withUserAgentSuffix } from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected); prompt_injection_partial(1)
+package/src/generate-text/tool-approval-signature.ts,JavaScript,58,ELEVATED,0,1,import { convertBase64ToUint8Array } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(1)
+package/src/global.ts,JavaScript,40,ELEVATED,0,0,"import type { ProviderV2, ProviderV3, ProviderV4 } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/transcribe/stream-transcribe-result.ts,JavaScript,40,ELEVATED,0,0,"import type { JSONObject, SharedV4ProviderMetadata } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/transcribe/transcribe.ts,JavaScript,40,ELEVATED,0,0,"import type { JSONObject } from '@ai-sdk/; import {
+  detectMediaType,
+  withUserAgentSuffix,
+  type ProviderOptions,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/transcribe/transcribe-result.ts,JavaScript,40,ELEVATED,0,0,import type { JSONObject } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/transcribe/stream-transcribe.ts,JavaScript,40,ELEVATED,0,0,"import {
+  UnsupportedFunctionalityError,
+  type Experimental_TranscriptionModelV4StreamPart,
+  type JSONObject,
+  type SharedV4AudioFormat,
+} from '@ai-sdk/; import {
+  DelayedPromise,
+  withUserAgentSuffix,
+  type ProviderOptions,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/ui-message-stream/create-ui-message-stream.ts,JavaScript,40,ELEVATED,0,0,"import {
+  generateId as generateIdFunc,
+  type IdGenerator,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/ui-message-stream/get-response-ui-message-id.ts,JavaScript,40,ELEVATED,0,0,import type { IdGenerator } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/ui-message-stream/to-ui-message-chunk.ts,JavaScript,40,ELEVATED,0,0,import type { ToolSet } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/ui-message-stream/to-ui-message-stream.ts,JavaScript,40,ELEVATED,0,0,import type { ToolSet } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/ui-message-stream/ui-message-chunks.ts,JavaScript,40,ELEVATED,0,0,"import type { JSONObject } from '@ai-sdk/; import { lazySchema, zodSchema } from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/middleware/wrap-provider.ts,JavaScript,40,ELEVATED,0,0,"import type { ProviderV2, ProviderV3, ProviderV4 } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/middleware/add-tool-input-examples-middleware.ts,JavaScript,40,ELEVATED,0,0,"import type { JSONObject, LanguageModelV4FunctionTool } from '@ai-sdk/; import { wrapLanguageModel, addToolInputExamplesMiddleware } from 'ai",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/middleware/simulate-streaming-middleware.ts,JavaScript,40,ELEVATED,0,0,import type { LanguageModelV4StreamPart } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/middleware/extract-json-middleware.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  LanguageModelV4Content,
+  LanguageModelV4StreamPart,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/middleware/default-embedding-settings-middleware.ts,JavaScript,40,ELEVATED,0,0,import type { EmbeddingModelV4CallOptions } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/middleware/wrap-image-model.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  ImageModelV2,
+  ImageModelV3,
+  ImageModelV4,
+  ImageModelV4CallOptions,
+  ImageModelV4Result,
+} from '@ai-sdk/; import { asArray } from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/middleware/wrap-embedding-model.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  EmbeddingModelV3,
+  EmbeddingModelV4,
+  EmbeddingModelV4CallOptions,
+  EmbeddingModelV4Result,
+} from '@ai-sdk/; import {
+  asArray,
+  EXPERIMENTAL_EMBEDDING_MODEL_MAX_INPUT_BYTES_PER_CALL,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/middleware/default-instructions-middleware.ts,JavaScript,40,ELEVATED,0,0,import type { LanguageModelV4Prompt } from '@ai-sdk/; import { asArray } from '@ai-sdk/,,,ai_sdk_import(2_sdk(s)_detected)
+package/src/middleware/wrap-language-model.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  LanguageModelV2,
+  LanguageModelV3,
+  LanguageModelV4,
+  LanguageModelV4CallOptions,
+  LanguageModelV4GenerateResult,
+  LanguageModelV4StreamResult,
+} from '@ai-sdk/; import { asArray } from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/middleware/extract-reasoning-middleware.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  LanguageModelV4Content,
+  LanguageModelV4StreamPart,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/middleware/default-settings-middleware.ts,JavaScript,40,ELEVATED,0,0,import type { LanguageModelV4CallOptions } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/no-translation-generated-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/invalid-stream-part-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/tool-call-not-found-for-approval-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/ui-message-stream-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/unsupported-model-version-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/no-image-generated-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/no-speech-generated-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/stream-provider-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/no-object-generated-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/invalid-tool-approval-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/no-output-generated-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/no-such-tool-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/invalid-tool-input-error.ts,JavaScript,40,ELEVATED,0,0,"import { AISDKError, getErrorMessage } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/no-video-generated-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/invalid-argument-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/tool-call-repair-error.ts,JavaScript,40,ELEVATED,0,0,"import { AISDKError, getErrorMessage } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/invalid-tool-approval-signature-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/no-transcript-generated-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/error/missing-tool-result-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/upload-skill/upload-skill-result.ts,JavaScript,40,ELEVATED,0,0,import type { SkillsV4UploadSkillResult } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/upload-skill/upload-skill.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  ProviderV4,
+  SkillsV4,
+  SkillsV4File,
+  SkillsV4UploadSkillCallOptions,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-object/validate-object-generation-input.ts,JavaScript,40,ELEVATED,0,0,import type { FlexibleSchema } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-object/generate-object.ts,JavaScript,40,ELEVATED,0,0,"import type { JSONValue } from '@ai-sdk/; import {
+  createIdGenerator,
+  withUserAgentSuffix,
+  type FlexibleSchema,
+  type InferSchema,
+  type ProviderOptions,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-object/inject-json-instruction.ts,JavaScript,40,ELEVATED,0,0,import type { JSONSchema7 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-object/structured-output-events.ts,JavaScript,40,ELEVATED,0,0,"import type { LanguageModelV4Prompt } from '@ai-sdk/; import type { ModelMessage, ProviderOptions } from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-object/stream-object.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  JSONValue,
+  LanguageModelV4FinishReason,
+  LanguageModelV4StreamPart,
+  LanguageModelV4Usage,
+  SharedV4ProviderMetadata,
+  SharedV4Warning,
+} from '@ai-sdk/; import {
+  createIdGenerator,
+  DelayedPromise,
+  type InferSchema,
+  type FlexibleSchema,
+  type ProviderOptions,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-object/output-strategy.ts,JavaScript,40,ELEVATED,0,0,"import {
+  isJSONArray,
+  isJSONObject,
+  TypeValidationError,
+  UnsupportedFunctionalityError,
+  type JSONObject,
+  type JSONSchema7,
+  type JSONValue,
+} from '@ai-sdk/; import {
+  asSchema,
+  safeValidateTypes,
+  type FlexibleSchema,
+  type Schema,
+  type ValidationResult,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-object/repair-text.ts,JavaScript,40,ELEVATED,0,0,"import type { JSONParseError, TypeValidationError } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-object/parse-and-validate-object-result.ts,JavaScript,40,ELEVATED,0,0,"import { JSONParseError, TypeValidationError } from '@ai-sdk/; import { safeParseJSON } from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/registry/provider-registry.ts,JavaScript,40,ELEVATED,0,0,"import {
+  type EmbeddingModelV4,
+  type Experimental_VideoModelV3,
+  type Experimental_VideoModelV4,
+  type FilesV4,
+  type ImageModelV4,
+  type LanguageModelV4,
+  NoSuchModelError,
+  type ProviderV3,
+  type ProviderV4,
+  type RerankingModelV4,
+  type SkillsV4,
+  type SpeechModelV4,
+  type TranscriptionModelV4,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/registry/custom-provider.ts,JavaScript,40,ELEVATED,0,0,"import {
+  type EmbeddingModelV4,
+  type Experimental_VideoModelV4,
+  type FilesV4,
+  type ImageModelV4,
+  type LanguageModelV4,
+  NoSuchModelError,
+  type ProviderV2,
+  type ProviderV3,
+  type ProviderV4,
+  type RerankingModelV4,
+  type SkillsV4,
+  type SpeechModelV4,
+  type TranscriptionModelV4,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/registry/no-such-provider-error.ts,JavaScript,40,ELEVATED,0,0,"import { AISDKError, NoSuchModelError } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/text-stream/to-text-stream.ts,JavaScript,40,ELEVATED,0,0,import type { ToolSet } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/ui/direct-chat-transport.ts,JavaScript,40,ELEVATED,0,0,"import type { Context, Tool, ToolSet } from '@ai-sdk/; import { useChat } from '@ai-sdk/; import { DirectChatTransport } from 'ai",,,ai_sdk_import(3_sdk(s)_detected)
+package/src/ui/call-completion-api.ts,JavaScript,40,ELEVATED,0,0,"import {
+  parseJsonEventStream,
+  withUserAgentSuffix,
+  getRuntimeEnvironmentUserAgent,
+  type ParseResult,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/ui/chat.ts,JavaScript,40,ELEVATED,0,0,"import {
+  generateId as generateIdFunc,
+  type FlexibleSchema,
+  type IdGenerator,
+  type InferSchema,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/ui/use-completion.ts,JavaScript,40,ELEVATED,0,0,import type { FetchFunction } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/ui/process-ui-message-stream.ts,JavaScript,40,ELEVATED,0,0,"import type { JSONObject } from '@ai-sdk/; import { validateTypes, type FlexibleSchema } from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/ui/validate-ui-messages.ts,JavaScript,40,ELEVATED,0,0,"import { TypeValidationError, type JSONObject } from '@ai-sdk/; import {
+  lazySchema,
+  safeValidateTypes,
+  validateTypes,
+  zodSchema,
+  type FlexibleSchema,
+  type Tool,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/ui/http-chat-transport.ts,JavaScript,40,ELEVATED,0,0,"import {
+  normalizeHeaders,
+  resolve,
+  type FetchFunction,
+  type Resolvable,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/ui/default-chat-transport.ts,JavaScript,40,ELEVATED,0,0,"import { parseJsonEventStream, type ParseResult } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/ui/ui-messages.ts,JavaScript,40,ELEVATED,0,0,"import type { JSONObject } from '@ai-sdk/; import type {
+  InferToolInput,
+  InferToolOutput,
+  Tool,
+  ToolCall,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/ui/convert-to-model-messages.ts,JavaScript,40,ELEVATED,0,0,"import {
+  isNonNullable,
+  type ToolSet,
+  type AssistantContent,
+  type CustomPart,
+  type FilePart,
+  type ModelMessage,
+  type TextPart,
+  type ToolApprovalResponse,
+  type ToolResultPart,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-video/generate-video.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Experimental_VideoModelV4,
+  Experimental_VideoModelV4CallOptions,
+  Experimental_VideoModelV4File,
+  Experimental_VideoModelV4Result,
+  Experimental_VideoModelV4OperationWebhook,
+  Experimental_VideoModelV4FrameImage,
+  Experimental_VideoModelV4FrameType,
+  SharedV4ProviderMetadata,
+} from '@ai-sdk/; import {
+  convertBase64ToUint8Array,
+  delay as defaultDelay,
+  generateId,
+  withUserAgentSuffix,
+  type DataContent,
+  detectMediaType,
+  type ProviderOptions,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-video/get-video-status.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Experimental_VideoModelV4OperationStatusResult,
+  JSONValue,
+} from '@ai-sdk/; import { withUserAgentSuffix } from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-video/start-video.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Experimental_VideoModelV4CallOptions,
+  Experimental_VideoModelV4FrameType,
+  JSONValue,
+} from '@ai-sdk/; import {
+  generateId,
+  withUserAgentSuffix,
+  type DataContent,
+  type ProviderOptions,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/realtime/browser-realtime-transport.ts,JavaScript,40,ELEVATED,0,0,import { safeParseJSON } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/realtime/realtime-event-reducer.ts,JavaScript,40,ELEVATED,0,0,import { safeParseJSON } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/realtime/get-realtime-tool-definitions.ts,JavaScript,40,ELEVATED,0,0,"import {
+  asSchema,
+  type InferToolSetContext,
+  type Tool,
+  type ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/prompt/clone-model-message.ts,JavaScript,40,ELEVATED,0,0,import type { ModelMessage } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/prompt/normalize-stream-provider-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/; import { isProviderStreamError } from '@ai-sdk/,,,ai_sdk_import(2_sdk(s)_detected)
+package/src/prompt/message-conversion-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/prompt/language-model-call-options.ts,JavaScript,40,ELEVATED,0,0,import type { LanguageModelV4CallOptions } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/prompt/create-tool-model-output.ts,JavaScript,40,ELEVATED,0,0,"import { getErrorMessage, type JSONValue } from '@ai-sdk/; import type { Tool, ToolResultOutput } from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/prompt/prepare-tools.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  LanguageModelV4FunctionTool,
+  LanguageModelV4ProviderTool,
+} from '@ai-sdk/; import {
+  asSchema,
+  type Experimental_SandboxSession as SandboxSession,
+  type InferToolSetContext,
+  type Tool,
+  type ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/prompt/prepare-tool-choice.ts,JavaScript,40,ELEVATED,0,0,import type { LanguageModelV4ToolChoice } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/prompt/message.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  AssistantModelMessage,
+  ModelMessage,
+  SystemModelMessage,
+  ToolModelMessage,
+  UserModelMessage,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/prompt/content-part.ts,JavaScript,40,ELEVATED,0,0,"import {
+  isBuffer,
+  type CustomPart,
+  type DataContent,
+  type FilePart,
+  type ImagePart,
+  type ProviderOptions,
+  type ReasoningFilePart,
+  type ReasoningPart,
+  type TextPart,
+  type ToolApprovalRequest,
+  type ToolApprovalResponse,
+  type ToolResultOutput,
+  type ToolResultPart,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/prompt/data-content.ts,JavaScript,40,ELEVATED,0,0,"import {
+  convertBase64ToUint8Array,
+  convertUint8ArrayToBase64,
+  type DataContent,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/prompt/file-part-data.ts,JavaScript,40,ELEVATED,0,0,"import type { LanguageModelV4FilePart } from '@ai-sdk/; import {
+  isBuffer,
+  isProviderReference,
+  type DataContent,
+  type FilePart,
+  type ProviderReference,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/prompt/invalid-message-role-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/prompt/standardize-prompt.ts,JavaScript,40,ELEVATED,0,0,"import { InvalidPromptError } from '@ai-sdk/; import {
+  asArray,
+  safeValidateTypes,
+  type ModelMessage,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/prompt/wrap-gateway-error.ts,JavaScript,40,ELEVATED,0,0,import { GatewayAuthenticationError } from '@ai-sdk/; import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(2_sdk(s)_detected)
+package/src/prompt/invalid-data-content-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/prompt/prompt.ts,JavaScript,40,ELEVATED,0,0,"import type { ModelMessage, SystemModelMessage } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/prompt/request-options.ts,JavaScript,40,ELEVATED,0,0,import type { ToolSet } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/prompt/convert-to-language-model-prompt.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  LanguageModelV4FilePart,
+  LanguageModelV4Message,
+  LanguageModelV4Prompt,
+  LanguageModelV4TextPart,
+  LanguageModelV4ToolResultOutput,
+} from '@ai-sdk/; import {
+  asArray,
+  detectMediaType,
+  isFullMediaType,
+  isUrlSupported,
+  type CustomPart,
+  type FilePart,
+  type ImagePart,
+  type ModelMessage,
+  type ReasoningFilePart,
+  type ReasoningPart,
+  type TextPart,
+  type ToolCallPart,
+  type ToolResultOutput,
+  type ToolResultPart,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/translate/stream-translate.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Experimental_SpeechTranslationModelV4StreamPart,
+  Experimental_SpeechTranslationModelV4Usage,
+  JSONObject,
+  SharedV4AudioFormat,
+} from '@ai-sdk/; import {
+  DelayedPromise,
+  withUserAgentSuffix,
+  type ProviderOptions,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/translate/stream-translate-result.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Experimental_SpeechTranslationModelV4Usage,
+  JSONObject,
+  SharedV4ProviderMetadata,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/model/as-image-model-v4.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  ImageModelV2,
+  ImageModelV3,
+  ImageModelV4,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/model/get-embedding-model-max-input-bytes-per-call.ts,JavaScript,40,ELEVATED,0,0,import type { EmbeddingModelV4 } from '@ai-sdk/; import { EXPERIMENTAL_EMBEDDING_MODEL_MAX_INPUT_BYTES_PER_CALL } from '@ai-sdk/,,,ai_sdk_import(2_sdk(s)_detected)
+package/src/model/as-speech-model-v4.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  SpeechModelV2,
+  SpeechModelV3,
+  SpeechModelV4,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/model/as-transcription-model-v4.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  TranscriptionModelV2,
+  TranscriptionModelV3,
+  TranscriptionModelV4,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/model/as-embedding-model-v4.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  EmbeddingModelV2,
+  EmbeddingModelV3,
+  EmbeddingModelV4,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/model/as-video-model-v4.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Experimental_VideoModelV3,
+  Experimental_VideoModelV4,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/model/as-reranking-model-v4.ts,JavaScript,40,ELEVATED,0,0,"import type { RerankingModelV3, RerankingModelV4 } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/model/as-transcription-model-v3.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  TranscriptionModelV2,
+  TranscriptionModelV3,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/model/resolve-model.ts,JavaScript,40,ELEVATED,0,0,"import { gateway } from '@ai-sdk/; import type {
+  EmbeddingModelV4,
+  Experimental_SpeechTranslationModelV4,
+  Experimental_VideoModelV4,
+  ImageModelV4,
+  LanguageModelV4,
+  ProviderV4,
+  RerankingModelV4,
+  SpeechModelV4,
+  TranscriptionModelV4,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/model/as-speech-model-v3.ts,JavaScript,40,ELEVATED,0,0,"import type { SpeechModelV2, SpeechModelV3 } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/model/as-embedding-model-v3.ts,JavaScript,40,ELEVATED,0,0,"import type { EmbeddingModelV2, EmbeddingModelV3 } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/model/as-image-model-v3.ts,JavaScript,40,ELEVATED,0,0,"import type { ImageModelV2, ImageModelV3 } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/model/as-provider-v3.ts,JavaScript,40,ELEVATED,0,0,"import type { ProviderV2, ProviderV3 } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/model/as-provider-v4.ts,JavaScript,40,ELEVATED,0,0,"import type { ProviderV2, ProviderV3, ProviderV4 } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/model/as-language-model-v4.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  LanguageModelV2,
+  LanguageModelV3,
+  LanguageModelV4,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/model/as-language-model-v3.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  LanguageModelV2,
+  LanguageModelV2FinishReason,
+  LanguageModelV2StreamPart,
+  LanguageModelV2Usage,
+  LanguageModelV3,
+  LanguageModelV3FinishReason,
+  LanguageModelV3StreamPart,
+  LanguageModelV3Usage,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-provider-v2.ts,JavaScript,40,ELEVATED,0,0,"import {
+  NoSuchModelError,
+  type EmbeddingModelV2,
+  type ImageModelV2,
+  type LanguageModelV2,
+  type ProviderV2,
+  type SpeechModelV2,
+  type TranscriptionModelV2,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-image-model-v3.ts,JavaScript,40,ELEVATED,0,0,import type { ImageModelV3 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-sandbox.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Experimental_SandboxSession,
+  Experimental_SandboxProcess,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-speech-model-v4.ts,JavaScript,40,ELEVATED,0,0,import type { SpeechModelV4 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-language-model-v3.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  LanguageModelV3,
+  LanguageModelV3CallOptions,
+  LanguageModelV3GenerateResult,
+  LanguageModelV3StreamResult,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-language-model-v4.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  LanguageModelV4,
+  LanguageModelV4CallOptions,
+  LanguageModelV4GenerateResult,
+  LanguageModelV4StreamResult,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-transcription-model-v2.ts,JavaScript,40,ELEVATED,0,0,import type { TranscriptionModelV2 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-transcription-model-v4.ts,JavaScript,40,ELEVATED,0,0,import type { TranscriptionModelV4 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-provider-v4.ts,JavaScript,40,ELEVATED,0,0,"import {
+  NoSuchModelError,
+  type EmbeddingModelV4,
+  type ImageModelV4,
+  type LanguageModelV4,
+  type ProviderV4,
+  type SpeechModelV4,
+  type TranscriptionModelV4,
+  type RerankingModelV4,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-video-model-v3.ts,JavaScript,40,ELEVATED,0,0,import type { Experimental_VideoModelV3 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-embedding-model-v2.ts,JavaScript,40,ELEVATED,0,0,import type { EmbeddingModelV2 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-reranking-model-v3.ts,JavaScript,40,ELEVATED,0,0,import type { RerankingModelV3 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-speech-model-v2.ts,JavaScript,40,ELEVATED,0,0,import type { SpeechModelV2 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-provider-v3.ts,JavaScript,40,ELEVATED,0,0,"import {
+  NoSuchModelError,
+  type EmbeddingModelV3,
+  type ImageModelV3,
+  type LanguageModelV3,
+  type ProviderV3,
+  type SpeechModelV3,
+  type TranscriptionModelV3,
+  type RerankingModelV3,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-embedding-model-v3.ts,JavaScript,40,ELEVATED,0,0,import type { EmbeddingModelV3 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-video-model-v4.ts,JavaScript,40,ELEVATED,0,0,import type { Experimental_VideoModelV4 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-transcription-model-v3.ts,JavaScript,40,ELEVATED,0,0,import type { TranscriptionModelV3 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-reranking-model-v4.ts,JavaScript,40,ELEVATED,0,0,import type { RerankingModelV4 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-language-model-v2.ts,JavaScript,40,ELEVATED,0,0,import type { LanguageModelV2 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-speech-model-v3.ts,JavaScript,40,ELEVATED,0,0,import type { SpeechModelV3 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-speech-translation-model-v4.ts,JavaScript,40,ELEVATED,0,0,import type { Experimental_SpeechTranslationModelV4 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-image-model-v4.ts,JavaScript,40,ELEVATED,0,0,import type { ImageModelV4 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-image-model-v2.ts,JavaScript,40,ELEVATED,0,0,import type { ImageModelV2 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/test/mock-embedding-model-v4.ts,JavaScript,40,ELEVATED,0,0,import type { EmbeddingModelV4 } from '@ai-sdk/; import { EXPERIMENTAL_EMBEDDING_MODEL_MAX_INPUT_BYTES_PER_CALL } from '@ai-sdk/,,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-speech/generate-speech.ts,JavaScript,40,ELEVATED,0,0,"import type { JSONObject } from '@ai-sdk/; import {
+  detectMediaType,
+  withUserAgentSuffix,
+  type ProviderOptions,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-speech/generate-speech-result.ts,JavaScript,40,ELEVATED,0,0,import type { JSONObject } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/types/speech-translation-model.ts,JavaScript,40,ELEVATED,0,0,import type { Experimental_SpeechTranslationModelV4 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/types/language-model-request-metadata.ts,JavaScript,40,ELEVATED,0,0,import type { ModelMessage } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/types/video-model.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Experimental_VideoModelV3,
+  Experimental_VideoModelV4,
+  SharedV4ProviderMetadata,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/types/transcription-model.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  TranscriptionModelV2,
+  TranscriptionModelV3,
+  TranscriptionModelV4,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/types/language-model-middleware.ts,JavaScript,40,ELEVATED,0,0,import type { LanguageModelV4Middleware } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/types/image-model-middleware.ts,JavaScript,40,ELEVATED,0,0,import type { ImageModelV4Middleware } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/types/provider-metadata.ts,JavaScript,40,ELEVATED,0,0,import type { SharedV4ProviderMetadata } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/types/realtime-model.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Experimental_RealtimeFactoryV4 as RealtimeFactoryV4,
+  Experimental_RealtimeFactoryV4GetTokenOptions as RealtimeFactoryV4GetTokenOptions,
+  Experimental_RealtimeFactoryV4GetTokenResult as RealtimeFactoryV4GetTokenResult,
+  Experimental_RealtimeModelV4 as RealtimeModelV4,
+  Experimental_RealtimeModelV4ClientEvent as RealtimeModelV4ClientEvent,
+  Experimental_RealtimeModelV4ServerEvent as RealtimeModelV4ServerEvent,
+  Experimental_RealtimeModelV4SessionConfig as RealtimeModelV4SessionConfig,
+  Experimental_RealtimeModelV4ToolDefinition as RealtimeModelV4ToolDefinition,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/types/usage.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  ImageModelV4Usage,
+  JSONObject,
+  LanguageModelV4Usage,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/types/language-model.ts,JavaScript,40,ELEVATED,0,0,"import type { GatewayModelId } from '@ai-sdk/; import type {
+  LanguageModelV2,
+  LanguageModelV3,
+  LanguageModelV4,
+  SharedV4Warning,
+  LanguageModelV4Source,
+} from '@ai-sdk/; import { openai } from '@ai-sdk/",,,ai_sdk_import(3_sdk(s)_detected)
+package/src/types/reranking-model.ts,JavaScript,40,ELEVATED,0,0,"import type { RerankingModelV3, RerankingModelV4 } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/types/embedding-model.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  EmbeddingModelV2,
+  EmbeddingModelV3,
+  EmbeddingModelV4,
+  EmbeddingModelV4Embedding,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/types/provider-reference.ts,JavaScript,40,ELEVATED,0,0,import type { SharedV4ProviderReference } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/types/json-value.ts,JavaScript,40,ELEVATED,0,0,import type { JSONValue as OriginalJSONValue } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/types/speech-model.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  SpeechModelV2,
+  SpeechModelV3,
+  SpeechModelV4,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/types/embedding-model-middleware.ts,JavaScript,40,ELEVATED,0,0,import type { EmbeddingModelV4Middleware } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/types/warning.ts,JavaScript,40,ELEVATED,0,0,import type { SharedV4Warning } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/types/video-model-response-metadata.ts,JavaScript,40,ELEVATED,0,0,import type { SharedV4ProviderMetadata } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/types/image-model.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  ImageModelV2,
+  ImageModelV3,
+  ImageModelV4,
+  ImageModelV4ProviderMetadata,
+  ImageModelV2ProviderMetadata,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/upload-file/upload-file.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  FilesV4,
+  FilesV4UploadFileCallOptions,
+  ProviderV4,
+} from '@ai-sdk/; import {
+  convertBase64ToUint8Array,
+  detectMediaType,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-image/generate-image-result.ts,JavaScript,40,ELEVATED,0,0,import type { ImageModelV4ProviderMetadata } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-image/generate-image.ts,JavaScript,40,ELEVATED,0,0,"import {
+  isJSONObject,
+  type ImageModelV4,
+  type ImageModelV4CallOptions,
+  type ImageModelV4File,
+  type ImageModelV4ProviderMetadata,
+  type JSONObject,
+} from '@ai-sdk/; import {
+  convertBase64ToUint8Array,
+  detectMediaType,
+  withUserAgentSuffix,
+  type DataContent,
+  type ProviderOptions,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/rerank/rerank.ts,JavaScript,40,ELEVATED,0,0,"import type { JSONObject, RerankingModelV4CallOptions } from '@ai-sdk/; import {
+  createIdGenerator,
+  type ProviderOptions,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/rerank/rerank-events.ts,JavaScript,40,ELEVATED,0,0,import type { JSONObject } from '@ai-sdk/; import type { ProviderOptions } from '@ai-sdk/,,,ai_sdk_import(2_sdk(s)_detected)
+package/src/telemetry/telemetry.ts,JavaScript,40,ELEVATED,0,0,import type { ToolSet } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/telemetry/telemetry-options.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Arrayable,
+  Context,
+  InferToolSetContext,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/telemetry/create-telemetry-dispatcher.ts,JavaScript,40,ELEVATED,0,0,import { asArray } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/util/merge-abort-signals.ts,JavaScript,40,ELEVATED,0,0,import { filterNullable } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/util/simulate-readable-stream.ts,JavaScript,40,ELEVATED,0,0,import { delay as delayFunction } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/util/deep-partial.ts,JavaScript,40,ELEVATED,0,0,"import type { FlexibleSchema, InferSchema } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/util/retry-with-exponential-backoff.ts,JavaScript,40,ELEVATED,0,0,"import { APICallError } from '@ai-sdk/; import { GatewayError } from '@ai-sdk/; import {
+  retryWithExponentialBackoff,
+  type RetryFunction,
+} from '@ai-sdk/",,,ai_sdk_import(3_sdk(s)_detected)
+package/src/util/notify.ts,JavaScript,40,ELEVATED,0,0,"import { asArray, type Arrayable } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/util/retry-error.ts,JavaScript,40,ELEVATED,0,0,import { AISDKError } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/util/parse-partial-json.ts,JavaScript,40,ELEVATED,0,0,import type { JSONValue } from '@ai-sdk/; import { safeParseJSON } from '@ai-sdk/,,,ai_sdk_import(2_sdk(s)_detected)
+package/src/util/canonical-hash.ts,JavaScript,40,ELEVATED,0,0,import { convertUint8ArrayToBase64 } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/util/prepare-retries.ts,JavaScript,40,ELEVATED,0,0,import type { RetryFunction } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/util/download/download.ts,JavaScript,40,ELEVATED,0,0,"import {
+  cancelResponseBody,
+  DownloadError,
+  readResponseWithSizeLimit,
+  DEFAULT_MAX_DOWNLOAD_SIZE,
+  fetchWithValidatedRedirects,
+  withUserAgentSuffix,
+  getRuntimeEnvironmentUserAgent,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/batch/batch-types.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Experimental_BatchV4Error as BatchV4Error,
+  Experimental_BatchV4StartResult as BatchV4StartResult,
+  Experimental_BatchV4Status as BatchV4Status,
+  Experimental_BatchLanguageModelV4 as BatchLanguageModelV4,
+} from '@ai-sdk/; import type { ProviderOptions, ToolSet } from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/agent/pipe-agent-ui-stream-to-response.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Arrayable,
+  Context,
+  Experimental_SandboxSession as SandboxSession,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/agent/create-agent-ui-stream.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Arrayable,
+  Context,
+  Experimental_SandboxSession as SandboxSession,
+  Tool,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/agent/tool-loop-agent-settings.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Arrayable,
+  Context,
+  FlexibleSchema,
+  IdGenerator,
+  InferToolSetContext,
+  MaybePromiseLike,
+  ProviderOptions,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/agent/create-agent-ui-stream-response.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Arrayable,
+  Context,
+  Experimental_SandboxSession as SandboxSession,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/agent/tool-loop-agent.ts,JavaScript,40,ELEVATED,0,0,"import {
+  validateTypes,
+  withUserAgentSuffix,
+  type Context,
+  type Experimental_SandboxSession as SandboxSession,
+  type ModelMessage,
+  type ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/agent/agent.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Arrayable,
+  Context,
+  Experimental_SandboxSession as SandboxSession,
+  ModelMessage,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/resolve-tool-approval.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Context,
+  InferToolInput,
+  InferToolSetContext,
+  ModelMessage,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/invoke-tool-callbacks-from-stream.ts,JavaScript,40,ELEVATED,0,0,"import type { Context, ModelMessage, ToolSet } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/tool-execution-events.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  InferToolContext,
+  ModelMessage,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/validate-tool-context.ts,JavaScript,40,ELEVATED,0,0,"import { validateTypes, type FlexibleSchema } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/reasoning-output.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  DataContent,
+  ReasoningFilePart,
+  ReasoningPart,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/extract-reasoning-content.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  LanguageModelV4Content,
+  LanguageModelV4Reasoning,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/tool-approval-response-output.ts,JavaScript,40,ELEVATED,0,0,import type { ToolSet } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/tools-context-parameter.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  HasRequiredKey,
+  InferToolSetContext,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/tool-call-repair-function.ts,JavaScript,40,ELEVATED,0,0,"import type { JSONSchema7, LanguageModelV4ToolCall } from '@ai-sdk/; import type { ToolSet } from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-text/reasoning.ts,JavaScript,40,ELEVATED,0,0,"import type { ReasoningPart, ReasoningFilePart } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/tool-input-refinement.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  InferToolInput,
+  MaybePromiseLike,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/validate-tool-approvals.ts,JavaScript,40,ELEVATED,0,0,"import {
+  asSchema,
+  isExecutableTool,
+  safeValidateTypes,
+  type Context,
+  type InferToolSetContext,
+  type ModelMessage,
+  type ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/tool-approval-request-output.ts,JavaScript,40,ELEVATED,0,0,import type { ToolSet } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/generate-text-events.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Context,
+  InferToolSetContext,
+  ProviderOptions,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/active-tools.ts,JavaScript,40,ELEVATED,0,0,import type { ToolSet } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/stop-condition.ts,JavaScript,40,ELEVATED,0,0,"import type { Context, ToolSet } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/tool-output-denied.ts,JavaScript,40,ELEVATED,0,0,import type { ToolSet } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/language-model-events.ts,JavaScript,40,ELEVATED,0,0,import type { ToolSet } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/smooth-stream.ts,JavaScript,40,ELEVATED,0,0,"import { delay as originalDelay, type ToolSet } from '@ai-sdk/; import {
+  InvalidArgumentError,
+  type SharedV4ProviderMetadata,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-text/execute-tools-from-stream.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Arrayable,
+  Context,
+  IdGenerator,
+  InferToolSetContext,
+  ModelMessage,
+  Experimental_SandboxSession as SandboxSession,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/content-part.ts,JavaScript,40,ELEVATED,0,0,import type { ToolSet } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/tool-result.ts,JavaScript,40,ELEVATED,0,0,"import type { JSONObject } from '@ai-sdk/; import type {
+  InferToolInput,
+  InferToolOutput,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-text/generated-file.ts,JavaScript,40,ELEVATED,0,0,"import {
+  convertBase64ToUint8Array,
+  convertUint8ArrayToBase64,
+} from '@ai-sdk/; import type { JSONObject } from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-text/prepare-step.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Context,
+  Experimental_SandboxSession as SandboxSession,
+  InferToolSetContext,
+  ModelMessage,
+  ProviderOptions,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/tool-output.ts,JavaScript,40,ELEVATED,0,0,import type { ToolSet } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/execute-tool-call.ts,JavaScript,40,ELEVATED,0,0,"import {
+  executeTool,
+  isExecutableTool,
+  type Arrayable,
+  type Experimental_SandboxSession as SandboxSession,
+  type InferToolInput,
+  type InferToolSetContext,
+  type ModelMessage,
+  type ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/step-result.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Context,
+  InferToolSetContext,
+  ReasoningFilePart,
+  ReasoningPart,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/generate-text.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  LanguageModelV4GenerateResult,
+  LanguageModelV4ToolCall,
+} from '@ai-sdk/; import {
+  asArray,
+  createIdGenerator,
+  getErrorMessage,
+  withUserAgentSuffix,
+  type Arrayable,
+  type Context,
+  type Experimental_SandboxSession as SandboxSession,
+  type IdGenerator,
+  type InferToolSetContext,
+  type ProviderOptions,
+  type ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-text/to-response-messages.ts,JavaScript,40,ELEVATED,0,0,import type { ToolSet } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/tool-caller-configuration.ts,JavaScript,40,ELEVATED,0,0,"import {
+  experimental_getToolCaller,
+  type Experimental_ToolCallerTool,
+  type Tool,
+  type ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/tool-order.ts,JavaScript,40,ELEVATED,0,0,import type { ToolSet } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/tool-approval-configuration.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Context,
+  InferToolContext,
+  InferToolInput,
+  InferToolSetContext,
+  MaybePromiseLike,
+  ModelMessage,
+  ToolExecutionOptions,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/filter-active-tools.ts,JavaScript,40,ELEVATED,0,0,import type { ToolSet } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/parse-tool-call.ts,JavaScript,40,ELEVATED,0,0,"import type { LanguageModelV4ToolCall } from '@ai-sdk/; import {
+  asSchema,
+  safeParseJSON,
+  safeValidateTypes,
+  type InferToolInput,
+  type ModelMessage,
+  type ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-text/generate-text-result.ts,JavaScript,40,ELEVATED,0,0,"import type { Context, ToolSet } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/tool-error.ts,JavaScript,40,ELEVATED,0,0,"import type { JSONObject } from '@ai-sdk/; import type { InferToolInput, ToolSet } from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-text/extract-text-content.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  LanguageModelV4Content,
+  LanguageModelV4Text,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/response-message.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  AssistantModelMessage,
+  ToolModelMessage,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/tool-call.ts,JavaScript,40,ELEVATED,0,0,"import type { JSONObject } from '@ai-sdk/; import type { InferToolInput, ToolSet } from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-text/tool-fingerprint.ts,JavaScript,40,ELEVATED,0,0,"import { asSchema, type ToolSet } from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/stream-text-result.ts,JavaScript,40,ELEVATED,0,0,"import type { JSONObject } from '@ai-sdk/; import type { Context, IdGenerator, ToolSet } from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-text/restricted-telemetry-dispatcher.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  Context,
+  InferToolContext,
+  InferToolSetContext,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/prune-messages.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  AssistantModelMessage,
+  ModelMessage,
+  ToolModelMessage,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/collect-tool-approvals.ts,JavaScript,40,ELEVATED,0,0,"import type {
+  ModelMessage,
+  ToolApprovalRequest,
+  ToolApprovalResponse,
+  ToolResultPart,
+  ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/generate-text/stream-text.ts,JavaScript,40,ELEVATED,0,0,"import {
+  getErrorMessage,
+  UnsupportedFunctionalityError,
+  type LanguageModelV4,
+  type SharedV4Warning,
+} from '@ai-sdk/; import {
+  asArray,
+  createIdGenerator,
+  DelayedPromise,
+  filterNullable,
+  isAbortError,
+  type Arrayable,
+  type Context,
+  type Experimental_SandboxSession as SandboxSession,
+  type IdGenerator,
+  type InferToolSetContext,
+  type ModelMessage,
+  type ProviderOptions,
+  type ToolApprovalResponse,
+  type ToolContent,
+  type ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-text/stream-language-model-call.ts,JavaScript,40,ELEVATED,0,0,"import {
+  getErrorMessage,
+  type LanguageModelV4Prompt,
+  type LanguageModelV4StreamPart,
+  type SharedV4Headers,
+} from '@ai-sdk/; import {
+  createIdGenerator,
+  type Arrayable,
+  type Experimental_SandboxSession as SandboxSession,
+  type IdGenerator,
+  type InferToolSetContext,
+  type ModelMessage,
+  type ProviderOptions,
+  type ToolSet,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-text/convert-language-model-content.ts,JavaScript,40,ELEVATED,0,0,import type { LanguageModelV4Content } from '@ai-sdk/; import type { ToolSet } from '@ai-sdk/,,,ai_sdk_import(2_sdk(s)_detected)
+package/src/generate-text/output.ts,JavaScript,40,ELEVATED,0,0,"import {
+  TypeValidationError,
+  type JSONSchema7,
+  type JSONValue,
+  type LanguageModelV4CallOptions,
+} from '@ai-sdk/; import {
+  asSchema,
+  resolve,
+  safeParseJSON,
+  safeValidateTypes,
+  type FlexibleSchema,
+} from '@ai-sdk/",,,ai_sdk_import(2_sdk(s)_detected)
+package/src/embed/embed-events.ts,JavaScript,40,ELEVATED,0,0,import type { ProviderOptions } from '@ai-sdk/,,,ai_sdk_import(1_sdk(s)_detected)
+package/src/embed/embed-many.ts,JavaScript,40,ELEVATED,0,0,"import {
+  createIdGenerator,
+  withUserAgentSuffix,
+  type ProviderOptions,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/src/embed/embed.ts,JavaScript,40,ELEVATED,0,0,"import {
+  createIdGenerator,
+  withUserAgentSuffix,
+  type ProviderOptions,
+} from '@ai-sdk/",,,ai_sdk_import(1_sdk(s)_detected)
+package/internal.d.ts,JavaScript,0,NORMAL,0,0,,,,
+package/test.d.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/version.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/transcribe/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui-message-stream/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui-message-stream/pipe-ui-message-stream-to-response.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui-message-stream/ui-message-stream-response-init.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui-message-stream/ui-message-stream-on-step-end-callback.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui-message-stream/create-ui-message-stream-response.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui-message-stream/handle-ui-message-stream-finish.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui-message-stream/ui-message-stream-outcome.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui-message-stream/ui-message-stream-headers.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui-message-stream/ui-message-stream-writer.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui-message-stream/ui-message-stream-on-finish-callback.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui-message-stream/json-to-sse-transform-stream.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui-message-stream/ui-message-stream-on-end-callback.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui-message-stream/ui-message-stream-on-step-finish-callback.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui-message-stream/read-ui-message-stream.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/middleware/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/error/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/error/verify-no-object-generated-error.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/upload-skill/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/generate-object/generate-object-result.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/generate-object/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/generate-object/stream-object-result.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/registry/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/text-stream/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/text-stream/create-text-stream-response.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/text-stream/pipe-text-stream-to-response.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui/last-assistant-message-is-complete-with-tool-calls.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui/last-assistant-message-is-complete-with-approval-responses.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui/process-text-stream.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui/text-stream-chat-transport.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui/convert-file-list-to-file-ui-parts.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui/transform-text-to-ui-message-stream.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/ui/chat-transport.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/generate-video/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/generate-video/generate-video-result.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/realtime/realtime-session.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/realtime/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/realtime/browser-realtime-audio.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/realtime/audio-utils.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/realtime/realtime-types.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/prompt/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/prompt/split-data-url.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/prompt/prepare-language-model-call-options.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/translate/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/test/mock-server-response.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/test/mock-values.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/test/not-implemented.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/generate-speech/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/generate-speech/generated-audio-file.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/types/provider.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/types/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/types/speech-model-response-metadata.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/types/image-model-response-metadata.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/types/transcription-model-response-metadata.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/types/speech-translation-model-response-metadata.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/types/language-model-response-metadata.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/upload-file/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/upload-file/upload-file-result.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/generate-image/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/rerank/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/rerank/rerank-result.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/telemetry/tracing-channel.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/telemetry/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/telemetry/tracing-channel-publisher.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/telemetry/telemetry-registry.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/merge-objects.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/error-handler.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/extract-literal-union.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/is-deep-equal-data.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/serial-job-executor.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/create-resolvable-promise.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/create-stitchable-stream.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/fix-json.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/get-own.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/prepare-headers.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/consume-stream.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/async-iterable-stream.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/job.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/cosine-similarity.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/create-id-map.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/zod.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/is-non-empty-object.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/log-v2-compatibility-warning.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/write-to-server-response.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/split-array.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/callback.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/merge-callbacks.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/value-of.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/now.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/data-url.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/set-abort-timeout.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/get-potential-start-index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/is-node-runtime.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/download/download-function.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/util/download/create-download.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/batch/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/agent/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/agent/infer-agent-ui-message.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/agent/infer-agent-tools.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/generate-text/output-utils.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/generate-text/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/generate-text/sum-token-counts.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/generate-text/is-tool-execution-allowed-finish-reason.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/generate-text/prepare-step-call-settings.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/generate-text/calculate-tokens-per-second.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/embed/embed-result.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/embed/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/embed/embed-many-result.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/logger/index.ts,JavaScript,0,NORMAL,0,0,,,,
+package/src/logger/log-warnings.ts,JavaScript,0,NORMAL,0,0,,,,

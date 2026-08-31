@@ -1,0 +1,2020 @@
+{
+  "summary": {
+    "total_files": 132,
+    "flagged_files": 87,
+    "critical_files": 0,
+    "high_files": 13,
+    "elevated_files": 74,
+    "normal_files": 45,
+    "mode": "snapshot",
+    "summary_text": "Scanned 132 file(s). 13 HIGH, 74 ELEVATED. AI SDKs detected: langchain, anthropic, openai, http:api.anthropic.com. "
+  },
+  "sdk_inventory": {
+    "langchain": 86,
+    "anthropic": 1,
+    "openai": 1,
+    "http:api.anthropic.com": 1
+  },
+  "agent_artifacts": {
+    "table_version": 1,
+    "tier3_count": 0,
+    "items": []
+  },
+  "files": [
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/factory.py",
+      "language": "Python",
+      "ais": 100,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [
+        "StateGraph",
+        "add_edge("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(StateGraph,add_edge()",
+        "dynamic_import(x1)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/tool_selection.py",
+      "language": "Python",
+      "ais": 98,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 2,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [
+        "hand_rolled_loop"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)",
+        "prompt_injection_partial(2)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/test_react_agent.py",
+      "language": "Python",
+      "ais": 98,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [
+        "StateGraph",
+        "agent.invoke(",
+        "add_node(",
+        "add_edge("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(StateGraph,agent.invoke()",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_tool_retry.py",
+      "language": "Python",
+      "ais": 98,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 2,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [
+        "agent.invoke("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(agent.invoke()",
+        "prompt_injection_partial(2)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_tool_emulator.py",
+      "language": "Python",
+      "ais": 90,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [
+        "eval/exec found (1 occurrence(s))"
+      ],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "dynamic_execution(eval/exec_x1)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/test_create_agent_tool_validation.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [
+        "agent.invoke("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(agent.invoke()"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/test_subagent_transformer.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [
+        "StateGraph"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(StateGraph)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/test_state_schema.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [
+        "agent.invoke("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(agent.invoke()"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_summarization.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [
+        "hand_rolled_loop"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_loop(ai_call_inside_loop)",
+        "cost_risk(ai_calls_inside_loop)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_model_call_limit.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [
+        "agent.invoke("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(agent.invoke()"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_tools.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [
+        "agent.invoke("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(agent.invoke()"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/integration_tests/agents/middleware/test_human_in_the_loop_integration.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [
+        "agent.invoke("
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(agent.invoke()"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/pii.py",
+      "language": "Python",
+      "ais": 75,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 3,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/chat_models/base.py",
+      "language": "Python",
+      "ais": 60,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "dynamic_import(x1)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/integration_tests/embeddings/test_base.py",
+      "language": "Python",
+      "ais": 60,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "dynamic_import(x1)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/context_editing.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/provider_tool_search.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/tool_error.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/model_fallback.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 2,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_tool_error.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 2,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_wrap_tool_call.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 2,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(2)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/tool_retry.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/tool_call_limit.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/shell_tool.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/todo.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/model_call_limit.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/file_search.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/types.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/human_in_the_loop.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/_execution.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [
+        "subprocess/shell execution with variables (1 occurrence(s))"
+      ],
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/summarization.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/model_retry.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain",
+        "from anthropic",
+        "from openai"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/tool_emulator.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/chat_models/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/tools/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/embeddings/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/test_version.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/test_return_direct_spec.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/test_injected_runtime_create_agent.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/test_agent_streaming.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/test_subagent_streaming.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/test_responses.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/test_fetch_last_ai_and_tool_messages.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/test_response_format_integration.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/test_response_format.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/test_agent_name.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/test_system_message.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/test_kwargs_tool_runtime_injection.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/test_return_direct_graph.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/test_responses_spec.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_model_fallback.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_tool_call_limit.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_structured_output_retry.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_context_editing.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_tool_selection.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_provider_tool_search.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_human_in_the_loop.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_file_search.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_todo.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_model_retry.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_shell_tool.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_shell_execution_policies.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/test_pii.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_sync_async_wrappers.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_dynamic_tools.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_tracing.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_framework.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_transformers.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_decorators.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_wrap_model_call.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_internal_call_transformer.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_composition.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_overrides.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_diagram.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/core/test_wrap_model_call_state_update.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware_typing/test_middleware_type_errors.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware_typing/test_middleware_typing.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware_typing/test_middleware_backwards_compat.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/chat_models/test_chat_models.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain",
+        "http:api.anthropic.com"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(api.anthropic.com)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/tools/test_imports.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/embeddings/test_base.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/embeddings/test_imports.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/benchmarks/test_create_agent.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/integration_tests/agents/middleware/test_shell_tool_integration.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/integration_tests/chat_models/test_base.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from langchain"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/embeddings/base.py",
+      "language": "Python",
+      "ais": 20,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "dynamic_import(x1)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/test_imports.py",
+      "language": "Python",
+      "ais": 20,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "dynamic_import(x2)"
+      ]
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/_subagent_transformer.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/structured_output.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/_redaction.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/_retry.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/_trace_policy.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/agents/middleware/internal_call_transformer.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/messages/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/rate_limiters/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/langchain/tools/tool_node.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/conftest.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/test_dependencies.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/test_pytest_config.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/conftest.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/conftest_store.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/utils.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/conftest_checkpointer.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/memory_assert.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/any_str.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/model.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/messages.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/implementations/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware/core/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/agents/middleware_typing/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/chat_models/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/tools/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/unit_tests/embeddings/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/benchmarks/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/integration_tests/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/integration_tests/conftest.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/integration_tests/test_compile.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/integration_tests/agents/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/integration_tests/agents/middleware/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/integration_tests/cache/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/integration_tests/cache/fake_embeddings.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/integration_tests/chat_models/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/tests/integration_tests/embeddings/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/scripts/check_version.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langchain-1.3.18/scripts/check_imports.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    }
+  ]
+}

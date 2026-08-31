@@ -1,0 +1,66 @@
+{
+  "summary": {
+    "total_files": 3,
+    "flagged_files": 2,
+    "critical_files": 0,
+    "high_files": 1,
+    "elevated_files": 1,
+    "normal_files": 1,
+    "mode": "snapshot",
+    "summary_text": "Scanned 3 file(s). 1 HIGH, 1 ELEVATED. "
+  },
+  "sdk_inventory": {},
+  "agent_artifacts": {
+    "table_version": 1,
+    "tier3_count": 0,
+    "items": []
+  },
+  "files": [
+    {
+      "rel_path": "typing_extensions-4.16.0/src/test_typing_extensions.py",
+      "language": "Python",
+      "ais": 70,
+      "risk": "HIGH",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [
+        "eval/exec found (10 occurrence(s))"
+      ],
+      "signals": [
+        "dynamic_execution(eval/exec_x10)",
+        "dynamic_import(x7)"
+      ]
+    },
+    {
+      "rel_path": "typing_extensions-4.16.0/src/typing_extensions.py",
+      "language": "Python",
+      "ais": 68,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "injection_vectors": 1,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [
+        "eval/exec found (3 occurrence(s))"
+      ],
+      "signals": [
+        "dynamic_execution(eval/exec_x3)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "typing_extensions-4.16.0/src/_typed_dict_test_helper.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    }
+  ]
+}
