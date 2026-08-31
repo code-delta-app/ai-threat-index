@@ -35,8 +35,13 @@ jobs:
 
       - name: Scan the packages
         run: |
-          mkdir -p results work
+          # Results are regenerated to match the current cohort — git history
+          # holds every prior run, which is where the diff lives.
+          rm -rf results && mkdir -p results work
+          scanned=0; listed=0
           while IFS=, read -r eco name; do
+            name=$(printf '%s' "$name" | tr -d '\r')
+            listed=$((listed+1))
             [ -z "$name" ] && continue
             echo "== $eco/$name =="
             rm -rf work && mkdir -p work/src
@@ -55,8 +60,16 @@ jobs:
             rm -rf "$out" && mkdir -p "$out"
             ( cd "$out" && "$BIN" scan "$GITHUB_WORKSPACE/work/src" --mode agent --bom ai_bom.json ) \
               || echo "  scan exited nonzero for $eco/$name"
+            scanned=$((scanned+1))
             rm -rf work
           done < packages.csv
+          echo "scanned $scanned of $listed listed packages"
+          # A run that fetches nothing must not go green (31 Aug: a CRLF in
+          # the package list failed all 101 lookups and the run passed).
+          if [ "$listed" -gt 0 ] && [ "$scanned" -lt $((listed * 8 / 10)) ]; then
+            echo "::error::only $scanned/$listed packages scanned — failing"
+            exit 1
+          fi
           # keep the data, not the big HTML renderings
           find results -name '*.html' -delete
           ls -laR results | head -60

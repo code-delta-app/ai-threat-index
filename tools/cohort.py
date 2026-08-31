@@ -76,8 +76,11 @@ def main():
             if found >= want:
                 break
 
+    # LF only — csv.writer defaults to CRLF, and a trailing \r rides into
+    # every registry URL the scan workflow builds (caught 31 Aug: 100/100
+    # lookups failed silently, the run went green having scanned nothing).
     with open("packages.csv", "w", newline="") as fh:
-        csv.writer(fh).writerows(rows)
+        csv.writer(fh, lineterminator="\n").writerows(rows)
     with open("cohort.json", "w") as fh:
         json.dump({
             "generated_utc": datetime.now(timezone.utc).isoformat(),
