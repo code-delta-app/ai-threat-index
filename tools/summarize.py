@@ -30,6 +30,7 @@ def dash(n):
 
 
 rows = []
+total_creds = None
 for eco in sorted(os.listdir(RESULTS)) if os.path.isdir(RESULTS) else []:
     for pkg in sorted(os.listdir(os.path.join(RESULTS, eco))):
         base = os.path.join(RESULTS, eco, pkg)
@@ -55,15 +56,15 @@ for eco in sorted(os.listdir(RESULTS)) if os.path.isdir(RESULTS) else []:
                     f"{r}:{n}" for r, n in sorted(risks.items())
                     if r not in (None, "NORMAL")
                 )
-            for key in ("committed_credentials", "credentials", "secrets"):
-                v = agent.get(key)
-                if isinstance(v, list):
-                    creds = len(v)
-                    break
-            surface = agent.get("build_surface") or agent.get("build_files")
+            cc = agent.get("committed_credentials")
+            if isinstance(cc, dict) and isinstance(cc.get("count"), int):
+                creds = cc["count"]
+            surface = agent.get("build_surface")
             if isinstance(surface, dict):
-                hooks = surface.get("hooks") if isinstance(surface.get("hooks"), int) else None
-                fetchers = surface.get("fetchers") if isinstance(surface.get("fetchers"), int) else None
+                if isinstance(surface.get("hooks"), list):
+                    hooks = len(surface["hooks"])
+                if isinstance(surface.get("fetchers"), list):
+                    fetchers = len(surface["fetchers"])
         if isinstance(bom, dict):
             for key in ("providers", "components", "ai_components"):
                 v = bom.get(key)
@@ -71,14 +72,26 @@ for eco in sorted(os.listdir(RESULTS)) if os.path.isdir(RESULTS) else []:
                     providers = len(v)
                     break
 
+        # Disclosure policy (see README): a nonzero credential count is
+        # never shown against a named package — maintainers hear first.
+        # The aggregate above the table carries the true total.
+        cred_cell = "&mdash;" if creds is None else (
+            "0" if creds == 0 else "under disclosure")
+        total_creds = (total_creds or 0) + (creds or 0)
         rows.append(
             f"| {eco} | {pkg} | {dash(files_scanned)} | {dash(risky)}"
             f"{(' (' + risk_detail + ')') if risk_detail else ''} "
-            f"| {dash(providers)} | {dash(creds)} | {dash(hooks)} | {dash(fetchers)} |"
+            f"| {dash(providers)} | {cred_cell} | {dash(hooks)} | {dash(fetchers)} |"
         )
 
+agg = ""
+if total_creds is not None:
+    agg = (f"**Credential-format matches across the index: {total_creds}** "
+           "(per-package identification withheld until maintainers are "
+           "notified and findings resolved — see Disclosure).\n\n")
 table = (
-    "| Ecosystem | Package | Files scanned | Flagged files | AI providers "
+    agg
+    + "| Ecosystem | Package | Files scanned | Flagged files | AI providers "
     "| Credential-format matches | Install hooks | Build fetchers |\n"
     "|---|---|---|---|---|---|---|---|\n" + "\n".join(rows)
     if rows
