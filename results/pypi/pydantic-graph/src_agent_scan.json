@@ -25,7 +25,7 @@
   },
   "files": [
     {
-      "rel_path": "pydantic_graph-2.36.0/pydantic_graph/graph_builder.py",
+      "rel_path": "pydantic_graph-2.37.0/pydantic_graph/graph_builder.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "rel_path": "pydantic_graph-2.36.0/pydantic_graph/_utils.py",
+      "rel_path": "pydantic_graph-2.37.0/pydantic_graph/_utils.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -57,7 +57,7 @@
       ]
     },
     {
-      "rel_path": "pydantic_graph-2.36.0/pydantic_graph/__init__.py",
+      "rel_path": "pydantic_graph-2.37.0/pydantic_graph/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -69,7 +69,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.36.0/pydantic_graph/decision.py",
+      "rel_path": "pydantic_graph-2.37.0/pydantic_graph/decision.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -81,7 +81,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.36.0/pydantic_graph/basenode.py",
+      "rel_path": "pydantic_graph-2.37.0/pydantic_graph/basenode.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -93,7 +93,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.36.0/pydantic_graph/parent_forks.py",
+      "rel_path": "pydantic_graph-2.37.0/pydantic_graph/parent_forks.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -105,7 +105,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.36.0/pydantic_graph/join.py",
+      "rel_path": "pydantic_graph-2.37.0/pydantic_graph/join.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -117,7 +117,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.36.0/pydantic_graph/util.py",
+      "rel_path": "pydantic_graph-2.37.0/pydantic_graph/util.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -129,7 +129,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.36.0/pydantic_graph/paths.py",
+      "rel_path": "pydantic_graph-2.37.0/pydantic_graph/paths.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -141,7 +141,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.36.0/pydantic_graph/node_types.py",
+      "rel_path": "pydantic_graph-2.37.0/pydantic_graph/node_types.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -153,7 +153,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.36.0/pydantic_graph/exceptions.py",
+      "rel_path": "pydantic_graph-2.37.0/pydantic_graph/exceptions.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -165,7 +165,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.36.0/pydantic_graph/id_types.py",
+      "rel_path": "pydantic_graph-2.37.0/pydantic_graph/id_types.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -177,7 +177,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.36.0/pydantic_graph/step.py",
+      "rel_path": "pydantic_graph-2.37.0/pydantic_graph/step.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -189,7 +189,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.36.0/pydantic_graph/node.py",
+      "rel_path": "pydantic_graph-2.37.0/pydantic_graph/node.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",

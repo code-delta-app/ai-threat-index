@@ -1,15 +1,15 @@
 {
   "summary": {
-    "total_files": 6,
+    "total_files": 5,
     "flagged_files": 0,
     "critical_files": 0,
     "high_files": 0,
     "elevated_files": 0,
-    "normal_files": 6,
+    "normal_files": 5,
     "flagged_ai_files": 0,
     "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 6 file(s). No AI agent initiation signatures detected."
+    "summary_text": "Scanned 5 file(s). No AI agent initiation signatures detected."
   },
   "sdk_inventory": {},
   "agent_artifacts": {
@@ -23,7 +23,7 @@
   },
   "files": [
     {
-      "rel_path": "fastspec-0.2.3/fastspec/__init__.py",
+      "rel_path": "fastspec-0.2.4/fastspec/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -35,7 +35,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.3/fastspec/oapi.py",
+      "rel_path": "fastspec-0.2.4/fastspec/oapi.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -47,7 +47,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.3/fastspec/gql.py",
+      "rel_path": "fastspec-0.2.4/fastspec/gql.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -59,7 +59,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.3/fastspec/errors.py",
+      "rel_path": "fastspec-0.2.4/fastspec/spec.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -71,19 +71,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.3/fastspec/spec.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "fastspec-0.2.3/fastspec/_modidx.py",
+      "rel_path": "fastspec-0.2.4/fastspec/_modidx.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",

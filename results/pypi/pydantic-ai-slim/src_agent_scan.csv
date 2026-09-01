@@ -1,314 +1,314 @@
 rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
-pydantic_ai_slim-2.36.0/pydantic_ai/messages.py,Python,100,HIGH,0,6,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext); prompt_injection_vectors(6_unsanitised_inputs)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/bedrock.py,Python,100,HIGH,0,4,from pydantic_ai; http:bedrock-runtime,RunContext,,ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(bedrock-runtime); agent_orchestration(RunContext); cost_risk(ai_calls_inside_loop); prompt_injection_vectors(4_unsanitised_inputs)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/huggingface.py,Python,100,HIGH,0,4,from huggingface_hub,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext); prompt_injection_vectors(4_unsanitised_inputs)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/openai.py,Python,98,HIGH,0,1,from openai; from OpenAI; from pydantic_ai,RunContext,,ai_sdk_import(3_sdk(s)_detected); agent_orchestration(RunContext); prompt_injection_partial(1)
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/_adapter.py,Python,98,HIGH,0,1,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext); prompt_injection_partial(1)
-pydantic_ai_slim-2.36.0/pydantic_ai/_agent_graph.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext; runner.run,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext,runner.run)"
-pydantic_ai_slim-2.36.0/pydantic_ai/_output.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/_run_context.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/mcp.py,Python,80,HIGH,0,0,from pydantic_ai; from fastmcp; from mcp; import FastMCP; from MCP,RunContext,,ai_sdk_import(5_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/run.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/output.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/_utils.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/_instructions.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/template.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/tools.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/result.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/_history_processor.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/capability.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/reinject_system_prompt.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/__init__.py,Python,80,HIGH,0,0,from pydantic_ai; import MCP,agent.run(,,ai_sdk_import(2_sdk(s)_detected); agent_orchestration(agent.run()
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_dynamic.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext; agent.run(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext,agent.run()"
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_tool_search.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/process_event_stream.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/image_generation.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/web_search.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/mcp.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/process_history.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/instrumentation.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/hooks.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/include_return_schemas.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/thread_executor.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/combined.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/native_or_local.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_deferred_capability_loader.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/x_search.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/wrapper.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/deferred_tool_handler.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_pending_messages.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/web_fetch.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/prepare_tools.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/set_tool_metadata.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/abstract.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/content_filter.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/google.py,Python,80,HIGH,0,0,from google.genai; http:generativelanguage.googleapis.com,RunContext,,ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(generativelanguage.googleapis.com); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/instrumented.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/mcp_sampling.py,Python,80,HIGH,0,0,from mcp; from MCP,RunContext,,ai_sdk_import(2_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/mistral.py,Python,80,HIGH,0,0,from mistralai,RunContext,,ai_sdk_import(1_sdk(s)_detected); data_egress(model_hosted_in_FR:mistralai); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/fallback.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/anthropic.py,Python,80,HIGH,0,0,from anthropic; from pydantic_ai,RunContext,,ai_sdk_import(2_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/concurrency.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/groq.py,Python,80,HIGH,0,0,from groq,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/_tool_choice.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_instruction_collection.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_deferred_capability_loader.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/function.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/approval_required.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/_event_stream.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/image_generation.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext; agent.run(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext,agent.run()"
-pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/x_search.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext; agent.run(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext,agent.run()"
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_utils.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_base.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext; agent.run(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext,agent.run()"
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_operation.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_capability_operation.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext; result_type=,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext,result_type=)"
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_agent.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_run_context.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_dynamic_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_mcp_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_function_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_model.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_durability.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext; agent.run(; result_type=,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext,agent.run()"
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_agent.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_dynamic_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_mcp_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_function_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_cache_policies.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_model.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_durability.py,Python,80,HIGH,0,0,from pydantic_ai,agent.run(,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(agent.run()
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_agent.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_utils.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_mcp_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_operation_backend.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_model.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_durability.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext; agent.run(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext,agent.run()"
-pydantic_ai_slim-2.36.0/pydantic_ai/agent/__init__.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext; agent.run(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext,agent.run()"
-pydantic_ai_slim-2.36.0/pydantic_ai/agent/wrapper.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/agent/abstract.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/_instrumentation.py,Python,58,ELEVATED,0,1,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(1)
-pydantic_ai_slim-2.36.0/pydantic_ai/realtime/_openai_protocol.py,Python,58,ELEVATED,0,1,from openai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(1)
-pydantic_ai_slim-2.36.0/pydantic_ai/__init__.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/_enqueue.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/_deferred.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/_function_schema.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/_parts_manager.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/format_prompt.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/exceptions.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/_mcp.py,Python,40,ELEVATED,0,0,from mcp; from MCP,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/_deferred_capabilities.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/retries.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/_template.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/tool_manager.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/_thinking_part.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/concurrency.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/direct.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/_spec.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/_cancel.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/_system_prompt.py,Python,40,ELEVATED,0,0,,RunContext; runner.run,,"agent_orchestration(RunContext,runner.run)"
-pydantic_ai_slim-2.36.0/pydantic_ai/_tool_execution.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/_cli/web.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/alibaba.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/google.py,Python,40,ELEVATED,0,0,from pydantic_ai; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/heroku.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/_openai_compatible.py,Python,40,ELEVATED,0,0,from openai; from pydantic_ai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/openai.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/nebius.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/google_cloud.py,Python,40,ELEVATED,0,0,from pydantic_ai; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/together.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai; http:api.together.xyz,,,ai_sdk_import(2_sdk(s)_detected); ai_http_endpoint(api.together.xyz)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/xai.py,Python,40,ELEVATED,0,0,from pydantic_ai; http:api.x.ai,,,ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(api.x.ai)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/sentence_transformers.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/cerebras.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/fireworks.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai; http:api.fireworks.ai,,,ai_sdk_import(2_sdk(s)_detected); ai_http_endpoint(api.fireworks.ai)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock.py,Python,40,ELEVATED,0,0,from pydantic_ai; http:bedrock-runtime,,,ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(bedrock-runtime)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock_mantle.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/mistral.py,Python,40,ELEVATED,0,0,from pydantic_ai; from mistralai,,,ai_sdk_import(2_sdk(s)_detected); data_egress(model_hosted_in_FR:mistralai)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/crusoe.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/moonshotai.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/openrouter.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai; http:openrouter.ai,,,ai_sdk_import(2_sdk(s)_detected); ai_http_endpoint(openrouter.ai)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/anthropic.py,Python,40,ELEVATED,0,0,from pydantic_ai; from anthropic,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/zai.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/ollama.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py,Python,40,ELEVATED,0,0,from pydantic_ai; from google.genai; from groq; from openai; from anthropic,,,ai_sdk_import(5_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/ovhcloud.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/groq.py,Python,40,ELEVATED,0,0,from pydantic_ai; from groq; http:api.groq.com,,,ai_sdk_import(2_sdk(s)_detected); ai_http_endpoint(api.groq.com)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/litellm.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/voyageai.py,Python,40,ELEVATED,0,0,from pydantic_ai; from voyageai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/cohere.py,Python,40,ELEVATED,0,0,from pydantic_ai; from cohere,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/deepseek.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai; from DeepSeek; http:api.deepseek.com,,,ai_sdk_import(3_sdk(s)_detected); ai_http_endpoint(api.deepseek.com); data_egress(model_hosted_in_CN:api.deepseek.com); data_sovereignty_risk(non-allied_jurisdiction)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/huggingface.py,Python,40,ELEVATED,0,0,from pydantic_ai; from huggingface_hub,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/github.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/azure.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/snowflake.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/vercel.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/sambanova.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/native_tool.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/durable_operation.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/prefix_tools.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/resolve_model_id.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_deferred_capabilities.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/select_model.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/toolset.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/thinking.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_ordering.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/ext/langchain.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/__init__.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/_continuation.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/xai.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/cerebras.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/bedrock_mantle.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/crusoe.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/openrouter.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/zai.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/ollama.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/test.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/wrapper.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/function.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/cohere.py,Python,40,ELEVATED,0,0,from pydantic_ai; from cohere,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/_anthropic_bedrock_count_tokens.py,Python,40,ELEVATED,0,0,from anthropic,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/models/snowflake.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_dynamic.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_tool_search.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/set_metadata.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/prepared.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/prefixed.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/deferred_loading.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/include_return_schemas.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/combined.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/wrapper.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/external.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_capability_owned.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/filtered.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/renamed.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/abstract.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/_messages_builder.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/app.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/_hosts.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/api.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/_utils.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/_adapter.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/realtime/google.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/realtime/_session.py,Python,40,ELEVATED,0,0,,RunContext; Agent.run(,,"agent_orchestration(RunContext,Agent.run()"
-pydantic_ai_slim-2.36.0/pydantic_ai/realtime/openai.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/realtime/xai.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/realtime/azure.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/duckduckgo.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/tavily.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/exa.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/web_fetch.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/__init__.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/google.py,Python,40,ELEVATED,0,0,from pydantic_ai; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/openai.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/sentence_transformers.py,Python,40,ELEVATED,0,0,import pydantic_ai; from pydantic_ai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/instrumented.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/bedrock.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/test.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/voyageai.py,Python,40,ELEVATED,0,0,from pydantic_ai; from voyageai,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/cohere.py,Python,40,ELEVATED,0,0,from pydantic_ai; from cohere,,,ai_sdk_import(2_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/result.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_spec.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_logfire.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_workflow.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_operation_backend.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_transports.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_operation_backend.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_types.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/native_tools/__init__.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/native_tools/_tool_search.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
-pydantic_ai_slim-2.36.0/pydantic_ai/agent/spec.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
-pydantic_ai_slim-2.36.0/pydantic_ai/_tool_search.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/_json_schema.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/_mcp_compat.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/__main__.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/_ssrf.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/_cost.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/_griffe.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/settings.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/_sync_stream.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/_otel_messages.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/function_signature.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/_http.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/usage.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/_uuid.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/_warnings.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/_cli/__init__.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/__init__.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/_bedrock_model_names.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/ext/__init__.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/models/_known_model_names.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/models/_abstract.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/models/_reasoning_details.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/__init__.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/__init__.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/ag_ui/__init__.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/ag_ui/_interrupt.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/ag_ui/_multimodal.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/ag_ui/_thinking_0_13.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/ag_ui/_utils.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/ag_ui/_forward_compat.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/ag_ui/_thinking_0_10.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/ag_ui/_event_stream.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/ag_ui/_adapter.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/__init__.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/__init__.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/request_types.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/_models.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/response_types.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/_event_stream.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/realtime/__init__.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/realtime/_openai_webrtc.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/realtime/model.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/realtime/_utils.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/realtime/_instrumentation.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/realtime/codec.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/realtime/settings.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/realtime/profiles.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/__init__.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/settings.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/wrapper.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/base.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/__init__.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_operation_names.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_codec.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_operation_backend.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_runtime_toolsets.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/__init__.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_operation_names.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_activity_execution.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_payload_converter.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/__init__.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_operation_names.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/__init__.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_operation_names.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/profiles/amazon.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/profiles/__init__.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/profiles/google.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/profiles/openai.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/profiles/harmony.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/profiles/mistral.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/profiles/moonshotai.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/profiles/meta.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/profiles/grok.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/profiles/anthropic.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/profiles/zai.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/profiles/groq.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/profiles/qwen.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/profiles/cohere.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/profiles/deepseek.py,Python,0,NORMAL,0,0,,,,
-pydantic_ai_slim-2.36.0/pydantic_ai/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
-pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
-pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
-pydantic_ai_slim-2.36.0/pydantic_ai/models/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
-pydantic_ai_slim-2.36.0/pydantic_ai/native_tools/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
-pydantic_ai_slim-2.36.0/pydantic_ai/profiles/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
-pydantic_ai_slim-2.36.0/pydantic_ai/providers/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
-pydantic_ai_slim-2.36.0/pydantic_ai/realtime/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
-pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
-pydantic_ai_slim-2.36.0/pydantic_ai/CLAUDE.md,ARTIFACT,,TIER-1,,,,,,Claude Code instructions
-pydantic_ai_slim-2.36.0/pydantic_ai/models/CLAUDE.md,ARTIFACT,,TIER-1,,,,,,Claude Code instructions
-pydantic_ai_slim-2.36.0/pydantic_ai/native_tools/CLAUDE.md,ARTIFACT,,TIER-1,,,,,,Claude Code instructions
-pydantic_ai_slim-2.36.0/pydantic_ai/realtime/CLAUDE.md,ARTIFACT,,TIER-1,,,,,,Claude Code instructions
-pydantic_ai_slim-2.36.0/pydantic_ai/ui/CLAUDE.md,ARTIFACT,,TIER-1,,,,,,Claude Code instructions
+pydantic_ai_slim-2.37.0/pydantic_ai/messages.py,Python,100,HIGH,0,6,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext); prompt_injection_vectors(6_unsanitised_inputs)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/bedrock.py,Python,100,HIGH,0,4,from pydantic_ai; http:bedrock-runtime,RunContext,,ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(bedrock-runtime); agent_orchestration(RunContext); cost_risk(ai_calls_inside_loop); prompt_injection_vectors(4_unsanitised_inputs)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/huggingface.py,Python,100,HIGH,0,4,from huggingface_hub,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext); prompt_injection_vectors(4_unsanitised_inputs)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/openai.py,Python,98,HIGH,0,1,from openai; from OpenAI; from pydantic_ai,RunContext,,ai_sdk_import(3_sdk(s)_detected); agent_orchestration(RunContext); prompt_injection_partial(1)
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/_adapter.py,Python,98,HIGH,0,1,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext); prompt_injection_partial(1)
+pydantic_ai_slim-2.37.0/pydantic_ai/_agent_graph.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext; runner.run,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext,runner.run)"
+pydantic_ai_slim-2.37.0/pydantic_ai/_output.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/_run_context.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/mcp.py,Python,80,HIGH,0,0,from pydantic_ai; from fastmcp; from mcp; import FastMCP; from MCP,RunContext,,ai_sdk_import(5_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/run.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/output.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/_utils.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/_instructions.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/template.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/tools.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/result.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/_history_processor.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/capability.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/reinject_system_prompt.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/__init__.py,Python,80,HIGH,0,0,from pydantic_ai; import MCP,agent.run(,,ai_sdk_import(2_sdk(s)_detected); agent_orchestration(agent.run()
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/_dynamic.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext; agent.run(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext,agent.run()"
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/_tool_search.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/process_event_stream.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/image_generation.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/web_search.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/mcp.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/process_history.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/instrumentation.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/hooks.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/include_return_schemas.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/thread_executor.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/combined.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/native_or_local.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/_deferred_capability_loader.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/x_search.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/wrapper.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/deferred_tool_handler.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/_pending_messages.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/web_fetch.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/prepare_tools.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/set_tool_metadata.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/abstract.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/content_filter.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/google.py,Python,80,HIGH,0,0,from google.genai; http:generativelanguage.googleapis.com,RunContext,,ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(generativelanguage.googleapis.com); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/instrumented.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/mcp_sampling.py,Python,80,HIGH,0,0,from mcp; from MCP,RunContext,,ai_sdk_import(2_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/mistral.py,Python,80,HIGH,0,0,from mistralai,RunContext,,ai_sdk_import(1_sdk(s)_detected); data_egress(model_hosted_in_FR:mistralai); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/fallback.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/anthropic.py,Python,80,HIGH,0,0,from anthropic; from pydantic_ai,RunContext,,ai_sdk_import(2_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/concurrency.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/groq.py,Python,80,HIGH,0,0,from groq,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/_tool_choice.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/_instruction_collection.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/_deferred_capability_loader.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/function.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/approval_required.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/_event_stream.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/image_generation.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext; agent.run(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext,agent.run()"
+pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/x_search.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext; agent.run(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext,agent.run()"
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_utils.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_base.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext; agent.run(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext,agent.run()"
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_operation.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_capability_operation.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext; result_type=,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext,result_type=)"
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_agent.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_run_context.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_dynamic_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_mcp_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_function_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_model.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_durability.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext; agent.run(; result_type=,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext,agent.run()"
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_agent.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_dynamic_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_mcp_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_function_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_cache_policies.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_model.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_durability.py,Python,80,HIGH,0,0,from pydantic_ai,agent.run(,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(agent.run()
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_agent.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_utils.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_mcp_toolset.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_operation_backend.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_model.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_durability.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext; agent.run(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext,agent.run()"
+pydantic_ai_slim-2.37.0/pydantic_ai/agent/__init__.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext; agent.run(,,"ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext,agent.run()"
+pydantic_ai_slim-2.37.0/pydantic_ai/agent/wrapper.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/agent/abstract.py,Python,80,HIGH,0,0,from pydantic_ai,RunContext,,ai_sdk_import(1_sdk(s)_detected); agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/_instrumentation.py,Python,58,ELEVATED,0,1,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(1)
+pydantic_ai_slim-2.37.0/pydantic_ai/realtime/_openai_protocol.py,Python,58,ELEVATED,0,1,from openai,,,ai_sdk_import(1_sdk(s)_detected); prompt_injection_partial(1)
+pydantic_ai_slim-2.37.0/pydantic_ai/__init__.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/_enqueue.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/_deferred.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/_function_schema.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/_parts_manager.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/format_prompt.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/exceptions.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/_mcp.py,Python,40,ELEVATED,0,0,from mcp; from MCP,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/_deferred_capabilities.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/retries.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/_template.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/tool_manager.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/_thinking_part.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/concurrency.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/direct.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/_spec.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/_cancel.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/_system_prompt.py,Python,40,ELEVATED,0,0,,RunContext; runner.run,,"agent_orchestration(RunContext,runner.run)"
+pydantic_ai_slim-2.37.0/pydantic_ai/_tool_execution.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/_cli/web.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/alibaba.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/google.py,Python,40,ELEVATED,0,0,from pydantic_ai; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/heroku.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/_openai_compatible.py,Python,40,ELEVATED,0,0,from openai; from pydantic_ai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/openai.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/nebius.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/google_cloud.py,Python,40,ELEVATED,0,0,from pydantic_ai; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/together.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai; http:api.together.xyz,,,ai_sdk_import(2_sdk(s)_detected); ai_http_endpoint(api.together.xyz)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/xai.py,Python,40,ELEVATED,0,0,from pydantic_ai; http:api.x.ai,,,ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(api.x.ai)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/sentence_transformers.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/cerebras.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/fireworks.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai; http:api.fireworks.ai,,,ai_sdk_import(2_sdk(s)_detected); ai_http_endpoint(api.fireworks.ai)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/bedrock.py,Python,40,ELEVATED,0,0,from pydantic_ai; http:bedrock-runtime,,,ai_sdk_import(1_sdk(s)_detected); ai_http_endpoint(bedrock-runtime)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/bedrock_mantle.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/mistral.py,Python,40,ELEVATED,0,0,from pydantic_ai; from mistralai,,,ai_sdk_import(2_sdk(s)_detected); data_egress(model_hosted_in_FR:mistralai)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/crusoe.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/moonshotai.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/openrouter.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai; http:openrouter.ai,,,ai_sdk_import(2_sdk(s)_detected); ai_http_endpoint(openrouter.ai)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/anthropic.py,Python,40,ELEVATED,0,0,from pydantic_ai; from anthropic,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/zai.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/ollama.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/gateway.py,Python,40,ELEVATED,0,0,from pydantic_ai; from google.genai; from groq; from openai; from anthropic,,,ai_sdk_import(5_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/ovhcloud.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/groq.py,Python,40,ELEVATED,0,0,from pydantic_ai; from groq; http:api.groq.com,,,ai_sdk_import(2_sdk(s)_detected); ai_http_endpoint(api.groq.com)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/litellm.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/voyageai.py,Python,40,ELEVATED,0,0,from pydantic_ai; from voyageai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/cohere.py,Python,40,ELEVATED,0,0,from pydantic_ai; from cohere,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/deepseek.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai; from DeepSeek; http:api.deepseek.com,,,ai_sdk_import(3_sdk(s)_detected); ai_http_endpoint(api.deepseek.com); data_egress(model_hosted_in_CN:api.deepseek.com); data_sovereignty_risk(non-allied_jurisdiction)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/huggingface.py,Python,40,ELEVATED,0,0,from pydantic_ai; from huggingface_hub,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/github.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/azure.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/snowflake.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/vercel.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/sambanova.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/native_tool.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/durable_operation.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/prefix_tools.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/resolve_model_id.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/_deferred_capabilities.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/select_model.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/toolset.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/thinking.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/_ordering.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/ext/langchain.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/__init__.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/_continuation.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/xai.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/cerebras.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/bedrock_mantle.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/crusoe.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/openrouter.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/zai.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/ollama.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/test.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/wrapper.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/function.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/cohere.py,Python,40,ELEVATED,0,0,from pydantic_ai; from cohere,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/_anthropic_bedrock_count_tokens.py,Python,40,ELEVATED,0,0,from anthropic,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/models/snowflake.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/_dynamic.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/_tool_search.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/set_metadata.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/prepared.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/prefixed.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/deferred_loading.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/include_return_schemas.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/combined.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/wrapper.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/external.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/_capability_owned.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/filtered.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/renamed.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/abstract.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/_messages_builder.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/_web/app.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/_web/_hosts.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/_web/api.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/vercel_ai/_utils.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/vercel_ai/_adapter.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/realtime/google.py,Python,40,ELEVATED,0,0,from google.genai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/realtime/_session.py,Python,40,ELEVATED,0,0,,RunContext; Agent.run(,,"agent_orchestration(RunContext,Agent.run()"
+pydantic_ai_slim-2.37.0/pydantic_ai/realtime/openai.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/realtime/xai.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/realtime/azure.py,Python,40,ELEVATED,0,0,from openai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/duckduckgo.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/tavily.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/exa.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/web_fetch.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/__init__.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/google.py,Python,40,ELEVATED,0,0,from pydantic_ai; from google.genai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/openai.py,Python,40,ELEVATED,0,0,from pydantic_ai; from openai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/sentence_transformers.py,Python,40,ELEVATED,0,0,import pydantic_ai; from pydantic_ai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/instrumented.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/bedrock.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/test.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/voyageai.py,Python,40,ELEVATED,0,0,from pydantic_ai; from voyageai,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/cohere.py,Python,40,ELEVATED,0,0,from pydantic_ai; from cohere,,,ai_sdk_import(2_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/result.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_spec.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_logfire.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_workflow.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_operation_backend.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_transports.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_operation_backend.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_types.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/native_tools/__init__.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/native_tools/_tool_search.py,Python,40,ELEVATED,0,0,,RunContext,,agent_orchestration(RunContext)
+pydantic_ai_slim-2.37.0/pydantic_ai/agent/spec.py,Python,40,ELEVATED,0,0,from pydantic_ai,,,ai_sdk_import(1_sdk(s)_detected)
+pydantic_ai_slim-2.37.0/pydantic_ai/_tool_search.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/_json_schema.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/_mcp_compat.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/__main__.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/_ssrf.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/_cost.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/_griffe.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/settings.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/_sync_stream.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/_otel_messages.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/function_signature.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/_http.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/usage.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/_uuid.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/_warnings.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/_cli/__init__.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/__init__.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/_bedrock_model_names.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/ext/__init__.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/models/_known_model_names.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/models/_abstract.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/models/_reasoning_details.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/__init__.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/__init__.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/ag_ui/__init__.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/ag_ui/_interrupt.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/ag_ui/_multimodal.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/ag_ui/_thinking_0_13.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/ag_ui/_utils.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/ag_ui/_forward_compat.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/ag_ui/_thinking_0_10.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/ag_ui/_event_stream.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/ag_ui/_adapter.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/_web/__init__.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/vercel_ai/__init__.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/vercel_ai/request_types.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/vercel_ai/_models.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/vercel_ai/response_types.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/vercel_ai/_event_stream.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/realtime/__init__.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/realtime/_openai_webrtc.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/realtime/model.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/realtime/_utils.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/realtime/_instrumentation.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/realtime/codec.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/realtime/settings.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/realtime/profiles.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/__init__.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/settings.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/wrapper.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/base.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/__init__.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_operation_names.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_codec.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_operation_backend.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_runtime_toolsets.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/__init__.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_operation_names.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_activity_execution.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_payload_converter.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/__init__.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_operation_names.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/__init__.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_operation_names.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/profiles/amazon.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/profiles/__init__.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/profiles/google.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/profiles/openai.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/profiles/harmony.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/profiles/mistral.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/profiles/moonshotai.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/profiles/meta.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/profiles/grok.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/profiles/anthropic.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/profiles/zai.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/profiles/groq.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/profiles/qwen.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/profiles/cohere.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/profiles/deepseek.py,Python,0,NORMAL,0,0,,,,
+pydantic_ai_slim-2.37.0/pydantic_ai/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
+pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
+pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
+pydantic_ai_slim-2.37.0/pydantic_ai/models/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
+pydantic_ai_slim-2.37.0/pydantic_ai/native_tools/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
+pydantic_ai_slim-2.37.0/pydantic_ai/profiles/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
+pydantic_ai_slim-2.37.0/pydantic_ai/providers/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
+pydantic_ai_slim-2.37.0/pydantic_ai/realtime/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
+pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/AGENTS.md,ARTIFACT,,TIER-1,,,,,,Agent instructions file
+pydantic_ai_slim-2.37.0/pydantic_ai/CLAUDE.md,ARTIFACT,,TIER-1,,,,,,Claude Code instructions
+pydantic_ai_slim-2.37.0/pydantic_ai/models/CLAUDE.md,ARTIFACT,,TIER-1,,,,,,Claude Code instructions
+pydantic_ai_slim-2.37.0/pydantic_ai/native_tools/CLAUDE.md,ARTIFACT,,TIER-1,,,,,,Claude Code instructions
+pydantic_ai_slim-2.37.0/pydantic_ai/realtime/CLAUDE.md,ARTIFACT,,TIER-1,,,,,,Claude Code instructions
+pydantic_ai_slim-2.37.0/pydantic_ai/ui/CLAUDE.md,ARTIFACT,,TIER-1,,,,,,Claude Code instructions

@@ -1,7 +1,7 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-08-31T22:51:31.374203Z",
+  "generated": "2026-09-01T08:10:13.522280Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
@@ -35,42 +35,42 @@
       ],
       "file_count": 36,
       "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/openai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/bedrock_mantle.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/cerebras.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/crusoe.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/ollama.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/openai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/openrouter.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/snowflake.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/zai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/_openai_compatible.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/alibaba.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/azure.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock_mantle.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/cerebras.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/crusoe.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/deepseek.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/fireworks.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/github.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/heroku.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/litellm.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/moonshotai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/nebius.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/ollama.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openrouter.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/ovhcloud.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/sambanova.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/snowflake.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/together.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/vercel.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/zai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/_openai_protocol.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/azure.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/openai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/xai.py"
+        "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/openai.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/bedrock_mantle.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/cerebras.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/crusoe.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/ollama.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/openai.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/openrouter.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/snowflake.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/zai.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/_openai_compatible.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/alibaba.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/azure.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/bedrock_mantle.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/cerebras.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/crusoe.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/deepseek.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/fireworks.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/gateway.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/github.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/heroku.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/litellm.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/moonshotai.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/nebius.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/ollama.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/openai.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/openrouter.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/ovhcloud.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/sambanova.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/snowflake.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/together.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/vercel.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/zai.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/realtime/_openai_protocol.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/realtime/azure.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/realtime/openai.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/realtime/xai.py"
       ]
     },
     {
@@ -84,12 +84,12 @@
       ],
       "file_count": 6,
       "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/google.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/google.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/google.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/google_cloud.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/google.py"
+        "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/google.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/google.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/gateway.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/google.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/google_cloud.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/realtime/google.py"
       ]
     },
     {
@@ -103,10 +103,10 @@
       ],
       "file_count": 4,
       "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/_anthropic_bedrock_count_tokens.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/anthropic.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/anthropic.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py"
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/_anthropic_bedrock_count_tokens.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/anthropic.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/anthropic.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/gateway.py"
       ]
     },
     {
@@ -120,9 +120,9 @@
       ],
       "file_count": 3,
       "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/cohere.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/cohere.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/cohere.py"
+        "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/cohere.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/cohere.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/cohere.py"
       ]
     },
     {
@@ -137,9 +137,9 @@
       ],
       "file_count": 3,
       "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/groq.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/groq.py"
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/groq.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/gateway.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/groq.py"
       ],
       "endpoint": "api.groq.com",
       "endpoints": [
@@ -157,8 +157,8 @@
       ],
       "file_count": 2,
       "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/bedrock.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock.py"
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/bedrock.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/bedrock.py"
       ],
       "endpoint": "bedrock-runtime",
       "endpoints": [
@@ -176,8 +176,8 @@
       ],
       "file_count": 2,
       "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/huggingface.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/huggingface.py"
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/huggingface.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/huggingface.py"
       ]
     },
     {
@@ -191,8 +191,8 @@
       ],
       "file_count": 2,
       "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/mistral.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/mistral.py"
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/mistral.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/mistral.py"
       ]
     },
     {
@@ -206,8 +206,8 @@
       ],
       "file_count": 2,
       "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/voyageai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/voyageai.py"
+        "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/voyageai.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/voyageai.py"
       ]
     },
     {
@@ -222,7 +222,7 @@
       ],
       "file_count": 1,
       "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/deepseek.py"
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/deepseek.py"
       ],
       "endpoint": "api.deepseek.com",
       "endpoints": [
@@ -240,7 +240,7 @@
       ],
       "file_count": 1,
       "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/fireworks.py"
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/fireworks.py"
       ],
       "endpoint": "api.fireworks.ai",
       "endpoints": [
@@ -258,7 +258,7 @@
       ],
       "file_count": 1,
       "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/google.py"
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/google.py"
       ],
       "endpoint": "generativelanguage.googleapis.com",
       "endpoints": [
@@ -276,7 +276,7 @@
       ],
       "file_count": 1,
       "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/together.py"
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/together.py"
       ],
       "endpoint": "api.together.xyz",
       "endpoints": [
@@ -294,7 +294,7 @@
       ],
       "file_count": 1,
       "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openrouter.py"
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/openrouter.py"
       ],
       "endpoint": "openrouter.ai",
       "endpoints": [
@@ -312,7 +312,7 @@
       ],
       "file_count": 1,
       "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/xai.py"
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/xai.py"
       ],
       "endpoint": "api.x.ai",
       "endpoints": [
@@ -332,174 +332,174 @@
       ],
       "file_count": 168,
       "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/_agent_graph.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/_cli/web.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/_history_processor.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/_instructions.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/_instrumentation.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/_output.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/_parts_manager.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/_run_context.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/_spec.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/_template.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/_thinking_part.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/_tool_execution.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/_utils.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/agent/__init__.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/agent/abstract.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/agent/spec.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/agent/wrapper.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/__init__.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_deferred_capability_loader.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_dynamic.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_ordering.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_pending_messages.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_tool_search.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/abstract.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/capability.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/combined.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/content_filter.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/deferred_tool_handler.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/durable_operation.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/hooks.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/image_generation.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/include_return_schemas.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/instrumentation.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/mcp.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/native_or_local.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/native_tool.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/prefix_tools.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/prepare_tools.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/process_event_stream.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/process_history.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/reinject_system_prompt.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/resolve_model_id.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/select_model.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/set_tool_metadata.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/thinking.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/thread_executor.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/toolset.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/web_fetch.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/web_search.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/wrapper.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/x_search.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/duckduckgo.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/exa.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/image_generation.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/tavily.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/web_fetch.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/x_search.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/concurrency.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/direct.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_base.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_capability_operation.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_operation.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_spec.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_toolset.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_utils.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_agent.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_durability.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_mcp_toolset.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_model.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_operation_backend.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_utils.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_agent.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_cache_policies.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_durability.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_dynamic_toolset.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_function_toolset.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_mcp_toolset.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_model.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_operation_backend.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_toolset.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_types.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_agent.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_durability.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_dynamic_toolset.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_function_toolset.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_logfire.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_mcp_toolset.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_model.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_operation_backend.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_run_context.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_toolset.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_transports.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_workflow.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/__init__.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/bedrock.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/cohere.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/google.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/instrumented.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/openai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/result.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/sentence_transformers.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/test.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/voyageai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/ext/langchain.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/format_prompt.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/mcp.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/messages.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/_tool_choice.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/anthropic.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/bedrock.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/cohere.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/concurrency.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/fallback.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/instrumented.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/openai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/native_tools/__init__.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/output.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/_openai_compatible.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/alibaba.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/anthropic.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/azure.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock_mantle.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/cerebras.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/cohere.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/crusoe.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/deepseek.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/fireworks.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/github.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/google.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/google_cloud.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/groq.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/heroku.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/huggingface.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/litellm.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/mistral.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/moonshotai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/nebius.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/ollama.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openrouter.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/ovhcloud.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/sambanova.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/sentence_transformers.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/snowflake.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/together.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/vercel.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/voyageai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/xai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/providers/zai.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/result.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/retries.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/run.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/template.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/tools.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_deferred_capability_loader.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_instruction_collection.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/approval_required.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/function.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_adapter.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_event_stream.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_messages_builder.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/_hosts.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/api.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/app.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/_adapter.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/_utils.py"
+        "pydantic_ai_slim-2.37.0/pydantic_ai/_agent_graph.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/_cli/web.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/_history_processor.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/_instructions.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/_instrumentation.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/_output.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/_parts_manager.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/_run_context.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/_spec.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/_template.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/_thinking_part.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/_tool_execution.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/_utils.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/agent/__init__.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/agent/abstract.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/agent/spec.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/agent/wrapper.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/__init__.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/_deferred_capability_loader.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/_dynamic.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/_ordering.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/_pending_messages.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/_tool_search.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/abstract.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/capability.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/combined.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/content_filter.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/deferred_tool_handler.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/durable_operation.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/hooks.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/image_generation.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/include_return_schemas.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/instrumentation.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/mcp.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/native_or_local.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/native_tool.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/prefix_tools.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/prepare_tools.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/process_event_stream.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/process_history.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/reinject_system_prompt.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/resolve_model_id.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/select_model.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/set_tool_metadata.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/thinking.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/thread_executor.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/toolset.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/web_fetch.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/web_search.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/wrapper.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/x_search.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/duckduckgo.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/exa.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/image_generation.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/tavily.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/web_fetch.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/x_search.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/concurrency.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/direct.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_base.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_capability_operation.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_operation.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_spec.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_toolset.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_utils.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_agent.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_durability.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_mcp_toolset.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_model.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_operation_backend.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_utils.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_agent.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_cache_policies.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_durability.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_dynamic_toolset.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_function_toolset.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_mcp_toolset.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_model.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_operation_backend.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_toolset.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_types.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_agent.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_durability.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_dynamic_toolset.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_function_toolset.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_logfire.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_mcp_toolset.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_model.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_operation_backend.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_run_context.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_toolset.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_transports.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_workflow.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/__init__.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/bedrock.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/cohere.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/google.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/instrumented.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/openai.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/result.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/sentence_transformers.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/test.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/voyageai.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/ext/langchain.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/format_prompt.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/mcp.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/messages.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/_tool_choice.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/anthropic.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/bedrock.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/cohere.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/concurrency.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/fallback.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/instrumented.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/openai.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/native_tools/__init__.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/output.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/_openai_compatible.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/alibaba.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/anthropic.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/azure.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/bedrock.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/bedrock_mantle.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/cerebras.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/cohere.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/crusoe.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/deepseek.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/fireworks.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/gateway.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/github.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/google.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/google_cloud.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/groq.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/heroku.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/huggingface.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/litellm.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/mistral.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/moonshotai.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/nebius.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/ollama.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/openai.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/openrouter.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/ovhcloud.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/sambanova.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/sentence_transformers.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/snowflake.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/together.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/vercel.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/voyageai.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/xai.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/providers/zai.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/result.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/retries.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/run.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/template.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/tools.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/_deferred_capability_loader.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/_instruction_collection.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/approval_required.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/function.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/ui/_adapter.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/ui/_event_stream.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/ui/_messages_builder.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/ui/_web/_hosts.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/ui/_web/api.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/ui/_web/app.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/ui/vercel_ai/_adapter.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/ui/vercel_ai/_utils.py"
       ]
     },
     {
@@ -516,10 +516,10 @@
       ],
       "file_count": 4,
       "files": [
-        "pydantic_ai_slim-2.36.0/pydantic_ai/_mcp.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/__init__.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/mcp.py",
-        "pydantic_ai_slim-2.36.0/pydantic_ai/models/mcp_sampling.py"
+        "pydantic_ai_slim-2.37.0/pydantic_ai/_mcp.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/__init__.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/mcp.py",
+        "pydantic_ai_slim-2.37.0/pydantic_ai/models/mcp_sampling.py"
       ]
     }
   ],
@@ -528,97 +528,97 @@
       "type": "agent-artifact",
       "name": "Agent instructions file",
       "tier": 1,
-      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/AGENTS.md"
+      "path": "pydantic_ai_slim-2.37.0/pydantic_ai/AGENTS.md"
     },
     {
       "type": "agent-artifact",
       "name": "Agent instructions file",
       "tier": 1,
-      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/AGENTS.md"
+      "path": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/AGENTS.md"
     },
     {
       "type": "agent-artifact",
       "name": "Agent instructions file",
       "tier": 1,
-      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/AGENTS.md"
+      "path": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/AGENTS.md"
     },
     {
       "type": "agent-artifact",
       "name": "Agent instructions file",
       "tier": 1,
-      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/AGENTS.md"
+      "path": "pydantic_ai_slim-2.37.0/pydantic_ai/models/AGENTS.md"
     },
     {
       "type": "agent-artifact",
       "name": "Agent instructions file",
       "tier": 1,
-      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/native_tools/AGENTS.md"
+      "path": "pydantic_ai_slim-2.37.0/pydantic_ai/native_tools/AGENTS.md"
     },
     {
       "type": "agent-artifact",
       "name": "Agent instructions file",
       "tier": 1,
-      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/profiles/AGENTS.md"
+      "path": "pydantic_ai_slim-2.37.0/pydantic_ai/profiles/AGENTS.md"
     },
     {
       "type": "agent-artifact",
       "name": "Agent instructions file",
       "tier": 1,
-      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/AGENTS.md"
+      "path": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/AGENTS.md"
     },
     {
       "type": "agent-artifact",
       "name": "Agent instructions file",
       "tier": 1,
-      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/AGENTS.md"
+      "path": "pydantic_ai_slim-2.37.0/pydantic_ai/realtime/AGENTS.md"
     },
     {
       "type": "agent-artifact",
       "name": "Agent instructions file",
       "tier": 1,
-      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/AGENTS.md"
+      "path": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/AGENTS.md"
     },
     {
       "type": "agent-artifact",
       "name": "Agent instructions file",
       "tier": 1,
-      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/AGENTS.md"
+      "path": "pydantic_ai_slim-2.37.0/pydantic_ai/ui/AGENTS.md"
     },
     {
       "type": "agent-artifact",
       "name": "Claude Code instructions",
       "tier": 1,
-      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/CLAUDE.md"
+      "path": "pydantic_ai_slim-2.37.0/pydantic_ai/CLAUDE.md"
     },
     {
       "type": "agent-artifact",
       "name": "Claude Code instructions",
       "tier": 1,
-      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/models/CLAUDE.md"
+      "path": "pydantic_ai_slim-2.37.0/pydantic_ai/models/CLAUDE.md"
     },
     {
       "type": "agent-artifact",
       "name": "Claude Code instructions",
       "tier": 1,
-      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/native_tools/CLAUDE.md"
+      "path": "pydantic_ai_slim-2.37.0/pydantic_ai/native_tools/CLAUDE.md"
     },
     {
       "type": "agent-artifact",
       "name": "Claude Code instructions",
       "tier": 1,
-      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/CLAUDE.md"
+      "path": "pydantic_ai_slim-2.37.0/pydantic_ai/realtime/CLAUDE.md"
     },
     {
       "type": "agent-artifact",
       "name": "Claude Code instructions",
       "tier": 1,
-      "path": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/CLAUDE.md"
+      "path": "pydantic_ai_slim-2.37.0/pydantic_ai/ui/CLAUDE.md"
     }
   ],
   "committed_credentials": [],
   "findings": [
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/messages.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/messages.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 100,
@@ -635,7 +635,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/bedrock.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/bedrock.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 100,
@@ -654,7 +654,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/huggingface.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/huggingface.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 100,
@@ -671,7 +671,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/openai.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/openai.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 98,
@@ -688,7 +688,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_adapter.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/ui/_adapter.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 98,
@@ -705,7 +705,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_agent_graph.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_agent_graph.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -721,7 +721,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_output.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_output.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -737,7 +737,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_run_context.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_run_context.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -753,7 +753,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/mcp.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/mcp.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -769,7 +769,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/run.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/run.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -785,7 +785,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/output.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/output.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -801,7 +801,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_utils.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_utils.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -817,7 +817,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_instructions.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_instructions.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -833,7 +833,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/template.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/template.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -849,7 +849,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/tools.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/tools.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -865,7 +865,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/result.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/result.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -881,7 +881,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_history_processor.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_history_processor.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -897,7 +897,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/capability.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/capability.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -913,7 +913,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/reinject_system_prompt.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/reinject_system_prompt.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -929,7 +929,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/__init__.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/__init__.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -945,7 +945,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_dynamic.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/_dynamic.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -961,7 +961,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_tool_search.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/_tool_search.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -977,7 +977,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/process_event_stream.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/process_event_stream.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -993,7 +993,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/image_generation.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/image_generation.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1009,7 +1009,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/web_search.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/web_search.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1025,7 +1025,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/mcp.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/mcp.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1041,7 +1041,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/process_history.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/process_history.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1057,7 +1057,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/instrumentation.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/instrumentation.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1073,7 +1073,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/hooks.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/hooks.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1089,7 +1089,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/include_return_schemas.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/include_return_schemas.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1105,7 +1105,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/thread_executor.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/thread_executor.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1121,7 +1121,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/combined.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/combined.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1137,7 +1137,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/native_or_local.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/native_or_local.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1153,7 +1153,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_deferred_capability_loader.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/_deferred_capability_loader.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1169,7 +1169,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/x_search.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/x_search.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1185,7 +1185,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/wrapper.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/wrapper.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1201,7 +1201,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/deferred_tool_handler.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/deferred_tool_handler.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1217,7 +1217,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_pending_messages.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/_pending_messages.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1233,7 +1233,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/web_fetch.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/web_fetch.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1249,7 +1249,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/prepare_tools.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/prepare_tools.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1265,7 +1265,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/set_tool_metadata.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/set_tool_metadata.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1281,7 +1281,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/abstract.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/abstract.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1297,7 +1297,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/content_filter.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/content_filter.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1313,7 +1313,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/google.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/google.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1330,7 +1330,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/instrumented.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/instrumented.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1346,7 +1346,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/mcp_sampling.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/mcp_sampling.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1362,7 +1362,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/mistral.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/mistral.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1379,7 +1379,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/fallback.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/fallback.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1395,7 +1395,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/anthropic.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/anthropic.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1411,7 +1411,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/concurrency.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/concurrency.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1427,7 +1427,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/groq.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/groq.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1443,7 +1443,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/_tool_choice.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/_tool_choice.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1459,7 +1459,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_instruction_collection.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/_instruction_collection.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1475,7 +1475,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_deferred_capability_loader.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/_deferred_capability_loader.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1491,7 +1491,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/function.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/function.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1507,7 +1507,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/approval_required.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/approval_required.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1523,7 +1523,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_event_stream.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/ui/_event_stream.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1539,7 +1539,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/image_generation.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/image_generation.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1555,7 +1555,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/x_search.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/x_search.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1571,7 +1571,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_toolset.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_toolset.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1587,7 +1587,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_utils.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_utils.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1603,7 +1603,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_base.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_base.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1619,7 +1619,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_operation.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_operation.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1635,7 +1635,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_capability_operation.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_capability_operation.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1651,7 +1651,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_agent.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_agent.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1667,7 +1667,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_run_context.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_run_context.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1683,7 +1683,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_toolset.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_toolset.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1699,7 +1699,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_dynamic_toolset.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_dynamic_toolset.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1715,7 +1715,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_mcp_toolset.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_mcp_toolset.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1731,7 +1731,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_function_toolset.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_function_toolset.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1747,7 +1747,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_model.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_model.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1763,7 +1763,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_durability.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_durability.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1779,7 +1779,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_agent.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_agent.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1795,7 +1795,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_toolset.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_toolset.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1811,7 +1811,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_dynamic_toolset.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_dynamic_toolset.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1827,7 +1827,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_mcp_toolset.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_mcp_toolset.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1843,7 +1843,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_function_toolset.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_function_toolset.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1859,7 +1859,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_cache_policies.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_cache_policies.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1875,7 +1875,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_model.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_model.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1891,7 +1891,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_durability.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_durability.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1907,7 +1907,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_agent.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_agent.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1923,7 +1923,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_utils.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_utils.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1939,7 +1939,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_mcp_toolset.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_mcp_toolset.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1955,7 +1955,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_operation_backend.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_operation_backend.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1971,7 +1971,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_model.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_model.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1987,23 +1987,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/dbos/_durability.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(RunContext,agent.run()"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/agent/__init__.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/dbos/_durability.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -2019,7 +2003,23 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/agent/wrapper.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/agent/__init__.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(RunContext,agent.run()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/agent/wrapper.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -2035,7 +2035,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/agent/abstract.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/agent/abstract.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -2051,7 +2051,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_instrumentation.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_instrumentation.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 58,
@@ -2067,7 +2067,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/_openai_protocol.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/realtime/_openai_protocol.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 58,
@@ -2083,7 +2083,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/__init__.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/__init__.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2098,7 +2098,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_enqueue.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_enqueue.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2113,7 +2113,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_deferred.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_deferred.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2128,7 +2128,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_function_schema.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_function_schema.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2143,7 +2143,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_parts_manager.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_parts_manager.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2158,7 +2158,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/format_prompt.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/format_prompt.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2173,7 +2173,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/exceptions.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/exceptions.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2188,7 +2188,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_mcp.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_mcp.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2203,7 +2203,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_deferred_capabilities.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_deferred_capabilities.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2218,7 +2218,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/retries.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/retries.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2233,7 +2233,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_template.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_template.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2248,7 +2248,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/tool_manager.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/tool_manager.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2263,7 +2263,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_thinking_part.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_thinking_part.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2278,7 +2278,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/concurrency.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/concurrency.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2293,7 +2293,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/direct.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/direct.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2308,7 +2308,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_spec.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_spec.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2323,7 +2323,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_cancel.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_cancel.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2338,7 +2338,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_system_prompt.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_system_prompt.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2353,7 +2353,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_tool_execution.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_tool_execution.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2368,7 +2368,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/_cli/web.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/_cli/web.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2383,7 +2383,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/alibaba.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/alibaba.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2398,7 +2398,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/google.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/google.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2413,7 +2413,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/heroku.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/heroku.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2428,7 +2428,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/_openai_compatible.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/_openai_compatible.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2443,7 +2443,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openai.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/openai.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2458,7 +2458,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/nebius.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/nebius.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2473,7 +2473,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/google_cloud.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/google_cloud.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2488,7 +2488,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/together.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/together.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2504,7 +2504,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/xai.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/xai.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2520,7 +2520,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/sentence_transformers.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/sentence_transformers.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2535,7 +2535,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/cerebras.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/cerebras.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2550,7 +2550,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/fireworks.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/fireworks.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2566,7 +2566,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/bedrock.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2582,7 +2582,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/bedrock_mantle.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/bedrock_mantle.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2597,7 +2597,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/mistral.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/mistral.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2613,7 +2613,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/crusoe.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/crusoe.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2628,7 +2628,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/moonshotai.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/moonshotai.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2643,7 +2643,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/openrouter.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/openrouter.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2659,7 +2659,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/anthropic.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/anthropic.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2674,7 +2674,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/zai.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/zai.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2689,7 +2689,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/ollama.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/ollama.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2704,7 +2704,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/gateway.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/gateway.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2719,7 +2719,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/ovhcloud.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/ovhcloud.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2734,7 +2734,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/groq.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/groq.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2750,7 +2750,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/litellm.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/litellm.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2765,7 +2765,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/voyageai.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/voyageai.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2780,7 +2780,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/cohere.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/cohere.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2795,7 +2795,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/deepseek.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/deepseek.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2813,7 +2813,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/huggingface.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/huggingface.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2828,7 +2828,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/github.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/github.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2843,7 +2843,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/azure.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/azure.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2858,7 +2858,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/snowflake.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/snowflake.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2873,7 +2873,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/vercel.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/vercel.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2888,7 +2888,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/providers/sambanova.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/providers/sambanova.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2903,7 +2903,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/native_tool.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/native_tool.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2918,7 +2918,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/durable_operation.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/durable_operation.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2933,7 +2933,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/prefix_tools.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/prefix_tools.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2948,7 +2948,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/resolve_model_id.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/resolve_model_id.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2963,7 +2963,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_deferred_capabilities.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/_deferred_capabilities.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2978,7 +2978,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/select_model.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/select_model.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -2993,7 +2993,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/toolset.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/toolset.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3008,7 +3008,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/thinking.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/thinking.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3023,7 +3023,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/capabilities/_ordering.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/capabilities/_ordering.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3038,7 +3038,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/ext/langchain.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/ext/langchain.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3053,7 +3053,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/__init__.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/__init__.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3068,7 +3068,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/_continuation.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/_continuation.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3083,7 +3083,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/xai.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/xai.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3098,7 +3098,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/cerebras.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/cerebras.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3113,7 +3113,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/bedrock_mantle.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/bedrock_mantle.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3128,7 +3128,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/crusoe.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/crusoe.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3143,7 +3143,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/openrouter.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/openrouter.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3158,7 +3158,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/zai.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/zai.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3173,7 +3173,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/ollama.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/ollama.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3188,7 +3188,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/test.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/test.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3203,7 +3203,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/wrapper.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/wrapper.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3218,7 +3218,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/function.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/function.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3233,7 +3233,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/cohere.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/cohere.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3248,7 +3248,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/_anthropic_bedrock_count_tokens.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/_anthropic_bedrock_count_tokens.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3263,7 +3263,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/models/snowflake.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/models/snowflake.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3278,7 +3278,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_dynamic.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/_dynamic.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3293,7 +3293,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_tool_search.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/_tool_search.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3308,7 +3308,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/set_metadata.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/set_metadata.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3323,7 +3323,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/prepared.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/prepared.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3338,7 +3338,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/prefixed.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/prefixed.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3353,7 +3353,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/deferred_loading.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/deferred_loading.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3368,7 +3368,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/include_return_schemas.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/include_return_schemas.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3383,7 +3383,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/combined.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/combined.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3398,7 +3398,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/wrapper.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/wrapper.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3413,7 +3413,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/external.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/external.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3428,7 +3428,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/_capability_owned.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/_capability_owned.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3443,7 +3443,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/filtered.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/filtered.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3458,7 +3458,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/renamed.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/renamed.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3473,7 +3473,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/toolsets/abstract.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/toolsets/abstract.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3488,7 +3488,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_messages_builder.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/ui/_messages_builder.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3503,7 +3503,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/app.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/ui/_web/app.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3518,7 +3518,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/_hosts.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/ui/_web/_hosts.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3533,7 +3533,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/_web/api.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/ui/_web/api.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3548,7 +3548,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/_utils.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/ui/vercel_ai/_utils.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3563,7 +3563,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/ui/vercel_ai/_adapter.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/ui/vercel_ai/_adapter.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3578,7 +3578,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/google.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/realtime/google.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3593,7 +3593,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/_session.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/realtime/_session.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3608,7 +3608,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/openai.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/realtime/openai.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3623,7 +3623,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/xai.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/realtime/xai.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3638,7 +3638,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/realtime/azure.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/realtime/azure.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3653,7 +3653,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/duckduckgo.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/duckduckgo.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3668,7 +3668,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/tavily.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/tavily.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3683,7 +3683,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/exa.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/exa.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3698,7 +3698,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/common_tools/web_fetch.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/common_tools/web_fetch.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3713,7 +3713,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/__init__.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/__init__.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3728,7 +3728,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/google.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/google.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3743,7 +3743,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/openai.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/openai.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3758,7 +3758,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/sentence_transformers.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/sentence_transformers.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3773,7 +3773,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/instrumented.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/instrumented.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3788,7 +3788,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/bedrock.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/bedrock.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3803,7 +3803,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/test.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/test.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3818,7 +3818,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/voyageai.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/voyageai.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3833,7 +3833,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/cohere.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/cohere.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3848,7 +3848,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/embeddings/result.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/embeddings/result.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3863,7 +3863,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/_spec.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/_spec.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3878,7 +3878,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_logfire.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_logfire.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3893,7 +3893,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_workflow.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_workflow.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3908,7 +3908,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_operation_backend.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_operation_backend.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3923,7 +3923,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/temporal/_transports.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/temporal/_transports.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3938,7 +3938,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_operation_backend.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_operation_backend.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3953,7 +3953,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/durable_exec/prefect/_types.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/durable_exec/prefect/_types.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3968,7 +3968,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/native_tools/__init__.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/native_tools/__init__.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3983,7 +3983,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/native_tools/_tool_search.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/native_tools/_tool_search.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -3998,7 +3998,7 @@
       }
     },
     {
-      "file": "pydantic_ai_slim-2.36.0/pydantic_ai/agent/spec.py",
+      "file": "pydantic_ai_slim-2.37.0/pydantic_ai/agent/spec.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,

@@ -1,15 +1,15 @@
 {
   "summary": {
-    "total_files": 210,
+    "total_files": 212,
     "flagged_files": 1,
     "critical_files": 0,
     "high_files": 0,
     "elevated_files": 1,
-    "normal_files": 209,
+    "normal_files": 211,
     "flagged_ai_files": 1,
     "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 210 file(s). 0 HIGH, 1 ELEVATED. "
+    "summary_text": "Scanned 212 file(s). 0 HIGH, 1 ELEVATED. "
   },
   "sdk_inventory": {},
   "agent_artifacts": {
@@ -22,51 +22,51 @@
     "items": [
       {
         "kind": "Private key (PEM)",
-        "file": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/detect_private_key.rs",
+        "file": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/detect_private_key.rs",
         "line": 133,
         "sample": "-----BEG\u2026 (31 chars)"
       },
       {
         "kind": "Private key (PEM)",
-        "file": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/detect_private_key.rs",
+        "file": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/detect_private_key.rs",
         "line": 147,
         "sample": "-----BEG\u2026 (31 chars)"
       },
       {
         "kind": "Private key (PEM)",
-        "file": "prek-0.5.0/crates/prek/tests/builtin_hooks.rs",
-        "line": 2127,
+        "file": "prek-0.5.1/crates/prek/tests/builtin_hooks.rs",
+        "line": 1943,
         "sample": "-----BEG\u2026 (31 chars)"
       },
       {
         "kind": "Private key (PEM)",
-        "file": "prek-0.5.0/crates/prek/tests/builtin_hooks.rs",
-        "line": 2129,
+        "file": "prek-0.5.1/crates/prek/tests/builtin_hooks.rs",
+        "line": 1947,
         "sample": "-----BEG\u2026 (31 chars)"
       },
       {
         "kind": "Private key (PEM)",
-        "file": "prek-0.5.0/crates/prek/tests/builtin_hooks.rs",
-        "line": 2131,
+        "file": "prek-0.5.1/crates/prek/tests/builtin_hooks.rs",
+        "line": 1951,
         "sample": "-----BEG\u2026 (30 chars)"
       },
       {
         "kind": "Private key (PEM)",
-        "file": "prek-0.5.0/crates/prek/tests/builtin_hooks.rs",
-        "line": 2133,
+        "file": "prek-0.5.1/crates/prek/tests/builtin_hooks.rs",
+        "line": 1955,
         "sample": "-----BEG\u2026 (35 chars)"
       },
       {
         "kind": "Private key (PEM)",
-        "file": "prek-0.5.0/crates/prek/tests/builtin_hooks.rs",
-        "line": 2143,
+        "file": "prek-0.5.1/crates/prek/tests/builtin_hooks.rs",
+        "line": 1971,
         "sample": "-----BEG\u2026 (31 chars)"
       }
     ]
   },
   "files": [
     {
-      "rel_path": "prek-0.5.0/python/prek/__main__.py",
+      "rel_path": "prek-0.5.1/python/prek/__main__.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -82,7 +82,7 @@
       ]
     },
     {
-      "rel_path": "prek-0.5.0/python/prek/__init__.py",
+      "rel_path": "prek-0.5.1/python/prek/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -94,7 +94,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/python/prek/_find_prek.py",
+      "rel_path": "prek-0.5.1/python/prek/_find_prek.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -106,7 +106,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/build.rs",
+      "rel_path": "prek-0.5.1/crates/prek/build.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -118,7 +118,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/terminal.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/terminal.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -130,7 +130,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/profiler.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/profiler.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -142,7 +142,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/fs.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/fs.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -154,7 +154,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/settings.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/settings.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -166,7 +166,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/process.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/process.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -178,7 +178,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/checksum.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/checksum.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -190,7 +190,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/warnings.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/warnings.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -202,7 +202,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hook.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hook.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -214,7 +214,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/archive.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/archive.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -226,7 +226,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/run.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/run.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -238,7 +238,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hook_entry.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hook_entry.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -250,7 +250,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/version.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/version.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -262,7 +262,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/http.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/http.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -274,7 +274,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/store.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/store.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -286,7 +286,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/workspace.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/workspace.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -298,7 +298,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cleanup.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cleanup.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -310,7 +310,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/schema.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/schema.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -322,7 +322,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/yaml.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/yaml.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -334,7 +334,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/git.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/git.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -346,7 +346,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/resource_limit.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/resource_limit.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -358,7 +358,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/install_source.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/install_source.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -370,7 +370,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/printer.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/printer.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -382,7 +382,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/main.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/main.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -394,7 +394,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -406,7 +406,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/meta_hooks.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/meta_hooks.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -418,7 +418,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/builtin_hooks/check_json5.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/builtin_hooks/check_json5.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -430,7 +430,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/builtin_hooks/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/builtin_hooks/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -442,7 +442,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/builtin_hooks/pattern.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/builtin_hooks/pattern.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -454,7 +454,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/check_added_large_files.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/check_added_large_files.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -466,7 +466,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/no_commit_to_branch.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/no_commit_to_branch.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -478,7 +478,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/fix_trailing_whitespace.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/fix_trailing_whitespace.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -490,7 +490,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/check_executables_have_shebangs.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/check_executables_have_shebangs.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -502,7 +502,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/check_toml.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/check_toml.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -514,7 +514,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/check_symlinks.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/check_symlinks.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -526,7 +526,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/check_case_conflict.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/check_case_conflict.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -538,7 +538,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/destroyed_symlinks.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/destroyed_symlinks.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -550,7 +550,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -562,7 +562,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/requirements_txt_fixer.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/requirements_txt_fixer.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -574,7 +574,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/check_illegal_windows_names.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/check_illegal_windows_names.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -586,7 +586,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/check_json.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/check_json.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -598,7 +598,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/check_shebang_scripts_are_executable.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/check_shebang_scripts_are_executable.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -610,7 +610,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/file_contents_sorter.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/file_contents_sorter.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -622,7 +622,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/check_vcs_permalinks.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/check_vcs_permalinks.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -634,7 +634,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/detect_private_key.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/detect_private_key.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -646,7 +646,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/forbid_new_submodules.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/forbid_new_submodules.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -658,7 +658,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/fix_byte_order_marker.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/fix_byte_order_marker.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -670,7 +670,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/check_yaml.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/check_yaml.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -682,7 +682,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/mixed_line_ending.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/mixed_line_ending.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -694,7 +694,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/pretty_format_json.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/pretty_format_json.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -706,7 +706,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/shebangs.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/shebangs.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -718,7 +718,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/fix_end_of_file.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/fix_end_of_file.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -730,7 +730,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/check_xml.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/check_xml.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -742,7 +742,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/hooks/pre_commit_hooks/check_merge_conflict.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/hooks/pre_commit_hooks/check_merge_conflict.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -754,7 +754,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/config/hook.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/config/hook.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -766,7 +766,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/config/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/config/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -778,7 +778,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/config/update.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/config/update.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -790,7 +790,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/config/repo.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/config/repo.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -802,7 +802,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/config/pattern.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/config/pattern.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -814,7 +814,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/config/priority.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/config/priority.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -826,7 +826,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/fail.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/fail.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -838,7 +838,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/julia.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/julia.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -850,7 +850,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/system.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/system.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -862,7 +862,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/docker.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/docker.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -874,7 +874,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/docker_image.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/docker_image.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -886,7 +886,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/php.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/php.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -898,7 +898,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/lua.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/lua.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -910,7 +910,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/conda.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/conda.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -922,7 +922,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -934,7 +934,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/script.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/script.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -946,7 +946,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/version.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/version.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -958,7 +958,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/r.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/r.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -970,7 +970,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/dart.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/dart.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -982,7 +982,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/perl.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/perl.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -994,7 +994,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/coursier.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/coursier.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1006,7 +1006,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/swift.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/swift.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1018,7 +1018,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/haskell.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/haskell.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1030,7 +1030,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/python/python.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/python/python.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1042,7 +1042,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/python/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/python/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1054,7 +1054,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/python/uv.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/python/uv.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1066,7 +1066,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/python/pyproject.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/python/pyproject.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1078,7 +1078,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/python/version.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/python/version.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1090,7 +1090,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/python/pep723.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/python/pep723.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1102,7 +1102,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/bun/bun.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/bun/bun.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1114,7 +1114,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/bun/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/bun/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1126,7 +1126,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/bun/version.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/bun/version.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1138,7 +1138,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/bun/installer.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/bun/installer.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1150,7 +1150,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/rust/rustup.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/rust/rustup.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1162,7 +1162,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/rust/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/rust/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1174,7 +1174,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/rust/version.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/rust/version.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1186,7 +1186,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/rust/installer.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/rust/installer.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1198,7 +1198,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/rust/rust.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/rust/rust.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1210,7 +1210,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/golang/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/golang/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1222,7 +1222,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/golang/version.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/golang/version.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1234,7 +1234,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/golang/installer.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/golang/installer.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1246,7 +1246,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/golang/gomod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/golang/gomod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1258,7 +1258,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/golang/golang.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/golang/golang.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1270,7 +1270,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/deno/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/deno/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1282,7 +1282,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/deno/deno.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/deno/deno.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1294,7 +1294,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/deno/version.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/deno/version.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1306,7 +1306,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/deno/installer.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/deno/installer.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1318,7 +1318,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/mise/mise.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/mise/mise.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1330,7 +1330,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/mise/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/mise/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1342,7 +1342,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/mise/installer.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/mise/installer.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1354,7 +1354,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/pygrep/script.py",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/pygrep/script.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1366,7 +1366,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/pygrep/pygrep.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/pygrep/pygrep.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1378,7 +1378,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/pygrep/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/pygrep/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1390,7 +1390,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/dotnet/dotnet.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/dotnet/dotnet.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1402,7 +1402,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/dotnet/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/dotnet/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1414,7 +1414,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/dotnet/version.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/dotnet/version.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1426,7 +1426,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/dotnet/installer.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/dotnet/installer.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1438,7 +1438,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/ruby/gem.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/ruby/gem.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1450,7 +1450,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/ruby/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/ruby/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1462,7 +1462,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/ruby/version.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/ruby/version.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1474,7 +1474,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/ruby/installer.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/ruby/installer.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1486,7 +1486,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/ruby/ruby.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/ruby/ruby.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1498,7 +1498,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/node/node.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/node/node.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1510,7 +1510,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/node/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/node/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1522,7 +1522,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/node/version.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/node/version.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1534,7 +1534,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/languages/node/installer.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/languages/node/installer.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1546,7 +1546,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/cache_size.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/cache_size.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1558,7 +1558,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/sample_config.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/sample_config.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1570,7 +1570,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/reporter.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/reporter.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1582,7 +1582,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/try_repo.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/try_repo.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1594,7 +1594,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/cache_gc.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/cache_gc.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1606,7 +1606,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/completion.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/completion.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1618,7 +1618,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1630,7 +1630,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/validate.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/validate.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1642,7 +1642,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/yaml_to_toml.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/yaml_to_toml.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1654,7 +1654,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/list.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/init.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1666,7 +1666,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/install.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/list.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1678,7 +1678,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/exec.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/install.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1690,7 +1690,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/hook_impl.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/exec.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1702,7 +1702,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/self_update.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/hook_impl.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1714,7 +1714,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/cache_clean.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/self_update.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1726,7 +1726,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/identify.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/cache_clean.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1738,7 +1738,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/list_builtins.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/identify.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1750,7 +1750,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/update/source.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/list_builtins.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1762,7 +1762,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/update/display.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/update/source.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1774,7 +1774,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/update/repository.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/update/display.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1786,7 +1786,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/update/config.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/update/repository.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1798,7 +1798,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/update/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/update/config.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1810,7 +1810,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/run/diff.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/update/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1822,7 +1822,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/run/filter.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/run/diff.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1834,7 +1834,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/run/reporter.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/run/filter.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1846,7 +1846,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/run/run.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/run/reporter.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1858,7 +1858,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/run/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/run/run.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1870,7 +1870,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/run/keeper.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/run/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1882,7 +1882,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/run/install.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/run/keeper.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1894,7 +1894,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/src/cli/run/selector.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/run/install.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1906,7 +1906,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/sample_config.rs",
+      "rel_path": "prek-0.5.1/crates/prek/src/cli/run/selector.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1918,7 +1918,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/builtin_hooks.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/sample_config.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1930,7 +1930,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/try_repo.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/builtin_hooks.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1942,7 +1942,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/run.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/try_repo.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1954,7 +1954,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/validate.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/run.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1966,7 +1966,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/meta_hooks.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/validate.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1978,7 +1978,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/yaml_to_toml.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/meta_hooks.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -1990,7 +1990,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/list.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/yaml_to_toml.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2002,7 +2002,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/install.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/init.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2014,7 +2014,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/exec.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/list.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2026,7 +2026,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/hook_impl.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/install.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2038,7 +2038,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/update.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/exec.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2050,7 +2050,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/skipped_hooks.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/hook_impl.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2062,7 +2062,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/workspace.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/update.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2074,7 +2074,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/cache.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/skipped_hooks.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2086,7 +2086,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/identify.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/workspace.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2098,7 +2098,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/global_config.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/cache.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2110,7 +2110,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/list_builtins.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/identify.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2122,7 +2122,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/common/mod.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/global_config.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2134,7 +2134,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/node.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/list_builtins.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2146,7 +2146,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/bun.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/common/mod.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2158,7 +2158,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/fail.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/node.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2170,7 +2170,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/python.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/bun.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2182,7 +2182,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/unsupported.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/fail.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2194,7 +2194,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/julia.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/python.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2206,7 +2206,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/dotnet.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/unsupported.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2218,7 +2218,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/system.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/julia.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2230,7 +2230,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/pygrep.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/dotnet.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2242,7 +2242,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/docker.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/system.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2254,7 +2254,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/docker_image.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/pygrep.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2266,7 +2266,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/php.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/docker.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2278,7 +2278,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/lua.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/docker_image.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2290,7 +2290,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/conda.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/php.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2302,7 +2302,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/mise.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/lua.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2314,7 +2314,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/script.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/conda.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2326,7 +2326,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/deno.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/mise.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2338,7 +2338,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/r.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/script.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2350,7 +2350,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/shell.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/deno.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2362,7 +2362,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/dart.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/r.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2374,7 +2374,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/ruby.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/shell.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2386,7 +2386,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/perl.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/dart.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2398,7 +2398,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/coursier.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/ruby.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2410,7 +2410,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/swift.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/perl.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2422,7 +2422,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/rust.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/coursier.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2434,7 +2434,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/golang.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/swift.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2446,7 +2446,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/main.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/rust.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2458,7 +2458,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek/tests/languages/haskell.rs",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/golang.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2470,7 +2470,31 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek-identify/gen.py",
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/main.rs",
+      "language": "Rust",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "prek-0.5.1/crates/prek/tests/languages/haskell.rs",
+      "language": "Rust",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "prek-0.5.1/crates/prek-identify/gen.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -2482,7 +2506,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek-identify/src/lib.rs",
+      "rel_path": "prek-0.5.1/crates/prek-identify/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2494,7 +2518,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek-identify/src/tags.rs",
+      "rel_path": "prek-0.5.1/crates/prek-identify/src/tags.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2506,7 +2530,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek-pty/src/pty.rs",
+      "rel_path": "prek-0.5.1/crates/prek-pty/src/pty.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2518,7 +2542,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek-pty/src/types.rs",
+      "rel_path": "prek-0.5.1/crates/prek-pty/src/types.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2530,7 +2554,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek-pty/src/lib.rs",
+      "rel_path": "prek-0.5.1/crates/prek-pty/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2542,7 +2566,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek-pty/src/error.rs",
+      "rel_path": "prek-0.5.1/crates/prek-pty/src/error.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2554,7 +2578,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek-pty/src/sys.rs",
+      "rel_path": "prek-0.5.1/crates/prek-pty/src/sys.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2566,7 +2590,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek-consts/src/env_vars.rs",
+      "rel_path": "prek-0.5.1/crates/prek-consts/src/env_vars.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",
@@ -2578,7 +2602,7 @@
       "signals": []
     },
     {
-      "rel_path": "prek-0.5.0/crates/prek-consts/src/lib.rs",
+      "rel_path": "prek-0.5.1/crates/prek-consts/src/lib.rs",
       "language": "Rust",
       "ais": 0,
       "risk": "NORMAL",

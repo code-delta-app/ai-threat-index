@@ -1,6 +1,6 @@
 {
-  "generated_utc": "2026-08-31T20:07:55.309196+00:00",
-  "rule": "first release on/after 2024-09-10 (24 months); top 50 per registry by lifetime downloads",
+  "generated_utc": "2026-09-01T08:09:27.443170+00:00",
+  "rule": "first release on/after 2024-09-11 (24 months); top 50 per registry by lifetime downloads",
   "source": "https://packages.ecosyste.ms",
   "packages": [
     {
@@ -120,7 +120,7 @@
       "name": "@typescript-eslint/tsconfig-utils",
       "downloads": 507050973,
       "first_release": "2025-05-27T13:55:28.167Z",
-      "latest_release": "2026-08-24T17:27:41.308Z",
+      "latest_release": "2026-08-31T17:09:16.794Z",
       "repository_url": "https://github.com/typescript-eslint/typescript-eslint"
     },
     {
@@ -150,7 +150,7 @@
     {
       "ecosystem": "npm",
       "name": "use-sync-external-store",
-      "downloads": 425060866,
+      "downloads": 416989125,
       "first_release": "2026-01-26T19:36:53.672Z",
       "latest_release": "2025-10-01T21:39:12.499Z",
       "repository_url": "https://github.com/react/react"
@@ -245,18 +245,18 @@
     },
     {
       "ecosystem": "npm",
-      "name": "@radix-ui/react-focus-guards",
-      "downloads": 325127685,
-      "first_release": "2025-01-16T17:55:52.085Z",
-      "latest_release": "2026-07-24T23:51:14.078Z",
-      "repository_url": "https://github.com/radix-ui/primitives"
-    },
-    {
-      "ecosystem": "npm",
       "name": "@radix-ui/react-focus-scope",
       "downloads": 321948433,
       "first_release": "2025-01-16T17:55:51.634Z",
       "latest_release": "2026-07-24T23:51:20.985Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-focus-guards",
+      "downloads": 320248015,
+      "first_release": "2025-01-16T17:55:52.085Z",
+      "latest_release": "2026-07-24T23:51:14.078Z",
       "repository_url": "https://github.com/radix-ui/primitives"
     },
     {
@@ -293,18 +293,18 @@
     },
     {
       "ecosystem": "npm",
-      "name": "@radix-ui/react-dialog",
-      "downloads": 296254491,
-      "first_release": "2025-01-16T17:55:49.790Z",
-      "latest_release": "2026-07-24T23:51:17.929Z",
-      "repository_url": "https://github.com/radix-ui/primitives"
-    },
-    {
-      "ecosystem": "npm",
       "name": "@radix-ui/react-use-size",
       "downloads": 294852771,
       "first_release": "2025-01-16T17:56:01.049Z",
       "latest_release": "2026-07-24T23:51:45.457Z",
+      "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "@radix-ui/react-dialog",
+      "downloads": 291303622,
+      "first_release": "2025-01-16T17:55:49.790Z",
+      "latest_release": "2026-07-24T23:51:17.929Z",
       "repository_url": "https://github.com/radix-ui/primitives"
     },
     {
@@ -440,13 +440,13 @@
       "name": "google-genai",
       "downloads": 271250921,
       "first_release": "2024-12-10T19:42:33.000Z",
-      "latest_release": "2026-08-25T21:28:25.000Z",
+      "latest_release": "2026-08-31T21:49:12.000Z",
       "repository_url": "https://github.com/googleapis/python-genai"
     },
     {
       "ecosystem": "pypi",
       "name": "librt",
-      "downloads": 156624556,
+      "downloads": 149227839,
       "first_release": "2025-09-14T16:57:01.000Z",
       "latest_release": "2026-08-07T10:46:22.000Z",
       "repository_url": "https://github.com/mypyc/librt"
@@ -512,7 +512,7 @@
       "name": "fastmcp-slim",
       "downloads": 80609178,
       "first_release": "2026-05-11T21:22:18.000Z",
-      "latest_release": "2026-08-10T21:17:27.000Z",
+      "latest_release": "2026-08-31T18:20:07.000Z",
       "repository_url": "https://github.com/PrefectHQ/fastmcp"
     },
     {
@@ -560,7 +560,7 @@
       "name": "fastapi-cloud-cli",
       "downloads": 62405621,
       "first_release": "2024-12-10T16:45:07.000Z",
-      "latest_release": "2026-07-28T14:03:34.000Z",
+      "latest_release": "2026-08-27T14:36:43.000Z",
       "repository_url": "https://github.com/fastapilabs/fastapi-cloud-cli"
     },
     {
@@ -768,16 +768,8 @@
       "name": "genai-prices",
       "downloads": 23438719,
       "first_release": "2025-07-11T17:41:26.000Z",
-      "latest_release": "2026-08-19T23:53:24.000Z",
+      "latest_release": "2026-08-31T09:36:21.000Z",
       "repository_url": "https://github.com/pydantic/genai-prices"
-    },
-    {
-      "ecosystem": "pypi",
-      "name": "fastapi-mcp",
-      "downloads": 22916392,
-      "first_release": "2025-03-08T13:04:09.000Z",
-      "latest_release": "2025-07-28T12:11:04.000Z",
-      "repository_url": "https://github.com/tadata-org/fastapi_mcp"
     },
     {
       "ecosystem": "pypi",
@@ -802,6 +794,14 @@
       "first_release": "2025-10-07T16:54:54.000Z",
       "latest_release": "2026-06-10T21:27:52.000Z",
       "repository_url": "https://github.com/langchain-ai/langchain"
+    },
+    {
+      "ecosystem": "pypi",
+      "name": "pymupdf-layout",
+      "downloads": 19809423,
+      "first_release": "2025-11-05T14:35:44.000Z",
+      "latest_release": "2026-06-29T09:05:35.000Z",
+      "repository_url": null
     }
   ]
 }

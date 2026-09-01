@@ -1,7 +1,7 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-08-31T22:51:32.664004Z",
+  "generated": "2026-09-01T08:10:14.477940Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
@@ -35,7 +35,7 @@
       ],
       "file_count": 1,
       "files": [
-        "pydantic_graph-2.36.0/pydantic_graph/_utils.py"
+        "pydantic_graph-2.37.0/pydantic_graph/_utils.py"
       ]
     }
   ],
@@ -43,7 +43,7 @@
   "committed_credentials": [],
   "findings": [
     {
-      "file": "pydantic_graph-2.36.0/pydantic_graph/graph_builder.py",
+      "file": "pydantic_graph-2.37.0/pydantic_graph/graph_builder.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -58,7 +58,7 @@
       }
     },
     {
-      "file": "pydantic_graph-2.36.0/pydantic_graph/_utils.py",
+      "file": "pydantic_graph-2.37.0/pydantic_graph/_utils.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,

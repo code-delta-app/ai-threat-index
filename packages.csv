@@ -28,14 +28,14 @@ npm,@radix-ui/react-id
 npm,@radix-ui/react-portal
 npm,@radix-ui/react-dismissable-layer
 npm,@radix-ui/react-use-effect-event
-npm,@radix-ui/react-focus-guards
 npm,@radix-ui/react-focus-scope
+npm,@radix-ui/react-focus-guards
 npm,@tailwindcss/node
 npm,@radix-ui/react-direction
 npm,@aws-sdk/nested-clients
 npm,@radix-ui/react-collection
-npm,@radix-ui/react-dialog
 npm,@radix-ui/react-use-size
+npm,@radix-ui/react-dialog
 npm,@radix-ui/react-arrow
 npm,own-keys
 npm,@radix-ui/react-roving-focus
@@ -94,7 +94,7 @@ pypi,nest-asyncio2
 pypi,mlflow-tracing
 pypi,uv-build
 pypi,genai-prices
-pypi,fastapi-mcp
 pypi,prek
 pypi,google-adk
 pypi,langchain-classic
+pypi,pymupdf-layout
