@@ -1,20 +1,19 @@
 {
   "summary": {
-    "total_files": 88,
-    "flagged_files": 67,
+    "total_files": 105,
+    "flagged_files": 71,
     "critical_files": 0,
     "high_files": 55,
-    "elevated_files": 12,
-    "normal_files": 21,
-    "flagged_ai_files": 67,
+    "elevated_files": 16,
+    "normal_files": 34,
+    "flagged_ai_files": 71,
     "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 88 file(s). 55 HIGH, 12 ELEVATED. AI SDKs detected: claude_agent_sdk, mcp, MCP. "
+    "summary_text": "Scanned 105 file(s): 0 CRITICAL, 55 HIGH, 16 ELEVATED. AI SDKs detected: claude_agent_sdk, mcp. Coverage: 90 file(s) with full language rules, 4 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 11 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
   },
   "sdk_inventory": {
     "claude_agent_sdk": 51,
-    "mcp": 8,
-    "MCP": 1
+    "mcp": 8
   },
   "agent_artifacts": {
     "table_version": 1,
@@ -27,11 +26,12 @@
   },
   "files": [
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_close_cancellation.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_close_cancellation.py",
       "language": "Python",
       "ais": 100,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -50,11 +50,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_sessions.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_sessions.py",
       "language": "Python",
       "ais": 100,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 3,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -70,11 +71,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_update_cli_version.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_update_cli_version.py",
       "language": "Python",
       "ais": 100,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [
@@ -90,52 +92,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/__init__.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_example_s3_session_store.py",
       "language": "Python",
       "ais": 98,
       "risk": "HIGH",
       "gss": 0,
-      "injection_vectors": 1,
-      "sdk_found": [
-        "from mcp"
-      ],
-      "agent_patterns": [
-        "ClaudeSDKClient",
-        "create_sdk_mcp_server"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(ClaudeSDKClient,create_sdk_mcp_server)",
-        "prompt_injection_partial(1)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/query.py",
-      "language": "Python",
-      "ais": 98,
-      "risk": "HIGH",
-      "gss": 0,
-      "injection_vectors": 1,
-      "sdk_found": [
-        "from mcp"
-      ],
-      "agent_patterns": [
-        "ClaudeSDKClient"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(ClaudeSDKClient)",
-        "prompt_injection_partial(1)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_subprocess_buffering.py",
-      "language": "Python",
-      "ais": 98,
-      "risk": "HIGH",
-      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 1,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -151,11 +113,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_example_s3_session_store_live.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_mcp_large_output.py",
       "language": "Python",
       "ais": 98,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 1,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -171,11 +134,33 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_session_mutations.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_session_store_anyio.py",
       "language": "Python",
       "ais": 98,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_session_mutations.py",
+      "language": "Python",
+      "ais": 98,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 2,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -191,11 +176,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_session_helpers_store.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_subprocess_buffering.py",
       "language": "Python",
       "ais": 98,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 1,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -211,11 +197,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_example_s3_session_store.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_session_helpers_store.py",
       "language": "Python",
       "ais": 98,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 1,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -231,51 +218,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_session_summary.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_verbatim_prompts.py",
       "language": "Python",
       "ais": 98,
       "risk": "HIGH",
       "gss": 0,
-      "injection_vectors": 1,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)",
-        "prompt_injection_partial(1)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_message_parser.py",
-      "language": "Python",
-      "ais": 98,
-      "risk": "HIGH",
-      "gss": 0,
-      "injection_vectors": 1,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)",
-        "prompt_injection_partial(1)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_session_resume.py",
-      "language": "Python",
-      "ais": 98,
-      "risk": "HIGH",
-      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 1,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -292,11 +240,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_mcp_large_output.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_session_summary.py",
       "language": "Python",
       "ais": 98,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 1,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -312,11 +261,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_session_store_anyio.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_message_parser.py",
       "language": "Python",
       "ais": 98,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 1,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -332,11 +282,120 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/tools_option.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_query.py",
+      "language": "Python",
+      "ais": 98,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "claude_agent_sdk",
+        "create_sdk_mcp_server"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk,create_sdk_mcp_server)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_example_s3_session_store_live.py",
+      "language": "Python",
+      "ais": 98,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_session_resume.py",
+      "language": "Python",
+      "ais": 98,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "claude_agent_sdk",
+        "ClaudeSDKClient"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk,ClaudeSDKClient)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/__init__.py",
+      "language": "Python",
+      "ais": 98,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from mcp"
+      ],
+      "agent_patterns": [
+        "ClaudeSDKClient",
+        "create_sdk_mcp_server"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(ClaudeSDKClient,create_sdk_mcp_server)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/query.py",
+      "language": "Python",
+      "ais": 98,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from mcp"
+      ],
+      "agent_patterns": [
+        "ClaudeSDKClient"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(ClaudeSDKClient)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/examples/plugin_example.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -351,30 +410,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/max_budget_usd.py",
+      "rel_path": "claude_agent_sdk-0.2.163/examples/tool_permission_callback.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/setting_sources.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -390,11 +431,197 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/mcp_calculator.py",
+      "rel_path": "claude_agent_sdk-0.2.163/examples/streaming_mode_ipython.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "ClaudeSDKClient",
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/examples/tools_option.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/examples/include_partial_messages.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "claude_agent_sdk",
+        "ClaudeSDKClient"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/examples/system_prompt.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/examples/streaming_mode_trio.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "ClaudeSDKClient",
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/examples/max_budget_usd.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/examples/hooks.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "claude_agent_sdk",
+        "ClaudeSDKClient"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/examples/quick_start.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/examples/setting_sources.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "claude_agent_sdk",
+        "ClaudeSDKClient"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/examples/mcp_calculator.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -411,11 +638,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/include_partial_messages.py",
+      "rel_path": "claude_agent_sdk-0.2.163/examples/filesystem_agents.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -431,69 +659,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/quick_start.py",
+      "rel_path": "claude_agent_sdk-0.2.163/examples/streaming_mode.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/stderr_callback_example.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/hooks.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "claude_agent_sdk",
-        "ClaudeSDKClient"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/streaming_mode_trio.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -509,11 +680,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/agents.py",
+      "rel_path": "claude_agent_sdk-0.2.163/examples/stderr_callback_example.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -528,31 +700,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/filesystem_agents.py",
+      "rel_path": "claude_agent_sdk-0.2.163/examples/agents.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "claude_agent_sdk",
-        "ClaudeSDKClient"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/system_prompt.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -567,51 +720,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/streaming_mode_ipython.py",
+      "rel_path": "claude_agent_sdk-0.2.163/examples/session_stores/s3_session_store.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "ClaudeSDKClient",
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/streaming_mode.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "ClaudeSDKClient",
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/plugin_example.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -626,31 +740,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/tool_permission_callback.py",
+      "rel_path": "claude_agent_sdk-0.2.163/examples/session_stores/redis_session_store.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "claude_agent_sdk",
-        "ClaudeSDKClient"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/session_stores/redis_session_store.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -665,11 +760,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/session_stores/postgres_session_store.py",
+      "rel_path": "claude_agent_sdk-0.2.163/examples/session_stores/postgres_session_store.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -684,11 +780,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/session_stores/s3_session_store.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_errors.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -703,52 +800,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/query.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_example_redis_session_store_live.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "ClaudeSDKClient",
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/types.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from MCP"
-      ],
-      "agent_patterns": [
-        "create_sdk_mcp_server",
-        "ClaudeSDKClient"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)",
-        "agent_orchestration(create_sdk_mcp_server,ClaudeSDKClient)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/testing/session_store_conformance.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -763,11 +820,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_tool_callbacks.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_session_import.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -782,107 +840,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_example_postgres_session_store.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_sdk_mcp_integration.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_transport.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_transcript_mirror.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_streaming_client.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "ClaudeSDKClient",
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_types.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_sdk_mcp_integration.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "import mcp",
@@ -900,87 +863,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_session_import.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_client.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_integration.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_rate_limit_event_repro.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_task_compat.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from claude_agent_sdk"
-      ],
-      "agent_patterns": [
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_client.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -996,11 +884,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_session_store_conformance.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_example_redis_session_store.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -1015,11 +904,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_errors.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_tool_callbacks.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -1034,31 +924,32 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_query.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_rate_limit_event_repro.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
       ],
       "agent_patterns": [
-        "claude_agent_sdk",
-        "create_sdk_mcp_server"
+        "claude_agent_sdk"
       ],
       "dangerous_exec": [],
       "signals": [
         "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk,create_sdk_mcp_server)"
+        "agent_orchestration(claude_agent_sdk)"
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_option_warnings.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_option_warnings.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -1074,11 +965,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_example_redis_session_store_live.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_task_compat.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -1093,11 +985,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_example_redis_session_store.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_types.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from claude_agent_sdk"
@@ -1112,11 +1005,211 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/client.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_session_store_conformance.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_integration.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_streaming_client.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "ClaudeSDKClient",
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_transcript_mirror.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_run_end_subprocess.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_transport.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_example_postgres_session_store.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from claude_agent_sdk"
+      ],
+      "agent_patterns": [
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/types.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp"
+      ],
+      "agent_patterns": [
+        "create_sdk_mcp_server",
+        "ClaudeSDKClient"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(create_sdk_mcp_server,ClaudeSDKClient)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/README.md",
+      "language": "text (.md)",
+      "ais": 60,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "doc_code_block(line 23, Python: HIGH in documentation; ai_sdk_import(1_sdk(s)_detected))",
+        "doc_code_block(line 38, Python: HIGH in documentation; ai_sdk_import(1_sdk(s)_detected))",
+        "doc_code_block(line 115, Python: HIGH in documentation; ai_sdk_import(1_sdk(s)_detected))",
+        "doc_code_block(line 208, Python: HIGH in documentation; ai_sdk_import(1_sdk(s)_detected))",
+        "doc_code_block(line 262, Python: HIGH in documentation; ai_sdk_import(1_sdk(s)_detected))"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/examples/session_stores/README.md",
+      "language": "text (.md)",
+      "ais": 60,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "doc_code_block(line 22, Python: HIGH in documentation; ai_sdk_import(1_sdk(s)_detected))",
+        "doc_code_block(line 114, Python: HIGH in documentation; ai_sdk_import(1_sdk(s)_detected))",
+        "doc_code_block(line 216, Python: HIGH in documentation; ai_sdk_import(1_sdk(s)_detected))",
+        "doc_code_block(line 317, Python: HIGH in documentation; ai_sdk_import(1_sdk(s)_detected))"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/client.py",
       "language": "Python",
       "ais": 58,
       "risk": "ELEVATED",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 2,
       "sdk_found": [],
       "agent_patterns": [
@@ -1129,11 +1222,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/client.py",
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/client.py",
       "language": "Python",
       "ais": 58,
       "risk": "ELEVATED",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 1,
       "sdk_found": [],
       "agent_patterns": [
@@ -1146,11 +1240,132 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/_mcp_compat.py",
+      "rel_path": "claude_agent_sdk-0.2.163/scripts/_cli_version_validation.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
       "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/scripts/update_version.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/scripts/build_wheel.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/scripts/update_cli_version.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/scripts/download_cli.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_download_cli.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [
+        "subprocess/shell execution with variables (1 occurrence(s))"
+      ],
+      "signals": [
+        "subprocess_variable_execution(x1)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/query.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "ClaudeSDKClient",
+        "claude_agent_sdk"
+      ],
+      "dangerous_exec": [],
+      "signals": [
+        "agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
+      ]
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/_mcp_compat.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "import mcp",
@@ -1163,11 +1378,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/_task_compat.py",
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/_task_compat.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [
@@ -1179,11 +1395,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/sdk_mcp_bridge.py",
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/sdk_mcp_bridge.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from mcp"
@@ -1195,11 +1412,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/transport/subprocess_cli.py",
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/transport/subprocess_cli.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [
@@ -1211,27 +1429,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_download_cli.py",
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/testing/session_store_conformance.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
       "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [
-        "subprocess/shell execution with variables (1 occurrence(s))"
-      ],
-      "signals": [
-        "subprocess_variable_execution(x1)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/scripts/download_cli.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [
@@ -1243,75 +1446,12 @@
       ]
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/scripts/_cli_version_validation.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "agent_orchestration(claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/scripts/update_cli_version.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "agent_orchestration(claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/scripts/build_wheel.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "agent_orchestration(claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/scripts/update_version.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [
-        "claude_agent_sdk"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "agent_orchestration(claude_agent_sdk)"
-      ]
-    },
-    {
-      "rel_path": "claude_agent_sdk-0.2.149/examples/session_stores/__init__.py",
-      "language": "Python",
+      "rel_path": "claude_agent_sdk-0.2.163/pyproject.toml",
+      "language": "text (.toml)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1319,11 +1459,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_cli_version.py",
-      "language": "Python",
+      "rel_path": "claude_agent_sdk-0.2.163/LICENSE",
+      "language": "text (LICENSE)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1331,11 +1472,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_version.py",
-      "language": "Python",
+      "rel_path": "claude_agent_sdk-0.2.163/.gitignore",
+      "language": "text (.gitignore)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1343,11 +1485,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_errors.py",
-      "language": "Python",
+      "rel_path": "claude_agent_sdk-0.2.163/PKG-INFO",
+      "language": "text (PKG-INFO)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1355,11 +1498,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/testing/__init__.py",
-      "language": "Python",
+      "rel_path": "claude_agent_sdk-0.2.163/examples/plugins/demo-plugin/commands/greet.md",
+      "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1367,11 +1511,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/session_resume.py",
+      "rel_path": "claude_agent_sdk-0.2.163/examples/session_stores/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1379,11 +1524,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/__init__.py",
-      "language": "Python",
+      "rel_path": "claude_agent_sdk-0.2.163/scripts/requirements-recompress.txt",
+      "language": "text (.txt)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1391,11 +1537,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/session_mutations.py",
+      "rel_path": "claude_agent_sdk-0.2.163/scripts/check_pypi_quota.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1403,11 +1550,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/session_summary.py",
-      "language": "Python",
+      "rel_path": "claude_agent_sdk-0.2.163/scripts/test-docker.sh",
+      "language": "Shell",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "endpoint",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1415,11 +1563,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/message_parser.py",
-      "language": "Python",
+      "rel_path": "claude_agent_sdk-0.2.163/scripts/pre-push",
+      "language": "text (pre-push)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1427,11 +1576,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/transcript_mirror_batcher.py",
-      "language": "Python",
+      "rel_path": "claude_agent_sdk-0.2.163/scripts/initial-setup.sh",
+      "language": "Shell",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "endpoint",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1439,11 +1589,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/sessions.py",
-      "language": "Python",
+      "rel_path": "claude_agent_sdk-0.2.163/scripts/edit-issue-labels.sh",
+      "language": "Shell",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "endpoint",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1451,11 +1602,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/session_import.py",
-      "language": "Python",
+      "rel_path": "claude_agent_sdk-0.2.163/scripts/gh.sh",
+      "language": "Shell",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "endpoint",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1463,11 +1615,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/session_store_validation.py",
+      "rel_path": "claude_agent_sdk-0.2.163/scripts/trust_workspace.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1475,11 +1628,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/session_store.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_changelog.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1487,11 +1641,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/transport/__init__.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/conftest.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1499,11 +1654,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/conftest.py",
+      "rel_path": "claude_agent_sdk-0.2.163/tests/test_build_wheel.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1511,11 +1667,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_build_wheel.py",
-      "language": "Python",
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/py.typed",
+      "language": "text (.typed)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1523,11 +1680,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/tests/test_changelog.py",
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_cli_version.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1535,11 +1693,12 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/scripts/trust_workspace.py",
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_errors.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1547,11 +1706,181 @@
       "signals": []
     },
     {
-      "rel_path": "claude_agent_sdk-0.2.149/scripts/check_pypi_quota.py",
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_version.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_bundled/.gitignore",
+      "language": "text (.gitignore)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/transcript_mirror_batcher.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/session_store_validation.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/session_store.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/session_resume.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/session_mutations.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/session_import.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/sessions.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/session_summary.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/message_parser.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/transport/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/testing/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],

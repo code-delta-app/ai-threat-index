@@ -1,0 +1,53 @@
+rel_path,language,ais,risk,gss,coverage,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+burner_redis-0.1.7/tests/test_scripting.py,Python,50,ELEVATED,0,full,0,,,eval/exec found (41 occurrence(s)),dynamic_execution(eval/exec_x41)
+burner_redis-0.1.7/tests/test_prefect_integration.py,Python,50,ELEVATED,0,full,0,,,eval/exec found (5 occurrence(s)),dynamic_execution(eval/exec_x5)
+burner_redis-0.1.7/tests/test_pubsub.py,Python,50,ELEVATED,0,full,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+burner_redis-0.1.7/tests/test_lists.py,Python,50,ELEVATED,0,full,0,,,eval/exec found (28 occurrence(s)),dynamic_execution(eval/exec_x28)
+burner_redis-0.1.7/tests/test_pipeline.py,Python,50,ELEVATED,0,full,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+burner_redis-0.1.7/python/burner_redis/pipeline.py,Python,50,ELEVATED,0,full,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+burner_redis-0.1.7/python/burner_redis/lock.py,Python,50,ELEVATED,0,full,0,,,eval/exec found (1 occurrence(s)),dynamic_execution(eval/exec_x1)
+burner_redis-0.1.7/pyproject.toml,text (.toml),0,NORMAL,0,text,0,,,,
+burner_redis-0.1.7/uv.lock,binary (.lock),0,NORMAL,0,binary,0,,,,
+burner_redis-0.1.7/LICENSE,text (LICENSE),0,NORMAL,0,text,0,,,,
+burner_redis-0.1.7/.gitignore,text (.gitignore),0,NORMAL,0,text,0,,,,
+burner_redis-0.1.7/Cargo.toml,text (.toml),0,NORMAL,0,text,0,,,,
+burner_redis-0.1.7/Cargo.lock,binary (.lock),0,NORMAL,0,binary,0,,,,
+burner_redis-0.1.7/README.md,text (.md),0,NORMAL,0,text,0,,,,
+burner_redis-0.1.7/THIRDPARTY.yml,text (.yml),0,NORMAL,0,text,0,,,,
+burner_redis-0.1.7/CLAUDE.md,text (.md),0,NORMAL,0,text,0,,,,
+burner_redis-0.1.7/PKG-INFO,text (PKG-INFO),0,NORMAL,0,text,0,,,,
+burner_redis-0.1.7/.github/conda-smoke/recipe.yaml,text (.yaml),0,NORMAL,0,text,0,,,,
+burner_redis-0.1.7/.github/conda-smoke/win64.yaml,text (.yaml),0,NORMAL,0,text,0,,,,
+burner_redis-0.1.7/.github/conda-smoke/environment-win.yml,text (.yml),0,NORMAL,0,text,0,,,,
+burner_redis-0.1.7/.github/workflows/ci.yml,CI recipe,0,NORMAL,0,endpoint,0,,,,
+burner_redis-0.1.7/.github/workflows/docket-windows.yml,CI recipe,0,NORMAL,0,endpoint,0,,,,
+burner_redis-0.1.7/.github/workflows/conda-smoke.yml,CI recipe,0,NORMAL,0,endpoint,0,,,,
+burner_redis-0.1.7/.github/workflows/pydocket-compat.yml,CI recipe,0,NORMAL,0,endpoint,0,,,,
+burner_redis-0.1.7/.github/workflows/release.yml,CI recipe,0,NORMAL,0,endpoint,0,,,,
+burner_redis-0.1.7/tests/conftest.py,Python,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/tests/test_hashes.py,Python,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/tests/test_coercion.py,Python,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/tests/test_expiration.py,Python,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/tests/test_pydocket_compat.py,Python,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/tests/test_graceful_shutdown.py,Python,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/tests/test_sorted_sets.py,Python,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/tests/test_strings.py,Python,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/tests/test_streams.py,Python,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/tests/test_persistence.py,Python,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/tests/test_locking.py,Python,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/tests/test_sets.py,Python,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/python/burner_redis/pubsub.py,Python,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/python/burner_redis/__init__.py,Python,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/src/scripting.rs,Rust,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/src/persistence.rs,Rust,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/src/lib.rs,Rust,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/src/store.rs,Rust,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/src/commands/hashes.rs,Rust,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/src/commands/sets.rs,Rust,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/src/commands/sorted_sets.rs,Rust,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/src/commands/lists.rs,Rust,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/src/commands/streams.rs,Rust,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/src/commands/pubsub.rs,Rust,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/src/commands/strings.rs,Rust,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/src/commands/mod.rs,Rust,0,NORMAL,0,full,0,,,,
+burner_redis-0.1.7/CLAUDE.md,ARTIFACT,,TIER-1,,,,,,,Claude Code instructions

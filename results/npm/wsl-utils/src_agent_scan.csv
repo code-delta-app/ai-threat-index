@@ -1,0 +1,7 @@
+rel_path,language,ais,risk,gss,coverage,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+package/license,text (license),0,NORMAL,0,text,0,,,,
+package/index.d.ts,JavaScript,0,NORMAL,0,full,0,,,,
+package/index.js,JavaScript,0,NORMAL,0,full,0,,,,
+package/readme.md,text (.md),0,NORMAL,0,text,0,,,,
+package/utilities.js,JavaScript,0,NORMAL,0,full,0,,,,
+package/package.json,text (.json),0,NORMAL,0,text,0,,,,

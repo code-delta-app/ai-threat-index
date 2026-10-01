@@ -1,15 +1,15 @@
 {
   "summary": {
-    "total_files": 108,
+    "total_files": 146,
     "flagged_files": 0,
     "critical_files": 0,
     "high_files": 0,
     "elevated_files": 0,
-    "normal_files": 108,
+    "normal_files": 146,
     "flagged_ai_files": 0,
     "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 108 file(s). No AI agent initiation signatures detected."
+    "summary_text": "Scanned 146 file(s). No AI agent initiation signatures detected. Coverage: 137 file(s) with full language rules, 4 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 5 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
   },
   "sdk_inventory": {},
   "agent_artifacts": {
@@ -23,11 +23,12 @@
   },
   "files": [
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_cli_ci.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_cli_ci.py",
       "language": "Python",
       "ais": 18,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 1,
       "sdk_found": [],
       "agent_patterns": [],
@@ -37,11 +38,493 @@
       ]
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/__init__.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/pyproject.toml",
+      "language": "text (.toml)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/LICENSE",
+      "language": "text (LICENSE)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/README.md",
+      "language": "text (.md)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/PKG-INFO",
+      "language": "text (PKG-INFO)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/scripts/format.sh",
+      "language": "Shell",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "endpoint",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/scripts/prepare_release.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/scripts/add_latest_release_date.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/scripts/test.sh",
+      "language": "Shell",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "endpoint",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/scripts/lint.sh",
+      "language": "Shell",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "endpoint",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/scripts/test-cov-html.sh",
+      "language": "Shell",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "endpoint",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_cli_deployments.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_sentry.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_cli.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_cli_setup_ci.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/conftest.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/utils.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_cli_unlink.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_env_get.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_cli_link.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_version_check.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_deploy_utils.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_cli_whoami.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_cli_teams.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_prepare_release.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_cli_logout.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_config.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_dates.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_cli_deploy.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_cli_tokens.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_api_client.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_logs.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_auth.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_utils_apps.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_env_set.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_cli_login.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_cli_apps.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_archive.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_progress_file.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -49,11 +532,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/logging.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -61,11 +545,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/__main__.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_env_list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -73,11 +558,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/config.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/test_env_delete.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -85,11 +571,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/cli.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/integrations/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -97,11 +584,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/utils/__init__.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/integrations/providers/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -109,11 +597,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/utils/sentry.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/integrations/providers/test_list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -121,11 +610,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/utils/dates.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/integrations/resources/test_get.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -133,11 +623,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/utils/errors.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/integrations/resources/test_disconnect.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -145,11 +636,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/utils/config.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/integrations/resources/test_connect.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -157,11 +649,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/utils/execution.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/integrations/resources/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -169,11 +662,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/utils/api.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/integrations/resources/test_list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -181,11 +675,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/utils/env.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/domains/test_cli.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -193,11 +688,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/utils/teams.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/domains/test_setup.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -205,11 +701,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/utils/auth.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/tests/domains/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -217,11 +714,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/utils/cli.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/logging.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -229,11 +727,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/utils/apps.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/cli.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -241,11 +740,25 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/utils/progress_file.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/__main__.py",
       "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/py.typed",
+      "language": "text (.typed)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -253,11 +766,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/utils/version_check.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/config.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -265,11 +779,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/__init__.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/_app.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -277,11 +792,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/logs.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -289,11 +805,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/whoami.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/utils/auth.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -301,11 +818,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/login.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/utils/progress_file.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -313,11 +831,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/_flow.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/utils/cli.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -325,11 +844,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/setup_ci.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/utils/dates.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -337,11 +857,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/deployments.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/utils/teams.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -349,11 +870,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/logout.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/utils/execution.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -361,11 +883,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/teams/__init__.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/utils/version_check.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -373,11 +896,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/teams/get.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/utils/env.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -385,11 +909,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/auth/__init__.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/utils/config.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -397,11 +922,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/auth/wait.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/utils/errors.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -409,11 +935,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/apps/__init__.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/utils/build_logs.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -421,11 +948,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/apps/create.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/utils/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -433,11 +961,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/apps/link.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/utils/sentry.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -445,11 +974,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/apps/unlink.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/utils/apps.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -457,11 +987,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/apps/get.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/_auth.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -469,11 +1000,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/apps/list.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/_flow.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -481,11 +1013,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/apps/update.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/setup_ci.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -493,11 +1026,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/deploy/__init__.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/login.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -505,11 +1039,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/deploy/configure.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/logs.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -517,11 +1052,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/deploy/upload.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/deployments.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -529,11 +1065,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/deploy/wait.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/whoami.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -541,11 +1078,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/deploy/command.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -553,11 +1091,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/deploy/cloud.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/logout.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -565,11 +1104,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/deploy/archive.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/integrations/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -577,11 +1117,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/ci/__init__.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/integrations/providers/_app.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -589,11 +1130,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/ci/print_workflow.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/integrations/providers/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -601,11 +1143,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/integrations/__init__.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/integrations/providers/list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -613,11 +1156,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/integrations/providers/__init__.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/integrations/resources/get.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -625,11 +1169,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/integrations/providers/list.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/integrations/resources/providers.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -637,11 +1182,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/integrations/resources/__init__.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/integrations/resources/connect.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -649,11 +1195,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/integrations/resources/disconnect.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/integrations/resources/disconnect.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -661,11 +1208,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/integrations/resources/providers.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/integrations/resources/_app.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -673,11 +1221,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/integrations/resources/connect.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/integrations/resources/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -685,11 +1234,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/integrations/resources/get.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/integrations/resources/list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -697,11 +1247,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/integrations/resources/list.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/env/get.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -709,11 +1260,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/tokens/__init__.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/env/set.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -721,11 +1273,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/tokens/create.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/env/_app.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -733,11 +1286,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/tokens/delete.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/env/delete.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -745,11 +1299,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/tokens/list.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/env/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -757,11 +1312,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/env/__init__.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/env/_shared.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -769,11 +1325,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/env/set.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/env/list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -781,11 +1338,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/env/_shared.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/auth/wait.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -793,11 +1351,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/env/delete.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/auth/_app.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -805,11 +1364,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/env/get.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/auth/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -817,11 +1377,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/src/fastapi_cloud_cli/commands/env/list.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/apps/get.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -829,11 +1390,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_env_delete.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/apps/link.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -841,11 +1403,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/__init__.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/apps/update.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -853,11 +1416,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_cli_deploy.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/apps/create.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -865,11 +1429,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_deploy_utils.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/apps/_app.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -877,11 +1442,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/conftest.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/apps/unlink.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -889,11 +1455,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_env_list.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/apps/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -901,11 +1468,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_cli_apps.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/apps/list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -913,11 +1481,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/utils.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/domains/get.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -925,11 +1494,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_cli_tokens.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/domains/rendering.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -937,11 +1507,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_cli.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/domains/add.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -949,11 +1520,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_cli_login.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/domains/restart.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -961,11 +1533,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_dates.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/domains/_app.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -973,11 +1546,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_cli_whoami.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/domains/remove.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -985,11 +1559,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_cli_link.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/domains/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -997,11 +1572,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_prepare_release.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/domains/_shared.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1009,11 +1585,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_cli_setup_ci.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/domains/_setup.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1021,11 +1598,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_env_set.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/domains/list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1033,11 +1611,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_config.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/deploy/archive.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1045,11 +1624,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_progress_file.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/deploy/wait.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1057,11 +1637,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_archive.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/deploy/cloud.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1069,11 +1650,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_auth.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/deploy/configure.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1081,11 +1663,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_cli_deployments.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/deploy/command.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1093,11 +1676,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_version_check.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/deploy/upload.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1105,11 +1689,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_api_client.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/deploy/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1117,11 +1702,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_logs.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/teams/get.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1129,11 +1715,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_cli_logout.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/teams/_app.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1141,11 +1728,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_sentry.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/teams/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1153,11 +1741,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_env_get.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/teams/list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1165,11 +1754,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_cli_unlink.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/ci/print_workflow.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1177,11 +1767,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_cli_teams.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/ci/_app.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1189,11 +1780,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/test_utils_apps.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/ci/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1201,11 +1793,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/integrations/__init__.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/tokens/create.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1213,11 +1806,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/integrations/providers/__init__.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/tokens/_app.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1225,11 +1819,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/integrations/providers/test_list.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/tokens/delete.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1237,11 +1832,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/integrations/resources/__init__.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/tokens/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1249,11 +1845,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/integrations/resources/test_disconnect.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/commands/tokens/list.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1261,11 +1858,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/integrations/resources/test_get.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/api/_models.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1273,11 +1871,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/integrations/resources/test_list.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/api/_retry.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1285,11 +1884,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/tests/integrations/resources/test_connect.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/api/_errors.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1297,11 +1897,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/scripts/add_latest_release_date.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/api/client.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1309,11 +1910,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastapi_cloud_cli-0.24.0/scripts/prepare_release.py",
+      "rel_path": "fastapi_cloud_cli-0.26.0/src/fastapi_cloud_cli/api/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],

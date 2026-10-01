@@ -1,14 +1,14 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-09-01T08:10:31.498940Z",
+  "generated": "2026-10-01T03:19:48.309011Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 660,
+    "files_scanned": 1581,
     "files_flagged": 1,
     "critical": 0,
     "high": 0,
@@ -29,13 +29,13 @@
       "type": "agent-artifact",
       "name": "Agent instructions file",
       "tier": 1,
-      "path": "ast_serialize-0.8.0/AGENTS.md"
+      "path": "ast_serialize-0.11.2/AGENTS.md"
     }
   ],
   "committed_credentials": [],
   "findings": [
     {
-      "file": "ast_serialize-0.8.0/crates/ruff_python_parser/resources/inline/ok/decorator_expression_eval_hack_py38.py",
+      "file": "ast_serialize-0.11.2/crates/ruff_python_parser/resources/inline/ok/decorator_expression_eval_hack_py38.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 50,

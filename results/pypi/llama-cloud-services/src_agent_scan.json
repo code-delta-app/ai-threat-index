@@ -1,15 +1,15 @@
 {
   "summary": {
-    "total_files": 28,
+    "total_files": 33,
     "flagged_files": 8,
     "critical_files": 0,
     "high_files": 1,
     "elevated_files": 7,
-    "normal_files": 20,
+    "normal_files": 25,
     "flagged_ai_files": 8,
     "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 28 file(s). 1 HIGH, 7 ELEVATED. AI SDKs detected: llama_index. "
+    "summary_text": "Scanned 33 file(s): 0 CRITICAL, 1 HIGH, 7 ELEVATED. AI SDKs detected: llama_index. Coverage: 28 file(s) with full language rules, 0 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 5 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
   },
   "sdk_inventory": {
     "llama_index": 8
@@ -30,6 +30,7 @@
       "ais": 80,
       "risk": "HIGH",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from llama_index"
@@ -49,70 +50,7 @@
       "ais": 40,
       "risk": "ELEVATED",
       "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from llama_index"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/index/retriever.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from llama_index"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/index/composite_retriever.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from llama_index"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/index/api_utils.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from llama_index"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/index/base.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from llama_index"
@@ -129,6 +67,75 @@
       "ais": 40,
       "risk": "ELEVATED",
       "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from llama_index"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/index/api_utils.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from llama_index"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/index/retriever.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from llama_index"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/index/composite_retriever.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from llama_index"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/index/base.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from llama_index"
@@ -145,6 +152,7 @@
       "ais": 40,
       "risk": "ELEVATED",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from llama_index"
@@ -156,11 +164,64 @@
       ]
     },
     {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/__init__.py",
-      "language": "Python",
+      "rel_path": "llama_cloud_services-0.6.94/pyproject.toml",
+      "language": "text (.toml)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/LICENSE",
+      "language": "text (LICENSE)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/.gitignore",
+      "language": "text (.gitignore)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/README.md",
+      "language": "text (.md)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/PKG-INFO",
+      "language": "text (PKG-INFO)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -173,6 +234,7 @@
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -185,6 +247,7 @@
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -192,143 +255,12 @@
       "signals": []
     },
     {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/extract/__init__.py",
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/extract/utils.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/index/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/beta/classifier/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/beta/classifier/types.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/beta/agent_data/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/beta/agent_data/schema.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/beta/agent_data/client.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/beta/sheets/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/beta/sheets/types.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/beta/sheets/client.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/files/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -341,6 +273,7 @@
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -348,11 +281,155 @@
       "signals": []
     },
     {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/parse/__init__.py",
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/files/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/extract/utils.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/extract/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/beta/sheets/types.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/beta/sheets/client.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/beta/sheets/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/beta/classifier/types.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/beta/classifier/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/beta/agent_data/schema.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/beta/agent_data/client.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/beta/agent_data/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/index/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -365,6 +442,7 @@
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -372,11 +450,12 @@
       "signals": []
     },
     {
-      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/parse/cli/__init__.py",
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/parse/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -389,6 +468,20 @@
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "llama_cloud_services-0.6.94/llama_cloud_services/parse/cli/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],

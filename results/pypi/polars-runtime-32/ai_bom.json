@@ -1,18 +1,18 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-09-01T08:10:52.870141Z",
+  "generated": "2026-10-01T03:20:33.285924Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 2067,
-    "files_flagged": 1,
+    "files_scanned": 2167,
+    "files_flagged": 0,
     "critical": 0,
     "high": 0,
-    "elevated": 1,
+    "elevated": 0,
     "providers": 0,
     "frameworks": 0,
     "foreign_egress_files": 0,
@@ -26,21 +26,5 @@
   "frameworks": [],
   "agent_artifacts": [],
   "committed_credentials": [],
-  "findings": [
-    {
-      "file": "polars_runtime_32-1.44.1/crates/polars-stream/src/physical_plan/to_graph.rs",
-      "language": "Rust",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "agent_orchestration(add_node()"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    }
-  ]
+  "findings": []
 }

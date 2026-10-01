@@ -1,19 +1,19 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-09-01T08:11:26.338345Z",
+  "generated": "2026-10-01T03:21:13.243841Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 5,
-    "files_flagged": 0,
+    "files_scanned": 16,
+    "files_flagged": 2,
     "critical": 0,
     "high": 0,
-    "elevated": 0,
-    "providers": 0,
+    "elevated": 2,
+    "providers": 3,
     "frameworks": 0,
     "foreign_egress_files": 0,
     "non_allied_jurisdiction_files": 0,
@@ -22,9 +22,98 @@
     "agent_artifacts_tier3": 0,
     "committed_credentials": 0
   },
-  "providers": [],
+  "providers": [
+    {
+      "name": "Anthropic",
+      "canonical": "anthropic",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "http:api.anthropic.com"
+      ],
+      "file_count": 2,
+      "files": [
+        "fastspec-0.2.5/PKG-INFO",
+        "fastspec-0.2.5/fastspec.egg-info/PKG-INFO"
+      ],
+      "endpoint": "api.anthropic.com",
+      "endpoints": [
+        "api.anthropic.com"
+      ]
+    },
+    {
+      "name": "Google",
+      "canonical": "google",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "http:generativelanguage.googleapis.com"
+      ],
+      "file_count": 2,
+      "files": [
+        "fastspec-0.2.5/PKG-INFO",
+        "fastspec-0.2.5/fastspec.egg-info/PKG-INFO"
+      ],
+      "endpoint": "generativelanguage.googleapis.com",
+      "endpoints": [
+        "generativelanguage.googleapis.com"
+      ]
+    },
+    {
+      "name": "OpenAI",
+      "canonical": "openai",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "http:api.openai.com"
+      ],
+      "file_count": 2,
+      "files": [
+        "fastspec-0.2.5/PKG-INFO",
+        "fastspec-0.2.5/fastspec.egg-info/PKG-INFO"
+      ],
+      "endpoint": "api.openai.com",
+      "endpoints": [
+        "api.openai.com"
+      ]
+    }
+  ],
   "frameworks": [],
   "agent_artifacts": [],
   "committed_credentials": [],
-  "findings": []
+  "findings": [
+    {
+      "file": "fastspec-0.2.5/PKG-INFO",
+      "language": "text (PKG-INFO)",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(api.openai.com)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "fastspec-0.2.5/fastspec.egg-info/PKG-INFO",
+      "language": "text (PKG-INFO)",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(api.openai.com)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
 }

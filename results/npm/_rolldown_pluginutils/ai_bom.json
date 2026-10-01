@@ -1,14 +1,14 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-09-01T08:09:35.988510Z",
+  "generated": "2026-10-01T03:19:08.428274Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 0,
+    "files_scanned": 8,
     "files_flagged": 0,
     "critical": 0,
     "high": 0,
@@ -26,5 +26,21 @@
   "frameworks": [],
   "agent_artifacts": [],
   "committed_credentials": [],
-  "findings": []
+  "findings": [
+    {
+      "file": "package/dist/filter-B_mD-HGz.mjs",
+      "language": "JavaScript",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
 }

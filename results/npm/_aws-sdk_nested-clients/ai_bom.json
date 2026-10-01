@@ -1,14 +1,14 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-09-01T08:09:48.316088Z",
+  "generated": "2026-10-01T03:19:21.837716Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 355,
+    "files_scanned": 357,
     "files_flagged": 0,
     "critical": 0,
     "high": 0,
@@ -20,24 +20,11 @@
     "cost_risk_files": 0,
     "agent_artifacts": 0,
     "agent_artifacts_tier3": 0,
-    "committed_credentials": 2
+    "committed_credentials": 0
   },
   "providers": [],
   "frameworks": [],
   "agent_artifacts": [],
-  "committed_credentials": [
-    {
-      "kind": "AWS access key ID",
-      "file": "package/dist-types/submodules/sts/commands/AssumeRoleCommand.d.ts",
-      "line": 243,
-      "sample": "AKIAIOSF\u2026 (20 chars)"
-    },
-    {
-      "kind": "AWS access key ID",
-      "file": "package/dist-types/submodules/sts/commands/AssumeRoleWithWebIdentityCommand.d.ts",
-      "line": 261,
-      "sample": "AKIAIOSF\u2026 (20 chars)"
-    }
-  ],
+  "committed_credentials": [],
   "findings": []
 }

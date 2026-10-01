@@ -1,18 +1,18 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-09-01T08:11:40.164249Z",
+  "generated": "2026-10-01T03:21:34.342340Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 109,
-    "files_flagged": 2,
+    "files_scanned": 180,
+    "files_flagged": 1,
     "critical": 0,
     "high": 0,
-    "elevated": 2,
+    "elevated": 1,
     "providers": 0,
     "frameworks": 0,
     "foreign_egress_files": 0,
@@ -28,7 +28,7 @@
   "committed_credentials": [],
   "findings": [
     {
-      "file": "uv_build-0.12.8/python/uv_build/__init__.py",
+      "file": "uv_build-0.12.21/python/uv_build/__init__.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -43,22 +43,7 @@
       }
     },
     {
-      "file": "uv_build-0.12.8/crates/uv-pypi-types/src/conflicts.rs",
-      "language": "Rust",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "agent_orchestration(add_node()"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "uv_build-0.12.8/crates/uv-fs/src/path.rs",
+      "file": "uv_build-0.12.21/crates/uv-fs/src/path.rs",
       "language": "Rust",
       "risk": "NORMAL",
       "ais": 20,

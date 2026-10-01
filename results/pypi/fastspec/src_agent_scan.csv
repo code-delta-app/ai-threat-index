@@ -1,6 +1,17 @@
-rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
-fastspec-0.2.4/fastspec/__init__.py,Python,0,NORMAL,0,0,,,,
-fastspec-0.2.4/fastspec/oapi.py,Python,0,NORMAL,0,0,,,,
-fastspec-0.2.4/fastspec/gql.py,Python,0,NORMAL,0,0,,,,
-fastspec-0.2.4/fastspec/spec.py,Python,0,NORMAL,0,0,,,,
-fastspec-0.2.4/fastspec/_modidx.py,Python,0,NORMAL,0,0,,,,
+rel_path,language,ais,risk,gss,coverage,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+fastspec-0.2.5/PKG-INFO,text (PKG-INFO),40,ELEVATED,0,text,0,http:api.openai.com; http:api.anthropic.com; http:generativelanguage.googleapis.com,,,ai_http_endpoint(api.openai.com)
+fastspec-0.2.5/fastspec.egg-info/PKG-INFO,text (PKG-INFO),40,ELEVATED,0,text,0,http:api.openai.com; http:api.anthropic.com; http:generativelanguage.googleapis.com,,,ai_http_endpoint(api.openai.com)
+fastspec-0.2.5/pyproject.toml,text (.toml),0,NORMAL,0,text,0,,,,
+fastspec-0.2.5/LICENSE,text (LICENSE),0,NORMAL,0,text,0,,,,
+fastspec-0.2.5/README.md,text (.md),0,NORMAL,0,text,0,,,,
+fastspec-0.2.5/setup.cfg,text (.cfg),0,NORMAL,0,text,0,,,,
+fastspec-0.2.5/fastspec/spec.py,Python,0,NORMAL,0,full,0,,,,
+fastspec-0.2.5/fastspec/_modidx.py,Python,0,NORMAL,0,full,0,,,,
+fastspec-0.2.5/fastspec/oapi.py,Python,0,NORMAL,0,full,0,,,,
+fastspec-0.2.5/fastspec/gql.py,Python,0,NORMAL,0,full,0,,,,
+fastspec-0.2.5/fastspec/__init__.py,Python,0,NORMAL,0,full,0,,,,
+fastspec-0.2.5/fastspec.egg-info/requires.txt,text (.txt),0,NORMAL,0,text,0,,,,
+fastspec-0.2.5/fastspec.egg-info/entry_points.txt,text (.txt),0,NORMAL,0,text,0,,,,
+fastspec-0.2.5/fastspec.egg-info/top_level.txt,text (.txt),0,NORMAL,0,text,0,,,,
+fastspec-0.2.5/fastspec.egg-info/dependency_links.txt,text (.txt),0,NORMAL,0,text,0,,,,
+fastspec-0.2.5/fastspec.egg-info/SOURCES.txt,text (.txt),0,NORMAL,0,text,0,,,,

@@ -1,18 +1,18 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-09-01T08:11:29.578464Z",
+  "generated": "2026-10-01T03:20:58.466892Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 88,
-    "files_flagged": 67,
+    "files_scanned": 105,
+    "files_flagged": 71,
     "critical": 0,
     "high": 55,
-    "elevated": 12,
+    "elevated": 16,
     "providers": 1,
     "frameworks": 1,
     "foreign_egress_files": 0,
@@ -34,57 +34,57 @@
       ],
       "file_count": 51,
       "files": [
-        "claude_agent_sdk-0.2.149/examples/agents.py",
-        "claude_agent_sdk-0.2.149/examples/filesystem_agents.py",
-        "claude_agent_sdk-0.2.149/examples/hooks.py",
-        "claude_agent_sdk-0.2.149/examples/include_partial_messages.py",
-        "claude_agent_sdk-0.2.149/examples/max_budget_usd.py",
-        "claude_agent_sdk-0.2.149/examples/mcp_calculator.py",
-        "claude_agent_sdk-0.2.149/examples/plugin_example.py",
-        "claude_agent_sdk-0.2.149/examples/quick_start.py",
-        "claude_agent_sdk-0.2.149/examples/session_stores/postgres_session_store.py",
-        "claude_agent_sdk-0.2.149/examples/session_stores/redis_session_store.py",
-        "claude_agent_sdk-0.2.149/examples/session_stores/s3_session_store.py",
-        "claude_agent_sdk-0.2.149/examples/setting_sources.py",
-        "claude_agent_sdk-0.2.149/examples/stderr_callback_example.py",
-        "claude_agent_sdk-0.2.149/examples/streaming_mode.py",
-        "claude_agent_sdk-0.2.149/examples/streaming_mode_ipython.py",
-        "claude_agent_sdk-0.2.149/examples/streaming_mode_trio.py",
-        "claude_agent_sdk-0.2.149/examples/system_prompt.py",
-        "claude_agent_sdk-0.2.149/examples/tool_permission_callback.py",
-        "claude_agent_sdk-0.2.149/examples/tools_option.py",
-        "claude_agent_sdk-0.2.149/src/claude_agent_sdk/query.py",
-        "claude_agent_sdk-0.2.149/src/claude_agent_sdk/testing/session_store_conformance.py",
-        "claude_agent_sdk-0.2.149/tests/test_client.py",
-        "claude_agent_sdk-0.2.149/tests/test_close_cancellation.py",
-        "claude_agent_sdk-0.2.149/tests/test_errors.py",
-        "claude_agent_sdk-0.2.149/tests/test_example_postgres_session_store.py",
-        "claude_agent_sdk-0.2.149/tests/test_example_redis_session_store.py",
-        "claude_agent_sdk-0.2.149/tests/test_example_redis_session_store_live.py",
-        "claude_agent_sdk-0.2.149/tests/test_example_s3_session_store.py",
-        "claude_agent_sdk-0.2.149/tests/test_example_s3_session_store_live.py",
-        "claude_agent_sdk-0.2.149/tests/test_integration.py",
-        "claude_agent_sdk-0.2.149/tests/test_mcp_large_output.py",
-        "claude_agent_sdk-0.2.149/tests/test_message_parser.py",
-        "claude_agent_sdk-0.2.149/tests/test_option_warnings.py",
-        "claude_agent_sdk-0.2.149/tests/test_query.py",
-        "claude_agent_sdk-0.2.149/tests/test_rate_limit_event_repro.py",
-        "claude_agent_sdk-0.2.149/tests/test_sdk_mcp_integration.py",
-        "claude_agent_sdk-0.2.149/tests/test_session_helpers_store.py",
-        "claude_agent_sdk-0.2.149/tests/test_session_import.py",
-        "claude_agent_sdk-0.2.149/tests/test_session_mutations.py",
-        "claude_agent_sdk-0.2.149/tests/test_session_resume.py",
-        "claude_agent_sdk-0.2.149/tests/test_session_store_anyio.py",
-        "claude_agent_sdk-0.2.149/tests/test_session_store_conformance.py",
-        "claude_agent_sdk-0.2.149/tests/test_session_summary.py",
-        "claude_agent_sdk-0.2.149/tests/test_sessions.py",
-        "claude_agent_sdk-0.2.149/tests/test_streaming_client.py",
-        "claude_agent_sdk-0.2.149/tests/test_subprocess_buffering.py",
-        "claude_agent_sdk-0.2.149/tests/test_task_compat.py",
-        "claude_agent_sdk-0.2.149/tests/test_tool_callbacks.py",
-        "claude_agent_sdk-0.2.149/tests/test_transcript_mirror.py",
-        "claude_agent_sdk-0.2.149/tests/test_transport.py",
-        "claude_agent_sdk-0.2.149/tests/test_types.py"
+        "claude_agent_sdk-0.2.163/examples/agents.py",
+        "claude_agent_sdk-0.2.163/examples/filesystem_agents.py",
+        "claude_agent_sdk-0.2.163/examples/hooks.py",
+        "claude_agent_sdk-0.2.163/examples/include_partial_messages.py",
+        "claude_agent_sdk-0.2.163/examples/max_budget_usd.py",
+        "claude_agent_sdk-0.2.163/examples/mcp_calculator.py",
+        "claude_agent_sdk-0.2.163/examples/plugin_example.py",
+        "claude_agent_sdk-0.2.163/examples/quick_start.py",
+        "claude_agent_sdk-0.2.163/examples/session_stores/postgres_session_store.py",
+        "claude_agent_sdk-0.2.163/examples/session_stores/redis_session_store.py",
+        "claude_agent_sdk-0.2.163/examples/session_stores/s3_session_store.py",
+        "claude_agent_sdk-0.2.163/examples/setting_sources.py",
+        "claude_agent_sdk-0.2.163/examples/stderr_callback_example.py",
+        "claude_agent_sdk-0.2.163/examples/streaming_mode.py",
+        "claude_agent_sdk-0.2.163/examples/streaming_mode_ipython.py",
+        "claude_agent_sdk-0.2.163/examples/streaming_mode_trio.py",
+        "claude_agent_sdk-0.2.163/examples/system_prompt.py",
+        "claude_agent_sdk-0.2.163/examples/tool_permission_callback.py",
+        "claude_agent_sdk-0.2.163/examples/tools_option.py",
+        "claude_agent_sdk-0.2.163/tests/test_client.py",
+        "claude_agent_sdk-0.2.163/tests/test_close_cancellation.py",
+        "claude_agent_sdk-0.2.163/tests/test_errors.py",
+        "claude_agent_sdk-0.2.163/tests/test_example_postgres_session_store.py",
+        "claude_agent_sdk-0.2.163/tests/test_example_redis_session_store.py",
+        "claude_agent_sdk-0.2.163/tests/test_example_redis_session_store_live.py",
+        "claude_agent_sdk-0.2.163/tests/test_example_s3_session_store.py",
+        "claude_agent_sdk-0.2.163/tests/test_example_s3_session_store_live.py",
+        "claude_agent_sdk-0.2.163/tests/test_integration.py",
+        "claude_agent_sdk-0.2.163/tests/test_mcp_large_output.py",
+        "claude_agent_sdk-0.2.163/tests/test_message_parser.py",
+        "claude_agent_sdk-0.2.163/tests/test_option_warnings.py",
+        "claude_agent_sdk-0.2.163/tests/test_query.py",
+        "claude_agent_sdk-0.2.163/tests/test_rate_limit_event_repro.py",
+        "claude_agent_sdk-0.2.163/tests/test_run_end_subprocess.py",
+        "claude_agent_sdk-0.2.163/tests/test_sdk_mcp_integration.py",
+        "claude_agent_sdk-0.2.163/tests/test_session_helpers_store.py",
+        "claude_agent_sdk-0.2.163/tests/test_session_import.py",
+        "claude_agent_sdk-0.2.163/tests/test_session_mutations.py",
+        "claude_agent_sdk-0.2.163/tests/test_session_resume.py",
+        "claude_agent_sdk-0.2.163/tests/test_session_store_anyio.py",
+        "claude_agent_sdk-0.2.163/tests/test_session_store_conformance.py",
+        "claude_agent_sdk-0.2.163/tests/test_session_summary.py",
+        "claude_agent_sdk-0.2.163/tests/test_sessions.py",
+        "claude_agent_sdk-0.2.163/tests/test_streaming_client.py",
+        "claude_agent_sdk-0.2.163/tests/test_subprocess_buffering.py",
+        "claude_agent_sdk-0.2.163/tests/test_task_compat.py",
+        "claude_agent_sdk-0.2.163/tests/test_tool_callbacks.py",
+        "claude_agent_sdk-0.2.163/tests/test_transcript_mirror.py",
+        "claude_agent_sdk-0.2.163/tests/test_transport.py",
+        "claude_agent_sdk-0.2.163/tests/test_types.py",
+        "claude_agent_sdk-0.2.163/tests/test_verbatim_prompts.py"
       ]
     }
   ],
@@ -96,17 +96,16 @@
       "jurisdiction": "unspecified",
       "sovereignty_risk": false,
       "seen_as": [
-        "MCP",
         "mcp"
       ],
       "file_count": 6,
       "files": [
-        "claude_agent_sdk-0.2.149/src/claude_agent_sdk/__init__.py",
-        "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/_mcp_compat.py",
-        "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/query.py",
-        "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/sdk_mcp_bridge.py",
-        "claude_agent_sdk-0.2.149/src/claude_agent_sdk/types.py",
-        "claude_agent_sdk-0.2.149/tests/test_sdk_mcp_integration.py"
+        "claude_agent_sdk-0.2.163/src/claude_agent_sdk/__init__.py",
+        "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/_mcp_compat.py",
+        "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/query.py",
+        "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/sdk_mcp_bridge.py",
+        "claude_agent_sdk-0.2.163/src/claude_agent_sdk/types.py",
+        "claude_agent_sdk-0.2.163/tests/test_sdk_mcp_integration.py"
       ]
     }
   ],
@@ -114,7 +113,7 @@
   "committed_credentials": [],
   "findings": [
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_close_cancellation.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_close_cancellation.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 100,
@@ -131,7 +130,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_sessions.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_sessions.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 100,
@@ -148,7 +147,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_update_cli_version.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_update_cli_version.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 100,
@@ -165,41 +164,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/__init__.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 98,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(ClaudeSDKClient,create_sdk_mcp_server)",
-        "prompt_injection_partial(1)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/query.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 98,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(ClaudeSDKClient)",
-        "prompt_injection_partial(1)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/tests/test_subprocess_buffering.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_example_s3_session_store.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 98,
@@ -216,7 +181,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_example_s3_session_store_live.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_mcp_large_output.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 98,
@@ -233,7 +198,24 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_session_mutations.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_session_store_anyio.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 98,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/tests/test_session_mutations.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 98,
@@ -250,7 +232,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_session_helpers_store.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_subprocess_buffering.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 98,
@@ -267,7 +249,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_example_s3_session_store.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_session_helpers_store.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 98,
@@ -284,41 +266,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_session_summary.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 98,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)",
-        "prompt_injection_partial(1)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/tests/test_message_parser.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 98,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)",
-        "prompt_injection_partial(1)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/tests/test_session_resume.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_verbatim_prompts.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 98,
@@ -335,7 +283,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_mcp_large_output.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_session_summary.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 98,
@@ -352,7 +300,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_session_store_anyio.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_message_parser.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 98,
@@ -369,7 +317,92 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/examples/tools_option.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_query.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 98,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk,create_sdk_mcp_server)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/tests/test_example_s3_session_store_live.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 98,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/tests/test_session_resume.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 98,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk,ClaudeSDKClient)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/__init__.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 98,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(ClaudeSDKClient,create_sdk_mcp_server)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/query.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 98,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(ClaudeSDKClient)",
+        "prompt_injection_partial(1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/examples/plugin_example.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -385,23 +418,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/examples/max_budget_usd.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/examples/setting_sources.py",
+      "file": "claude_agent_sdk-0.2.163/examples/tool_permission_callback.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -417,7 +434,151 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/examples/mcp_calculator.py",
+      "file": "claude_agent_sdk-0.2.163/examples/streaming_mode_ipython.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/examples/tools_option.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/examples/include_partial_messages.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/examples/system_prompt.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/examples/streaming_mode_trio.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/examples/max_budget_usd.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/examples/hooks.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/examples/quick_start.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/examples/setting_sources.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/examples/mcp_calculator.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -433,7 +594,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/examples/include_partial_messages.py",
+      "file": "claude_agent_sdk-0.2.163/examples/filesystem_agents.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -449,55 +610,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/examples/quick_start.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/examples/stderr_callback_example.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/examples/hooks.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/examples/streaming_mode_trio.py",
+      "file": "claude_agent_sdk-0.2.163/examples/streaming_mode.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -513,7 +626,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/examples/agents.py",
+      "file": "claude_agent_sdk-0.2.163/examples/stderr_callback_example.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -529,23 +642,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/examples/filesystem_agents.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/examples/system_prompt.py",
+      "file": "claude_agent_sdk-0.2.163/examples/agents.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -561,39 +658,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/examples/streaming_mode_ipython.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/examples/streaming_mode.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/examples/plugin_example.py",
+      "file": "claude_agent_sdk-0.2.163/examples/session_stores/s3_session_store.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -609,23 +674,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/examples/tool_permission_callback.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk,ClaudeSDKClient)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/examples/session_stores/redis_session_store.py",
+      "file": "claude_agent_sdk-0.2.163/examples/session_stores/redis_session_store.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -641,7 +690,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/examples/session_stores/postgres_session_store.py",
+      "file": "claude_agent_sdk-0.2.163/examples/session_stores/postgres_session_store.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -657,7 +706,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/examples/session_stores/s3_session_store.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_errors.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -673,39 +722,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/query.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/types.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)",
-        "agent_orchestration(create_sdk_mcp_server,ClaudeSDKClient)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/testing/session_store_conformance.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_example_redis_session_store_live.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -721,7 +738,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_tool_callbacks.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_session_import.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -737,87 +754,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_example_postgres_session_store.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/tests/test_transport.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/tests/test_transcript_mirror.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/tests/test_streaming_client.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/tests/test_types.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/tests/test_sdk_mcp_integration.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_sdk_mcp_integration.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -833,71 +770,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_session_import.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/tests/test_integration.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/tests/test_rate_limit_event_repro.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/tests/test_task_compat.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 80,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/tests/test_client.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_client.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -913,7 +786,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_session_store_conformance.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_example_redis_session_store.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -929,7 +802,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_errors.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_tool_callbacks.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -945,13 +818,13 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_query.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_rate_limit_event_repro.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
       "signals": [
         "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(claude_agent_sdk,create_sdk_mcp_server)"
+        "agent_orchestration(claude_agent_sdk)"
       ],
       "flags": {
         "foreign_egress": false,
@@ -961,7 +834,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_option_warnings.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_option_warnings.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -977,7 +850,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_example_redis_session_store_live.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_task_compat.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -993,7 +866,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_example_redis_session_store.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_types.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -1009,7 +882,172 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/client.py",
+      "file": "claude_agent_sdk-0.2.163/tests/test_session_store_conformance.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/tests/test_integration.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/tests/test_streaming_client.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/tests/test_transcript_mirror.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/tests/test_run_end_subprocess.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/tests/test_transport.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/tests/test_example_postgres_session_store.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(claude_agent_sdk)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/types.py",
+      "language": "Python",
+      "risk": "HIGH",
+      "ais": 80,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(create_sdk_mcp_server,ClaudeSDKClient)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/README.md",
+      "language": "text (.md)",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "doc_code_block(line 23, Python: HIGH in documentation; ai_sdk_import(1_sdk(s)_detected))",
+        "doc_code_block(line 38, Python: HIGH in documentation; ai_sdk_import(1_sdk(s)_detected))",
+        "doc_code_block(line 115, Python: HIGH in documentation; ai_sdk_import(1_sdk(s)_detected))",
+        "doc_code_block(line 208, Python: HIGH in documentation; ai_sdk_import(1_sdk(s)_detected))",
+        "doc_code_block(line 262, Python: HIGH in documentation; ai_sdk_import(1_sdk(s)_detected))"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/examples/session_stores/README.md",
+      "language": "text (.md)",
+      "risk": "ELEVATED",
+      "ais": 60,
+      "signals": [
+        "doc_code_block(line 22, Python: HIGH in documentation; ai_sdk_import(1_sdk(s)_detected))",
+        "doc_code_block(line 114, Python: HIGH in documentation; ai_sdk_import(1_sdk(s)_detected))",
+        "doc_code_block(line 216, Python: HIGH in documentation; ai_sdk_import(1_sdk(s)_detected))",
+        "doc_code_block(line 317, Python: HIGH in documentation; ai_sdk_import(1_sdk(s)_detected))"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/client.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 58,
@@ -1025,7 +1063,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/client.py",
+      "file": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/client.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 58,
@@ -1041,22 +1079,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/_mcp_compat.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/_task_compat.py",
+      "file": "claude_agent_sdk-0.2.163/scripts/_cli_version_validation.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -1071,12 +1094,12 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/sdk_mcp_bridge.py",
+      "file": "claude_agent_sdk-0.2.163/scripts/update_version.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
       "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
+        "agent_orchestration(claude_agent_sdk)"
       ],
       "flags": {
         "foreign_egress": false,
@@ -1086,12 +1109,12 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/src/claude_agent_sdk/_internal/transport/subprocess_cli.py",
+      "file": "claude_agent_sdk-0.2.163/scripts/build_wheel.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
       "signals": [
-        "agent_orchestration(ClaudeSDKClient)"
+        "agent_orchestration(claude_agent_sdk)"
       ],
       "flags": {
         "foreign_egress": false,
@@ -1101,7 +1124,37 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/tests/test_download_cli.py",
+      "file": "claude_agent_sdk-0.2.163/scripts/update_cli_version.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(claude_agent_sdk)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/scripts/download_cli.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(claude_agent_sdk)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/tests/test_download_cli.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -1116,7 +1169,37 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/scripts/download_cli.py",
+      "file": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/query.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(ClaudeSDKClient,claude_agent_sdk)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/_mcp_compat.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/_task_compat.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -1131,12 +1214,12 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/scripts/_cli_version_validation.py",
+      "file": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/sdk_mcp_bridge.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
       "signals": [
-        "agent_orchestration(claude_agent_sdk)"
+        "ai_sdk_import(1_sdk(s)_detected)"
       ],
       "flags": {
         "foreign_egress": false,
@@ -1146,12 +1229,12 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/scripts/update_cli_version.py",
+      "file": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/_internal/transport/subprocess_cli.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
       "signals": [
-        "agent_orchestration(claude_agent_sdk)"
+        "agent_orchestration(ClaudeSDKClient)"
       ],
       "flags": {
         "foreign_egress": false,
@@ -1161,22 +1244,7 @@
       }
     },
     {
-      "file": "claude_agent_sdk-0.2.149/scripts/build_wheel.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "agent_orchestration(claude_agent_sdk)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "claude_agent_sdk-0.2.149/scripts/update_version.py",
+      "file": "claude_agent_sdk-0.2.163/src/claude_agent_sdk/testing/session_store_conformance.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,

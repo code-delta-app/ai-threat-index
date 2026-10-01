@@ -1,14 +1,14 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-09-01T08:10:06.329573Z",
+  "generated": "2026-10-01T03:19:29.635512Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 31,
+    "files_scanned": 38,
     "files_flagged": 0,
     "critical": 0,
     "high": 0,
@@ -28,7 +28,7 @@
   "committed_credentials": [],
   "findings": [
     {
-      "file": "httpcore2-2.12.0/httpcore2/_sync/http11.py",
+      "file": "httpcore2-2.13.1/httpcore2/_async/http11.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 18,
@@ -43,7 +43,7 @@
       }
     },
     {
-      "file": "httpcore2-2.12.0/httpcore2/_sync/http2.py",
+      "file": "httpcore2-2.13.1/httpcore2/_async/connection.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 18,
@@ -58,7 +58,7 @@
       }
     },
     {
-      "file": "httpcore2-2.12.0/httpcore2/_sync/connection.py",
+      "file": "httpcore2-2.13.1/httpcore2/_async/http2.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 18,
@@ -73,7 +73,7 @@
       }
     },
     {
-      "file": "httpcore2-2.12.0/httpcore2/_async/http11.py",
+      "file": "httpcore2-2.13.1/httpcore2/_sync/http11.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 18,
@@ -88,7 +88,7 @@
       }
     },
     {
-      "file": "httpcore2-2.12.0/httpcore2/_async/http2.py",
+      "file": "httpcore2-2.13.1/httpcore2/_sync/connection.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 18,
@@ -103,7 +103,7 @@
       }
     },
     {
-      "file": "httpcore2-2.12.0/httpcore2/_async/connection.py",
+      "file": "httpcore2-2.13.1/httpcore2/_sync/http2.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 18,

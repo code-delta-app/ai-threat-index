@@ -1,22 +1,24 @@
 {
   "summary": {
-    "total_files": 12,
+    "total_files": 18,
     "flagged_files": 1,
     "critical_files": 0,
     "high_files": 0,
     "elevated_files": 1,
-    "normal_files": 11,
+    "normal_files": 17,
     "flagged_ai_files": 1,
     "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 12 file(s). 0 HIGH, 1 ELEVATED. AI SDKs detected: Cohere, Deepseek, OpenAI, http:open.bigmodel.cn. "
+    "summary_text": "1 send data to models hosted in a sovereignty-sensitive jurisdiction. Scanned 18 file(s): 0 CRITICAL, 0 HIGH, 1 ELEVATED. AI SDKs detected: Cohere, Deepseek, OpenAI, http:open.bigmodel.cn. Coverage: 12 file(s) with full language rules, 0 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 6 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
   },
   "sdk_inventory": {
     "Cohere": 1,
     "Deepseek": 1,
     "OpenAI": 1,
     "http:open.bigmodel.cn": 1,
-    "http:openrouter.ai": 1
+    "http:openrouter.ai": 1,
+    "http:bedrock-runtime": 1,
+    "http:router.huggingface.co": 1
   },
   "agent_artifacts": {
     "table_version": 1,
@@ -29,18 +31,21 @@
   },
   "files": [
     {
-      "rel_path": "genai_prices-0.1.5/genai_prices/data.py",
+      "rel_path": "genai_prices-0.1.9/genai_prices/data.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
         "from Cohere",
         "from Deepseek",
         "from OpenAI",
         "http:open.bigmodel.cn",
-        "http:openrouter.ai"
+        "http:openrouter.ai",
+        "http:bedrock-runtime",
+        "http:router.huggingface.co"
       ],
       "agent_patterns": [],
       "dangerous_exec": [],
@@ -52,11 +57,12 @@
       ]
     },
     {
-      "rel_path": "genai_prices-0.1.5/genai_prices/__init__.py",
-      "language": "Python",
+      "rel_path": "genai_prices-0.1.9/pyproject.toml",
+      "language": "text (.toml)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -64,11 +70,12 @@
       "signals": []
     },
     {
-      "rel_path": "genai_prices-0.1.5/genai_prices/data_units.py",
-      "language": "Python",
+      "rel_path": "genai_prices-0.1.9/LICENSE",
+      "language": "text (LICENSE)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -76,11 +83,12 @@
       "signals": []
     },
     {
-      "rel_path": "genai_prices-0.1.5/genai_prices/units.py",
-      "language": "Python",
+      "rel_path": "genai_prices-0.1.9/.gitignore",
+      "language": "text (.gitignore)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -88,11 +96,12 @@
       "signals": []
     },
     {
-      "rel_path": "genai_prices-0.1.5/genai_prices/__main__.py",
-      "language": "Python",
+      "rel_path": "genai_prices-0.1.9/README.md",
+      "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -100,11 +109,12 @@
       "signals": []
     },
     {
-      "rel_path": "genai_prices-0.1.5/genai_prices/data_snapshot.py",
-      "language": "Python",
+      "rel_path": "genai_prices-0.1.9/PKG-INFO",
+      "language": "text (PKG-INFO)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -112,11 +122,12 @@
       "signals": []
     },
     {
-      "rel_path": "genai_prices-0.1.5/genai_prices/update_prices.py",
+      "rel_path": "genai_prices-0.1.9/genai_prices/__main__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -124,11 +135,12 @@
       "signals": []
     },
     {
-      "rel_path": "genai_prices-0.1.5/genai_prices/types.py",
+      "rel_path": "genai_prices-0.1.9/genai_prices/data_units.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -136,11 +148,12 @@
       "signals": []
     },
     {
-      "rel_path": "genai_prices-0.1.5/genai_prices/validation.py",
+      "rel_path": "genai_prices-0.1.9/genai_prices/_usage.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -148,11 +161,12 @@
       "signals": []
     },
     {
-      "rel_path": "genai_prices-0.1.5/genai_prices/decompose.py",
-      "language": "Python",
+      "rel_path": "genai_prices-0.1.9/genai_prices/py.typed",
+      "language": "text (.typed)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -160,11 +174,12 @@
       "signals": []
     },
     {
-      "rel_path": "genai_prices-0.1.5/genai_prices/_usage.py",
+      "rel_path": "genai_prices-0.1.9/genai_prices/decompose.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -172,11 +187,90 @@
       "signals": []
     },
     {
-      "rel_path": "genai_prices-0.1.5/genai_prices/_cli.py",
+      "rel_path": "genai_prices-0.1.9/genai_prices/types.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "genai_prices-0.1.9/genai_prices/units.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "genai_prices-0.1.9/genai_prices/data_snapshot.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "genai_prices-0.1.9/genai_prices/validation.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "genai_prices-0.1.9/genai_prices/_cli.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "genai_prices-0.1.9/genai_prices/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "genai_prices-0.1.9/genai_prices/update_prices.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],

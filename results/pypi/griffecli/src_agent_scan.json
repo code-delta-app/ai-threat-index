@@ -1,15 +1,15 @@
 {
   "summary": {
-    "total_files": 19,
+    "total_files": 13,
     "flagged_files": 0,
     "critical_files": 0,
     "high_files": 0,
     "elevated_files": 0,
-    "normal_files": 19,
+    "normal_files": 13,
     "flagged_ai_files": 0,
     "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 19 file(s). No AI agent initiation signatures detected."
+    "summary_text": "Scanned 13 file(s). No AI agent initiation signatures detected. Coverage: 6 file(s) with full language rules, 0 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 7 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
   },
   "sdk_inventory": {},
   "agent_artifacts": {
@@ -23,11 +23,12 @@
   },
   "files": [
     {
-      "rel_path": "propcache-0.5.2/packaging/pep517_backend/__init__.py",
-      "language": "Python",
+      "rel_path": "griffecli-2.3.0/CHANGELOG.md",
+      "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -35,11 +36,12 @@
       "signals": []
     },
     {
-      "rel_path": "propcache-0.5.2/packaging/pep517_backend/_transformers.py",
-      "language": "Python",
+      "rel_path": "griffecli-2.3.0/pyproject.toml",
+      "language": "text (.toml)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -47,11 +49,12 @@
       "signals": []
     },
     {
-      "rel_path": "propcache-0.5.2/packaging/pep517_backend/__main__.py",
-      "language": "Python",
+      "rel_path": "griffecli-2.3.0/LICENSE",
+      "language": "text (LICENSE)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -59,11 +62,12 @@
       "signals": []
     },
     {
-      "rel_path": "propcache-0.5.2/packaging/pep517_backend/hooks.py",
-      "language": "Python",
+      "rel_path": "griffecli-2.3.0/.gitignore",
+      "language": "text (.gitignore)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -71,11 +75,12 @@
       "signals": []
     },
     {
-      "rel_path": "propcache-0.5.2/packaging/pep517_backend/_cython_configuration.py",
-      "language": "Python",
+      "rel_path": "griffecli-2.3.0/README.md",
+      "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -83,11 +88,12 @@
       "signals": []
     },
     {
-      "rel_path": "propcache-0.5.2/packaging/pep517_backend/cli.py",
-      "language": "Python",
+      "rel_path": "griffecli-2.3.0/PKG-INFO",
+      "language": "text (PKG-INFO)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -95,11 +101,12 @@
       "signals": []
     },
     {
-      "rel_path": "propcache-0.5.2/packaging/pep517_backend/_compat.py",
+      "rel_path": "griffecli-2.3.0/tests/test_cli.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -107,11 +114,12 @@
       "signals": []
     },
     {
-      "rel_path": "propcache-0.5.2/packaging/pep517_backend/_backend.py",
+      "rel_path": "griffecli-2.3.0/tests/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -119,11 +127,12 @@
       "signals": []
     },
     {
-      "rel_path": "propcache-0.5.2/src/propcache/__init__.py",
+      "rel_path": "griffecli-2.3.0/src/griffecli/__main__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -131,11 +140,12 @@
       "signals": []
     },
     {
-      "rel_path": "propcache-0.5.2/src/propcache/api.py",
-      "language": "Python",
+      "rel_path": "griffecli-2.3.0/src/griffecli/py.typed",
+      "language": "text (.typed)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -143,11 +153,12 @@
       "signals": []
     },
     {
-      "rel_path": "propcache-0.5.2/src/propcache/_helpers.py",
+      "rel_path": "griffecli-2.3.0/src/griffecli/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -155,11 +166,12 @@
       "signals": []
     },
     {
-      "rel_path": "propcache-0.5.2/src/propcache/_helpers_py.py",
+      "rel_path": "griffecli-2.3.0/src/griffecli/_internal/cli.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -167,83 +179,12 @@
       "signals": []
     },
     {
-      "rel_path": "propcache-0.5.2/tests/conftest.py",
+      "rel_path": "griffecli-2.3.0/src/griffecli/_internal/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "propcache-0.5.2/tests/test_init.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "propcache-0.5.2/tests/test_benchmarks.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "propcache-0.5.2/tests/test_under_cached_property.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "propcache-0.5.2/tests/test_cached_property.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "propcache-0.5.2/tests/test_api.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "propcache-0.5.2/docs/conf.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -252,11 +193,11 @@
     }
   ],
   "build_surface": {
-    "total": 4,
+    "total": 1,
     "counts": {
-      "build": 3,
+      "build": 1,
       "ci": 0,
-      "packaging": 1,
+      "packaging": 0,
       "dependency": 0,
       "hook": 0,
       "fetch": 0

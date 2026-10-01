@@ -1,15 +1,15 @@
 {
   "summary": {
-    "total_files": 119,
+    "total_files": 125,
     "flagged_files": 0,
     "critical_files": 0,
     "high_files": 0,
     "elevated_files": 0,
-    "normal_files": 119,
+    "normal_files": 125,
     "flagged_ai_files": 0,
     "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 119 file(s). No AI agent initiation signatures detected."
+    "summary_text": "Scanned 125 file(s). No AI agent initiation signatures detected. Coverage: 119 file(s) with full language rules, 0 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 6 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
   },
   "sdk_inventory": {},
   "agent_artifacts": {
@@ -23,11 +23,12 @@
   },
   "files": [
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/__init__.py",
       "language": "Python",
       "ais": 20,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -37,11 +38,90 @@
       ]
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/pyproject.toml",
+      "language": "text (.toml)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "py_key_value_aio-0.4.6/pyproject.toml.orig",
+      "language": "text (.orig)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "py_key_value_aio-0.4.6/LICENSE",
+      "language": "text (LICENSE)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "py_key_value_aio-0.4.6/README.md",
+      "language": "text (.md)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "py_key_value_aio-0.4.6/PKG-INFO",
+      "language": "text (PKG-INFO)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/py.typed",
+      "language": "text (.typed)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -49,11 +129,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/errors/wrappers.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -61,11 +142,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/base.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/errors/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -73,11 +155,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/memcached/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/errors/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -85,11 +168,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/memcached/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/errors/base.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -97,11 +181,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/keyring/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/errors/key_value.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -109,11 +194,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/keyring/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -121,11 +207,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/rocksdb/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/base.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -133,11 +220,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/rocksdb/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/read_only/wrapper.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -145,11 +233,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/chdb/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/read_only/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -157,11 +246,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/chdb/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/prefix_collections/wrapper.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -169,11 +259,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/redis/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/prefix_collections/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -181,11 +272,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/redis/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/encryption/fernet.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -193,11 +285,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/firestore/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/encryption/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -205,11 +298,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/firestore/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/encryption/base.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -217,11 +311,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/disk/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/logging/wrapper.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -229,11 +324,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/disk/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/logging/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -241,11 +337,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/disk/multi_store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/passthrough_cache/wrapper.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -253,11 +350,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/memory/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/passthrough_cache/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -265,11 +363,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/memory/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/compression/wrapper.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -277,11 +376,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/dynamodb/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/compression/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -289,11 +389,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/dynamodb/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/default_value/wrapper.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -301,11 +402,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/null/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/default_value/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -313,11 +415,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/null/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/statistics/wrapper.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -325,11 +428,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/vault/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/statistics/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -337,11 +441,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/vault/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/routing/wrapper.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -349,11 +454,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/aerospike/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/routing/collection_routing.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -361,11 +467,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/aerospike/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/routing/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -373,11 +480,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/s3/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/timeout/wrapper.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -385,11 +493,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/s3/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/timeout/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -397,11 +506,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/azure_tables/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/ttl_clamp/wrapper.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -409,11 +519,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/azure_tables/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/ttl_clamp/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -421,11 +532,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/valkey/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/prefix_keys/wrapper.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -433,11 +545,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/valkey/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/prefix_keys/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -445,11 +558,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/postgresql/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/single_collection/wrapper.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -457,11 +571,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/postgresql/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/single_collection/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -469,11 +584,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/mongodb/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/fallback/wrapper.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -481,11 +597,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/mongodb/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/fallback/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -493,11 +610,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/duckdb/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/limit_size/wrapper.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -505,11 +623,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/duckdb/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/limit_size/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -517,11 +636,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/windows_registry/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/retry/wrapper.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -529,11 +649,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/windows_registry/utils.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/wrappers/retry/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -541,11 +662,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/windows_registry/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/adapters/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -553,11 +675,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/opensearch/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/adapters/base/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -565,11 +688,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/opensearch/utils.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/adapters/base_model/adapter.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -577,11 +701,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/opensearch/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/adapters/base_model/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -589,11 +714,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/elasticsearch/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/adapters/dataclass/adapter.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -601,11 +727,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/elasticsearch/utils.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/adapters/dataclass/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -613,11 +740,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/elasticsearch/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/adapters/raise_on_missing/adapter.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -625,11 +753,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/simple/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/adapters/raise_on_missing/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -637,11 +766,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/simple/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/adapters/pydantic/adapter.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -649,11 +779,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/filetree/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/adapters/pydantic/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -661,11 +792,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/stores/filetree/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/adapters/pydantic/base.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -673,11 +805,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/errors/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/_utils/beartype.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -685,11 +818,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/errors/store.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/_utils/managed_entry.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -697,11 +831,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/errors/wrappers.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/_utils/wait.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -709,11 +844,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/errors/key_value.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/_utils/time_to_live.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -721,11 +857,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/errors/base.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/_utils/compound.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -733,11 +870,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/_utils/sanitize.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -745,11 +883,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/base.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/_utils/retry.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -757,11 +896,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/timeout/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/_utils/constants.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -769,11 +909,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/timeout/wrapper.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/_utils/sanitization.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -781,11 +922,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/compression/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/_utils/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -793,11 +935,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/compression/wrapper.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/_utils/serialization.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -805,11 +948,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/retry/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -817,11 +961,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/retry/wrapper.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/base.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -829,11 +974,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/default_value/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/aerospike/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -841,11 +987,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/default_value/wrapper.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/aerospike/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -853,11 +1000,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/fallback/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/elasticsearch/utils.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -865,11 +1013,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/fallback/wrapper.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/elasticsearch/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -877,11 +1026,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/limit_size/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/elasticsearch/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -889,11 +1039,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/limit_size/wrapper.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/disk/multi_store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -901,11 +1052,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/prefix_collections/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/disk/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -913,11 +1065,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/prefix_collections/wrapper.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/disk/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -925,11 +1078,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/encryption/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/s3/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -937,11 +1091,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/encryption/fernet.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/s3/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -949,11 +1104,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/encryption/base.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/rocksdb/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -961,11 +1117,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/prefix_keys/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/rocksdb/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -973,11 +1130,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/prefix_keys/wrapper.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/redis/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -985,11 +1143,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/routing/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/redis/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -997,11 +1156,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/routing/collection_routing.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/memcached/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1009,11 +1169,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/routing/wrapper.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/memcached/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1021,11 +1182,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/ttl_clamp/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/keyring/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1033,11 +1195,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/ttl_clamp/wrapper.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/keyring/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1045,11 +1208,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/logging/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/chdb/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1057,11 +1221,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/logging/wrapper.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/chdb/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1069,11 +1234,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/passthrough_cache/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/simple/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1081,11 +1247,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/passthrough_cache/wrapper.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/simple/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1093,11 +1260,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/single_collection/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/valkey/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1105,11 +1273,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/single_collection/wrapper.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/valkey/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1117,11 +1286,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/read_only/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/duckdb/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1129,11 +1299,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/read_only/wrapper.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/duckdb/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1141,11 +1312,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/statistics/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/memory/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1153,11 +1325,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/wrappers/statistics/wrapper.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/memory/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1165,11 +1338,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/_utils/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/filetree/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1177,11 +1351,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/_utils/wait.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/filetree/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1189,11 +1364,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/_utils/sanitization.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/null/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1201,11 +1377,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/_utils/beartype.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/null/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1213,11 +1390,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/_utils/time_to_live.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/vault/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1225,11 +1403,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/_utils/sanitize.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/vault/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1237,11 +1416,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/_utils/managed_entry.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/opensearch/utils.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1249,11 +1429,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/_utils/compound.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/opensearch/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1261,11 +1442,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/_utils/retry.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/opensearch/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1273,11 +1455,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/_utils/constants.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/postgresql/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1285,11 +1468,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/_utils/serialization.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/postgresql/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1297,11 +1481,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/protocols/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/firestore/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1309,11 +1494,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/protocols/key_value.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/firestore/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1321,11 +1507,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/adapters/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/windows_registry/utils.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1333,11 +1520,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/adapters/dataclass/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/windows_registry/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1345,11 +1533,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/adapters/dataclass/adapter.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/windows_registry/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1357,11 +1546,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/adapters/pydantic/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/azure_tables/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1369,11 +1559,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/adapters/pydantic/adapter.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/azure_tables/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1381,11 +1572,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/adapters/pydantic/base.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/mongodb/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1393,11 +1585,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/adapters/base/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/mongodb/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1405,11 +1598,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/adapters/raise_on_missing/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/dynamodb/store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1417,11 +1611,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/adapters/raise_on_missing/adapter.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/stores/dynamodb/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1429,11 +1624,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/adapters/base_model/__init__.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/protocols/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -1441,11 +1637,12 @@
       "signals": []
     },
     {
-      "rel_path": "py_key_value_aio-0.4.5/src/key_value/aio/adapters/base_model/adapter.py",
+      "rel_path": "py_key_value_aio-0.4.6/src/key_value/aio/protocols/key_value.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],

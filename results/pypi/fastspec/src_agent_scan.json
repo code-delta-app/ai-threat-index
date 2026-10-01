@@ -1,17 +1,21 @@
 {
   "summary": {
-    "total_files": 5,
-    "flagged_files": 0,
+    "total_files": 16,
+    "flagged_files": 2,
     "critical_files": 0,
     "high_files": 0,
-    "elevated_files": 0,
-    "normal_files": 5,
-    "flagged_ai_files": 0,
+    "elevated_files": 2,
+    "normal_files": 14,
+    "flagged_ai_files": 2,
     "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 5 file(s). No AI agent initiation signatures detected."
+    "summary_text": "Scanned 16 file(s): 0 CRITICAL, 0 HIGH, 2 ELEVATED. AI SDKs detected: http:api.openai.com, http:api.anthropic.com, http:generativelanguage.googleapis.com. Coverage: 5 file(s) with full language rules, 0 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 11 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
   },
-  "sdk_inventory": {},
+  "sdk_inventory": {
+    "http:api.openai.com": 2,
+    "http:api.anthropic.com": 2,
+    "http:generativelanguage.googleapis.com": 2
+  },
   "agent_artifacts": {
     "table_version": 1,
     "tier3_count": 0,
@@ -23,11 +27,50 @@
   },
   "files": [
     {
-      "rel_path": "fastspec-0.2.4/fastspec/__init__.py",
-      "language": "Python",
+      "rel_path": "fastspec-0.2.5/PKG-INFO",
+      "language": "text (PKG-INFO)",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "http:api.openai.com",
+        "http:api.anthropic.com",
+        "http:generativelanguage.googleapis.com"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_http_endpoint(api.openai.com)"
+      ]
+    },
+    {
+      "rel_path": "fastspec-0.2.5/fastspec.egg-info/PKG-INFO",
+      "language": "text (PKG-INFO)",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "http:api.openai.com",
+        "http:api.anthropic.com",
+        "http:generativelanguage.googleapis.com"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_http_endpoint(api.openai.com)"
+      ]
+    },
+    {
+      "rel_path": "fastspec-0.2.5/pyproject.toml",
+      "language": "text (.toml)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -35,11 +78,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.4/fastspec/oapi.py",
-      "language": "Python",
+      "rel_path": "fastspec-0.2.5/LICENSE",
+      "language": "text (LICENSE)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -47,11 +91,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.4/fastspec/gql.py",
-      "language": "Python",
+      "rel_path": "fastspec-0.2.5/README.md",
+      "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -59,11 +104,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.4/fastspec/spec.py",
-      "language": "Python",
+      "rel_path": "fastspec-0.2.5/setup.cfg",
+      "language": "text (.cfg)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -71,11 +117,129 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.4/fastspec/_modidx.py",
+      "rel_path": "fastspec-0.2.5/fastspec/spec.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastspec-0.2.5/fastspec/_modidx.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastspec-0.2.5/fastspec/oapi.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastspec-0.2.5/fastspec/gql.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastspec-0.2.5/fastspec/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastspec-0.2.5/fastspec.egg-info/requires.txt",
+      "language": "text (.txt)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastspec-0.2.5/fastspec.egg-info/entry_points.txt",
+      "language": "text (.txt)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastspec-0.2.5/fastspec.egg-info/top_level.txt",
+      "language": "text (.txt)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastspec-0.2.5/fastspec.egg-info/dependency_links.txt",
+      "language": "text (.txt)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastspec-0.2.5/fastspec.egg-info/SOURCES.txt",
+      "language": "text (.txt)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -84,11 +248,11 @@
     }
   ],
   "build_surface": {
-    "total": 3,
+    "total": 2,
     "counts": {
       "build": 2,
       "ci": 0,
-      "packaging": 1,
+      "packaging": 0,
       "dependency": 0,
       "hook": 0,
       "fetch": 0

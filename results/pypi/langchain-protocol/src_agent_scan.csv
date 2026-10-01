@@ -1,3 +1,9 @@
-rel_path,language,ais,risk,gss,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
-langchain_protocol-0.0.19/langchain_protocol/__init__.py,Python,0,NORMAL,0,0,,,,
-langchain_protocol-0.0.19/langchain_protocol/protocol.py,Python,0,NORMAL,0,0,,,,
+rel_path,language,ais,risk,gss,coverage,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+langchain_protocol-0.0.19/pyproject.toml,text (.toml),0,NORMAL,0,text,0,,,,
+langchain_protocol-0.0.19/LICENSE,text (LICENSE),0,NORMAL,0,text,0,,,,
+langchain_protocol-0.0.19/.gitignore,text (.gitignore),0,NORMAL,0,text,0,,,,
+langchain_protocol-0.0.19/README.md,text (.md),0,NORMAL,0,text,0,,,,
+langchain_protocol-0.0.19/PKG-INFO,text (PKG-INFO),0,NORMAL,0,text,0,,,,
+langchain_protocol-0.0.19/langchain_protocol/py.typed,text (.typed),0,NORMAL,0,text,0,,,,
+langchain_protocol-0.0.19/langchain_protocol/protocol.py,Python,0,NORMAL,0,full,0,,,,
+langchain_protocol-0.0.19/langchain_protocol/__init__.py,Python,0,NORMAL,0,full,0,,,,

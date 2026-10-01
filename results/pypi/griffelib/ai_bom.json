@@ -1,14 +1,14 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-09-01T08:10:40.824188Z",
+  "generated": "2026-10-01T03:19:50.891419Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 78,
+    "files_scanned": 86,
     "files_flagged": 0,
     "critical": 0,
     "high": 0,
@@ -28,12 +28,12 @@
   "committed_credentials": [],
   "findings": [
     {
-      "file": "griffelib-2.2.0/src/griffe/_internal/importer.py",
+      "file": "griffelib-2.3.0/tests/test_finder.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 20,
       "signals": [
-        "dynamic_import(x1)"
+        "dynamic_import(x2)"
       ],
       "flags": {
         "foreign_egress": false,
@@ -43,12 +43,12 @@
       }
     },
     {
-      "file": "griffelib-2.2.0/tests/test_finder.py",
+      "file": "griffelib-2.3.0/src/griffe/_internal/importer.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 20,
       "signals": [
-        "dynamic_import(x2)"
+        "dynamic_import(x1)"
       ],
       "flags": {
         "foreign_egress": false,

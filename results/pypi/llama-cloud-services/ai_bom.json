@@ -1,14 +1,14 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-09-01T08:10:54.491927Z",
+  "generated": "2026-10-01T03:19:56.042882Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 28,
+    "files_scanned": 33,
     "files_flagged": 8,
     "critical": 0,
     "high": 1,
@@ -81,6 +81,36 @@
       }
     },
     {
+      "file": "llama_cloud_services-0.6.94/llama_cloud_services/beta/classifier/client.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "llama_cloud_services-0.6.94/llama_cloud_services/index/api_utils.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
       "file": "llama_cloud_services-0.6.94/llama_cloud_services/index/retriever.py",
       "language": "Python",
       "risk": "ELEVATED",
@@ -111,37 +141,7 @@
       }
     },
     {
-      "file": "llama_cloud_services-0.6.94/llama_cloud_services/index/api_utils.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
       "file": "llama_cloud_services-0.6.94/llama_cloud_services/index/base.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "llama_cloud_services-0.6.94/llama_cloud_services/beta/classifier/client.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,

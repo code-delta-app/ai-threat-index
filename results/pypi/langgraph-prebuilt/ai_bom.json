@@ -1,17 +1,17 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-09-01T08:10:53.784366Z",
+  "generated": "2026-10-01T03:20:40.248364Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 25,
-    "files_flagged": 12,
+    "files_scanned": 36,
+    "files_flagged": 11,
     "critical": 0,
-    "high": 2,
+    "high": 1,
     "elevated": 10,
     "providers": 0,
     "frameworks": 1,
@@ -33,12 +33,10 @@
       "seen_as": [
         "langchain"
       ],
-      "file_count": 4,
+      "file_count": 2,
       "files": [
-        "langgraph_prebuilt-1.1.0/langgraph/prebuilt/_tool_call_stream.py",
         "langgraph_prebuilt-1.1.0/langgraph/prebuilt/chat_agent_executor.py",
-        "langgraph_prebuilt-1.1.0/langgraph/prebuilt/interrupt.py",
-        "langgraph_prebuilt-1.1.0/langgraph/prebuilt/tool_node.py"
+        "langgraph_prebuilt-1.1.0/langgraph/prebuilt/interrupt.py"
       ]
     }
   ],
@@ -52,23 +50,6 @@
   ],
   "committed_credentials": [],
   "findings": [
-    {
-      "file": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/tool_node.py",
-      "language": "Python",
-      "risk": "HIGH",
-      "ais": 98,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(StateGraph)",
-        "prompt_injection_partial(1)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
     {
       "file": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/chat_agent_executor.py",
       "language": "Python",
@@ -102,12 +83,13 @@
       }
     },
     {
-      "file": "langgraph_prebuilt-1.1.0/tests/test_deprecation.py",
+      "file": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/tool_node.py",
       "language": "Python",
       "risk": "ELEVATED",
-      "ais": 40,
+      "ais": 58,
       "signals": [
-        "agent_orchestration(create_react_agent)"
+        "agent_orchestration(StateGraph,add_node()",
+        "prompt_injection_partial(1)"
       ],
       "flags": {
         "foreign_egress": false,
@@ -122,7 +104,7 @@
       "risk": "ELEVATED",
       "ais": 40,
       "signals": [
-        "agent_orchestration(StateGraph,add_edge()"
+        "agent_orchestration(StateGraph,add_node()"
       ],
       "flags": {
         "foreign_egress": false,
@@ -132,7 +114,7 @@
       }
     },
     {
-      "file": "langgraph_prebuilt-1.1.0/tests/test_injected_state_not_required.py",
+      "file": "langgraph_prebuilt-1.1.0/tests/test_deprecation.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -167,7 +149,7 @@
       "risk": "ELEVATED",
       "ais": 40,
       "signals": [
-        "agent_orchestration(StateGraph,add_edge()"
+        "agent_orchestration(StateGraph,add_node()"
       ],
       "flags": {
         "foreign_egress": false,
@@ -177,7 +159,7 @@
       }
     },
     {
-      "file": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/__init__.py",
+      "file": "langgraph_prebuilt-1.1.0/tests/test_injected_state_not_required.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -197,7 +179,7 @@
       "risk": "ELEVATED",
       "ais": 40,
       "signals": [
-        "agent_orchestration(StateGraph,add_edge()"
+        "agent_orchestration(StateGraph,add_node()"
       ],
       "flags": {
         "foreign_egress": false,
@@ -222,12 +204,12 @@
       }
     },
     {
-      "file": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/_tool_call_stream.py",
+      "file": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/__init__.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
       "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
+        "agent_orchestration(create_react_agent)"
       ],
       "flags": {
         "foreign_egress": false,

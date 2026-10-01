@@ -1,0 +1,140 @@
+{
+  "bom_format": "CodeDelta-AI-BOM",
+  "spec_version": "1.2",
+  "generated": "2026-10-01T03:21:19.382273Z",
+  "tool": {
+    "name": "CodeDelta",
+    "component": "Agent Scan (AIS)"
+  },
+  "project": "",
+  "summary": {
+    "files_scanned": 364,
+    "files_flagged": 2,
+    "critical": 0,
+    "high": 0,
+    "elevated": 2,
+    "providers": 0,
+    "frameworks": 0,
+    "foreign_egress_files": 0,
+    "non_allied_jurisdiction_files": 0,
+    "cost_risk_files": 0,
+    "agent_artifacts": 0,
+    "agent_artifacts_tier3": 0,
+    "committed_credentials": 8
+  },
+  "providers": [],
+  "frameworks": [],
+  "agent_artifacts": [],
+  "committed_credentials": [
+    {
+      "kind": "Private key (PEM)",
+      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/_test/unit/connections/sql_helper/test_workday_data_connect_sql_helper.py",
+      "line": 12,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/_test/unit/connections/sql_helper/test_workday_data_connect_sql_helper.py",
+      "line": 33,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/_test/unit/sql_engine/test_big_query_transformer.py",
+      "line": 20,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/_test/unit/sql_engine/test_workday_transformer.py",
+      "line": 13,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/_test/unit/sql_engine/test_workday_transformer.py",
+      "line": 35,
+      "sample": "-----BEG\u2026 (27 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/sql_engine/_sqlalchemy_workday_data_connect/_test/dbapi/test_auth.py",
+      "line": 20,
+      "sample": "-----BEG\u2026 (31 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/sql_engine/_sqlalchemy_workday_data_connect/_test/test_dialect.py",
+      "line": 143,
+      "sample": "-----BEG\u2026 (31 chars)"
+    },
+    {
+      "kind": "Private key (PEM)",
+      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/sql_engine/_sqlalchemy_workday_data_connect/_test/test_dialect.py",
+      "line": 230,
+      "sample": "-----BEG\u2026 (31 chars)"
+    }
+  ],
+  "findings": [
+    {
+      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/_test/unit/utils/udf/test_capture.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x9)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/_test/unit/utils/udf/test_routed.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x4)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/execution/remote_execution_client.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 35,
+      "signals": [
+        "prompt_injection_vectors(7_unsanitised_inputs)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/execution/local_execution_client.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 18,
+      "signals": [
+        "prompt_injection_partial(2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    }
+  ]
+}

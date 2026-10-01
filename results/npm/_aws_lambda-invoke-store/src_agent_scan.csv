@@ -1,0 +1,8 @@
+rel_path,language,ais,risk,gss,coverage,injection_vectors,sdk_found,agent_patterns,dangerous_exec,signals
+package/LICENSE,text (LICENSE),0,NORMAL,0,text,0,,,,
+package/README.md,text (.md),0,NORMAL,0,text,0,,,,
+package/package.json,text (.json),0,NORMAL,0,text,0,,,,
+package/dist-es/invoke-store.js,JavaScript,0,NORMAL,0,full,0,,,,
+package/dist-types/invoke-store.d.ts,JavaScript,0,NORMAL,0,full,0,,,,
+package/dist-types/invoke-store.benchmark.d.ts,JavaScript,0,NORMAL,0,full,0,,,,
+package/dist-cjs/invoke-store.js,JavaScript,0,NORMAL,0,full,0,,,,

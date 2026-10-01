@@ -1,15 +1,15 @@
 {
   "summary": {
-    "total_files": 30,
+    "total_files": 37,
     "flagged_files": 0,
     "critical_files": 0,
     "high_files": 0,
     "elevated_files": 0,
-    "normal_files": 30,
+    "normal_files": 37,
     "flagged_ai_files": 0,
     "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 30 file(s). No AI agent initiation signatures detected."
+    "summary_text": "Scanned 37 file(s). No AI agent initiation signatures detected. Coverage: 30 file(s) with full language rules, 0 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 7 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
   },
   "sdk_inventory": {},
   "agent_artifacts": {
@@ -23,11 +23,12 @@
   },
   "files": [
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_alias.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_alias.py",
       "language": "Python",
       "ais": 20,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -37,11 +38,12 @@
       ]
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_urlparse.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_urlparse.py",
       "language": "Python",
       "ais": 18,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 1,
       "sdk_found": [],
       "agent_patterns": [],
@@ -51,11 +53,12 @@
       ]
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_api.py",
-      "language": "Python",
+      "rel_path": "httpx2-2.13.1/CHANGELOG.md",
+      "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -63,11 +66,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/__init__.py",
-      "language": "Python",
+      "rel_path": "httpx2-2.13.1/pyproject.toml",
+      "language": "text (.toml)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -75,11 +79,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_decoders.py",
-      "language": "Python",
+      "rel_path": "httpx2-2.13.1/LICENSE.md",
+      "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -87,11 +92,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_main.py",
-      "language": "Python",
+      "rel_path": "httpx2-2.13.1/.gitignore",
+      "language": "text (.gitignore)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -99,11 +105,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_status_codes.py",
-      "language": "Python",
+      "rel_path": "httpx2-2.13.1/README.md",
+      "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -111,11 +118,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_client.py",
-      "language": "Python",
+      "rel_path": "httpx2-2.13.1/PKG-INFO",
+      "language": "text (PKG-INFO)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -123,11 +131,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_multipart.py",
+      "rel_path": "httpx2-2.13.1/httpx2/__version__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -135,11 +144,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_config.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_main.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -147,11 +157,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/__version__.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_api.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -159,11 +170,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_sse.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_types.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -171,11 +183,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_utils.py",
-      "language": "Python",
+      "rel_path": "httpx2-2.13.1/httpx2/py.typed",
+      "language": "text (.typed)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -183,11 +196,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_models.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_models.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -195,11 +209,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_exceptions.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_multipart.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -207,11 +222,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_auth.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_decoders.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -219,11 +235,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_urls.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_auth.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -231,11 +248,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_types.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_content.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -243,11 +261,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_content.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_urls.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -255,11 +274,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_transports/__init__.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_status_codes.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -267,11 +287,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_transports/default.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_utils.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -279,11 +300,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_transports/mock.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_config.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -291,11 +313,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_transports/asgi.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_sse.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -303,11 +326,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_transports/wsgi.py",
+      "rel_path": "httpx2-2.13.1/httpx2/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -315,11 +339,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/_transports/base.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_client.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -327,11 +352,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/websockets/_api.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_exceptions.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -339,11 +365,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/websockets/__init__.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_transports/default.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -351,11 +378,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/websockets/_ping.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_transports/mock.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -363,11 +391,12 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/websockets/_transport.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_transports/wsgi.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -375,11 +404,103 @@
       "signals": []
     },
     {
-      "rel_path": "httpx2-2.12.0/httpx2/websockets/_exceptions.py",
+      "rel_path": "httpx2-2.13.1/httpx2/_transports/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "httpx2-2.13.1/httpx2/_transports/base.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "httpx2-2.13.1/httpx2/_transports/asgi.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "httpx2-2.13.1/httpx2/websockets/_api.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "httpx2-2.13.1/httpx2/websockets/_ping.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "httpx2-2.13.1/httpx2/websockets/_transport.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "httpx2-2.13.1/httpx2/websockets/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "httpx2-2.13.1/httpx2/websockets/_exceptions.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],

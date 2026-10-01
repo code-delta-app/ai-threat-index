@@ -1,14 +1,14 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-09-01T08:09:56.402295Z",
+  "generated": "2026-10-01T03:19:33.349583Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 32,
+    "files_scanned": 61,
     "files_flagged": 3,
     "critical": 0,
     "high": 1,
@@ -28,7 +28,7 @@
   "committed_credentials": [],
   "findings": [
     {
-      "file": "python_discovery-1.6.0/src/python_discovery/_py_info_collect.py",
+      "file": "python_discovery-1.6.1/src/python_discovery/_py_info_collect.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 70,
@@ -44,7 +44,7 @@
       }
     },
     {
-      "file": "python_discovery-1.6.0/tests/windows/conftest.py",
+      "file": "python_discovery-1.6.1/tests/windows/conftest.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 50,
@@ -59,7 +59,7 @@
       }
     },
     {
-      "file": "python_discovery-1.6.0/tests/test_py_info_collect.py",
+      "file": "python_discovery-1.6.1/tests/test_py_info_collect.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -74,7 +74,7 @@
       }
     },
     {
-      "file": "python_discovery-1.6.0/src/python_discovery/_cached_py_info.py",
+      "file": "python_discovery-1.6.1/src/python_discovery/_cached_py_info.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 18,

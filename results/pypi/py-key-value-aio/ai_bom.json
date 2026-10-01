@@ -1,14 +1,14 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-09-01T08:10:39.582570Z",
+  "generated": "2026-10-01T03:19:49.539980Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 119,
+    "files_scanned": 125,
     "files_flagged": 0,
     "critical": 0,
     "high": 0,
@@ -28,7 +28,7 @@
   "committed_credentials": [],
   "findings": [
     {
-      "file": "py_key_value_aio-0.4.5/src/key_value/__init__.py",
+      "file": "py_key_value_aio-0.4.6/src/key_value/__init__.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 20,

@@ -1,14 +1,14 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-09-01T08:10:41.747249Z",
+  "generated": "2026-10-01T03:20:55.435652Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 108,
+    "files_scanned": 146,
     "files_flagged": 0,
     "critical": 0,
     "high": 0,
@@ -28,7 +28,7 @@
   "committed_credentials": [],
   "findings": [
     {
-      "file": "fastapi_cloud_cli-0.24.0/tests/test_cli_ci.py",
+      "file": "fastapi_cloud_cli-0.26.0/tests/test_cli_ci.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 18,
