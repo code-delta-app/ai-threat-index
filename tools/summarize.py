@@ -98,12 +98,21 @@ for eco in sorted(os.listdir(RESULTS)) if os.path.isdir(RESULTS) else []:
 
 agg = ""
 if total_creds is not None:
-    agg = (f"**Credential-format matches across the index: {total_creds}** "
-           "— every one individually inspected (see reviewed.json): all are "
-           "deliberate, documented fixtures — example keys, x'd placeholders, "
-           "test material, and one detector's own patterns. Findings not yet "
-           "reviewed would show \"under disclosure\" with identification "
-           "withheld until maintainers are notified — see Disclosure.\n\n")
+    # Say "every one individually inspected" only when it is true (1 Oct 2026: a new run added
+    # sagemaker-studio, unreviewed, under a sentence that still claimed every match was inspected).
+    pending = sum(1 for r in rows if "under disclosure" in r)
+    if pending == 0:
+        agg = (f"**Credential-format matches across the index: {total_creds}** "
+               "— every one individually inspected (see reviewed.json): all are "
+               "deliberate, documented fixtures — example keys, x'd placeholders, "
+               "test material, and one detector's own patterns. Findings not yet "
+               "reviewed would show \"under disclosure\" with identification "
+               "withheld until maintainers are notified — see Disclosure.\n\n")
+    else:
+        agg = (f"**Credential-format matches across the index: {total_creds}** "
+               f"— {pending} package(s) not yet reviewed are marked \"under disclosure\"; "
+               "every other match was individually inspected (see reviewed.json) and is a "
+               "deliberate, documented fixture. See Disclosure.\n\n")
 table = (
     agg
     + "| Ecosystem | Package | Files scanned | Flagged files | AI providers "

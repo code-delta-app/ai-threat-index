@@ -125,7 +125,7 @@ until the finding is resolved.
 | pypi | python-discovery | 61 | 3 (ELEVATED:2 HIGH:1) | 0 | 0 | 0 | 0 |
 | pypi | pytokens | 21 | 1 (ELEVATED:1) | 0 | 0 | 0 | 0 |
 | pypi | rfc3987-syntax | 15 | 0 | 0 | 0 | 0 | 0 |
-| pypi | sagemaker-studio | 364 | 2 (ELEVATED:2) | 0 | under disclosure | 1 | 0 |
+| pypi | sagemaker-studio | 364 | 2 (ELEVATED:2) | 0 | reviewed: benign fixtures | 1 | 0 |
 | pypi | strands-agents | 759 | 358 (ELEVATED:333 HIGH:25) | 9 | 0 | 0 | 0 |
 | pypi | typing-inspection | 32 | 1 (ELEVATED:1) | 0 | 0 | 0 | 0 |
 | pypi | uncalled-for | 33 | 0 | 0 | 0 | 0 | 0 |
