@@ -1,7 +1,7 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-10-01T03:21:29.703957Z",
+  "generated": "2026-10-01T09:41:38.129105Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"

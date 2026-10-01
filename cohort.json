@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-01T03:18:58.753933+00:00",
+  "generated_utc": "2026-10-01T09:38:39.377644+00:00",
   "rule": "first release on/after 2024-10-11 (24 months); top 50 per registry by lifetime downloads",
   "source": "https://packages.ecosyste.ms",
   "packages": [
@@ -50,6 +50,14 @@
       "first_release": "2025-01-16T17:55:57.292Z",
       "latest_release": "2026-07-24T23:51:36.867Z",
       "repository_url": "https://github.com/radix-ui/primitives"
+    },
+    {
+      "ecosystem": "npm",
+      "name": "side-channel-map",
+      "downloads": 600532411,
+      "first_release": "2024-12-10T19:14:55.436Z",
+      "latest_release": "2024-12-11T04:53:18.943Z",
+      "repository_url": "https://github.com/ljharb/side-channel-map"
     },
     {
       "ecosystem": "npm",
@@ -109,14 +117,6 @@
     },
     {
       "ecosystem": "npm",
-      "name": "side-channel-map",
-      "downloads": 503305198,
-      "first_release": "2024-12-10T19:14:55.436Z",
-      "latest_release": "2024-12-11T04:53:18.943Z",
-      "repository_url": "https://github.com/ljharb/side-channel-map"
-    },
-    {
-      "ecosystem": "npm",
       "name": "@radix-ui/react-context",
       "downloads": 466026239,
       "first_release": "2025-01-16T17:55:49.625Z",
@@ -149,6 +149,14 @@
     },
     {
       "ecosystem": "npm",
+      "name": "use-sync-external-store",
+      "downloads": 428518659,
+      "first_release": "2026-01-26T19:36:53.672Z",
+      "latest_release": "2026-09-09T17:19:07.352Z",
+      "repository_url": "https://github.com/react/react"
+    },
+    {
+      "ecosystem": "npm",
       "name": "@radix-ui/react-compose-refs",
       "downloads": 426933430,
       "first_release": "2025-01-16T17:55:49.510Z",
@@ -162,14 +170,6 @@
       "first_release": "2025-01-16T17:55:46.017Z",
       "latest_release": "2026-07-22T21:55:00.797Z",
       "repository_url": "https://github.com/radix-ui/primitives"
-    },
-    {
-      "ecosystem": "npm",
-      "name": "use-sync-external-store",
-      "downloads": 414640902,
-      "first_release": "2026-01-26T19:36:53.672Z",
-      "latest_release": "2026-09-09T17:19:07.352Z",
-      "repository_url": "https://github.com/react/react"
     },
     {
       "ecosystem": "npm",
@@ -448,7 +448,7 @@
       "name": "google-genai",
       "downloads": 134063601,
       "first_release": "2024-12-10T19:42:33.000Z",
-      "latest_release": "2026-09-22T17:22:59.000Z",
+      "latest_release": "2026-09-30T22:53:21.000Z",
       "repository_url": "https://github.com/googleapis/python-genai"
     },
     {

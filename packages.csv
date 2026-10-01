@@ -4,6 +4,7 @@ npm,dunder-proto
 npm,baseline-browser-mapping
 npm,get-proto
 npm,@radix-ui/react-slot
+npm,side-channel-map
 npm,@radix-ui/react-primitive
 npm,@babel/helper-globals
 npm,@rolldown/pluginutils
@@ -11,14 +12,13 @@ npm,@oxc-project/types
 npm,side-channel-weakmap
 npm,@jridgewell/remapping
 npm,side-channel-list
-npm,side-channel-map
 npm,@radix-ui/react-context
 npm,@typescript-eslint/tsconfig-utils
 npm,@eslint/config-helpers
 npm,@typescript-eslint/project-service
+npm,use-sync-external-store
 npm,@radix-ui/react-compose-refs
 npm,@radix-ui/primitive
-npm,use-sync-external-store
 npm,@radix-ui/react-use-layout-effect
 npm,@radix-ui/react-use-controllable-state
 npm,@radix-ui/react-presence
