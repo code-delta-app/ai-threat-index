@@ -58,7 +58,7 @@ jobs:
             safe=$(printf '%s' "$name" | tr '/@' '__')
             out="results/$eco/$safe"
             rm -rf "$out" && mkdir -p "$out"
-            ( cd "$out" && "$BIN" scan "$GITHUB_WORKSPACE/work/src" --mode agent --bom ai_bom.json ) \
+            ( cd "$out" && "$BIN" scan "$GITHUB_WORKSPACE/work/src" --mode agent --bom ai_bom.json --include-dist ) \
               || echo "  scan exited nonzero for $eco/$name"
             scanned=$((scanned+1))
             rm -rf work
