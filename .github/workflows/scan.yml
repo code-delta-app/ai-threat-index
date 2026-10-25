@@ -17,7 +17,7 @@ jobs:
   scan:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Recompute the cohort (mechanical selection, no editorial list)
         if: github.event_name == 'schedule' || inputs.refresh_cohort
