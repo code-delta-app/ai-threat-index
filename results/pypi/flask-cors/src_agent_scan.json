@@ -1,27 +1,21 @@
 {
   "summary": {
-    "total_files": 51,
-    "flagged_files": 7,
+    "total_files": 63,
+    "flagged_files": 0,
     "critical_files": 0,
     "high_files": 0,
-    "elevated_files": 7,
-    "normal_files": 44,
+    "elevated_files": 0,
+    "normal_files": 63,
     "flagged_ai_files": 0,
-    "flagged_exec_only_files": 7,
+    "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 51 file(s): 0 CRITICAL, 0 HIGH, 7 ELEVATED. Coverage: 33 file(s) with full language rules, 5 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 2 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 11 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
+    "summary_text": "Scanned 63 file(s). No AI agent initiation signatures detected. Coverage: 30 file(s) with full language rules, 3 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 30 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
   },
   "sdk_inventory": {},
   "agent_artifacts": {
     "table_version": 1,
     "tier3_count": 0,
-    "items": [
-      {
-        "name": "Claude Code instructions",
-        "tier": 1,
-        "path": "burner_redis-0.1.7/CLAUDE.md"
-      }
-    ]
+    "items": []
   },
   "committed_credentials": {
     "count": 0,
@@ -29,126 +23,7 @@
   },
   "files": [
     {
-      "rel_path": "burner_redis-0.1.7/tests/test_scripting.py",
-      "language": "Python",
-      "ais": 50,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [
-        "eval/exec found (41 occurrence(s))"
-      ],
-      "signals": [
-        "dynamic_execution(eval/exec_x41)"
-      ]
-    },
-    {
-      "rel_path": "burner_redis-0.1.7/tests/test_prefect_integration.py",
-      "language": "Python",
-      "ais": 50,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [
-        "eval/exec found (5 occurrence(s))"
-      ],
-      "signals": [
-        "dynamic_execution(eval/exec_x5)"
-      ]
-    },
-    {
-      "rel_path": "burner_redis-0.1.7/tests/test_pubsub.py",
-      "language": "Python",
-      "ais": 50,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [
-        "eval/exec found (1 occurrence(s))"
-      ],
-      "signals": [
-        "dynamic_execution(eval/exec_x1)"
-      ]
-    },
-    {
-      "rel_path": "burner_redis-0.1.7/tests/test_lists.py",
-      "language": "Python",
-      "ais": 50,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [
-        "eval/exec found (28 occurrence(s))"
-      ],
-      "signals": [
-        "dynamic_execution(eval/exec_x28)"
-      ]
-    },
-    {
-      "rel_path": "burner_redis-0.1.7/tests/test_pipeline.py",
-      "language": "Python",
-      "ais": 50,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [
-        "eval/exec found (1 occurrence(s))"
-      ],
-      "signals": [
-        "dynamic_execution(eval/exec_x1)"
-      ]
-    },
-    {
-      "rel_path": "burner_redis-0.1.7/python/burner_redis/pipeline.py",
-      "language": "Python",
-      "ais": 50,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [
-        "eval/exec found (1 occurrence(s))"
-      ],
-      "signals": [
-        "dynamic_execution(eval/exec_x1)"
-      ]
-    },
-    {
-      "rel_path": "burner_redis-0.1.7/python/burner_redis/lock.py",
-      "language": "Python",
-      "ais": 50,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [
-        "eval/exec found (1 occurrence(s))"
-      ],
-      "signals": [
-        "dynamic_execution(eval/exec_x1)"
-      ]
-    },
-    {
-      "rel_path": "burner_redis-0.1.7/pyproject.toml",
+      "rel_path": "flask_cors-6.0.5/pyproject.toml",
       "language": "text (.toml)",
       "ais": 0,
       "risk": "NORMAL",
@@ -161,12 +36,12 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/uv.lock",
-      "language": "binary (.lock)",
+      "rel_path": "flask_cors-6.0.5/mkdocs.yml",
+      "language": "text (.yml)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
-      "coverage": "binary",
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -174,7 +49,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/LICENSE",
+      "rel_path": "flask_cors-6.0.5/LICENSE",
       "language": "text (LICENSE)",
       "ais": 0,
       "risk": "NORMAL",
@@ -187,7 +62,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/.gitignore",
+      "rel_path": "flask_cors-6.0.5/.gitignore",
       "language": "text (.gitignore)",
       "ais": 0,
       "risk": "NORMAL",
@@ -200,33 +75,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/Cargo.toml",
-      "language": "text (.toml)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "burner_redis-0.1.7/Cargo.lock",
-      "language": "binary (.lock)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "binary",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "burner_redis-0.1.7/README.md",
+      "rel_path": "flask_cors-6.0.5/CHANGELOG.md",
       "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
@@ -239,8 +88,8 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/THIRDPARTY.yml",
-      "language": "text (.yml)",
+      "rel_path": "flask_cors-6.0.5/Makefile",
+      "language": "text (Makefile)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -252,8 +101,8 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/CLAUDE.md",
-      "language": "text (.md)",
+      "rel_path": "flask_cors-6.0.5/tox.ini",
+      "language": "text (.ini)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -265,7 +114,20 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/PKG-INFO",
+      "rel_path": "flask_cors-6.0.5/codecov.yaml",
+      "language": "text (.yaml)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/PKG-INFO",
       "language": "text (PKG-INFO)",
       "ais": 0,
       "risk": "NORMAL",
@@ -278,7 +140,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/.github/conda-smoke/recipe.yaml",
+      "rel_path": "flask_cors-6.0.5/.pre-commit-config.yaml",
       "language": "text (.yaml)",
       "ais": 0,
       "risk": "NORMAL",
@@ -291,7 +153,85 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/.github/conda-smoke/win64.yaml",
+      "rel_path": "flask_cors-6.0.5/uv.lock",
+      "language": "text (.lock)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/setup.cfg",
+      "language": "text (.cfg)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/.git_archival.txt",
+      "language": "text (.txt)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/README.rst",
+      "language": "text (.rst)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/CONTRIBUTING.md",
+      "language": "text (.md)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/.gitattributes",
+      "language": "text (.gitattributes)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/.readthedocs.yaml",
       "language": "text (.yaml)",
       "ais": 0,
       "risk": "NORMAL",
@@ -304,7 +244,254 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/.github/conda-smoke/environment-win.yml",
+      "rel_path": "flask_cors-6.0.5/flask_cors.egg-info/requires.txt",
+      "language": "text (.txt)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/flask_cors.egg-info/SOURCES.txt",
+      "language": "text (.txt)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/flask_cors.egg-info/top_level.txt",
+      "language": "text (.txt)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/flask_cors.egg-info/PKG-INFO",
+      "language": "text (PKG-INFO)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/flask_cors.egg-info/dependency_links.txt",
+      "language": "text (.txt)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/flask_cors/decorator.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/flask_cors/core.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/flask_cors/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/flask_cors/extension.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/flask_cors/py.typed",
+      "language": "text (.typed)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/docs/decorator.md",
+      "language": "text (.md)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/docs/extension.md",
+      "language": "text (.md)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/docs/index.md",
+      "language": "text (.md)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/docs/examples/decorator.md",
+      "language": "text (.md)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/docs/examples/blueprints.md",
+      "language": "text (.md)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/docs/examples/extension.md",
+      "language": "text (.md)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/examples/blueprints_based_example.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/examples/view_based_example.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/examples/app_based_example.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "flask_cors-6.0.5/.github/actions/setup-python-env/action.yml",
       "language": "text (.yml)",
       "ais": 0,
       "risk": "NORMAL",
@@ -317,7 +504,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/.github/workflows/ci.yml",
+      "rel_path": "flask_cors-6.0.5/.github/workflows/main.yml",
       "language": "CI recipe",
       "ais": 0,
       "risk": "NORMAL",
@@ -330,7 +517,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/.github/workflows/docket-windows.yml",
+      "rel_path": "flask_cors-6.0.5/.github/workflows/on-release-main.yml",
       "language": "CI recipe",
       "ais": 0,
       "risk": "NORMAL",
@@ -343,7 +530,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/.github/workflows/conda-smoke.yml",
+      "rel_path": "flask_cors-6.0.5/.github/workflows/validate-codecov-config.yml",
       "language": "CI recipe",
       "ais": 0,
       "risk": "NORMAL",
@@ -356,33 +543,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/.github/workflows/pydocket-compat.yml",
-      "language": "CI recipe",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "endpoint",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "burner_redis-0.1.7/.github/workflows/release.yml",
-      "language": "CI recipe",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "endpoint",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "burner_redis-0.1.7/tests/conftest.py",
+      "rel_path": "flask_cors-6.0.5/tests/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -395,7 +556,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/tests/test_hashes.py",
+      "rel_path": "flask_cors-6.0.5/tests/base_test.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -408,7 +569,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/tests/test_coercion.py",
+      "rel_path": "flask_cors-6.0.5/tests/core/test_helpers.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -421,7 +582,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/tests/test_expiration.py",
+      "rel_path": "flask_cors-6.0.5/tests/core/test_override_headers.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -434,7 +595,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/tests/test_pydocket_compat.py",
+      "rel_path": "flask_cors-6.0.5/tests/core/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -447,7 +608,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/tests/test_graceful_shutdown.py",
+      "rel_path": "flask_cors-6.0.5/tests/extension/test_app_extension.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -460,7 +621,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/tests/test_sorted_sets.py",
+      "rel_path": "flask_cors-6.0.5/tests/extension/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -473,7 +634,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/tests/test_strings.py",
+      "rel_path": "flask_cors-6.0.5/tests/extension/test_blueprint.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -486,7 +647,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/tests/test_streams.py",
+      "rel_path": "flask_cors-6.0.5/tests/typecheck/test_blueprint_typing.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -499,7 +660,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/tests/test_persistence.py",
+      "rel_path": "flask_cors-6.0.5/tests/typecheck/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -512,7 +673,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/tests/test_locking.py",
+      "rel_path": "flask_cors-6.0.5/tests/decorator/test_vary_header.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -525,7 +686,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/tests/test_sets.py",
+      "rel_path": "flask_cors-6.0.5/tests/decorator/test_allow_headers.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -538,7 +699,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/python/burner_redis/pubsub.py",
+      "rel_path": "flask_cors-6.0.5/tests/decorator/test_w3.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -551,7 +712,7 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/python/burner_redis/__init__.py",
+      "rel_path": "flask_cors-6.0.5/tests/decorator/test_expose_headers.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -564,8 +725,8 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/src/scripting.rs",
-      "language": "Rust",
+      "rel_path": "flask_cors-6.0.5/tests/decorator/test_methods.py",
+      "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -577,8 +738,8 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/src/persistence.rs",
-      "language": "Rust",
+      "rel_path": "flask_cors-6.0.5/tests/decorator/test_private_network_headers.py",
+      "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -590,8 +751,8 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/src/lib.rs",
-      "language": "Rust",
+      "rel_path": "flask_cors-6.0.5/tests/decorator/test_origins.py",
+      "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -603,8 +764,8 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/src/store.rs",
-      "language": "Rust",
+      "rel_path": "flask_cors-6.0.5/tests/decorator/test_max_age.py",
+      "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -616,8 +777,8 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/src/commands/hashes.rs",
-      "language": "Rust",
+      "rel_path": "flask_cors-6.0.5/tests/decorator/test_options.py",
+      "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -629,8 +790,8 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/src/commands/sets.rs",
-      "language": "Rust",
+      "rel_path": "flask_cors-6.0.5/tests/decorator/__init__.py",
+      "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -642,8 +803,8 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/src/commands/sorted_sets.rs",
-      "language": "Rust",
+      "rel_path": "flask_cors-6.0.5/tests/decorator/test_duplicate_headers.py",
+      "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -655,8 +816,8 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/src/commands/lists.rs",
-      "language": "Rust",
+      "rel_path": "flask_cors-6.0.5/tests/decorator/test_credentials.py",
+      "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -668,47 +829,8 @@
       "signals": []
     },
     {
-      "rel_path": "burner_redis-0.1.7/src/commands/streams.rs",
-      "language": "Rust",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "burner_redis-0.1.7/src/commands/pubsub.rs",
-      "language": "Rust",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "burner_redis-0.1.7/src/commands/strings.rs",
-      "language": "Rust",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "burner_redis-0.1.7/src/commands/mod.rs",
-      "language": "Rust",
+      "rel_path": "flask_cors-6.0.5/tests/decorator/test_exception_interception.py",
+      "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -721,16 +843,18 @@
     }
   ],
   "build_surface": {
-    "total": 8,
+    "total": 7,
     "counts": {
-      "build": 2,
-      "ci": 5,
+      "build": 3,
+      "ci": 4,
       "packaging": 0,
-      "dependency": 1,
+      "dependency": 0,
       "hook": 0,
-      "fetch": 0
+      "fetch": 1
     },
     "hooks": [],
-    "fetchers": []
+    "fetchers": [
+      "flask_cors-6.0.5/Makefile"
+    ]
   }
 }

@@ -23,7 +23,7 @@
   },
   "files": [
     {
-      "rel_path": "pydantic_graph-2.52.0/pyproject.toml",
+      "rel_path": "pydantic_graph-2.64.0/pyproject.toml",
       "language": "text (.toml)",
       "ais": 0,
       "risk": "NORMAL",
@@ -36,7 +36,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.52.0/LICENSE",
+      "rel_path": "pydantic_graph-2.64.0/LICENSE",
       "language": "text (LICENSE)",
       "ais": 0,
       "risk": "NORMAL",
@@ -49,7 +49,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.52.0/.gitignore",
+      "rel_path": "pydantic_graph-2.64.0/.gitignore",
       "language": "text (.gitignore)",
       "ais": 0,
       "risk": "NORMAL",
@@ -62,20 +62,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.52.0/README.md",
-      "language": "text (.md)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "pydantic_graph-2.52.0/PKG-INFO",
+      "rel_path": "pydantic_graph-2.64.0/PKG-INFO",
       "language": "text (PKG-INFO)",
       "ais": 0,
       "risk": "NORMAL",
@@ -88,7 +75,20 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.52.0/pydantic_graph/basenode.py",
+      "rel_path": "pydantic_graph-2.64.0/README.md",
+      "language": "text (.md)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_graph-2.64.0/pydantic_graph/_utils.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -101,7 +101,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.52.0/pydantic_graph/paths.py",
+      "rel_path": "pydantic_graph-2.64.0/pydantic_graph/node.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -114,7 +114,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.52.0/pydantic_graph/step.py",
+      "rel_path": "pydantic_graph-2.64.0/pydantic_graph/step.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -127,7 +127,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.52.0/pydantic_graph/node.py",
+      "rel_path": "pydantic_graph-2.64.0/pydantic_graph/util.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -140,7 +140,111 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.52.0/pydantic_graph/py.typed",
+      "rel_path": "pydantic_graph-2.64.0/pydantic_graph/exceptions.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_graph-2.64.0/pydantic_graph/node_types.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_graph-2.64.0/pydantic_graph/graph_builder.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_graph-2.64.0/pydantic_graph/decision.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_graph-2.64.0/pydantic_graph/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_graph-2.64.0/pydantic_graph/join.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_graph-2.64.0/pydantic_graph/parent_forks.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_graph-2.64.0/pydantic_graph/id_types.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pydantic_graph-2.64.0/pydantic_graph/py.typed",
       "language": "text (.typed)",
       "ais": 0,
       "risk": "NORMAL",
@@ -153,7 +257,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.52.0/pydantic_graph/parent_forks.py",
+      "rel_path": "pydantic_graph-2.64.0/pydantic_graph/basenode.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -166,111 +270,7 @@
       "signals": []
     },
     {
-      "rel_path": "pydantic_graph-2.52.0/pydantic_graph/decision.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "pydantic_graph-2.52.0/pydantic_graph/node_types.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "pydantic_graph-2.52.0/pydantic_graph/join.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "pydantic_graph-2.52.0/pydantic_graph/exceptions.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "pydantic_graph-2.52.0/pydantic_graph/_utils.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "pydantic_graph-2.52.0/pydantic_graph/graph_builder.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "pydantic_graph-2.52.0/pydantic_graph/util.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "pydantic_graph-2.52.0/pydantic_graph/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "pydantic_graph-2.52.0/pydantic_graph/id_types.py",
+      "rel_path": "pydantic_graph-2.64.0/pydantic_graph/paths.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",

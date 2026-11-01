@@ -1,14 +1,14 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-10-01T09:41:41.654078Z",
+  "generated": "2026-11-01T10:07:40.887363Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 264,
+    "files_scanned": 277,
     "files_flagged": 1,
     "critical": 0,
     "high": 0,
@@ -28,50 +28,50 @@
   "committed_credentials": [
     {
       "kind": "Private key (PEM)",
-      "file": "prek-0.5.4/crates/prek/src/hooks/pre_commit_hooks/detect_private_key.rs",
+      "file": "prek-0.5.9/crates/prek/src/hooks/pre_commit_hooks/detect_private_key.rs",
       "line": 130,
       "sample": "-----BEG\u2026 (31 chars)"
     },
     {
       "kind": "Private key (PEM)",
-      "file": "prek-0.5.4/crates/prek/src/hooks/pre_commit_hooks/detect_private_key.rs",
+      "file": "prek-0.5.9/crates/prek/src/hooks/pre_commit_hooks/detect_private_key.rs",
       "line": 144,
       "sample": "-----BEG\u2026 (31 chars)"
     },
     {
       "kind": "Private key (PEM)",
-      "file": "prek-0.5.4/crates/prek/tests/builtin_hooks.rs",
-      "line": 2377,
+      "file": "prek-0.5.9/crates/prek/tests/builtin_hooks.rs",
+      "line": 2569,
       "sample": "-----BEG\u2026 (31 chars)"
     },
     {
       "kind": "Private key (PEM)",
-      "file": "prek-0.5.4/crates/prek/tests/builtin_hooks.rs",
-      "line": 2381,
+      "file": "prek-0.5.9/crates/prek/tests/builtin_hooks.rs",
+      "line": 2573,
       "sample": "-----BEG\u2026 (31 chars)"
     },
     {
       "kind": "Private key (PEM)",
-      "file": "prek-0.5.4/crates/prek/tests/builtin_hooks.rs",
-      "line": 2385,
+      "file": "prek-0.5.9/crates/prek/tests/builtin_hooks.rs",
+      "line": 2577,
       "sample": "-----BEG\u2026 (30 chars)"
     },
     {
       "kind": "Private key (PEM)",
-      "file": "prek-0.5.4/crates/prek/tests/builtin_hooks.rs",
-      "line": 2389,
+      "file": "prek-0.5.9/crates/prek/tests/builtin_hooks.rs",
+      "line": 2581,
       "sample": "-----BEG\u2026 (35 chars)"
     },
     {
       "kind": "Private key (PEM)",
-      "file": "prek-0.5.4/crates/prek/tests/builtin_hooks.rs",
-      "line": 2405,
+      "file": "prek-0.5.9/crates/prek/tests/builtin_hooks.rs",
+      "line": 2597,
       "sample": "-----BEG\u2026 (31 chars)"
     }
   ],
   "findings": [
     {
-      "file": "prek-0.5.4/python/prek/__main__.py",
+      "file": "prek-0.5.9/python/prek/__main__.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,

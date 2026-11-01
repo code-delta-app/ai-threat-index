@@ -1,15 +1,15 @@
 {
   "summary": {
-    "total_files": 36,
+    "total_files": 37,
     "flagged_files": 11,
     "critical_files": 0,
     "high_files": 1,
     "elevated_files": 10,
-    "normal_files": 25,
+    "normal_files": 26,
     "flagged_ai_files": 11,
     "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 36 file(s): 0 CRITICAL, 1 HIGH, 10 ELEVATED. AI SDKs detected: langchain. Coverage: 25 file(s) with full language rules, 0 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 1 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 10 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
+    "summary_text": "Scanned 37 file(s): 0 CRITICAL, 1 HIGH, 10 ELEVATED. AI SDKs detected: langchain. Coverage: 25 file(s) with full language rules, 0 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 12 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
   },
   "sdk_inventory": {
     "langchain": 2
@@ -21,7 +21,7 @@
       {
         "name": "Claude Code workspace",
         "tier": 2,
-        "path": "langgraph_prebuilt-1.1.0/.claude"
+        "path": "langgraph_prebuilt-1.1.1/.claude"
       }
     ]
   },
@@ -31,7 +31,7 @@
   },
   "files": [
     {
-      "rel_path": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/chat_agent_executor.py",
+      "rel_path": "langgraph_prebuilt-1.1.1/langgraph/prebuilt/chat_agent_executor.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
@@ -47,14 +47,37 @@
         "add_node(",
         "add_edge("
       ],
-      "dangerous_exec": [],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (StateGraph,create_react_agent)"
+      ],
       "signals": [
         "ai_sdk_import(1_sdk(s)_detected)",
         "agent_orchestration(StateGraph,create_react_agent)"
       ]
     },
     {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/test_react_agent.py",
+      "rel_path": "langgraph_prebuilt-1.1.1/langgraph/prebuilt/tool_node.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 1,
+      "sdk_found": [],
+      "agent_patterns": [
+        "StateGraph",
+        "add_node("
+      ],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (StateGraph,add_node()"
+      ],
+      "signals": [
+        "agent_orchestration(StateGraph,add_node()",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/test_react_agent.py",
       "language": "Python",
       "ais": 58,
       "risk": "ELEVATED",
@@ -68,141 +91,16 @@
         "agent.invoke(",
         "add_node("
       ],
-      "dangerous_exec": [],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (StateGraph,create_react_agent)"
+      ],
       "signals": [
         "agent_orchestration(StateGraph,create_react_agent)",
         "prompt_injection_partial(2)"
       ]
     },
     {
-      "rel_path": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/tool_node.py",
-      "language": "Python",
-      "ais": 58,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 1,
-      "sdk_found": [],
-      "agent_patterns": [
-        "StateGraph",
-        "add_node("
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "agent_orchestration(StateGraph,add_node()",
-        "prompt_injection_partial(1)"
-      ]
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/test_tool_node.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [
-        "StateGraph",
-        "add_node(",
-        "add_edge("
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "agent_orchestration(StateGraph,add_node()"
-      ]
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/test_deprecation.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [
-        "create_react_agent"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "agent_orchestration(create_react_agent)"
-      ]
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/test_react_agent_graph.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [
-        "create_react_agent"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "agent_orchestration(create_react_agent)"
-      ]
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/test_tool_call_transformer.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [
-        "StateGraph",
-        "add_node(",
-        "add_edge("
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "agent_orchestration(StateGraph,add_node()"
-      ]
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/test_injected_state_not_required.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [
-        "create_react_agent"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "agent_orchestration(create_react_agent)"
-      ]
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/tool_validator.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [
-        "StateGraph",
-        "add_node(",
-        "add_edge("
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "agent_orchestration(StateGraph,add_node()"
-      ]
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/interrupt.py",
+      "rel_path": "langgraph_prebuilt-1.1.1/langgraph/prebuilt/interrupt.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -219,7 +117,7 @@
       ]
     },
     {
-      "rel_path": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/__init__.py",
+      "rel_path": "langgraph_prebuilt-1.1.1/langgraph/prebuilt/__init__.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -230,13 +128,135 @@
       "agent_patterns": [
         "create_react_agent"
       ],
-      "dangerous_exec": [],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (create_react_agent)"
+      ],
       "signals": [
         "agent_orchestration(create_react_agent)"
       ]
     },
     {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/test_tool_node_interceptor_unregistered.py",
+      "rel_path": "langgraph_prebuilt-1.1.1/langgraph/prebuilt/tool_validator.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "StateGraph",
+        "add_node(",
+        "add_edge("
+      ],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (StateGraph,add_node()"
+      ],
+      "signals": [
+        "agent_orchestration(StateGraph,add_node()"
+      ]
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/test_injected_state_not_required.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "create_react_agent"
+      ],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (create_react_agent)"
+      ],
+      "signals": [
+        "agent_orchestration(create_react_agent)"
+      ]
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/test_tool_node.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "StateGraph",
+        "add_node(",
+        "add_edge("
+      ],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (StateGraph,add_node()"
+      ],
+      "signals": [
+        "agent_orchestration(StateGraph,add_node()"
+      ]
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/test_tool_call_transformer.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "StateGraph",
+        "add_node(",
+        "add_edge("
+      ],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (StateGraph,add_node()"
+      ],
+      "signals": [
+        "agent_orchestration(StateGraph,add_node()"
+      ]
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/test_deprecation.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "create_react_agent"
+      ],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (create_react_agent)"
+      ],
+      "signals": [
+        "agent_orchestration(create_react_agent)"
+      ]
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/test_react_agent_graph.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [
+        "create_react_agent"
+      ],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (create_react_agent)"
+      ],
+      "signals": [
+        "agent_orchestration(create_react_agent)"
+      ]
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/test_tool_node_interceptor_unregistered.py",
       "language": "Python",
       "ais": 18,
       "risk": "NORMAL",
@@ -251,7 +271,7 @@
       ]
     },
     {
-      "rel_path": "langgraph_prebuilt-1.1.0/pyproject.toml",
+      "rel_path": "langgraph_prebuilt-1.1.1/pyproject.toml",
       "language": "text (.toml)",
       "ais": 0,
       "risk": "NORMAL",
@@ -264,33 +284,7 @@
       "signals": []
     },
     {
-      "rel_path": "langgraph_prebuilt-1.1.0/uv.lock",
-      "language": "binary (.lock)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "binary",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/Makefile",
-      "language": "text (Makefile)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/LICENSE",
+      "rel_path": "langgraph_prebuilt-1.1.1/LICENSE",
       "language": "text (LICENSE)",
       "ais": 0,
       "risk": "NORMAL",
@@ -303,7 +297,7 @@
       "signals": []
     },
     {
-      "rel_path": "langgraph_prebuilt-1.1.0/.gitignore",
+      "rel_path": "langgraph_prebuilt-1.1.1/.gitignore",
       "language": "text (.gitignore)",
       "ais": 0,
       "risk": "NORMAL",
@@ -316,8 +310,8 @@
       "signals": []
     },
     {
-      "rel_path": "langgraph_prebuilt-1.1.0/README.md",
-      "language": "text (.md)",
+      "rel_path": "langgraph_prebuilt-1.1.1/Makefile",
+      "language": "text (Makefile)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -329,7 +323,7 @@
       "signals": []
     },
     {
-      "rel_path": "langgraph_prebuilt-1.1.0/PKG-INFO",
+      "rel_path": "langgraph_prebuilt-1.1.1/PKG-INFO",
       "language": "text (PKG-INFO)",
       "ais": 0,
       "risk": "NORMAL",
@@ -342,138 +336,8 @@
       "signals": []
     },
     {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/memory_assert.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/conftest_checkpointer.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/conftest.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/test_validation_node.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/messages.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/test_tool_node_validation_error_filtering.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/model.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/test_on_tool_call.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/any_str.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/compose-redis.yml",
-      "language": "text (.yml)",
+      "rel_path": "langgraph_prebuilt-1.1.1/README.md",
+      "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -485,7 +349,33 @@
       "signals": []
     },
     {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/conftest_store.py",
+      "rel_path": "langgraph_prebuilt-1.1.1/uv.lock",
+      "language": "text (.lock)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/.claude/settings.local.json",
+      "language": "text (.json)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/langgraph/prebuilt/_tool_call_stream.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -498,12 +388,12 @@
       "signals": []
     },
     {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/compose-postgres.yml",
-      "language": "text (.yml)",
+      "rel_path": "langgraph_prebuilt-1.1.1/langgraph/prebuilt/_tool_call_transformer.py",
+      "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
-      "coverage": "text",
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -511,20 +401,7 @@
       "signals": []
     },
     {
-      "rel_path": "langgraph_prebuilt-1.1.0/tests/__snapshots__/test_react_agent_graph.ambr",
-      "language": "text (.ambr)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/py.typed",
+      "rel_path": "langgraph_prebuilt-1.1.1/langgraph/prebuilt/py.typed",
       "language": "text (.typed)",
       "ais": 0,
       "risk": "NORMAL",
@@ -537,7 +414,20 @@
       "signals": []
     },
     {
-      "rel_path": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/_tool_call_transformer.py",
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/compose-postgres.yml",
+      "language": "text (.yml)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/test_on_tool_call.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -550,12 +440,155 @@
       "signals": []
     },
     {
-      "rel_path": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/_tool_call_stream.py",
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/conftest_store.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
       "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/test_tool_node_validation_error_filtering.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/memory_assert.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/messages.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/conftest.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/conftest_checkpointer.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/test_validation_node.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/model.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/any_str.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/compose-redis.yml",
+      "language": "text (.yml)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "langgraph_prebuilt-1.1.1/tests/__snapshots__/test_react_agent_graph.ambr",
+      "language": "text (.ambr)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],

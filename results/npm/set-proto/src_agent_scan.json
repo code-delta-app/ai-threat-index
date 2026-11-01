@@ -23,45 +23,6 @@
   },
   "files": [
     {
-      "rel_path": "package/index.d.ts",
-      "language": "JavaScript",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "package/CHANGELOG.md",
-      "language": "text (.md)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "package/Object.setPrototypeOf.js",
-      "language": "JavaScript",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
       "rel_path": "package/LICENSE",
       "language": "text (LICENSE)",
       "ais": 0,
@@ -75,20 +36,7 @@
       "signals": []
     },
     {
-      "rel_path": "package/.nycrc",
-      "language": "text (.nycrc)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "package/Object.setPrototypeOf.d.ts",
+      "rel_path": "package/index.d.ts",
       "language": "JavaScript",
       "ais": 0,
       "risk": "NORMAL",
@@ -101,7 +49,7 @@
       "signals": []
     },
     {
-      "rel_path": "package/index.js",
+      "rel_path": "package/Reflect.setPrototypeOf.d.ts",
       "language": "JavaScript",
       "ais": 0,
       "risk": "NORMAL",
@@ -127,7 +75,33 @@
       "signals": []
     },
     {
-      "rel_path": "package/Reflect.setPrototypeOf.d.ts",
+      "rel_path": "package/CHANGELOG.md",
+      "language": "text (.md)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/.eslintrc",
+      "language": "text (.eslintrc)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/Object.setPrototypeOf.js",
       "language": "JavaScript",
       "ais": 0,
       "risk": "NORMAL",
@@ -140,8 +114,34 @@
       "signals": []
     },
     {
-      "rel_path": "package/.eslintrc",
-      "language": "text (.eslintrc)",
+      "rel_path": "package/Reflect.setPrototypeOf.js",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/package.json",
+      "language": "text (.json)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/.nycrc",
+      "language": "text (.nycrc)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -166,12 +166,12 @@
       "signals": []
     },
     {
-      "rel_path": "package/package.json",
-      "language": "text (.json)",
+      "rel_path": "package/index.js",
+      "language": "JavaScript",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
-      "coverage": "text",
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -179,7 +179,20 @@
       "signals": []
     },
     {
-      "rel_path": "package/Reflect.setPrototypeOf.js",
+      "rel_path": "package/Object.setPrototypeOf.d.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/test/index.js",
       "language": "JavaScript",
       "ais": 0,
       "risk": "NORMAL",
@@ -198,19 +211,6 @@
       "risk": "NORMAL",
       "gss": 0,
       "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "package/test/index.js",
-      "language": "JavaScript",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],

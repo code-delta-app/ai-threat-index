@@ -1,14 +1,14 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-10-01T09:41:25.200272Z",
+  "generated": "2026-11-01T10:07:36.362850Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 364,
+    "files_scanned": 395,
     "files_flagged": 2,
     "critical": 0,
     "high": 0,
@@ -20,7 +20,7 @@
     "cost_risk_files": 0,
     "agent_artifacts": 0,
     "agent_artifacts_tier3": 0,
-    "committed_credentials": 8
+    "committed_credentials": 10
   },
   "providers": [],
   "frameworks": [],
@@ -28,71 +28,68 @@
   "committed_credentials": [
     {
       "kind": "Private key (PEM)",
-      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/_test/unit/connections/sql_helper/test_workday_data_connect_sql_helper.py",
+      "file": "sagemaker_studio-1.1.36/src/sagemaker_studio/_test/unit/connections/sql_helper/test_workday_data_connect_sql_helper.py",
       "line": 12,
       "sample": "-----BEG\u2026 (27 chars)"
     },
     {
       "kind": "Private key (PEM)",
-      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/_test/unit/connections/sql_helper/test_workday_data_connect_sql_helper.py",
+      "file": "sagemaker_studio-1.1.36/src/sagemaker_studio/_test/unit/connections/sql_helper/test_workday_data_connect_sql_helper.py",
       "line": 33,
       "sample": "-----BEG\u2026 (27 chars)"
     },
     {
       "kind": "Private key (PEM)",
-      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/_test/unit/sql_engine/test_big_query_transformer.py",
+      "file": "sagemaker_studio-1.1.36/src/sagemaker_studio/_test/unit/sql_engine/test_big_query_transformer.py",
       "line": 20,
       "sample": "-----BEG\u2026 (27 chars)"
     },
     {
       "kind": "Private key (PEM)",
-      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/_test/unit/sql_engine/test_workday_transformer.py",
+      "file": "sagemaker_studio-1.1.36/src/sagemaker_studio/_test/unit/sql_engine/test_workday_transformer.py",
       "line": 13,
       "sample": "-----BEG\u2026 (27 chars)"
     },
     {
       "kind": "Private key (PEM)",
-      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/_test/unit/sql_engine/test_workday_transformer.py",
+      "file": "sagemaker_studio-1.1.36/src/sagemaker_studio/_test/unit/sql_engine/test_workday_transformer.py",
       "line": 35,
       "sample": "-----BEG\u2026 (27 chars)"
     },
     {
+      "kind": "AWS access key ID",
+      "file": "sagemaker_studio-1.1.36/src/sagemaker_studio/sql_engine/_sqlalchemy_redshift_data_api/_test/dbapi/test_bundled_model_wiring.py",
+      "line": 144,
+      "sample": "AKIAPROF\u2026 (20 chars)"
+    },
+    {
+      "kind": "AWS access key ID",
+      "file": "sagemaker_studio-1.1.36/src/sagemaker_studio/sql_engine/_sqlalchemy_redshift_data_api/_test/dbapi/test_bundled_model_wiring.py",
+      "line": 148,
+      "sample": "AKIADEFA\u2026 (20 chars)"
+    },
+    {
       "kind": "Private key (PEM)",
-      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/sql_engine/_sqlalchemy_workday_data_connect/_test/dbapi/test_auth.py",
+      "file": "sagemaker_studio-1.1.36/src/sagemaker_studio/sql_engine/_sqlalchemy_workday_data_connect/_test/dbapi/test_auth.py",
       "line": 20,
       "sample": "-----BEG\u2026 (31 chars)"
     },
     {
       "kind": "Private key (PEM)",
-      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/sql_engine/_sqlalchemy_workday_data_connect/_test/test_dialect.py",
+      "file": "sagemaker_studio-1.1.36/src/sagemaker_studio/sql_engine/_sqlalchemy_workday_data_connect/_test/test_dialect.py",
       "line": 143,
       "sample": "-----BEG\u2026 (31 chars)"
     },
     {
       "kind": "Private key (PEM)",
-      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/sql_engine/_sqlalchemy_workday_data_connect/_test/test_dialect.py",
+      "file": "sagemaker_studio-1.1.36/src/sagemaker_studio/sql_engine/_sqlalchemy_workday_data_connect/_test/test_dialect.py",
       "line": 230,
       "sample": "-----BEG\u2026 (31 chars)"
     }
   ],
   "findings": [
     {
-      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/_test/unit/utils/udf/test_capture.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 50,
-      "signals": [
-        "dynamic_execution(eval/exec_x9)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/_test/unit/utils/udf/test_routed.py",
+      "file": "sagemaker_studio-1.1.36/src/sagemaker_studio/_test/unit/utils/udf/test_routed.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 50,
@@ -107,7 +104,22 @@
       }
     },
     {
-      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/execution/remote_execution_client.py",
+      "file": "sagemaker_studio-1.1.36/src/sagemaker_studio/_test/unit/utils/udf/test_capture.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 50,
+      "signals": [
+        "dynamic_execution(eval/exec_x9)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sagemaker_studio-1.1.36/src/sagemaker_studio/execution/remote_execution_client.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 35,
@@ -122,7 +134,52 @@
       }
     },
     {
-      "file": "sagemaker_studio-1.1.34/src/sagemaker_studio/execution/local_execution_client.py",
+      "file": "sagemaker_studio-1.1.36/src/sagemaker_studio/_test/unit/sqlutils/test_cancelled_query_connection_rollback_preservation.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sagemaker_studio-1.1.36/src/sagemaker_studio/_test/unit/sqlutils/test_cancelled_query_connection_rollback_fix.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sagemaker_studio-1.1.36/src/sagemaker_studio/_test/unit/sql_engine/test_sqlalchemy_athena.py",
+      "language": "Python",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "sagemaker_studio-1.1.36/src/sagemaker_studio/execution/local_execution_client.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 18,

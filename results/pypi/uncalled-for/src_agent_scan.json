@@ -9,7 +9,7 @@
     "flagged_ai_files": 0,
     "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 33 file(s). No AI agent initiation signatures detected. Coverage: 21 file(s) with full language rules, 2 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 1 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 9 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
+    "summary_text": "Scanned 33 file(s). No AI agent initiation signatures detected. Coverage: 21 file(s) with full language rules, 3 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 9 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
   },
   "sdk_inventory": {},
   "agent_artifacts": {
@@ -23,7 +23,7 @@
   },
   "files": [
     {
-      "rel_path": "uncalled_for-0.4.0/pyproject.toml",
+      "rel_path": "uncalled_for-0.4.1/pyproject.toml",
       "language": "text (.toml)",
       "ais": 0,
       "risk": "NORMAL",
@@ -36,12 +36,12 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/uv.lock",
-      "language": "binary (.lock)",
+      "rel_path": "uncalled_for-0.4.1/loq.toml",
+      "language": "text (.toml)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
-      "coverage": "binary",
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -49,7 +49,7 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/LICENSE",
+      "rel_path": "uncalled_for-0.4.1/LICENSE",
       "language": "text (LICENSE)",
       "ais": 0,
       "risk": "NORMAL",
@@ -62,7 +62,7 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/.gitignore",
+      "rel_path": "uncalled_for-0.4.1/.gitignore",
       "language": "text (.gitignore)",
       "ais": 0,
       "risk": "NORMAL",
@@ -75,59 +75,7 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/.pre-commit-config.yaml",
-      "language": "text (.yaml)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "uncalled_for-0.4.0/README.md",
-      "language": "text (.md)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "uncalled_for-0.4.0/.envrc",
-      "language": "text (.envrc)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "uncalled_for-0.4.0/loq.toml",
-      "language": "text (.toml)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "uncalled_for-0.4.0/PKG-INFO",
+      "rel_path": "uncalled_for-0.4.1/PKG-INFO",
       "language": "text (PKG-INFO)",
       "ais": 0,
       "risk": "NORMAL",
@@ -140,8 +88,34 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/.github/workflows/ci.yml",
-      "language": "CI recipe",
+      "rel_path": "uncalled_for-0.4.1/README.md",
+      "language": "text (.md)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "uncalled_for-0.4.1/.pre-commit-config.yaml",
+      "language": "text (.yaml)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "uncalled_for-0.4.1/.envrc",
+      "language": "Shell",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -153,12 +127,12 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/.github/workflows/publish.yml",
-      "language": "CI recipe",
+      "rel_path": "uncalled_for-0.4.1/uv.lock",
+      "language": "text (.lock)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
-      "coverage": "endpoint",
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -166,7 +140,7 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/tests/conftest.py",
+      "rel_path": "uncalled_for-0.4.1/src/uncalled_for/functional.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -179,7 +153,7 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/tests/test_resolution.py",
+      "rel_path": "uncalled_for-0.4.1/src/uncalled_for/validation.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -192,7 +166,7 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/tests/test_call_arguments.py",
+      "rel_path": "uncalled_for-0.4.1/src/uncalled_for/introspection.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -205,7 +179,7 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/tests/test_shared.py",
+      "rel_path": "uncalled_for-0.4.1/src/uncalled_for/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -218,7 +192,7 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/tests/test_without_dependencies.py",
+      "rel_path": "uncalled_for-0.4.1/src/uncalled_for/frames.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -231,7 +205,7 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/tests/test_bindings.py",
+      "rel_path": "uncalled_for-0.4.1/src/uncalled_for/annotations.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -244,7 +218,7 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/tests/test_depends.py",
+      "rel_path": "uncalled_for-0.4.1/src/uncalled_for/base.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -257,7 +231,7 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/tests/test_dependency.py",
+      "rel_path": "uncalled_for-0.4.1/src/uncalled_for/shared.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -270,98 +244,7 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/tests/test_introspection.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "uncalled_for-0.4.0/tests/test_frames.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "uncalled_for-0.4.0/tests/test_validation.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "uncalled_for-0.4.0/tests/test_annotations.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "uncalled_for-0.4.0/src/uncalled_for/resolution.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "uncalled_for-0.4.0/src/uncalled_for/annotations.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "uncalled_for-0.4.0/src/uncalled_for/introspection.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "uncalled_for-0.4.0/src/uncalled_for/py.typed",
+      "rel_path": "uncalled_for-0.4.1/src/uncalled_for/py.typed",
       "language": "text (.typed)",
       "ais": 0,
       "risk": "NORMAL",
@@ -374,7 +257,7 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/src/uncalled_for/functional.py",
+      "rel_path": "uncalled_for-0.4.1/src/uncalled_for/resolution.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -387,7 +270,33 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/src/uncalled_for/validation.py",
+      "rel_path": "uncalled_for-0.4.1/.github/workflows/publish.yml",
+      "language": "CI recipe",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "endpoint",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "uncalled_for-0.4.1/.github/workflows/ci.yml",
+      "language": "CI recipe",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "endpoint",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "uncalled_for-0.4.1/tests/test_bindings.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -400,7 +309,7 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/src/uncalled_for/shared.py",
+      "rel_path": "uncalled_for-0.4.1/tests/test_introspection.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -413,7 +322,7 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/src/uncalled_for/frames.py",
+      "rel_path": "uncalled_for-0.4.1/tests/test_without_dependencies.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -426,7 +335,7 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/src/uncalled_for/__init__.py",
+      "rel_path": "uncalled_for-0.4.1/tests/test_call_arguments.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -439,7 +348,98 @@
       "signals": []
     },
     {
-      "rel_path": "uncalled_for-0.4.0/src/uncalled_for/base.py",
+      "rel_path": "uncalled_for-0.4.1/tests/test_depends.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "uncalled_for-0.4.1/tests/conftest.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "uncalled_for-0.4.1/tests/test_validation.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "uncalled_for-0.4.1/tests/test_annotations.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "uncalled_for-0.4.1/tests/test_frames.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "uncalled_for-0.4.1/tests/test_shared.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "uncalled_for-0.4.1/tests/test_dependency.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "uncalled_for-0.4.1/tests/test_resolution.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",

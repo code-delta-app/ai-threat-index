@@ -1,7 +1,7 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-10-01T09:41:02.316085Z",
+  "generated": "2026-11-01T10:07:19.699498Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
@@ -13,7 +13,7 @@
     "critical": 0,
     "high": 0,
     "elevated": 1,
-    "providers": 7,
+    "providers": 8,
     "frameworks": 0,
     "foreign_egress_files": 1,
     "non_allied_jurisdiction_files": 1,
@@ -34,7 +34,7 @@
       ],
       "file_count": 1,
       "files": [
-        "genai_prices-0.1.9/genai_prices/data.py"
+        "genai_prices-0.2.1/genai_prices/data.py"
       ],
       "endpoint": "bedrock-runtime",
       "endpoints": [
@@ -52,7 +52,7 @@
       ],
       "file_count": 1,
       "files": [
-        "genai_prices-0.1.9/genai_prices/data.py"
+        "genai_prices-0.2.1/genai_prices/data.py"
       ]
     },
     {
@@ -66,7 +66,7 @@
       ],
       "file_count": 1,
       "files": [
-        "genai_prices-0.1.9/genai_prices/data.py"
+        "genai_prices-0.2.1/genai_prices/data.py"
       ]
     },
     {
@@ -80,7 +80,25 @@
       ],
       "file_count": 1,
       "files": [
-        "genai_prices-0.1.9/genai_prices/data.py"
+        "genai_prices-0.2.1/genai_prices/data.py"
+      ]
+    },
+    {
+      "name": "api.cerebras.ai",
+      "canonical": "api.cerebras.ai",
+      "type": "endpoint",
+      "jurisdiction": "US",
+      "sovereignty_risk": false,
+      "seen_as": [
+        "http:api.cerebras.ai"
+      ],
+      "file_count": 1,
+      "files": [
+        "genai_prices-0.2.1/genai_prices/data.py"
+      ],
+      "endpoint": "api.cerebras.ai",
+      "endpoints": [
+        "api.cerebras.ai"
       ]
     },
     {
@@ -94,7 +112,7 @@
       ],
       "file_count": 1,
       "files": [
-        "genai_prices-0.1.9/genai_prices/data.py"
+        "genai_prices-0.2.1/genai_prices/data.py"
       ],
       "endpoint": "open.bigmodel.cn",
       "endpoints": [
@@ -112,7 +130,7 @@
       ],
       "file_count": 1,
       "files": [
-        "genai_prices-0.1.9/genai_prices/data.py"
+        "genai_prices-0.2.1/genai_prices/data.py"
       ],
       "endpoint": "openrouter.ai",
       "endpoints": [
@@ -130,7 +148,7 @@
       ],
       "file_count": 1,
       "files": [
-        "genai_prices-0.1.9/genai_prices/data.py"
+        "genai_prices-0.2.1/genai_prices/data.py"
       ],
       "endpoint": "router.huggingface.co",
       "endpoints": [
@@ -143,7 +161,7 @@
   "committed_credentials": [],
   "findings": [
     {
-      "file": "genai_prices-0.1.9/genai_prices/data.py",
+      "file": "genai_prices-0.2.1/genai_prices/data.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,

@@ -1,18 +1,18 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-10-01T09:41:43.909760Z",
+  "generated": "2026-11-01T10:07:38.847936Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 180,
-    "files_flagged": 1,
+    "files_scanned": 54,
+    "files_flagged": 2,
     "critical": 0,
     "high": 0,
-    "elevated": 1,
+    "elevated": 2,
     "providers": 0,
     "frameworks": 0,
     "foreign_egress_files": 0,
@@ -28,12 +28,12 @@
   "committed_credentials": [],
   "findings": [
     {
-      "file": "uv_build-0.12.21/python/uv_build/__init__.py",
+      "file": "jupyter_builder-1.2.4/jupyter_builder/jlpm.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
       "signals": [
-        "subprocess_variable_execution(x1)"
+        "subprocess_variable_execution(x2)"
       ],
       "flags": {
         "foreign_egress": false,
@@ -43,12 +43,27 @@
       }
     },
     {
-      "file": "uv_build-0.12.21/crates/uv-fs/src/path.rs",
-      "language": "Rust",
+      "file": "jupyter_builder-1.2.4/scripts/generate_yarn_licenses.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "subprocess_variable_execution(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "jupyter_builder-1.2.4/jupyter_builder/federated_extensions.py",
+      "language": "Python",
       "risk": "NORMAL",
       "ais": 20,
       "signals": [
-        "dynamic_import(x6)"
+        "dynamic_import(x2)"
       ],
       "flags": {
         "foreign_egress": false,

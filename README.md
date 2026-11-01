@@ -37,16 +37,17 @@ until the finding is resolved.
 ## Results
 
 <!-- RESULTS:BEGIN -->
-**Credential-format matches across the index: 18** — every one individually inspected (see reviewed.json): all are deliberate, documented fixtures — example keys, x'd placeholders, test material, and one detector's own patterns. Findings not yet reviewed would show "under disclosure" with identification withheld until maintainers are notified — see Disclosure.
+**Credential-format matches across the index: 21** — every one individually inspected (see reviewed.json): all are deliberate, documented fixtures — example keys, x'd placeholders, test material, and one detector's own patterns. Findings not yet reviewed would show "under disclosure" with identification withheld until maintainers are notified — see Disclosure.
 
 | Ecosystem | Package | Files scanned | Flagged files | AI providers | Credential-format matches | Install hooks | Build fetchers |
 |---|---|---|---|---|---|---|---|
+| npm | _ai-sdk_provider | 272 | 0 | 0 | 0 | 0 | 0 |
 | npm | _aws-sdk_nested-clients | 357 | 0 | 0 | 0 | 0 | 0 |
 | npm | _aws_lambda-invoke-store | 7 | 0 | 0 | 0 | 0 | 0 |
 | npm | _babel_helper-globals | 6 | 0 | 0 | 0 | 0 | 0 |
 | npm | _eslint_config-helpers | 10 | 0 | 0 | 0 | 0 | 0 |
+| npm | _img_colour | 6 | 0 | 0 | 0 | 0 | 0 |
 | npm | _jridgewell_remapping | 32 | 0 | 0 | 0 | 0 | 0 |
-| npm | _oxc-project_types | 4 | 0 | 0 | 0 | 0 | 0 |
 | npm | _radix-ui_primitive | 21 | 0 | 0 | 0 | 0 | 0 |
 | npm | _radix-ui_react-arrow | 9 | 0 | 0 | 0 | 0 | 0 |
 | npm | _radix-ui_react-collection | 9 | 0 | 0 | 0 | 0 | 0 |
@@ -70,11 +71,10 @@ until the finding is resolved.
 | npm | _radix-ui_react-use-layout-effect | 9 | 0 | 0 | 0 | 0 | 0 |
 | npm | _radix-ui_react-use-rect | 9 | 0 | 0 | 0 | 0 | 0 |
 | npm | _radix-ui_react-use-size | 9 | 0 | 0 | 0 | 0 | 0 |
-| npm | _radix-ui_react-visually-hidden | 9 | 0 | 0 | 0 | 0 | 0 |
 | npm | _radix-ui_rect | 9 | 0 | 0 | 0 | 0 | 0 |
 | npm | _rolldown_pluginutils | 8 | 0 | 0 | 0 | 0 | 0 |
 | npm | _tailwindcss_node | 11 | 0 | 0 | 0 | 0 | 0 |
-| npm | _typescript-eslint_project-service | 9 | 0 | 0 | 0 | 0 | 0 |
+| npm | _typescript-eslint_project-service | 11 | 0 | 0 | 0 | 0 | 0 |
 | npm | _typescript-eslint_tsconfig-utils | 9 | 0 | 0 | 0 | 0 | 0 |
 | npm | baseline-browser-mapping | 9 | 0 | 0 | 0 | 0 | 0 |
 | npm | call-bind-apply-helpers | 21 | 0 | 0 | 0 | 0 | 0 |
@@ -92,44 +92,43 @@ until the finding is resolved.
 | npm | use-sync-external-store | 18 | 0 | 0 | 0 | 0 | 0 |
 | npm | wsl-utils | 6 | 0 | 0 | 0 | 0 | 0 |
 | pypi | agent-client-protocol | 123 | 0 | 0 | 0 | 0 | 0 |
-| pypi | ast-serialize | 1581 | 1 (ELEVATED:1) | 0 | 0 | 0 | 0 |
+| pypi | ast-serialize | 1582 | 1 (ELEVATED:1) | 0 | 0 | 0 | 0 |
 | pypi | backports.zstd | 194 | 4 (ELEVATED:4) | 0 | 0 | 0 | 0 |
-| pypi | burner-redis | 51 | 7 (ELEVATED:7) | 0 | 0 | 0 | 0 |
-| pypi | claude-agent-sdk | 105 | 71 (ELEVATED:16 HIGH:55) | 1 | 0 | 0 | 0 |
-| pypi | dbt-protos | 135 | 0 | 0 | 0 | 0 | 0 |
+| pypi | claude-agent-sdk | 108 | 71 (ELEVATED:16 HIGH:55) | 1 | 0 | 0 | 0 |
+| pypi | dbt-protos | 147 | 0 | 0 | 0 | 0 | 0 |
 | pypi | fastapi-cloud-cli | 146 | 0 | 0 | 0 | 0 | 0 |
 | pypi | fastar | 28 | 0 | 0 | 0 | 0 | 0 |
-| pypi | fastmcp | 1738 | 718 (ELEVATED:677 HIGH:41) | 5 | reviewed: benign fixtures | 0 | 0 |
-| pypi | fastmcp-slim | 270 | 207 (ELEVATED:194 HIGH:13) | 3 | 0 | 0 | 0 |
-| pypi | fastspec | 16 | 2 (ELEVATED:2) | 3 | 0 | 0 | 0 |
-| pypi | feedparser-sgmllib | 27 | 0 | 0 | 0 | 0 | 0 |
-| pypi | genai-prices | 18 | 1 (ELEVATED:1) | 7 | 0 | 0 | 0 |
-| pypi | google-genai | 601 | 36 (ELEVATED:33 HIGH:3) | 2 | reviewed: benign fixtures | 0 | 0 |
+| pypi | fastmcp | 1853 | 790 (ELEVATED:742 HIGH:48) | 5 | reviewed: benign fixtures | 0 | 0 |
+| pypi | fastmcp-slim | 281 | 218 (ELEVATED:203 HIGH:15) | 3 | 0 | 0 | 0 |
+| pypi | flask-cors | 63 | 0 | 0 | 0 | 0 | 1 |
+| pypi | genai-prices | 18 | 1 (ELEVATED:1) | 8 | 0 | 0 | 0 |
+| pypi | google-crc32c | 20 | 0 | 0 | 0 | 1 | 0 |
+| pypi | google-genai | 613 | 37 (ELEVATED:34 HIGH:3) | 2 | reviewed: benign fixtures | 0 | 0 |
 | pypi | griffecli | 13 | 0 | 0 | 0 | 0 | 0 |
-| pypi | griffelib | 86 | 0 | 0 | 0 | 0 | 0 |
-| pypi | hf-xet | 315 | 0 | 0 | 0 | 0 | 0 |
+| pypi | griffelib | 88 | 0 | 0 | 0 | 0 | 0 |
+| pypi | hf-xet | 329 | 0 | 0 | 0 | 0 | 0 |
 | pypi | httpcore2 | 38 | 0 | 0 | 0 | 0 | 0 |
-| pypi | httpx2 | 37 | 0 | 0 | 0 | 0 | 0 |
+| pypi | httpx2 | 38 | 0 | 0 | 0 | 0 | 0 |
 | pypi | ipython-pygments-lexers | 6 | 0 | 0 | 0 | 0 | 0 |
+| pypi | jupyter-builder | 54 | 2 (ELEVATED:2) | 0 | 0 | 0 | 0 |
 | pypi | langchain-protocol | 8 | 0 | 0 | 0 | 0 | 0 |
-| pypi | langgraph-prebuilt | 36 | 11 (ELEVATED:10 HIGH:1) | 0 | 0 | 0 | 0 |
+| pypi | langgraph-prebuilt | 37 | 11 (ELEVATED:10 HIGH:1) | 0 | 0 | 0 | 0 |
 | pypi | librt | 146 | 0 | 0 | 0 | 1 | 0 |
 | pypi | llama-cloud-services | 33 | 8 (ELEVATED:7 HIGH:1) | 0 | 0 | 0 | 0 |
-| pypi | mlflow-tracing | 644 | 53 (ELEVATED:43 HIGH:10) | 6 | 0 | 0 | 0 |
-| pypi | nest-asyncio2 | 30 | 1 (ELEVATED:1) | 0 | 0 | 0 | 0 |
-| pypi | polars-runtime-32 | 2167 | 0 | 0 | 0 | 0 | 0 |
-| pypi | prek | 264 | 1 (ELEVATED:1) | 0 | reviewed: benign fixtures | 0 | 0 |
+| pypi | nest-asyncio2 | 33 | 1 (ELEVATED:1) | 0 | 0 | 0 | 0 |
+| pypi | polars-runtime-32 | 2315 | 0 | 0 | 0 | 0 | 0 |
+| pypi | prek | 277 | 1 (ELEVATED:1) | 0 | reviewed: benign fixtures | 0 | 0 |
 | pypi | py-key-value-aio | 125 | 0 | 0 | 0 | 0 | 0 |
-| pypi | pydantic-ai-slim | 370 | 252 (ELEVATED:166 HIGH:86) | 17 | 0 | 0 | 0 |
+| pypi | pydantic-ai-slim | 488 | 304 (ELEVATED:208 HIGH:96) | 17 | 0 | 0 | 0 |
 | pypi | pydantic-graph | 20 | 0 | 0 | 0 | 0 | 0 |
-| pypi | python-discovery | 61 | 3 (ELEVATED:2 HIGH:1) | 0 | 0 | 0 | 0 |
+| pypi | python-discovery | 69 | 3 (ELEVATED:2 HIGH:1) | 0 | 0 | 0 | 0 |
 | pypi | pytokens | 21 | 1 (ELEVATED:1) | 0 | 0 | 0 | 0 |
-| pypi | rfc3987-syntax | 15 | 0 | 0 | 0 | 0 | 0 |
-| pypi | sagemaker-studio | 364 | 2 (ELEVATED:2) | 0 | reviewed: benign fixtures | 1 | 0 |
-| pypi | strands-agents | 759 | 358 (ELEVATED:333 HIGH:25) | 9 | 0 | 0 | 0 |
-| pypi | typing-inspection | 32 | 1 (ELEVATED:1) | 0 | 0 | 0 | 0 |
+| pypi | rfc3987-syntax | 16 | 0 | 0 | 0 | 0 | 0 |
+| pypi | sagemaker-studio | 395 | 2 (ELEVATED:2) | 0 | reviewed: benign fixtures | 1 | 0 |
+| pypi | strands-agents | 838 | 401 (ELEVATED:371 HIGH:30) | 9 | 0 | 0 | 0 |
+| pypi | ty | 4510 | 4 (ELEVATED:4) | 0 | 0 | 0 | 0 |
+| pypi | typing-inspection | 33 | 1 (ELEVATED:1) | 0 | 0 | 0 | 0 |
 | pypi | uncalled-for | 33 | 0 | 0 | 0 | 0 | 0 |
-| pypi | uv-build | 180 | 1 (ELEVATED:1) | 0 | 0 | 0 | 0 |
 <!-- RESULTS:END -->
 
 ---

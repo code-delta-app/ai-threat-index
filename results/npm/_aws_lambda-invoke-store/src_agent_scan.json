@@ -36,8 +36,8 @@
       "signals": []
     },
     {
-      "rel_path": "package/README.md",
-      "language": "text (.md)",
+      "rel_path": "package/package.json",
+      "language": "text (.json)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -49,8 +49,8 @@
       "signals": []
     },
     {
-      "rel_path": "package/package.json",
-      "language": "text (.json)",
+      "rel_path": "package/README.md",
+      "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -75,7 +75,7 @@
       "signals": []
     },
     {
-      "rel_path": "package/dist-types/invoke-store.d.ts",
+      "rel_path": "package/dist-cjs/invoke-store.js",
       "language": "JavaScript",
       "ais": 0,
       "risk": "NORMAL",
@@ -101,7 +101,7 @@
       "signals": []
     },
     {
-      "rel_path": "package/dist-cjs/invoke-store.js",
+      "rel_path": "package/dist-types/invoke-store.d.ts",
       "language": "JavaScript",
       "ais": 0,
       "risk": "NORMAL",

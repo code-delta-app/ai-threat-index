@@ -23,12 +23,12 @@
   },
   "files": [
     {
-      "rel_path": "package/license",
-      "language": "text (license)",
+      "rel_path": "package/index.d.ts",
+      "language": "JavaScript",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
-      "coverage": "text",
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -36,12 +36,12 @@
       "signals": []
     },
     {
-      "rel_path": "package/index.d.ts",
-      "language": "JavaScript",
+      "rel_path": "package/package.json",
+      "language": "text (.json)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
-      "coverage": "full",
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -75,12 +75,12 @@
       "signals": []
     },
     {
-      "rel_path": "package/utilities.js",
-      "language": "JavaScript",
+      "rel_path": "package/license",
+      "language": "text (license)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
-      "coverage": "full",
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -88,12 +88,12 @@
       "signals": []
     },
     {
-      "rel_path": "package/package.json",
-      "language": "text (.json)",
+      "rel_path": "package/utilities.js",
+      "language": "JavaScript",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
-      "coverage": "text",
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],

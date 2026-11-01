@@ -9,7 +9,7 @@
     "flagged_ai_files": 0,
     "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 11 file(s). No AI agent initiation signatures detected. Coverage: 6 file(s) with full language rules, 0 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 2 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 3 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
+    "summary_text": "Scanned 11 file(s). No AI agent initiation signatures detected. Coverage: 6 file(s) with full language rules, 0 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 5 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
   },
   "sdk_inventory": {},
   "agent_artifacts": {
@@ -36,19 +36,6 @@
       "signals": []
     },
     {
-      "rel_path": "package/README.md",
-      "language": "text (.md)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
       "rel_path": "package/package.json",
       "language": "text (.json)",
       "ais": 0,
@@ -62,12 +49,25 @@
       "signals": []
     },
     {
-      "rel_path": "package/dist/index.js.map",
-      "language": "binary (.map)",
+      "rel_path": "package/README.md",
+      "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
-      "coverage": "binary",
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/dist/index.js.map",
+      "language": "text (.map)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -115,11 +115,11 @@
     },
     {
       "rel_path": "package/dist/index.mjs.map",
-      "language": "binary (.map)",
+      "language": "text (.map)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
-      "coverage": "binary",
+      "coverage": "text",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],

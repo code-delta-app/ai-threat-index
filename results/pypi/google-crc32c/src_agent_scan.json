@@ -1,21 +1,17 @@
 {
   "summary": {
-    "total_files": 16,
-    "flagged_files": 2,
+    "total_files": 20,
+    "flagged_files": 0,
     "critical_files": 0,
     "high_files": 0,
-    "elevated_files": 2,
-    "normal_files": 14,
-    "flagged_ai_files": 2,
+    "elevated_files": 0,
+    "normal_files": 20,
+    "flagged_ai_files": 0,
     "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 16 file(s): 0 CRITICAL, 0 HIGH, 2 ELEVATED. AI SDKs detected: http:api.openai.com, http:api.anthropic.com, http:generativelanguage.googleapis.com. Coverage: 5 file(s) with full language rules, 0 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 11 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
+    "summary_text": "Scanned 20 file(s). No AI agent initiation signatures detected. Coverage: 8 file(s) with full language rules, 0 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 12 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
   },
-  "sdk_inventory": {
-    "http:api.openai.com": 2,
-    "http:api.anthropic.com": 2,
-    "http:generativelanguage.googleapis.com": 2
-  },
+  "sdk_inventory": {},
   "agent_artifacts": {
     "table_version": 1,
     "tier3_count": 0,
@@ -27,45 +23,7 @@
   },
   "files": [
     {
-      "rel_path": "fastspec-0.2.5/PKG-INFO",
-      "language": "text (PKG-INFO)",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "http:api.openai.com",
-        "http:api.anthropic.com",
-        "http:generativelanguage.googleapis.com"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_http_endpoint(api.openai.com)"
-      ]
-    },
-    {
-      "rel_path": "fastspec-0.2.5/fastspec.egg-info/PKG-INFO",
-      "language": "text (PKG-INFO)",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "http:api.openai.com",
-        "http:api.anthropic.com",
-        "http:generativelanguage.googleapis.com"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_http_endpoint(api.openai.com)"
-      ]
-    },
-    {
-      "rel_path": "fastspec-0.2.5/pyproject.toml",
+      "rel_path": "google_crc32c-1.9.0/pyproject.toml",
       "language": "text (.toml)",
       "ais": 0,
       "risk": "NORMAL",
@@ -78,7 +36,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.5/LICENSE",
+      "rel_path": "google_crc32c-1.9.0/LICENSE",
       "language": "text (LICENSE)",
       "ais": 0,
       "risk": "NORMAL",
@@ -91,7 +49,33 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.5/README.md",
+      "rel_path": "google_crc32c-1.9.0/MANIFEST.in",
+      "language": "text (.in)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "google_crc32c-1.9.0/PKG-INFO",
+      "language": "text (PKG-INFO)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "google_crc32c-1.9.0/README.md",
       "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
@@ -104,7 +88,20 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.5/setup.cfg",
+      "rel_path": "google_crc32c-1.9.0/setup.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "google_crc32c-1.9.0/setup.cfg",
       "language": "text (.cfg)",
       "ais": 0,
       "risk": "NORMAL",
@@ -117,7 +114,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.5/fastspec/spec.py",
+      "rel_path": "google_crc32c-1.9.0/src/google_crc32c/__config__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -130,7 +127,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.5/fastspec/_modidx.py",
+      "rel_path": "google_crc32c-1.9.0/src/google_crc32c/cext.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -143,7 +140,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.5/fastspec/oapi.py",
+      "rel_path": "google_crc32c-1.9.0/src/google_crc32c/python.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -156,7 +153,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.5/fastspec/gql.py",
+      "rel_path": "google_crc32c-1.9.0/src/google_crc32c/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -169,7 +166,20 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.5/fastspec/__init__.py",
+      "rel_path": "google_crc32c-1.9.0/src/google_crc32c/_crc32c.c",
+      "language": "C",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "google_crc32c-1.9.0/src/google_crc32c/_checksum.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -182,7 +192,20 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.5/fastspec.egg-info/requires.txt",
+      "rel_path": "google_crc32c-1.9.0/src/google_crc32c/py.typed",
+      "language": "text (.typed)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "google_crc32c-1.9.0/src/google_crc32c.egg-info/SOURCES.txt",
       "language": "text (.txt)",
       "ais": 0,
       "risk": "NORMAL",
@@ -195,7 +218,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.5/fastspec.egg-info/entry_points.txt",
+      "rel_path": "google_crc32c-1.9.0/src/google_crc32c.egg-info/top_level.txt",
       "language": "text (.txt)",
       "ais": 0,
       "risk": "NORMAL",
@@ -208,7 +231,20 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.5/fastspec.egg-info/top_level.txt",
+      "rel_path": "google_crc32c-1.9.0/src/google_crc32c.egg-info/PKG-INFO",
+      "language": "text (PKG-INFO)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "google_crc32c-1.9.0/src/google_crc32c.egg-info/dependency_links.txt",
       "language": "text (.txt)",
       "ais": 0,
       "risk": "NORMAL",
@@ -221,8 +257,8 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.5/fastspec.egg-info/dependency_links.txt",
-      "language": "text (.txt)",
+      "rel_path": "google_crc32c-1.9.0/src/google_crc32c.egg-info/zip-safe",
+      "language": "text (zip-safe)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -234,12 +270,12 @@
       "signals": []
     },
     {
-      "rel_path": "fastspec-0.2.5/fastspec.egg-info/SOURCES.txt",
-      "language": "text (.txt)",
+      "rel_path": "google_crc32c-1.9.0/tests/test___init__.py",
+      "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
-      "coverage": "text",
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -248,16 +284,18 @@
     }
   ],
   "build_surface": {
-    "total": 2,
+    "total": 4,
     "counts": {
-      "build": 2,
+      "build": 3,
       "ci": 0,
-      "packaging": 0,
+      "packaging": 1,
       "dependency": 0,
-      "hook": 0,
+      "hook": 1,
       "fetch": 0
     },
-    "hooks": [],
+    "hooks": [
+      "google_crc32c-1.9.0/setup.py"
+    ],
     "fetchers": []
   }
 }

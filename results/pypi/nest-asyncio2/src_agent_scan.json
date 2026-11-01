@@ -1,15 +1,15 @@
 {
   "summary": {
-    "total_files": 30,
+    "total_files": 33,
     "flagged_files": 1,
     "critical_files": 0,
     "high_files": 0,
     "elevated_files": 1,
-    "normal_files": 29,
+    "normal_files": 32,
     "flagged_ai_files": 0,
     "flagged_exec_only_files": 1,
     "mode": "snapshot",
-    "summary_text": "Scanned 30 file(s): 0 CRITICAL, 0 HIGH, 1 ELEVATED. Coverage: 16 file(s) with full language rules, 2 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 1 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 11 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
+    "summary_text": "Scanned 33 file(s): 0 CRITICAL, 0 HIGH, 1 ELEVATED. Coverage: 18 file(s) with full language rules, 3 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 12 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
   },
   "sdk_inventory": {},
   "agent_artifacts": {
@@ -23,7 +23,7 @@
   },
   "files": [
     {
-      "rel_path": "nest_asyncio2-1.7.3/tests/312_pyvista.py",
+      "rel_path": "nest_asyncio2-1.7.4/tests/312_pyvista.py",
       "language": "Python",
       "ais": 50,
       "risk": "ELEVATED",
@@ -40,7 +40,7 @@
       ]
     },
     {
-      "rel_path": "nest_asyncio2-1.7.3/pyproject.toml",
+      "rel_path": "nest_asyncio2-1.7.4/pyproject.toml",
       "language": "text (.toml)",
       "ais": 0,
       "risk": "NORMAL",
@@ -53,20 +53,7 @@
       "signals": []
     },
     {
-      "rel_path": "nest_asyncio2-1.7.3/uv.lock",
-      "language": "binary (.lock)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "binary",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "nest_asyncio2-1.7.3/LICENSE",
+      "rel_path": "nest_asyncio2-1.7.4/LICENSE",
       "language": "text (LICENSE)",
       "ais": 0,
       "risk": "NORMAL",
@@ -79,72 +66,7 @@
       "signals": []
     },
     {
-      "rel_path": "nest_asyncio2-1.7.3/.gitignore",
-      "language": "text (.gitignore)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "nest_asyncio2-1.7.3/setup.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "nest_asyncio2-1.7.3/dist.sh",
-      "language": "Shell",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "endpoint",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "nest_asyncio2-1.7.3/README.md",
-      "language": "text (.md)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "nest_asyncio2-1.7.3/setup.cfg",
-      "language": "text (.cfg)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "nest_asyncio2-1.7.3/MANIFEST.in",
+      "rel_path": "nest_asyncio2-1.7.4/MANIFEST.in",
       "language": "text (.in)",
       "ais": 0,
       "risk": "NORMAL",
@@ -157,7 +79,59 @@
       "signals": []
     },
     {
-      "rel_path": "nest_asyncio2-1.7.3/dist.ps1",
+      "rel_path": "nest_asyncio2-1.7.4/.gitignore",
+      "language": "text (.gitignore)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "nest_asyncio2-1.7.4/dist.sh",
+      "language": "Shell",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "endpoint",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "nest_asyncio2-1.7.4/PKG-INFO",
+      "language": "text (PKG-INFO)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "nest_asyncio2-1.7.4/README.md",
+      "language": "text (.md)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "nest_asyncio2-1.7.4/dist.ps1",
       "language": "PowerShell",
       "ais": 0,
       "risk": "NORMAL",
@@ -170,7 +144,20 @@
       "signals": []
     },
     {
-      "rel_path": "nest_asyncio2-1.7.3/nest_asyncio2.py",
+      "rel_path": "nest_asyncio2-1.7.4/uv.lock",
+      "language": "text (.lock)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "nest_asyncio2-1.7.4/setup.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -183,7 +170,59 @@
       "signals": []
     },
     {
-      "rel_path": "nest_asyncio2-1.7.3/PKG-INFO",
+      "rel_path": "nest_asyncio2-1.7.4/nest_asyncio2.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "nest_asyncio2-1.7.4/setup.cfg",
+      "language": "text (.cfg)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "nest_asyncio2-1.7.4/nest_asyncio2.egg-info/SOURCES.txt",
+      "language": "text (.txt)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "nest_asyncio2-1.7.4/nest_asyncio2.egg-info/top_level.txt",
+      "language": "text (.txt)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "nest_asyncio2-1.7.4/nest_asyncio2.egg-info/PKG-INFO",
       "language": "text (PKG-INFO)",
       "ais": 0,
       "risk": "NORMAL",
@@ -196,7 +235,7 @@
       "signals": []
     },
     {
-      "rel_path": "nest_asyncio2-1.7.3/nest_asyncio2.egg-info/top_level.txt",
+      "rel_path": "nest_asyncio2-1.7.4/nest_asyncio2.egg-info/dependency_links.txt",
       "language": "text (.txt)",
       "ais": 0,
       "risk": "NORMAL",
@@ -209,46 +248,7 @@
       "signals": []
     },
     {
-      "rel_path": "nest_asyncio2-1.7.3/nest_asyncio2.egg-info/dependency_links.txt",
-      "language": "text (.txt)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "nest_asyncio2-1.7.3/nest_asyncio2.egg-info/SOURCES.txt",
-      "language": "text (.txt)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "nest_asyncio2-1.7.3/nest_asyncio2.egg-info/PKG-INFO",
-      "language": "text (PKG-INFO)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "nest_asyncio2-1.7.3/.github/workflows/test.yml",
+      "rel_path": "nest_asyncio2-1.7.4/.github/workflows/test.yml",
       "language": "CI recipe",
       "ais": 0,
       "risk": "NORMAL",
@@ -261,7 +261,20 @@
       "signals": []
     },
     {
-      "rel_path": "nest_asyncio2-1.7.3/tests/314_task_mix.py",
+      "rel_path": "nest_asyncio2-1.7.4/tests/311_context_ipykernel.sh",
+      "language": "Shell",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "endpoint",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "nest_asyncio2-1.7.4/tests/314_task.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -274,7 +287,7 @@
       "signals": []
     },
     {
-      "rel_path": "nest_asyncio2-1.7.3/tests/312_aiohttp.py",
+      "rel_path": "nest_asyncio2-1.7.4/tests/312_aiohttp_server_m.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -287,7 +300,7 @@
       "signals": []
     },
     {
-      "rel_path": "nest_asyncio2-1.7.3/tests/nest_test.py",
+      "rel_path": "nest_asyncio2-1.7.4/tests/314_task_mix.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -300,7 +313,7 @@
       "signals": []
     },
     {
-      "rel_path": "nest_asyncio2-1.7.3/tests/314_task.py",
+      "rel_path": "nest_asyncio2-1.7.4/tests/nest_test.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -313,7 +326,7 @@
       "signals": []
     },
     {
-      "rel_path": "nest_asyncio2-1.7.3/tests/312_aiohttp_server_m.py",
+      "rel_path": "nest_asyncio2-1.7.4/tests/36_asyncgen_hooks.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -326,7 +339,7 @@
       "signals": []
     },
     {
-      "rel_path": "nest_asyncio2-1.7.3/tests/mispatched.py",
+      "rel_path": "nest_asyncio2-1.7.4/tests/call_soon_anyio.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -339,7 +352,85 @@
       "signals": []
     },
     {
-      "rel_path": "nest_asyncio2-1.7.3/tests/test.ps1",
+      "rel_path": "nest_asyncio2-1.7.4/tests/312_loop_factory.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "nest_asyncio2-1.7.4/tests/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "nest_asyncio2-1.7.4/tests/312_aiohttp_server.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "nest_asyncio2-1.7.4/tests/scheduler.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "nest_asyncio2-1.7.4/tests/312_aiohttp.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "nest_asyncio2-1.7.4/tests/mispatched.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "nest_asyncio2-1.7.4/tests/test.ps1",
       "language": "PowerShell",
       "ais": 0,
       "risk": "NORMAL",
@@ -352,60 +443,8 @@
       "signals": []
     },
     {
-      "rel_path": "nest_asyncio2-1.7.3/tests/312_aiohttp_server.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "nest_asyncio2-1.7.3/tests/scheduler.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "nest_asyncio2-1.7.3/tests/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "nest_asyncio2-1.7.3/tests/312_loop_factory.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "nest_asyncio2-1.7.3/tests/call_soon_anyio.py",
-      "language": "Python",
+      "rel_path": "nest_asyncio2-1.7.4/tests/311_context_ipykernel.ipynb",
+      "language": "Jupyter notebook",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,

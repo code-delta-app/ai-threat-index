@@ -1,18 +1,18 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-10-01T09:39:29.078532Z",
+  "generated": "2026-11-01T09:56:51.918976Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 601,
-    "files_flagged": 36,
+    "files_scanned": 613,
+    "files_flagged": 37,
     "critical": 0,
     "high": 3,
-    "elevated": 33,
+    "elevated": 34,
     "providers": 2,
     "frameworks": 1,
     "foreign_egress_files": 0,
@@ -32,23 +32,25 @@
       "seen_as": [
         "http:generativelanguage.googleapis.com"
       ],
-      "file_count": 15,
+      "file_count": 17,
       "files": [
-        "google_genai-2.26.0/google/genai/_api_client.py",
-        "google_genai-2.26.0/google/genai/_gaos/sdkconfiguration.py",
-        "google_genai-2.26.0/google/genai/tests/batches/test_create_with_inlined_requests.py",
-        "google_genai-2.26.0/google/genai/tests/caches/constants.py",
-        "google_genai-2.26.0/google/genai/tests/caches/test_create.py",
-        "google_genai-2.26.0/google/genai/tests/caches/test_create_custom_url.py",
-        "google_genai-2.26.0/google/genai/tests/chats/test_send_message.py",
-        "google_genai-2.26.0/google/genai/tests/client/test_upload_errors.py",
-        "google_genai-2.26.0/google/genai/tests/files/test_download.py",
-        "google_genai-2.26.0/google/genai/tests/interactions/test_paths.py",
-        "google_genai-2.26.0/google/genai/tests/live/test_live_music.py",
-        "google_genai-2.26.0/google/genai/tests/models/constants.py",
-        "google_genai-2.26.0/google/genai/tests/models/test_generate_content_media_resolution.py",
-        "google_genai-2.26.0/google/genai/tests/models/test_generate_content_part.py",
-        "google_genai-2.26.0/google/genai/tests/types/test_types.py"
+        "google_genai-2.34.0/google/genai/_api_client.py",
+        "google_genai-2.34.0/google/genai/_gaos/sdkconfiguration.py",
+        "google_genai-2.34.0/google/genai/tests/batches/test_create_with_inlined_requests.py",
+        "google_genai-2.34.0/google/genai/tests/caches/constants.py",
+        "google_genai-2.34.0/google/genai/tests/caches/test_create.py",
+        "google_genai-2.34.0/google/genai/tests/caches/test_create_custom_url.py",
+        "google_genai-2.34.0/google/genai/tests/chats/test_send_message.py",
+        "google_genai-2.34.0/google/genai/tests/client/test_client_initialization.py",
+        "google_genai-2.34.0/google/genai/tests/client/test_upload_errors.py",
+        "google_genai-2.34.0/google/genai/tests/files/test_download.py",
+        "google_genai-2.34.0/google/genai/tests/interactions/test_automatic_continuation.py",
+        "google_genai-2.34.0/google/genai/tests/interactions/test_paths.py",
+        "google_genai-2.34.0/google/genai/tests/live/test_live_music.py",
+        "google_genai-2.34.0/google/genai/tests/models/constants.py",
+        "google_genai-2.34.0/google/genai/tests/models/test_generate_content_media_resolution.py",
+        "google_genai-2.34.0/google/genai/tests/models/test_generate_content_part.py",
+        "google_genai-2.34.0/google/genai/tests/types/test_types.py"
       ],
       "endpoint": "generativelanguage.googleapis.com",
       "endpoints": [
@@ -66,8 +68,8 @@
       ],
       "file_count": 2,
       "files": [
-        "google_genai-2.26.0/google/genai/tests/client/test_client_initialization.py",
-        "google_genai-2.26.0/google/genai/tests/imports/test_no_optional_imports.py"
+        "google_genai-2.34.0/google/genai/tests/client/test_client_initialization.py",
+        "google_genai-2.34.0/google/genai/tests/imports/test_no_optional_imports.py"
       ]
     }
   ],
@@ -83,27 +85,27 @@
       ],
       "file_count": 21,
       "files": [
-        "google_genai-2.26.0/google/genai/_adapters.py",
-        "google_genai-2.26.0/google/genai/_extra_utils.py",
-        "google_genai-2.26.0/google/genai/_mcp_utils.py",
-        "google_genai-2.26.0/google/genai/_transformers.py",
-        "google_genai-2.26.0/google/genai/live.py",
-        "google_genai-2.26.0/google/genai/tests/afc/test_find_afc_incompatible_tool_indexes.py",
-        "google_genai-2.26.0/google/genai/tests/afc/test_get_function_map.py",
-        "google_genai-2.26.0/google/genai/tests/afc/test_get_function_response_parts.py",
-        "google_genai-2.26.0/google/genai/tests/chats/test_send_message.py",
-        "google_genai-2.26.0/google/genai/tests/live/test_live.py",
-        "google_genai-2.26.0/google/genai/tests/mcp/test_has_mcp_tool_usage.py",
-        "google_genai-2.26.0/google/genai/tests/mcp/test_mcp_to_gemini_tools.py",
-        "google_genai-2.26.0/google/genai/tests/mcp/test_parse_config_for_mcp_sessions.py",
-        "google_genai-2.26.0/google/genai/tests/mcp/test_parse_config_for_mcp_usage.py",
-        "google_genai-2.26.0/google/genai/tests/mcp/test_set_mcp_usage_header.py",
-        "google_genai-2.26.0/google/genai/tests/models/test_generate_content_mcp.py",
-        "google_genai-2.26.0/google/genai/tests/models/test_generate_content_tools.py",
-        "google_genai-2.26.0/google/genai/tests/transformers/test_t_tool.py",
-        "google_genai-2.26.0/google/genai/tests/transformers/test_t_tools.py",
-        "google_genai-2.26.0/google/genai/tests/types/test_types.py",
-        "google_genai-2.26.0/google/genai/types.py"
+        "google_genai-2.34.0/google/genai/_adapters.py",
+        "google_genai-2.34.0/google/genai/_extra_utils.py",
+        "google_genai-2.34.0/google/genai/_mcp_utils.py",
+        "google_genai-2.34.0/google/genai/_transformers.py",
+        "google_genai-2.34.0/google/genai/live.py",
+        "google_genai-2.34.0/google/genai/tests/afc/test_find_afc_incompatible_tool_indexes.py",
+        "google_genai-2.34.0/google/genai/tests/afc/test_get_function_map.py",
+        "google_genai-2.34.0/google/genai/tests/afc/test_get_function_response_parts.py",
+        "google_genai-2.34.0/google/genai/tests/chats/test_send_message.py",
+        "google_genai-2.34.0/google/genai/tests/live/test_live.py",
+        "google_genai-2.34.0/google/genai/tests/mcp/test_has_mcp_tool_usage.py",
+        "google_genai-2.34.0/google/genai/tests/mcp/test_mcp_to_gemini_tools.py",
+        "google_genai-2.34.0/google/genai/tests/mcp/test_parse_config_for_mcp_sessions.py",
+        "google_genai-2.34.0/google/genai/tests/mcp/test_parse_config_for_mcp_usage.py",
+        "google_genai-2.34.0/google/genai/tests/mcp/test_set_mcp_usage_header.py",
+        "google_genai-2.34.0/google/genai/tests/models/test_generate_content_mcp.py",
+        "google_genai-2.34.0/google/genai/tests/models/test_generate_content_tools.py",
+        "google_genai-2.34.0/google/genai/tests/transformers/test_t_tool.py",
+        "google_genai-2.34.0/google/genai/tests/transformers/test_t_tools.py",
+        "google_genai-2.34.0/google/genai/tests/types/test_types.py",
+        "google_genai-2.34.0/google/genai/types.py"
       ]
     }
   ],
@@ -111,20 +113,20 @@
   "committed_credentials": [
     {
       "kind": "GitHub token",
-      "file": "google_genai-2.26.0/google/genai/tests/gaos/test_triggers_lifecycle.py",
-      "line": 42,
+      "file": "google_genai-2.34.0/google/genai/tests/gaos/test_triggers_lifecycle.py",
+      "line": 38,
       "sample": "ghp_xxxx\u2026 (40 chars)"
     },
     {
       "kind": "GitHub token",
-      "file": "google_genai-2.26.0/google/genai/tests/gaos/test_triggers_lifecycle.py",
-      "line": 156,
+      "file": "google_genai-2.34.0/google/genai/tests/gaos/test_triggers_lifecycle.py",
+      "line": 109,
       "sample": "ghp_xxxx\u2026 (40 chars)"
     }
   ],
   "findings": [
     {
-      "file": "google_genai-2.26.0/google/genai/_api_client.py",
+      "file": "google_genai-2.34.0/google/genai/_api_client.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 100,
@@ -141,7 +143,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/_transformers.py",
+      "file": "google_genai-2.34.0/google/genai/_transformers.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -157,12 +159,13 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/tests/client/test_client_initialization.py",
+      "file": "google_genai-2.34.0/google/genai/tests/client/test_client_initialization.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
       "signals": [
         "ai_sdk_import(1_sdk(s)_detected)",
+        "ai_http_endpoint(generativelanguage.googleapis.com)",
         "agent_orchestration(Runner.run)"
       ],
       "flags": {
@@ -173,7 +176,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/_extra_utils.py",
+      "file": "google_genai-2.34.0/google/genai/live.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -188,7 +191,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/_adapters.py",
+      "file": "google_genai-2.34.0/google/genai/types.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -203,7 +206,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/types.py",
+      "file": "google_genai-2.34.0/google/genai/_mcp_utils.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -218,7 +221,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/_mcp_utils.py",
+      "file": "google_genai-2.34.0/google/genai/_extra_utils.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -233,7 +236,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/live.py",
+      "file": "google_genai-2.34.0/google/genai/_adapters.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -248,7 +251,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/_gaos/sdkconfiguration.py",
+      "file": "google_genai-2.34.0/google/genai/_gaos/sdkconfiguration.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -263,7 +266,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/tests/files/test_download.py",
+      "file": "google_genai-2.34.0/google/genai/tests/caches/constants.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -278,157 +281,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/tests/mcp/test_has_mcp_tool_usage.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "google_genai-2.26.0/google/genai/tests/mcp/test_mcp_to_gemini_tools.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "google_genai-2.26.0/google/genai/tests/mcp/test_set_mcp_usage_header.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "google_genai-2.26.0/google/genai/tests/mcp/test_parse_config_for_mcp_sessions.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "google_genai-2.26.0/google/genai/tests/mcp/test_parse_config_for_mcp_usage.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "google_genai-2.26.0/google/genai/tests/afc/test_get_function_response_parts.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "google_genai-2.26.0/google/genai/tests/afc/test_get_function_map.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "google_genai-2.26.0/google/genai/tests/afc/test_find_afc_incompatible_tool_indexes.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "google_genai-2.26.0/google/genai/tests/models/test_generate_content_mcp.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "google_genai-2.26.0/google/genai/tests/models/test_generate_content_tools.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "google_genai-2.26.0/google/genai/tests/models/test_generate_content_media_resolution.py",
+      "file": "google_genai-2.34.0/google/genai/tests/caches/test_create_custom_url.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -443,7 +296,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/tests/models/constants.py",
+      "file": "google_genai-2.34.0/google/genai/tests/caches/test_create.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -458,7 +311,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/tests/models/test_generate_content_part.py",
+      "file": "google_genai-2.34.0/google/genai/tests/files/test_download.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -473,7 +326,112 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/tests/chats/test_send_message.py",
+      "file": "google_genai-2.34.0/google/genai/tests/live/test_live.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_genai-2.34.0/google/genai/tests/live/test_live_music.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(generativelanguage.googleapis.com)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_genai-2.34.0/google/genai/tests/models/constants.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(generativelanguage.googleapis.com)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_genai-2.34.0/google/genai/tests/models/test_generate_content_mcp.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_genai-2.34.0/google/genai/tests/models/test_generate_content_tools.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_genai-2.34.0/google/genai/tests/models/test_generate_content_media_resolution.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(generativelanguage.googleapis.com)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_genai-2.34.0/google/genai/tests/models/test_generate_content_part.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(generativelanguage.googleapis.com)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_genai-2.34.0/google/genai/tests/chats/test_send_message.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -489,22 +447,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/tests/interactions/test_paths.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_http_endpoint(generativelanguage.googleapis.com)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "google_genai-2.26.0/google/genai/tests/transformers/test_t_tools.py",
+      "file": "google_genai-2.34.0/google/genai/tests/afc/test_find_afc_incompatible_tool_indexes.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -519,7 +462,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/tests/transformers/test_t_tool.py",
+      "file": "google_genai-2.34.0/google/genai/tests/afc/test_get_function_map.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -534,22 +477,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/tests/client/test_upload_errors.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_http_endpoint(generativelanguage.googleapis.com)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "google_genai-2.26.0/google/genai/tests/live/test_live.py",
+      "file": "google_genai-2.34.0/google/genai/tests/afc/test_get_function_response_parts.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -564,7 +492,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/tests/live/test_live_music.py",
+      "file": "google_genai-2.34.0/google/genai/tests/batches/test_create_with_inlined_requests.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -579,67 +507,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/tests/batches/test_create_with_inlined_requests.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_http_endpoint(generativelanguage.googleapis.com)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "google_genai-2.26.0/google/genai/tests/caches/test_create_custom_url.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_http_endpoint(generativelanguage.googleapis.com)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "google_genai-2.26.0/google/genai/tests/caches/constants.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_http_endpoint(generativelanguage.googleapis.com)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "google_genai-2.26.0/google/genai/tests/caches/test_create.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_http_endpoint(generativelanguage.googleapis.com)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "google_genai-2.26.0/google/genai/tests/imports/test_no_optional_imports.py",
+      "file": "google_genai-2.34.0/google/genai/tests/transformers/test_t_tool.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -654,7 +522,142 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/tests/types/test_types.py",
+      "file": "google_genai-2.34.0/google/genai/tests/transformers/test_t_tools.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_genai-2.34.0/google/genai/tests/mcp/test_parse_config_for_mcp_sessions.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_genai-2.34.0/google/genai/tests/mcp/test_set_mcp_usage_header.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_genai-2.34.0/google/genai/tests/mcp/test_parse_config_for_mcp_usage.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_genai-2.34.0/google/genai/tests/mcp/test_has_mcp_tool_usage.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_genai-2.34.0/google/genai/tests/mcp/test_mcp_to_gemini_tools.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_genai-2.34.0/google/genai/tests/client/test_upload_errors.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(generativelanguage.googleapis.com)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_genai-2.34.0/google/genai/tests/interactions/test_automatic_continuation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(generativelanguage.googleapis.com)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_genai-2.34.0/google/genai/tests/interactions/test_paths.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_http_endpoint(generativelanguage.googleapis.com)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_genai-2.34.0/google/genai/tests/types/test_types.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -670,7 +673,22 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/_common.py",
+      "file": "google_genai-2.34.0/google/genai/tests/imports/test_no_optional_imports.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "google_genai-2.34.0/google/genai/_common.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 35,
@@ -685,7 +703,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/__init__.py",
+      "file": "google_genai-2.34.0/google/genai/__init__.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 20,
@@ -700,7 +718,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/_gaos/sdk.py",
+      "file": "google_genai-2.34.0/google/genai/_gaos/sdk.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 20,
@@ -715,7 +733,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/_gaos/google_genai.py",
+      "file": "google_genai-2.34.0/google/genai/_gaos/google_genai.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 18,
@@ -730,7 +748,7 @@
       }
     },
     {
-      "file": "google_genai-2.26.0/google/genai/_gaos/types/interactions/interaction.py",
+      "file": "google_genai-2.34.0/google/genai/_gaos/types/interactions/interaction.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 18,

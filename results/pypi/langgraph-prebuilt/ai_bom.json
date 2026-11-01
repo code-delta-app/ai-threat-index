@@ -1,14 +1,14 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-10-01T09:40:36.507531Z",
+  "generated": "2026-11-01T10:07:01.989376Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 36,
+    "files_scanned": 37,
     "files_flagged": 11,
     "critical": 0,
     "high": 1,
@@ -35,8 +35,8 @@
       ],
       "file_count": 2,
       "files": [
-        "langgraph_prebuilt-1.1.0/langgraph/prebuilt/chat_agent_executor.py",
-        "langgraph_prebuilt-1.1.0/langgraph/prebuilt/interrupt.py"
+        "langgraph_prebuilt-1.1.1/langgraph/prebuilt/chat_agent_executor.py",
+        "langgraph_prebuilt-1.1.1/langgraph/prebuilt/interrupt.py"
       ]
     }
   ],
@@ -45,13 +45,13 @@
       "type": "agent-artifact",
       "name": "Claude Code workspace",
       "tier": 2,
-      "path": "langgraph_prebuilt-1.1.0/.claude"
+      "path": "langgraph_prebuilt-1.1.1/.claude"
     }
   ],
   "committed_credentials": [],
   "findings": [
     {
-      "file": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/chat_agent_executor.py",
+      "file": "langgraph_prebuilt-1.1.1/langgraph/prebuilt/chat_agent_executor.py",
       "language": "Python",
       "risk": "HIGH",
       "ais": 80,
@@ -67,23 +67,7 @@
       }
     },
     {
-      "file": "langgraph_prebuilt-1.1.0/tests/test_react_agent.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 58,
-      "signals": [
-        "agent_orchestration(StateGraph,create_react_agent)",
-        "prompt_injection_partial(2)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/tool_node.py",
+      "file": "langgraph_prebuilt-1.1.1/langgraph/prebuilt/tool_node.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 58,
@@ -99,12 +83,13 @@
       }
     },
     {
-      "file": "langgraph_prebuilt-1.1.0/tests/test_tool_node.py",
+      "file": "langgraph_prebuilt-1.1.1/tests/test_react_agent.py",
       "language": "Python",
       "risk": "ELEVATED",
-      "ais": 40,
+      "ais": 58,
       "signals": [
-        "agent_orchestration(StateGraph,add_node()"
+        "agent_orchestration(StateGraph,create_react_agent)",
+        "prompt_injection_partial(2)"
       ],
       "flags": {
         "foreign_egress": false,
@@ -114,82 +99,7 @@
       }
     },
     {
-      "file": "langgraph_prebuilt-1.1.0/tests/test_deprecation.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "agent_orchestration(create_react_agent)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "langgraph_prebuilt-1.1.0/tests/test_react_agent_graph.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "agent_orchestration(create_react_agent)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "langgraph_prebuilt-1.1.0/tests/test_tool_call_transformer.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "agent_orchestration(StateGraph,add_node()"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "langgraph_prebuilt-1.1.0/tests/test_injected_state_not_required.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "agent_orchestration(create_react_agent)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/tool_validator.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "agent_orchestration(StateGraph,add_node()"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/interrupt.py",
+      "file": "langgraph_prebuilt-1.1.1/langgraph/prebuilt/interrupt.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -204,7 +114,7 @@
       }
     },
     {
-      "file": "langgraph_prebuilt-1.1.0/langgraph/prebuilt/__init__.py",
+      "file": "langgraph_prebuilt-1.1.1/langgraph/prebuilt/__init__.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -219,7 +129,97 @@
       }
     },
     {
-      "file": "langgraph_prebuilt-1.1.0/tests/test_tool_node_interceptor_unregistered.py",
+      "file": "langgraph_prebuilt-1.1.1/langgraph/prebuilt/tool_validator.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(StateGraph,add_node()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langgraph_prebuilt-1.1.1/tests/test_injected_state_not_required.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(create_react_agent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langgraph_prebuilt-1.1.1/tests/test_tool_node.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(StateGraph,add_node()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langgraph_prebuilt-1.1.1/tests/test_tool_call_transformer.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(StateGraph,add_node()"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langgraph_prebuilt-1.1.1/tests/test_deprecation.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(create_react_agent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langgraph_prebuilt-1.1.1/tests/test_react_agent_graph.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "agent_orchestration(create_react_agent)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "langgraph_prebuilt-1.1.1/tests/test_tool_node_interceptor_unregistered.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 18,

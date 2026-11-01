@@ -1,71 +1,34 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-10-01T09:41:45.889276Z",
+  "generated": "2026-11-01T10:07:00.352807Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 51,
-    "files_flagged": 7,
+    "files_scanned": 4510,
+    "files_flagged": 4,
     "critical": 0,
     "high": 0,
-    "elevated": 7,
+    "elevated": 4,
     "providers": 0,
     "frameworks": 0,
     "foreign_egress_files": 0,
     "non_allied_jurisdiction_files": 0,
     "cost_risk_files": 0,
-    "agent_artifacts": 1,
+    "agent_artifacts": 0,
     "agent_artifacts_tier3": 0,
     "committed_credentials": 0
   },
   "providers": [],
   "frameworks": [],
-  "agent_artifacts": [
-    {
-      "type": "agent-artifact",
-      "name": "Claude Code instructions",
-      "tier": 1,
-      "path": "burner_redis-0.1.7/CLAUDE.md"
-    }
-  ],
+  "agent_artifacts": [],
   "committed_credentials": [],
   "findings": [
     {
-      "file": "burner_redis-0.1.7/tests/test_scripting.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 50,
-      "signals": [
-        "dynamic_execution(eval/exec_x41)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "burner_redis-0.1.7/tests/test_prefect_integration.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 50,
-      "signals": [
-        "dynamic_execution(eval/exec_x5)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "burner_redis-0.1.7/tests/test_pubsub.py",
+      "file": "ty-0.0.95/ruff/crates/ruff_python_formatter/resources/test/fixtures/black/cases/function.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 50,
@@ -80,22 +43,7 @@
       }
     },
     {
-      "file": "burner_redis-0.1.7/tests/test_lists.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 50,
-      "signals": [
-        "dynamic_execution(eval/exec_x28)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
-      "file": "burner_redis-0.1.7/tests/test_pipeline.py",
+      "file": "ty-0.0.95/ruff/crates/ruff_python_formatter/resources/test/fixtures/black/cases/fmtonoff.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 50,
@@ -110,7 +58,7 @@
       }
     },
     {
-      "file": "burner_redis-0.1.7/python/burner_redis/pipeline.py",
+      "file": "ty-0.0.95/ruff/crates/ruff_python_parser/resources/inline/ok/decorator_expression_eval_hack_py38.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 50,
@@ -125,12 +73,72 @@
       }
     },
     {
-      "file": "burner_redis-0.1.7/python/burner_redis/lock.py",
+      "file": "ty-0.0.95/python/ty/__main__.py",
       "language": "Python",
       "risk": "ELEVATED",
-      "ais": 50,
+      "ais": 40,
       "signals": [
-        "dynamic_execution(eval/exec_x1)"
+        "subprocess_variable_execution(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "ty-0.0.95/ruff/crates/ty_python_semantic/src/types/function.rs",
+      "language": "Rust",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "ty-0.0.95/ruff/crates/ty_python_semantic/src/types/infer/builder/function.rs",
+      "language": "Rust",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x2)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "ty-0.0.95/ruff/crates/ty_module_resolver/src/resolve.rs",
+      "language": "Rust",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x10)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "ty-0.0.95/ruff/crates/ty_module_resolver/src/list.rs",
+      "language": "Rust",
+      "risk": "NORMAL",
+      "ais": 20,
+      "signals": [
+        "dynamic_import(x1)"
       ],
       "flags": {
         "foreign_egress": false,

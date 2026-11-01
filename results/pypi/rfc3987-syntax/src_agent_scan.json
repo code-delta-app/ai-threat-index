@@ -1,15 +1,15 @@
 {
   "summary": {
-    "total_files": 15,
+    "total_files": 16,
     "flagged_files": 0,
     "critical_files": 0,
     "high_files": 0,
     "elevated_files": 0,
-    "normal_files": 15,
+    "normal_files": 16,
     "flagged_ai_files": 0,
     "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 15 file(s). No AI agent initiation signatures detected. Coverage: 5 file(s) with full language rules, 1 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 9 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
+    "summary_text": "Scanned 16 file(s). No AI agent initiation signatures detected. Coverage: 5 file(s) with full language rules, 1 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 10 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
   },
   "sdk_inventory": {},
   "agent_artifacts": {
@@ -62,19 +62,6 @@
       "signals": []
     },
     {
-      "rel_path": "rfc3987_syntax-1.1.0/README.md",
-      "language": "text (.md)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
       "rel_path": "rfc3987_syntax-1.1.0/PKG-INFO",
       "language": "text (PKG-INFO)",
       "ais": 0,
@@ -88,21 +75,8 @@
       "signals": []
     },
     {
-      "rel_path": "rfc3987_syntax-1.1.0/.github/workflows/python-publish.yml",
-      "language": "CI recipe",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "endpoint",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "rfc3987_syntax-1.1.0/tests/valid_syntax.json",
-      "language": "text (.json)",
+      "rel_path": "rfc3987_syntax-1.1.0/README.md",
+      "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -114,38 +88,12 @@
       "signals": []
     },
     {
-      "rel_path": "rfc3987_syntax-1.1.0/tests/invalid_syntax.json",
+      "rel_path": "rfc3987_syntax-1.1.0/.vscode/settings.json",
       "language": "text (.json)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
       "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "rfc3987_syntax-1.1.0/tests/test_syntax.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "rfc3987_syntax-1.1.0/tests/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -154,6 +102,32 @@
     },
     {
       "rel_path": "rfc3987_syntax-1.1.0/src/rfc3987_syntax/utils.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "rfc3987_syntax-1.1.0/src/rfc3987_syntax/CITATION.cff",
+      "language": "text (.cff)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "rfc3987_syntax-1.1.0/src/rfc3987_syntax/syntax_helpers.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -179,19 +153,6 @@
       "signals": []
     },
     {
-      "rel_path": "rfc3987_syntax-1.1.0/src/rfc3987_syntax/CITATION.cff",
-      "language": "text (.cff)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
       "rel_path": "rfc3987_syntax-1.1.0/src/rfc3987_syntax/__init__.py",
       "language": "Python",
       "ais": 0,
@@ -205,7 +166,59 @@
       "signals": []
     },
     {
-      "rel_path": "rfc3987_syntax-1.1.0/src/rfc3987_syntax/syntax_helpers.py",
+      "rel_path": "rfc3987_syntax-1.1.0/.github/workflows/python-publish.yml",
+      "language": "CI recipe",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "endpoint",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "rfc3987_syntax-1.1.0/tests/invalid_syntax.json",
+      "language": "text (.json)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "rfc3987_syntax-1.1.0/tests/valid_syntax.json",
+      "language": "text (.json)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "rfc3987_syntax-1.1.0/tests/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "rfc3987_syntax-1.1.0/tests/test_syntax.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",

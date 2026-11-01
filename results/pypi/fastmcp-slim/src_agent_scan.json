@@ -1,24 +1,24 @@
 {
   "summary": {
-    "total_files": 270,
-    "flagged_files": 207,
+    "total_files": 281,
+    "flagged_files": 218,
     "critical_files": 0,
-    "high_files": 13,
-    "elevated_files": 194,
+    "high_files": 15,
+    "elevated_files": 203,
     "normal_files": 63,
-    "flagged_ai_files": 207,
+    "flagged_ai_files": 218,
     "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 270 file(s): 0 CRITICAL, 13 HIGH, 194 ELEVATED. AI SDKs detected: fastmcp, mcp, FastMCP, google.genai. Coverage: 258 file(s) with full language rules, 0 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 12 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
+    "summary_text": "Scanned 281 file(s): 0 CRITICAL, 15 HIGH, 203 ELEVATED. AI SDKs detected: fastmcp, mcp, FastMCP, openai. Coverage: 269 file(s) with full language rules, 0 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 12 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
   },
   "sdk_inventory": {
-    "fastmcp": 214,
-    "mcp": 63,
-    "FastMCP": 36,
-    "google.genai": 1,
+    "fastmcp": 226,
+    "mcp": 71,
+    "FastMCP": 40,
+    "openai": 1,
     "anthropic": 1,
     "Anthropic": 1,
-    "openai": 1
+    "google.genai": 1
   },
   "agent_artifacts": {
     "table_version": 1,
@@ -31,51 +31,7 @@
   },
   "files": [
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/server.py",
-      "language": "Python",
-      "ais": 100,
-      "risk": "HIGH",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 3,
-      "sdk_found": [
-        "from mcp",
-        "import fastmcp",
-        "from fastmcp"
-      ],
-      "agent_patterns": [
-        "function_tool"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(3_sdk(s)_detected)",
-        "agent_orchestration(function_tool)",
-        "prompt_injection_vectors(3_unsanitised_inputs)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/filesystem_discovery.py",
-      "language": "Python",
-      "ais": 100,
-      "risk": "HIGH",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [
-        "function_tool"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(function_tool)",
-        "dynamic_import(x2)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/experimental/transforms/code_mode.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/experimental/transforms/code_mode.py",
       "language": "Python",
       "ais": 100,
       "risk": "HIGH",
@@ -96,7 +52,55 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/local_provider/decorators/tools.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/server.py",
+      "language": "Python",
+      "ais": 100,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 3,
+      "sdk_found": [
+        "from mcp",
+        "import fastmcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [
+        "function_tool"
+      ],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (function_tool)"
+      ],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)",
+        "agent_orchestration(function_tool)",
+        "prompt_injection_vectors(3_unsanitised_inputs)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/filesystem_discovery.py",
+      "language": "Python",
+      "ais": 100,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [
+        "function_tool"
+      ],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (function_tool)"
+      ],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(function_tool)",
+        "dynamic_import(x2)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/local_provider/decorators/tools.py",
       "language": "Python",
       "ais": 98,
       "risk": "HIGH",
@@ -109,7 +113,9 @@
       "agent_patterns": [
         "function_tool"
       ],
-      "dangerous_exec": [],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (function_tool)"
+      ],
       "signals": [
         "ai_sdk_import(1_sdk(s)_detected)",
         "agent_orchestration(function_tool)",
@@ -117,7 +123,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/decorators.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/decorators.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
@@ -130,14 +136,38 @@
       "agent_patterns": [
         "function_tool"
       ],
-      "dangerous_exec": [],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (function_tool)"
+      ],
       "signals": [
         "ai_sdk_import(1_sdk(s)_detected)",
         "agent_orchestration(function_tool)"
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/tools/base.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/tools/tool_transform.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [
+        "function_tool"
+      ],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (function_tool)"
+      ],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(function_tool)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/tools/base.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
@@ -151,14 +181,16 @@
       "agent_patterns": [
         "function_tool"
       ],
-      "dangerous_exec": [],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (function_tool)"
+      ],
       "signals": [
         "ai_sdk_import(2_sdk(s)_detected)",
         "agent_orchestration(function_tool)"
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/prompts/function_prompt.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/prompts/function_prompt.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
@@ -171,14 +203,38 @@
       "agent_patterns": [
         "function_tool"
       ],
-      "dangerous_exec": [],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (function_tool)"
+      ],
       "signals": [
         "ai_sdk_import(1_sdk(s)_detected)",
         "agent_orchestration(function_tool)"
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/cli.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/resources/template.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [
+        "function_tool"
+      ],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (function_tool)"
+      ],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "agent_orchestration(function_tool)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/cli.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
@@ -199,7 +255,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/run.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/run.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
@@ -222,7 +278,27 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/install/gemini_cli.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/install/claude_code.py",
+      "language": "Python",
+      "ais": 80,
+      "risk": "HIGH",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [
+        "subprocess/shell execution with variables (1 occurrence(s))"
+      ],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "subprocess_variable_execution(x1)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/install/shared.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
@@ -242,7 +318,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/install/claude_code.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/install/gemini_cli.py",
       "language": "Python",
       "ais": 80,
       "risk": "HIGH",
@@ -254,35 +330,15 @@
       ],
       "agent_patterns": [],
       "dangerous_exec": [
-        "subprocess/shell execution with variables (2 occurrence(s))"
+        "subprocess/shell execution with variables (1 occurrence(s))"
       ],
       "signals": [
         "ai_sdk_import(1_sdk(s)_detected)",
-        "subprocess_variable_execution(x2)"
+        "subprocess_variable_execution(x1)"
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/resources/template.py",
-      "language": "Python",
-      "ais": 80,
-      "risk": "HIGH",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [
-        "function_tool"
-      ],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "agent_orchestration(function_tool)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/local_provider/decorators/prompts.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/local_provider/decorators/prompts.py",
       "language": "Python",
       "ais": 75,
       "risk": "HIGH",
@@ -300,7 +356,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/__init__.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/__init__.py",
       "language": "Python",
       "ais": 60,
       "risk": "ELEVATED",
@@ -319,7 +375,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/mcp_server_config/v1/sources/filesystem.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/mcp_server_config/v1/sources/filesystem.py",
       "language": "Python",
       "ais": 60,
       "risk": "ELEVATED",
@@ -339,26 +395,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/__init__.py",
-      "language": "Python",
-      "ais": 60,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)",
-        "dynamic_import(x1)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/transports/memory.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/transports/memory.py",
       "language": "Python",
       "ais": 60,
       "risk": "ELEVATED",
@@ -378,49 +415,13 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/local_provider/local_provider.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/__init__.py",
       "language": "Python",
-      "ais": 58,
+      "ais": 60,
       "risk": "ELEVATED",
       "gss": 0,
       "coverage": "full",
-      "injection_vectors": 1,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "prompt_injection_partial(1)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/local_provider/decorators/resources.py",
-      "language": "Python",
-      "ais": 58,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 1,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)",
-        "prompt_injection_partial(1)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/transforms/prompts_as_tools.py",
-      "language": "Python",
-      "ais": 58,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 1,
+      "injection_vectors": 0,
       "sdk_found": [
         "from fastmcp",
         "import FastMCP"
@@ -429,11 +430,11 @@
       "dangerous_exec": [],
       "signals": [
         "ai_sdk_import(2_sdk(s)_detected)",
-        "prompt_injection_partial(1)"
+        "dynamic_import(x1)"
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/client.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/client.py",
       "language": "Python",
       "ais": 58,
       "risk": "ELEVATED",
@@ -451,7 +452,79 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/telemetry.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/transforms/prompts_as_tools.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/local_provider/local_provider.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/local_provider/decorators/resources.py",
+      "language": "Python",
+      "ais": 58,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 1,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)",
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/dependencies.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/_compat.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -469,24 +542,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/mcp_config.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/exceptions.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/exceptions.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -504,41 +560,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/dependencies.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/settings.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/_compat.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/telemetry.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -556,43 +578,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/logging.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "import fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/cli.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "import fastmcp",
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(3_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/authorization.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/mcp_config.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -609,25 +595,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/version_check.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp",
-        "import fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/skills.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/settings.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -644,7 +612,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/versions.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/tools/function_parsing.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -661,378 +629,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/tests.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(3_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/components.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/exceptions.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "import fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/token_cache.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/tasks.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/inspect.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "import fastmcp",
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(4_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/mcp_server_config/__init__.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/mcp_server_config/v1/mcp_server_config.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/mcp_server_config/v1/environments/uv.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/mcp_server_config/v1/environments/__init__.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/openapi/parser.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/openapi/schemas.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/openapi/models.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/openapi/director.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/openapi/json_schema_converter.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/contrib/bulk_tool_caller/bulk_tool_caller.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/contrib/bulk_tool_caller/example.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/contrib/mcp_mixin/example.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/contrib/mcp_mixin/mcp_mixin.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/contrib/component_manager/component_manager.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(3_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/contrib/component_manager/example.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp",
-        "import FastMCP",
-        "from FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(3_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/tools/function_tool.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/tools/function_tool.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1050,24 +647,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/tools/tool_transform.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/tools/__init__.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/tools/__init__.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1078,13 +658,51 @@
       "agent_patterns": [
         "function_tool"
       ],
-      "dangerous_exec": [],
+      "dangerous_exec": [
+        "builds an AI agent that chooses and runs its own actions (function_tool)"
+      ],
       "signals": [
         "agent_orchestration(function_tool)"
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/tools/function_parsing.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/skills/_source.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/skills/_snapshot.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/skills/__init__.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1101,7 +719,80 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/telemetry.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/skills/_resources.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/skills/extension.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/skills/client.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/prompts/base.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp",
+        "from mcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/resources/function_resource.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1118,7 +809,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/elicitation.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/resources/types.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1126,17 +817,16 @@
       "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
-        "from mcp",
         "from fastmcp"
       ],
       "agent_patterns": [],
       "dangerous_exec": [],
       "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
+        "ai_sdk_import(1_sdk(s)_detected)"
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/http.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/resources/base.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1144,92 +834,16 @@
       "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
-        "from mcp",
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(3_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/context.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(3_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/sessions.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
         "from fastmcp"
       ],
       "agent_patterns": [],
       "dangerous_exec": [],
       "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
+        "ai_sdk_import(1_sdk(s)_detected)"
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/lifespan.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/low_level.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(3_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/caching.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/resources/security.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1246,7 +860,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/dependencies.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/token_cache.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1254,18 +868,33 @@
       "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
-        "from mcp",
-        "from fastmcp",
-        "import FastMCP"
+        "from fastmcp"
       ],
       "agent_patterns": [],
       "dangerous_exec": [],
       "signals": [
-        "ai_sdk_import(3_sdk(s)_detected)"
+        "ai_sdk_import(1_sdk(s)_detected)"
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/event_store.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/logging.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/exceptions.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1274,7 +903,7 @@
       "injection_vectors": 0,
       "sdk_found": [
         "from mcp",
-        "from fastmcp"
+        "import fastmcp"
       ],
       "agent_patterns": [],
       "dangerous_exec": [],
@@ -1283,7 +912,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/session_scoped_event_store.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/auth.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1291,17 +920,16 @@
       "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
-        "from mcp",
         "from fastmcp"
       ],
       "agent_patterns": [],
       "dangerous_exec": [],
       "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
+        "ai_sdk_import(1_sdk(s)_detected)"
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/extensions.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/cli.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1309,7 +937,7 @@
       "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
-        "from mcp",
+        "import fastmcp",
         "from fastmcp",
         "import FastMCP"
       ],
@@ -1320,26 +948,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/mixins/mcp_operations.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(3_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/mixins/transport.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/inspect.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1359,7 +968,24 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/mixins/lifespan.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/skills.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/version_check.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1368,7 +994,7 @@
       "injection_vectors": 0,
       "sdk_found": [
         "from fastmcp",
-        "import FastMCP"
+        "import fastmcp"
       ],
       "agent_patterns": [],
       "dangerous_exec": [],
@@ -1377,7 +1003,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/mixins/__init__.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/components.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1394,61 +1020,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/auth.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/middleware.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/ssrf.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "import fastmcp",
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/cimd.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/authorization.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1465,7 +1037,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/identity_assertion.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/versions.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1482,25 +1054,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/jwt_issuer.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "import fastmcp",
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/oidc_proxy.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/tasks.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1517,24 +1071,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/__init__.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/handlers/authorize.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/tests.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1553,7 +1090,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/oauth_proxy/ui.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/mcp_server_config/__init__.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1570,43 +1107,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/oauth_proxy/models.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/oauth_proxy/proxy.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/oauth_proxy/__init__.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/mcp_server_config/v1/mcp_server_config.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1623,7 +1124,211 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/oauth_proxy/consent.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/mcp_server_config/v1/environments/uv.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/mcp_server_config/v1/environments/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/openapi/parser.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/openapi/director.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/openapi/models.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/openapi/schemas.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/openapi/json_schema_converter.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/experimental/transforms/jev_search.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/apps/approval.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/apps/choice.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/apps/config.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/apps/form.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/apps/app.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1641,7 +1346,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/auth0.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/apps/__init__.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1658,7 +1363,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/oci.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/apps/generative.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1675,7 +1380,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/keycloak.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/apps/file_upload.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1692,7 +1397,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/introspection.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/dependencies.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1709,127 +1414,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/scalekit.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/azure.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp",
-        "from mcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/jwt.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/github.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/google.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/huggingface.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/discord.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/in_memory.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/logging.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1847,75 +1432,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/clerk.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/workos.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/debug.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/aws.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/descope.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/group.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -1933,661 +1450,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/supabase.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/propelauth.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/wrapped_provider.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/fastmcp_provider.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/filesystem.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/aggregate.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/prefab_synthesis.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/prefab_payload.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/proxy.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(3_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/__init__.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/base.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/skills/directory_provider.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/skills/vendor_providers.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/skills/skill_provider.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/skills/__init__.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/skills/claude_provider.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/local_provider/__init__.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/openapi/provider.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/openapi/routing.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/openapi/components.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/openapi/__init__.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/transforms/namespace.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/transforms/resources_as_tools.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/transforms/version_filter.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/transforms/tool_transform.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/transforms/visibility.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/transforms/__init__.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/transforms/catalog.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/transforms/search/bm25.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/transforms/search/__init__.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/transforms/search/base.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/transforms/search/regex.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/middleware/response_limiting.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/middleware/middleware.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/middleware/authorization.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/middleware/tool_injection.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/middleware/error_handling.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/middleware/dereference.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/middleware/rate_limiting.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/extension_hooks.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -2604,161 +1467,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/middleware/caching.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/apps/file_upload.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/apps/generative.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/apps/config.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/apps/form.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/apps/approval.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/apps/app.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp",
-        "import FastMCP"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/apps/choice.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/apps/__init__.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/logging.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/roots.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -2776,7 +1485,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/group.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/progress.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -2794,7 +1503,24 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/messages.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/telemetry.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/messages.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -2811,7 +1537,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/telemetry.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/__init__.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -2828,7 +1554,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/elicitation.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/elicitation.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -2846,7 +1572,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/oauth_callback.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/oauth_callback.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -2863,24 +1589,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/extension_hooks.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/roots.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/caching.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -2898,7 +1607,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/client.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/client.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -2918,43 +1627,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/progress.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/caching.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/dependencies.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/auth/bearer.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -2971,24 +1644,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/__init__.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/mixins/tools.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/auth/oauth.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3006,7 +1662,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/mixins/prompts.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/auth/client_credentials.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3024,78 +1680,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/mixins/resources.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/mixins/__init__.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/transports/http.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/transports/sse.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/transports/config.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/transports/inference.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3114,7 +1699,25 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/transports/inference.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/transports/sse.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/transports/config.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3133,7 +1736,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/transports/stdio.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/transports/__init__.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3151,7 +1754,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/transports/__init__.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/transports/stdio.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3169,7 +1772,25 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/transports/base.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/transports/http.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/transports/base.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3186,24 +1807,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/auth/bearer.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/auth/client_credentials.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/sampling/__init__.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3221,80 +1825,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/auth/oauth.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/sampling/__init__.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from mcp",
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/sampling/handlers/google_genai.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from google.genai",
-        "from mcp",
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(3_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/sampling/handlers/anthropic.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from anthropic",
-        "from Anthropic"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(2_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/sampling/handlers/openai.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/sampling/handlers/openai.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3313,7 +1844,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/experimental/transforms/jev_search.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/sampling/handlers/anthropic.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3321,25 +1852,8 @@
       "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/prompts/base.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp",
-        "from mcp"
+        "from anthropic",
+        "from Anthropic"
       ],
       "agent_patterns": [],
       "dangerous_exec": [],
@@ -3348,7 +1862,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/auth.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/sampling/handlers/google_genai.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3356,16 +1870,18 @@
       "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
+        "from google.genai",
+        "from mcp",
         "from fastmcp"
       ],
       "agent_patterns": [],
       "dangerous_exec": [],
       "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
+        "ai_sdk_import(3_sdk(s)_detected)"
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/generate.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/mixins/tools.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3383,7 +1899,25 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/cimd.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/mixins/skills.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/mixins/__init__.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3400,7 +1934,94 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/apps_dev.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/mixins/prompts.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/mixins/resources.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/cimd.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/auth.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/discovery.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/apps_dev.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3418,7 +2039,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/discovery.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/__init__.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3435,7 +2056,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/__init__.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/generate.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3443,144 +2064,8 @@
       "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [
+        "from mcp",
         "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/install/cursor.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/install/goose.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/install/shared.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/install/stdio.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/install/claude_desktop.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/install/mcp_json.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/deploy/authentication.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/deploy/credentials.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp",
-        "import fastmcp"
       ],
       "agent_patterns": [],
       "dangerous_exec": [],
@@ -3589,7 +2074,92 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/deploy/command.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/install/goose.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/install/mcp_json.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/install/stdio.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/install/claude_desktop.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/install/cursor.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/deploy/command.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3607,24 +2177,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/deploy/output.py",
-      "language": "Python",
-      "ais": 40,
-      "risk": "ELEVATED",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [
-        "from fastmcp"
-      ],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ]
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/deploy/configuration.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/deploy/credentials.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3642,7 +2195,7 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/resources/function_resource.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/deploy/output.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3659,7 +2212,25 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/resources/types.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/deploy/configuration.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp",
+        "import fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/deploy/authentication.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3676,7 +2247,300 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/resources/security.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/contrib/component_manager/example.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp",
+        "import FastMCP",
+        "from FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/contrib/component_manager/component_manager.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/contrib/mcp_mixin/mcp_mixin.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/contrib/mcp_mixin/example.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/contrib/bulk_tool_caller/bulk_tool_caller.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/contrib/bulk_tool_caller/example.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/dependencies.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/lifespan.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/sessions.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/session_scoped_event_store.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/telemetry.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/low_level.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/event_store.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/http.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/elicitation.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/extensions.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/caching.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3693,7 +2557,26 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/resources/base.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/context.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/transforms/tool_transform.py",
       "language": "Python",
       "ais": 40,
       "risk": "ELEVATED",
@@ -3710,7 +2593,1363 @@
       ]
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/pyproject.toml",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/transforms/namespace.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/transforms/catalog.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/transforms/version_filter.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/transforms/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/transforms/visibility.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/transforms/resources_as_tools.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/transforms/search/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/transforms/search/base.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/transforms/search/regex.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/transforms/search/bm25.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/cimd.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/jwt_issuer.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import fastmcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/oidc_proxy.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/auth.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/middleware.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/ssrf.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import fastmcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/identity_assertion.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/jwt.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/debug.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/huggingface.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/workos.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/clerk.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/google.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/aws.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/keycloak.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/introspection.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/discord.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/github.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/propelauth.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/in_memory.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/auth0.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/azure.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp",
+        "from mcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/descope.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/oci.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/scalekit.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/supabase.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/handlers/authorize.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/oauth_proxy/ui.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/oauth_proxy/models.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/oauth_proxy/consent.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/oauth_proxy/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/oauth_proxy/proxy.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/filesystem.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/prefab_payload.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/prefab_synthesis.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/fastmcp_provider.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/wrapped_provider.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/base.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/aggregate.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "import fastmcp",
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/addressing.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/proxy.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/skills/_common.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/skills/claude_provider.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/skills/directory_provider.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/skills/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/skills/skill_provider.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/skills/vendor_providers.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/local_provider/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/openapi/provider.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/openapi/routing.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/openapi/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/openapi/components.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/mixins/lifespan.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/mixins/mcp_operations.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(3_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/mixins/transport.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "import fastmcp",
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(4_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/mixins/__init__.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/mixins/extensions.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp",
+        "import FastMCP"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/middleware/error_handling.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/middleware/rate_limiting.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from mcp",
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(2_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/middleware/dereference.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/middleware/tool_injection.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/middleware/middleware.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/middleware/response_limiting.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/middleware/caching.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/middleware/authorization.py",
+      "language": "Python",
+      "ais": 40,
+      "risk": "ELEVATED",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [
+        "from fastmcp"
+      ],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/apps_dev_security.py",
+      "language": "Python",
+      "ais": 18,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 1,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": [
+        "prompt_injection_partial(1)"
+      ]
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/pyproject.toml",
       "language": "text (.toml)",
       "ais": 0,
       "risk": "NORMAL",
@@ -3723,7 +3962,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/.gitignore",
+      "rel_path": "fastmcp_slim-4.1.4/.gitignore",
       "language": "text (.gitignore)",
       "ais": 0,
       "risk": "NORMAL",
@@ -3736,20 +3975,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/README.md",
-      "language": "text (.md)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/PKG-INFO",
+      "rel_path": "fastmcp_slim-4.1.4/PKG-INFO",
       "language": "text (PKG-INFO)",
       "ais": 0,
       "risk": "NORMAL",
@@ -3762,7 +3988,59 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/py.typed",
+      "rel_path": "fastmcp_slim-4.1.4/README.md",
+      "language": "text (.md)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/_install_hints.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/types.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/_warnings.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/py.typed",
       "language": "text (.typed)",
       "ais": 0,
       "risk": "NORMAL",
@@ -3775,7 +4053,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/types.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/skills/models.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3788,7 +4066,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/_warnings.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/skills/_constants.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3801,7 +4079,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/_install_hints.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/prompts/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3814,7 +4092,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/auth.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/resources/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3827,7 +4105,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/prefab.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/lifespan.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3840,7 +4118,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/ui.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/pagination.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3853,7 +4131,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/json_schema_type.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/json_schema_type.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3866,7 +4144,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/docstring_parsing.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/asgi_transport.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3879,7 +4157,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/pagination.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/ui.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3892,7 +4170,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/http.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/timeout.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3905,7 +4183,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/types.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/prefab.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3918,7 +4196,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/asgi_transport.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/types.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3931,7 +4209,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/mime.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/mime.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3944,7 +4222,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/timeout.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/docstring_parsing.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3957,7 +4235,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/lifespan.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3970,7 +4248,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/__init__.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/http.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3983,7 +4261,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/json_schema.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/async_utils.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -3996,7 +4274,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/async_utils.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/json_schema.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4009,7 +4287,20 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/mcp_server_config/v1/schema.json",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/mcp_server_config/v1/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/mcp_server_config/v1/schema.json",
       "language": "text (.json)",
       "ais": 0,
       "risk": "NORMAL",
@@ -4022,7 +4313,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/mcp_server_config/v1/__init__.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/mcp_server_config/v1/environments/base.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4035,7 +4326,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/mcp_server_config/v1/sources/__init__.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/mcp_server_config/v1/sources/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4048,7 +4339,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/mcp_server_config/v1/sources/base.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/mcp_server_config/v1/sources/base.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4061,20 +4352,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/mcp_server_config/v1/environments/base.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/openapi/README.md",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/openapi/README.md",
       "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
@@ -4087,7 +4365,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/openapi/__init__.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/openapi/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4100,7 +4378,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/utilities/openapi/formatters.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/utilities/openapi/formatters.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4113,7 +4391,137 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/contrib/README.md",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/experimental/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/experimental/transforms/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/_sdk_context_shim.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/auth/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/client/sampling/handlers/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/__main__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/install/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/deploy/horizon_client.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/deploy/state.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/cli/deploy/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/contrib/README.md",
       "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
@@ -4126,7 +4534,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/contrib/bulk_tool_caller/README.md",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/contrib/component_manager/README.md",
       "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
@@ -4139,7 +4547,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/contrib/bulk_tool_caller/__init__.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/contrib/component_manager/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4152,7 +4560,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/contrib/mcp_mixin/README.md",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/contrib/mcp_mixin/README.md",
       "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
@@ -4165,7 +4573,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/contrib/mcp_mixin/__init__.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/contrib/mcp_mixin/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4178,7 +4586,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/contrib/component_manager/README.md",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/contrib/bulk_tool_caller/README.md",
       "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
@@ -4191,7 +4599,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/contrib/component_manager/__init__.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/contrib/bulk_tool_caller/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4204,7 +4612,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/completions.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/completions.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4217,7 +4625,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/redirect_validation.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/redirect_validation.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4230,7 +4638,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/handlers/__init__.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/providers/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4243,7 +4651,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/oauth_proxy/upstream.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/handlers/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4256,7 +4664,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/auth/providers/__init__.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/auth/oauth_proxy/upstream.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4269,7 +4677,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/addressing.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/local_provider/decorators/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4282,33 +4690,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/skills/_common.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/local_provider/decorators/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/providers/openapi/README.md",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/providers/openapi/README.md",
       "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
@@ -4321,7 +4703,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/middleware/logging.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/middleware/logging.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4334,7 +4716,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/middleware/timing.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/middleware/ping.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4347,7 +4729,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/middleware/ping.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/middleware/timing.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -4360,163 +4742,7 @@
       "signals": []
     },
     {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/server/middleware/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/_sdk_context_shim.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/auth/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/client/sampling/handlers/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/experimental/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/experimental/transforms/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/prompts/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/__main__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/install/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/deploy/state.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/deploy/horizon_client.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/cli/deploy/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "fastmcp_slim-4.0.10/fastmcp/resources/__init__.py",
+      "rel_path": "fastmcp_slim-4.1.4/fastmcp/server/middleware/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",

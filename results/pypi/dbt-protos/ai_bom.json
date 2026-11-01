@@ -1,14 +1,14 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-10-01T09:41:26.594212Z",
+  "generated": "2026-11-01T10:07:41.777784Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
   },
   "project": "",
   "summary": {
-    "files_scanned": 135,
+    "files_scanned": 147,
     "files_flagged": 0,
     "critical": 0,
     "high": 0,
@@ -28,7 +28,7 @@
   "committed_credentials": [],
   "findings": [
     {
-      "file": "dbt_protos-1.0.565/test/import_test.py",
+      "file": "dbt_protos-1.0.615/test/import_test.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 20,

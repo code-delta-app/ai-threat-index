@@ -1,7 +1,7 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-10-01T09:39:45.340600Z",
+  "generated": "2026-11-01T09:57:19.200411Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
@@ -28,7 +28,7 @@
   "committed_credentials": [],
   "findings": [
     {
-      "file": "backports_zstd-1.7.0/tests/test/support/__init__.py",
+      "file": "backports_zstd-1.8.0/tests/test/support/__init__.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 50,
@@ -43,7 +43,7 @@
       }
     },
     {
-      "file": "backports_zstd-1.7.0/tests/test/test_zipfile/_path/_test_params.py",
+      "file": "backports_zstd-1.8.0/tests/test/test_zipfile/_path/_test_params.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 50,
@@ -58,7 +58,7 @@
       }
     },
     {
-      "file": "backports_zstd-1.7.0/tests/test/support/script_helper.py",
+      "file": "backports_zstd-1.8.0/tests/test/support/script_helper.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -73,7 +73,7 @@
       }
     },
     {
-      "file": "backports_zstd-1.7.0/tests/test/test_zipfile/test_core.py",
+      "file": "backports_zstd-1.8.0/tests/test/test_zipfile/test_core.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -88,7 +88,7 @@
       }
     },
     {
-      "file": "backports_zstd-1.7.0/tests/test/support/import_helper.py",
+      "file": "backports_zstd-1.8.0/tests/test/support/import_helper.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 20,
@@ -103,7 +103,7 @@
       }
     },
     {
-      "file": "backports_zstd-1.7.0/tests/test/support/warnings_helper.py",
+      "file": "backports_zstd-1.8.0/tests/test/support/warnings_helper.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 20,
@@ -118,7 +118,7 @@
       }
     },
     {
-      "file": "backports_zstd-1.7.0/tests/test/test_zipfile/_path/_support.py",
+      "file": "backports_zstd-1.8.0/tests/test/test_zipfile/_path/_support.py",
       "language": "Python",
       "risk": "NORMAL",
       "ais": 20,

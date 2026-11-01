@@ -1,15 +1,15 @@
 {
   "summary": {
-    "total_files": 86,
+    "total_files": 88,
     "flagged_files": 0,
     "critical_files": 0,
     "high_files": 0,
     "elevated_files": 0,
-    "normal_files": 86,
+    "normal_files": 88,
     "flagged_ai_files": 0,
     "flagged_exec_only_files": 0,
     "mode": "snapshot",
-    "summary_text": "Scanned 86 file(s). No AI agent initiation signatures detected. Coverage: 79 file(s) with full language rules, 0 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 7 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
+    "summary_text": "Scanned 88 file(s). No AI agent initiation signatures detected. Coverage: 81 file(s) with full language rules, 0 at endpoint level (shell/CI recipes and Objective-C: endpoint and launch rules), 0 binary file(s) examined through their printable text (images, PDFs, archives, executables, models: endpoints, encoded payloads and the language rules at HIGH/CRITICAL), 7 at text-level (endpoints, encoded payloads and dangerous Markdown code blocks; ELEVATED at most). "
   },
   "sdk_inventory": {},
   "agent_artifacts": {
@@ -23,22 +23,7 @@
   },
   "files": [
     {
-      "rel_path": "griffelib-2.3.0/tests/test_finder.py",
-      "language": "Python",
-      "ais": 20,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": [
-        "dynamic_import(x2)"
-      ]
-    },
-    {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/importer.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/importer.py",
       "language": "Python",
       "ais": 20,
       "risk": "NORMAL",
@@ -53,20 +38,22 @@
       ]
     },
     {
-      "rel_path": "griffelib-2.3.0/CHANGELOG.md",
-      "language": "text (.md)",
-      "ais": 0,
+      "rel_path": "griffelib-2.4.1/tests/test_finder.py",
+      "language": "Python",
+      "ais": 20,
       "risk": "NORMAL",
       "gss": 0,
-      "coverage": "text",
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
       "dangerous_exec": [],
-      "signals": []
+      "signals": [
+        "dynamic_import(x2)"
+      ]
     },
     {
-      "rel_path": "griffelib-2.3.0/pyproject.toml",
+      "rel_path": "griffelib-2.4.1/pyproject.toml",
       "language": "text (.toml)",
       "ais": 0,
       "risk": "NORMAL",
@@ -79,7 +66,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/LICENSE",
+      "rel_path": "griffelib-2.4.1/LICENSE",
       "language": "text (LICENSE)",
       "ais": 0,
       "risk": "NORMAL",
@@ -92,7 +79,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/.gitignore",
+      "rel_path": "griffelib-2.4.1/.gitignore",
       "language": "text (.gitignore)",
       "ais": 0,
       "risk": "NORMAL",
@@ -105,7 +92,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/README.md",
+      "rel_path": "griffelib-2.4.1/CHANGELOG.md",
       "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
@@ -118,7 +105,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/PKG-INFO",
+      "rel_path": "griffelib-2.4.1/PKG-INFO",
       "language": "text (PKG-INFO)",
       "ais": 0,
       "risk": "NORMAL",
@@ -131,7 +118,20 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/tests/test_public_api.py",
+      "rel_path": "griffelib-2.4.1/README.md",
+      "language": "text (.md)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/src/griffe/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -144,436 +144,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/tests/conftest.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_diff.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/helpers.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_models.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_mixins.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_nodes.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_inheritance.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_api.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_inspector.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_visitor.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_merger.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_loader.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_encoders.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_stdlib.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_functions.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_git.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_expressions.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_docstrings/conftest.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_docstrings/helpers.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_docstrings/test_numpy.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_docstrings/test_google.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_docstrings/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_docstrings/test_sphinx.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_docstrings/test_auto.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_docstrings/test_warnings.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/fixtures/_repo/v0.1.0/my_module/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/fixtures/_repo/v0.2.0/my_module/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_extensions/test_base.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_extensions/test_unpack_typeddict.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_extensions/test_dataclasses.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/tests/test_extensions/__init__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/src/griffe/__main__.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "griffelib-2.3.0/src/griffe/py.typed",
+      "rel_path": "griffelib-2.4.1/src/griffe/py.typed",
       "language": "text (.typed)",
       "ais": 0,
       "risk": "NORMAL",
@@ -586,7 +157,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/__init__.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/__main__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -599,7 +170,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/expressions.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/expressions.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -612,7 +183,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/enumerations.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/collections.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -625,7 +196,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/logger.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/enumerations.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -638,7 +209,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/finder.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/debug.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -651,7 +222,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/helpers.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/exceptions.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -664,7 +235,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/merger.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/helpers.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -677,7 +248,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/models.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/merger.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -690,7 +261,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/mixins.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/models.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -703,7 +274,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/encoders.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/encoders.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -716,7 +287,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/debug.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/mixins.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -729,7 +300,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/c3linear.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/git.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -742,7 +313,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/exceptions.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/loader.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -755,7 +326,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/collections.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/c3linear.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -768,7 +339,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/stats.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -781,7 +352,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/diff.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/logger.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -794,7 +365,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/git.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/finder.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -807,7 +378,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/__init__.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/diff.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -820,7 +391,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/loader.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/stats.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -833,7 +404,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/extensions/dataclasses.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/extensions/unpack_typeddict.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -846,7 +417,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/extensions/unpack_typeddict.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/extensions/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -859,7 +430,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/extensions/__init__.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/extensions/dataclasses.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -872,7 +443,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/extensions/base.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/extensions/base.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -885,7 +456,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/docstrings/parsers.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/agents/inspector.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -898,7 +469,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/docstrings/utils.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/agents/parser.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -911,7 +482,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/docstrings/models.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/agents/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -924,7 +495,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/docstrings/google.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/agents/visitor.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -937,7 +508,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/docstrings/auto.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/agents/nodes/assignments.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -950,7 +521,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/docstrings/sphinx.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/agents/nodes/docstrings.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -963,7 +534,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/docstrings/__init__.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/agents/nodes/exports.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -976,7 +547,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/docstrings/numpy.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/agents/nodes/imports.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -989,7 +560,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/agents/inspector.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/agents/nodes/ast.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1002,7 +573,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/agents/visitor.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/agents/nodes/runtime.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1015,7 +586,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/agents/__init__.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/agents/nodes/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1028,7 +599,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/agents/nodes/assignments.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/agents/nodes/parameters.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1041,7 +612,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/agents/nodes/parameters.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/agents/nodes/values.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1054,7 +625,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/agents/nodes/runtime.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/docstrings/utils.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1067,7 +638,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/agents/nodes/ast.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/docstrings/auto.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1080,7 +651,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/agents/nodes/values.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/docstrings/numpy.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1093,7 +664,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/agents/nodes/docstrings.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/docstrings/models.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1106,7 +677,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/agents/nodes/__init__.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/docstrings/google.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1119,7 +690,7 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/agents/nodes/exports.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/docstrings/sphinx.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -1132,7 +703,462 @@
       "signals": []
     },
     {
-      "rel_path": "griffelib-2.3.0/src/griffe/_internal/agents/nodes/imports.py",
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/docstrings/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/src/griffe/_internal/docstrings/parsers.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_encoders.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_mixins.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_api.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_visitor.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/helpers.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_nodes.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_functions.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_git.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_loader.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/conftest.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_diff.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_models.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_parser.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_merger.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_inheritance.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_expressions.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_inspector.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_public_api.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_stdlib.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/fixtures/_repo/v0.1.0/my_module/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/fixtures/_repo/v0.2.0/my_module/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_extensions/test_base.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_extensions/test_dataclasses.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_extensions/test_unpack_typeddict.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_extensions/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_docstrings/test_numpy.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_docstrings/helpers.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_docstrings/test_google.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_docstrings/test_auto.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_docstrings/conftest.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_docstrings/__init__.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_docstrings/test_sphinx.py",
+      "language": "Python",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "griffelib-2.4.1/tests/test_docstrings/test_warnings.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",

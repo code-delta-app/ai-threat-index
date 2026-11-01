@@ -36,19 +36,6 @@
       "signals": []
     },
     {
-      "rel_path": "package/README.md",
-      "language": "text (.md)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
       "rel_path": "package/package.json",
       "language": "text (.json)",
       "ais": 0,
@@ -62,8 +49,8 @@
       "signals": []
     },
     {
-      "rel_path": "package/data/builtin-lower.json",
-      "language": "text (.json)",
+      "rel_path": "package/README.md",
+      "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -89,6 +76,19 @@
     },
     {
       "rel_path": "package/data/builtin-upper.json",
+      "language": "text (.json)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/data/builtin-lower.json",
       "language": "text (.json)",
       "ais": 0,
       "risk": "NORMAL",

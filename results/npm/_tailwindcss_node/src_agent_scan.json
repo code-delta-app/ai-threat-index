@@ -36,19 +36,6 @@
       "signals": []
     },
     {
-      "rel_path": "package/README.md",
-      "language": "text (.md)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
       "rel_path": "package/package.json",
       "language": "text (.json)",
       "ais": 0,
@@ -62,7 +49,46 @@
       "signals": []
     },
     {
+      "rel_path": "package/README.md",
+      "language": "text (.md)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/dist/esm-cache.loader.mjs",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
       "rel_path": "package/dist/index.d.ts",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/dist/require-cache.d.ts",
       "language": "JavaScript",
       "ais": 0,
       "risk": "NORMAL",
@@ -101,19 +127,6 @@
       "signals": []
     },
     {
-      "rel_path": "package/dist/require-cache.d.ts",
-      "language": "JavaScript",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
       "rel_path": "package/dist/index.js",
       "language": "JavaScript",
       "ais": 0,
@@ -128,19 +141,6 @@
     },
     {
       "rel_path": "package/dist/esm-cache.loader.d.mts",
-      "language": "JavaScript",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "package/dist/esm-cache.loader.mjs",
       "language": "JavaScript",
       "ais": 0,
       "risk": "NORMAL",

@@ -1,7 +1,7 @@
 {
   "bom_format": "CodeDelta-AI-BOM",
   "spec_version": "1.2",
-  "generated": "2026-10-01T09:39:46.372638Z",
+  "generated": "2026-11-01T09:56:59.050930Z",
   "tool": {
     "name": "CodeDelta",
     "component": "Agent Scan (AIS)"
@@ -66,7 +66,7 @@
       }
     },
     {
-      "file": "llama_cloud_services-0.6.94/llama_cloud_services/extract/extract.py",
+      "file": "llama_cloud_services-0.6.94/llama_cloud_services/parse/types.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -81,7 +81,7 @@
       }
     },
     {
-      "file": "llama_cloud_services-0.6.94/llama_cloud_services/beta/classifier/client.py",
+      "file": "llama_cloud_services-0.6.94/llama_cloud_services/extract/extract.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,
@@ -126,21 +126,6 @@
       }
     },
     {
-      "file": "llama_cloud_services-0.6.94/llama_cloud_services/index/composite_retriever.py",
-      "language": "Python",
-      "risk": "ELEVATED",
-      "ais": 40,
-      "signals": [
-        "ai_sdk_import(1_sdk(s)_detected)"
-      ],
-      "flags": {
-        "foreign_egress": false,
-        "non_allied_jurisdiction": false,
-        "cost_risk": false,
-        "rogue_pattern": false
-      }
-    },
-    {
       "file": "llama_cloud_services-0.6.94/llama_cloud_services/index/base.py",
       "language": "Python",
       "risk": "ELEVATED",
@@ -156,7 +141,22 @@
       }
     },
     {
-      "file": "llama_cloud_services-0.6.94/llama_cloud_services/parse/types.py",
+      "file": "llama_cloud_services-0.6.94/llama_cloud_services/index/composite_retriever.py",
+      "language": "Python",
+      "risk": "ELEVATED",
+      "ais": 40,
+      "signals": [
+        "ai_sdk_import(1_sdk(s)_detected)"
+      ],
+      "flags": {
+        "foreign_egress": false,
+        "non_allied_jurisdiction": false,
+        "cost_risk": false,
+        "rogue_pattern": false
+      }
+    },
+    {
+      "file": "llama_cloud_services-0.6.94/llama_cloud_services/beta/classifier/client.py",
       "language": "Python",
       "risk": "ELEVATED",
       "ais": 40,

@@ -40,19 +40,6 @@
       ]
     },
     {
-      "rel_path": "pytokens-0.4.1/primer.json",
-      "language": "text (.json)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
       "rel_path": "pytokens-0.4.1/pyproject.toml",
       "language": "text (.toml)",
       "ais": 0,
@@ -68,45 +55,6 @@
     {
       "rel_path": "pytokens-0.4.1/LICENSE",
       "language": "text (LICENSE)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "pytokens-0.4.1/setup.py",
-      "language": "Python",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "pytokens-0.4.1/README.md",
-      "language": "text (.md)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "pytokens-0.4.1/setup.cfg",
-      "language": "text (.cfg)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -157,7 +105,20 @@
       "signals": []
     },
     {
-      "rel_path": "pytokens-0.4.1/tests/pytokens_test.py",
+      "rel_path": "pytokens-0.4.1/README.md",
+      "language": "text (.md)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pytokens-0.4.1/setup.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -170,8 +131,8 @@
       "signals": []
     },
     {
-      "rel_path": "pytokens-0.4.1/src/pytokens.egg-info/requires.txt",
-      "language": "text (.txt)",
+      "rel_path": "pytokens-0.4.1/setup.cfg",
+      "language": "text (.cfg)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -183,8 +144,8 @@
       "signals": []
     },
     {
-      "rel_path": "pytokens-0.4.1/src/pytokens.egg-info/top_level.txt",
-      "language": "text (.txt)",
+      "rel_path": "pytokens-0.4.1/primer.json",
+      "language": "text (.json)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -196,38 +157,12 @@
       "signals": []
     },
     {
-      "rel_path": "pytokens-0.4.1/src/pytokens.egg-info/dependency_links.txt",
-      "language": "text (.txt)",
+      "rel_path": "pytokens-0.4.1/src/pytokens/_mypyc_dummy.py",
+      "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "pytokens-0.4.1/src/pytokens.egg-info/SOURCES.txt",
-      "language": "text (.txt)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
-      "rel_path": "pytokens-0.4.1/src/pytokens.egg-info/PKG-INFO",
-      "language": "text (PKG-INFO)",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "text",
+      "coverage": "full",
       "injection_vectors": 0,
       "sdk_found": [],
       "agent_patterns": [],
@@ -248,7 +183,7 @@
       "signals": []
     },
     {
-      "rel_path": "pytokens-0.4.1/src/pytokens/__main__.py",
+      "rel_path": "pytokens-0.4.1/src/pytokens/__init__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -274,7 +209,7 @@
       "signals": []
     },
     {
-      "rel_path": "pytokens-0.4.1/src/pytokens/_mypyc_dummy.py",
+      "rel_path": "pytokens-0.4.1/src/pytokens/__main__.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",
@@ -287,7 +222,72 @@
       "signals": []
     },
     {
-      "rel_path": "pytokens-0.4.1/src/pytokens/__init__.py",
+      "rel_path": "pytokens-0.4.1/src/pytokens.egg-info/requires.txt",
+      "language": "text (.txt)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pytokens-0.4.1/src/pytokens.egg-info/SOURCES.txt",
+      "language": "text (.txt)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pytokens-0.4.1/src/pytokens.egg-info/top_level.txt",
+      "language": "text (.txt)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pytokens-0.4.1/src/pytokens.egg-info/PKG-INFO",
+      "language": "text (PKG-INFO)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pytokens-0.4.1/src/pytokens.egg-info/dependency_links.txt",
+      "language": "text (.txt)",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "text",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "pytokens-0.4.1/tests/pytokens_test.py",
       "language": "Python",
       "ais": 0,
       "risk": "NORMAL",

@@ -23,8 +23,8 @@
   },
   "files": [
     {
-      "rel_path": "package/README.md",
-      "language": "text (.md)",
+      "rel_path": "package/package.json",
+      "language": "text (.json)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -36,8 +36,8 @@
       "signals": []
     },
     {
-      "rel_path": "package/package.json",
-      "language": "text (.json)",
+      "rel_path": "package/README.md",
+      "language": "text (.md)",
       "ais": 0,
       "risk": "NORMAL",
       "gss": 0,
@@ -75,19 +75,6 @@
       "signals": []
     },
     {
-      "rel_path": "package/dist/cli.cjs",
-      "language": "JavaScript",
-      "ais": 0,
-      "risk": "NORMAL",
-      "gss": 0,
-      "coverage": "full",
-      "injection_vectors": 0,
-      "sdk_found": [],
-      "agent_patterns": [],
-      "dangerous_exec": [],
-      "signals": []
-    },
-    {
       "rel_path": "package/dist/utils.d.ts",
       "language": "JavaScript",
       "ais": 0,
@@ -101,7 +88,7 @@
       "signals": []
     },
     {
-      "rel_path": "package/dist/index.js",
+      "rel_path": "package/dist/index.cjs",
       "language": "JavaScript",
       "ais": 0,
       "risk": "NORMAL",
@@ -127,7 +114,20 @@
       "signals": []
     },
     {
-      "rel_path": "package/dist/index.cjs",
+      "rel_path": "package/dist/cli.cjs",
+      "language": "JavaScript",
+      "ais": 0,
+      "risk": "NORMAL",
+      "gss": 0,
+      "coverage": "full",
+      "injection_vectors": 0,
+      "sdk_found": [],
+      "agent_patterns": [],
+      "dangerous_exec": [],
+      "signals": []
+    },
+    {
+      "rel_path": "package/dist/index.js",
       "language": "JavaScript",
       "ais": 0,
       "risk": "NORMAL",
